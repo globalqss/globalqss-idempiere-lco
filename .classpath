@@ -2,8 +2,8 @@
 <classpath>
 	<classpathentry kind="src" path="extend/src"/>
 	<classpathentry kind="src" path="client/src"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/patches_354"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/adempiere354a"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/patches_360"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/adempiere360lts"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
