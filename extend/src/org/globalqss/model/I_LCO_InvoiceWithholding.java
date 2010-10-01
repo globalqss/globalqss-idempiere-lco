@@ -1,35 +1,19 @@
-/**********************************************************************
- * This file is part of Adempiere ERP Bazaar                          *
- * http://www.adempiere.org                                           *
- *                                                                    *
- * Copyright (C) Trifon Trifonov.                                     *
- * Copyright (C) Contributors                                         *
- *                                                                    *
- * This program is free software;
- you can redistribute it and/or      *
- * modify it under the terms of the GNU General Public License        *
- * as published by the Free Software Foundation;
- either version 2     *
- * of the License, or (at your option) any later version.             *
- *                                                                    *
- * This program is distributed in the hope that it will be useful,    *
- * but WITHOUT ANY WARRANTY;
- without even the implied warranty of     *
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the       *
- * GNU General Public License for more details.                       *
- *                                                                    *
- * You should have received a copy of the GNU General Public License  *
- * along with this program;
- if not, write to the Free Software        *
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,         *
- * MA 02110-1301, USA.                                                *
- *                                                                    *
- * Contributors:                                                      *
- * - Trifon Trifonov (trifonnt@users.sourceforge.net)                 *
- *                                                                    *
- * Sponsors:                                                          *
- * - Company (http://www.site.com)                                    *
- **********************************************************************/
+/******************************************************************************
+ * Product: Adempiere ERP & CRM Smart Business Solution                       *
+ * Copyright (C) 1999-2007 ComPiere, Inc. All Rights Reserved.                *
+ * This program is free software, you can redistribute it and/or modify it    *
+ * under the terms version 2 of the GNU General Public License as published   *
+ * by the Free Software Foundation. This program is distributed in the hope   *
+ * that it will be useful, but WITHOUT ANY WARRANTY, without even the implied *
+ * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.           *
+ * See the GNU General Public License for more details.                       *
+ * You should have received a copy of the GNU General Public License along    *
+ * with this program, if not, write to the Free Software Foundation, Inc.,    *
+ * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.                     *
+ * For the text or an alternative of this public license, you may reach us    *
+ * ComPiere, Inc., 2620 Augustine Dr. #245, Santa Clara, CA 95054, USA        *
+ * or via info@compiere.org or http://www.compiere.org/license.html           *
+ *****************************************************************************/
 package org.globalqss.model;
 
 import java.math.BigDecimal;
@@ -38,8 +22,8 @@ import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
 /** Generated Interface for LCO_InvoiceWithholding
- *  @author Trifon Trifonov (generated) 
- *  @version Release 3.4.2s
+ *  @author Adempiere (generated) 
+ *  @version Release 3.6.0LTS
  */
 public interface I_LCO_InvoiceWithholding 
 {
@@ -58,6 +42,27 @@ public interface I_LCO_InvoiceWithholding
 
     /** Load Meta Data */
 
+    /** Column name AD_Client_ID */
+    public static final String COLUMNNAME_AD_Client_ID = "AD_Client_ID";
+
+	/** Get Client.
+	  * Client/Tenant for this installation.
+	  */
+	public int getAD_Client_ID();
+
+    /** Column name AD_Org_ID */
+    public static final String COLUMNNAME_AD_Org_ID = "AD_Org_ID";
+
+	/** Set Organization.
+	  * Organizational entity within client
+	  */
+	public void setAD_Org_ID (int AD_Org_ID);
+
+	/** Get Organization.
+	  * Organizational entity within client
+	  */
+	public int getAD_Org_ID();
+
     /** Column name C_AllocationLine_ID */
     public static final String COLUMNNAME_C_AllocationLine_ID = "C_AllocationLine_ID";
 
@@ -71,7 +76,7 @@ public interface I_LCO_InvoiceWithholding
 	  */
 	public int getC_AllocationLine_ID();
 
-	public I_C_AllocationLine getC_AllocationLine() throws Exception;
+	public I_C_AllocationLine getC_AllocationLine() throws RuntimeException;
 
     /** Column name C_Invoice_ID */
     public static final String COLUMNNAME_C_Invoice_ID = "C_Invoice_ID";
@@ -86,7 +91,23 @@ public interface I_LCO_InvoiceWithholding
 	  */
 	public int getC_Invoice_ID();
 
-	public I_C_Invoice getC_Invoice() throws Exception;
+	public I_C_Invoice getC_Invoice() throws RuntimeException;
+
+    /** Column name Created */
+    public static final String COLUMNNAME_Created = "Created";
+
+	/** Get Created.
+	  * Date this record was created
+	  */
+	public Timestamp getCreated();
+
+    /** Column name CreatedBy */
+    public static final String COLUMNNAME_CreatedBy = "CreatedBy";
+
+	/** Get Created By.
+	  * User who created this records
+	  */
+	public int getCreatedBy();
 
     /** Column name C_Tax_ID */
     public static final String COLUMNNAME_C_Tax_ID = "C_Tax_ID";
@@ -101,7 +122,7 @@ public interface I_LCO_InvoiceWithholding
 	  */
 	public int getC_Tax_ID();
 
-	public I_C_Tax getC_Tax() throws Exception;
+	public I_C_Tax getC_Tax() throws RuntimeException;
 
     /** Column name DateAcct */
     public static final String COLUMNNAME_DateAcct = "DateAcct";
@@ -128,6 +149,19 @@ public interface I_LCO_InvoiceWithholding
 	  * Transaction Date
 	  */
 	public Timestamp getDateTrx();
+
+    /** Column name IsActive */
+    public static final String COLUMNNAME_IsActive = "IsActive";
+
+	/** Set Active.
+	  * The record is active in the system
+	  */
+	public void setIsActive (boolean IsActive);
+
+	/** Get Active.
+	  * The record is active in the system
+	  */
+	public boolean isActive();
 
     /** Column name IsCalcOnPayment */
     public static final String COLUMNNAME_IsCalcOnPayment = "IsCalcOnPayment";
@@ -169,7 +203,7 @@ public interface I_LCO_InvoiceWithholding
 	/** Get Withholding Rule	  */
 	public int getLCO_WithholdingRule_ID();
 
-	public org.globalqss.model.I_LCO_WithholdingRule getLCO_WithholdingRule() throws Exception;
+	public org.globalqss.model.I_LCO_WithholdingRule getLCO_WithholdingRule() throws RuntimeException;
 
     /** Column name LCO_WithholdingType_ID */
     public static final String COLUMNNAME_LCO_WithholdingType_ID = "LCO_WithholdingType_ID";
@@ -180,7 +214,7 @@ public interface I_LCO_InvoiceWithholding
 	/** Get Withholding Type	  */
 	public int getLCO_WithholdingType_ID();
 
-	public org.globalqss.model.I_LCO_WithholdingType getLCO_WithholdingType() throws Exception;
+	public org.globalqss.model.I_LCO_WithholdingType getLCO_WithholdingType() throws RuntimeException;
 
     /** Column name Percent */
     public static final String COLUMNNAME_Percent = "Percent";
@@ -233,4 +267,20 @@ public interface I_LCO_InvoiceWithholding
 	  * Base for calculating the tax amount
 	  */
 	public BigDecimal getTaxBaseAmt();
+
+    /** Column name Updated */
+    public static final String COLUMNNAME_Updated = "Updated";
+
+	/** Get Updated.
+	  * Date this record was updated
+	  */
+	public Timestamp getUpdated();
+
+    /** Column name UpdatedBy */
+    public static final String COLUMNNAME_UpdatedBy = "UpdatedBy";
+
+	/** Get Updated By.
+	  * User who updated this records
+	  */
+	public int getUpdatedBy();
 }

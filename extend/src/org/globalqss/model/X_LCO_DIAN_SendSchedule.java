@@ -1,14 +1,14 @@
 /******************************************************************************
  * Product: Adempiere ERP & CRM Smart Business Solution                       *
  * Copyright (C) 1999-2007 ComPiere, Inc. All Rights Reserved.                *
- * This program is free software; you can redistribute it and/or modify it    *
+ * This program is free software, you can redistribute it and/or modify it    *
  * under the terms version 2 of the GNU General Public License as published   *
  * by the Free Software Foundation. This program is distributed in the hope   *
- * that it will be useful, but WITHOUT ANY WARRANTY; without even the implied *
+ * that it will be useful, but WITHOUT ANY WARRANTY, without even the implied *
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.           *
  * See the GNU General Public License for more details.                       *
  * You should have received a copy of the GNU General Public License along    *
- * with this program; if not, write to the Free Software Foundation, Inc.,    *
+ * with this program, if not, write to the Free Software Foundation, Inc.,    *
  * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.                     *
  * For the text or an alternative of this public license, you may reach us    *
  * ComPiere, Inc., 2620 Augustine Dr. #245, Santa Clara, CA 95054, USA        *
@@ -17,23 +17,22 @@
 /** Generated Model - DO NOT CHANGE */
 package org.globalqss.model;
 
-import java.lang.reflect.Constructor;
 import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.util.Properties;
-import java.util.logging.Level;
 import org.compiere.model.*;
+import org.compiere.util.KeyNamePair;
 
 /** Generated Model for LCO_DIAN_SendSchedule
  *  @author Adempiere (generated) 
- *  @version Release 3.4.2s - $Id$ */
+ *  @version Release 3.6.0LTS - $Id$ */
 public class X_LCO_DIAN_SendSchedule extends PO implements I_LCO_DIAN_SendSchedule, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 20100617L;
 
     /** Standard Constructor */
     public X_LCO_DIAN_SendSchedule (Properties ctx, int LCO_DIAN_SendSchedule_ID, String trxName)
@@ -79,21 +78,10 @@ public class X_LCO_DIAN_SendSchedule extends PO implements I_LCO_DIAN_SendSchedu
       return sb.toString();
     }
 
-	public I_C_Year getC_Year() throws Exception 
+	public I_C_Year getC_Year() throws RuntimeException
     {
-        Class<?> clazz = MTable.getClass(I_C_Year.Table_Name);
-        I_C_Year result = null;
-        try	{
-	        Constructor<?> constructor = null;
-	    	constructor = clazz.getDeclaredConstructor(new Class[]{Properties.class, int.class, String.class});
-    	    result = (I_C_Year)constructor.newInstance(new Object[] {getCtx(), new Integer(getC_Year_ID()), get_TrxName()});
-        } catch (Exception e) {
-	        log.log(Level.SEVERE, "(id) - Table=" + Table_Name + ",Class=" + clazz, e);
-	        log.saveError("Error", "Table=" + Table_Name + ",Class=" + clazz);
-           throw e;
-        }
-        return result;
-    }
+		return (I_C_Year)MTable.get(getCtx(), I_C_Year.Table_Name)
+			.getPO(getC_Year_ID(), get_TrxName());	}
 
 	/** Set Year.
 		@param C_Year_ID 
@@ -101,9 +89,10 @@ public class X_LCO_DIAN_SendSchedule extends PO implements I_LCO_DIAN_SendSchedu
 	  */
 	public void setC_Year_ID (int C_Year_ID)
 	{
-		if (C_Year_ID < 1)
-			 throw new IllegalArgumentException ("C_Year_ID is mandatory.");
-		set_Value (COLUMNNAME_C_Year_ID, Integer.valueOf(C_Year_ID));
+		if (C_Year_ID < 1) 
+			set_Value (COLUMNNAME_C_Year_ID, null);
+		else 
+			set_Value (COLUMNNAME_C_Year_ID, Integer.valueOf(C_Year_ID));
 	}
 
 	/** Get Year.
@@ -138,12 +127,6 @@ public class X_LCO_DIAN_SendSchedule extends PO implements I_LCO_DIAN_SendSchedu
 		@param GenerateXML Generate XML	  */
 	public void setGenerateXML (String GenerateXML)
 	{
-
-		if (GenerateXML != null && GenerateXML.length() > 1)
-		{
-			log.warning("Length > 1 - truncated");
-			GenerateXML = GenerateXML.substring(0, 1);
-		}
 		set_Value (COLUMNNAME_GenerateXML, GenerateXML);
 	}
 
@@ -178,15 +161,19 @@ public class X_LCO_DIAN_SendSchedule extends PO implements I_LCO_DIAN_SendSchedu
 		return false;
 	}
 
-	/** LCO_DIAN_Format_ID AD_Reference_ID=1000007 */
-	public static final int LCO_DIAN_FORMAT_ID_AD_Reference_ID=1000007;
+	public org.globalqss.model.I_LCO_DIAN_Format getLCO_DIAN_Format() throws RuntimeException
+    {
+		return (org.globalqss.model.I_LCO_DIAN_Format)MTable.get(getCtx(), org.globalqss.model.I_LCO_DIAN_Format.Table_Name)
+			.getPO(getLCO_DIAN_Format_ID(), get_TrxName());	}
+
 	/** Set DIAN Format.
 		@param LCO_DIAN_Format_ID DIAN Format	  */
 	public void setLCO_DIAN_Format_ID (int LCO_DIAN_Format_ID)
 	{
-		if (LCO_DIAN_Format_ID < 1)
-			 throw new IllegalArgumentException ("LCO_DIAN_Format_ID is mandatory.");
-		set_Value (COLUMNNAME_LCO_DIAN_Format_ID, Integer.valueOf(LCO_DIAN_Format_ID));
+		if (LCO_DIAN_Format_ID < 1) 
+			set_Value (COLUMNNAME_LCO_DIAN_Format_ID, null);
+		else 
+			set_Value (COLUMNNAME_LCO_DIAN_Format_ID, Integer.valueOf(LCO_DIAN_Format_ID));
 	}
 
 	/** Get DIAN Format.
@@ -199,13 +186,22 @@ public class X_LCO_DIAN_SendSchedule extends PO implements I_LCO_DIAN_SendSchedu
 		return ii.intValue();
 	}
 
+    /** Get Record ID/ColumnName
+        @return ID/ColumnName pair
+      */
+    public KeyNamePair getKeyNamePair() 
+    {
+        return new KeyNamePair(get_ID(), String.valueOf(getLCO_DIAN_Format_ID()));
+    }
+
 	/** Set DIAN Send Schedule.
 		@param LCO_DIAN_SendSchedule_ID DIAN Send Schedule	  */
 	public void setLCO_DIAN_SendSchedule_ID (int LCO_DIAN_SendSchedule_ID)
 	{
-		if (LCO_DIAN_SendSchedule_ID < 1)
-			 throw new IllegalArgumentException ("LCO_DIAN_SendSchedule_ID is mandatory.");
-		set_ValueNoCheck (COLUMNNAME_LCO_DIAN_SendSchedule_ID, Integer.valueOf(LCO_DIAN_SendSchedule_ID));
+		if (LCO_DIAN_SendSchedule_ID < 1) 
+			set_ValueNoCheck (COLUMNNAME_LCO_DIAN_SendSchedule_ID, null);
+		else 
+			set_ValueNoCheck (COLUMNNAME_LCO_DIAN_SendSchedule_ID, Integer.valueOf(LCO_DIAN_SendSchedule_ID));
 	}
 
 	/** Get DIAN Send Schedule.
@@ -222,12 +218,6 @@ public class X_LCO_DIAN_SendSchedule extends PO implements I_LCO_DIAN_SendSchedu
 		@param ProcessContent Process Content	  */
 	public void setProcessContent (String ProcessContent)
 	{
-
-		if (ProcessContent != null && ProcessContent.length() > 1)
-		{
-			log.warning("Length > 1 - truncated");
-			ProcessContent = ProcessContent.substring(0, 1);
-		}
 		set_Value (COLUMNNAME_ProcessContent, ProcessContent);
 	}
 
@@ -272,13 +262,7 @@ public class X_LCO_DIAN_SendSchedule extends PO implements I_LCO_DIAN_SendSchedu
 		@param SendConceptCode Send Concept Code	  */
 	public void setSendConceptCode (String SendConceptCode)
 	{
-		if (SendConceptCode == null) throw new IllegalArgumentException ("SendConceptCode is mandatory");
-		if (SendConceptCode.equals("1") || SendConceptCode.equals("2")); else throw new IllegalArgumentException ("SendConceptCode Invalid value - " + SendConceptCode + " - Reference_ID=1000006 - 1 - 2");
-		if (SendConceptCode.length() > 2)
-		{
-			log.warning("Length > 2 - truncated");
-			SendConceptCode = SendConceptCode.substring(0, 2);
-		}
+
 		set_Value (COLUMNNAME_SendConceptCode, SendConceptCode);
 	}
 

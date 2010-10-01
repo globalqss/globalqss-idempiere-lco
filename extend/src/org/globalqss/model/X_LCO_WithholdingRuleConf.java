@@ -1,14 +1,14 @@
 /******************************************************************************
  * Product: Adempiere ERP & CRM Smart Business Solution                       *
  * Copyright (C) 1999-2007 ComPiere, Inc. All Rights Reserved.                *
- * This program is free software; you can redistribute it and/or modify it    *
+ * This program is free software, you can redistribute it and/or modify it    *
  * under the terms version 2 of the GNU General Public License as published   *
  * by the Free Software Foundation. This program is distributed in the hope   *
- * that it will be useful, but WITHOUT ANY WARRANTY; without even the implied *
+ * that it will be useful, but WITHOUT ANY WARRANTY, without even the implied *
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.           *
  * See the GNU General Public License for more details.                       *
  * You should have received a copy of the GNU General Public License along    *
- * with this program; if not, write to the Free Software Foundation, Inc.,    *
+ * with this program, if not, write to the Free Software Foundation, Inc.,    *
  * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.                     *
  * For the text or an alternative of this public license, you may reach us    *
  * ComPiere, Inc., 2620 Augustine Dr. #245, Santa Clara, CA 95054, USA        *
@@ -17,22 +17,20 @@
 /** Generated Model - DO NOT CHANGE */
 package org.globalqss.model;
 
-import java.lang.reflect.Constructor;
 import java.sql.ResultSet;
 import java.util.Properties;
-import java.util.logging.Level;
 import org.compiere.model.*;
 
 /** Generated Model for LCO_WithholdingRuleConf
  *  @author Adempiere (generated) 
- *  @version Release 3.4.2s - $Id$ */
+ *  @version Release 3.6.0LTS - $Id$ */
 public class X_LCO_WithholdingRuleConf extends PO implements I_LCO_WithholdingRuleConf, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 20100617L;
 
     /** Standard Constructor */
     public X_LCO_WithholdingRuleConf (Properties ctx, int LCO_WithholdingRuleConf_ID, String trxName)
@@ -240,29 +238,19 @@ public class X_LCO_WithholdingRuleConf extends PO implements I_LCO_WithholdingRu
 		return false;
 	}
 
-	public org.globalqss.model.I_LCO_WithholdingType getLCO_WithholdingType() throws Exception 
+	public org.globalqss.model.I_LCO_WithholdingType getLCO_WithholdingType() throws RuntimeException
     {
-        Class<?> clazz = MTable.getClass(org.globalqss.model.I_LCO_WithholdingType.Table_Name);
-        org.globalqss.model.I_LCO_WithholdingType result = null;
-        try	{
-	        Constructor<?> constructor = null;
-	    	constructor = clazz.getDeclaredConstructor(new Class[]{Properties.class, int.class, String.class});
-    	    result = (org.globalqss.model.I_LCO_WithholdingType)constructor.newInstance(new Object[] {getCtx(), new Integer(getLCO_WithholdingType_ID()), get_TrxName()});
-        } catch (Exception e) {
-	        log.log(Level.SEVERE, "(id) - Table=" + Table_Name + ",Class=" + clazz, e);
-	        log.saveError("Error", "Table=" + Table_Name + ",Class=" + clazz);
-           throw e;
-        }
-        return result;
-    }
+		return (org.globalqss.model.I_LCO_WithholdingType)MTable.get(getCtx(), org.globalqss.model.I_LCO_WithholdingType.Table_Name)
+			.getPO(getLCO_WithholdingType_ID(), get_TrxName());	}
 
 	/** Set Withholding Type.
 		@param LCO_WithholdingType_ID Withholding Type	  */
 	public void setLCO_WithholdingType_ID (int LCO_WithholdingType_ID)
 	{
-		if (LCO_WithholdingType_ID < 1)
-			 throw new IllegalArgumentException ("LCO_WithholdingType_ID is mandatory.");
-		set_ValueNoCheck (COLUMNNAME_LCO_WithholdingType_ID, Integer.valueOf(LCO_WithholdingType_ID));
+		if (LCO_WithholdingType_ID < 1) 
+			set_ValueNoCheck (COLUMNNAME_LCO_WithholdingType_ID, null);
+		else 
+			set_ValueNoCheck (COLUMNNAME_LCO_WithholdingType_ID, Integer.valueOf(LCO_WithholdingType_ID));
 	}
 
 	/** Get Withholding Type.

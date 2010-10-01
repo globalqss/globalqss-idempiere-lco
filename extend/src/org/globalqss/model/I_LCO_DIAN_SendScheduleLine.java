@@ -1,44 +1,29 @@
-/**********************************************************************
- * This file is part of Adempiere ERP Bazaar                          *
- * http://www.adempiere.org                                           *
- *                                                                    *
- * Copyright (C) Trifon Trifonov.                                     *
- * Copyright (C) Contributors                                         *
- *                                                                    *
- * This program is free software;
- you can redistribute it and/or      *
- * modify it under the terms of the GNU General Public License        *
- * as published by the Free Software Foundation;
- either version 2     *
- * of the License, or (at your option) any later version.             *
- *                                                                    *
- * This program is distributed in the hope that it will be useful,    *
- * but WITHOUT ANY WARRANTY;
- without even the implied warranty of     *
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the       *
- * GNU General Public License for more details.                       *
- *                                                                    *
- * You should have received a copy of the GNU General Public License  *
- * along with this program;
- if not, write to the Free Software        *
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,         *
- * MA 02110-1301, USA.                                                *
- *                                                                    *
- * Contributors:                                                      *
- * - Trifon Trifonov (trifonnt@users.sourceforge.net)                 *
- *                                                                    *
- * Sponsors:                                                          *
- * - Company (http://www.site.com)                                    *
- **********************************************************************/
+/******************************************************************************
+ * Product: Adempiere ERP & CRM Smart Business Solution                       *
+ * Copyright (C) 1999-2007 ComPiere, Inc. All Rights Reserved.                *
+ * This program is free software, you can redistribute it and/or modify it    *
+ * under the terms version 2 of the GNU General Public License as published   *
+ * by the Free Software Foundation. This program is distributed in the hope   *
+ * that it will be useful, but WITHOUT ANY WARRANTY, without even the implied *
+ * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.           *
+ * See the GNU General Public License for more details.                       *
+ * You should have received a copy of the GNU General Public License along    *
+ * with this program, if not, write to the Free Software Foundation, Inc.,    *
+ * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.                     *
+ * For the text or an alternative of this public license, you may reach us    *
+ * ComPiere, Inc., 2620 Augustine Dr. #245, Santa Clara, CA 95054, USA        *
+ * or via info@compiere.org or http://www.compiere.org/license.html           *
+ *****************************************************************************/
 package org.globalqss.model;
 
 import java.math.BigDecimal;
+import java.sql.Timestamp;
 import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
 /** Generated Interface for LCO_DIAN_SendScheduleLine
- *  @author Trifon Trifonov (generated) 
- *  @version Release 3.4.2s
+ *  @author Adempiere (generated) 
+ *  @version Release 3.6.0LTS
  */
 public interface I_LCO_DIAN_SendScheduleLine 
 {
@@ -46,7 +31,7 @@ public interface I_LCO_DIAN_SendScheduleLine
     /** TableName=LCO_DIAN_SendScheduleLine */
     public static final String Table_Name = "LCO_DIAN_SendScheduleLine";
 
-    /** AD_Table_ID=1000011 */
+    /** AD_Table_ID=1000009 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -57,135 +42,156 @@ public interface I_LCO_DIAN_SendScheduleLine
 
     /** Load Meta Data */
 
-    /** Column name AttributeName1 */
-    public static final String COLUMNNAME_AttributeName1 = "AttributeName1";
+    /** Column name AD_Client_ID */
+    public static final String COLUMNNAME_AD_Client_ID = "AD_Client_ID";
+
+	/** Get Client.
+	  * Client/Tenant for this installation.
+	  */
+	public int getAD_Client_ID();
+
+    /** Column name AD_Org_ID */
+    public static final String COLUMNNAME_AD_Org_ID = "AD_Org_ID";
+
+	/** Set Organization.
+	  * Organizational entity within client
+	  */
+	public void setAD_Org_ID (int AD_Org_ID);
+
+	/** Get Organization.
+	  * Organizational entity within client
+	  */
+	public int getAD_Org_ID();
+
+    /** Column name AttributeNm1 */
+    public static final String COLUMNNAME_AttributeNm1 = "AttributeNm1";
 
 	/** Set Attribute Name 1.
 	  * Name of the Attribute
 	  */
-	public void setAttributeName1 (String AttributeName1);
+	public void setAttributeNm1 (String AttributeNm1);
 
 	/** Get Attribute Name 1.
 	  * Name of the Attribute
 	  */
-	public String getAttributeName1();
+	public String getAttributeNm1();
 
-    /** Column name AttributeName10 */
-    public static final String COLUMNNAME_AttributeName10 = "AttributeName10";
+    /** Column name AttributeNm10 */
+    public static final String COLUMNNAME_AttributeNm10 = "AttributeNm10";
 
 	/** Set Attribute Name 10.
 	  * Name of the Attribute 10
 	  */
-	public void setAttributeName10 (String AttributeName10);
+	public void setAttributeNm10 (String AttributeNm10);
 
 	/** Get Attribute Name 10.
 	  * Name of the Attribute 10
 	  */
-	public String getAttributeName10();
+	public String getAttributeNm10();
 
-    /** Column name AttributeName2 */
-    public static final String COLUMNNAME_AttributeName2 = "AttributeName2";
+    /** Column name AttributeNm2 */
+    public static final String COLUMNNAME_AttributeNm2 = "AttributeNm2";
 
 	/** Set Attribute Name 2.
 	  * Name of the Attribute 2
 	  */
-	public void setAttributeName2 (String AttributeName2);
+	public void setAttributeNm2 (String AttributeNm2);
 
 	/** Get Attribute Name 2.
 	  * Name of the Attribute 2
 	  */
-	public String getAttributeName2();
+	public String getAttributeNm2();
 
-    /** Column name AttributeName3 */
-    public static final String COLUMNNAME_AttributeName3 = "AttributeName3";
+    /** Column name AttributeNm3 */
+    public static final String COLUMNNAME_AttributeNm3 = "AttributeNm3";
 
 	/** Set Attribute Name 3.
 	  * Name of the Attribute 3
 	  */
-	public void setAttributeName3 (String AttributeName3);
+	public void setAttributeNm3 (String AttributeNm3);
 
 	/** Get Attribute Name 3.
 	  * Name of the Attribute 3
 	  */
-	public String getAttributeName3();
+	public String getAttributeNm3();
 
-    /** Column name AttributeName4 */
-    public static final String COLUMNNAME_AttributeName4 = "AttributeName4";
+    /** Column name AttributeNm4 */
+    public static final String COLUMNNAME_AttributeNm4 = "AttributeNm4";
 
 	/** Set Attribute Name 4.
 	  * Name of the Attribute 4
 	  */
-	public void setAttributeName4 (String AttributeName4);
+	public void setAttributeNm4 (String AttributeNm4);
 
 	/** Get Attribute Name 4.
 	  * Name of the Attribute 4
 	  */
-	public String getAttributeName4();
+	public String getAttributeNm4();
 
-    /** Column name AttributeName5 */
-    public static final String COLUMNNAME_AttributeName5 = "AttributeName5";
+    /** Column name AttributeNm5 */
+    public static final String COLUMNNAME_AttributeNm5 = "AttributeNm5";
 
 	/** Set Attribute Name 5.
 	  * Name of the Attribute 5
 	  */
-	public void setAttributeName5 (String AttributeName5);
+	public void setAttributeNm5 (String AttributeNm5);
 
 	/** Get Attribute Name 5.
 	  * Name of the Attribute 5
 	  */
-	public String getAttributeName5();
+	public String getAttributeNm5();
 
-    /** Column name AttributeName6 */
-    public static final String COLUMNNAME_AttributeName6 = "AttributeName6";
+    /** Column name AttributeNm6 */
+    public static final String COLUMNNAME_AttributeNm6 = "AttributeNm6";
 
 	/** Set Attribute Name 6.
 	  * Name of the Attribute 6
 	  */
-	public void setAttributeName6 (String AttributeName6);
+	public void setAttributeNm6 (String AttributeNm6);
 
 	/** Get Attribute Name 6.
 	  * Name of the Attribute 6
 	  */
-	public String getAttributeName6();
+	public String getAttributeNm6();
 
-    /** Column name AttributeName7 */
-    public static final String COLUMNNAME_AttributeName7 = "AttributeName7";
+    /** Column name AttributeNm7 */
+    public static final String COLUMNNAME_AttributeNm7 = "AttributeNm7";
 
 	/** Set Attribute Name 7.
 	  * Name of the Attribute 7
 	  */
-	public void setAttributeName7 (String AttributeName7);
+	public void setAttributeNm7 (String AttributeNm7);
 
 	/** Get Attribute Name 7.
 	  * Name of the Attribute 7
 	  */
-	public String getAttributeName7();
+	public String getAttributeNm7();
 
-    /** Column name AttributeName8 */
-    public static final String COLUMNNAME_AttributeName8 = "AttributeName8";
+    /** Column name AttributeNm8 */
+    public static final String COLUMNNAME_AttributeNm8 = "AttributeNm8";
 
 	/** Set Attribute Name 8.
 	  * Name of the Attribute 8
 	  */
-	public void setAttributeName8 (String AttributeName8);
+	public void setAttributeNm8 (String AttributeNm8);
 
 	/** Get Attribute Name 8.
 	  * Name of the Attribute 8
 	  */
-	public String getAttributeName8();
+	public String getAttributeNm8();
 
-    /** Column name AttributeName9 */
-    public static final String COLUMNNAME_AttributeName9 = "AttributeName9";
+    /** Column name AttributeNm9 */
+    public static final String COLUMNNAME_AttributeNm9 = "AttributeNm9";
 
 	/** Set Attribute Name 9.
 	  * Name of the Attribute 9
 	  */
-	public void setAttributeName9 (String AttributeName9);
+	public void setAttributeNm9 (String AttributeNm9);
 
 	/** Get Attribute Name 9.
 	  * Name of the Attribute 9
 	  */
-	public String getAttributeName9();
+	public String getAttributeNm9();
 
     /** Column name C_BPartner_ID */
     public static final String COLUMNNAME_C_BPartner_ID = "C_BPartner_ID";
@@ -200,7 +206,7 @@ public interface I_LCO_DIAN_SendScheduleLine
 	  */
 	public int getC_BPartner_ID();
 
-	public I_C_BPartner getC_BPartner() throws Exception;
+	public I_C_BPartner getC_BPartner() throws RuntimeException;
 
     /** Column name C_BPartner_Location_ID */
     public static final String COLUMNNAME_C_BPartner_Location_ID = "C_BPartner_Location_ID";
@@ -215,7 +221,23 @@ public interface I_LCO_DIAN_SendScheduleLine
 	  */
 	public int getC_BPartner_Location_ID();
 
-	public I_C_BPartner_Location getC_BPartner_Location() throws Exception;
+	public I_C_BPartner_Location getC_BPartner_Location() throws RuntimeException;
+
+    /** Column name Created */
+    public static final String COLUMNNAME_Created = "Created";
+
+	/** Get Created.
+	  * Date this record was created
+	  */
+	public Timestamp getCreated();
+
+    /** Column name CreatedBy */
+    public static final String COLUMNNAME_CreatedBy = "CreatedBy";
+
+	/** Get Created By.
+	  * User who created this records
+	  */
+	public int getCreatedBy();
 
     /** Column name FieldAmt1 */
     public static final String COLUMNNAME_FieldAmt1 = "FieldAmt1";
@@ -307,6 +329,19 @@ public interface I_LCO_DIAN_SendScheduleLine
 	/** Get Field Amt 9	  */
 	public BigDecimal getFieldAmt9();
 
+    /** Column name IsActive */
+    public static final String COLUMNNAME_IsActive = "IsActive";
+
+	/** Set Active.
+	  * The record is active in the system
+	  */
+	public void setIsActive (boolean IsActive);
+
+	/** Get Active.
+	  * The record is active in the system
+	  */
+	public boolean isActive();
+
     /** Column name LCO_DIAN_Concept_ID */
     public static final String COLUMNNAME_LCO_DIAN_Concept_ID = "LCO_DIAN_Concept_ID";
 
@@ -315,6 +350,8 @@ public interface I_LCO_DIAN_SendScheduleLine
 
 	/** Get DIAN Concept	  */
 	public int getLCO_DIAN_Concept_ID();
+
+	public org.globalqss.model.I_LCO_DIAN_Concept getLCO_DIAN_Concept() throws RuntimeException;
 
     /** Column name LCO_DIAN_SendSchedule_ID */
     public static final String COLUMNNAME_LCO_DIAN_SendSchedule_ID = "LCO_DIAN_SendSchedule_ID";
@@ -325,7 +362,7 @@ public interface I_LCO_DIAN_SendScheduleLine
 	/** Get DIAN Send Schedule	  */
 	public int getLCO_DIAN_SendSchedule_ID();
 
-	public org.globalqss.model.I_LCO_DIAN_SendSchedule getLCO_DIAN_SendSchedule() throws Exception;
+	public org.globalqss.model.I_LCO_DIAN_SendSchedule getLCO_DIAN_SendSchedule() throws RuntimeException;
 
     /** Column name LCO_DIAN_SendScheduleLine_ID */
     public static final String COLUMNNAME_LCO_DIAN_SendScheduleLine_ID = "LCO_DIAN_SendScheduleLine_ID";
@@ -345,5 +382,21 @@ public interface I_LCO_DIAN_SendScheduleLine
 	/** Get DIAN XML Header	  */
 	public int getLCO_DIAN_XML_Header_ID();
 
-	public org.globalqss.model.I_LCO_DIAN_XML_Header getLCO_DIAN_XML_Header() throws Exception;
+	public org.globalqss.model.I_LCO_DIAN_XML_Header getLCO_DIAN_XML_Header() throws RuntimeException;
+
+    /** Column name Updated */
+    public static final String COLUMNNAME_Updated = "Updated";
+
+	/** Get Updated.
+	  * Date this record was updated
+	  */
+	public Timestamp getUpdated();
+
+    /** Column name UpdatedBy */
+    public static final String COLUMNNAME_UpdatedBy = "UpdatedBy";
+
+	/** Get Updated By.
+	  * User who updated this records
+	  */
+	public int getUpdatedBy();
 }

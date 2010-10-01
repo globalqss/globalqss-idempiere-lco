@@ -1,14 +1,14 @@
 /******************************************************************************
  * Product: Adempiere ERP & CRM Smart Business Solution                       *
  * Copyright (C) 1999-2007 ComPiere, Inc. All Rights Reserved.                *
- * This program is free software; you can redistribute it and/or modify it    *
+ * This program is free software, you can redistribute it and/or modify it    *
  * under the terms version 2 of the GNU General Public License as published   *
  * by the Free Software Foundation. This program is distributed in the hope   *
- * that it will be useful, but WITHOUT ANY WARRANTY; without even the implied *
+ * that it will be useful, but WITHOUT ANY WARRANTY, without even the implied *
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.           *
  * See the GNU General Public License for more details.                       *
  * You should have received a copy of the GNU General Public License along    *
- * with this program; if not, write to the Free Software Foundation, Inc.,    *
+ * with this program, if not, write to the Free Software Foundation, Inc.,    *
  * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.                     *
  * For the text or an alternative of this public license, you may reach us    *
  * ComPiere, Inc., 2620 Augustine Dr. #245, Santa Clara, CA 95054, USA        *
@@ -23,14 +23,14 @@ import org.compiere.model.*;
 
 /** Generated Model for LCO_DIAN_ConceptFormat
  *  @author Adempiere (generated) 
- *  @version Release 3.4.2s - $Id$ */
+ *  @version Release 3.6.0LTS - $Id$ */
 public class X_LCO_DIAN_ConceptFormat extends PO implements I_LCO_DIAN_ConceptFormat, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 20100617L;
 
     /** Standard Constructor */
     public X_LCO_DIAN_ConceptFormat (Properties ctx, int LCO_DIAN_ConceptFormat_ID, String trxName)
@@ -74,9 +74,10 @@ public class X_LCO_DIAN_ConceptFormat extends PO implements I_LCO_DIAN_ConceptFo
 		@param LCO_DIAN_ConceptFormat_ID DIAN Concept Format	  */
 	public void setLCO_DIAN_ConceptFormat_ID (int LCO_DIAN_ConceptFormat_ID)
 	{
-		if (LCO_DIAN_ConceptFormat_ID < 1)
-			 throw new IllegalArgumentException ("LCO_DIAN_ConceptFormat_ID is mandatory.");
-		set_ValueNoCheck (COLUMNNAME_LCO_DIAN_ConceptFormat_ID, Integer.valueOf(LCO_DIAN_ConceptFormat_ID));
+		if (LCO_DIAN_ConceptFormat_ID < 1) 
+			set_ValueNoCheck (COLUMNNAME_LCO_DIAN_ConceptFormat_ID, null);
+		else 
+			set_ValueNoCheck (COLUMNNAME_LCO_DIAN_ConceptFormat_ID, Integer.valueOf(LCO_DIAN_ConceptFormat_ID));
 	}
 
 	/** Get DIAN Concept Format.
@@ -89,8 +90,11 @@ public class X_LCO_DIAN_ConceptFormat extends PO implements I_LCO_DIAN_ConceptFo
 		return ii.intValue();
 	}
 
-	/** LCO_DIAN_Concept_ID AD_Reference_ID=1000005 */
-	public static final int LCO_DIAN_CONCEPT_ID_AD_Reference_ID=1000005;
+	public org.globalqss.model.I_LCO_DIAN_Concept getLCO_DIAN_Concept() throws RuntimeException
+    {
+		return (org.globalqss.model.I_LCO_DIAN_Concept)MTable.get(getCtx(), org.globalqss.model.I_LCO_DIAN_Concept.Table_Name)
+			.getPO(getLCO_DIAN_Concept_ID(), get_TrxName());	}
+
 	/** Set DIAN Concept.
 		@param LCO_DIAN_Concept_ID DIAN Concept	  */
 	public void setLCO_DIAN_Concept_ID (int LCO_DIAN_Concept_ID)
@@ -111,8 +115,11 @@ public class X_LCO_DIAN_ConceptFormat extends PO implements I_LCO_DIAN_ConceptFo
 		return ii.intValue();
 	}
 
-	/** LCO_DIAN_Format_ID AD_Reference_ID=1000007 */
-	public static final int LCO_DIAN_FORMAT_ID_AD_Reference_ID=1000007;
+	public org.globalqss.model.I_LCO_DIAN_Format getLCO_DIAN_Format() throws RuntimeException
+    {
+		return (org.globalqss.model.I_LCO_DIAN_Format)MTable.get(getCtx(), org.globalqss.model.I_LCO_DIAN_Format.Table_Name)
+			.getPO(getLCO_DIAN_Format_ID(), get_TrxName());	}
+
 	/** Set DIAN Format.
 		@param LCO_DIAN_Format_ID DIAN Format	  */
 	public void setLCO_DIAN_Format_ID (int LCO_DIAN_Format_ID)

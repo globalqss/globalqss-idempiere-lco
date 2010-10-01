@@ -1,14 +1,14 @@
 /******************************************************************************
  * Product: Adempiere ERP & CRM Smart Business Solution                       *
  * Copyright (C) 1999-2007 ComPiere, Inc. All Rights Reserved.                *
- * This program is free software; you can redistribute it and/or modify it    *
+ * This program is free software, you can redistribute it and/or modify it    *
  * under the terms version 2 of the GNU General Public License as published   *
  * by the Free Software Foundation. This program is distributed in the hope   *
- * that it will be useful, but WITHOUT ANY WARRANTY; without even the implied *
+ * that it will be useful, but WITHOUT ANY WARRANTY, without even the implied *
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.           *
  * See the GNU General Public License for more details.                       *
  * You should have received a copy of the GNU General Public License along    *
- * with this program; if not, write to the Free Software Foundation, Inc.,    *
+ * with this program, if not, write to the Free Software Foundation, Inc.,    *
  * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.                     *
  * For the text or an alternative of this public license, you may reach us    *
  * ComPiere, Inc., 2620 Augustine Dr. #245, Santa Clara, CA 95054, USA        *
@@ -17,24 +17,22 @@
 /** Generated Model - DO NOT CHANGE */
 package org.globalqss.model;
 
-import java.lang.reflect.Constructor;
 import java.math.BigDecimal;
 import java.sql.ResultSet;
 import java.util.Properties;
-import java.util.logging.Level;
 import org.compiere.model.*;
 import org.compiere.util.Env;
 
 /** Generated Model for LCO_DIAN_SendScheduleLine
  *  @author Adempiere (generated) 
- *  @version Release 3.4.2s - $Id$ */
+ *  @version Release 3.6.0LTS - $Id$ */
 public class X_LCO_DIAN_SendScheduleLine extends PO implements I_LCO_DIAN_SendScheduleLine, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 20100617L;
 
     /** Standard Constructor */
     public X_LCO_DIAN_SendScheduleLine (Properties ctx, int LCO_DIAN_SendScheduleLine_ID, String trxName)
@@ -76,180 +74,169 @@ public class X_LCO_DIAN_SendScheduleLine extends PO implements I_LCO_DIAN_SendSc
     }
 
 	/** Set Attribute Name 1.
-		@param AttributeName1 
+		@param AttributeNm1 
 		Name of the Attribute
 	  */
-	public void setAttributeName1 (String AttributeName1)
+	public void setAttributeNm1 (String AttributeNm1)
 	{
-		throw new IllegalArgumentException ("AttributeName1 is virtual column");	}
+		throw new IllegalArgumentException ("AttributeNm1 is virtual column");	}
 
 	/** Get Attribute Name 1.
 		@return Name of the Attribute
 	  */
-	public String getAttributeName1 () 
+	public String getAttributeNm1 () 
 	{
-		return (String)get_Value(COLUMNNAME_AttributeName1);
+		return (String)get_Value(COLUMNNAME_AttributeNm1);
 	}
 
 	/** Set Attribute Name 10.
-		@param AttributeName10 
+		@param AttributeNm10 
 		Name of the Attribute 10
 	  */
-	public void setAttributeName10 (String AttributeName10)
+	public void setAttributeNm10 (String AttributeNm10)
 	{
-		throw new IllegalArgumentException ("AttributeName10 is virtual column");	}
+		throw new IllegalArgumentException ("AttributeNm10 is virtual column");	}
 
 	/** Get Attribute Name 10.
 		@return Name of the Attribute 10
 	  */
-	public String getAttributeName10 () 
+	public String getAttributeNm10 () 
 	{
-		return (String)get_Value(COLUMNNAME_AttributeName10);
+		return (String)get_Value(COLUMNNAME_AttributeNm10);
 	}
 
 	/** Set Attribute Name 2.
-		@param AttributeName2 
+		@param AttributeNm2 
 		Name of the Attribute 2
 	  */
-	public void setAttributeName2 (String AttributeName2)
+	public void setAttributeNm2 (String AttributeNm2)
 	{
-		throw new IllegalArgumentException ("AttributeName2 is virtual column");	}
+		throw new IllegalArgumentException ("AttributeNm2 is virtual column");	}
 
 	/** Get Attribute Name 2.
 		@return Name of the Attribute 2
 	  */
-	public String getAttributeName2 () 
+	public String getAttributeNm2 () 
 	{
-		return (String)get_Value(COLUMNNAME_AttributeName2);
+		return (String)get_Value(COLUMNNAME_AttributeNm2);
 	}
 
 	/** Set Attribute Name 3.
-		@param AttributeName3 
+		@param AttributeNm3 
 		Name of the Attribute 3
 	  */
-	public void setAttributeName3 (String AttributeName3)
+	public void setAttributeNm3 (String AttributeNm3)
 	{
-		throw new IllegalArgumentException ("AttributeName3 is virtual column");	}
+		throw new IllegalArgumentException ("AttributeNm3 is virtual column");	}
 
 	/** Get Attribute Name 3.
 		@return Name of the Attribute 3
 	  */
-	public String getAttributeName3 () 
+	public String getAttributeNm3 () 
 	{
-		return (String)get_Value(COLUMNNAME_AttributeName3);
+		return (String)get_Value(COLUMNNAME_AttributeNm3);
 	}
 
 	/** Set Attribute Name 4.
-		@param AttributeName4 
+		@param AttributeNm4 
 		Name of the Attribute 4
 	  */
-	public void setAttributeName4 (String AttributeName4)
+	public void setAttributeNm4 (String AttributeNm4)
 	{
-		throw new IllegalArgumentException ("AttributeName4 is virtual column");	}
+		throw new IllegalArgumentException ("AttributeNm4 is virtual column");	}
 
 	/** Get Attribute Name 4.
 		@return Name of the Attribute 4
 	  */
-	public String getAttributeName4 () 
+	public String getAttributeNm4 () 
 	{
-		return (String)get_Value(COLUMNNAME_AttributeName4);
+		return (String)get_Value(COLUMNNAME_AttributeNm4);
 	}
 
 	/** Set Attribute Name 5.
-		@param AttributeName5 
+		@param AttributeNm5 
 		Name of the Attribute 5
 	  */
-	public void setAttributeName5 (String AttributeName5)
+	public void setAttributeNm5 (String AttributeNm5)
 	{
-		throw new IllegalArgumentException ("AttributeName5 is virtual column");	}
+		throw new IllegalArgumentException ("AttributeNm5 is virtual column");	}
 
 	/** Get Attribute Name 5.
 		@return Name of the Attribute 5
 	  */
-	public String getAttributeName5 () 
+	public String getAttributeNm5 () 
 	{
-		return (String)get_Value(COLUMNNAME_AttributeName5);
+		return (String)get_Value(COLUMNNAME_AttributeNm5);
 	}
 
 	/** Set Attribute Name 6.
-		@param AttributeName6 
+		@param AttributeNm6 
 		Name of the Attribute 6
 	  */
-	public void setAttributeName6 (String AttributeName6)
+	public void setAttributeNm6 (String AttributeNm6)
 	{
-		throw new IllegalArgumentException ("AttributeName6 is virtual column");	}
+		throw new IllegalArgumentException ("AttributeNm6 is virtual column");	}
 
 	/** Get Attribute Name 6.
 		@return Name of the Attribute 6
 	  */
-	public String getAttributeName6 () 
+	public String getAttributeNm6 () 
 	{
-		return (String)get_Value(COLUMNNAME_AttributeName6);
+		return (String)get_Value(COLUMNNAME_AttributeNm6);
 	}
 
 	/** Set Attribute Name 7.
-		@param AttributeName7 
+		@param AttributeNm7 
 		Name of the Attribute 7
 	  */
-	public void setAttributeName7 (String AttributeName7)
+	public void setAttributeNm7 (String AttributeNm7)
 	{
-		throw new IllegalArgumentException ("AttributeName7 is virtual column");	}
+		throw new IllegalArgumentException ("AttributeNm7 is virtual column");	}
 
 	/** Get Attribute Name 7.
 		@return Name of the Attribute 7
 	  */
-	public String getAttributeName7 () 
+	public String getAttributeNm7 () 
 	{
-		return (String)get_Value(COLUMNNAME_AttributeName7);
+		return (String)get_Value(COLUMNNAME_AttributeNm7);
 	}
 
 	/** Set Attribute Name 8.
-		@param AttributeName8 
+		@param AttributeNm8 
 		Name of the Attribute 8
 	  */
-	public void setAttributeName8 (String AttributeName8)
+	public void setAttributeNm8 (String AttributeNm8)
 	{
-		throw new IllegalArgumentException ("AttributeName8 is virtual column");	}
+		throw new IllegalArgumentException ("AttributeNm8 is virtual column");	}
 
 	/** Get Attribute Name 8.
 		@return Name of the Attribute 8
 	  */
-	public String getAttributeName8 () 
+	public String getAttributeNm8 () 
 	{
-		return (String)get_Value(COLUMNNAME_AttributeName8);
+		return (String)get_Value(COLUMNNAME_AttributeNm8);
 	}
 
 	/** Set Attribute Name 9.
-		@param AttributeName9 
+		@param AttributeNm9 
 		Name of the Attribute 9
 	  */
-	public void setAttributeName9 (String AttributeName9)
+	public void setAttributeNm9 (String AttributeNm9)
 	{
-		throw new IllegalArgumentException ("AttributeName9 is virtual column");	}
+		throw new IllegalArgumentException ("AttributeNm9 is virtual column");	}
 
 	/** Get Attribute Name 9.
 		@return Name of the Attribute 9
 	  */
-	public String getAttributeName9 () 
+	public String getAttributeNm9 () 
 	{
-		return (String)get_Value(COLUMNNAME_AttributeName9);
+		return (String)get_Value(COLUMNNAME_AttributeNm9);
 	}
 
-	public I_C_BPartner getC_BPartner() throws Exception 
+	public I_C_BPartner getC_BPartner() throws RuntimeException
     {
-        Class<?> clazz = MTable.getClass(I_C_BPartner.Table_Name);
-        I_C_BPartner result = null;
-        try	{
-	        Constructor<?> constructor = null;
-	    	constructor = clazz.getDeclaredConstructor(new Class[]{Properties.class, int.class, String.class});
-    	    result = (I_C_BPartner)constructor.newInstance(new Object[] {getCtx(), new Integer(getC_BPartner_ID()), get_TrxName()});
-        } catch (Exception e) {
-	        log.log(Level.SEVERE, "(id) - Table=" + Table_Name + ",Class=" + clazz, e);
-	        log.saveError("Error", "Table=" + Table_Name + ",Class=" + clazz);
-           throw e;
-        }
-        return result;
-    }
+		return (I_C_BPartner)MTable.get(getCtx(), I_C_BPartner.Table_Name)
+			.getPO(getC_BPartner_ID(), get_TrxName());	}
 
 	/** Set Business Partner .
 		@param C_BPartner_ID 
@@ -274,21 +261,10 @@ public class X_LCO_DIAN_SendScheduleLine extends PO implements I_LCO_DIAN_SendSc
 		return ii.intValue();
 	}
 
-	public I_C_BPartner_Location getC_BPartner_Location() throws Exception 
+	public I_C_BPartner_Location getC_BPartner_Location() throws RuntimeException
     {
-        Class<?> clazz = MTable.getClass(I_C_BPartner_Location.Table_Name);
-        I_C_BPartner_Location result = null;
-        try	{
-	        Constructor<?> constructor = null;
-	    	constructor = clazz.getDeclaredConstructor(new Class[]{Properties.class, int.class, String.class});
-    	    result = (I_C_BPartner_Location)constructor.newInstance(new Object[] {getCtx(), new Integer(getC_BPartner_Location_ID()), get_TrxName()});
-        } catch (Exception e) {
-	        log.log(Level.SEVERE, "(id) - Table=" + Table_Name + ",Class=" + clazz, e);
-	        log.saveError("Error", "Table=" + Table_Name + ",Class=" + clazz);
-           throw e;
-        }
-        return result;
-    }
+		return (I_C_BPartner_Location)MTable.get(getCtx(), I_C_BPartner_Location.Table_Name)
+			.getPO(getC_BPartner_Location_ID(), get_TrxName());	}
 
 	/** Set Partner Location.
 		@param C_BPartner_Location_ID 
@@ -483,15 +459,19 @@ public class X_LCO_DIAN_SendScheduleLine extends PO implements I_LCO_DIAN_SendSc
 		return bd;
 	}
 
-	/** LCO_DIAN_Concept_ID AD_Reference_ID=1000005 */
-	public static final int LCO_DIAN_CONCEPT_ID_AD_Reference_ID=1000005;
+	public org.globalqss.model.I_LCO_DIAN_Concept getLCO_DIAN_Concept() throws RuntimeException
+    {
+		return (org.globalqss.model.I_LCO_DIAN_Concept)MTable.get(getCtx(), org.globalqss.model.I_LCO_DIAN_Concept.Table_Name)
+			.getPO(getLCO_DIAN_Concept_ID(), get_TrxName());	}
+
 	/** Set DIAN Concept.
 		@param LCO_DIAN_Concept_ID DIAN Concept	  */
 	public void setLCO_DIAN_Concept_ID (int LCO_DIAN_Concept_ID)
 	{
-		if (LCO_DIAN_Concept_ID < 1)
-			 throw new IllegalArgumentException ("LCO_DIAN_Concept_ID is mandatory.");
-		set_Value (COLUMNNAME_LCO_DIAN_Concept_ID, Integer.valueOf(LCO_DIAN_Concept_ID));
+		if (LCO_DIAN_Concept_ID < 1) 
+			set_Value (COLUMNNAME_LCO_DIAN_Concept_ID, null);
+		else 
+			set_Value (COLUMNNAME_LCO_DIAN_Concept_ID, Integer.valueOf(LCO_DIAN_Concept_ID));
 	}
 
 	/** Get DIAN Concept.
@@ -504,21 +484,10 @@ public class X_LCO_DIAN_SendScheduleLine extends PO implements I_LCO_DIAN_SendSc
 		return ii.intValue();
 	}
 
-	public org.globalqss.model.I_LCO_DIAN_SendSchedule getLCO_DIAN_SendSchedule() throws Exception 
+	public org.globalqss.model.I_LCO_DIAN_SendSchedule getLCO_DIAN_SendSchedule() throws RuntimeException
     {
-        Class<?> clazz = MTable.getClass(org.globalqss.model.I_LCO_DIAN_SendSchedule.Table_Name);
-        org.globalqss.model.I_LCO_DIAN_SendSchedule result = null;
-        try	{
-	        Constructor<?> constructor = null;
-	    	constructor = clazz.getDeclaredConstructor(new Class[]{Properties.class, int.class, String.class});
-    	    result = (org.globalqss.model.I_LCO_DIAN_SendSchedule)constructor.newInstance(new Object[] {getCtx(), new Integer(getLCO_DIAN_SendSchedule_ID()), get_TrxName()});
-        } catch (Exception e) {
-	        log.log(Level.SEVERE, "(id) - Table=" + Table_Name + ",Class=" + clazz, e);
-	        log.saveError("Error", "Table=" + Table_Name + ",Class=" + clazz);
-           throw e;
-        }
-        return result;
-    }
+		return (org.globalqss.model.I_LCO_DIAN_SendSchedule)MTable.get(getCtx(), org.globalqss.model.I_LCO_DIAN_SendSchedule.Table_Name)
+			.getPO(getLCO_DIAN_SendSchedule_ID(), get_TrxName());	}
 
 	/** Set DIAN Send Schedule.
 		@param LCO_DIAN_SendSchedule_ID DIAN Send Schedule	  */
@@ -544,9 +513,10 @@ public class X_LCO_DIAN_SendScheduleLine extends PO implements I_LCO_DIAN_SendSc
 		@param LCO_DIAN_SendScheduleLine_ID DIAN Send Schedule Line	  */
 	public void setLCO_DIAN_SendScheduleLine_ID (int LCO_DIAN_SendScheduleLine_ID)
 	{
-		if (LCO_DIAN_SendScheduleLine_ID < 1)
-			 throw new IllegalArgumentException ("LCO_DIAN_SendScheduleLine_ID is mandatory.");
-		set_ValueNoCheck (COLUMNNAME_LCO_DIAN_SendScheduleLine_ID, Integer.valueOf(LCO_DIAN_SendScheduleLine_ID));
+		if (LCO_DIAN_SendScheduleLine_ID < 1) 
+			set_ValueNoCheck (COLUMNNAME_LCO_DIAN_SendScheduleLine_ID, null);
+		else 
+			set_ValueNoCheck (COLUMNNAME_LCO_DIAN_SendScheduleLine_ID, Integer.valueOf(LCO_DIAN_SendScheduleLine_ID));
 	}
 
 	/** Get DIAN Send Schedule Line.
@@ -559,21 +529,10 @@ public class X_LCO_DIAN_SendScheduleLine extends PO implements I_LCO_DIAN_SendSc
 		return ii.intValue();
 	}
 
-	public org.globalqss.model.I_LCO_DIAN_XML_Header getLCO_DIAN_XML_Header() throws Exception 
+	public org.globalqss.model.I_LCO_DIAN_XML_Header getLCO_DIAN_XML_Header() throws RuntimeException
     {
-        Class<?> clazz = MTable.getClass(org.globalqss.model.I_LCO_DIAN_XML_Header.Table_Name);
-        org.globalqss.model.I_LCO_DIAN_XML_Header result = null;
-        try	{
-	        Constructor<?> constructor = null;
-	    	constructor = clazz.getDeclaredConstructor(new Class[]{Properties.class, int.class, String.class});
-    	    result = (org.globalqss.model.I_LCO_DIAN_XML_Header)constructor.newInstance(new Object[] {getCtx(), new Integer(getLCO_DIAN_XML_Header_ID()), get_TrxName()});
-        } catch (Exception e) {
-	        log.log(Level.SEVERE, "(id) - Table=" + Table_Name + ",Class=" + clazz, e);
-	        log.saveError("Error", "Table=" + Table_Name + ",Class=" + clazz);
-           throw e;
-        }
-        return result;
-    }
+		return (org.globalqss.model.I_LCO_DIAN_XML_Header)MTable.get(getCtx(), org.globalqss.model.I_LCO_DIAN_XML_Header.Table_Name)
+			.getPO(getLCO_DIAN_XML_Header_ID(), get_TrxName());	}
 
 	/** Set DIAN XML Header.
 		@param LCO_DIAN_XML_Header_ID DIAN XML Header	  */

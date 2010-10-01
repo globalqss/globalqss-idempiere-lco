@@ -1,14 +1,14 @@
 /******************************************************************************
  * Product: Adempiere ERP & CRM Smart Business Solution                       *
  * Copyright (C) 1999-2007 ComPiere, Inc. All Rights Reserved.                *
- * This program is free software; you can redistribute it and/or modify it    *
+ * This program is free software, you can redistribute it and/or modify it    *
  * under the terms version 2 of the GNU General Public License as published   *
  * by the Free Software Foundation. This program is distributed in the hope   *
- * that it will be useful, but WITHOUT ANY WARRANTY; without even the implied *
+ * that it will be useful, but WITHOUT ANY WARRANTY, without even the implied *
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.           *
  * See the GNU General Public License for more details.                       *
  * You should have received a copy of the GNU General Public License along    *
- * with this program; if not, write to the Free Software Foundation, Inc.,    *
+ * with this program, if not, write to the Free Software Foundation, Inc.,    *
  * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.                     *
  * For the text or an alternative of this public license, you may reach us    *
  * ComPiere, Inc., 2620 Augustine Dr. #245, Santa Clara, CA 95054, USA        *
@@ -17,25 +17,23 @@
 /** Generated Model - DO NOT CHANGE */
 package org.globalqss.model;
 
-import java.lang.reflect.Constructor;
 import java.math.BigDecimal;
 import java.sql.ResultSet;
 import java.util.Properties;
-import java.util.logging.Level;
 import org.compiere.model.*;
 import org.compiere.util.Env;
 import org.compiere.util.KeyNamePair;
 
 /** Generated Model for LCO_WithholdingCalc
  *  @author Adempiere (generated) 
- *  @version Release 3.4.2s - $Id$ */
+ *  @version Release 3.6.0LTS - $Id$ */
 public class X_LCO_WithholdingCalc extends PO implements I_LCO_WithholdingCalc, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 20100617L;
 
     /** Standard Constructor */
     public X_LCO_WithholdingCalc (Properties ctx, int LCO_WithholdingCalc_ID, String trxName)
@@ -106,13 +104,7 @@ public class X_LCO_WithholdingCalc extends PO implements I_LCO_WithholdingCalc, 
 		@param BaseType Base Type	  */
 	public void setBaseType (String BaseType)
 	{
-		if (BaseType == null) throw new IllegalArgumentException ("BaseType is mandatory");
-		if (BaseType.equals("D") || BaseType.equals("L") || BaseType.equals("T")); else throw new IllegalArgumentException ("BaseType Invalid value - " + BaseType + " - Reference_ID=1000000 - D - L - T");
-		if (BaseType.length() > 1)
-		{
-			log.warning("Length > 1 - truncated");
-			BaseType = BaseType.substring(0, 1);
-		}
+
 		set_Value (COLUMNNAME_BaseType, BaseType);
 	}
 
@@ -123,8 +115,11 @@ public class X_LCO_WithholdingCalc extends PO implements I_LCO_WithholdingCalc, 
 		return (String)get_Value(COLUMNNAME_BaseType);
 	}
 
-	/** C_BaseTax_ID AD_Reference_ID=158 */
-	public static final int C_BASETAX_ID_AD_Reference_ID=158;
+	public I_C_Tax getC_BaseTax() throws RuntimeException
+    {
+		return (I_C_Tax)MTable.get(getCtx(), I_C_Tax.Table_Name)
+			.getPO(getC_BaseTax_ID(), get_TrxName());	}
+
 	/** Set Base Tax.
 		@param C_BaseTax_ID Base Tax	  */
 	public void setC_BaseTax_ID (int C_BaseTax_ID)
@@ -145,21 +140,10 @@ public class X_LCO_WithholdingCalc extends PO implements I_LCO_WithholdingCalc, 
 		return ii.intValue();
 	}
 
-	public I_C_Tax getC_Tax() throws Exception 
+	public I_C_Tax getC_Tax() throws RuntimeException
     {
-        Class<?> clazz = MTable.getClass(I_C_Tax.Table_Name);
-        I_C_Tax result = null;
-        try	{
-	        Constructor<?> constructor = null;
-	    	constructor = clazz.getDeclaredConstructor(new Class[]{Properties.class, int.class, String.class});
-    	    result = (I_C_Tax)constructor.newInstance(new Object[] {getCtx(), new Integer(getC_Tax_ID()), get_TrxName()});
-        } catch (Exception e) {
-	        log.log(Level.SEVERE, "(id) - Table=" + Table_Name + ",Class=" + clazz, e);
-	        log.saveError("Error", "Table=" + Table_Name + ",Class=" + clazz);
-           throw e;
-        }
-        return result;
-    }
+		return (I_C_Tax)MTable.get(getCtx(), I_C_Tax.Table_Name)
+			.getPO(getC_Tax_ID(), get_TrxName());	}
 
 	/** Set Tax.
 		@param C_Tax_ID 
@@ -190,12 +174,6 @@ public class X_LCO_WithholdingCalc extends PO implements I_LCO_WithholdingCalc, 
 	  */
 	public void setDescription (String Description)
 	{
-
-		if (Description != null && Description.length() > 255)
-		{
-			log.warning("Length > 255 - truncated");
-			Description = Description.substring(0, 255);
-		}
 		set_Value (COLUMNNAME_Description, Description);
 	}
 
@@ -274,9 +252,10 @@ public class X_LCO_WithholdingCalc extends PO implements I_LCO_WithholdingCalc, 
 		@param LCO_WithholdingCalc_ID Withholding Calculation	  */
 	public void setLCO_WithholdingCalc_ID (int LCO_WithholdingCalc_ID)
 	{
-		if (LCO_WithholdingCalc_ID < 1)
-			 throw new IllegalArgumentException ("LCO_WithholdingCalc_ID is mandatory.");
-		set_ValueNoCheck (COLUMNNAME_LCO_WithholdingCalc_ID, Integer.valueOf(LCO_WithholdingCalc_ID));
+		if (LCO_WithholdingCalc_ID < 1) 
+			set_ValueNoCheck (COLUMNNAME_LCO_WithholdingCalc_ID, null);
+		else 
+			set_ValueNoCheck (COLUMNNAME_LCO_WithholdingCalc_ID, Integer.valueOf(LCO_WithholdingCalc_ID));
 	}
 
 	/** Get Withholding Calculation.
@@ -289,21 +268,10 @@ public class X_LCO_WithholdingCalc extends PO implements I_LCO_WithholdingCalc, 
 		return ii.intValue();
 	}
 
-	public org.globalqss.model.I_LCO_WithholdingType getLCO_WithholdingType() throws Exception 
+	public org.globalqss.model.I_LCO_WithholdingType getLCO_WithholdingType() throws RuntimeException
     {
-        Class<?> clazz = MTable.getClass(org.globalqss.model.I_LCO_WithholdingType.Table_Name);
-        org.globalqss.model.I_LCO_WithholdingType result = null;
-        try	{
-	        Constructor<?> constructor = null;
-	    	constructor = clazz.getDeclaredConstructor(new Class[]{Properties.class, int.class, String.class});
-    	    result = (org.globalqss.model.I_LCO_WithholdingType)constructor.newInstance(new Object[] {getCtx(), new Integer(getLCO_WithholdingType_ID()), get_TrxName()});
-        } catch (Exception e) {
-	        log.log(Level.SEVERE, "(id) - Table=" + Table_Name + ",Class=" + clazz, e);
-	        log.saveError("Error", "Table=" + Table_Name + ",Class=" + clazz);
-           throw e;
-        }
-        return result;
-    }
+		return (org.globalqss.model.I_LCO_WithholdingType)MTable.get(getCtx(), org.globalqss.model.I_LCO_WithholdingType.Table_Name)
+			.getPO(getLCO_WithholdingType_ID(), get_TrxName());	}
 
 	/** Set Withholding Type.
 		@param LCO_WithholdingType_ID Withholding Type	  */
@@ -331,14 +299,6 @@ public class X_LCO_WithholdingCalc extends PO implements I_LCO_WithholdingCalc, 
 	  */
 	public void setName (String Name)
 	{
-		if (Name == null)
-			throw new IllegalArgumentException ("Name is mandatory.");
-
-		if (Name.length() > 60)
-		{
-			log.warning("Length > 60 - truncated");
-			Name = Name.substring(0, 60);
-		}
 		set_Value (COLUMNNAME_Name, Name);
 	}
 

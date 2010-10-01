@@ -1,14 +1,14 @@
 /******************************************************************************
  * Product: Adempiere ERP & CRM Smart Business Solution                       *
  * Copyright (C) 1999-2007 ComPiere, Inc. All Rights Reserved.                *
- * This program is free software; you can redistribute it and/or modify it    *
+ * This program is free software, you can redistribute it and/or modify it    *
  * under the terms version 2 of the GNU General Public License as published   *
  * by the Free Software Foundation. This program is distributed in the hope   *
- * that it will be useful, but WITHOUT ANY WARRANTY; without even the implied *
+ * that it will be useful, but WITHOUT ANY WARRANTY, without even the implied *
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.           *
  * See the GNU General Public License for more details.                       *
  * You should have received a copy of the GNU General Public License along    *
- * with this program; if not, write to the Free Software Foundation, Inc.,    *
+ * with this program, if not, write to the Free Software Foundation, Inc.,    *
  * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.                     *
  * For the text or an alternative of this public license, you may reach us    *
  * ComPiere, Inc., 2620 Augustine Dr. #245, Santa Clara, CA 95054, USA        *
@@ -17,24 +17,22 @@
 /** Generated Model - DO NOT CHANGE */
 package org.globalqss.model;
 
-import java.lang.reflect.Constructor;
 import java.sql.ResultSet;
 import java.sql.Timestamp;
 import java.util.Properties;
-import java.util.logging.Level;
 import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
 /** Generated Model for LCO_WithholdingRule
  *  @author Adempiere (generated) 
- *  @version Release 3.4.2s - $Id$ */
+ *  @version Release 3.6.0LTS - $Id$ */
 public class X_LCO_WithholdingRule extends PO implements I_LCO_WithholdingRule, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 20100617L;
 
     /** Standard Constructor */
     public X_LCO_WithholdingRule (Properties ctx, int LCO_WithholdingRule_ID, String trxName)
@@ -44,7 +42,7 @@ public class X_LCO_WithholdingRule extends PO implements I_LCO_WithholdingRule, 
         {
 			setLCO_WithholdingRule_ID (0);
 			setName (null);
-			setValidFrom (new Timestamp(System.currentTimeMillis()));
+			setValidFrom (new Timestamp( System.currentTimeMillis() ));
         } */
     }
 
@@ -76,21 +74,10 @@ public class X_LCO_WithholdingRule extends PO implements I_LCO_WithholdingRule, 
       return sb.toString();
     }
 
-	public I_C_TaxCategory getC_TaxCategory() throws Exception 
+	public I_C_TaxCategory getC_TaxCategory() throws RuntimeException
     {
-        Class<?> clazz = MTable.getClass(I_C_TaxCategory.Table_Name);
-        I_C_TaxCategory result = null;
-        try	{
-	        Constructor<?> constructor = null;
-	    	constructor = clazz.getDeclaredConstructor(new Class[]{Properties.class, int.class, String.class});
-    	    result = (I_C_TaxCategory)constructor.newInstance(new Object[] {getCtx(), new Integer(getC_TaxCategory_ID()), get_TrxName()});
-        } catch (Exception e) {
-	        log.log(Level.SEVERE, "(id) - Table=" + Table_Name + ",Class=" + clazz, e);
-	        log.saveError("Error", "Table=" + Table_Name + ",Class=" + clazz);
-           throw e;
-        }
-        return result;
-    }
+		return (I_C_TaxCategory)MTable.get(getCtx(), I_C_TaxCategory.Table_Name)
+			.getPO(getC_TaxCategory_ID(), get_TrxName());	}
 
 	/** Set Tax Category.
 		@param C_TaxCategory_ID 
@@ -121,12 +108,6 @@ public class X_LCO_WithholdingRule extends PO implements I_LCO_WithholdingRule, 
 	  */
 	public void setDescription (String Description)
 	{
-
-		if (Description != null && Description.length() > 255)
-		{
-			log.warning("Length > 255 - truncated");
-			Description = Description.substring(0, 255);
-		}
 		set_Value (COLUMNNAME_Description, Description);
 	}
 
@@ -322,8 +303,11 @@ public class X_LCO_WithholdingRule extends PO implements I_LCO_WithholdingRule, 
 		return false;
 	}
 
-	/** LCO_BP_City_ID AD_Reference_ID=1000004 */
-	public static final int LCO_BP_CITY_ID_AD_Reference_ID=1000004;
+	public I_C_City getLCO_BP_City() throws RuntimeException
+    {
+		return (I_C_City)MTable.get(getCtx(), I_C_City.Table_Name)
+			.getPO(getLCO_BP_City_ID(), get_TrxName());	}
+
 	/** Set City Business Partner.
 		@param LCO_BP_City_ID City Business Partner	  */
 	public void setLCO_BP_City_ID (int LCO_BP_City_ID)
@@ -344,8 +328,11 @@ public class X_LCO_WithholdingRule extends PO implements I_LCO_WithholdingRule, 
 		return ii.intValue();
 	}
 
-	/** LCO_BP_ISIC_ID AD_Reference_ID=1000001 */
-	public static final int LCO_BP_ISIC_ID_AD_Reference_ID=1000001;
+	public org.globalqss.model.I_LCO_ISIC getLCO_BP_ISIC() throws RuntimeException
+    {
+		return (org.globalqss.model.I_LCO_ISIC)MTable.get(getCtx(), org.globalqss.model.I_LCO_ISIC.Table_Name)
+			.getPO(getLCO_BP_ISIC_ID(), get_TrxName());	}
+
 	/** Set ISIC Business Partner.
 		@param LCO_BP_ISIC_ID ISIC Business Partner	  */
 	public void setLCO_BP_ISIC_ID (int LCO_BP_ISIC_ID)
@@ -366,8 +353,11 @@ public class X_LCO_WithholdingRule extends PO implements I_LCO_WithholdingRule, 
 		return ii.intValue();
 	}
 
-	/** LCO_BP_TaxPayerType_ID AD_Reference_ID=1000002 */
-	public static final int LCO_BP_TAXPAYERTYPE_ID_AD_Reference_ID=1000002;
+	public org.globalqss.model.I_LCO_TaxPayerType getLCO_BP_TaxPayerType() throws RuntimeException
+    {
+		return (org.globalqss.model.I_LCO_TaxPayerType)MTable.get(getCtx(), org.globalqss.model.I_LCO_TaxPayerType.Table_Name)
+			.getPO(getLCO_BP_TaxPayerType_ID(), get_TrxName());	}
+
 	/** Set Tax Payer Type Business Partner.
 		@param LCO_BP_TaxPayerType_ID Tax Payer Type Business Partner	  */
 	public void setLCO_BP_TaxPayerType_ID (int LCO_BP_TaxPayerType_ID)
@@ -388,8 +378,11 @@ public class X_LCO_WithholdingRule extends PO implements I_LCO_WithholdingRule, 
 		return ii.intValue();
 	}
 
-	/** LCO_Org_City_ID AD_Reference_ID=1000004 */
-	public static final int LCO_ORG_CITY_ID_AD_Reference_ID=1000004;
+	public I_C_City getLCO_Org_City() throws RuntimeException
+    {
+		return (I_C_City)MTable.get(getCtx(), I_C_City.Table_Name)
+			.getPO(getLCO_Org_City_ID(), get_TrxName());	}
+
 	/** Set City Organization.
 		@param LCO_Org_City_ID City Organization	  */
 	public void setLCO_Org_City_ID (int LCO_Org_City_ID)
@@ -410,8 +403,11 @@ public class X_LCO_WithholdingRule extends PO implements I_LCO_WithholdingRule, 
 		return ii.intValue();
 	}
 
-	/** LCO_Org_ISIC_ID AD_Reference_ID=1000001 */
-	public static final int LCO_ORG_ISIC_ID_AD_Reference_ID=1000001;
+	public org.globalqss.model.I_LCO_ISIC getLCO_Org_ISIC() throws RuntimeException
+    {
+		return (org.globalqss.model.I_LCO_ISIC)MTable.get(getCtx(), org.globalqss.model.I_LCO_ISIC.Table_Name)
+			.getPO(getLCO_Org_ISIC_ID(), get_TrxName());	}
+
 	/** Set ISIC Organization.
 		@param LCO_Org_ISIC_ID ISIC Organization	  */
 	public void setLCO_Org_ISIC_ID (int LCO_Org_ISIC_ID)
@@ -432,8 +428,11 @@ public class X_LCO_WithholdingRule extends PO implements I_LCO_WithholdingRule, 
 		return ii.intValue();
 	}
 
-	/** LCO_Org_TaxPayerType_ID AD_Reference_ID=1000002 */
-	public static final int LCO_ORG_TAXPAYERTYPE_ID_AD_Reference_ID=1000002;
+	public org.globalqss.model.I_LCO_TaxPayerType getLCO_Org_TaxPayerType() throws RuntimeException
+    {
+		return (org.globalqss.model.I_LCO_TaxPayerType)MTable.get(getCtx(), org.globalqss.model.I_LCO_TaxPayerType.Table_Name)
+			.getPO(getLCO_Org_TaxPayerType_ID(), get_TrxName());	}
+
 	/** Set Tax Payer Type Organization.
 		@param LCO_Org_TaxPayerType_ID Tax Payer Type Organization	  */
 	public void setLCO_Org_TaxPayerType_ID (int LCO_Org_TaxPayerType_ID)
@@ -454,21 +453,10 @@ public class X_LCO_WithholdingRule extends PO implements I_LCO_WithholdingRule, 
 		return ii.intValue();
 	}
 
-	public org.globalqss.model.I_LCO_WithholdingCalc getLCO_WithholdingCalc() throws Exception 
+	public org.globalqss.model.I_LCO_WithholdingCalc getLCO_WithholdingCalc() throws RuntimeException
     {
-        Class<?> clazz = MTable.getClass(org.globalqss.model.I_LCO_WithholdingCalc.Table_Name);
-        org.globalqss.model.I_LCO_WithholdingCalc result = null;
-        try	{
-	        Constructor<?> constructor = null;
-	    	constructor = clazz.getDeclaredConstructor(new Class[]{Properties.class, int.class, String.class});
-    	    result = (org.globalqss.model.I_LCO_WithholdingCalc)constructor.newInstance(new Object[] {getCtx(), new Integer(getLCO_WithholdingCalc_ID()), get_TrxName()});
-        } catch (Exception e) {
-	        log.log(Level.SEVERE, "(id) - Table=" + Table_Name + ",Class=" + clazz, e);
-	        log.saveError("Error", "Table=" + Table_Name + ",Class=" + clazz);
-           throw e;
-        }
-        return result;
-    }
+		return (org.globalqss.model.I_LCO_WithholdingCalc)MTable.get(getCtx(), org.globalqss.model.I_LCO_WithholdingCalc.Table_Name)
+			.getPO(getLCO_WithholdingCalc_ID(), get_TrxName());	}
 
 	/** Set Withholding Calculation.
 		@param LCO_WithholdingCalc_ID Withholding Calculation	  */
@@ -490,21 +478,10 @@ public class X_LCO_WithholdingRule extends PO implements I_LCO_WithholdingRule, 
 		return ii.intValue();
 	}
 
-	public org.globalqss.model.I_LCO_WithholdingCategory getLCO_WithholdingCategory() throws Exception 
+	public org.globalqss.model.I_LCO_WithholdingCategory getLCO_WithholdingCategory() throws RuntimeException
     {
-        Class<?> clazz = MTable.getClass(org.globalqss.model.I_LCO_WithholdingCategory.Table_Name);
-        org.globalqss.model.I_LCO_WithholdingCategory result = null;
-        try	{
-	        Constructor<?> constructor = null;
-	    	constructor = clazz.getDeclaredConstructor(new Class[]{Properties.class, int.class, String.class});
-    	    result = (org.globalqss.model.I_LCO_WithholdingCategory)constructor.newInstance(new Object[] {getCtx(), new Integer(getLCO_WithholdingCategory_ID()), get_TrxName()});
-        } catch (Exception e) {
-	        log.log(Level.SEVERE, "(id) - Table=" + Table_Name + ",Class=" + clazz, e);
-	        log.saveError("Error", "Table=" + Table_Name + ",Class=" + clazz);
-           throw e;
-        }
-        return result;
-    }
+		return (org.globalqss.model.I_LCO_WithholdingCategory)MTable.get(getCtx(), org.globalqss.model.I_LCO_WithholdingCategory.Table_Name)
+			.getPO(getLCO_WithholdingCategory_ID(), get_TrxName());	}
 
 	/** Set Withholding Category.
 		@param LCO_WithholdingCategory_ID Withholding Category	  */
@@ -530,9 +507,10 @@ public class X_LCO_WithholdingRule extends PO implements I_LCO_WithholdingRule, 
 		@param LCO_WithholdingRule_ID Withholding Rule	  */
 	public void setLCO_WithholdingRule_ID (int LCO_WithholdingRule_ID)
 	{
-		if (LCO_WithholdingRule_ID < 1)
-			 throw new IllegalArgumentException ("LCO_WithholdingRule_ID is mandatory.");
-		set_ValueNoCheck (COLUMNNAME_LCO_WithholdingRule_ID, Integer.valueOf(LCO_WithholdingRule_ID));
+		if (LCO_WithholdingRule_ID < 1) 
+			set_ValueNoCheck (COLUMNNAME_LCO_WithholdingRule_ID, null);
+		else 
+			set_ValueNoCheck (COLUMNNAME_LCO_WithholdingRule_ID, Integer.valueOf(LCO_WithholdingRule_ID));
 	}
 
 	/** Get Withholding Rule.
@@ -545,21 +523,10 @@ public class X_LCO_WithholdingRule extends PO implements I_LCO_WithholdingRule, 
 		return ii.intValue();
 	}
 
-	public org.globalqss.model.I_LCO_WithholdingType getLCO_WithholdingType() throws Exception 
+	public org.globalqss.model.I_LCO_WithholdingType getLCO_WithholdingType() throws RuntimeException
     {
-        Class<?> clazz = MTable.getClass(org.globalqss.model.I_LCO_WithholdingType.Table_Name);
-        org.globalqss.model.I_LCO_WithholdingType result = null;
-        try	{
-	        Constructor<?> constructor = null;
-	    	constructor = clazz.getDeclaredConstructor(new Class[]{Properties.class, int.class, String.class});
-    	    result = (org.globalqss.model.I_LCO_WithholdingType)constructor.newInstance(new Object[] {getCtx(), new Integer(getLCO_WithholdingType_ID()), get_TrxName()});
-        } catch (Exception e) {
-	        log.log(Level.SEVERE, "(id) - Table=" + Table_Name + ",Class=" + clazz, e);
-	        log.saveError("Error", "Table=" + Table_Name + ",Class=" + clazz);
-           throw e;
-        }
-        return result;
-    }
+		return (org.globalqss.model.I_LCO_WithholdingType)MTable.get(getCtx(), org.globalqss.model.I_LCO_WithholdingType.Table_Name)
+			.getPO(getLCO_WithholdingType_ID(), get_TrxName());	}
 
 	/** Set Withholding Type.
 		@param LCO_WithholdingType_ID Withholding Type	  */
@@ -587,14 +554,6 @@ public class X_LCO_WithholdingRule extends PO implements I_LCO_WithholdingRule, 
 	  */
 	public void setName (String Name)
 	{
-		if (Name == null)
-			throw new IllegalArgumentException ("Name is mandatory.");
-
-		if (Name.length() > 60)
-		{
-			log.warning("Length > 60 - truncated");
-			Name = Name.substring(0, 60);
-		}
 		set_Value (COLUMNNAME_Name, Name);
 	}
 
@@ -620,8 +579,6 @@ public class X_LCO_WithholdingRule extends PO implements I_LCO_WithholdingRule, 
 	  */
 	public void setValidFrom (Timestamp ValidFrom)
 	{
-		if (ValidFrom == null)
-			throw new IllegalArgumentException ("ValidFrom is mandatory.");
 		set_Value (COLUMNNAME_ValidFrom, ValidFrom);
 	}
 
