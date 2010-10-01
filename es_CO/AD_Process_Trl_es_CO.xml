@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--ADempiere(r) Release 3.5.4a_2009-09-15 -Smart Suite ERP,CRM and SCM- (c) 1999-2009 ADempiere(r); Implementation: ADempiere - Supported by ADempiere community-->
+<!--ADempiere(r) Release 3.6.0LTS_2010-06-14 -Smart Suite ERP,CRM and SCM- (c) 1999-2010 ADempiere(r); Implementation: ADempiere - Supported by ADempiere community-->
 <!--<!DOCTYPE adempiereTrl PUBLIC "-//ComPiere, Inc.//DTD Adempiere Translation 1.0//EN" "http://www.adempiere.com/dtd/adempiereTrl.dtd">-->
 <adempiereTrl language="es_CO" table="AD_Process">
  <row id="100" trl="Y">
@@ -313,7 +313,7 @@
   <value column="Help" original=""/>
  </row>
  <row id="169" trl="Y">
-  <value column="Name" original="Process Journal">Procesar Diario</value>
+  <value column="Name" original="Process Journal">Procesar Nota Contable</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
@@ -662,9 +662,9 @@ Los costos estan en el actual esquema contable - Las líneas estan en la actual 
   <value column="Help" original="The report shows transaction details (receipts, shipments, inventory, movements, ...) including product instance (Lot, Serial No) info">El reporte muestra detalles de transacciones (recibos, envios, inventario, movimiento, ...) incluyendo el caso del producto (Lote, No. de serie) Información.</value>
  </row>
  <row id="238" trl="Y">
-  <value column="Name" original="Aging">Antiguedad</value>
-  <value column="Description" original="Aging Report">Reporte Antiguedad</value>
-  <value column="Help" original="The aging report allows you to report on Open Items (Invoices). Select the aging buckets, you want to have in your report. If you select a currency, you get only invoices of that currency, otherwise the amounts are converted to your primary accounting currency. If you do not select a Statement Date, the system date is used to calculate the buckets. If you do not list the individual invoices, the Due Date is the earliest due date for the business partner and the Due Days are the average due days of all invoices.&lt;br&gt;&#10;&lt;br&gt;&#10;If you select an Account Date the report will generate the Aging as of that date. The report will exclude documents after the selected date.&lt;br&gt;&#10;&lt;br&gt;&#10;For example: A customer has one invoice for $100 with the Account Date of 03/31/08 and one payment for $100 with the Account Date of 05/01/08. The report will show the following balances based on the Account Date selected: 03/15/08= 0; 04/15/08=100; 05/15/08 = 0.&#10;">El informe de la antiguedad permite que usted reporte sobre los item´s abiertos (facturas). Seleccione los cubos de la antiguedad, que usted desea tener en su informe.</value>
+  <value column="Name" original="Aging">Antigüedad</value>
+  <value column="Description" original="Aging Report">Reporte Antigüedad</value>
+  <value column="Help" original="The aging report allows you to report on Open Items (Invoices). Select the aging buckets, you want to have in your report. If you select a currency, you get only invoices of that currency, otherwise the amounts are converted to your primary accounting currency. If you do not select a Statement Date, the system date is used to calculate the buckets. If you do not list the individual invoices, the Due Date is the earliest due date for the business partner and the Due Days are the average due days of all invoices.&lt;br&gt;&#10;&lt;br&gt;&#10;If you select an Account Date the report will generate the Aging as of that date. The report will exclude documents after the selected date.&lt;br&gt;&#10;&lt;br&gt;&#10;For example: A customer has one invoice for $100 with the Account Date of 03/31/08 and one payment for $100 with the Account Date of 05/01/08. The report will show the following balances based on the Account Date selected: 03/15/08= 0; 04/15/08=100; 05/15/08 = 0.&#10;">El informe de la antigüedad permite que usted reporte sobre los item´s abiertos (facturas). Seleccione los cubos de la antigüedad, que usted desea tener en su informe.</value>
  </row>
  <row id="239" trl="Y">
   <value column="Name" original="Clicks Monthy">Clic's Mensuales</value>
@@ -747,7 +747,7 @@ Nos ayudará, si usted permitirá publicar su uso en Adempiere. Nos pondremos en
  <row id="254" trl="Y">
   <value column="Name" original="Accounting Fact Period">Asientos Contables por Período</value>
   <value column="Description" original="Accounting Fact Details summarized by Accounting Period">Detalles de asientos contables resumidos por período de contabilización</value>
-  <value column="Help" original="The Period is based on the the Calendar defined on Client level.">El período se basa en el calendario definido en nivel del cliente.</value>
+  <value column="Help" original="The Period is based on the the Calendar defined on Client level.">El período se basa en el calendario definido en nivel de la compañía.</value>
  </row>
  <row id="255" trl="Y">
   <value column="Name" original="Reopen Order">Reabrir Orden</value>
@@ -778,7 +778,7 @@ Nos ayudará, si usted permitirá publicar su uso en Adempiere. Nos pondremos en
  <row id="260" trl="Y">
   <value column="Name" original="Link Organization">Liga Organización</value>
   <value column="Description" original="Link Business Partner to an Organization">Integración de Tercero a una Organización</value>
-  <value column="Help" original="If the Business Partner is another Organization, select the Organization or set to empty to create a new Organization.  You link a Business Partner to an Organization to create explicit Documents for Inter-Org transaction.&#10;If you create a new Organization, you may supply a Organization Type.  If you select a Role, the access to the new Organization is limited to that role, otherwise all (non manual) roles of the Client will have access to the new Organization.">Si el tercero esta en otra organización, seleccione la organización o fije para crear una nueva organización. Usted liga a tercero a una organización para crear los documentos explícitos para la Integración-Org transacción. Si usted crea una nueva organización, usted puede proveer un tipo de la organización. Si usted selecciona un rol, el acceso a la nueva organización se limita a ese rol, si no todo los roles (no manual) del cliente tendrán acceso a la nueva organización.</value>
+  <value column="Help" original="If the Business Partner is another Organization, select the Organization or set to empty to create a new Organization.  You link a Business Partner to an Organization to create explicit Documents for Inter-Org transaction.&#10;If you create a new Organization, you may supply a Organization Type.  If you select a Role, the access to the new Organization is limited to that role, otherwise all (non manual) roles of the Client will have access to the new Organization.">Si el tercero esta en otra organización, seleccione la organización o fije para crear una nueva organización. Usted liga a tercero a una organización para crear los documentos explícitos para la Integración-Org transacción. Si usted crea una nueva organización, usted puede proveer un tipo de la organización. Si usted selecciona un rol, el acceso a la nueva organización se limita a ese rol, si no todo los roles (no manual) de la compañía tendrán acceso a la nueva organización.</value>
  </row>
  <row id="261" trl="Y">
   <value column="Name" original="Create &amp; Invite">Crea e Invita</value>
@@ -955,9 +955,9 @@ Entonces las valuaciones de todas las respuestas de cantidad se adicionan a la v
  </row>
  <row id="295" trl="Y">
   <value column="Name" original="Role Access Update">Actualización de Rol</value>
-  <value column="Description" original="Update the access rights of a role or roles of a client">Actualizar las reglas de acceso de un rol o roles de un cliente.</value>
-  <value column="Help" original="Update the access rights of a role or all roles of a client to windows, forms, processes and workflows. If run for System, all roles of all clients are updated. Note that a role is only updated if it is not marked as manual.">Actualize las reglas de acceso de un rol o de todos los roles de un cliente para Ventanas, Formatos y Flujos de Trabajo.
-Si está funcionando para el sistema, todos los roles de todos los clientes son actualizados. Observe que un rol es solamente actualizado si no esta marcado como manual.</value>
+  <value column="Description" original="Update the access rights of a role or roles of a client">Actualizar las reglas de acceso de un rol o roles de una compañía.</value>
+  <value column="Help" original="Update the access rights of a role or all roles of a client to windows, forms, processes and workflows. If run for System, all roles of all clients are updated. Note that a role is only updated if it is not marked as manual.">Actualize las reglas de acceso de un rol o de todos los roles de una compañía para Ventanas, Formatos y Flujos de Trabajo.
+Si lo ejecuta para System, todos los roles de todas las compañías son actualizados. Observe que un rol es solamente actualizado si no esta marcado como manual.</value>
  </row>
  <row id="296" trl="Y">
   <value column="Name" original="Import Confirmations">Importar Confirmaciones</value>
@@ -1026,8 +1026,8 @@ Si está funcionando para el sistema, todos los roles de todos los clientes son 
  </row>
  <row id="309" trl="Y">
   <value column="Name" original="Workflow to Client">Mueve Flujo de Trabajo</value>
-  <value column="Description" original="Move custom workflow elements to the current client">Mueva los elementos personalizados de Flujo de Trabajo al cliente actual.</value>
-  <value column="Help" original="The security architecture prevents you from adding client specific modifications/customizations to existing standard workflows.  This process moves your customization made on system level to this client to add client specific details.">La arquitectura de la seguridad evita que usted agrege al cliente modificaciones/arreglos para registros particulares a los Flujos de Trabajo estandares exisentes. Este proceso mueve su arreglo para requisitos particulares hecho en nivel de sistema a este cliente para arreglar los detalles del cliente especifico.</value>
+  <value column="Description" original="Move custom workflow elements to the current client">Mueva los elementos personalizados de Flujo de Trabajo a la compañía actual.</value>
+  <value column="Help" original="The security architecture prevents you from adding client specific modifications/customizations to existing standard workflows.  This process moves your customization made on system level to this client to add client specific details.">La arquitectura de la seguridad evita que usted agregue modificaciones/arreglos a la compañía para registros particulares a los Flujos de Trabajo estandares existentes. Este proceso mueve su arreglo para requisitos particulares hechos en nivel de sistema a esta compañía para arreglar los detalles específicos de la compañía.</value>
  </row>
  <row id="310" trl="Y">
   <value column="Name" original="Trial Balance">Balance de Prueba</value>
@@ -1090,7 +1090,7 @@ Si se selecciona una cuenta, el balance es calculado en base al  tipo de cuenta 
  <row id="321" trl="Y">
   <value column="Name" original="Synchronize Doc Translation">Sincroniza la traducción del documento</value>
   <value column="Description" original="Synchronize Document Translation">Sincroniza la traducción del documento</value>
-  <value column="Help" original="If the current client has not multi-lingual documents enabled, the translations for documents are synchronized with the main record (i.e. it copies the content of the main record to the translation records).  This process is necessary when swiching to a mono-lingual environment as there the terminoligy is maintained not in the translation records.&lt;br&gt;&#10;This applies to the client defined document translations, e.g. for UoM, Payment Terms, Product Info, etc.">Si el cliente actual no permite se hagan los documentos multilenguajes, las traducciones para los documentos se sincronizan con el expediente principal (es decir copia el contenido del expediente principal a los expedientes de la traducción). Este proceso es necesario en un ambiente monolenguaje ya que allí no se mantiene la terminologia en la traducción de registros.Esto se aplica a las traducciones definidas del documento de cliente, ej. para UM, los términos del pago, información de producto, etc.</value>
+  <value column="Help" original="If the current client has not multi-lingual documents enabled, the translations for documents are synchronized with the main record (i.e. it copies the content of the main record to the translation records).  This process is necessary when swiching to a mono-lingual environment as there the terminoligy is maintained not in the translation records.&lt;br&gt;&#10;This applies to the client defined document translations, e.g. for UoM, Payment Terms, Product Info, etc.">Si la compañía actual no permite se hagan los documentos multilenguajes, las traducciones para los documentos se sincronizan con el registro principal (es decir copia el contenido del registro principal a los registros de la traducción). Este proceso es necesario en un ambiente monolenguaje ya que allí no se mantiene la terminologia en la traducción de registros. Esto se aplica a las traducciones definidas del documento de compañía, ej. para UM, los términos del pago, información de producto, etc.</value>
  </row>
  <row id="322" trl="Y">
   <value column="Name" original="Material Reference">Referencia de Material</value>
@@ -1465,7 +1465,7 @@ Puede también incluir órdenes de distribución que tienen confirmaciones pendi
  <row id="53050" trl="Y">
   <value column="Name" original="Create Doc Type to Manufacturing">Crear Tipo Doc para Manufactura</value>
   <value column="Description" original="Let create the document type to manufacturing">Permite crear los tipos de documento para manufactura</value>
-  <value column="Help" original="This process only need run one time by client">Solo debe ejecutar este proceso una vez por cliente</value>
+  <value column="Help" original="This process only need run one time by client">Solo debe ejecutar este proceso una vez por compañía</value>
  </row>
  <row id="53052" trl="Y">
   <value column="Name" original="Create Element">Crear Elemento</value>
@@ -1777,7 +1777,7 @@ Debe ser implementado cuando no haya usuarios conectados.</value>
   <value column="Help" original="Lets freeze or unfreeze the cost, If the Cost is UnFrozen then can be changed">Permite congelar o descongelar el costo, si el costo es descongelado puede ser cambiado</value>
  </row>
  <row id="53161" trl="Y">
-  <value column="Name" original="Initial Client Setup Process">Configuración Inicial de Cliente</value>
+  <value column="Name" original="Initial Client Setup Process">Configuración Inicial de Compañía</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
@@ -1805,5 +1805,20 @@ Debe ser implementado cuando no haya usuarios conectados.</value>
   <value column="Name" original="Client Accounting Processor">Procesador Contabilidad (Cliente)</value>
   <value column="Description" original="Client Accounting Processor">Procesador Contabilidad (Cliente)</value>
   <value column="Help" original="The client accounting processor allows a user to run the accounting processor in a client session.  The system configurator parameter CLIENT_ACCOUNTING must be enabled (configured as [I]mmediate or [Q]ueue).">El procesador de contabilidad (cliente) permite a un usuario correr el procesador contable desde la sesión del cliente.  El parámetro de configuración del sistema CLIENT_ACCOUNTING debe estar habilitado (configurado como I/Inmediato o Q/Cola).</value>
+ </row>
+ <row id="53189" trl="N">
+  <value column="Name" original="Storage per Product">Almacenamiento por Producto</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53199" trl="N">
+  <value column="Name" original="Reset Allocation Direct">Reinicia Asignación Directa</value>
+  <value column="Description" original="Reset (delete) allocation of invoices to payments">Reinicia (borra) asignación de facturas a pagos</value>
+  <value column="Help" original="Delete individual allocation. In contrast to &quot;Reverse&quot;, the allocation is deleted (no trace), if the period is open.">Borra asignaciones individuales.  En contraste a "Reversar", la asignación es borrada (no se guarda log), si el período está abierto.</value>
+ </row>
+ <row id="53200" trl="N">
+  <value column="Name" original="Import Product Planning and Forecast">Importa Planeación de Productos y Pronóstico</value>
+  <value column="Description" original="Import Product Planning and Forecast">Importa Planeación de Productos y Pronóstico</value>
+  <value column="Help" original="Import and update  product planning data and forecast">Importa y Actualiza Planeación de Productos y Pronóstico</value>
  </row>
 </adempiereTrl>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--ADempiere(r) Release 3.5.4a_2009-09-15 -Smart Suite ERP,CRM and SCM- (c) 1999-2009 ADempiere(r); Implementation: ADempiere - Supported by ADempiere community-->
+<!--ADempiere(r) Release 3.6.0LTS_2010-06-14 -Smart Suite ERP,CRM and SCM- (c) 1999-2010 ADempiere(r); Implementation: ADempiere - Supported by ADempiere community-->
 <!--<!DOCTYPE adempiereTrl PUBLIC "-//ComPiere, Inc.//DTD Adempiere Translation 1.0//EN" "http://www.adempiere.com/dtd/adempiereTrl.dtd">-->
 <adempiereTrl language="es_CO" table="AD_Ref_List">
  <row id="51" trl="Y">
@@ -87,8 +87,8 @@
   <value column="Description" original=""/>
  </row>
  <row id="114" trl="Y">
-  <value column="Name" original="Spot">Spot</value>
-  <value column="Description" original="Spot Conversation Rate Type">Tipo de Tasa de Conversión Spot</value>
+  <value column="Name" original="Spot">TRM</value>
+  <value column="Description" original="Spot Conversation Rate Type">Tipo de Tasa de Conversión TRM</value>
  </row>
  <row id="115" trl="Y">
   <value column="Name" original="Period End">Fin de Período</value>
@@ -4294,6 +4294,10 @@
   <value column="Name" original="Chart">Gráfico</value>
   <value column="Description" original=""/>
  </row>
+ <row id="53503" trl="N">
+  <value column="Name" original="Broadcast">Difundir</value>
+  <value column="Description" original="Broadcast &lt;&lt;-&gt;&gt;">Difundir &lt;&lt;-&gt;&gt;</value>
+ </row>
  <row id="53504" trl="Y">
   <value column="Name" original="Model Validator">Validador del Modelo</value>
   <value column="Description" original=""/>
@@ -4384,6 +4388,86 @@
  </row>
  <row id="53534" trl="Y">
   <value column="Name" original="Other">Otros</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53536" trl="N">
+  <value column="Name" original="Total">Total</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53537" trl="N">
+  <value column="Name" original="Year">Año</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53538" trl="N">
+  <value column="Name" original="Period">Período</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53540" trl="N">
+  <value column="Name" original="Natural">Natural</value>
+  <value column="Description" original="Year for P &amp; L account, Total for Balance Sheet account"><![CDATA[Año para cuentas de P&G, Total para cuentas de balance]]></value>
+ </row>
+ <row id="53541" trl="N">
+  <value column="Name" original="Balance (expected sign)">Balance (signo esperado)</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53542" trl="N">
+  <value column="Name" original="Credit Only">Sólo Créditos</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53543" trl="N">
+  <value column="Name" original="Debit Only">Sólo Débitos</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53544" trl="N">
+  <value column="Name" original="Quantity (expected sign)">Cantidad (signo esperado)</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53545" trl="N">
+  <value column="Name" original="Balance (accounted sign)">Balance (signo contabilizado))</value>
+  <value column="Description" original="DR - CR">DB - CR</value>
+ </row>
+ <row id="53546" trl="N">
+  <value column="Name" original="Quantity (accounted sign)">Cantidad (signo contabilizado)</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53551" trl="N">
+  <value column="Name" original="Human Resource &amp; Payroll"><![CDATA[Recursos Humanos y Nómina]]></value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53552" trl="N">
+  <value column="Name" original="Order">Orden</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53553" trl="N">
+  <value column="Name" original="Invoice">Factura</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53554" trl="N">
+  <value column="Name" original="Implicit">Implícito</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53555" trl="N">
+  <value column="Name" original="Explicit">Explícito</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53556" trl="N">
+  <value column="Name" original="Measure for Performance Analysis">Medida para Análisis de Desempeño</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53559" trl="N">
+  <value column="Name" original="Weight">Peso</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53561" trl="N">
+  <value column="Name" original="Safety Stock">Existencia de Seguridad</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53574" trl="N">
+  <value column="Name" original="Cron Scheduling Pattern">Patrón Agendamiento Crontab</value>
+  <value column="Description" original="Use cron style scheduling pattern">Utilice patrón de agendamiento estilo crontab</value>
+ </row>
+ <row id="53583" trl="N">
+  <value column="Name" original="Custom Separator Char">Caracter Separador Personalizado</value>
   <value column="Description" original=""/>
  </row>
 </adempiereTrl>

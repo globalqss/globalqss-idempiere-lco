@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--ADempiere(r) Release 3.5.4a_2009-09-15 -Smart Suite ERP,CRM and SCM- (c) 1999-2009 ADempiere(r); Implementation: ADempiere - Supported by ADempiere community-->
+<!--ADempiere(r) Release 3.6.0LTS_2010-06-14 -Smart Suite ERP,CRM and SCM- (c) 1999-2010 ADempiere(r); Implementation: ADempiere - Supported by ADempiere community-->
 <!--<!DOCTYPE adempiereTrl PUBLIC "-//ComPiere, Inc.//DTD Adempiere Translation 1.0//EN" "http://www.adempiere.com/dtd/adempiereTrl.dtd">-->
 <adempiereTrl language="es_CO" table="AD_Tab">
  <row id="100" trl="Y">
@@ -227,7 +227,7 @@ Debe reiniciar su servidor de aplicaciones para que la mayoría de los cambios h
  </row>
  <row id="145" trl="Y">
   <value column="Name" original="Client">Compañía</value>
-  <value column="CommitWarning" original="Create a new client via &quot;Initial Client Setup&quot;. You can only change information here!  You need re-login and restart your application server for most changes made here to be effective.  The change of the Material Policy applies to future transactions.">La creación de un nuevo cliente debe hacerse por medio de la ventana "Configuración Inicial Compañía".  Solo debe modificar información aquí!  Necesita volver a ingresar y reiniciar su servidor de aplicaciones para que la mayoría de cambios hechos aquí surtan efecto.  El cambio en la Política de Material aplicará para transacciones futuras.</value>
+  <value column="CommitWarning" original="Create a new client via &quot;Initial Client Setup&quot;. You can only change information here!  You need re-login and restart your application server for most changes made here to be effective.  The change of the Material Policy applies to future transactions.">La creación de una nueva compañía debe hacerse por medio de la ventana "Configuración Inicial Compañía".  Solo debe modificar información aquí!  Necesita volver a ingresar y reiniciar su servidor de aplicaciones para que la mayoría de cambios hechos aquí surtan efecto.  El cambio en la Política de Material aplicará para transacciones futuras.</value>
   <value column="Description" original="Client/Tenant Definition">Definir Compañías</value>
   <value column="Help" original="The Client Definition Tab defines a unique client.&#10;Do not create a new client in this window, but use &quot;Initial Client Setup&quot; (System Administrator Role) to set up the required security and access rules. If you create a new client here, you will not be able to view it and also the required client infrastructure would not have been set up.">La pestaña de definición de Compañía define una compañía única. No use esta ventana para crear una compañía, use el flujo de trabajo `Definir Compañía` para establecer las reglas de seguridad y de acceso requeridas. Si se crea una compañía aquí, la compañía no podrá ser vista dentro del sistema y su definición de parámetros no sera creada.</value>
  </row>
@@ -282,7 +282,7 @@ Debe reiniciar su servidor de aplicaciones para que la mayoría de los cambios h
  <row id="156" trl="Y">
   <value column="Name" original="Preference">Preferencia</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Maintain System Client Org and User Preferences">Mantener preferencias de Sistema, Cliente, Organización y Usuario</value>
+  <value column="Description" original="Maintain System Client Org and User Preferences">Mantener preferencias de Sistema, Compañía, Organización y Usuario</value>
   <value column="Help" original=""/>
  </row>
  <row id="157" trl="Y">
@@ -3210,7 +3210,7 @@ Observe que el número de documento puede ser sobreescrito - dependiendo del con
   <value column="Name" original="Org Access">Acceso a la Org</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original="Maintain User Org Access">Mantenga el acceso de Org del usuario</value>
-  <value column="Help" original="Add the client and organizations the user has access to. Entries here are ignored, if in the Role, User Org Access is not selected or the role has access to all roles.&lt;br&gt;&#10;Note that access information is cached and requires re-login or reset of cache."><![CDATA[Agregue a cliente y las organizaciones el usuario tienen acceso a. Si no hacen caso las entradas aquí, si en el rol, el acceso de Org del usuario no se selecciona o el rol tiene acceso a todo los roles.<br >
+  <value column="Help" original="Add the client and organizations the user has access to. Entries here are ignored, if in the Role, User Org Access is not selected or the role has access to all roles.&lt;br&gt;&#10;Note that access information is cached and requires re-login or reset of cache."><![CDATA[Agregue la compañía y las organizaciones a las que el usuario tiene acceso. Si no hacen caso las entradas aquí, si en el rol, el acceso de Org del usuario no se selecciona o el rol tiene acceso a todo los roles.<br >
 Observe que la información del acceso está depositada y requiere la re-conexión o el reajuste.]]></value>
  </row>
  <row id="697" trl="Y">
@@ -4102,7 +4102,7 @@ La medida debe soportar la información, sino es ignorada.</value>
   <value column="Name" original="LDAP Server">Servidor LDAP</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original="LDAP Server to authenticate and authorize external systems based on Adempiere">Servidor LDAP para autenticar y autorizar sistemas externos basados en Adempiere</value>
-  <value column="Help" original="The LDAP Server allows third party software (e.g. Apache) to use the users defined in the system to authentificate and authorize them.  There is only one server per Adempiere system.  The &quot;o&quot; is the Client key and the optional &quot;ou&quot; is the Interest Area key.">El Servidor LDAP permite software de terceros (Ej : Apache ) para el uso de usuarios definidos en el sistema para autenticarlos y autorizarlos . Hay un solo servidor por sistema Adempiere. La "o" es la llave del cliente y la opción "ou" es la llave de area de interes.</value>
+  <value column="Help" original="The LDAP Server allows third party software (e.g. Apache) to use the users defined in the system to authentificate and authorize them.  There is only one server per Adempiere system.  The &quot;o&quot; is the Client key and the optional &quot;ou&quot; is the Interest Area key.">El Servidor LDAP permite software de terceros (Ej : Apache ) para el uso de usuarios definidos en el sistema para autenticarlos y autorizarlos . Hay un solo servidor por sistema Adempiere. La "o" es la llave del cliente y la opción "ou" es la llave de área de interés.</value>
  </row>
  <row id="850" trl="Y">
   <value column="Name" original="LDAP Server Log">Log de Servidor LDAP</value>
@@ -4423,9 +4423,9 @@ La medida debe soportar la información, sino es ignorada.</value>
   <value column="Help" original=""/>
  </row>
  <row id="53050" trl="Y">
-  <value column="Name" original="Order Line">Línea Orden</value>
+  <value column="Name" original="Distribution Order Line">Línea Orden</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original=""/>
+  <value column="Description" original="Distribution Order Line"/>
   <value column="Help" original=""/>
  </row>
  <row id="53051" trl="Y">
@@ -4453,7 +4453,7 @@ La medida debe soportar la información, sino es ignorada.</value>
   <value column="Help" original="Manufacturing Schedule is a document group of documents or schedule identity  conveying authority for the manufacture of specified parts or products in specified quantities."/>
  </row>
  <row id="53055" trl="Y">
-  <value column="Name" original="Order">Orden</value>
+  <value column="Name" original="Distribution Order">Orden</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original="Distribution Order allow create Order inter warehouse to supply a demand ">Orden de Distribución permite crear ordenes entre almacenes para suplir la demanda</value>
   <value column="Help" original="Distribution Order allow create Order inter warehouse to supply a demand ">Orden de Distribución permite crear ordenes entre almacenes para suplir la demanda</value>
@@ -4519,7 +4519,7 @@ La medida debe soportar la información, sino es ignorada.</value>
   <value column="Help" original=""/>
  </row>
  <row id="53066" trl="Y">
-  <value column="Name" original="Client Level">Nivel de cliente</value>
+  <value column="Name" original="Client Level">Nivel de Compañía</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
@@ -5242,6 +5242,12 @@ Válido Desde/Hasta es determinado por el impuesto padre.]]></value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="53240" trl="N">
+  <value column="Name" original="Included roles">Roles Incluídos</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row id="53244" trl="Y">
   <value column="Name" original="Located at">Localizado en</value>
   <value column="CommitWarning" original=""/>
@@ -5331,5 +5337,67 @@ Válido Desde/Hasta es determinado por el impuesto padre.]]></value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original="Mail sent to the user">Mail enviado al usario</value>
   <value column="Help" original="Archive of mails sent to users">Archivos de mails enviados para usuarios</value>
+ </row>
+ <row id="53284" trl="N">
+  <value column="Name" original="Order Source">Origen Orden</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53285" trl="N">
+  <value column="Name" original="Relation Type">Tipo Relación</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53286" trl="N">
+  <value column="Name" original="BOM">LDM</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Bill of Material product lines">Líneas de producto lista de materiales</value>
+  <value column="Help" original="The Bill of Materials tab defines those products that are generated from other products.  A Bill of Material (BOM) is one or more Products or BOMs.&#10;&#10;Available Quantity:&#10;- Stored BOMs have to be created via &quot;Production&quot;&#10;- The available quantity of a non-stored BOMs is dynamically calculated&#10;- The attribute &quot;Stored&quot; is defined in the &quot;Product&quot; tab&#10;&#10;Price:&#10;- BOMs must be listed in Pricelists&#10;- If the price is 0.00, the price is dynamically calculated&#10;&#10;Printing:&#10;- Usually, only the BOM information is printed&#10;- For invoices, delivery slips and pick lists, you have the option to print the details&#10;- In the details, the quantity is listed - and the price, if this is dynamically calculated">La pestaña lista de materiales define aquellos productos que son generados desde otros producdtos.  Una Lista de Materiales (LDM) es uno o más productos o LDMs.
+
+Cantidad Disponible:
+- LDM Almacenados deben ser creados via "Producción"
+- La cantidad disponible de un LDM no almacenado es calculada dinámicamente
+- El atributo "Almacenado" es definido en la pestaña de "Producto"
+
+Precio:
+- Las LDMs deben ser listadas en las listas de precios
+- Si el precio es 0.00, entonces es calculado dinámicamente
+
+Imprimiendo:
+- Usualmente, solo la información de LDM es impresa
+- Para facturas, listas de despacho y listas de empaque, tiene la opción de imprimir los detalles
+- En los detalles, la cantidad es listada - y el precio, si es calculado dinámicamente</value>
+ </row>
+ <row id="53287" trl="N">
+  <value column="Name" original="Components">Componentes</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Components">Componentes</value>
+  <value column="Help" original="Components of Bill fo Material">Componentes de Lista de Materiales</value>
+ </row>
+ <row id="53289" trl="N">
+  <value column="Name" original="Costs">Costos</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53297" trl="N">
+  <value column="Name" original="Used in Process Parameter">Usado en Parámetro de Proceso</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53298" trl="N">
+  <value column="Name" original="Used in Field">Usado en Campo</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53307" trl="N">
+  <value column="Name" original="Import Product Planning">Importa Planeación de Producto</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
  </row>
 </adempiereTrl>
