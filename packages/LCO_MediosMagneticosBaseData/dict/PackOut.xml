@@ -526,7 +526,7 @@
 			<drow key1name="AD_Rule_ID" lookupkey1name="1000001" name="Medios Magnéticos - Formato 1002 - obtener vret" key2name="" lookupkey2name="">
 				<dcolumn name="AD_Client_ID" class="Table Direct" value="0"/>
 				<dcolumn name="AD_Org_ID" class="Table Direct" value="0"/>
-				<dcolumn name="EntityType" class="Table" value="U"/>
+				<dcolumn name="EntityType" class="Table" value="QSS_LCO"/>
 				<dcolumn name="EventType" class="List" value="C"/>
 				<dcolumn name="IsActive" class="Yes-No" value="Y"/>
 				<dcolumn name="Name" class="String" value="Medios Magnéticos - Formato 1002 - obtener vret"/>
@@ -538,7 +538,7 @@
 				<dcolumn name="AD_Client_ID" class="Table Direct" value="0"/>
 				<dcolumn name="AD_Org_ID" class="Table Direct" value="0"/>
 				<dcolumn name="AD_Rule_ID" class="ID" value="1000000"/>
-				<dcolumn name="EntityType" class="Table" value="U"/>
+				<dcolumn name="EntityType" class="Table" value="QSS_LCO"/>
 				<dcolumn name="EventType" class="List" value="C"/>
 				<dcolumn name="IsActive" class="Yes-No" value="Y"/>
 				<dcolumn name="Name" class="String" value="Medios Magnéticos - Formato 1002 - obtener vabo"/>
