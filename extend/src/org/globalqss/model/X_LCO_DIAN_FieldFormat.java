@@ -1,14 +1,14 @@
 /******************************************************************************
  * Product: Adempiere ERP & CRM Smart Business Solution                       *
  * Copyright (C) 1999-2007 ComPiere, Inc. All Rights Reserved.                *
- * This program is free software; you can redistribute it and/or modify it    *
+ * This program is free software, you can redistribute it and/or modify it    *
  * under the terms version 2 of the GNU General Public License as published   *
  * by the Free Software Foundation. This program is distributed in the hope   *
- * that it will be useful, but WITHOUT ANY WARRANTY; without even the implied *
+ * that it will be useful, but WITHOUT ANY WARRANTY, without even the implied *
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.           *
  * See the GNU General Public License for more details.                       *
  * You should have received a copy of the GNU General Public License along    *
- * with this program; if not, write to the Free Software Foundation, Inc.,    *
+ * with this program, if not, write to the Free Software Foundation, Inc.,    *
  * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.                     *
  * For the text or an alternative of this public license, you may reach us    *
  * ComPiere, Inc., 2620 Augustine Dr. #245, Santa Clara, CA 95054, USA        *
@@ -23,14 +23,14 @@ import org.compiere.model.*;
 
 /** Generated Model for LCO_DIAN_FieldFormat
  *  @author Adempiere (generated) 
- *  @version Release 3.4.2s - $Id$ */
+ *  @version Release 3.6.0LTS - $Id$ */
 public class X_LCO_DIAN_FieldFormat extends PO implements I_LCO_DIAN_FieldFormat, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 20100617L;
 
     /** Standard Constructor */
     public X_LCO_DIAN_FieldFormat (Properties ctx, int LCO_DIAN_FieldFormat_ID, String trxName)
@@ -95,12 +95,6 @@ public class X_LCO_DIAN_FieldFormat extends PO implements I_LCO_DIAN_FieldFormat
 		@param FieldPrintFormat Field Print Format	  */
 	public void setFieldPrintFormat (String FieldPrintFormat)
 	{
-
-		if (FieldPrintFormat != null && FieldPrintFormat.length() > 20)
-		{
-			log.warning("Length > 20 - truncated");
-			FieldPrintFormat = FieldPrintFormat.substring(0, 20);
-		}
 		set_Value (COLUMNNAME_FieldPrintFormat, FieldPrintFormat);
 	}
 
@@ -115,9 +109,10 @@ public class X_LCO_DIAN_FieldFormat extends PO implements I_LCO_DIAN_FieldFormat
 		@param LCO_DIAN_FieldFormat_ID DIAN Field Format	  */
 	public void setLCO_DIAN_FieldFormat_ID (int LCO_DIAN_FieldFormat_ID)
 	{
-		if (LCO_DIAN_FieldFormat_ID < 1)
-			 throw new IllegalArgumentException ("LCO_DIAN_FieldFormat_ID is mandatory.");
-		set_ValueNoCheck (COLUMNNAME_LCO_DIAN_FieldFormat_ID, Integer.valueOf(LCO_DIAN_FieldFormat_ID));
+		if (LCO_DIAN_FieldFormat_ID < 1) 
+			set_ValueNoCheck (COLUMNNAME_LCO_DIAN_FieldFormat_ID, null);
+		else 
+			set_ValueNoCheck (COLUMNNAME_LCO_DIAN_FieldFormat_ID, Integer.valueOf(LCO_DIAN_FieldFormat_ID));
 	}
 
 	/** Get DIAN Field Format.
@@ -130,8 +125,11 @@ public class X_LCO_DIAN_FieldFormat extends PO implements I_LCO_DIAN_FieldFormat
 		return ii.intValue();
 	}
 
-	/** LCO_DIAN_Format_ID AD_Reference_ID=1000007 */
-	public static final int LCO_DIAN_FORMAT_ID_AD_Reference_ID=1000007;
+	public org.globalqss.model.I_LCO_DIAN_Format getLCO_DIAN_Format() throws RuntimeException
+    {
+		return (org.globalqss.model.I_LCO_DIAN_Format)MTable.get(getCtx(), org.globalqss.model.I_LCO_DIAN_Format.Table_Name)
+			.getPO(getLCO_DIAN_Format_ID(), get_TrxName());	}
+
 	/** Set DIAN Format.
 		@param LCO_DIAN_Format_ID DIAN Format	  */
 	public void setLCO_DIAN_Format_ID (int LCO_DIAN_Format_ID)
@@ -152,15 +150,19 @@ public class X_LCO_DIAN_FieldFormat extends PO implements I_LCO_DIAN_FieldFormat
 		return ii.intValue();
 	}
 
-	/** LCO_DIAN_XMLPrintLabel_ID AD_Reference_ID=1000008 */
-	public static final int LCO_DIAN_XMLPRINTLABEL_ID_AD_Reference_ID=1000008;
+	public org.globalqss.model.I_LCO_DIAN_XMLPrintLabel getLCO_DIAN_XMLPrintLabel() throws RuntimeException
+    {
+		return (org.globalqss.model.I_LCO_DIAN_XMLPrintLabel)MTable.get(getCtx(), org.globalqss.model.I_LCO_DIAN_XMLPrintLabel.Table_Name)
+			.getPO(getLCO_DIAN_XMLPrintLabel_ID(), get_TrxName());	}
+
 	/** Set DIAN XML Print Label.
 		@param LCO_DIAN_XMLPrintLabel_ID DIAN XML Print Label	  */
 	public void setLCO_DIAN_XMLPrintLabel_ID (int LCO_DIAN_XMLPrintLabel_ID)
 	{
-		if (LCO_DIAN_XMLPrintLabel_ID < 1)
-			 throw new IllegalArgumentException ("LCO_DIAN_XMLPrintLabel_ID is mandatory.");
-		set_Value (COLUMNNAME_LCO_DIAN_XMLPrintLabel_ID, Integer.valueOf(LCO_DIAN_XMLPrintLabel_ID));
+		if (LCO_DIAN_XMLPrintLabel_ID < 1) 
+			set_Value (COLUMNNAME_LCO_DIAN_XMLPrintLabel_ID, null);
+		else 
+			set_Value (COLUMNNAME_LCO_DIAN_XMLPrintLabel_ID, Integer.valueOf(LCO_DIAN_XMLPrintLabel_ID));
 	}
 
 	/** Get DIAN XML Print Label.
@@ -199,12 +201,6 @@ public class X_LCO_DIAN_FieldFormat extends PO implements I_LCO_DIAN_FieldFormat
 	  */
 	public void setName (String Name)
 	{
-
-		if (Name != null && Name.length() > 60)
-		{
-			log.warning("Length > 60 - truncated");
-			Name = Name.substring(0, 60);
-		}
 		set_Value (COLUMNNAME_Name, Name);
 	}
 

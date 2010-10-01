@@ -1,14 +1,14 @@
 /******************************************************************************
  * Product: Adempiere ERP & CRM Smart Business Solution                       *
  * Copyright (C) 1999-2007 ComPiere, Inc. All Rights Reserved.                *
- * This program is free software; you can redistribute it and/or modify it    *
+ * This program is free software, you can redistribute it and/or modify it    *
  * under the terms version 2 of the GNU General Public License as published   *
  * by the Free Software Foundation. This program is distributed in the hope   *
- * that it will be useful, but WITHOUT ANY WARRANTY; without even the implied *
+ * that it will be useful, but WITHOUT ANY WARRANTY, without even the implied *
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.           *
  * See the GNU General Public License for more details.                       *
  * You should have received a copy of the GNU General Public License along    *
- * with this program; if not, write to the Free Software Foundation, Inc.,    *
+ * with this program, if not, write to the Free Software Foundation, Inc.,    *
  * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.                     *
  * For the text or an alternative of this public license, you may reach us    *
  * ComPiere, Inc., 2620 Augustine Dr. #245, Santa Clara, CA 95054, USA        *
@@ -24,14 +24,14 @@ import org.compiere.util.KeyNamePair;
 
 /** Generated Model for LCO_ISIC
  *  @author Adempiere (generated) 
- *  @version Release 3.4.2s - $Id$ */
+ *  @version Release 3.6.0LTS - $Id$ */
 public class X_LCO_ISIC extends PO implements I_LCO_ISIC, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 20100617L;
 
     /** Standard Constructor */
     public X_LCO_ISIC (Properties ctx, int LCO_ISIC_ID, String trxName)
@@ -78,12 +78,6 @@ public class X_LCO_ISIC extends PO implements I_LCO_ISIC, I_Persistent
 	  */
 	public void setDescription (String Description)
 	{
-
-		if (Description != null && Description.length() > 255)
-		{
-			log.warning("Length > 255 - truncated");
-			Description = Description.substring(0, 255);
-		}
 		set_Value (COLUMNNAME_Description, Description);
 	}
 
@@ -147,9 +141,10 @@ public class X_LCO_ISIC extends PO implements I_LCO_ISIC, I_Persistent
 		@param LCO_ISIC_ID ISIC	  */
 	public void setLCO_ISIC_ID (int LCO_ISIC_ID)
 	{
-		if (LCO_ISIC_ID < 1)
-			 throw new IllegalArgumentException ("LCO_ISIC_ID is mandatory.");
-		set_ValueNoCheck (COLUMNNAME_LCO_ISIC_ID, Integer.valueOf(LCO_ISIC_ID));
+		if (LCO_ISIC_ID < 1) 
+			set_ValueNoCheck (COLUMNNAME_LCO_ISIC_ID, null);
+		else 
+			set_ValueNoCheck (COLUMNNAME_LCO_ISIC_ID, Integer.valueOf(LCO_ISIC_ID));
 	}
 
 	/** Get ISIC.
@@ -168,14 +163,6 @@ public class X_LCO_ISIC extends PO implements I_LCO_ISIC, I_Persistent
 	  */
 	public void setName (String Name)
 	{
-		if (Name == null)
-			throw new IllegalArgumentException ("Name is mandatory.");
-
-		if (Name.length() > 60)
-		{
-			log.warning("Length > 60 - truncated");
-			Name = Name.substring(0, 60);
-		}
 		set_Value (COLUMNNAME_Name, Name);
 	}
 
@@ -201,12 +188,6 @@ public class X_LCO_ISIC extends PO implements I_LCO_ISIC, I_Persistent
 	  */
 	public void setValue (String Value)
 	{
-
-		if (Value != null && Value.length() > 40)
-		{
-			log.warning("Length > 40 - truncated");
-			Value = Value.substring(0, 40);
-		}
 		set_Value (COLUMNNAME_Value, Value);
 	}
 

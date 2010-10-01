@@ -1,14 +1,14 @@
 /******************************************************************************
  * Product: Adempiere ERP & CRM Smart Business Solution                       *
  * Copyright (C) 1999-2007 ComPiere, Inc. All Rights Reserved.                *
- * This program is free software; you can redistribute it and/or modify it    *
+ * This program is free software, you can redistribute it and/or modify it    *
  * under the terms version 2 of the GNU General Public License as published   *
  * by the Free Software Foundation. This program is distributed in the hope   *
- * that it will be useful, but WITHOUT ANY WARRANTY; without even the implied *
+ * that it will be useful, but WITHOUT ANY WARRANTY, without even the implied *
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.           *
  * See the GNU General Public License for more details.                       *
  * You should have received a copy of the GNU General Public License along    *
- * with this program; if not, write to the Free Software Foundation, Inc.,    *
+ * with this program, if not, write to the Free Software Foundation, Inc.,    *
  * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.                     *
  * For the text or an alternative of this public license, you may reach us    *
  * ComPiere, Inc., 2620 Augustine Dr. #245, Santa Clara, CA 95054, USA        *
@@ -17,23 +17,21 @@
 /** Generated Model - DO NOT CHANGE */
 package org.globalqss.model;
 
-import java.lang.reflect.Constructor;
 import java.sql.ResultSet;
 import java.util.Properties;
-import java.util.logging.Level;
 import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
 /** Generated Model for LCO_DIAN_Format
  *  @author Adempiere (generated) 
- *  @version Release 3.4.2s - $Id$ */
+ *  @version Release 3.6.0LTS - $Id$ */
 public class X_LCO_DIAN_Format extends PO implements I_LCO_DIAN_Format, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 20100617L;
 
     /** Standard Constructor */
     public X_LCO_DIAN_Format (Properties ctx, int LCO_DIAN_Format_ID, String trxName)
@@ -47,7 +45,6 @@ public class X_LCO_DIAN_Format extends PO implements I_LCO_DIAN_Format, I_Persis
 			setLCO_DIAN_Format_ID (0);
 			setLCO_DIAN_XMLPrintLabel_ID (0);
 			setMaxXMLRecords (0);
-// 5000
 			setName (null);
 			setValue (null);
 			setVersionNo (null);
@@ -82,21 +79,10 @@ public class X_LCO_DIAN_Format extends PO implements I_LCO_DIAN_Format, I_Persis
       return sb.toString();
     }
 
-	public I_AD_Sequence getAD_Sequence() throws Exception 
+	public I_AD_Sequence getAD_Sequence() throws RuntimeException
     {
-        Class<?> clazz = MTable.getClass(I_AD_Sequence.Table_Name);
-        I_AD_Sequence result = null;
-        try	{
-	        Constructor<?> constructor = null;
-	    	constructor = clazz.getDeclaredConstructor(new Class[]{Properties.class, int.class, String.class});
-    	    result = (I_AD_Sequence)constructor.newInstance(new Object[] {getCtx(), new Integer(getAD_Sequence_ID()), get_TrxName()});
-        } catch (Exception e) {
-	        log.log(Level.SEVERE, "(id) - Table=" + Table_Name + ",Class=" + clazz, e);
-	        log.saveError("Error", "Table=" + Table_Name + ",Class=" + clazz);
-           throw e;
-        }
-        return result;
-    }
+		return (I_AD_Sequence)MTable.get(getCtx(), I_AD_Sequence.Table_Name)
+			.getPO(getAD_Sequence_ID(), get_TrxName());	}
 
 	/** Set Sequence.
 		@param AD_Sequence_ID 
@@ -104,9 +90,10 @@ public class X_LCO_DIAN_Format extends PO implements I_LCO_DIAN_Format, I_Persis
 	  */
 	public void setAD_Sequence_ID (int AD_Sequence_ID)
 	{
-		if (AD_Sequence_ID < 1)
-			 throw new IllegalArgumentException ("AD_Sequence_ID is mandatory.");
-		set_Value (COLUMNNAME_AD_Sequence_ID, Integer.valueOf(AD_Sequence_ID));
+		if (AD_Sequence_ID < 1) 
+			set_Value (COLUMNNAME_AD_Sequence_ID, null);
+		else 
+			set_Value (COLUMNNAME_AD_Sequence_ID, Integer.valueOf(AD_Sequence_ID));
 	}
 
 	/** Get Sequence.
@@ -120,21 +107,10 @@ public class X_LCO_DIAN_Format extends PO implements I_LCO_DIAN_Format, I_Persis
 		return ii.intValue();
 	}
 
-	public I_C_AcctSchema getC_AcctSchema() throws Exception 
+	public I_C_AcctSchema getC_AcctSchema() throws RuntimeException
     {
-        Class<?> clazz = MTable.getClass(I_C_AcctSchema.Table_Name);
-        I_C_AcctSchema result = null;
-        try	{
-	        Constructor<?> constructor = null;
-	    	constructor = clazz.getDeclaredConstructor(new Class[]{Properties.class, int.class, String.class});
-    	    result = (I_C_AcctSchema)constructor.newInstance(new Object[] {getCtx(), new Integer(getC_AcctSchema_ID()), get_TrxName()});
-        } catch (Exception e) {
-	        log.log(Level.SEVERE, "(id) - Table=" + Table_Name + ",Class=" + clazz, e);
-	        log.saveError("Error", "Table=" + Table_Name + ",Class=" + clazz);
-           throw e;
-        }
-        return result;
-    }
+		return (I_C_AcctSchema)MTable.get(getCtx(), I_C_AcctSchema.Table_Name)
+			.getPO(getC_AcctSchema_ID(), get_TrxName());	}
 
 	/** Set Accounting Schema.
 		@param C_AcctSchema_ID 
@@ -165,12 +141,6 @@ public class X_LCO_DIAN_Format extends PO implements I_LCO_DIAN_Format, I_Persis
 	  */
 	public void setDescription (String Description)
 	{
-
-		if (Description != null && Description.length() > 255)
-		{
-			log.warning("Length > 255 - truncated");
-			Description = Description.substring(0, 255);
-		}
 		set_Value (COLUMNNAME_Description, Description);
 	}
 
@@ -207,9 +177,10 @@ public class X_LCO_DIAN_Format extends PO implements I_LCO_DIAN_Format, I_Persis
 		@param LCO_DIAN_Format_ID DIAN Format	  */
 	public void setLCO_DIAN_Format_ID (int LCO_DIAN_Format_ID)
 	{
-		if (LCO_DIAN_Format_ID < 1)
-			 throw new IllegalArgumentException ("LCO_DIAN_Format_ID is mandatory.");
-		set_ValueNoCheck (COLUMNNAME_LCO_DIAN_Format_ID, Integer.valueOf(LCO_DIAN_Format_ID));
+		if (LCO_DIAN_Format_ID < 1) 
+			set_ValueNoCheck (COLUMNNAME_LCO_DIAN_Format_ID, null);
+		else 
+			set_ValueNoCheck (COLUMNNAME_LCO_DIAN_Format_ID, Integer.valueOf(LCO_DIAN_Format_ID));
 	}
 
 	/** Get DIAN Format.
@@ -222,15 +193,19 @@ public class X_LCO_DIAN_Format extends PO implements I_LCO_DIAN_Format, I_Persis
 		return ii.intValue();
 	}
 
-	/** LCO_DIAN_XMLPrintLabel_ID AD_Reference_ID=1000008 */
-	public static final int LCO_DIAN_XMLPRINTLABEL_ID_AD_Reference_ID=1000008;
+	public org.globalqss.model.I_LCO_DIAN_XMLPrintLabel getLCO_DIAN_XMLPrintLabel() throws RuntimeException
+    {
+		return (org.globalqss.model.I_LCO_DIAN_XMLPrintLabel)MTable.get(getCtx(), org.globalqss.model.I_LCO_DIAN_XMLPrintLabel.Table_Name)
+			.getPO(getLCO_DIAN_XMLPrintLabel_ID(), get_TrxName());	}
+
 	/** Set DIAN XML Print Label.
 		@param LCO_DIAN_XMLPrintLabel_ID DIAN XML Print Label	  */
 	public void setLCO_DIAN_XMLPrintLabel_ID (int LCO_DIAN_XMLPrintLabel_ID)
 	{
-		if (LCO_DIAN_XMLPrintLabel_ID < 1)
-			 throw new IllegalArgumentException ("LCO_DIAN_XMLPrintLabel_ID is mandatory.");
-		set_Value (COLUMNNAME_LCO_DIAN_XMLPrintLabel_ID, Integer.valueOf(LCO_DIAN_XMLPrintLabel_ID));
+		if (LCO_DIAN_XMLPrintLabel_ID < 1) 
+			set_Value (COLUMNNAME_LCO_DIAN_XMLPrintLabel_ID, null);
+		else 
+			set_Value (COLUMNNAME_LCO_DIAN_XMLPrintLabel_ID, Integer.valueOf(LCO_DIAN_XMLPrintLabel_ID));
 	}
 
 	/** Get DIAN XML Print Label.
@@ -266,14 +241,6 @@ public class X_LCO_DIAN_Format extends PO implements I_LCO_DIAN_Format, I_Persis
 	  */
 	public void setName (String Name)
 	{
-		if (Name == null)
-			throw new IllegalArgumentException ("Name is mandatory.");
-
-		if (Name.length() > 60)
-		{
-			log.warning("Length > 60 - truncated");
-			Name = Name.substring(0, 60);
-		}
 		set_Value (COLUMNNAME_Name, Name);
 	}
 
@@ -293,21 +260,10 @@ public class X_LCO_DIAN_Format extends PO implements I_LCO_DIAN_Format, I_Persis
         return new KeyNamePair(get_ID(), getName());
     }
 
-	public I_PA_Hierarchy getPA_Hierarchy() throws Exception 
+	public I_PA_Hierarchy getPA_Hierarchy() throws RuntimeException
     {
-        Class<?> clazz = MTable.getClass(I_PA_Hierarchy.Table_Name);
-        I_PA_Hierarchy result = null;
-        try	{
-	        Constructor<?> constructor = null;
-	    	constructor = clazz.getDeclaredConstructor(new Class[]{Properties.class, int.class, String.class});
-    	    result = (I_PA_Hierarchy)constructor.newInstance(new Object[] {getCtx(), new Integer(getPA_Hierarchy_ID()), get_TrxName()});
-        } catch (Exception e) {
-	        log.log(Level.SEVERE, "(id) - Table=" + Table_Name + ",Class=" + clazz, e);
-	        log.saveError("Error", "Table=" + Table_Name + ",Class=" + clazz);
-           throw e;
-        }
-        return result;
-    }
+		return (I_PA_Hierarchy)MTable.get(getCtx(), I_PA_Hierarchy.Table_Name)
+			.getPO(getPA_Hierarchy_ID(), get_TrxName());	}
 
 	/** Set Reporting Hierarchy.
 		@param PA_Hierarchy_ID 
@@ -336,12 +292,6 @@ public class X_LCO_DIAN_Format extends PO implements I_LCO_DIAN_Format, I_Persis
 		@param PostProcessClass Post Process Class	  */
 	public void setPostProcessClass (String PostProcessClass)
 	{
-
-		if (PostProcessClass != null && PostProcessClass.length() > 60)
-		{
-			log.warning("Length > 60 - truncated");
-			PostProcessClass = PostProcessClass.substring(0, 60);
-		}
 		set_Value (COLUMNNAME_PostProcessClass, PostProcessClass);
 	}
 
@@ -356,12 +306,6 @@ public class X_LCO_DIAN_Format extends PO implements I_LCO_DIAN_Format, I_Persis
 		@param URL_XSD URL_XSD	  */
 	public void setURL_XSD (String URL_XSD)
 	{
-
-		if (URL_XSD != null && URL_XSD.length() > 255)
-		{
-			log.warning("Length > 255 - truncated");
-			URL_XSD = URL_XSD.substring(0, 255);
-		}
 		set_Value (COLUMNNAME_URL_XSD, URL_XSD);
 	}
 
@@ -378,14 +322,6 @@ public class X_LCO_DIAN_Format extends PO implements I_LCO_DIAN_Format, I_Persis
 	  */
 	public void setValue (String Value)
 	{
-		if (Value == null)
-			throw new IllegalArgumentException ("Value is mandatory.");
-
-		if (Value.length() > 40)
-		{
-			log.warning("Length > 40 - truncated");
-			Value = Value.substring(0, 40);
-		}
 		set_Value (COLUMNNAME_Value, Value);
 	}
 
@@ -403,14 +339,6 @@ public class X_LCO_DIAN_Format extends PO implements I_LCO_DIAN_Format, I_Persis
 	  */
 	public void setVersionNo (String VersionNo)
 	{
-		if (VersionNo == null)
-			throw new IllegalArgumentException ("VersionNo is mandatory.");
-
-		if (VersionNo.length() > 2)
-		{
-			log.warning("Length > 2 - truncated");
-			VersionNo = VersionNo.substring(0, 2);
-		}
 		set_Value (COLUMNNAME_VersionNo, VersionNo);
 	}
 
