@@ -1685,11 +1685,11 @@ Detalles: </value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="518" trl="Y">
-  <value column="MsgText" original="All / Any">Todos / Cualquiera</value>
+  <value column="MsgText" original="All / Any">Todos los criterios</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="519" trl="Y">
-  <value column="MsgText" original="Search for using All criteria (AND) - or Any criteria (OR)">Buscar usando Todos los criterios (AND) - o Cualquier criterio (OR)</value>
+  <value column="MsgText" original="Search for using All criteria (AND) - or Any criteria (OR)">Buscar usando Todos los criterios (habilitado -> Y) - o Cualquier criterio (deshabilitado -> O)</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="520" trl="Y">
