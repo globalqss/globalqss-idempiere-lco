@@ -36,6 +36,7 @@ import org.compiere.model.MClient;
 import org.compiere.model.MDocType;
 import org.compiere.model.MInvoice;
 import org.compiere.model.MInvoiceLine;
+import org.compiere.model.MInvoicePaySchedule;
 import org.compiere.model.MInvoiceTax;
 import org.compiere.model.MPayment;
 import org.compiere.model.MPaymentAllocate;
@@ -760,16 +761,36 @@ public class LCO_Validator implements ModelValidator
 					if (!it.save())
 						return "Error creating C_InvoiceTax from LCO_InvoiceWithholding - save InvoiceTax";
 				}
-				inv.set_CustomColumn("WithholdingAmt", sumit);
-				// Subtract to invoice grand total the value of withholdings
-				BigDecimal gt = inv.getGrandTotal();
-				inv.setGrandTotal(gt.subtract(sumit));
+				BigDecimal actualamt = (BigDecimal) inv.get_Value("WithholdingAmt");
+				if (actualamt == null)
+					actualamt = new BigDecimal(0);
+				if (actualamt.compareTo(sumit) != 0 || sumit.signum() != 0) {
+					inv.set_CustomColumn("WithholdingAmt", sumit);
+					// Subtract to invoice grand total the value of withholdings
+					BigDecimal gt = inv.getGrandTotal();
+					inv.setGrandTotal(gt.subtract(sumit));
+					inv.save();  // need to save here in order to let apply get the right total
+				}
 				
-				// GrandTotal changed!  If there are payment schedule records they need to be recalculated
-				inv.save();  // need to save here in order to let apply get the right total
-				MPaymentTerm pt = (MPaymentTerm) inv.getC_PaymentTerm();
-				boolean valid = pt.apply (inv.getC_Invoice_ID());
-				inv.setIsPayScheduleValid(valid);
+				if (sumit.signum() != 0) {
+					// GrandTotal changed!  If there are payment schedule records they need to be recalculated
+					// subtract withholdings from the first installment
+					BigDecimal toSubtract = sumit;
+					for (MInvoicePaySchedule ips : MInvoicePaySchedule.getInvoicePaySchedule(inv.getCtx(), inv.getC_Invoice_ID(), 0, inv.get_TrxName())) {
+						if (ips.getDueAmt().compareTo(toSubtract) >= 0) {
+							ips.setDueAmt(ips.getDueAmt().subtract(toSubtract));
+							toSubtract = Env.ZERO;
+						} else {
+							toSubtract = toSubtract.subtract(ips.getDueAmt());
+							ips.setDueAmt(Env.ZERO);
+						}
+						if (!ips.save()) {
+							return "Error saving Invoice Pay Schedule subtracting withholdings";
+						}
+						if (toSubtract.signum() <= 0)
+							break;
+					}
+				}
 			} catch (Exception e) {
 				log.log(Level.SEVERE, sql, e);
 				return "Error creating C_InvoiceTax from LCO_InvoiceWithholding - select InvoiceTax";
