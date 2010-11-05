@@ -1661,7 +1661,7 @@ Costo Total LDM = Suma de cada Elemento de Costo]]></value>
   <value column="Help" original=""/>
  </row>
  <row id="53121" trl="Y">
-  <value column="Name" original="RV_Asset_Depreciation_Method">Método Deprecicación Activo</value>
+  <value column="Name" original="RV_Asset_Depreciation_Method">Método Depreciación Activo</value>
   <value column="Description" original="List Depreciation Methods">Lista Métodos de Depreciación Activos</value>
   <value column="Help" original=""/>
  </row>
