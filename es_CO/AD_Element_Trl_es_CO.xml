@@ -3006,10 +3006,10 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="549" trl="Y">
-  <value column="Name" original="SKU">UM Almacenamiento</value>
-  <value column="PrintName" original="SKU">UM Almacenamiento</value>
-  <value column="Description" original="Stock Keeping Unit">Unidad de Mantenimiento en Inventario</value>
-  <value column="Help" original="The SKU indicates a user defined stock keeping unit.  It may be used for an additional bar code symbols or your own schema.">El SKU indica la unidad de almacenamiento de inventario definida por el usuario. Puede ser usada por una simbología adicional de código de barras o por su propio esquema.</value>
+  <value column="Name" original="SKU">Número de Referencia (SKU)</value>
+  <value column="PrintName" original="SKU">Número de Referencia (SKU)</value>
+  <value column="Description" original="Stock Keeping Unit">Número de Referencia (SKU)</value>
+  <value column="Help" original="The SKU indicates a user defined stock keeping unit.  It may be used for an additional bar code symbols or your own schema.">El SKU indica el número de referencia del producto. Puede ser usada por una simbología adicional de código de barras o por su propio esquema.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
