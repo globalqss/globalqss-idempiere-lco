@@ -63,10 +63,10 @@
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="108" trl="Y">
-  <value column="Name" original="Key column">Columna Llave</value>
-  <value column="PrintName" original="Key column">Columna Llave</value>
+  <value column="Name" original="Key column">Columna Clave</value>
+  <value column="PrintName" original="Key column">Columna Clave</value>
   <value column="Description" original="Unique identifier of a record">Identificador único de un registro</value>
-  <value column="Help" original="The Key Column indicates that this the unique identifier of a record on this table.">La columna llave indica que éste es el identificador único de un registro en esta tabla</value>
+  <value column="Help" original="The Key Column indicates that this the unique identifier of a record on this table.">La columna clave indica que éste es el identificador único de un registro en esta tabla</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -173,8 +173,8 @@
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="121" trl="Y">
-  <value column="Name" original="Reference Key">Referencia Llave</value>
-  <value column="PrintName" original="Reference Key">Referencia Llave</value>
+  <value column="Name" original="Reference Key">Referencia Clave</value>
+  <value column="PrintName" original="Reference Key">Referencia Clave</value>
   <value column="Description" original="Required to specify, if data type is Table or List">Requerido para especificar, si el tipo de datos es tabla o lista.</value>
   <value column="Help" original="The Reference Value indicates where the reference values are stored.  It must be specified if the data type is Table or List.  ">El valor referencia indica dónde los valores referencia son almacenados. Debe especificarce si el tipo de datos es tabla o lista.</value>
   <value column="PO_Description" original=""/>
@@ -3616,10 +3616,10 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="623" trl="Y">
-  <value column="Name" original="Partner Product Key">No. de Producto del Tercero</value>
-  <value column="PrintName" original="BPartner Product Key">No. de Producto del Tercero</value>
+  <value column="Name" original="Partner Product Key">Código Producto Tercero</value>
+  <value column="PrintName" original="BPartner Product Key">Código Producto Tercero</value>
   <value column="Description" original="Product Key of the Business Partner">Código de producto del tercero</value>
-  <value column="Help" original="The Business Partner Product Key identifies the number used by the Business Partner for this product. It can be printed on orders and invoices when you include the Product Key in the print format.">El número de producto del proveedor identifica el número usado por el proveedor para este producto.</value>
+  <value column="Help" original="The Business Partner Product Key identifies the number used by the Business Partner for this product. It can be printed on orders and invoices when you include the Product Key in the print format.">El código de producto del proveedor identifica el código usado por el proveedor para este producto.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -16636,7 +16636,7 @@ de proyecto - capacidad de publicar el material</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2465" trl="Y">
-  <value column="Name" original="Workflow Key">Código de Flujo de Trabajo</value>
+  <value column="Name" original="Workflow Key">Código Flujo de Trabajo</value>
   <value column="PrintName" original="Workflow">Flujo de Trabajo</value>
   <value column="Description" original="Key of the Workflow to start">Código del flujo de trabajo para comenzar</value>
   <value column="Help" original=""/>
@@ -17732,20 +17732,20 @@ Invoices and Payment Allocations determine the Open Balance (i.e. not Orders or 
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2582" trl="Y">
-  <value column="Name" original="POS Key">PDV llave</value>
-  <value column="PrintName" original="POS Key">PDV llave</value>
-  <value column="Description" original="POS Function Key">PDV llave de Funcionamiento</value>
-  <value column="Help" original="Define a POS Function Key">Define llave de funcionamiento PDV</value>
+  <value column="Name" original="POS Key">Tecla PDV</value>
+  <value column="PrintName" original="POS Key">Tecla PDV</value>
+  <value column="Description" original="POS Function Key">Tecla Función PDV</value>
+  <value column="Help" original="Define a POS Function Key">Define una tecla de función en el punto de venta</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2583" trl="Y">
-  <value column="Name" original="POS Key Layout">PDV Disposición de la llave</value>
-  <value column="PrintName" original="POS Key Layout">PDV Disposición de la llave</value>
-  <value column="Description" original="POS Function Key Layout">Disposición de la llave de funcionamiento PDV</value>
-  <value column="Help" original="POS Function Key Layout">Disposición de la llave de funcionamiento PDV</value>
+  <value column="Name" original="POS Key Layout">Disposición Teclado PDV</value>
+  <value column="PrintName" original="POS Key Layout">Disposición Teclado PDV</value>
+  <value column="Description" original="POS Function Key Layout">Disposición del teclado para el punto de venta</value>
+  <value column="Help" original="POS Function Key Layout">Disposición del teclado para el punto de venta</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -21035,9 +21035,9 @@ La medida debe soportar el dato, de otra forma es ignorado.</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2917" trl="Y">
-  <value column="Name" original="Key Column">Columna llave</value>
-  <value column="PrintName" original="Key Column">Columna llave</value>
-  <value column="Description" original="Key Column for Table">Columna llave para las tablas</value>
+  <value column="Name" original="Key Column">Columna Clave</value>
+  <value column="PrintName" original="Key Column">Columna Clave</value>
+  <value column="Description" original="Key Column for Table">Columna Clave para las tablas</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -21745,10 +21745,10 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2993" trl="Y">
-  <value column="Name" original="Meta Keywords">Meta Palabras llaves</value>
-  <value column="PrintName" original="Meta Keywords">Meta Palabras llaves</value>
-  <value column="Description" original="Contains the keywords for the content">Contiene las palabras llaves para el contenido.</value>
-  <value column="Help" original="Contains keyword info on the main search words this content is relevant to">Contiene la información de las palabras llaves en la búsqueda de palabras.</value>
+  <value column="Name" original="Meta Keywords">Meta Palabras claves</value>
+  <value column="PrintName" original="Meta Keywords">Meta Palabras claves</value>
+  <value column="Description" original="Contains the keywords for the content">Contiene las palabras claves para el contenido.</value>
+  <value column="Help" original="Contains keyword info on the main search words this content is relevant to">Contiene la información de las palabras claves en la búsqueda de palabras.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -22518,7 +22518,7 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="Name" original="Index">Indice</value>
   <value column="PrintName" original="Index">Indice</value>
   <value column="Description" original="Text Search Index">Indice de texto de búsqueda</value>
-  <value column="Help" original="Text search index keyword and excerpt across documents">La palabra clave de búsqueda y extractos atraves de los documentos.</value>
+  <value column="Help" original="Text search index keyword and excerpt across documents">La palabra clave de búsqueda y extractos a través de los documentos.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -22698,7 +22698,7 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="Name" original="Ldap Processor">Procesador LDAP</value>
   <value column="PrintName" original="Ldap Processor">Procesador LDAP</value>
   <value column="Description" original="LDAP Server to authenticate and authorize external systems based on Adempiere">Servidor LDAP para autenticar y autorizar sistemas externos basados en Adempiere.</value>
-  <value column="Help" original="The LDAP Server allows third party software (e.g. Apache) to use the users defined in the system to authenticate and authorize them.  There is only one server per Adempiere system.  The &quot;o&quot; is the Client key and the optional &quot;ou&quot; is the Interest Area key.">El servidor LDAP permite a software de terceros ( Ej, Apache) usar los clientes definidos en el sistema para autenticar y autorizar. Hay un solo servidor por sistema de Adempiere. La "o" es la llave del cliente o la opción "ou" es la llave del área de interés.</value>
+  <value column="Help" original="The LDAP Server allows third party software (e.g. Apache) to use the users defined in the system to authenticate and authorize them.  There is only one server per Adempiere system.  The &quot;o&quot; is the Client key and the optional &quot;ou&quot; is the Interest Area key.">El servidor LDAP permite a software de terceros ( Ej, Apache) usar los clientes definidos en el sistema para autenticar y autorizar. Hay un solo servidor por sistema de Adempiere. La "o" es el código del cliente o la opción "ou" es la clave del área de interés.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -23615,8 +23615,8 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="52005" trl="Y">
-  <value column="Name" original="Key">Llave</value>
-  <value column="PrintName" original="Key">Llave</value>
+  <value column="Name" original="Key">Clave</value>
+  <value column="PrintName" original="Key">Clave</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
