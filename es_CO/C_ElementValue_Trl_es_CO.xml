@@ -143,7 +143,7 @@
   <value column="Description" original="">6024-0-</value>
  </row>
  <row id="455" trl="N">
-  <value column="Name" original="Retirement (Pension, Proft Sharing, 401k)">Retirement (Pension, Proft Sharing, 401k)</value>
+  <value column="Name" original="Retirement (Pension, Profit Sharing, 401k)">Retirement (Pension, Proft Sharing, 401k)</value>
   <value column="Description" original="">6030-0-</value>
  </row>
  <row id="456" trl="N">
@@ -460,7 +460,7 @@
  </row>
  <row id="534" trl="N">
   <value column="Name" original="Tax credit A/R">Tax credit A/R</value>
-  <value column="Description" original="Tax to be re-imbursed - before tax declaration">1261-0-</value>
+  <value column="Description" original="Tax to be reimbursed - before tax declaration">1261-0-</value>
  </row>
  <row id="535" trl="N">
   <value column="Name" original="Tax receivables">Tax receivables</value>
@@ -651,7 +651,7 @@
   <value column="Description" original="">1914-0-</value>
  </row>
  <row id="582" trl="N">
-  <value column="Name" original="Accumulated Amorization">Accumulated Amorization</value>
+  <value column="Name" original="Accumulated Amortization">Accumulated Amorization</value>
   <value column="Description" original="">1915-0-</value>
  </row>
  <row id="583" trl="N">
@@ -775,7 +775,7 @@
   <value column="Description" original="">2230-0-</value>
  </row>
  <row id="613" trl="N">
-  <value column="Name" original="Federal Unemployment Empolyers Contribution">Federal Unemployment Empolyers Contribution</value>
+  <value column="Name" original="Federal Unemployment Employers Contribution">Federal Unemployment Empolyers Contribution</value>
   <value column="Description" original="">2233-0-</value>
  </row>
  <row id="614" trl="N">
@@ -903,7 +903,7 @@
   <value column="Description" original="">66--</value>
  </row>
  <row id="645" trl="N">
-  <value column="Name" original="Data Processung Other Expense">Data Processung Other Expense</value>
+  <value column="Name" original="Data Processing Other Expense">Data Processung Other Expense</value>
   <value column="Description" original="">6690-0-</value>
  </row>
  <row id="646" trl="N">
@@ -1055,19 +1055,19 @@
   <value column="Description" original="">77--</value>
  </row>
  <row id="683" trl="N">
-  <value column="Name" original="Building Repairs &amp; Maintenence"><![CDATA[Building Repairs & Maintenence]]></value>
+  <value column="Name" original="Building Repairs &amp; Maintenance"><![CDATA[Building Repairs & Maintenence]]></value>
   <value column="Description" original="">7710-0-</value>
  </row>
  <row id="684" trl="N">
-  <value column="Name" original="Furniture, Equipment Repairs &amp; Maintenence"><![CDATA[Furniture, Equipment Repairs & Maintenence]]></value>
+  <value column="Name" original="Furniture, Equipment Repairs &amp; Maintenance"><![CDATA[Furniture, Equipment Repairs & Maintenence]]></value>
   <value column="Description" original="">7720-0-</value>
  </row>
  <row id="685" trl="N">
-  <value column="Name" original="Software Maintenence">Software Maintenence</value>
+  <value column="Name" original="Software Maintenance">Software Maintenence</value>
   <value column="Description" original="">7740-0-</value>
  </row>
  <row id="686" trl="N">
-  <value column="Name" original="Vehicle Repairs &amp; Maintenence"><![CDATA[Vehicle Repairs & Maintenence]]></value>
+  <value column="Name" original="Vehicle Repairs &amp; Maintenance"><![CDATA[Vehicle Repairs & Maintenence]]></value>
   <value column="Description" original="">7750-0-</value>
  </row>
  <row id="687" trl="N">
@@ -1147,7 +1147,7 @@
   <value column="Description" original="Bank interest revenue">8010-0-</value>
  </row>
  <row id="706" trl="N">
-  <value column="Name" original="Divident Income">Divident Income</value>
+  <value column="Name" original="Dividend Income">Divident Income</value>
   <value column="Description" original="">8020-0-</value>
  </row>
  <row id="707" trl="N">
@@ -1195,7 +1195,7 @@
   <value column="Description" original="Bank interest expense">8210-0-</value>
  </row>
  <row id="718" trl="N">
-  <value column="Name" original="Mortage Interest Expense">Mortage Interest Expense</value>
+  <value column="Name" original="Mortgage Interest Expense">Mortage Interest Expense</value>
   <value column="Description" original="">8220-0-</value>
  </row>
  <row id="719" trl="N">
@@ -1351,7 +1351,7 @@
   <value column="Description" original="">3110-0-</value>
  </row>
  <row id="757" trl="N">
-  <value column="Name" original="Dividents">Dividents</value>
+  <value column="Name" original="Dividends">Dividents</value>
   <value column="Description" original="">3210-0-</value>
  </row>
  <row id="758" trl="N">
@@ -1379,7 +1379,7 @@
   <value column="Description" original="">7690-0-</value>
  </row>
  <row id="764" trl="N">
-  <value column="Name" original="Data Processing Repairs &amp; Maintenence"><![CDATA[Data Processing Repairs & Maintenence]]></value>
+  <value column="Name" original="Data Processing Repairs &amp; Maintenance"><![CDATA[Data Processing Repairs & Maintenence]]></value>
   <value column="Description" original="">7730-0-</value>
  </row>
  <row id="765" trl="N">

@@ -2107,4 +2107,34 @@
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="53382" trl="N">
+  <value column="Name" original="C_PaymentTerm PaymentTermUsage">C_PaymentTerm PaymentTermUsage</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53383" trl="N">
+  <value column="Name" original="C_PaymentTerm Sales">C_PaymentTerm Sales</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53384" trl="N">
+  <value column="Name" original="C_PaymentTerm Purchases">C_PaymentTerm Purchases</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53385" trl="N">
+  <value column="Name" original="C_CashPlan CashFlowType">C_CashPlan CashFlowType</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53386" trl="N">
+  <value column="Name" original="Generate Cash Plan Periodicity">Generate Cash Plan Periodicity</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53387" trl="N">
+  <value column="Name" original="T_CashFlow CashFlowSource">T_CashFlow CashFlowSource</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
 </adempiereTrl>

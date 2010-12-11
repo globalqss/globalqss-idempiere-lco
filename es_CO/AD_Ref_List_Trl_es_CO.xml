@@ -2135,7 +2135,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="681" trl="Y">
-  <value column="Name" original="Not Mandatary">No Obligatorio</value>
+  <value column="Name" original="Not Mandatory">No Obligatorio</value>
   <value column="Description" original=""/>
  </row>
  <row id="682" trl="Y">
@@ -4296,7 +4296,7 @@
  </row>
  <row id="53503" trl="N">
   <value column="Name" original="Broadcast">Difundir</value>
-  <value column="Description" original="Broadcast &lt;&lt;-&gt;&gt;">Difundir &lt;&lt;-&gt;&gt;</value>
+  <value column="Description" original="Broadcast &lt;&lt;-&gt;&gt;"><![CDATA[Difundir <<->>]]></value>
  </row>
  <row id="53504" trl="Y">
   <value column="Name" original="Model Validator">Validador del Modelo</value>
@@ -4431,7 +4431,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="53551" trl="N">
-  <value column="Name" original="Human Resource &amp; Payroll"><![CDATA[Recursos Humanos y Nómina]]></value>
+  <value column="Name" original="Human Resource &amp; Payroll">Recursos Humanos y Nómina</value>
   <value column="Description" original=""/>
  </row>
  <row id="53552" trl="N">
@@ -4468,6 +4468,82 @@
  </row>
  <row id="53583" trl="N">
   <value column="Name" original="Custom Separator Char">Caracter Separador Personalizado</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53660" trl="Y">
+  <value column="Name" original="Both">Ambos</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53661" trl="Y">
+  <value column="Name" original="Sales">Ventas</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53662" trl="Y">
+  <value column="Name" original="Purchases">Compras</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53663" trl="Y">
+  <value column="Name" original="Financing">Financiero</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53664" trl="Y">
+  <value column="Name" original="Investment">Inversión</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53665" trl="Y">
+  <value column="Name" original="Operational">Operacional</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53666" trl="Y">
+  <value column="Name" original="Daily">Diario</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53667" trl="Y">
+  <value column="Name" original="Weekly">Semanal</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53668" trl="Y">
+  <value column="Name" original="Fortnightly">Catorcenal</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53669" trl="Y">
+  <value column="Name" original="Biweekly">Quincenal</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53670" trl="Y">
+  <value column="Name" original="Monthly">Mensual</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53671" trl="Y">
+  <value column="Name" original="Bimonthly">Bimestral</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53672" trl="Y">
+  <value column="Name" original="Quarterly">Trimestral</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53673" trl="Y">
+  <value column="Name" original="Semiannual">Semestral</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53674" trl="Y">
+  <value column="Name" original="Yearly">Anual</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53675" trl="N">
+  <value column="Name" original="1_Initial Balance">1_Initial Balance</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53676" trl="N">
+  <value column="Name" original="2_Plan">2_Plan</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53677" trl="N">
+  <value column="Name" original="3_Commitments (Orders)">3_Commitments (Orders)</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53678" trl="N">
+  <value column="Name" original="4_Actual Debt (Invoices)">4_Actual Debt (Invoices)</value>
   <value column="Description" original=""/>
  </row>
 </adempiereTrl>

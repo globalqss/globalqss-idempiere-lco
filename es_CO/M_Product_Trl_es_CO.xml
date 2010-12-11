@@ -213,7 +213,7 @@
   <value column="DocumentNote" original=""/>
  </row>
  <row id="50017" trl="Y">
-  <value column="Name" original="Whater">Agua</value>
+  <value column="Name" original="Water">Agua</value>
   <value column="Description" original=""/>
   <value column="DocumentNote" original=""/>
  </row>
@@ -264,6 +264,11 @@
  </row>
  <row id="50027" trl="Y">
   <value column="Name" original="Fertilizer Inspection Area">Area de Inspección de Fertilizante</value>
+  <value column="Description" original=""/>
+  <value column="DocumentNote" original=""/>
+ </row>
+ <row id="1000000" trl="N">
+  <value column="Name" original="mi pri pro">mi pri pro</value>
   <value column="Description" original=""/>
   <value column="DocumentNote" original=""/>
  </row>

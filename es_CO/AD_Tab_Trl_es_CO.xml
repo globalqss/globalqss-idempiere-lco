@@ -5117,7 +5117,7 @@ Válido Desde/Hasta es determinado por el impuesto padre.]]></value>
   <value column="Help" original=""/>
  </row>
  <row id="53197" trl="Y">
-  <value column="Name" original="Product Price Vendor Break">Rango Precio Producto</value>
+  <value column="Name" original="Product Price Break">Rango Precio Producto</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
@@ -5394,8 +5394,50 @@ Imprimiendo:
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="53306" trl="N">
+  <value column="Name" original="Import Payroll Movement">Import Payroll Movement</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Import Payroll Movement">Import Payroll Movement</value>
+  <value column="Help" original=""/>
+ </row>
  <row id="53307" trl="N">
   <value column="Name" original="Import Product Planning">Importa Planeación de Producto</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53372" trl="N">
+  <value column="Name" original="Translation">Translation</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53373" trl="N">
+  <value column="Name" original="Payment Schedule">Payment Schedule</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Invoice Payment Schedule">Invoice Payment Schedule</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53374" trl="N">
+  <value column="Name" original="Payment Schedule">Payment Schedule</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Order Payment Schedule">Order Payment Schedule</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53375" trl="N">
+  <value column="Name" original="Payment Schedule">Payment Schedule</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Order Payment Schedule">Order Payment Schedule</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53376" trl="Y">
+  <value column="Name" original="Cash Plan">Plan de Caja</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53377" trl="Y">
+  <value column="Name" original="Cash Plan Line">Línea Plan de Caja</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original=""/>
   <value column="Help" original=""/>

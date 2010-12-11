@@ -72,4 +72,24 @@
   <value column="Description" original=""/>
   <value column="UOMSymbol" original="L">L</value>
  </row>
+ <row id="1000000" trl="N">
+  <value column="Name" original="nombrecito">nombrecito</value>
+  <value column="Description" original=""/>
+  <value column="UOMSymbol" original=""/>
+ </row>
+ <row id="1000001" trl="N">
+  <value column="Name" original="unidad">unidad</value>
+  <value column="Description" original=""/>
+  <value column="UOMSymbol" original=""/>
+ </row>
+ <row id="1000002" trl="N">
+  <value column="Name" original="otra vez">otra vez</value>
+  <value column="Description" original=""/>
+  <value column="UOMSymbol" original=""/>
+ </row>
+ <row id="1000003" trl="N">
+  <value column="Name" original="Oblighatorio">Oblighatorio</value>
+  <value column="Description" original=""/>
+  <value column="UOMSymbol" original=""/>
+ </row>
 </adempiereTrl>
