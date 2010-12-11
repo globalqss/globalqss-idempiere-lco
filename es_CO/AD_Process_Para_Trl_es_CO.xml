@@ -232,4 +232,14 @@
   <value column="Description" original="Force rebuild of cube even if locked.">Forzar reconstrucción del cubo incluso si está bloqueado.</value>
   <value column="Help" original=""/>
  </row>
+ <row id="53485" trl="Y">
+  <value column="Name" original="Periodicity">Periodicidad</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53486" trl="Y">
+  <value column="Name" original="Repetitions">Repeticiones</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
 </adempiereTrl>

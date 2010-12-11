@@ -1811,6 +1811,11 @@ Debe ser implementado cuando no haya usuarios conectados.</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="53197" trl="N">
+  <value column="Name" original="Import Payroll Movement">Import Payroll Movement</value>
+  <value column="Description" original="Import Payroll Movement">Import Payroll Movement</value>
+  <value column="Help" original=""/>
+ </row>
  <row id="53199" trl="N">
   <value column="Name" original="Reset Allocation Direct">Reinicia Asignación Directa</value>
   <value column="Description" original="Reset (delete) allocation of invoices to payments">Reinicia (borra) asignación de facturas a pagos</value>
@@ -1820,5 +1825,25 @@ Debe ser implementado cuando no haya usuarios conectados.</value>
   <value column="Name" original="Import Product Planning and Forecast">Importa Planeación de Productos y Pronóstico</value>
   <value column="Description" original="Import Product Planning and Forecast">Importa Planeación de Productos y Pronóstico</value>
   <value column="Help" original="Import and update  product planning data and forecast">Importa y Actualiza Planeación de Productos y Pronóstico</value>
+ </row>
+ <row id="53245" trl="N">
+  <value column="Name" original="Validate">Validate</value>
+  <value column="Description" original="Validate Payment Schedule">Validate Payment Schedule</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53246" trl="Y">
+  <value column="Name" original="Copy from Cash Plan">Copiar de Plan de Caja</value>
+  <value column="Description" original="Copy Lines from other Cash Plan">Copia Líneas desde otro Plan de Caja</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53247" trl="Y">
+  <value column="Name" original="Generate Periodic Plan">Genera Plan Periódico</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53248" trl="Y">
+  <value column="Name" original="Cash Flow Report">Reporte Flujo de Caja</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
  </row>
 </adempiereTrl>

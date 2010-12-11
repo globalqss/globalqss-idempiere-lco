@@ -511,4 +511,9 @@ The Valid From and Valid To dates indicate the valid time period to use the BOM 
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="60944" trl="N">
+  <value column="Name" original="Copy From Cash Plan">Copy From Cash Plan</value>
+  <value column="Description" original="Copy From Another Cash Plan">Copy From Another Cash Plan</value>
+  <value column="Help" original="Copy From Another Cash Plan">Copy From Another Cash Plan</value>
+ </row>
 </adempiereTrl>

@@ -23554,9 +23554,9 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="51006" trl="Y">
-  <value column="Name" original="PA_DashboardContent_ID">Contenido Tablero Control</value>
-  <value column="PrintName" original="PA_DashboardContent_ID">Contenido Tablero Control</value>
+ <row id="51006" trl="N">
+  <value column="Name" original="Dashboard Content">Contenido Tablero Control</value>
+  <value column="PrintName" original="Dashboard Content">Contenido Tablero Control</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -28535,8 +28535,8 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53796" trl="Y">
-  <value column="Name" original="Product Price Vendor Break">Rango Precio Producto</value>
-  <value column="PrintName" original="Product Price Vendor Break">Rango Precio Producto</value>
+  <value column="Name" original="Product Price Break">Rango Precio Producto</value>
+  <value column="PrintName" original="Product Price Break">Rango Precio Producto</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -29264,6 +29264,36 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
+ <row id="54113" trl="N">
+  <value column="Name" original="Payroll Movement Import">Payroll Movement Import</value>
+  <value column="PrintName" original="Payroll Movement Import">Payroll Movement Import</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54114" trl="N">
+  <value column="Name" original="Concept Value">Concept Value</value>
+  <value column="PrintName" original="Concept Value">Concept Value</value>
+  <value column="Description" original="Value of the Concept">Value of the Concept</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54115" trl="N">
+  <value column="Name" original="Process Name">Process Name</value>
+  <value column="PrintName" original="Process Name">Process Name</value>
+  <value column="Description" original="Name of the Process">Name of the Process</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
  <row id="54117" trl="N">
   <value column="Name" original="Import Product Planning">Importa Planeación de Producto</value>
   <value column="PrintName" original="Import Product Planning">Importa Planeación de Producto</value>
@@ -29387,6 +29417,136 @@ Crédito Cuenta Trabajo en Proceso</value>
  <row id="54158" trl="N">
   <value column="Name" original="Separator Character">Caracter Separador</value>
   <value column="PrintName" original="Separator Character">Caracter Separador</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54266" trl="Y">
+  <value column="Name" original="Approval Amount Accumulated">Total Aprobación Acumulado</value>
+  <value column="PrintName" original="Approval Amt Accumulated">Total Aprobación Acumulado</value>
+  <value column="Description" original="The approval amount limit for this role accumulated on a period">Total límite de aprobación para este perfil acumulados en un período</value>
+  <value column="Help" original="The Approval Amount field indicates the amount limit this Role has for approval of documents within a period limit.">El campo total aprobación acumulado indica el total límite que este perfil tiene para aprobación de documentos durante un período limitado.</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54267" trl="Y">
+  <value column="Name" original="Days Approval Accumulated">Días Aprobación Acumulado</value>
+  <value column="PrintName" original="Days Approval Accumulated">Días Aprobación Acumulado</value>
+  <value column="Description" original="The days approval indicates the days to take into account to verify the accumulated approval amount.">Los días de aprobación acumulados indican los días a tener en cuenta para verificar el total de aprobación acumulado.</value>
+  <value column="Help" original="The Days Approval Accumulated field indicates the days to take into account to verify the accumulated approval amount.">El campo días de aprobación acumulado indican los días a tener en cuenta para verificar el total de aprobación acumulado.</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54377" trl="Y">
+  <value column="Name" original="Disallow Negative Inventory">No Permitir Inventario Negativo</value>
+  <value column="PrintName" original="Disallow Negative Inventory">No Permitir Inventario Negativo</value>
+  <value column="Description" original="Negative Inventory is not allowed in this warehouse">Inventario negativo no es permitido en este almacén</value>
+  <value column="Help" original="If checked, any transaction that results in the onhand inventory being driven negative will be prevented.">Si se marca, no se permiten transacciones que resulte en una cantidad de inventario negativa.</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54389" trl="Y">
+  <value column="Name" original="Payment Export Class">Clase Exporta Pagos</value>
+  <value column="PrintName" original="Payment Export Class">Clase Exporta Pagos</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54391" trl="Y">
+  <value column="Name" original="Order Payment Schedule">Programa de Pagos de Ordenes</value>
+  <value column="PrintName" original="Order Payment Schedule">Programa Pagos de Ordenes</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54392" trl="Y">
+  <value column="Name" original="Payment Term Usage">Uso Término de Pago</value>
+  <value column="PrintName" original="Payment Term Usage">Uso Término de Pago</value>
+  <value column="Description" original="Payment term usage indicates if this payment term is used for sales, purchases or both.">Uso Término de Pago indica si este término de pago es utilizado para ventas, compras o ambos.</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54393" trl="Y">
+  <value column="Name" original="Cash Plan">Plan de Caja</value>
+  <value column="PrintName" original="Cash Plan">Plan de Caja</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54394" trl="Y">
+  <value column="Name" original="Cash Flow Type">Tipo Flujo Caja</value>
+  <value column="PrintName" original="Cash Flow Type">Tipo Flujo Caja</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54395" trl="N">
+  <value column="Name" original="Generate Periodic Plan">Generate Periodic Plan</value>
+  <value column="PrintName" original="Generate Periodic Plan">Generate Periodic Plan</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54396" trl="N">
+  <value column="Name" original="Probability">Probability</value>
+  <value column="PrintName" original="Probability">Probability</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54397" trl="Y">
+  <value column="Name" original="Cash Plan Line">Línea Plan Caja</value>
+  <value column="PrintName" original="Cash Plan Line">Línea Plan Caja</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54398" trl="N">
+  <value column="Name" original="T_CashFlow_ID">T_CashFlow_ID</value>
+  <value column="PrintName" original="T_CashFlow_ID">T_CashFlow_ID</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54399" trl="N">
+  <value column="Name" original="Cash Flow Source">Cash Flow Source</value>
+  <value column="PrintName" original="Cash Flow Source">Cash Flow Source</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>

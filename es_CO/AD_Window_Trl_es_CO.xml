@@ -1779,8 +1779,18 @@ y otros</value>
   <value column="Description" original="Define Withholding">Define Retención</value>
   <value column="Help" original="The Withholding Window defines withholding information for business partners.">La ventana retención define la información de retenciones de los terceros.</value>
  </row>
+ <row id="53108" trl="N">
+  <value column="Name" original="Import Payroll Movement">Import Payroll Movement</value>
+  <value column="Description" original="Import Payroll Movement">Import Payroll Movement</value>
+  <value column="Help" original=""/>
+ </row>
  <row id="53109" trl="N">
   <value column="Name" original="Import Product Planning">Importa Planeación de Producto</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53134" trl="Y">
+  <value column="Name" original="Cash Plan">Plan de Caja</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
