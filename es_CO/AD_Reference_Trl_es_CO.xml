@@ -2007,7 +2007,7 @@
   <value column="Description" original="Type of goal display on dashboard">Tipo de objetivo a desplegar en el tablero</value>
   <value column="Help" original=""/>
  </row>
- <row id="53317" trl="N">
+ <row id="53317" trl="Y">
   <value column="Name" original="AD_Role">AD_Role</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
@@ -2027,112 +2027,112 @@
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53327" trl="N">
+ <row id="53327" trl="Y">
   <value column="Name" original="PA_Report Period Type">PA_Report Period Type</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53328" trl="N">
+ <row id="53328" trl="Y">
   <value column="Name" original="PA_Report Amount Type">PA_Report Amount Type</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53330" trl="N">
+ <row id="53330" trl="Y">
   <value column="Name" original="AD_Reference Table">AD_Reference Table</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53331" trl="N">
+ <row id="53331" trl="Y">
   <value column="Name" original="AD_RelationType Role">AD_RelationType Role</value>
   <value column="Description" original="Defines the possible &quot;roles&quot; a the records of a relation can have">Defines the possible "roles" a the records of a relation can have</value>
   <value column="Help" original=""/>
  </row>
- <row id="53332" trl="N">
+ <row id="53332" trl="Y">
   <value column="Name" original="AD_RelationType Type">AD_RelationType Type</value>
   <value column="Description" original="&quot;Type&quot; of a relation type">"Type" of a relation type</value>
   <value column="Help" original="For now we only have implicit realtion types, i.e. the record pairs are defined by the rule itself. In future we would like to have explicit type also. An explizit type just defines a template, the actual pairs can be added by a user or by the system itself.">For now we only have implicit realtion types, i.e. the record pairs are defined by the rule itself. In future we would like to have explicit type also. An explizit type just defines a template, the actual pairs can be added by a user or by the system itself.</value>
  </row>
- <row id="53333" trl="N">
+ <row id="53333" trl="Y">
   <value column="Name" original="RelType C_Order (Sales) &lt;= C_Invoice_ID (Customer)"><![CDATA[RelType C_Invoice_ID->C_Order]]></value>
   <value column="Description" original="Finds C_Order_IDs for a given C_Invoice_ID">Finds C_OrderIDs for a given C_Invoice_ID</value>
   <value column="Help" original=""/>
  </row>
- <row id="53334" trl="N">
+ <row id="53334" trl="Y">
   <value column="Name" original="RelType C_Invoice (Customer) &lt;= C_Order_ID (Sales)"><![CDATA[RelType C_Order_ID->C_Invoice]]></value>
   <value column="Description" original="Finds C_Invoice_IDs for a given C_C_Order_ID"/>
   <value column="Help" original=""/>
  </row>
- <row id="53335" trl="N">
+ <row id="53335" trl="Y">
   <value column="Name" original="C_BPartner -Active,Manufacturer, Non summary">C_BPartner -Active,Manufacturer, Non summary</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53343" trl="N">
+ <row id="53343" trl="Y">
   <value column="Name" original="M_DiscountSchema PL">M_DiscountSchema PL</value>
   <value column="Description" original="Price List Discount Schema">Price List Discount Schema</value>
   <value column="Help" original=""/>
  </row>
- <row id="53345" trl="N">
+ <row id="53345" trl="Y">
   <value column="Name" original="RelType M_InOut (Shipment) &lt;= C_Invoice_ID (Customer)"><![CDATA[RelType C_Invoice_ID->M_InOut]]></value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53347" trl="N">
+ <row id="53347" trl="Y">
   <value column="Name" original="RelType M_InOut (Shipment) &lt;=  C_Order_ID"><![CDATA[RelType C_Order->M_InOut]]></value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53348" trl="N">
+ <row id="53348" trl="Y">
   <value column="Name" original="RelType C_Invoice (Customer) &lt;= M_InOut_ID (Shipment)"><![CDATA[RelType M_InOut_ID->C_Invoice]]></value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53349" trl="N">
+ <row id="53349" trl="Y">
   <value column="Name" original="RelType C_Order (Sales) &lt;=  M_InOut_ID (Shipment)"><![CDATA[RelType M_InOut_ID->C_Order]]></value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53352" trl="N">
+ <row id="53352" trl="Y">
   <value column="Name" original="RelType C_BPartner &lt;= Vendor/Customer Return"><![CDATA[RelType C_BPartner_ID->Customer_RMA]]></value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53353" trl="N">
+ <row id="53353" trl="Y">
   <value column="Name" original="RelType Customer Return &lt;= C_BPartner_ID"><![CDATA[RelType Customer_RMA->C_BPartner_ID]]></value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53354" trl="N">
+ <row id="53354" trl="Y">
   <value column="Name" original="RelType Vendor Return &lt;= C_BPartner_ID"><![CDATA[RelType Vendor_RMA <= C_BPartner_ID]]></value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53382" trl="N">
+ <row id="53382" trl="Y">
   <value column="Name" original="C_PaymentTerm PaymentTermUsage">C_PaymentTerm PaymentTermUsage</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53383" trl="N">
+ <row id="53383" trl="Y">
   <value column="Name" original="C_PaymentTerm Sales">C_PaymentTerm Sales</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53384" trl="N">
+ <row id="53384" trl="Y">
   <value column="Name" original="C_PaymentTerm Purchases">C_PaymentTerm Purchases</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53385" trl="N">
+ <row id="53385" trl="Y">
   <value column="Name" original="C_CashPlan CashFlowType">C_CashPlan CashFlowType</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53386" trl="N">
+ <row id="53386" trl="Y">
   <value column="Name" original="Generate Cash Plan Periodicity">Generate Cash Plan Periodicity</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53387" trl="N">
+ <row id="53387" trl="Y">
   <value column="Name" original="T_CashFlow CashFlowSource">T_CashFlow CashFlowSource</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>

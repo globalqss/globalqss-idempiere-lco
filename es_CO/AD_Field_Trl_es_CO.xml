@@ -494,26 +494,26 @@ Para una Orden de Manufactura es la fecha cuand el último movimiento de orden d
   <value column="Description" original="Search key for the record in the format required">Código para el registro en el formato requerido; debe ser único</value>
   <value column="Help" original="7 bit lower case alpha numeric - max length 8 - can be used for operating system names.">alfanumérico de 7 bits en minúsculas - máxima longitud 8 - puede ser usado para nombres de sistemas operativos.</value>
  </row>
- <row id="58101" trl="N">
-  <value column="Name" original="Copy BOM Lines From">Copy BOM Lines From</value>
-  <value column="Description" original="Copy BOM Lines from an exising BOM">Copy BOM Lines from an exising BOM</value>
-  <value column="Help" original="Copy BOM Lines from an exising BOM. The BOM being copied to, must not have any existing BOM Lines.">Copy BOM Lines from an exising BOM. The BOM being copied to, must not have any existing BOM Lines.</value>
+ <row id="58101" trl="Y">
+  <value column="Name" original="Copy BOM Lines From">Copiar Líneas LDM Desde</value>
+  <value column="Description" original="Copy BOM Lines from an exising BOM">Copiar Líneas LDM desde una LDM existente</value>
+  <value column="Help" original="Copy BOM Lines from an exising BOM. The BOM being copied to, must not have any existing BOM Lines.">Copiar líneas LDM desde una LDM existente.  La LDM a la que se va a copiar no debe tener ninguna línea.</value>
  </row>
- <row id="58114" trl="N">
-  <value column="Name" original="Valid from">Valid from</value>
-  <value column="Description" original="Valid from including this date (first day)">Valid from including this date (first day)</value>
-  <value column="Help" original="The Valid From date indicates the first day of a date range&#10;&#10;The Valid From and Valid To dates indicate the valid time period to use the BOM in a Manufacturing Order.">The Valid From date indicates the first day of a date range
+ <row id="58114" trl="Y">
+  <value column="Name" original="Valid from">Válido desde</value>
+  <value column="Description" original="Valid from including this date (first day)">Válido desde incluyendo esta fecha (primer día)</value>
+  <value column="Help" original="The Valid From date indicates the first day of a date range&#10;&#10;The Valid From and Valid To dates indicate the valid time period to use the BOM in a Manufacturing Order.">La fecha Válido Desde indica el primer día de un rango de fechas
 
-The Valid From and Valid To dates indicate the valid time period to use the BOM in a Manufacturing Order.</value>
+Las fechas Válido desde y Válido hasta indican el período de tiempo a utilizar la LDM en una orden de manufactura.</value>
  </row>
- <row id="58771" trl="N">
-  <value column="Name" original="Import Product Planning Data">Import Product Planning Data</value>
+ <row id="58771" trl="Y">
+  <value column="Name" original="Import Product Planning Data">Importa Datos Planeación Producto</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="60944" trl="N">
-  <value column="Name" original="Copy From Cash Plan">Copy From Cash Plan</value>
-  <value column="Description" original="Copy From Another Cash Plan">Copy From Another Cash Plan</value>
-  <value column="Help" original="Copy From Another Cash Plan">Copy From Another Cash Plan</value>
+ <row id="60944" trl="Y">
+  <value column="Name" original="Copy From Cash Plan">Copiar desde plan de caja</value>
+  <value column="Description" original="Copy From Another Cash Plan">Copiar de otro plan de caja</value>
+  <value column="Help" original="Copy From Another Cash Plan">Copiar desde otro plan de caja</value>
  </row>
 </adempiereTrl>

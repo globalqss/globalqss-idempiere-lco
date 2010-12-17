@@ -1806,29 +1806,29 @@ Debe ser implementado cuando no haya usuarios conectados.</value>
   <value column="Description" original="Client Accounting Processor">Procesador Contabilidad (Cliente)</value>
   <value column="Help" original="The client accounting processor allows a user to run the accounting processor in a client session.  The system configurator parameter CLIENT_ACCOUNTING must be enabled (configured as [I]mmediate or [Q]ueue).">El procesador de contabilidad (cliente) permite a un usuario correr el procesador contable desde la sesión del cliente.  El parámetro de configuración del sistema CLIENT_ACCOUNTING debe estar habilitado (configurado como I/Inmediato o Q/Cola).</value>
  </row>
- <row id="53189" trl="N">
+ <row id="53189" trl="Y">
   <value column="Name" original="Storage per Product">Almacenamiento por Producto</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53197" trl="N">
-  <value column="Name" original="Import Payroll Movement">Import Payroll Movement</value>
-  <value column="Description" original="Import Payroll Movement">Import Payroll Movement</value>
+ <row id="53197" trl="Y">
+  <value column="Name" original="Import Payroll Movement">Importa Novedades Nómina</value>
+  <value column="Description" original="Import Payroll Movement">Importa Novedades Nómina</value>
   <value column="Help" original=""/>
  </row>
- <row id="53199" trl="N">
+ <row id="53199" trl="Y">
   <value column="Name" original="Reset Allocation Direct">Reinicia Asignación Directa</value>
   <value column="Description" original="Reset (delete) allocation of invoices to payments">Reinicia (borra) asignación de facturas a pagos</value>
   <value column="Help" original="Delete individual allocation. In contrast to &quot;Reverse&quot;, the allocation is deleted (no trace), if the period is open.">Borra asignaciones individuales.  En contraste a "Reversar", la asignación es borrada (no se guarda log), si el período está abierto.</value>
  </row>
- <row id="53200" trl="N">
+ <row id="53200" trl="Y">
   <value column="Name" original="Import Product Planning and Forecast">Importa Planeación de Productos y Pronóstico</value>
   <value column="Description" original="Import Product Planning and Forecast">Importa Planeación de Productos y Pronóstico</value>
   <value column="Help" original="Import and update  product planning data and forecast">Importa y Actualiza Planeación de Productos y Pronóstico</value>
  </row>
- <row id="53245" trl="N">
-  <value column="Name" original="Validate">Validate</value>
-  <value column="Description" original="Validate Payment Schedule">Validate Payment Schedule</value>
+ <row id="53245" trl="Y">
+  <value column="Name" original="Validate">Validar</value>
+  <value column="Description" original="Validate Payment Schedule">Validar Programa de Pagos</value>
   <value column="Help" original=""/>
  </row>
  <row id="53246" trl="Y">

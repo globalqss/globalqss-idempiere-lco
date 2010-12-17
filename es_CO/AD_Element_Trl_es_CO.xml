@@ -1273,11 +1273,11 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="279" trl="N">
-  <value column="Name" original="Discontinued by">Discontinued by</value>
-  <value column="PrintName" original="Discontinued by">Discontinued by</value>
-  <value column="Description" original="Discontinued By">Discontinued By</value>
-  <value column="Help" original="The Discontinued By indicates the individual who discontinued this product">The Discontinued By indicates the individual who discontinued this product</value>
+ <row id="279" trl="Y">
+  <value column="Name" original="Discontinued by">Descontinuado en</value>
+  <value column="PrintName" original="Discontinued by">Descontinuado en</value>
+  <value column="Description" original="Discontinued By">Descontinuado en</value>
+  <value column="Help" original="The Discontinued By indicates the individual who discontinued this product">El campo descontinuado en indica la fecha en que se descontinuó este producto</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -23554,7 +23554,7 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="51006" trl="N">
+ <row id="51006" trl="Y">
   <value column="Name" original="Dashboard Content">Contenido Tablero Control</value>
   <value column="PrintName" original="Dashboard Content">Contenido Tablero Control</value>
   <value column="Description" original=""/>
@@ -28434,9 +28434,9 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="53760" trl="N">
-  <value column="Name" original="Gross Requirements Quantity">Gross Requirements Quantity</value>
-  <value column="PrintName" original="Gross Req. Qty">Gross Req. Qty</value>
+ <row id="53760" trl="Y">
+  <value column="Name" original="Gross Requirements Quantity">Cantidad Bruta Requerida</value>
+  <value column="PrintName" original="Gross Req. Qty">Cantidad Bruta Requerida</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -28444,9 +28444,9 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="53761" trl="N">
-  <value column="Name" original="Scheduled Receipts Quantity">Scheduled Receipts Quantity</value>
-  <value column="PrintName" original="Scheduled Receipts Qty">Scheduled Receipts Qty</value>
+ <row id="53761" trl="Y">
+  <value column="Name" original="Scheduled Receipts Quantity">Cantidad Recibos Programada</value>
+  <value column="PrintName" original="Scheduled Receipts Qty">Cantidad Recibos Programada</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -28454,11 +28454,11 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="53762" trl="N">
-  <value column="Name" original="On Hand Projected Quantity">On Hand Projected Quantity</value>
-  <value column="PrintName" original="On Hand Projected Qty">On Hand Projected Qty</value>
-  <value column="Description" original="On Hand Projected Quantity">On Hand Projected Quantity</value>
-  <value column="Help" original="The On Hand Projected Quantity indicates the quantity of a product that is on hand in time line.">The On Hand Projected Quantity indicates the quantity of a product that is on hand in time line.</value>
+ <row id="53762" trl="Y">
+  <value column="Name" original="On Hand Projected Quantity">Cantidad Proyectada Existencia</value>
+  <value column="PrintName" original="On Hand Projected Qty">Cantidad Proyectada Existencia</value>
+  <value column="Description" original="On Hand Projected Quantity">Cantidad Proyectada Existencia</value>
+  <value column="Help" original="The On Hand Projected Quantity indicates the quantity of a product that is on hand in time line.">La cantidad proyectada de existencia indica la cantidad de un producto que está en existencia en una línea de tiempo.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -28984,7 +28984,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="53896" trl="N">
+ <row id="53896" trl="Y">
   <value column="Name" original="Included Role">Rol Incluído</value>
   <value column="PrintName" original="Included Role">Rol Incluído</value>
   <value column="Description" original=""/>
@@ -29064,7 +29064,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="53942" trl="N">
+ <row id="53942" trl="Y">
   <value column="Name" original="Order Source">Origen Orden</value>
   <value column="PrintName" original="Order Source">Origen Orden</value>
   <value column="Description" original=""/>
@@ -29074,7 +29074,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54061" trl="N">
+ <row id="54061" trl="Y">
   <value column="Name" original="Period Type">Tipo Período</value>
   <value column="PrintName" original="Period Type">Tipo Período</value>
   <value column="Description" original="PA Period Type">Tipo Período</value>
@@ -29084,7 +29084,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54062" trl="N">
+ <row id="54062" trl="Y">
   <value column="Name" original="Amount Type">Tipo Cantidad</value>
   <value column="PrintName" original="Amount Type">Tipo Cantidad</value>
   <value column="Description" original="PA Amount Type for reporting">Tipo Cantidad para reportes</value>
@@ -29094,7 +29094,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54070" trl="N">
+ <row id="54070" trl="Y">
   <value column="Name" original="Relation Type">Tipo Relación</value>
   <value column="PrintName" original="Relation Type">Tipo Relación</value>
   <value column="Description" original=""/>
@@ -29104,7 +29104,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54071" trl="N">
+ <row id="54071" trl="Y">
   <value column="Name" original="Source Reference">Referencia Origen</value>
   <value column="PrintName" original="Source Reference">Referencia Origen</value>
   <value column="Description" original=""/>
@@ -29114,7 +29114,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54072" trl="N">
+ <row id="54072" trl="Y">
   <value column="Name" original="Target Reference">Referencia Destino</value>
   <value column="PrintName" original="Target Reference">Referencia Destino</value>
   <value column="Description" original=""/>
@@ -29124,7 +29124,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54073" trl="N">
+ <row id="54073" trl="Y">
   <value column="Name" original="Source Role">Rol Fuente</value>
   <value column="PrintName" original="Source Role">Rol Fuente</value>
   <value column="Description" original="If set, this role will be used as label for the zoom destination instead of the destinations's window name">Si se define, este rol será utilizado como rótulo para el destino a acercar en vez del nombre de la ventana</value>
@@ -29134,7 +29134,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54074" trl="N">
+ <row id="54074" trl="Y">
   <value column="Name" original="Directed">Dirigido</value>
   <value column="PrintName" original="Directed">Dirigido</value>
   <value column="Description" original="Tells whether one &quot;sees&quot; the other end of the relation from each end or just from the source">Indica si uno "ve" el otro lado de la relación para cada punta, o solo para el origen</value>
@@ -29144,7 +29144,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54075" trl="N">
+ <row id="54075" trl="Y">
   <value column="Name" original="Target Role">Rol Destino</value>
   <value column="PrintName" original="Target Role">Rol Destino</value>
   <value column="Description" original="If set, this role will be used as label for the zoom destination instead of the destinations's window name">Si se define, este rol será utilizado como rótulo para el destino a acercar en vez del nombre de la ventana</value>
@@ -29154,7 +29154,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54076" trl="N">
+ <row id="54076" trl="Y">
   <value column="Name" original="Is Statement">Es Estado Cuenta</value>
   <value column="PrintName" original="Is Statement">Es Estado Cuenta</value>
   <value column="Description" original="Dunning Level is a definition of a statement">Nivel de morosidad es una definición de estado de cuenta</value>
@@ -29164,7 +29164,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54077" trl="N">
+ <row id="54077" trl="Y">
   <value column="Name" original="Cost Allocation Percent">Porcentaje Asignación Costo</value>
   <value column="PrintName" original="Allocation%">% Asignación</value>
   <value column="Description" original="Cost allocation percent in case of a co-product.">Asignación de porcentaje de costo en caso de un co-producto.</value>
@@ -29174,7 +29174,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54078" trl="N">
+ <row id="54078" trl="Y">
   <value column="Name" original="Is Manufacturer">Es Fabricante</value>
   <value column="PrintName" original="Is Manufacturer">Es Fabricante</value>
   <value column="Description" original="Indicate role of this Business partner as Manufacturer">Indica que este tercero es un fabricante</value>
@@ -29184,9 +29184,9 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54079" trl="N">
-  <value column="Name" original="Manufacturer">Manufacturer</value>
-  <value column="PrintName" original="Manufacturer">Manufacturer</value>
+ <row id="54079" trl="Y">
+  <value column="Name" original="Manufacturer">Fabricante</value>
+  <value column="PrintName" original="Manufacturer">Fabricante</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -29194,7 +29194,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54086" trl="N">
+ <row id="54086" trl="Y">
   <value column="Name" original="Discontinued At">Descontinuado en</value>
   <value column="PrintName" original="Discontinued At">Descontinuado en</value>
   <value column="Description" original="Discontinued At indicates Date when product was discontinued">Indica la fecha en que el producto fue descontinuado</value>
@@ -29204,7 +29204,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54087" trl="N">
+ <row id="54087" trl="Y">
   <value column="Name" original="Sum Qty on Hand">Suma de Cantidad Disponible</value>
   <value column="PrintName" original="Sum Qty on Hand">Suma de Cantidad Disponible</value>
   <value column="Description" original="Summary of product on hand in all locators">Sumatoria de la cantidad disponible de productos en todas las localizaciones</value>
@@ -29214,7 +29214,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54095" trl="N">
+ <row id="54095" trl="Y">
   <value column="Name" original="Update Costing">Actualiza Costeo</value>
   <value column="PrintName" original="Update Costing">Actualiza Costeo</value>
   <value column="Description" original=""/>
@@ -29224,7 +29224,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54096" trl="N">
+ <row id="54096" trl="Y">
   <value column="Name" original="Import List price">Importa Precio de Lista</value>
   <value column="PrintName" original="Import List price">Importa Precio de Lista</value>
   <value column="Description" original=""/>
@@ -29234,7 +29234,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54097" trl="N">
+ <row id="54097" trl="Y">
   <value column="Name" original="Import Standard Price">Importa Precio Estándar</value>
   <value column="PrintName" original="Import Standard Price">Importa Precio Estándar</value>
   <value column="Description" original=""/>
@@ -29244,7 +29244,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54098" trl="N">
+ <row id="54098" trl="Y">
   <value column="Name" original="Import Limit Price">Importa Precio Límite</value>
   <value column="PrintName" original="Import Limit Price">Importa Precio Límite</value>
   <value column="Description" original=""/>
@@ -29254,7 +29254,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54099" trl="N">
+ <row id="54099" trl="Y">
   <value column="Name" original="All Allocations">Todas las Asignaciones</value>
   <value column="PrintName" original="All Allocations">Todas las Asignaciones</value>
   <value column="Description" original=""/>
@@ -29264,9 +29264,9 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54113" trl="N">
-  <value column="Name" original="Payroll Movement Import">Payroll Movement Import</value>
-  <value column="PrintName" original="Payroll Movement Import">Payroll Movement Import</value>
+ <row id="54113" trl="Y">
+  <value column="Name" original="Payroll Movement Import">Importa Novedades Nómina</value>
+  <value column="PrintName" original="Payroll Movement Import">Importa Novedades Nómina</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -29274,27 +29274,27 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54114" trl="N">
-  <value column="Name" original="Concept Value">Concept Value</value>
-  <value column="PrintName" original="Concept Value">Concept Value</value>
-  <value column="Description" original="Value of the Concept">Value of the Concept</value>
+ <row id="54114" trl="Y">
+  <value column="Name" original="Concept Value">Código Concepto</value>
+  <value column="PrintName" original="Concept Value">Código Concepto</value>
+  <value column="Description" original="Value of the Concept">Código Concepto</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54115" trl="N">
-  <value column="Name" original="Process Name">Process Name</value>
-  <value column="PrintName" original="Process Name">Process Name</value>
-  <value column="Description" original="Name of the Process">Name of the Process</value>
+ <row id="54115" trl="Y">
+  <value column="Name" original="Process Name">Nombre Proceso</value>
+  <value column="PrintName" original="Process Name">Nombre Proceso</value>
+  <value column="Description" original="Name of the Process">Nombre Proceso</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54117" trl="N">
+ <row id="54117" trl="Y">
   <value column="Name" original="Import Product Planning">Importa Planeación de Producto</value>
   <value column="PrintName" original="Import Product Planning">Importa Planeación de Producto</value>
   <value column="Description" original=""/>
@@ -29304,7 +29304,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54118" trl="N">
+ <row id="54118" trl="Y">
   <value column="Name" original="Network Distribution Key">Código Red Distribución</value>
   <value column="PrintName" original="Network Distribution Key">Código Red Distribución</value>
   <value column="Description" original="Key of the Network Distribution">Código Red Distribución</value>
@@ -29314,7 +29314,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54119" trl="N">
+ <row id="54119" trl="Y">
   <value column="Name" original="Product BOM Key">Código Producto LDM</value>
   <value column="PrintName" original="Product BOM Key">Código Producto LDM</value>
   <value column="Description" original="Key of Product BOM">Código Producto LDM</value>
@@ -29324,7 +29324,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54120" trl="N">
+ <row id="54120" trl="Y">
   <value column="Name" original="Forecast Key">Código Pronóstico</value>
   <value column="PrintName" original="Forecast Key">Código Pronóstico</value>
   <value column="Description" original="Key of the Forecast">Código Pronóstico</value>
@@ -29334,7 +29334,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54121" trl="N">
+ <row id="54121" trl="Y">
   <value column="Name" original="Resource Key">Código Recurso</value>
   <value column="PrintName" original="Resource Key">Código Recurso</value>
   <value column="Description" original="Key of the Resource">Código Recurso</value>
@@ -29344,7 +29344,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54122" trl="N">
+ <row id="54122" trl="Y">
   <value column="Name" original="Planner Key">Código Planeador</value>
   <value column="PrintName" original="Planner Key">Código Planeador</value>
   <value column="Description" original="Search Key of the Planning">Código Planeador</value>
@@ -29354,7 +29354,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54123" trl="N">
+ <row id="54123" trl="Y">
   <value column="Name" original="Ignore Processing Time">Ignore Tiempo Procesamiento</value>
   <value column="PrintName" original="Ignore Proccessing Time">Ignore Tiempo Procesamiento</value>
   <value column="Description" original="Do not include processing time for the DateNextRun calculation">No incluye tiempo de procesamiento al calcular la fecha de siguiente ejecución</value>
@@ -29364,7 +29364,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54124" trl="N">
+ <row id="54124" trl="Y">
   <value column="Name" original="Cron Scheduling Pattern">Patrón Programación Crontab</value>
   <value column="PrintName" original="Cron Scheduling Pattern">Patrón Programación Crontab</value>
   <value column="Description" original="Cron pattern to define when the process should be invoked.">Patrón Programación Crontab define cuándo el proceso será ejecutado.</value>
@@ -29374,7 +29374,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54128" trl="N">
+ <row id="54128" trl="Y">
   <value column="Name" original="Processed On">Procesado En</value>
   <value column="PrintName" original="Processed On">Procesado En</value>
   <value column="Description" original="The date+time (expressed in decimal format) when the document has been processed">La fecha+hora (expresada en formato decimal) cuando el documento ha sido procesado</value>
@@ -29384,7 +29384,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54129" trl="N">
+ <row id="54129" trl="Y">
   <value column="Name" original="Order Source Key">Código Origen Orden</value>
   <value column="PrintName" original="Order Source Key">Código Origen Orden</value>
   <value column="Description" original=""/>
@@ -29394,7 +29394,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54132" trl="N">
+ <row id="54132" trl="Y">
   <value column="Name" original="Average Cost Variance">Varianza Costo Promedio</value>
   <value column="PrintName" original="Average Cost Variance">Varianza Costo Promedio</value>
   <value column="Description" original="Average Cost Variance">Varianza Costo Promedio</value>
@@ -29404,7 +29404,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54150" trl="N">
+ <row id="54150" trl="Y">
   <value column="Name" original="Prepare Split Document">Prepare Divide Documento</value>
   <value column="PrintName" original="Prepare Split Doc">Prepare Divide Documento</value>
   <value column="Description" original="Prepare generated split shipment/receipt document">Prepare genera documentos de entrega/recibo divididos</value>
@@ -29414,7 +29414,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54158" trl="N">
+ <row id="54158" trl="Y">
   <value column="Name" original="Separator Character">Caracter Separador</value>
   <value column="PrintName" original="Separator Character">Caracter Separador</value>
   <value column="Description" original=""/>
@@ -29504,9 +29504,9 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54395" trl="N">
-  <value column="Name" original="Generate Periodic Plan">Generate Periodic Plan</value>
-  <value column="PrintName" original="Generate Periodic Plan">Generate Periodic Plan</value>
+ <row id="54395" trl="Y">
+  <value column="Name" original="Generate Periodic Plan">Genera Plan Periódico</value>
+  <value column="PrintName" original="Generate Periodic Plan">Genera Plan Periódico</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -29514,9 +29514,9 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54396" trl="N">
-  <value column="Name" original="Probability">Probability</value>
-  <value column="PrintName" original="Probability">Probability</value>
+ <row id="54396" trl="Y">
+  <value column="Name" original="Probability">Probabilidad</value>
+  <value column="PrintName" original="Probability">Probabilidad</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -29534,9 +29534,9 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54398" trl="N">
-  <value column="Name" original="T_CashFlow_ID">T_CashFlow_ID</value>
-  <value column="PrintName" original="T_CashFlow_ID">T_CashFlow_ID</value>
+ <row id="54398" trl="Y">
+  <value column="Name" original="T_CashFlow_ID">Flujo Caja</value>
+  <value column="PrintName" original="T_CashFlow_ID">Flujo Caja</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -29544,9 +29544,9 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="54399" trl="N">
-  <value column="Name" original="Cash Flow Source">Cash Flow Source</value>
-  <value column="PrintName" original="Cash Flow Source">Cash Flow Source</value>
+ <row id="54399" trl="Y">
+  <value column="Name" original="Cash Flow Source">Fuente Flujo Caja</value>
+  <value column="PrintName" original="Cash Flow Source">Fuente Flujo Caja</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>

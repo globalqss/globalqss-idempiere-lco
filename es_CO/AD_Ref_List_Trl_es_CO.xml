@@ -4294,7 +4294,7 @@
   <value column="Name" original="Chart">Gráfico</value>
   <value column="Description" original=""/>
  </row>
- <row id="53503" trl="N">
+ <row id="53503" trl="Y">
   <value column="Name" original="Broadcast">Difundir</value>
   <value column="Description" original="Broadcast &lt;&lt;-&gt;&gt;"><![CDATA[Difundir <<->>]]></value>
  </row>
@@ -4390,83 +4390,83 @@
   <value column="Name" original="Other">Otros</value>
   <value column="Description" original=""/>
  </row>
- <row id="53536" trl="N">
+ <row id="53536" trl="Y">
   <value column="Name" original="Total">Total</value>
   <value column="Description" original=""/>
  </row>
- <row id="53537" trl="N">
+ <row id="53537" trl="Y">
   <value column="Name" original="Year">Año</value>
   <value column="Description" original=""/>
  </row>
- <row id="53538" trl="N">
+ <row id="53538" trl="Y">
   <value column="Name" original="Period">Período</value>
   <value column="Description" original=""/>
  </row>
- <row id="53540" trl="N">
+ <row id="53540" trl="Y">
   <value column="Name" original="Natural">Natural</value>
   <value column="Description" original="Year for P &amp; L account, Total for Balance Sheet account"><![CDATA[Año para cuentas de P&G, Total para cuentas de balance]]></value>
  </row>
- <row id="53541" trl="N">
+ <row id="53541" trl="Y">
   <value column="Name" original="Balance (expected sign)">Balance (signo esperado)</value>
   <value column="Description" original=""/>
  </row>
- <row id="53542" trl="N">
+ <row id="53542" trl="Y">
   <value column="Name" original="Credit Only">Sólo Créditos</value>
   <value column="Description" original=""/>
  </row>
- <row id="53543" trl="N">
+ <row id="53543" trl="Y">
   <value column="Name" original="Debit Only">Sólo Débitos</value>
   <value column="Description" original=""/>
  </row>
- <row id="53544" trl="N">
+ <row id="53544" trl="Y">
   <value column="Name" original="Quantity (expected sign)">Cantidad (signo esperado)</value>
   <value column="Description" original=""/>
  </row>
- <row id="53545" trl="N">
+ <row id="53545" trl="Y">
   <value column="Name" original="Balance (accounted sign)">Balance (signo contabilizado))</value>
   <value column="Description" original="DR - CR">DB - CR</value>
  </row>
- <row id="53546" trl="N">
+ <row id="53546" trl="Y">
   <value column="Name" original="Quantity (accounted sign)">Cantidad (signo contabilizado)</value>
   <value column="Description" original=""/>
  </row>
- <row id="53551" trl="N">
+ <row id="53551" trl="Y">
   <value column="Name" original="Human Resource &amp; Payroll">Recursos Humanos y Nómina</value>
   <value column="Description" original=""/>
  </row>
- <row id="53552" trl="N">
+ <row id="53552" trl="Y">
   <value column="Name" original="Order">Orden</value>
   <value column="Description" original=""/>
  </row>
- <row id="53553" trl="N">
+ <row id="53553" trl="Y">
   <value column="Name" original="Invoice">Factura</value>
   <value column="Description" original=""/>
  </row>
- <row id="53554" trl="N">
+ <row id="53554" trl="Y">
   <value column="Name" original="Implicit">Implícito</value>
   <value column="Description" original=""/>
  </row>
- <row id="53555" trl="N">
+ <row id="53555" trl="Y">
   <value column="Name" original="Explicit">Explícito</value>
   <value column="Description" original=""/>
  </row>
- <row id="53556" trl="N">
+ <row id="53556" trl="Y">
   <value column="Name" original="Measure for Performance Analysis">Medida para Análisis de Desempeño</value>
   <value column="Description" original=""/>
  </row>
- <row id="53559" trl="N">
+ <row id="53559" trl="Y">
   <value column="Name" original="Weight">Peso</value>
   <value column="Description" original=""/>
  </row>
- <row id="53561" trl="N">
+ <row id="53561" trl="Y">
   <value column="Name" original="Safety Stock">Existencia de Seguridad</value>
   <value column="Description" original=""/>
  </row>
- <row id="53574" trl="N">
+ <row id="53574" trl="Y">
   <value column="Name" original="Cron Scheduling Pattern">Patrón Agendamiento Crontab</value>
   <value column="Description" original="Use cron style scheduling pattern">Utilice patrón de agendamiento estilo crontab</value>
  </row>
- <row id="53583" trl="N">
+ <row id="53583" trl="Y">
   <value column="Name" original="Custom Separator Char">Caracter Separador Personalizado</value>
   <value column="Description" original=""/>
  </row>
@@ -4530,20 +4530,20 @@
   <value column="Name" original="Yearly">Anual</value>
   <value column="Description" original=""/>
  </row>
- <row id="53675" trl="N">
-  <value column="Name" original="1_Initial Balance">1_Initial Balance</value>
+ <row id="53675" trl="Y">
+  <value column="Name" original="1_Initial Balance">1_Balance Inicial</value>
   <value column="Description" original=""/>
  </row>
- <row id="53676" trl="N">
+ <row id="53676" trl="Y">
   <value column="Name" original="2_Plan">2_Plan</value>
   <value column="Description" original=""/>
  </row>
- <row id="53677" trl="N">
-  <value column="Name" original="3_Commitments (Orders)">3_Commitments (Orders)</value>
+ <row id="53677" trl="Y">
+  <value column="Name" original="3_Commitments (Orders)">3_Compromisos (Ordenes)</value>
   <value column="Description" original=""/>
  </row>
- <row id="53678" trl="N">
-  <value column="Name" original="4_Actual Debt (Invoices)">4_Actual Debt (Invoices)</value>
+ <row id="53678" trl="Y">
+  <value column="Name" original="4_Actual Debt (Invoices)">4_Deuda Actual (Facturas)</value>
   <value column="Description" original=""/>
  </row>
 </adempiereTrl>

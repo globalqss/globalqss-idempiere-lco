@@ -5242,7 +5242,7 @@ Válido Desde/Hasta es determinado por el impuesto padre.]]></value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53240" trl="N">
+ <row id="53240" trl="Y">
   <value column="Name" original="Included roles">Roles Incluídos</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original=""/>
@@ -5338,19 +5338,19 @@ Válido Desde/Hasta es determinado por el impuesto padre.]]></value>
   <value column="Description" original="Mail sent to the user">Mail enviado al usario</value>
   <value column="Help" original="Archive of mails sent to users">Archivos de mails enviados para usuarios</value>
  </row>
- <row id="53284" trl="N">
+ <row id="53284" trl="Y">
   <value column="Name" original="Order Source">Origen Orden</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53285" trl="N">
+ <row id="53285" trl="Y">
   <value column="Name" original="Relation Type">Tipo Relación</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53286" trl="N">
+ <row id="53286" trl="Y">
   <value column="Name" original="BOM">LDM</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original="Bill of Material product lines">Líneas de producto lista de materiales</value>
@@ -5370,64 +5370,64 @@ Imprimiendo:
 - Para facturas, listas de despacho y listas de empaque, tiene la opción de imprimir los detalles
 - En los detalles, la cantidad es listada - y el precio, si es calculado dinámicamente</value>
  </row>
- <row id="53287" trl="N">
+ <row id="53287" trl="Y">
   <value column="Name" original="Components">Componentes</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original="Components">Componentes</value>
   <value column="Help" original="Components of Bill fo Material">Componentes de Lista de Materiales</value>
  </row>
- <row id="53289" trl="N">
+ <row id="53289" trl="Y">
   <value column="Name" original="Costs">Costos</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53297" trl="N">
+ <row id="53297" trl="Y">
   <value column="Name" original="Used in Process Parameter">Usado en Parámetro de Proceso</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53298" trl="N">
+ <row id="53298" trl="Y">
   <value column="Name" original="Used in Field">Usado en Campo</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53306" trl="N">
-  <value column="Name" original="Import Payroll Movement">Import Payroll Movement</value>
+ <row id="53306" trl="Y">
+  <value column="Name" original="Import Payroll Movement">Importa Novedades Nómina</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Import Payroll Movement">Import Payroll Movement</value>
+  <value column="Description" original="Import Payroll Movement">Importa Novedades Nómina</value>
   <value column="Help" original=""/>
  </row>
- <row id="53307" trl="N">
+ <row id="53307" trl="Y">
   <value column="Name" original="Import Product Planning">Importa Planeación de Producto</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53372" trl="N">
-  <value column="Name" original="Translation">Translation</value>
+ <row id="53372" trl="Y">
+  <value column="Name" original="Translation">Traducción</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53373" trl="N">
-  <value column="Name" original="Payment Schedule">Payment Schedule</value>
+ <row id="53373" trl="Y">
+  <value column="Name" original="Payment Schedule">Programa de Pagos</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Invoice Payment Schedule">Invoice Payment Schedule</value>
+  <value column="Description" original="Invoice Payment Schedule">Programa de Pagos de Facturas</value>
   <value column="Help" original=""/>
  </row>
- <row id="53374" trl="N">
-  <value column="Name" original="Payment Schedule">Payment Schedule</value>
+ <row id="53374" trl="Y">
+  <value column="Name" original="Payment Schedule">Programa de Pagos</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Order Payment Schedule">Order Payment Schedule</value>
+  <value column="Description" original="Order Payment Schedule">Programa de Pagos de Ordenes</value>
   <value column="Help" original=""/>
  </row>
- <row id="53375" trl="N">
-  <value column="Name" original="Payment Schedule">Payment Schedule</value>
+ <row id="53375" trl="Y">
+  <value column="Name" original="Payment Schedule">Programa de Pagos</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Order Payment Schedule">Order Payment Schedule</value>
+  <value column="Description" original="Order Payment Schedule">Programa de Pagos de Ordenes Schedule</value>
   <value column="Help" original=""/>
  </row>
  <row id="53376" trl="Y">
