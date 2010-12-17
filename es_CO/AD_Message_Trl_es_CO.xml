@@ -5504,7 +5504,7 @@ Por favor contacte al ADMINISTRADOR.</value>
  </row>
  <row id="53119" trl="Y">
   <value column="MsgText" original="Error in payment schedule">Error en programa de pagos</value>
-  <value column="MsgTip" original="Check the payment schedule.  If the payment term has a schema then the document must have a schedule (is auto-generated if empty) and the schedule must sum the total of the document.  If the payment term doesn't have a schema, then the document must not have schedule.">Chequee el programa de pagos.  Si el término de pago tiene un esquema entonces el documento debe teenr un programa de pagos (es auto-generado si se encuentra vacío) y el programa de pagos debe sumar el total del documento.  Si el término de pago no tiene un esquema, entonces el documento no debe tener un programa de pagos.</value>
+  <value column="MsgTip" original="Check the payment schedule.  If the payment term has a schema then the document must have a schedule (is auto-generated if empty) and the schedule must sum the total of the document.  If the payment term doesn't have a schema, then the document must not have schedule.">Chequee el programa de pagos.  Si el término de pago tiene un esquema entonces el documento debe tener un programa de pagos (es auto-generado si se encuentra vacío) y el programa de pagos debe sumar el total del documento.  Si el término de pago no tiene un esquema, entonces el documento no debe tener un programa de pagos.</value>
  </row>
  <row id="53122" trl="Y">
   <value column="MsgText" original="The table doesn't have associated button for the process">La tabla no tiene asociado un botón para el proceso</value>
