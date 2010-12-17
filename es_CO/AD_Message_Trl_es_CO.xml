@@ -5442,31 +5442,31 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgText" original="Client Accounting is not enabled">Contabilidad en cliente no habilitada</value>
   <value column="MsgTip" original="In order to run this process you need to enable client accounting, this can be done in window System Configurator, setting the parameter CLIENT_ACCOUNTING to [I]mmediate or [Q]ueue">Para ejecutar este proceso debe habilitar la contabilidad en cliente, esto se hace en la ventana Configurador del Sistema, fijando el parámetro CLIENT_ACCOUNTING en [I] Inmediato, o [Q] En cola</value>
  </row>
- <row id="53084" trl="N">
+ <row id="53084" trl="Y">
   <value column="MsgText" original="Not exists a Business Partner linked for Organization">No existe un tercero asociado para la organización</value>
   <value column="MsgTip" original=""/>
  </row>
- <row id="53085" trl="N">
+ <row id="53085" trl="Y">
   <value column="MsgText" original="Print Movements">Imprime Movimiento</value>
   <value column="MsgTip" original=""/>
  </row>
- <row id="53086" trl="N">
+ <row id="53086" trl="Y">
   <value column="MsgText" original="Select Distribution Orders to generate Inventory Moves">Seleccione órdenes de distribución para generar movimientos de inventario</value>
   <value column="MsgTip" original=""/>
  </row>
- <row id="53087" trl="N">
+ <row id="53087" trl="Y">
   <value column="MsgText" original="Inventory Moves are generated depending on the &quot;Delivery Rule&quot; selection in the Distribution Order">Movimientos de inventario son generados dependiendo de la "Regla de Despacho" seleccionada en la orden de distribución</value>
   <value column="MsgTip" original=""/>
  </row>
- <row id="53088" trl="N">
+ <row id="53088" trl="Y">
   <value column="MsgText" original="PO {0} has {1} key columns. Needs to have exactly one.">PO {0} tiene {1} columna clave. Debe tener exactamente una.</value>
   <value column="MsgTip" original=""/>
  </row>
- <row id="53089" trl="N">
+ <row id="53089" trl="Y">
   <value column="MsgText" original="Neither reference {0} nor table {1} have an AD_Window_ID. IsSOTrx: {2}">Ni la referencia {0} ni la tabla {1} tienen un AD_Window_ID. Es Transacción de Ventas: {2}</value>
   <value column="MsgTip" original=""/>
  </row>
- <row id="53090" trl="N">
+ <row id="53090" trl="Y">
   <value column="MsgText" original="Must be a positive number!">Debe ser un número positivo</value>
   <value column="MsgTip" original=" "> </value>
  </row>
@@ -5474,27 +5474,27 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgText" original="Remember Me">Recordar mis datos</value>
   <value column="MsgTip" original=""/>
  </row>
- <row id="53092" trl="N">
+ <row id="53092" trl="Y">
   <value column="MsgText" original="And/Or">Y/O</value>
   <value column="MsgTip" original=""/>
  </row>
- <row id="53093" trl="N">
+ <row id="53093" trl="Y">
   <value column="MsgText" original="AND">Y</value>
   <value column="MsgTip" original=""/>
  </row>
- <row id="53094" trl="N">
+ <row id="53094" trl="Y">
   <value column="MsgText" original="OR">O</value>
   <value column="MsgTip" original=""/>
  </row>
- <row id="53095" trl="N">
+ <row id="53095" trl="Y">
   <value column="MsgText" original="Invalid cron scheduling pattern">Patrón de agendamiento crontab no válido</value>
   <value column="MsgTip" original="Invalid cron scheduling pattern - check syntax">Patrón de agendamiento crontab no válido - chequee la sintaxis</value>
  </row>
- <row id="53099" trl="N">
+ <row id="53099" trl="Y">
   <value column="MsgText" original="The page or component you request is no longer available. This is normally caused by timeout or rebooting the server.">La página o componente solicitado no está disponible.  Esto puede ser causado por demasiado tiempo sin utilizar la aplicación o porque se reinició el servidor.</value>
   <value column="MsgTip" original=""/>
  </row>
- <row id="53117" trl="N">
+ <row id="53117" trl="Y">
   <value column="MsgText" original="Cc">Cc</value>
   <value column="MsgTip" original=""/>
  </row>
