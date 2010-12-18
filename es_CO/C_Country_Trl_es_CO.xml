@@ -900,7 +900,7 @@
  <row id="286" trl="Y">
   <value column="Name" original="Russian Federation">Federación de Rusia</value>
   <value column="Description" original="Russian Federation">Federación de Rusia</value>
-  <value column="RegionName" original=""/>
+  <value column="RegionName" original="Federal Subject">Sujeto Federal</value>
  </row>
  <row id="287" trl="Y">
   <value column="Name" original="Rwanda">Ruanda</value>
