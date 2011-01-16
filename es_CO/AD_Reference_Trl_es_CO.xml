@@ -2108,7 +2108,7 @@
   <value column="Help" original=""/>
  </row>
  <row id="53382" trl="Y">
-  <value column="Name" original="C_PaymentTerm PaymentTermUsage">C_PaymentTerm PaymentTermUsage</value>
+  <value column="Name" original="Sales/Purchase/Both Usage">C_PaymentTerm PaymentTermUsage</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
