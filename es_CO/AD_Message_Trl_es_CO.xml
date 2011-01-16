@@ -5546,6 +5546,10 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgText" original="Trace">Seguimiento</value>
   <value column="MsgTip" original=""/>
  </row>
+ <row id="53132" trl="Y">
+  <value column="MsgText" original="Negative inventory disallowed in this warehouse">No se permite inventario negativo en este almacén</value>
+  <value column="MsgTip" original=""/>
+ </row>
  <row id="520010" trl="Y">
   <value column="MsgText" original="1 Rupee">1 Rupia</value>
   <value column="MsgTip" original=" "/>
