@@ -13411,7 +13411,7 @@ Si no se incorpora ninguna, se utiliza la impresora por default. Usted especific
   <value column="Name" original="Reference (DC)">Referencia (RD)</value>
   <value column="PrintName" original="Reference (DC)">Referencia (RD)</value>
   <value column="Description" original="Payment Reference Delayed Capture">Captura de referencia (Pago Retrasado).</value>
-  <value column="Help" original="The Payment Reference indicates the reference returned from the Credit Card Company for a payment">El pago de referencia indica la referencia retrasada para la tarjeta de credito de un pago de la Compañía.</value>
+  <value column="Help" original="The Payment Reference indicates the reference returned from the Credit Card Company for a payment">La Referencia de Pago indica la referencia que la compañía de tarjeta de crédito retornó para un pago</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -20687,7 +20687,7 @@ Segmentos contables deseadosm Organizaciones, Cuentas, Productos pueden tener al
   <value column="Name" original="Credit Watch %">% de Crédito en Verificación Cliente</value>
   <value column="PrintName" original="Credit Watch %">% Crédito en Verificación Cliente</value>
   <value column="Description" original="Credit Watch - Percent of Credit Limit when OK switches to Watch">Crédito en Verificación - Porcentaje de Límite de Crédito cuando Correcto cambia a Verificación</value>
-  <value column="Help" original="If Adempiere maintains credit status, the status &quot;Credit OK&quot; is moved to &quot;Credit Watch&quot; if the credit available reaches the percent entered.  If not defined, 90% is used.">Si Adempiere mantiene el estado de crédito, el estado "Credito Correcto" es movido a "Crédito en Verificación" empleando este valor como límite. De no definirlo, se empleará el 90%.</value>
+  <value column="Help" original="If Adempiere maintains credit status, the status &quot;Credit OK&quot; is moved to &quot;Credit Watch&quot; if the credit available reaches the percent entered.  If not defined, 90% is used.">Si Adempiere mantiene el estado de crédito, el estado "Crédito Correcto" es movido a "Crédito en Verificación" empleando este valor como límite. De no definirlo, se empleará el 90%.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -22605,9 +22605,9 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="3084" trl="Y">
-  <value column="Name" original="Acct Open Cr">Saldo contable Credito</value>
-  <value column="PrintName" original="Acct Open Cr">Saldo contable Credito</value>
-  <value column="Description" original="Open Credit in document currency &amp; rate">Saldo Credito en documento de moneda y tasa.</value>
+  <value column="Name" original="Acct Open Cr">Saldo contable Crédito</value>
+  <value column="PrintName" original="Acct Open Cr">Saldo contable Crédito</value>
+  <value column="Description" original="Open Credit in document currency &amp; rate">Saldo Crédito en documento de moneda y tasa.</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>

@@ -2653,7 +2653,7 @@ Gracias por utilizar el Administrador de Activos de Cliente de Adempiere
   <value column="MsgTip" original=""/>
  </row>
  <row id="767" trl="Y">
-  <value column="MsgText" original="Business Partner is on Credit Hold">Tercero tiene el credito en espera</value>
+  <value column="MsgText" original="Business Partner is on Credit Hold">Tercero tiene el crédito en espera</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="768" trl="Y">
@@ -3664,11 +3664,11 @@ Compruebe el registro de errores y el formato del archivo Accounting*.cvs - Ning
   <value column="MsgTip" original=" "/>
  </row>
  <row id="52115" trl="Y">
-  <value column="MsgText" original="Credit Check">Cheque de credito</value>
+  <value column="MsgText" original="Credit Check">Cheque de crédito</value>
   <value column="MsgTip" original=" "/>
  </row>
  <row id="52116" trl="Y">
-  <value column="MsgText" original="Credit Details">Detalle de credito</value>
+  <value column="MsgText" original="Credit Details">Detalle de crédito</value>
   <value column="MsgTip" original=" "/>
  </row>
  <row id="52117" trl="Y">
@@ -4125,7 +4125,7 @@ Compruebe el registro de errores y el formato del archivo Accounting*.cvs - Ning
   <value column="MsgTip" original=" "/>
  </row>
  <row id="52230" trl="Y">
-  <value column="MsgText" original="New Credit Order">Nueva Orden de credito</value>
+  <value column="MsgText" original="New Credit Order">Nueva Orden de crédito</value>
   <value column="MsgTip" original=" "/>
  </row>
  <row id="52231" trl="Y">
@@ -4749,7 +4749,7 @@ Compruebe el registro de errores y el formato del archivo Accounting*.cvs - Ning
   <value column="MsgTip" original=" "/>
  </row>
  <row id="52386" trl="Y">
-  <value column="MsgText" original="Settle Payment on a Credit Sales">Entablecer pagos en una venta a credito</value>
+  <value column="MsgText" original="Settle Payment on a Credit Sales">Establecer pagos en una venta a crédito</value>
   <value column="MsgTip" original=" "/>
  </row>
  <row id="52388" trl="Y">
@@ -4817,7 +4817,7 @@ Compruebe el registro de errores y el formato del archivo Accounting*.cvs - Ning
   <value column="MsgTip" original=" "/>
  </row>
  <row id="52404" trl="Y">
-  <value column="MsgText" original="Tax Credit">Credito de Impuesto</value>
+  <value column="MsgText" original="Tax Credit">Crédito de Impuesto</value>
   <value column="MsgTip" original=" "/>
  </row>
  <row id="52405" trl="Y">
@@ -4829,7 +4829,7 @@ Compruebe el registro de errores y el formato del archivo Accounting*.cvs - Ning
   <value column="MsgTip" original=" "/>
  </row>
  <row id="52407" trl="Y">
-  <value column="MsgText" original="The Cart has">El Carrito Tiene</value>
+  <value column="MsgText" original="The Cart has">El Carrito tiene</value>
   <value column="MsgTip" original=" "/>
  </row>
  <row id="52408" trl="Y">
@@ -5161,7 +5161,7 @@ Compruebe el registro de errores y el formato del archivo Accounting*.cvs - Ning
   <value column="MsgTip" original=""/>
  </row>
  <row id="52492" trl="Y">
-  <value column="MsgText" original="Settle Payment For Purchases On Credit">Acordar Pago para Compras a Crédito</value>
+  <value column="MsgText" original="Settle Payment For Purchases On Credit">Establecer Pago para Compras a Crédito</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="52493" trl="Y">
