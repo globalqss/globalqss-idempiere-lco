@@ -40,7 +40,6 @@ import org.compiere.model.MInvoicePaySchedule;
 import org.compiere.model.MInvoiceTax;
 import org.compiere.model.MPayment;
 import org.compiere.model.MPaymentAllocate;
-import org.compiere.model.MPaymentTerm;
 import org.compiere.model.ModelValidationEngine;
 import org.compiere.model.ModelValidator;
 import org.compiere.model.PO;
@@ -568,7 +567,7 @@ public class LCO_Validator implements ModelValidator
 					continue;
 				MInvoice invoice = null;
 				invoice = new MInvoice (ah.getCtx(), alloc_line.getC_Invoice_ID(), ah.get_TrxName());
-				if (invoice == null)
+				if (invoice == null || invoice.getC_Invoice_ID() == 0)
 					continue;
 				String sql = 
 					  "SELECT i.C_Tax_ID, NVL(SUM(i.TaxBaseAmt),0) AS TaxBaseAmt, NVL(SUM(i.TaxAmt),0) AS TaxAmt, t.Name, t.Rate, t.IsSalesTax "
