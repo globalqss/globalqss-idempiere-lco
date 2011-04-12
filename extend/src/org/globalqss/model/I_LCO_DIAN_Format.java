@@ -23,7 +23,7 @@ import org.compiere.util.KeyNamePair;
 
 /** Generated Interface for LCO_DIAN_Format
  *  @author Adempiere (generated) 
- *  @version Release 3.6.0LTS
+ *  @version 360LTS.010_P20110222
  */
 public interface I_LCO_DIAN_Format 
 {
@@ -31,7 +31,7 @@ public interface I_LCO_DIAN_Format
     /** TableName=LCO_DIAN_Format */
     public static final String Table_Name = "LCO_DIAN_Format";
 
-    /** AD_Table_ID=1000012 */
+    /** AD_Table_ID=5000028 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -135,6 +135,15 @@ public interface I_LCO_DIAN_Format
 	  */
 	public boolean isActive();
 
+    /** Column name IsBPartner2Detailed */
+    public static final String COLUMNNAME_IsBPartner2Detailed = "IsBPartner2Detailed";
+
+	/** Set IsBPartner2Detailed	  */
+	public void setIsBPartner2Detailed (boolean IsBPartner2Detailed);
+
+	/** Get IsBPartner2Detailed	  */
+	public boolean isBPartner2Detailed();
+
     /** Column name IsBPartnerDetailed */
     public static final String COLUMNNAME_IsBPartnerDetailed = "IsBPartnerDetailed";
 
@@ -162,7 +171,7 @@ public interface I_LCO_DIAN_Format
 	/** Get DIAN XML Print Label	  */
 	public int getLCO_DIAN_XMLPrintLabel_ID();
 
-	public org.globalqss.model.I_LCO_DIAN_XMLPrintLabel getLCO_DIAN_XMLPrintLabel() throws RuntimeException;
+	public I_LCO_DIAN_XMLPrintLabel getLCO_DIAN_XMLPrintLabel() throws RuntimeException;
 
     /** Column name MaxXMLRecords */
     public static final String COLUMNNAME_MaxXMLRecords = "MaxXMLRecords";

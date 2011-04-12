@@ -16,12 +16,19 @@
  *****************************************************************************/
 package org.globalqss.model;
 
+import java.lang.reflect.Method;
+import java.math.BigDecimal;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Properties;
+import java.util.logging.Level;
 
+import javax.script.ScriptEngine;
+
+import org.compiere.model.MRule;
+import org.compiere.util.AdempiereUserError;
 import org.compiere.util.DB;
 
 /**
@@ -126,5 +133,109 @@ public class MLCODIANFormat extends X_LCO_DIAN_Format
 		list.toArray(fields);
 		return fields;
 	}	//	getFields
+
+	public BigDecimal postProcess(X_LCO_DIAN_SendSchedule sendScheduleProcess) throws Exception {
+		BigDecimal retValue = null;
+		String cmd = getPostProcessClass();
+		if (cmd == null || cmd.length() == 0) {
+			return retValue;
+		}
+		String retValueStr = null;
+		String msg = null;
+		if (cmd.toLowerCase().startsWith(MRule.SCRIPT_PREFIX)) {
+			
+			MRule rule = MRule.get(getCtx(), cmd.substring(MRule.SCRIPT_PREFIX.length()));
+			if (rule == null) {
+				msg = "Callout " + cmd + " not found";
+				throw new AdempiereUserError(msg);
+			}
+			if ( !  (rule.getEventType().equals(MRule.EVENTTYPE_Callout) 
+				  && rule.getRuleType().equals(MRule.RULETYPE_JSR223ScriptingAPIs))) {
+				msg = "Callout " + cmd + " must be of type JSR 223 and event Callout"; 
+				throw new AdempiereUserError(msg);
+			}
+
+			ScriptEngine engine = rule.getScriptEngine();
+
+			// Window context are    W_
+			// Login context  are    G_
+			MRule.setContext(engine, getCtx(), 0);
+			// now add the callout parameters windowNo, tab, field, value, oldValue to the engine 
+			// Method arguments context are A_
+			engine.put(MRule.ARGUMENTS_PREFIX + "Ctx", getCtx());
+			engine.put(MRule.ARGUMENTS_PREFIX + "SendSchedule", sendScheduleProcess);
+			engine.put(MRule.ARGUMENTS_PREFIX + "TrxName", get_TrxName());
+
+			try 
+			{
+				retValueStr = engine.eval(rule.getScript()).toString();
+				retValue = new BigDecimal(retValueStr);
+			}
+			catch (Exception e)
+			{
+				msg = "Callout Script Invalid: " + e.toString();
+				log.log(Level.SEVERE, msg, e);
+				throw new AdempiereUserError("Error executing script " + cmd);
+			}
+			
+		} else {
+
+			Object call = null;
+			String methodName = null;
+			int methodStart = cmd.lastIndexOf('.');
+			try
+			{
+				if (methodStart != -1)      //  no class
+				{
+					Class<?> cClass = Class.forName(cmd.substring(0,methodStart));
+					call = cClass.newInstance();
+					methodName = cmd.substring(methodStart+1);
+				}
+			}
+			catch (Exception e)
+			{
+				msg = "Callout Invalid: " + cmd + " (" + e.toString() + ")";
+				throw new AdempiereUserError(msg);
+			}
+
+			if (call == null || methodName == null ||methodName.length() == 0) {
+				msg = "Callout Invalid: " + methodName;
+				throw new AdempiereUserError(msg);
+			}
+
+			try
+			{
+				if (methodName == null || methodName.length() == 0)
+					throw new IllegalArgumentException ("No Method Name");
+				
+				Method method = call.getClass().getMethod(methodName, Properties.class, X_LCO_DIAN_SendSchedule.class, String.class);
+
+				//	Call Method
+				try
+				{
+					retValue = (BigDecimal) method.invoke(call, getCtx(), sendScheduleProcess, get_TrxName());
+				}
+				catch (Exception e)
+				{
+					Throwable ex = e.getCause();	//	InvocationTargetException
+					if (ex == null)
+						ex = e;
+					log.log(Level.SEVERE, "start: " + methodName, ex);
+					ex.printStackTrace(System.err);
+					retValueStr = ex.getLocalizedMessage();
+					throw new AdempiereUserError("Error invoking callout " + cmd + " " + retValueStr);
+				}
+				return retValue;
+			}
+			catch (Exception e)
+			{
+				msg = 	"Callout Invalid: " + e.toString();
+				log.log(Level.SEVERE, msg, e);
+				throw new AdempiereUserError("Error with method callout " + cmd);
+			}
+		}			
+
+		return retValue;
+	}
 	
 }	//	MLCODIANFormat

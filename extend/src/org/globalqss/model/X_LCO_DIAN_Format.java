@@ -24,14 +24,14 @@ import org.compiere.util.KeyNamePair;
 
 /** Generated Model for LCO_DIAN_Format
  *  @author Adempiere (generated) 
- *  @version Release 3.6.0LTS - $Id$ */
+ *  @version 360LTS.010_P20110222 - $Id$ */
 public class X_LCO_DIAN_Format extends PO implements I_LCO_DIAN_Format, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20100617L;
+	private static final long serialVersionUID = 20110408L;
 
     /** Standard Constructor */
     public X_LCO_DIAN_Format (Properties ctx, int LCO_DIAN_Format_ID, String trxName)
@@ -40,6 +40,8 @@ public class X_LCO_DIAN_Format extends PO implements I_LCO_DIAN_Format, I_Persis
       /** if (LCO_DIAN_Format_ID == 0)
         {
 			setAD_Sequence_ID (0);
+			setIsBPartner2Detailed (false);
+// N
 			setIsBPartnerDetailed (false);
 // N
 			setLCO_DIAN_Format_ID (0);
@@ -152,6 +154,27 @@ public class X_LCO_DIAN_Format extends PO implements I_LCO_DIAN_Format, I_Persis
 		return (String)get_Value(COLUMNNAME_Description);
 	}
 
+	/** Set IsBPartner2Detailed.
+		@param IsBPartner2Detailed IsBPartner2Detailed	  */
+	public void setIsBPartner2Detailed (boolean IsBPartner2Detailed)
+	{
+		set_Value (COLUMNNAME_IsBPartner2Detailed, Boolean.valueOf(IsBPartner2Detailed));
+	}
+
+	/** Get IsBPartner2Detailed.
+		@return IsBPartner2Detailed	  */
+	public boolean isBPartner2Detailed () 
+	{
+		Object oo = get_Value(COLUMNNAME_IsBPartner2Detailed);
+		if (oo != null) 
+		{
+			 if (oo instanceof Boolean) 
+				 return ((Boolean)oo).booleanValue(); 
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
 	/** Set IsBPartnerDetailed.
 		@param IsBPartnerDetailed IsBPartnerDetailed	  */
 	public void setIsBPartnerDetailed (boolean IsBPartnerDetailed)
@@ -193,9 +216,9 @@ public class X_LCO_DIAN_Format extends PO implements I_LCO_DIAN_Format, I_Persis
 		return ii.intValue();
 	}
 
-	public org.globalqss.model.I_LCO_DIAN_XMLPrintLabel getLCO_DIAN_XMLPrintLabel() throws RuntimeException
+	public I_LCO_DIAN_XMLPrintLabel getLCO_DIAN_XMLPrintLabel() throws RuntimeException
     {
-		return (org.globalqss.model.I_LCO_DIAN_XMLPrintLabel)MTable.get(getCtx(), org.globalqss.model.I_LCO_DIAN_XMLPrintLabel.Table_Name)
+		return (I_LCO_DIAN_XMLPrintLabel)MTable.get(getCtx(), I_LCO_DIAN_XMLPrintLabel.Table_Name)
 			.getPO(getLCO_DIAN_XMLPrintLabel_ID(), get_TrxName());	}
 
 	/** Set DIAN XML Print Label.
