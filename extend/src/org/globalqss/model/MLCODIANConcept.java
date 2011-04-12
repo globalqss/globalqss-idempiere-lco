@@ -69,11 +69,12 @@ public class MLCODIANConcept extends X_LCO_DIAN_Concept
 	/**
 	 * 	Calculate the sources and insert corresponding schedule lines
 	 *	@param sendScheduleProcess the process
-	 *	@param format the format
+	 *	@param bpID - the BP
+	 *	@param bpID2 - the BP2
 	 *  @return count of lines inserted
 	 * @throws AdempiereUserError 
 	 */
-	public int calculateSources(X_LCO_DIAN_SendSchedule sendScheduleProcess, int bpID) throws Exception {
+	public int calculateSources(X_LCO_DIAN_SendSchedule sendScheduleProcess, int bpID, int bpID2) throws Exception {
 		int cnt = 0;
 		MBPartner bp = null;
 		MBPartnerLocation bpl = null;
@@ -117,7 +118,7 @@ public class MLCODIANConcept extends X_LCO_DIAN_Concept
 					{
 						X_LCO_DIAN_ConceptSource conceptSource = new X_LCO_DIAN_ConceptSource(getCtx(), rssrc, get_TrxName());
 						//       calculate the source
-						BigDecimal amtSrc = processSource(sendScheduleProcess, bpID, conceptSource);
+						BigDecimal amtSrc = processSource(sendScheduleProcess, bpID, bpID2, conceptSource);
 						//       sum
 						if (amtSrc != null)
 							amtTotal = amtTotal.add(amtSrc);
@@ -136,6 +137,8 @@ public class MLCODIANConcept extends X_LCO_DIAN_Concept
 							dssl.setC_BPartner_ID(bpID);
 						if (bpl != null)
 							dssl.setC_BPartner_Location_ID(bpl.getC_BPartner_Location_ID());
+						if (bpID2 > 0)
+							dssl.setC_BPartnerRelation_ID(bpID2);
 					}
 					//    insert into position
 					dssl.set_ValueOfColumn("FieldAmt" + position, amtTotal);
@@ -162,11 +165,12 @@ public class MLCODIANConcept extends X_LCO_DIAN_Concept
 	 *	@param format the format
 	 * @throws Exception 
 	 */
-	private BigDecimal processSource(X_LCO_DIAN_SendSchedule sendScheduleProcess, int bpID, X_LCO_DIAN_ConceptSource conceptSource) throws Exception {
+	private BigDecimal processSource(X_LCO_DIAN_SendSchedule sendScheduleProcess, int bpID, int bpID2, X_LCO_DIAN_ConceptSource conceptSource) throws Exception {
 		BigDecimal retValue = null;
 		String retValueStr = null;
 		String msg = null;
 		String cmd = conceptSource.getFieldExpression();
+		log.info("Processing bpID=" + bpID + ", bpID2=" + bpID2 + ", cmd=" + cmd);
 		if (cmd == null || cmd.length() == 0) {
 			msg = "FieldExpression not defined";
 			throw new AdempiereUserError(msg);
@@ -194,6 +198,7 @@ public class MLCODIANConcept extends X_LCO_DIAN_Concept
 			engine.put(MRule.ARGUMENTS_PREFIX + "Ctx", getCtx());
 			engine.put(MRule.ARGUMENTS_PREFIX + "SendSchedule", sendScheduleProcess);
 			engine.put(MRule.ARGUMENTS_PREFIX + "C_BPartner_ID", Integer.valueOf(bpID));
+			engine.put(MRule.ARGUMENTS_PREFIX + "C_BPartner2_ID", Integer.valueOf(bpID2));
 			engine.put(MRule.ARGUMENTS_PREFIX + "ConceptSource", conceptSource);
 			engine.put(MRule.ARGUMENTS_PREFIX + "TrxName", get_TrxName());
 
@@ -239,12 +244,12 @@ public class MLCODIANConcept extends X_LCO_DIAN_Concept
 				if (methodName == null || methodName.length() == 0)
 					throw new IllegalArgumentException ("No Method Name");
 				
-				Method method = call.getClass().getMethod(methodName, Properties.class, X_LCO_DIAN_SendSchedule.class, Integer.class, X_LCO_DIAN_ConceptSource.class, String.class);
+				Method method = call.getClass().getMethod(methodName, Properties.class, X_LCO_DIAN_SendSchedule.class, Integer.class, Integer.class, X_LCO_DIAN_ConceptSource.class, String.class);
 
 				//	Call Method
 				try
 				{
-					retValue = (BigDecimal) method.invoke(call, getCtx(), sendScheduleProcess, new Integer(bpID), conceptSource, get_TrxName());
+					retValue = (BigDecimal) method.invoke(call, getCtx(), sendScheduleProcess, new Integer(bpID), new Integer(bpID2), conceptSource, get_TrxName());
 				}
 				catch (Exception e)
 				{

@@ -44,14 +44,14 @@ public class LCO_UtilsFormulas
 	 * @param ctx - the context
 	 * @param sendScheduleProcess - The schedule process (to obtain the dates)
 	 * @param bpID - the Business Partner ID
-	 * @param conceptSource - the source of the concet being calculated
+	 * @param conceptSource - the source of the concept being calculated
 	 * @param trxName - the transaction
 	 * @return amount - the amount calculated
 	 * @throws SQLException 
 	 */
 	// Formato 1002 - RETENCIONES EN LA FUENTE PRACTICADAS
 	// vabo - Valor del pago o abono sujeto a Retención en la fuente
-	public BigDecimal get1002vabo(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, Integer bpID, X_LCO_DIAN_ConceptSource conceptSource, String trxName) throws SQLException {
+	public BigDecimal get1002vabo(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, Integer bpID, Integer bpID2, X_LCO_DIAN_ConceptSource conceptSource, String trxName) throws SQLException {
 		
 		MElementValue ev = new MElementValue(ctx, conceptSource.getC_ElementValue_ID(), trxName); 
 
@@ -110,14 +110,14 @@ public class LCO_UtilsFormulas
 	 * @param ctx - the context
 	 * @param sendScheduleProcess - The schedule process (to obtain the dates)
 	 * @param bpID - the Business Partner ID
-	 * @param conceptSource - the source of the concet being calculated
+	 * @param conceptSource - the source of the concept being calculated
 	 * @param trxName - the transaction
 	 * @return amount - the amount calculated
 	 * @throws SQLException 
 	 */
 	// Formato 1002 - RETENCIONES EN LA FUENTE PRACTICADAS
 	// vret - Valor de la Retención en la fuente practicada a título de renta y a título de IVA
-	public BigDecimal get1002vret(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, Integer bpID, X_LCO_DIAN_ConceptSource conceptSource, String trxName) throws SQLException {
+	public BigDecimal get1002vret(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, Integer bpID, Integer bpID2, X_LCO_DIAN_ConceptSource conceptSource, String trxName) throws SQLException {
 		
 		MElementValue ev = new MElementValue(ctx, conceptSource.getC_ElementValue_ID(), trxName); 
 

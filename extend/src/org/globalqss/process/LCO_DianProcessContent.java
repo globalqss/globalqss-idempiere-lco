@@ -80,16 +80,35 @@ public class LCO_DianProcessContent extends SvrProcess
 		MLCODIANFormat format = new MLCODIANFormat (getCtx(), sendScheduleProcess.getLCO_DIAN_Format_ID(), get_TrxName());
 		int cnt = 0;
 		if (format.isBPartnerDetailed()) {
-			// bring BPartners from selected year and dates
-			String sqlBp = "SELECT DISTINCT fa.C_BPartner_ID AS C_BPartner_ID, bp.TaxID AS TaxId "
-				+ "FROM Fact_Acct fa "
-				+ " JOIN C_BPartner bp ON fa.C_BPartner_ID = bp.C_BPartner_ID "
-				+ " INNER JOIN C_Period p ON fa.C_Period_ID = p.C_Period_ID "
-				+ "WHERE fa.C_BPartner_ID <> 0 AND fa.C_Bpartner_ID IS NOT NULL "
-				+ " AND fa.AD_Client_ID = ? "
-				+ " AND p.C_Year_ID = ? AND fa.DateAcct BETWEEN ? AND ? "
-				+ " AND fa.PostingType = 'A' /* Actual Hardcoded */ "
-				+ "ORDER BY fa.C_BPartner_ID";
+			String sqlBp;
+
+			if (! format.isBPartner2Detailed()) {
+				// bring BPartners from selected year and dates
+				sqlBp = "SELECT DISTINCT fa.C_BPartner_ID AS C_BPartner_ID "
+					+ "FROM Fact_Acct fa "
+					+ " JOIN C_BPartner bp ON fa.C_BPartner_ID = bp.C_BPartner_ID "
+					+ " INNER JOIN C_Period p ON fa.C_Period_ID = p.C_Period_ID "
+					+ "WHERE fa.C_BPartner_ID <> 0 AND fa.C_Bpartner_ID IS NOT NULL "
+					+ " AND fa.AD_Client_ID = ? "
+					+ " AND fa.DateAcct <= ? "
+					+ " AND fa.PostingType = 'A' /* Actual Hardcoded */ "
+					+ "ORDER BY fa.C_BPartner_ID";
+
+			} else {
+				// bring BPartners from selected year and dates - sales rep from the project is the BP2
+				sqlBp = "SELECT DISTINCT fa.C_BPartner_ID AS C_BPartner_ID, pr.C_BPartnerSR_ID AS C_BPartner2_ID "
+					+ "FROM Fact_Acct fa "
+					+ " JOIN C_BPartner bp ON fa.C_BPartner_ID = bp.C_BPartner_ID "
+					+ " JOIN C_Project pr ON fa.C_Project_ID = pr.C_Project_ID "
+					+ " INNER JOIN C_Period p ON fa.C_Period_ID = p.C_Period_ID "
+					+ "WHERE fa.C_BPartner_ID <> 0 AND fa.C_Bpartner_ID IS NOT NULL "
+					+ " AND pr.C_BPartnerSR_ID <> 0 AND pr.C_BPartnerSR_ID IS NOT NULL "
+					+ " AND fa.AD_Client_ID = ? "
+					+ " AND fa.DateAcct <= ? "
+					+ " AND fa.PostingType = 'A' /* Actual Hardcoded */ "
+					+ "ORDER BY pr.C_BPartnerSR_ID, fa.C_BPartner_ID";
+
+			}
 
 			PreparedStatement pstmtbp = null;
 			ResultSet rsbp = null;
@@ -98,17 +117,18 @@ public class LCO_DianProcessContent extends SvrProcess
 			{
 				pstmtbp = DB.prepareStatement(sqlBp, get_TrxName());
 				pstmtbp.setInt(1, sendScheduleProcess.getAD_Client_ID());
-				pstmtbp.setInt(2, sendScheduleProcess.getC_Year_ID());
-				pstmtbp.setTimestamp(3, sendScheduleProcess.getStartDate());
-				pstmtbp.setTimestamp(4, sendScheduleProcess.getEndDate());
+				pstmtbp.setTimestamp(2, sendScheduleProcess.getEndDate());
 				rsbp = pstmtbp.executeQuery();
 				// for each bpartner
 				while (rsbp.next()) {
 					// bp was found in fact acct
 					int bpID = rsbp.getInt(1);
+					int bpID2 = -1;
+					if (format.isBPartner2Detailed())
+						bpID2 = rsbp.getInt(2);
 					// for each concept related to this format
 					for (MLCODIANConcept concept : format.getConcepts()) {
-						int cntsrc = concept.calculateSources(sendScheduleProcess, bpID);
+						int cntsrc = concept.calculateSources(sendScheduleProcess, bpID, bpID2);
 						cnt = cnt + cntsrc;
 					}
 				}
@@ -123,14 +143,15 @@ public class LCO_DianProcessContent extends SvrProcess
 			}
 		} else {
 			int bpID = -1;
+			int bpID2 = -1;
 			// for each concept related to this format
 			for (MLCODIANConcept concept : format.getConcepts()) {
-				int cntsrc = concept.calculateSources(sendScheduleProcess, bpID);
+				int cntsrc = concept.calculateSources(sendScheduleProcess, bpID, bpID2);
 				cnt = cnt + cntsrc;
 			}
 		}
-	
-		// TODO: Implement post-process
+
+		format.postProcess(sendScheduleProcess);
 
 		sendScheduleProcess.setIsGenerated(true);
 		sendScheduleProcess.saveEx();

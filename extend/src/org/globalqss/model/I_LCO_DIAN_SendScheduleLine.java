@@ -23,7 +23,7 @@ import org.compiere.util.KeyNamePair;
 
 /** Generated Interface for LCO_DIAN_SendScheduleLine
  *  @author Adempiere (generated) 
- *  @version Release 3.6.0LTS
+ *  @version 360LTS.010_P20110222
  */
 public interface I_LCO_DIAN_SendScheduleLine 
 {
@@ -31,7 +31,7 @@ public interface I_LCO_DIAN_SendScheduleLine
     /** TableName=LCO_DIAN_SendScheduleLine */
     public static final String Table_Name = "LCO_DIAN_SendScheduleLine";
 
-    /** AD_Table_ID=1000009 */
+    /** AD_Table_ID=5000025 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -223,6 +223,21 @@ public interface I_LCO_DIAN_SendScheduleLine
 
 	public I_C_BPartner_Location getC_BPartner_Location() throws RuntimeException;
 
+    /** Column name C_BPartnerRelation_ID */
+    public static final String COLUMNNAME_C_BPartnerRelation_ID = "C_BPartnerRelation_ID";
+
+	/** Set Related Partner.
+	  * Related Business Partner
+	  */
+	public void setC_BPartnerRelation_ID (int C_BPartnerRelation_ID);
+
+	/** Get Related Partner.
+	  * Related Business Partner
+	  */
+	public int getC_BPartnerRelation_ID();
+
+	public I_C_BPartner getC_BPartnerRelation() throws RuntimeException;
+
     /** Column name Created */
     public static final String COLUMNNAME_Created = "Created";
 
@@ -351,7 +366,7 @@ public interface I_LCO_DIAN_SendScheduleLine
 	/** Get DIAN Concept	  */
 	public int getLCO_DIAN_Concept_ID();
 
-	public org.globalqss.model.I_LCO_DIAN_Concept getLCO_DIAN_Concept() throws RuntimeException;
+	public I_LCO_DIAN_Concept getLCO_DIAN_Concept() throws RuntimeException;
 
     /** Column name LCO_DIAN_SendSchedule_ID */
     public static final String COLUMNNAME_LCO_DIAN_SendSchedule_ID = "LCO_DIAN_SendSchedule_ID";
@@ -362,7 +377,7 @@ public interface I_LCO_DIAN_SendScheduleLine
 	/** Get DIAN Send Schedule	  */
 	public int getLCO_DIAN_SendSchedule_ID();
 
-	public org.globalqss.model.I_LCO_DIAN_SendSchedule getLCO_DIAN_SendSchedule() throws RuntimeException;
+	public I_LCO_DIAN_SendSchedule getLCO_DIAN_SendSchedule() throws RuntimeException;
 
     /** Column name LCO_DIAN_SendScheduleLine_ID */
     public static final String COLUMNNAME_LCO_DIAN_SendScheduleLine_ID = "LCO_DIAN_SendScheduleLine_ID";
@@ -382,7 +397,7 @@ public interface I_LCO_DIAN_SendScheduleLine
 	/** Get DIAN XML Header	  */
 	public int getLCO_DIAN_XML_Header_ID();
 
-	public org.globalqss.model.I_LCO_DIAN_XML_Header getLCO_DIAN_XML_Header() throws RuntimeException;
+	public I_LCO_DIAN_XML_Header getLCO_DIAN_XML_Header() throws RuntimeException;
 
     /** Column name Updated */
     public static final String COLUMNNAME_Updated = "Updated";

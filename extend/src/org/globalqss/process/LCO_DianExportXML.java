@@ -246,12 +246,18 @@ public class LCO_DianExportXML  extends SvrProcess {
 					isColombia = (loc.getC_Country_ID() == 156);  /* HARDCODED = Colombia C_Country_ID */ 
 					isDetailedNames = (Boolean) bp.get_Value("IsDetailedNames");
 				}
+				MBPartner bp2 = null;
+				boolean isDetailedNames2 = false;
+				if (dssl.getC_BPartnerRelation_ID() > 0) {
+					bp2 = new MBPartner(getCtx(), dssl.getC_BPartnerRelation_ID(), get_TrxName());
+					isDetailedNames2 = (Boolean) bp2.get_Value("IsDetailedNames");
+				}
 
 				//Para Campo
 				for (X_LCO_DIAN_FieldFormat fieldFormat : fieldFormats) {
 					X_LCO_DIAN_XMLPrintLabel label = new X_LCO_DIAN_XMLPrintLabel(getCtx(), fieldFormat.getLCO_DIAN_XMLPrintLabel_ID(), get_TrxName());
 					String printLb = label.getValue();
-					
+
 					// Condicion de error
 					if (bp == null
 							&& (   printLb.equals("tdoc") 
@@ -265,27 +271,55 @@ public class LCO_DianExportXML  extends SvrProcess {
 								|| printLb.equals("dir")
 								|| printLb.equals("dpto")
 								|| printLb.equals("mun") 
+								|| printLb.equals("mcpo") 
 								|| printLb.equals("pais"))) {
 						throw new AdempiereUserError(printLb + " cannot be used without BP detail");
 					}					
 					
-					if (printLb.equals("cpt")) {
+					// Condicion de error
+					if (bp2 == null
+							&& (   printLb.equals("tdocm") 
+								|| printLb.equals("nitm")
+								|| printLb.equals("dvm")
+								|| printLb.equals("apl1m")
+								|| printLb.equals("apl2m")
+								|| printLb.equals("nom1m")
+								|| printLb.equals("nom2m")
+								|| printLb.equals("razm"))) {
+						throw new AdempiereUserError(printLb + " cannot be used without BP 2 detail");
+					}					
+					
+					if (printLb.equals("cpt") || printLb.equals("ctp") || printLb.equals("top")) {
 						// Concepto ( Siempre debe diligenciarse )
 						add_Attribute(atts, printLb, concept.getValue(), line_id, true);
 					} else if (printLb.equals("tdoc")) {
 						//Tipo de Documento ( Siempre debe diligenciarse )
 						add_Attribute(atts, printLb, getTdoc(dssl.getC_BPartner_ID()), line_id, true);
+					} else if (printLb.equals("tdocm")) {
+						add_Attribute(atts, printLb, getTdoc(dssl.getC_BPartnerRelation_ID()), line_id, true);
 					} else if (printLb.equals("nid")) {
 						//Número de Identificación ( Siempre debe diligenciarse )
 						add_Attribute(atts, printLb, bp.getTaxID(), line_id, true);
+					} else if (printLb.equals("nitm")) {
+						add_Attribute(atts, printLb, bp2.getTaxID(), line_id, true);
 					} else if (printLb.equals("dv")) {
 						//Digito de Verificación ( Si se conoce debe diligenciarse)
-						add_Attribute(atts, printLb, (String) bp.get_Value("TaxIdDigit"), line_id, false);
+						String dv = (String) bp.get_Value("TaxIdDigit");
+						if (dv != null && dv.length() > 0)
+							add_Attribute(atts, printLb, dv, line_id, false);
+					} else if (printLb.equals("dvm")) {
+						String dvm = (String) bp2.get_Value("TaxIdDigit");
+						if (dvm != null && dvm.length() > 0)
+							add_Attribute(atts, printLb, dvm, line_id, false);
 					} else if (printLb.equals("apl1")) {
 						//Primer Apellido del informado
 						//En caso de ser una Persona Natural siempre debe diligenciarse.
 						if (isDetailedNames) {
 							add_Attribute(atts, printLb, (String) bp.get_Value("LastName1"), line_id, isDetailedNames);
+						}
+					} else if (printLb.equals("apl1m")) {
+						if (isDetailedNames2) {
+							add_Attribute(atts, printLb, (String) bp2.get_Value("LastName1"), line_id, isDetailedNames2);
 						}
 					} else if (printLb.equals("apl2")) {
 						//Segundo Apellido del informado
@@ -295,11 +329,21 @@ public class LCO_DianExportXML  extends SvrProcess {
 							if (aux != null && aux.length() > 0)
 								add_Attribute(atts, printLb, aux, line_id, false);
 						}
+					} else if (printLb.equals("apl2m")) {
+						if (isDetailedNames2) {
+							String aux = (String) bp2.get_Value("LastName2");
+							if (aux != null && aux.length() > 0)
+								add_Attribute(atts, printLb, aux, line_id, false);
+						}
 					} else if (printLb.equals("nom1")) {
 						//Primer Nombre del informado
 						//En caso de ser una Persona Natural siempre debe diligenciarse.
 						if (isDetailedNames) {
 							add_Attribute(atts, printLb, (String) bp.get_Value("FirstName1"), line_id, isDetailedNames);
+						}
+					} else if (printLb.equals("nom1m")) {
+						if (isDetailedNames2) {
+							add_Attribute(atts, printLb, (String) bp2.get_Value("FirstName1"), line_id, isDetailedNames2);
 						}
 					} else if (printLb.equals("nom2")) {
 						//Otros Nombres del informado
@@ -309,24 +353,38 @@ public class LCO_DianExportXML  extends SvrProcess {
 							if (aux != null && aux.length() > 0)
 								add_Attribute(atts, printLb, aux, line_id, false);
 						}
+					} else if (printLb.equals("nom2m")) {
+						if (isDetailedNames2) {
+							String aux = (String) bp2.get_Value("FirstName2");
+							if (aux != null && aux.length() > 0)
+								add_Attribute(atts, printLb, aux, line_id, false);
+						}
 					} else if (printLb.equals("raz")) {
 						//Razón Social del Informado
 						//En caso de ser una Persona Jurídica siempre debe diligenciarse.
 						if (!isDetailedNames) {
 							add_Attribute(atts, printLb, bp.getName(), line_id, !isDetailedNames);
 						}
+					} else if (printLb.equals("razm")) {
+						if (!isDetailedNames2) {
+							add_Attribute(atts, printLb, bp2.getName(), line_id, !isDetailedNames2);
+						}
 					} else if (printLb.equals("dir")) {
 						//Dirección
 						//En caso que el País de residencia sea Colombia siempre debe diligenciarse
-						add_Attribute(atts, printLb, loc.getAddress1(), line_id, isColombia);
+						String dir = loc.getAddress1();
+						if (isColombia)
+							add_Attribute(atts, printLb, dir, line_id, isColombia);
 					} else if (printLb.equals("dpto")) {
 						//Código del Departamento
 						//Código DANE Numérico, debe incluir los ceros a la izquierda. En caso que el País de residencia sea Colombia siempre debe diligenciarse
-						add_Attribute(atts, printLb, getDpto(loc.getC_Region_ID()), line_id, isColombia);
-					} else if (printLb.equals("mun")) {
+						if (isColombia)
+							add_Attribute(atts, printLb, getDpto(loc.getC_Region_ID()), line_id, isColombia);
+					} else if (printLb.equals("mun") || printLb.equals("mcpo")) {
 						//Código del Municipio
 						//Código DANE Numérico, debe incluir los ceros a la izquierda. En caso que el País de residencia sea Colombia siempre debe diligenciarse
-						add_Attribute(atts, printLb, getMun(loc.getC_City_ID()), line_id, isColombia);
+						if (isColombia)
+							add_Attribute(atts, printLb, getMun(loc.getC_City_ID()), line_id, true);
 					} else if (printLb.equals("pais")) {
 						//País de Residencia o domicilio
 						//Siempre debe diligenciarse
@@ -350,6 +408,11 @@ public class LCO_DianExportXML  extends SvrProcess {
 			}
 		} catch (SQLException e) {
 			log.log(Level.SEVERE, sqlschline , e);
+			if (mmDocStream != null) {
+				try {
+					mmDocStream.close();
+				} catch (Exception e2) {}
+			}
 			throw e;
 		} finally {
 			DB.close(rs, pstmt);
@@ -362,7 +425,7 @@ public class LCO_DianExportXML  extends SvrProcess {
 		if (mmDocStream != null) {
 			try {
 				mmDocStream.close();
-			} catch (Exception e) {}
+			} catch (Exception e2) {}
 		}
 
 		if (isAttachXML) {
