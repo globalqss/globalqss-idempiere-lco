@@ -768,7 +768,7 @@ public class LCO_Validator implements ModelValidator
 					// Subtract to invoice grand total the value of withholdings
 					BigDecimal gt = inv.getGrandTotal();
 					inv.setGrandTotal(gt.subtract(sumit));
-					inv.save();  // need to save here in order to let apply get the right total
+					inv.saveEx();  // need to save here in order to let apply get the right total
 				}
 				
 				if (sumit.signum() != 0) {

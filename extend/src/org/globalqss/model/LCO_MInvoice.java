@@ -430,7 +430,7 @@ public class LCO_MInvoice extends MInvoice
 						}
 						iwh.setTaxAmt(taxamt);
 						iwh.setTaxBaseAmt(base);
-						iwh.save();
+						iwh.saveEx();
 						totwith = totwith.add(taxamt);
 						noins++;
 						log.info("LCO_InvoiceWithholding saved:"+iwh.getTaxAmt());
