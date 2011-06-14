@@ -436,7 +436,7 @@ public class LCO_DianExportXML  extends SvrProcess {
 			if (attach == null ) {
 				attach = new  MAttachment(getCtx(),AD_Table_ID ,xmlheader.getLCO_DIAN_XML_Header_ID(),get_TrxName());
 				attach.addEntry(new File (file_name));
-				attach.save();
+				attach.saveEx();
 
 			} else {
 				// se encontro un archivo adjunto previamente
@@ -446,10 +446,10 @@ public class LCO_DianExportXML  extends SvrProcess {
 				MAttachmentEntry entry = attach.getEntry(index) ;
 				String renamed = folder+File.separator+entry.getName().substring(0,entry.getName().length()-4 )+"_old_"+getDateTime()+ ".xml";
 				entry.setName(renamed);
-				attach.save();
+				attach.saveEx();
 				//agrega el nuevo archivo ya q el anterior ha sido renombrado
 				attach.addEntry(new File (file_name));
-				attach.save();
+				attach.saveEx();
 			}
 			//DB.getSQLValue(get_TrxName(),"SELECT AD_Attachment_ID FROM AD_Attachment WHERE AD_Table_ID=? AND Record_ID=?",AD_Table_ID)
 		}
