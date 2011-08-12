@@ -17962,8 +17962,8 @@ Invoices and Payment Allocations determine the Open Balance (i.e. not Orders or 
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2606" trl="Y">
-  <value column="Name" original="Overwrite Activity">Sobreesccribe la Actividad</value>
-  <value column="PrintName" original="Overwrite Activity">Sobreesccribe la Actividad</value>
+  <value column="Name" original="Overwrite Activity">Sobreescribe la Actividad</value>
+  <value column="PrintName" original="Overwrite Activity">Sobreescribe la Actividad</value>
   <value column="Description" original="Overwrite the account segment Activity with the value specified">Sobreescriba la cuenta del segmento de la Actividad con el valor especificado</value>
   <value column="Help" original="If not overwritten, the value of the original account combination is used. If selected, but not specified, the segment is set to null.">Si no es sobreescrito, el valor de la combinación original de la cuenta se utiliza. Si está seleccionado, pero no especificado, el segmento se fija a la falta de información.</value>
   <value column="PO_Description" original=""/>
@@ -17982,10 +17982,10 @@ Invoices and Payment Allocations determine the Open Balance (i.e. not Orders or 
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2608" trl="Y">
-  <value column="Name" original="Overwrite Campaign">Sobreescribe Compañía</value>
-  <value column="PrintName" original="Overwrite Campaign">Sobreescribe Compañía</value>
-  <value column="Description" original="Overwrite the account segment Campaign with the value specified">Sobreescriba la cuenta del segmento de Compañía con el valor especificado</value>
-  <value column="Help" original="If not overwritten, the value of the original account combination is used. If selected, but not specified, the segment is set to null.">Si no es sobreescrito, el valor de la combinación original de la cuenta se utiliza. Si está seleccionado, pero no especificado, el segmento se fija a la falta de información.</value>
+  <value column="Name" original="Overwrite Campaign">Sobreescribe Campaña</value>
+  <value column="PrintName" original="Overwrite Campaign">Sobreescribe Campaña</value>
+  <value column="Description" original="Overwrite the account segment Campaign with the value specified">Sobreescriba la cuenta del segmento de campaña con el valor especificado</value>
+  <value column="Help" original="If not overwritten, the value of the original account combination is used. If selected, but not specified, the segment is set to null.">Si no es sobreescrito, el valor de la combinación original de la cuenta se utiliza. Si está seleccionado, pero no especificado, el segmento se fija a nulo.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -18052,8 +18052,8 @@ Invoices and Payment Allocations determine the Open Balance (i.e. not Orders or 
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2615" trl="Y">
-  <value column="Name" original="Overwrite Sales Region">Sobreescribe Región de Venta</value>
-  <value column="PrintName" original="Overwrite SalesRegion">Sobreescribe Región de Venta</value>
+  <value column="Name" original="Overwrite Sales Region">Sobreescribe Región de Ventas</value>
+  <value column="PrintName" original="Overwrite SalesRegion">Sobreescribe Región de Ventas</value>
   <value column="Description" original="Overwrite the account segment Sales Region with the value specified">Sobreescriba la cuenta del segmento de región de ventas con el valor especificado.</value>
   <value column="Help" original="If not overwritten, the value of the original account combination is used. If selected, but not specified, the segment is set to null.">Si no es sobreescrito, el valor de la combinación original de la cuenta se utiliza. Si está seleccionado, pero no especificado, el segmento se fija a la falta de información.</value>
   <value column="PO_Description" original=""/>
@@ -18112,9 +18112,9 @@ Invoices and Payment Allocations determine the Open Balance (i.e. not Orders or 
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2621" trl="Y">
-  <value column="Name" original="Bank Routing No Format">Número de Formato de Ruta Bancaría</value>
-  <value column="PrintName" original="Bank Routing No Format">Número de Formato de Ruta Bancaría</value>
-  <value column="Description" original="Format of the Bank Routing Number">Número de formato de ruta bancaría</value>
+  <value column="Name" original="Bank Routing No Format">Número de Formato de Ruta Bancaria</value>
+  <value column="PrintName" original="Bank Routing No Format">Número de Formato de Ruta Bancaria</value>
+  <value column="Description" original="Format of the Bank Routing Number">Número de formato de ruta bancaria</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
