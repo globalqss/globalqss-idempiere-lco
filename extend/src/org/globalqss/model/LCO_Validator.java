@@ -303,6 +303,7 @@ public class LCO_Validator implements ModelValidator
 							newiwh.setTaxAmt(iwh.getTaxAmt().negate());
 							newiwh.setTaxBaseAmt(iwh.getTaxBaseAmt().negate());
 							newiwh.setC_Tax_ID(iwh.getC_Tax_ID());
+							newiwh.setIsCalcOnPayment(iwh.isCalcOnPayment());
 							if (!newiwh.save())
 								return "Error saving LCO_InvoiceWithholding docValidate";
 						}
