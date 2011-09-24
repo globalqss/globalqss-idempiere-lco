@@ -297,6 +297,7 @@ public class LCO_Validator implements ModelValidator
 						while (rs.next()) {
 							MLCOInvoiceWithholding iwh = new MLCOInvoiceWithholding(inv.getCtx(), rs.getInt(1), inv.get_TrxName());
 							MLCOInvoiceWithholding newiwh = new MLCOInvoiceWithholding(inv.getCtx(), 0, inv.get_TrxName());
+							newiwh.setAD_Org_ID(iwh.getAD_Org_ID());
 							newiwh.setC_Invoice_ID(inv.getC_Invoice_ID());
 							newiwh.setLCO_WithholdingType_ID(iwh.getLCO_WithholdingType_ID());
 							newiwh.setPercent(iwh.getPercent());
