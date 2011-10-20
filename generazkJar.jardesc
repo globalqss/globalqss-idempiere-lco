@@ -12,7 +12,6 @@
     </manifest>
     <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
         <folder path="/LCO_360/WEB-INF"/>
-        <folder path="/LCO_360/zkwebui/images"/>
         <javaElement handleIdentifier="=LCO_360/zkwebui\/resources"/>
     </selectedElements>
 </jardesc>
