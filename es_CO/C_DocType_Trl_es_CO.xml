@@ -138,8 +138,8 @@
   <value column="DocumentNote" original=""/>
  </row>
  <row id="141" trl="Y">
-  <value column="Name" original="Cash Journal">Reembolso Diario de Caja Menor</value>
-  <value column="PrintName" original="Cash Journal">Reembolso Diario de Caja Menor</value>
+  <value column="Name" original="Cash Journal">Diario Caja PDV</value>
+  <value column="PrintName" original="Cash Journal">Diario Caja PDV</value>
   <value column="DocumentNote" original=""/>
  </row>
  <row id="142" trl="Y">

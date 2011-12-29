@@ -1299,7 +1299,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="466" trl="Y">
-  <value column="Name" original="Cash Journal">Caja Menor</value>
+  <value column="Name" original="Cash Journal">Caja PDV</value>
   <value column="Description" original=""/>
  </row>
  <row id="467" trl="Y">
@@ -3335,11 +3335,11 @@
   <value column="Description" original=""/>
  </row>
  <row id="52001" trl="Y">
-  <value column="Name" original="Bank Account">Cuenta Bancaria</value>
+  <value column="Name" original="Bank Account">Cuenta Bancaria/Caja</value>
   <value column="Description" original=""/>
  </row>
  <row id="52002" trl="Y">
-  <value column="Name" original="CashBook">Caja Menor</value>
+  <value column="Name" original="CashBook">Caja PDV</value>
   <value column="Description" original=""/>
  </row>
  <row id="53000" trl="Y">
@@ -3547,11 +3547,11 @@
   <value column="Description" original=""/>
  </row>
  <row id="53278" trl="Y">
-  <value column="Name" original="Material Requisition">Requisición de Materiales</value>
+  <value column="Name" original="Material Requisition">Requisición</value>
   <value column="Description" original=""/>
  </row>
  <row id="53279" trl="Y">
-  <value column="Name" original="Sales Order">Orden de Ventas</value>
+  <value column="Name" original="Sales Order">Orden de Venta</value>
   <value column="Description" original=""/>
  </row>
  <row id="53280" trl="Y">

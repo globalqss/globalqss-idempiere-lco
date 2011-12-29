@@ -1184,8 +1184,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="264" trl="Y">
-  <value column="Name" original="Date Delivered">Fecha de Entrega</value>
-  <value column="PrintName" original="Date Delivered">F. Entrega</value>
+  <value column="Name" original="Date Delivered">Fecha Entrega</value>
+  <value column="PrintName" original="Date Delivered">Fecha Entrega</value>
   <value column="Description" original="Date when the product was delivered">Fecha en que se realizó la última entrega de producto</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -1194,8 +1194,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="265" trl="Y">
-  <value column="Name" original="Document Date">F. Documento</value>
-  <value column="PrintName" original="Doc date">F. Documento</value>
+  <value column="Name" original="Document Date">Fecha Documento</value>
+  <value column="PrintName" original="Doc date">Fecha Documento</value>
   <value column="Description" original="Date of the Document">Fecha del documento</value>
   <value column="Help" original="The Document Date indicates the date the document was generated.  It may or may not be the same as the accounting date.">La fecha del documento indica la fecha en que el documento fue generado. Puede o no ser la misma que la fecha contable.</value>
   <value column="PO_Description" original=""/>
@@ -1204,8 +1204,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="267" trl="Y">
-  <value column="Name" original="Date Invoiced">Fecha de Facturación</value>
-  <value column="PrintName" original="Date Invoiced">F. Facturación</value>
+  <value column="Name" original="Date Invoiced">Fecha Facturación</value>
+  <value column="PrintName" original="Date Invoiced">Fecha Facturación</value>
   <value column="Description" original="Date printed on Invoice">Fecha impresa en la factura</value>
   <value column="Help" original="The Date Invoice indicates the date printed on the invoice.">La fecha de la factura indica la fecha impresa en la factura.</value>
   <value column="PO_Description" original=""/>
@@ -1214,8 +1214,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="268" trl="Y">
-  <value column="Name" original="Date Ordered">Fecha de la Orden</value>
-  <value column="PrintName" original="Date Ordered">F. Orden</value>
+  <value column="Name" original="Date Ordered">Fecha Orden</value>
+  <value column="PrintName" original="Date Ordered">Fecha Orden</value>
   <value column="Description" original="Date of Order">Fecha de la orden</value>
   <value column="Help" original="Indicates the Date an item was ordered.">Indica la fecha en que un artículo fue ordenada</value>
   <value column="PO_Description" original=""/>
@@ -1225,7 +1225,7 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
  </row>
  <row id="269" trl="Y">
   <value column="Name" original="Date Promised">Fecha Prometida</value>
-  <value column="PrintName" original="Date Promised">F. Prometida</value>
+  <value column="PrintName" original="Date Promised">Fecha Prometida</value>
   <value column="Description" original="Date Order was promised">Fecha de promesa de la orden.</value>
   <value column="Help" original="The Date Promised indicates the date, if any, that an Order was promised for.">La fecha prometida indica la fecha; si hay alguna; en que la orden fue prometida al cliente.</value>
   <value column="PO_Description" original=""/>
@@ -4076,8 +4076,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="918" trl="Y">
-  <value column="Name" original="Fixed due date">Fecha de Vencimiento Fija</value>
-  <value column="PrintName" original="Fixed due date">F. Vencimiento Fija</value>
+  <value column="Name" original="Fixed due date">Fecha Vencimiento Fija</value>
+  <value column="PrintName" original="Fixed due date">Fecha Vencimiento Fija</value>
   <value column="Description" original="Payment is due on a fixed date">El pago se vence en una fecha fija</value>
   <value column="Help" original="The Fixed Due Date checkbox indicates if invoices using this payment tern will be due on a fixed day of the month.  ">El cuadro de verificación fecha de vencimiento Fija.</value>
   <value column="PO_Description" original=""/>
@@ -4656,8 +4656,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1037" trl="Y">
-  <value column="Name" original="Movement Date">Fecha de Movimiento</value>
-  <value column="PrintName" original="Movement Date">F. de mov.</value>
+  <value column="Name" original="Movement Date">Fecha Movimiento</value>
+  <value column="PrintName" original="Movement Date">Fecha Movimiento</value>
   <value column="Description" original="Date a product was moved in or out of inventory">Fecha en que un producto fue movido (dentro o fuera) del inventario</value>
   <value column="Help" original="The Movement Date indicates the date that a product moved in or out of inventory.  This is the result of a shipment, receipt or inventory movement.">La fecha del movimiento indica la fecha en que el producto es movido. Éste es el resultado de un embarque; recibo o movimiento de inventario.</value>
   <value column="PO_Description" original=""/>
@@ -5056,8 +5056,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1091" trl="Y">
-  <value column="Name" original="Date printed">Fecha de Impresión</value>
-  <value column="PrintName" original="Date printed">F. Impresión</value>
+  <value column="Name" original="Date printed">Fecha Impresión</value>
+  <value column="PrintName" original="Date printed">Fecha Impresión</value>
   <value column="Description" original="Date the document was printed.">Fecha en que el documento fue impreso</value>
   <value column="Help" original="Indicates the Date that a document was printed.">Indica la fecha en que este documento se imprimió.</value>
   <value column="PO_Description" original=""/>
@@ -5336,8 +5336,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1123" trl="Y">
-  <value column="Name" original="Price effective">Fecha de Efectividad del Precio</value>
-  <value column="PrintName" original="Effective">F. Efectividad de precio</value>
+  <value column="Name" original="Price effective">Fecha Efectividad Precio</value>
+  <value column="PrintName" original="Effective">Fecha Efectividad Precio</value>
   <value column="Description" original="Effective Date of Price">Fecha efectiva del Precio</value>
   <value column="Help" original="The Price Effective indicates the date this price is for. This allows you to enter future prices for products which will become effective when appropriate.">La efectividad del precio indica la fecha en que el precio es efectivo. Esto le permite introducir precios futuros a productos que llegarán a ser efectivos cuando sea apropiado.</value>
   <value column="PO_Description" original=""/>
@@ -5376,8 +5376,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1129" trl="Y">
-  <value column="Name" original="Service date">F. Servicio</value>
-  <value column="PrintName" original="Service date">Fecha de Servicio</value>
+  <value column="Name" original="Service date">Fecha Servicio</value>
+  <value column="PrintName" original="Service date">Fecha Servicio</value>
   <value column="Description" original="Date service was provided">Fecha en que el servicio fue proporcionado</value>
   <value column="Help" original="The Service Date indicates the date that the service was provided.">La fecha del servicio indica la fecha en que el servicio fue proveído.</value>
   <value column="PO_Description" original=""/>
@@ -5596,8 +5596,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1214" trl="Y">
-  <value column="Name" original="Conversion Date">Fecha de Conversión</value>
-  <value column="PrintName" original="Conversion Date">F. Conversión</value>
+  <value column="Name" original="Conversion Date">Fecha Conversión</value>
+  <value column="PrintName" original="Conversion Date">Fecha Conversión</value>
   <value column="Description" original="Date for selecting conversion rate">Fecha para seleccionar la tasa de conversión</value>
   <value column="Help" original="The Conversion Date identifies the date used for currency conversion. The conversion rate chosen must include this date in it's date range">La fecha de conversión identifica la fecha usada para conversión de moneda. La tasa de conversión seleccionada debe estar incluida en ella.</value>
   <value column="PO_Description" original=""/>
@@ -6306,8 +6306,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1297" trl="Y">
-  <value column="Name" original="Transaction Date">Fecha de la Transacción</value>
-  <value column="PrintName" original="Trx Date">F. Transacción</value>
+  <value column="Name" original="Transaction Date">Fecha Transacción</value>
+  <value column="PrintName" original="Trx Date">Fecha Transacción</value>
   <value column="Description" original="Transaction Date">Fecha de la transacción</value>
   <value column="Help" original="The Transaction Date indicates the date of the transaction.">La fecha de transacción indica la fecha en que se ejecutó la transacción</value>
   <value column="PO_Description" original=""/>
@@ -6486,8 +6486,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1324" trl="Y">
-  <value column="Name" original="Date received">Fecha de Recibo</value>
-  <value column="PrintName" original="Date received">F. Recibo</value>
+  <value column="Name" original="Date received">Fecha Recibo</value>
+  <value column="PrintName" original="Date received">Fecha Recibo</value>
   <value column="Description" original="Date a product was received">Fecha en que un producto fue recibido.</value>
   <value column="Help" original="The Date Received indicates the date that product was received.">La fecha de recibo indica la fecha en que el producto fue recibido.</value>
   <value column="PO_Description" original=""/>
@@ -7296,8 +7296,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1434" trl="Y">
-  <value column="Name" original="Statement date">Fecha de Estado de Cuenta</value>
-  <value column="PrintName" original="Statement date">F. Edo. Cta.</value>
+  <value column="Name" original="Statement date">Fecha Estado de Cuenta</value>
+  <value column="PrintName" original="Statement date">Fecha Estado de Cuenta</value>
   <value column="Description" original="Date of the statement">Fecha de proceso de un estado de cuentas</value>
   <value column="Help" original="The Statement Date field defines the date of the statement.">El campo fecha del estado de cuenta define la fecha del estado de cuenta que está siendo procesado.</value>
   <value column="PO_Description" original=""/>
@@ -7526,19 +7526,19 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1462" trl="Y">
-  <value column="Name" original="Cash Journal">Reembolso Diario Caja Menor</value>
-  <value column="PrintName" original="Cash Journal">Reembolso Diario Caja Menor</value>
-  <value column="Description" original="Cash Journal">Reembolso Caja Menor</value>
-  <value column="Help" original="The Cash Journal uniquely identifies a Cash Journal.  The Cash Journal will record transactions for the cash bank account">El reembolso diario de caja menor identifica únicamente una caja menor. La caja menor registrará las transacciones para la cuenta de bancos</value>
+  <value column="Name" original="Cash Journal">Diario Caja PDV</value>
+  <value column="PrintName" original="Cash Journal">Diario Caja PDV</value>
+  <value column="Description" original="Cash Journal">Diario Caja PDV</value>
+  <value column="Help" original="The Cash Journal uniquely identifies a Cash Journal.  The Cash Journal will record transactions for the cash bank account">El diario de caja PDV identifica únicamente una caja PDV. La caja PDV registrará las transacciones para la cuenta de bancos</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1463" trl="Y">
-  <value column="Name" original="Cash Book">Caja Menor</value>
-  <value column="PrintName" original="Cash Book">Caja Menor</value>
-  <value column="Description" original="Cash Book for recording petty cash transactions">Caja menor para registrar transacciones de caja chica.</value>
+  <value column="Name" original="Cash Book">Caja PDV</value>
+  <value column="PrintName" original="Cash Book">Caja PDV</value>
+  <value column="Description" original="Cash Book for recording petty cash transactions">Caja PDV para registrar transacciones de caja.</value>
   <value column="Help" original="The Cash Book identifies a unique cash book.  The cash book is used to record cash transactions.">El libro de efectivo identifica un libro de efectivo único. El libro de efectivo se usa para registrar transacciones de efectivo.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -7546,10 +7546,10 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1464" trl="Y">
-  <value column="Name" original="Cash Journal Line">Línea del Reembolso Diario de Caja Menor</value>
-  <value column="PrintName" original="Cash Line">Línea de Reembolso Diario de Caja Menor</value>
-  <value column="Description" original="Cash Journal Line">Línea del Reembolso Diario de Caja Menor</value>
-  <value column="Help" original="The Cash Journal Line indicates a unique line in a cash journal.">La línea del reembolso diario de caja menor identifica una línea única en una caja menor.</value>
+  <value column="Name" original="Cash Journal Line">Línea Diario Caja PDV</value>
+  <value column="PrintName" original="Cash Line">Línea Diario Caja PDV</value>
+  <value column="Description" original="Cash Journal Line">Línea del Diario de Caja PDV</value>
+  <value column="Help" original="The Cash Journal Line indicates a unique line in a cash journal.">La línea del reembolso diario de caja PDV identifica una línea única en una caja PDV.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -7576,9 +7576,9 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1467" trl="Y">
-  <value column="Name" original="Cash Book Asset">Cuenta de Activo de Caja Menor</value>
-  <value column="PrintName" original="Cash Book Asset">Cuenta de Activo de Caja Menor</value>
-  <value column="Description" original="Cash Book Asset Account">Cuenta de Activo del Libro de Efectivo</value>
+  <value column="Name" original="Cash Book Asset">Cuenta Activo Caja PDV</value>
+  <value column="PrintName" original="Cash Book Asset">Cuenta Activo Caja PDV</value>
+  <value column="Description" original="Cash Book Asset Account">Cuenta Activo Caja PDV</value>
   <value column="Help" original="The Cash Book Asset Account identifies the account to be used for recording payments into and disbursements from this cash book.">La cuenta de activo del libro de efectivo identifica la cuenta a ser usada para registrar cobros y pagos desde este libro de efectivo</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -7586,8 +7586,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1468" trl="Y">
-  <value column="Name" original="Cash Book Differences">Cuenta de Diferencias de Caja Menor</value>
-  <value column="PrintName" original="Cash Book Differences">Cuenta de Diferencias de Caja Menor</value>
+  <value column="Name" original="Cash Book Differences">Cuenta Diferencias Caja PDV</value>
+  <value column="PrintName" original="Cash Book Differences">Cuenta Diferencias Caja PDV</value>
   <value column="Description" original="Cash Book Differences Account">Cuenta de Diferencias del Libro de Efectivo</value>
   <value column="Help" original="The Cash Book Differences Account identifies the account to be used for recording any differences that affect this cash book">La cuenta de diferencias en el libro de efectivo identifica la cuenta a ser usada para registrar cualquier diferencia que afecte este libro de efectivo</value>
   <value column="PO_Description" original=""/>
@@ -7596,9 +7596,9 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1469" trl="Y">
-  <value column="Name" original="Cash Book Expense">Gastos Caja Menor</value>
-  <value column="PrintName" original="Cash Book Expense">Gastos Caja Menor</value>
-  <value column="Description" original="Cash Book Expense Account">Cuenta de gastos de caja menor</value>
+  <value column="Name" original="Cash Book Expense">Cuenta Gastos Caja PDV</value>
+  <value column="PrintName" original="Cash Book Expense">Cuenta Gastos Caja PDV</value>
+  <value column="Description" original="Cash Book Expense Account">Cuenta de gastos de caja PDV</value>
   <value column="Help" original="The Cash Book Expense Account identifies the account to be used for general, non itemized expenses.">La cuenta de gastos del libro de efectivo identifica la cuenta a ser usada para registrar gastos generales sin partidas</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -7606,8 +7606,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1470" trl="Y">
-  <value column="Name" original="Cash Book Receipt">Cuenta de Ingresos de Caja Menor</value>
-  <value column="PrintName" original="Cash Book Receipt">Cuenta de Ingresos de Caja Menor</value>
+  <value column="Name" original="Cash Book Receipt">Cuenta Ingresos Caja PDV</value>
+  <value column="PrintName" original="Cash Book Receipt">Cuenta Ingresos Caja PDV</value>
   <value column="Description" original="Cash Book Receipts Account">Cuenta de Ingresos del libro de efectivo</value>
   <value column="Help" original="The Cash Book Receipt Account identifies the account to be used for general, non itemized cash book receipts.">La cuenta de Ingresos del libro de efectivo identifica la cuenta a ser usada para ingresos generales sin partidas en el libro de ingresos</value>
   <value column="PO_Description" original=""/>
@@ -7666,8 +7666,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1479" trl="Y">
-  <value column="Name" original="Processing date">Fecha del Proceso</value>
-  <value column="PrintName" original="Processing date">F. Proceso</value>
+  <value column="Name" original="Processing date">Fecha Proceso</value>
+  <value column="PrintName" original="Processing date">Fecha Proceso</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -7826,8 +7826,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1502" trl="Y">
-  <value column="Name" original="Date last action">Fecha de Última Acción</value>
-  <value column="PrintName" original="Date last action">F. Última Acción</value>
+  <value column="Name" original="Date last action">Fecha Última Acción</value>
+  <value column="PrintName" original="Date last action">Fecha Última Acción</value>
   <value column="Description" original="Date this request was last acted on">Fecha en que este requerimiento fue accionado por última vez.</value>
   <value column="Help" original="The Date Last Action indicates that last time that the request was acted on.">La fecha de última acción indica la última vez que el requerimiento fué accionado.</value>
   <value column="PO_Description" original=""/>
@@ -7836,8 +7836,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1503" trl="Y">
-  <value column="Name" original="Date next action">Fecha de Siguiente Acción</value>
-  <value column="PrintName" original="Date next action">F. Siguiente Acción</value>
+  <value column="Name" original="Date next action">Fecha Siguiente Acción</value>
+  <value column="PrintName" original="Date next action">Fecha Siguiente Acción</value>
   <value column="Description" original="Date that this request should be acted on">Fecha en que este requerimiento será accionado la siguiente vez.</value>
   <value column="Help" original="The Date Next Action indicates the next scheduled date for an action to occur for this request.">La fecha de la siguiente acción indica la fecha siguiente programada para que una acción ocurra para este requerimiento.</value>
   <value column="PO_Description" original=""/>
@@ -8086,8 +8086,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1538" trl="Y">
-  <value column="Name" original="Payment date">Fecha de Pago</value>
-  <value column="PrintName" original="Payment date">F. Pago</value>
+  <value column="Name" original="Payment date">Fecha Pago</value>
+  <value column="PrintName" original="Payment date">Fecha Pago</value>
   <value column="Description" original="Date Payment made">Fecha cuando se hizo el pago.</value>
   <value column="Help" original="The Payment Date indicates the date the payment was made.">La fecha de pago indica la fecha en que el pago fue hecho.</value>
   <value column="PO_Description" original=""/>
@@ -8246,8 +8246,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1556" trl="Y">
-  <value column="Name" original="Contract Date">Fecha del Contrato</value>
-  <value column="PrintName" original="Contract Date">F. Contrato</value>
+  <value column="Name" original="Contract Date">Fecha Contrato</value>
+  <value column="PrintName" original="Contract Date">Fecha Contrato</value>
   <value column="Description" original="The (planned) effective date of this document.">La fecha efectiva (planeada) de este documento.</value>
   <value column="Help" original="The contract date is used to determine when the document becomes effective. This is usually the contract date.  The contract date is used in reports and report parameters.">La fecha del contrato se usa para determinar cuando el documento llega a ser efectivo. La fecha del contrato se usa en Informes y parámetros de Informes.</value>
   <value column="PO_Description" original=""/>
@@ -8256,8 +8256,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1557" trl="Y">
-  <value column="Name" original="Finish Date">Fecha de Terminación</value>
-  <value column="PrintName" original="Finish Date">F. Terminación</value>
+  <value column="Name" original="Finish Date">Fecha Terminación</value>
+  <value column="PrintName" original="Finish Date">Fecha Terminación</value>
   <value column="Description" original="Finish or (planned) completion date">Fecha de terminación (planeada)</value>
   <value column="Help" original="The finish date is used to indicate when the project is expected to be completed or has been completed.">La fecha final se usa para indicar cuando se espera que el proyecto se complete o cuando ha sido completado.</value>
   <value column="PO_Description" original=""/>
@@ -10016,8 +10016,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1758" trl="Y">
-  <value column="Name" original="Report Date">Fecha de Informe</value>
-  <value column="PrintName" original="Report Date">F. Informe</value>
+  <value column="Name" original="Report Date">Fecha Informe</value>
+  <value column="PrintName" original="Report Date">Fecha Informe</value>
   <value column="Description" original="Expense/Time Report Date">Fecha del Informe de gasto y tiempo</value>
   <value column="Help" original="Date of Expense/Time Report">Fecha del Informe de tiempo y gastos</value>
   <value column="PO_Description" original=""/>
@@ -11166,8 +11166,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1883" trl="Y">
-  <value column="Name" original="Dunning Date">Fecha de Morosidad</value>
-  <value column="PrintName" original="Dunning Date">F. Morosidad</value>
+  <value column="Name" original="Dunning Date">Fecha Morosidad</value>
+  <value column="PrintName" original="Dunning Date">Fecha Morosidad</value>
   <value column="Description" original="Date of Dunning">Fecha de morosidad</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -11606,8 +11606,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1931" trl="Y">
-  <value column="Name" original="Asset Depreciation Date">Fecha de Amortización del Activo</value>
-  <value column="PrintName" original="Asset depreciation date">F. Amort. Activo</value>
+  <value column="Name" original="Asset Depreciation Date">Fecha Amortización Activo</value>
+  <value column="PrintName" original="Asset depreciation date">Fecha Amortización Activo</value>
   <value column="Description" original="Date of last depreciation">Fecha de depreciación pasada.</value>
   <value column="Help" original="Date of the last deprecation, if the asset is used internally and depreciated.">Fecha de la depreciación pasada, si el activo se utiliza internamente y se deprecia.</value>
   <value column="PO_Description" original=""/>
@@ -11616,8 +11616,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1932" trl="Y">
-  <value column="Name" original="Asset Disposal Date">Fecha de Disposición del Activo</value>
-  <value column="PrintName" original="Asset disposal date">F. Disposición de activo</value>
+  <value column="Name" original="Asset Disposal Date">Fecha Disposición Activo</value>
+  <value column="PrintName" original="Asset disposal date">Fecha Disposición Activo</value>
   <value column="Description" original="Date when the asset is/was disposed">Fecha desde/cuando el activo esta dispuesto</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -11656,8 +11656,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1936" trl="Y">
-  <value column="Name" original="Guarantee Date">Fecha de Garantía</value>
-  <value column="PrintName" original="Guarantee date">F. Garantía</value>
+  <value column="Name" original="Guarantee Date">Fecha Garantía</value>
+  <value column="PrintName" original="Guarantee date">Fecha Garantía</value>
   <value column="Description" original="Date when guarantee expires">Fecha cuando la garantía expira</value>
   <value column="Help" original="Date when the normal guarantee or availability expires">Fecha cuando la garantía o disponibilidad normal expira</value>
   <value column="PO_Description" original=""/>
@@ -12276,8 +12276,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2000" trl="Y">
-  <value column="Name" original="Due Date">Fecha de Vencimiento</value>
-  <value column="PrintName" original="Due Date">F. Vencimiento</value>
+  <value column="Name" original="Due Date">Fecha Vencimiento</value>
+  <value column="PrintName" original="Due Date">Fecha Vencimiento</value>
   <value column="Description" original="Date when the payment is due">Fecha cuando el pago es vencido.</value>
   <value column="Help" original="Date when the payment is due without deductions or discount">Fecha cuando el pago es vencido sin deducciones o descuento</value>
   <value column="PO_Description" original=""/>
@@ -12376,8 +12376,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2011" trl="Y">
-  <value column="Name" original="Guarantee Date">Fecha de Garantía</value>
-  <value column="PrintName" original="Guarantee Date">F. Garantía</value>
+  <value column="Name" original="Guarantee Date">Fecha Garantía</value>
+  <value column="PrintName" original="Guarantee Date">Fecha Garantía</value>
   <value column="Description" original="Product has Guarantee or Expiry Date">Fecha cuando la garantía expira</value>
   <value column="Help" original="For individual products, you can define a guarantee or expiry date">Fecha cuando la garantía o disponibilidad normal expira</value>
   <value column="PO_Description" original=""/>
@@ -12646,9 +12646,9 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2041" trl="Y">
-  <value column="Name" original="Invoice Contact">Contacto Entrega Directa</value>
-  <value column="PrintName" original="Invoice Contact">Contacto Entrega Directa</value>
-  <value column="Description" original="Business Partner Contact for invoicing">Contacto del tercero para el envío de la nota</value>
+  <value column="Name" original="Invoice Contact">Contacto Facturación</value>
+  <value column="PrintName" original="Invoice Contact">Contacto Facturación</value>
+  <value column="Description" original="Business Partner Contact for invoicing">Contacto del tercero para el envío de la factura</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -13428,8 +13428,8 @@ Si no se incorpora ninguna, se utiliza la impresora por default. Usted especific
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2123" trl="Y">
-  <value column="Name" original="Ship Date">Fecha de entrega</value>
-  <value column="PrintName" original="Ship Date">F. Entrega</value>
+  <value column="Name" original="Ship Date">Fecha Entrega</value>
+  <value column="PrintName" original="Ship Date">Fecha Entrega</value>
   <value column="Description" original="Shipment Date/Time">Fecha de entrega Fecha/Hora</value>
   <value column="Help" original="Actual Date/Time of Shipment (pick up)">Fecha actual Fecha/Hora de entrega (recolección)</value>
   <value column="PO_Description" original=""/>
@@ -15016,8 +15016,8 @@ de proyecto - capacidad de publicar el material</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2294" trl="Y">
-  <value column="Name" original="EFT Effective Date">Fecha Efectiva para TEF</value>
-  <value column="PrintName" original="EFT Effective Date">F. Efectiva para TEF</value>
+  <value column="Name" original="EFT Effective Date">Fecha Efectiva TEF</value>
+  <value column="PrintName" original="EFT Effective Date">Fecha Efectiva TEF</value>
   <value column="Description" original="Electronic Funds Transfer Valuta (effective) Date">Fecha efectiva para la Transferencia Electrónica de Fondos.</value>
   <value column="Help" original="Information from EFT media">Información de Transferencia Electrónica de Fondos</value>
   <value column="PO_Description" original=""/>
@@ -15066,8 +15066,8 @@ de proyecto - capacidad de publicar el material</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2300" trl="Y">
-  <value column="Name" original="Statement Line Date">Fecha de Estado de Línea</value>
-  <value column="PrintName" original="Statement Line Date">F. Edo de Línea</value>
+  <value column="Name" original="Statement Line Date">Fecha Línea Estado</value>
+  <value column="PrintName" original="Statement Line Date">Fecha Línea Estado</value>
   <value column="Description" original="Date of the Statement Line">Fecha del estado de línea</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -15196,8 +15196,8 @@ de proyecto - capacidad de publicar el material</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2313" trl="Y">
-  <value column="Name" original="Workflow Process Data">Fecha de Proceso de Flujo de Trabajo</value>
-  <value column="PrintName" original="Wf Process Data">F. de Proceso de FT</value>
+  <value column="Name" original="Workflow Process Data">Fecha Proceso Flujo de Trabajo</value>
+  <value column="PrintName" original="Wf Process Data">Fecha Proceso Flujo de Trabajo</value>
   <value column="Description" original="Workflow Process Context">Contexto de proceso flujo de trabajo</value>
   <value column="Help" original="Context information of the workflow process and activity">Contexto de información del proceso y actividad del flujo de trabajo.</value>
   <value column="PO_Description" original=""/>
@@ -15896,8 +15896,8 @@ de proyecto - capacidad de publicar el material</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2389" trl="Y">
-  <value column="Name" original="Response Date">Fecha de Respuesta</value>
-  <value column="PrintName" original="Response Date">F. Respuesta</value>
+  <value column="Name" original="Response Date">Fecha Respuesta</value>
+  <value column="PrintName" original="Response Date">Fecha Respuesta</value>
   <value column="Description" original="Date of the Response">Fecha de la respuesta</value>
   <value column="Help" original="Date of the Response">Fecha de la respuesta</value>
   <value column="PO_Description" original=""/>
@@ -16426,8 +16426,8 @@ de proyecto - capacidad de publicar el material</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2443" trl="Y">
-  <value column="Name" original="Decision date">F. Decisión</value>
-  <value column="PrintName" original="Decision date">F. Decisión</value>
+  <value column="Name" original="Decision date">Fecha Decisión</value>
+  <value column="PrintName" original="Decision date">Fecha Decisión</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -16497,7 +16497,7 @@ de proyecto - capacidad de publicar el material</value>
  </row>
  <row id="2451" trl="Y">
   <value column="Name" original="Date Required">Fecha Requerida</value>
-  <value column="PrintName" original="Date Required">F. Requerida</value>
+  <value column="PrintName" original="Date Required">Fecha Requerida</value>
   <value column="Description" original="Date when required">Fecha desde cuando se ha requerido</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -16506,9 +16506,9 @@ de proyecto - capacidad de publicar el material</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2452" trl="Y">
-  <value column="Name" original="Requisition">Requisición de Material</value>
-  <value column="PrintName" original="Requisition">Requisición de Material</value>
-  <value column="Description" original="Material Requisition">Requisición de Material</value>
+  <value column="Name" original="Requisition">Requisición</value>
+  <value column="PrintName" original="Requisition">Requisición</value>
+  <value column="Description" original="Material Requisition">Requisición</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -16516,9 +16516,9 @@ de proyecto - capacidad de publicar el material</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2453" trl="Y">
-  <value column="Name" original="Requisition Line">Línea de Requisición Material</value>
-  <value column="PrintName" original="Requisition Line">Línea de Requisición de material</value>
-  <value column="Description" original="Material Requisition Line">Línea de Requisición de material</value>
+  <value column="Name" original="Requisition Line">Línea Requisición</value>
+  <value column="PrintName" original="Requisition Line">Línea Requisición</value>
+  <value column="Description" original="Material Requisition Line">Línea Requisición</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -16746,8 +16746,8 @@ de proyecto - capacidad de publicar el material</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2477" trl="Y">
-  <value column="Name" original="Line Work Complete">Fecha de Terminación</value>
-  <value column="PrintName" original="Line Work Complete">F. Terminación</value>
+  <value column="Name" original="Line Work Complete">Fecha Terminación</value>
+  <value column="PrintName" original="Line Work Complete">Fecha Terminación</value>
   <value column="Description" original="Date when line work is (planned to be) complete">Fecha cuando la línea de trabajo es (planeada) terminada.</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -23265,8 +23265,8 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="50048" trl="Y">
-  <value column="Name" original="Allow Info CashJournal">Permitir Información de Caja Menor</value>
-  <value column="PrintName" original="Allow Info CashJournal">Permitir Información de Caja Menor</value>
+  <value column="Name" original="Allow Info CashJournal">Permitir Información Caja PDV</value>
+  <value column="PrintName" original="Allow Info CashJournal">Permitir Información Caja PDV</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -23845,8 +23845,8 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="52029" trl="Y">
-  <value column="Name" original="CashBook for transfers">Caja Menor para Transferencias</value>
-  <value column="PrintName" original="CashBook for transfers">Caja Menor para Transferencias</value>
+  <value column="Name" original="CashBook for transfers">Caja PDV para Transferencias</value>
+  <value column="PrintName" original="CashBook for transfers">Caja PDV para Transferencias</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -23865,9 +23865,9 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="52031" trl="Y">
-  <value column="Name" original="Cash Book Transfer Type">Tipo Transferencia Caja Menor</value>
-  <value column="PrintName" original="Cash Book Transfer Type">Tipo Transferencia Caja Menor</value>
-  <value column="Description" original="Where the money in the cash book should be transfered to. Either a Bank Account or another Cash Book">Si el dierno en la caja menor debe ser transferido a un banco o a una caja menor</value>
+  <value column="Name" original="Cash Book Transfer Type">Tipo Transferencia Caja PDV</value>
+  <value column="PrintName" original="Cash Book Transfer Type">Tipo Transferencia Caja PDV</value>
+  <value column="Description" original="Where the money in the cash book should be transfered to. Either a Bank Account or another Cash Book">Si el dinero en la caja PDV debe ser transferido a un banco o a otra caja PDV</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -23885,9 +23885,9 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="52033" trl="Y">
-  <value column="Name" original="Transfer Cash trx to">Transferir transacción de caja a caja menor</value>
-  <value column="PrintName" original="Transfer Cash trx to">Transferir transacción de caja a caja menor</value>
-  <value column="Description" original="Cash Book on which to transfer all Cash transactions">Caja Menor a la cual transferir todas las transaccciones de caja</value>
+  <value column="Name" original="Transfer Cash trx to">Transferir transacción de caja a caja PDV</value>
+  <value column="PrintName" original="Transfer Cash trx to">Transferir transacción de caja a caja PDV</value>
+  <value column="Description" original="Cash Book on which to transfer all Cash transactions">Caja PDV a la cual transferir todas las transaccciones de caja</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -23955,9 +23955,9 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="52040" trl="Y">
-  <value column="Name" original="Transfer Card trx to">Transferir transacciones con tarjeta a caja menor</value>
-  <value column="PrintName" original="Transfer Card trx to">Transferir transacciones con tarjeta a caja menor</value>
-  <value column="Description" original="Cash Book on which to transfer all Card transactions">Caja menor a la cual transferir transacciones con tarjeta</value>
+  <value column="Name" original="Transfer Card trx to">Transferir transacciones con tarjeta a caja PDV</value>
+  <value column="PrintName" original="Transfer Card trx to">Transferir transacciones con tarjeta a caja PDV</value>
+  <value column="Description" original="Cash Book on which to transfer all Card transactions">Caja PDV a la cual transferir transacciones con tarjeta</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -24045,9 +24045,9 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="52049" trl="Y">
-  <value column="Name" original="Transfer Check trx to">Transferir transacciones de cheque a caja menor</value>
-  <value column="PrintName" original="Transfer Check trx to">Transferir transacciones de cheque a caja menor</value>
-  <value column="Description" original="Cash Book on which to transfer all Check transactions">Caja menor a la cual transferir transacciones en cheque</value>
+  <value column="Name" original="Transfer Check trx to">Transferir transacciones de cheque a caja PDV</value>
+  <value column="PrintName" original="Transfer Check trx to">Transferir transacciones de cheque a caja PDV</value>
+  <value column="Description" original="Cash Book on which to transfer all Check transactions">Caja PDV a la cual transferir transacciones en cheque</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>

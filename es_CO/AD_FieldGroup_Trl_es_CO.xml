@@ -27,10 +27,10 @@
   <value column="Name" original="Warehouse">Almacén</value>
  </row>
  <row id="109" trl="Y">
-  <value column="Name" original="Bank">Banco</value>
+  <value column="Name" original="Bank">Banco/Caja</value>
  </row>
  <row id="110" trl="Y">
-  <value column="Name" original="Cash Book">Caja Menor</value>
+  <value column="Name" original="Cash Book">Caja PDV</value>
  </row>
  <row id="111" trl="Y">
   <value column="Name" original="Tax">Impuesto</value>

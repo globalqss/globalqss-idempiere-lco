@@ -318,7 +318,7 @@
   <value column="Help" original=""/>
  </row>
  <row id="170" trl="Y">
-  <value column="Name" original="Cash Journal Detail">Detalle de Diario de Caja</value>
+  <value column="Name" original="Cash Journal Detail">Detalle Diario Caja PDV</value>
   <value column="Description" original="Detail Cash Journal Information">Información de detalle de asientos de caja</value>
   <value column="Help" original=""/>
  </row>

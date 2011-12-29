@@ -1088,16 +1088,16 @@ Necesita volver a ingresar y reiniciar su servidor de aplicaciones para que los 
   <value column="Help" original="The Accounting Tab is used to define the accounts used for transactions with this Bank.">La pestaña Contabilidad es usada para definir las cuentas usadas para transacciones con este banco.</value>
  </row>
  <row id="328" trl="Y">
-  <value column="Name" original="Bank Statement">Estado Cuentas Bancario</value>
+  <value column="Name" original="Bank Statement">Estado Cuenta Banco/Caja</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Bank Statement">Estado de Cuentas Bancario</value>
-  <value column="Help" original="The Bank Statement Tab defines the Bank Statement to be reconciled.">La pestaña Edo. de Cuentas define el estado de cuentas bancario que va a ser conciliado.</value>
+  <value column="Description" original="Bank Statement">Estado de Cuenta Banco/Caja</value>
+  <value column="Help" original="The Bank Statement Tab defines the Bank Statement to be reconciled.">La pestaña Estado de Cuenta define el estado de cuentas bancario o de caja que va a ser conciliado.</value>
  </row>
  <row id="329" trl="Y">
-  <value column="Name" original="Statement Line">Línea Estado Cuentas</value>
+  <value column="Name" original="Statement Line">Línea Estado Cuenta</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Statement Line">Línea del Estado de Cuentas</value>
-  <value column="Help" original="The Statement Line Tab defines the individual line items on the Bank Statement.  They can be entered manually or generated from payments entered.&#10;&lt;br&gt;For Posting, the bank account organization is used, if it is not a charge.">La pestaña Línea Edo. de Cuentas define las líneas individuales en el Estado de Cuentas bancario. Las líneas pueden ser introducidas manualmente o generadas desde entradas de pagos.</value>
+  <value column="Description" original="Statement Line">Línea del Estado de Cuenta</value>
+  <value column="Help" original="The Statement Line Tab defines the individual line items on the Bank Statement.  They can be entered manually or generated from payments entered.&#10;&lt;br&gt;For Posting, the bank account organization is used, if it is not a charge.">La pestaña Línea Estado de Cuenta define las líneas individuales en el Estado de Cuenta bancario o de caja. Las líneas pueden ser introducidas manualmente o generadas desde entradas de pagos.</value>
  </row>
  <row id="330" trl="Y">
   <value column="Name" original="Payment">Pago</value>
@@ -1136,22 +1136,22 @@ Necesita volver a ingresar y reiniciar su servidor de aplicaciones para que los 
   <value column="Help" original="The Custom Attribute Tab defines additional attributes or information for a product or entity.">La pestaña Atributos Personalizados define atributos o información adicional para un producto o entidad.</value>
  </row>
  <row id="336" trl="Y">
-  <value column="Name" original="Cashbook">Caja Menor</value>
+  <value column="Name" original="Cashbook">Caja PDV</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Maintain Cashbook">Mantener Caja Menor</value>
-  <value column="Help" original="The Cashbook Tab defines a unique cashbook for an organization.">La pestaña Caja Menor define un libro de efectivo para una organización.</value>
+  <value column="Description" original="Maintain Cashbook">Mantener Caja PDV</value>
+  <value column="Help" original="The Cashbook Tab defines a unique cashbook for an organization.">La pestaña Caja PDV define un libro de efectivo para una organización.</value>
  </row>
  <row id="337" trl="Y">
   <value column="Name" original="Accounting">Contabilidad</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Cashbook Accounting">Contabilidad de Caja Menor</value>
+  <value column="Description" original="Cashbook Accounting">Contabilidad de Caja PDV</value>
   <value column="Help" original="The Cashbook Accounting Tab defines the accounting parameters for transaction involving a cashbook.">La pestaña Contabilidad del Libro de Efectivo define los parámetros contables para las transacciones que involucren un libro de efectivo.</value>
  </row>
  <row id="338" trl="Y">
-  <value column="Name" original="Cash Journal">Reembolso Diario de Caja Menor</value>
+  <value column="Name" original="Cash Journal">Diario Caja PDV</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Cash Journal">Reembolso Diario de Caja Menor</value>
-  <value column="Help" original="The Cash Journal Tab defines the parameters for this journal.">La pestaña Reembolso Diario de Caja Menor define los parámetros de esta entrada de diario.</value>
+  <value column="Description" original="Cash Journal">Diario Caja PDV</value>
+  <value column="Help" original="The Cash Journal Tab defines the parameters for this journal.">La pestaña Diario Caja PDV define los parámetros de esta entrada de diario.</value>
  </row>
  <row id="339" trl="Y">
   <value column="Name" original="Cash Line">Línea de Efectivo</value>

@@ -243,8 +243,8 @@
   <value column="Help" original=""/>
  </row>
  <row id="158" trl="Y">
-  <value column="Name" original="Bank">Banco</value>
-  <value column="Description" original="Maintain Bank">Mantener Bancos</value>
+  <value column="Name" original="Bank">Bancos/Cajas</value>
+  <value column="Description" original="Maintain Bank">Mantener Bancos/Cajas</value>
   <value column="Help" original="The Bank Window is used to define the banks and accounts associated with an organization or business partner">Es usada para definir bancos y cuentas bancarias asociadas con una organización o tercero.</value>
  </row>
  <row id="159" trl="Y">
@@ -383,9 +383,9 @@
   <value column="Help" original="The system creates messages while performing processes. In this window you can view them.">El sistema crea mensajes mientras ejecuta procesos. En esta ventana es posible ver estos mensajes.</value>
  </row>
  <row id="194" trl="Y">
-  <value column="Name" original="Bank Statement">Estado de Cuentas Bancario</value>
-  <value column="Description" original="Process Bank Statements">Procesar conciliación del estado de cuentas bancario</value>
-  <value column="Help" original="The Process Bank Statements window allows you to reconcile your Bank Statements.  You can either enter the line items from the statement in the Statement Line tab or select the 'Create From' button to automatically generate the statement from all unreconciled payments to this bank account.  Once you have completed reconciling, select the 'Process Statement' button to mark the payments as reconciled and update the appropriate GL accounts.">Esta ventana permite conciliar sus saldos bancarios. Usted puede ya sea introducir líneas desde el estado de cuentas en la pestaña de línea de estado de cuentas o seleccionar el botón `Crear desde` para generar automáticamente el balance de todos los pagos no conciliados para esta cuenta bancaria. Una vez que la conciliación esta completa, seleccione el botón `Procesar Estado de Cuentas` para marcar los pagos como conciliados y actualizar las cuentas correspondientes de la Contabilidad General</value>
+  <value column="Name" original="Bank Statement">Estado de Cuenta Banco/Caja</value>
+  <value column="Description" original="Process Bank Statements">Procesar conciliación del estado de cuenta Banco/Caja</value>
+  <value column="Help" original="The Process Bank Statements window allows you to reconcile your Bank Statements.  You can either enter the line items from the statement in the Statement Line tab or select the 'Create From' button to automatically generate the statement from all unreconciled payments to this bank account.  Once you have completed reconciling, select the 'Process Statement' button to mark the payments as reconciled and update the appropriate GL accounts.">Esta ventana permite conciliar sus saldos bancarios. Usted puede ya sea introducir líneas desde el estado de cuenta en la pestaña de línea de estado de cuenta o seleccionar el botón `Crear desde` para generar automáticamente el balance de todos los pagos no conciliados para esta cuenta bancaria. Una vez que la conciliación esta completa, seleccione el botón `Procesar Estado de Cuenta` para marcar los pagos como conciliados y actualizar las cuentas correspondientes de la Contabilidad General</value>
  </row>
  <row id="195" trl="Y">
   <value column="Name" original="Payment">Pagos/Recaudos</value>
@@ -398,14 +398,14 @@
   <value column="Help" original="This is a System only Window.  Customer Attributes allow the entry of additional information to an entity.">Esta es una ventana del sistema. Atributos personalizados permite la entrada de información adicional de una entidad.</value>
  </row>
  <row id="197" trl="Y">
-  <value column="Name" original="Cashbook">Caja Menor</value>
-  <value column="Description" original="Maintain Cashbook">Mantener Caja Menor</value>
+  <value column="Name" original="Cashbook">Caja PDV</value>
+  <value column="Description" original="Maintain Cashbook">Mantener Caja PDV</value>
   <value column="Help" original="The Cashbook Window defines the bank and account against which cash transactions will be processed.">Define el banco y cuenta contra la cual las transacciones de efectivo son procesadas.</value>
  </row>
  <row id="198" trl="Y">
-  <value column="Name" original="Cash Journal">Reembolso Diario de Caja Menor</value>
-  <value column="Description" original="Cash transactions">Transacciones de efectivo</value>
-  <value column="Help" original="The Cash Journal Window is used to record disbursements from and receipts to Petty Cash">Esta ventana es usada para registrar los pagos y recibos de una caja menor.</value>
+  <value column="Name" original="Cash Journal">Diario Caja PDV</value>
+  <value column="Description" original="Cash transactions">Transacciones de Caja PDV</value>
+  <value column="Help" original="The Cash Journal Window is used to record disbursements from and receipts to Petty Cash">Esta ventana es usada para registrar los pagos y recibos de una caja PDV.</value>
  </row>
  <row id="200" trl="Y">
   <value column="Name" original="Field Group">Grupo de Campos</value>
@@ -759,8 +759,8 @@ Tenga en cuenta que el acceso a la información está en caché y requiere volve
   <value column="Help" original="Adempiere Alerts allow you define system conditions you want to be alerted of">Las alarmas de Adempiere le permiten definen condiciones de sistema que usted desea ser alertado</value>
  </row>
  <row id="277" trl="Y">
-  <value column="Name" original="Import Bank Statement">Importar Estado de Cuentas</value>
-  <value column="Description" original="Import Bank Statements">Importar Estado de Cuentas</value>
+  <value column="Name" original="Import Bank Statement">Importar Estado de Cuenta</value>
+  <value column="Description" original="Import Bank Statements">Importar Estado de Cuenta</value>
   <value column="Help" original=""/>
  </row>
  <row id="278" trl="Y">
@@ -986,7 +986,7 @@ Antes(!) incorporando transacciones, comience la réplica funcionada al sistema 
  </row>
  <row id="322" trl="Y">
   <value column="Name" original="Requisition">Requisición</value>
-  <value column="Description" original="Material Requisition">Requisición de Material</value>
+  <value column="Description" original="Material Requisition">Requisición</value>
   <value column="Help" original="Enter and maintain Material Requisitions. Material Requisition can be created automatically via Replenishment.  You create generate optionally consolidated Purchase Orders.">Incorpore y mantenga las demandas materiales.</value>
  </row>
  <row id="323" trl="Y">
