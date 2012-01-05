@@ -288,8 +288,8 @@
   <value column="Help" original="The Physical Inventory Window allows you to generate inventory count lists.  These counts can then be processed which will update the actual inventory with the new counts. Normally you would create inventory count lines automaticelly. If you create them manually, make sure that the book value is correct.">Permite generar listas de conteo del inventario físico. Estos conteos pueden ser procesados para actualizar el inventario real con las cantidades contadas.</value>
  </row>
  <row id="169" trl="Y">
-  <value column="Name" original="Shipment (Customer)">Entregas (Cliente)</value>
-  <value column="Description" original="Customer Inventory Shipments Customer Returns">Entrega de Inventario a Clientes</value>
+  <value column="Name" original="Shipment (Customer)">Entregas a Cliente</value>
+  <value column="Description" original="Customer Inventory Shipments Customer Returns">Entregas a Cliente</value>
   <value column="Help" original="The Shipment Window defines shipments made or to be made to a customer.  They are generated from an Customer Order.  The Shipment Document will generate the Customer Invoice.">Define las entregas hechos o por hacer a un cliente. Las entregas son generadas desde una orden de un cliente. Los documentos de entrega generarán la factura del cliente.</value>
  </row>
  <row id="170" trl="Y">
