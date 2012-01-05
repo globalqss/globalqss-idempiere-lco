@@ -3,7 +3,7 @@
 <!--<!DOCTYPE adempiereTrl PUBLIC "-//ComPiere, Inc.//DTD Adempiere Translation 1.0//EN" "http://www.adempiere.com/dtd/adempiereTrl.dtd">-->
 <adempiereTrl language="es_CO" table="AD_Form">
  <row id="100" trl="Y">
-  <value column="Name" original="Generate Invoices (manual)">Generar Facturas (manual)</value>
+  <value column="Name" original="Generate Invoices (manual)">Generar Facturas por Selección</value>
   <value column="Description" original="Select and generate invoices">Seleccionar y Generar Facturas</value>
   <value column="Help" original="Generate Invoices from Orders.  &#10;Select the orders to generate the invoice for.">Generar Facturas a partir de Ordenes</value>
  </row>
@@ -53,7 +53,7 @@
   <value column="Help" original="Export/Import Translation info to/from xml for translation in external tool. Please note that the Language MUST be an enabled and verified System Langage.">Importar/Exportar Traducción desde/hacia xml para traducir con una herramienta externa. Por favor note que el lenguaje DEBE estar habilitado y verificado en Lenguaje del Sistema</value>
  </row>
  <row id="110" trl="Y">
-  <value column="Name" original="Generate Shipments (manual)">Generar Entregas (manual)</value>
+  <value column="Name" original="Generate Shipments (manual)">Generar Entregas por Selección</value>
   <value column="Description" original="Select and generate shipments">Seleccionar y Generar Entregas</value>
   <value column="Help" original="Generate Shipments from Orders.  &#10;Select the orders to generate the shipments for.">Generar Entregas a partir de Ordenes</value>
  </row>
@@ -180,7 +180,7 @@ Finalmente una caja de mensaje le preguntará si desea cerrar el documento de OM
   <value column="Help" original=""/>
  </row>
  <row id="53010" trl="Y">
-  <value column="Name" original="Generate Shipments &amp; Invoices (manual)">Generar Entregas y Facturas (manual)</value>
+  <value column="Name" original="Generate Shipments &amp; Invoices (manual)">Generar Entregas y Facturas por Selección</value>
   <value column="Description" original="Select and generate shipments &amp; Invoices">Seleccionar y generar entregas y facturas</value>
   <value column="Help" original="Generate Shipments &amp; Invoices from Orders.  &#10;Select the orders to generate the shipments &amp; Invoices for.">Generar Entregas y Facturas a partir de ordenes.
 Seleccione las ordenes con las cuales desea generar entregas y facturas</value>

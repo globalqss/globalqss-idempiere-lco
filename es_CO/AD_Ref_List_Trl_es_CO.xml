@@ -803,7 +803,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="332" trl="Y">
-  <value column="Name" original="Cash">Efectivo</value>
+  <value column="Name" original="Cash">Caja de Punto de Venta</value>
   <value column="Description" original=""/>
  </row>
  <row id="333" trl="Y">
