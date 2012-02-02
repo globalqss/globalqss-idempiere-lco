@@ -3746,10 +3746,10 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="836" trl="Y">
-  <value column="Name" original="Bank Account">Cuenta Bancaria</value>
-  <value column="PrintName" original="Bank Account">No. De Cuenta</value>
-  <value column="Description" original="Account at the Bank">Cuenta bancaria</value>
-  <value column="Help" original="The Bank Account identifies an account at this Bank.">La cuenta bancaria identifica una cuenta en este banco</value>
+  <value column="Name" original="Bank Account">Cuenta Banco/Caja</value>
+  <value column="PrintName" original="Bank Account">Cuenta Banco/Caja</value>
+  <value column="Description" original="Account at the Bank">Cuenta Banco/Caja</value>
+  <value column="Help" original="The Bank Account identifies an account at this Bank.">La cuenta banco/caja identifica una cuenta de manejo de fondos</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>

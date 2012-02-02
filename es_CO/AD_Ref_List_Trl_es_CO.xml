@@ -1115,7 +1115,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="411" trl="Y">
-  <value column="Name" original="Bank Account Transfer">Transferencia hacia/desde cuenta bancaria</value>
+  <value column="Name" original="Bank Account Transfer">Transferencia hacia/desde cuenta banco/caja</value>
   <value column="Description" original=""/>
  </row>
  <row id="412" trl="Y">
@@ -3335,7 +3335,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="52001" trl="Y">
-  <value column="Name" original="Bank Account">Cuenta Bancaria/Caja</value>
+  <value column="Name" original="Bank Account">Cuenta Banco/Caja</value>
   <value column="Description" original=""/>
  </row>
  <row id="52002" trl="Y">
