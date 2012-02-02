@@ -143,12 +143,12 @@
   <value column="Help" original=""/>
  </row>
  <row id="53232" trl="Y">
-  <value column="Name" original="Bank Account From">Cuenta Bancaria Origen</value>
+  <value column="Name" original="Bank Account From">Cuenta Banco/Caja Origen</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
  <row id="53233" trl="Y">
-  <value column="Name" original="Bank Account To">Cuenta Bancaria Destino</value>
+  <value column="Name" original="Bank Account To">Cuenta Banco/Caja Destino</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
@@ -158,12 +158,12 @@
   <value column="Help" original="The Valid From date indicates the first day of a date range">La fecha Válido Desde indica el primer día de un rango de fechas</value>
  </row>
  <row id="53246" trl="Y">
-  <value column="Name" original="Bank Account From">Cuenta Bancaria Origen</value>
+  <value column="Name" original="Bank Account From">Cuenta Banco/Caja Origen</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
  <row id="53247" trl="Y">
-  <value column="Name" original="Bank Account To">Cuenta Bancaria Destino</value>
+  <value column="Name" original="Bank Account To">Cuenta Banco/Caja Destino</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>

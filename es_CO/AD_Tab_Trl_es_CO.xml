@@ -4715,9 +4715,9 @@ Válido Desde/Hasta es determinado por el impuesto padre.]]></value>
   <value column="Help" original="The Employee Accounting Tab defines the default accounts to use when this business partner is referenced on a expense reimbursement."/>
  </row>
  <row id="53106" trl="Y">
-  <value column="Name" original="Bank Account">Cuenta Bancaria</value>
+  <value column="Name" original="Bank Account">Cuenta Banco/Caja</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Define Bank Account">Define cuenta bancaria</value>
+  <value column="Description" original="Define Bank Account">Define Cuenta Banco/Caja</value>
   <value column="Help" original="The Define Bank Account Tab defines the banking information for this business partner.  This data is used for processing payments and remittances."/>
  </row>
  <row id="53107" trl="Y">
