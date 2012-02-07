@@ -636,9 +636,9 @@ The default Movement Date is today's date.]]></value>
  </row>
  <row id="233" trl="Y">
   <value column="Name" original="Verify Document Types">Verifica tipos de Documento</value>
-  <value column="Description" original="Verify Document Types and Period Controls">Verifica tipos de Documento</value>
-  <value column="Help" original="Makes sure that there is a DocumentType for all Document Base Types&lt;br&gt;&#10;Creates missing Period Controls for Document Type (You may have to open them)"><![CDATA[Comprueba que hay un tipo de documento para toda la base del documento<br>
-Cra los controles que faltan del periodo para el tipo de documento (Usted debe tener que abrirlos)]]></value>
+  <value column="Description" original="Verify Document Types and Period Controls">Verifica tipos de Documento y Control de Período</value>
+  <value column="Help" original="Makes sure that there is a DocumentType for all Document Base Types&lt;br&gt;&#10;Creates missing Period Controls for Document Type (You may have to open them)"><![CDATA[Comprueba que hay un tipo de documento por cada tipo de documento base<br>
+Crea los controles de período que falten por tipo de documento (usted debe abrirlos)]]></value>
  </row>
  <row id="234" trl="Y">
   <value column="Name" original="Project Margin (Work Order)">Margen del Proyecto (Orden de Trabajo)</value>
@@ -658,7 +658,7 @@ Los costos estan en el actual esquema contable - Las líneas estan en la actual 
  </row>
  <row id="237" trl="Y">
   <value column="Name" original="Transaction Detail">Detalle de Transacciones</value>
-  <value column="Description" original="Transaction Detail Report">Reporte de Detalles de Transacciónes</value>
+  <value column="Description" original="Transaction Detail Report">Reporte de Detalles de Transacciones</value>
   <value column="Help" original="The report shows transaction details (receipts, shipments, inventory, movements, ...) including product instance (Lot, Serial No) info">El reporte muestra detalles de transacciones (recibos, envios, inventario, movimiento, ...) incluyendo el caso del producto (Lote, No. de serie) Información.</value>
  </row>
  <row id="238" trl="Y">
