@@ -13,9 +13,9 @@
   <value column="Help" original="Define a new language as a system language.">Definir un nuevo lenguaje como un lenguaje del sistema.</value>
  </row>
  <row id="104" trl="Y">
-  <value column="Name" original="Initial Client Setup Review">Revisión de Configuración Inicial de Compañía</value>
-  <value column="Description" original="Review of system level setup of a new  Client">Revisar la Configuración de una nueva compañía a nivel de sistema</value>
-  <value column="Help" original="This workflow reviews the system setup of a new client as performed by the automatic Initial Client Setup.&#10;You may want to check also the following Workflows:&#10;- Accounting Setup&#10;- Business Partner Setup&#10;- Product Setup&#10;- Price list Setup&#10;- Warehouse Setup&#10;- Tax Setup">Este flujo de trabajo revisa la definición de una nueva compañía que fue creada a través de la Configuración Inicial de Compañía. Se sugiere revisar también los siguientes flujos de trabajo: Definición Contable, Definición de Tercero; Definición de Producto; Definición de Lista de Precios; Definición de Almacén; Definición de Impuestos.</value>
+  <value column="Name" original="Initial Client Setup Review">Revisión de Configuración Inicial de Grupo Empresarial</value>
+  <value column="Description" original="Review of system level setup of a new  Client">Revisar la Configuración de un nuevo grupo empresarial a nivel de sistema</value>
+  <value column="Help" original="This workflow reviews the system setup of a new client as performed by the automatic Initial Client Setup.&#10;You may want to check also the following Workflows:&#10;- Accounting Setup&#10;- Business Partner Setup&#10;- Product Setup&#10;- Price list Setup&#10;- Warehouse Setup&#10;- Tax Setup">Este flujo de trabajo revisa la definición de un nuevo grupo empresarial que fue creado a través de la Configuración Inicial de Grupo Empresarial. Se sugiere revisar también los siguientes flujos de trabajo: Definición Contable, Definición de Tercero; Definición de Producto; Definición de Lista de Precios; Definición de Almacén; Definición de Impuestos.</value>
  </row>
  <row id="105" trl="Y">
   <value column="Name" original="Accounting Setup">Configuración de Contabilidad</value>
@@ -77,7 +77,7 @@
  </row>
  <row id="113" trl="Y">
   <value column="Name" original="Request Setup">Definición de Solicitudes</value>
-  <value column="Description" original="Set up the client to process requests">Definir Procesamiento de Solicitudes para la Compañía</value>
+  <value column="Description" original="Set up the client to process requests">Definir Procesamiento de Solicitudes para el Grupo Empresarial</value>
   <value column="Help" original=""/>
  </row>
  <row id="114" trl="Y">

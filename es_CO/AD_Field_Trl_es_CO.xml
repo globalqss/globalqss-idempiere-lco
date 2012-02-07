@@ -10,7 +10,7 @@
  <row id="2124" trl="Y">
   <value column="Name" original="Language">Lenguaje</value>
   <value column="Description" original="Language for this Business Partner if Multi-Language enabled">Lenguaje para este tercero</value>
-  <value column="Help" original="The Language identifies the language to use for display and formatting documents. It requires, that on Client level, Multi-Lingual documents are selected and that you have created/loaded the language.">El lenguaje identifica el lenguaje a usar para el despliegue y formato de documentos. Esto requiere que a nivel de compañía se seleccione documentos multi-lenguaje, y que se haya creado/cargado el lenguaje</value>
+  <value column="Help" original="The Language identifies the language to use for display and formatting documents. It requires, that on Client level, Multi-Lingual documents are selected and that you have created/loaded the language.">El lenguaje identifica el lenguaje a usar para el despliegue y formato de documentos. Esto requiere que a nivel de grupo empresarial se seleccione documentos multi-lenguaje, y que se haya creado/cargado el lenguaje</value>
  </row>
  <row id="3665" trl="Y">
   <value column="Name" original="Start Node">Nodo Inicial</value>
@@ -75,7 +75,7 @@
  <row id="12732" trl="Y">
   <value column="Name" original="Language">Lenguaje</value>
   <value column="Description" original="Language for this Business Partner if Multi-Language enabled">Lenguaje para este tercero si el multilenguaje esta habilitado</value>
-  <value column="Help" original="The Language identifies the language to use for display and formatting documents. It requires, that on Client level, Multi-Lingual documents are selected and that you have created/loaded the language.">El Lenguaje identifica el lenguaje a mostrar y diseño de los documentos. Este requiere que se seleccione documentos multi-lenguaje a nivel de la compañía y que haya creado el lenguaje.</value>
+  <value column="Help" original="The Language identifies the language to use for display and formatting documents. It requires, that on Client level, Multi-Lingual documents are selected and that you have created/loaded the language.">El Lenguaje identifica el lenguaje a mostrar y diseño de los documentos. Este requiere que se seleccione documentos multi-lenguaje a nivel del grupo empresarial y que haya creado el lenguaje.</value>
  </row>
  <row id="13179" trl="Y">
   <value column="Name" original="UserName">Nombre Usuario.</value>
@@ -114,7 +114,7 @@ Email de la persona responsable del sistema (Registrado en la tienda Web)</value
   <value column="Help" original=""/>
  </row>
  <row id="50069" trl="Y">
-  <value column="Name" original="Client">Compañía</value>
+  <value column="Name" original="Client">Grupo Empresarial</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
@@ -194,7 +194,7 @@ Email de la persona responsable del sistema (Registrado en la tienda Web)</value
   <value column="Help" original=""/>
  </row>
  <row id="50092" trl="Y">
-  <value column="Name" original="Client">Compañía</value>
+  <value column="Name" original="Client">Grupo Empresarial</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>

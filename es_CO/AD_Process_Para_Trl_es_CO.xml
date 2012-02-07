@@ -29,42 +29,42 @@
  </row>
  <row id="467" trl="Y">
   <value column="Name" original="Existing Organization">Organización Existente</value>
-  <value column="Description" original="Organizational entity within client - set to empty if you want to create a new organization">Organizational entity within client - set to empty if you want to create a new organization</value>
-  <value column="Help" original="An organization is a unit of your client or legal entity - examples are store, department. You can share data between organizations.">An organization is a unit of your client or legal entity - examples are store, department. You can share data between organizations.</value>
+  <value column="Description" original="Organizational entity within client - set to empty if you want to create a new organization">Entidad organizacional dentro de un grupo empresarial - déjelo vacío si quiere crear una nueva organización</value>
+  <value column="Help" original="An organization is a unit of your client or legal entity - examples are store, department. You can share data between organizations.">Una organización es una unidad de su grupo empresarial o entidad legal - por ejemplo tienda, departamento.  Puede compartir datos entre organizaciones.</value>
  </row>
  <row id="469" trl="Y">
-  <value column="Name" original="Limit Access to Role">Limit Access to Role</value>
-  <value column="Description" original="If no Role is selected, grant access to all (non-manual) roles of the Client">If no Role is selected, grant access to all (non-manual) roles of the Client</value>
-  <value column="Help" original="The Role determines security and access a user who has this Role will have in the System.">The Role determines security and access a user who has this Role will have in the System.</value>
+  <value column="Name" original="Limit Access to Role">Limitar Acceso a Rol</value>
+  <value column="Description" original="If no Role is selected, grant access to all (non-manual) roles of the Client">Si no se selecciona Rol, dar permiso a todos los roles (no manuales) del cliente</value>
+  <value column="Help" original="The Role determines security and access a user who has this Role will have in the System.">El Rol determina la seguridad y accesos que un usuario con este rol tendrá en el sistema.</value>
  </row>
  <row id="493" trl="Y">
-  <value column="Name" original="New User/Contact">New User/Contact</value>
-  <value column="Description" original="User within the system - Internal or Business Partner Contact">User within the system - Internal or Business Partner Contact</value>
-  <value column="Help" original="The User identifies a unique user in the system. This could be an internal user or a business partner contact">The User identifies a unique user in the system. This could be an internal user or a business partner contact</value>
+  <value column="Name" original="New User/Contact">Nuevo Usuario/Contacto</value>
+  <value column="Description" original="User within the system - Internal or Business Partner Contact">Usuario dentro del sistema - Contacto interno o de tercero</value>
+  <value column="Help" original="The User identifies a unique user in the system. This could be an internal user or a business partner contact">El usuario identifieca a un usuario único en el sistema.  Puede ser un usuario interno o un contacto de tercero</value>
  </row>
  <row id="494" trl="Y">
-  <value column="Name" original="New Workflow Responsible">New Workflow Responsible</value>
-  <value column="Description" original="Responsible for Workflow Execution">Responsible for Workflow Execution</value>
-  <value column="Help" original="The ultimate responsibility for a workflow is with an actual user. The Workflow Responsible allows to define ways to find that actual User.">The ultimate responsibility for a workflow is with an actual user. The Workflow Responsible allows to define ways to find that actual User.</value>
+  <value column="Name" original="New Workflow Responsible">Nuevo Responsable de Flujo de Trabajo</value>
+  <value column="Description" original="Responsible for Workflow Execution">Responsable de Ejecución del Flujo de Trabajo</value>
+  <value column="Help" original="The ultimate responsibility for a workflow is with an actual user. The Workflow Responsible allows to define ways to find that actual User.">La responsabilidad de un flujo de trabajo está con un usuario actual.  El Responsable de Flujo de Trabajo permite definir formas de encontrar este usuario actual.</value>
  </row>
  <row id="496" trl="Y">
-  <value column="Name" original="New User/Contact">New User/Contact</value>
-  <value column="Description" original="User within the system - Internal or Business Partner Contact">User within the system - Internal or Business Partner Contact</value>
-  <value column="Help" original="The User identifies a unique user in the system. This could be an internal user or a business partner contact">The User identifies a unique user in the system. This could be an internal user or a business partner contact</value>
+  <value column="Name" original="New User/Contact">Nuevo Usuario/Contacto</value>
+  <value column="Description" original="User within the system - Internal or Business Partner Contact">Usuario dentro del sistema - Contacto interno o de tercero</value>
+  <value column="Help" original="The User identifies a unique user in the system. This could be an internal user or a business partner contact">El usuario identifieca a un usuario único en el sistema.  Puede ser un usuario interno o un contacto de tercero</value>
  </row>
  <row id="497" trl="Y">
-  <value column="Name" original="New Workflow Responsible">New Workflow Responsible</value>
-  <value column="Description" original="Responsible for Workflow Execution">Responsible for Workflow Execution</value>
-  <value column="Help" original="The ultimate responsibility for a workflow is with an actual user. The Workflow Responsible allows to define ways to find that actual User.">The ultimate responsibility for a workflow is with an actual user. The Workflow Responsible allows to define ways to find that actual User.</value>
+  <value column="Name" original="New Workflow Responsible">Nuevo Responsable de Flujo de Trabajo</value>
+  <value column="Description" original="Responsible for Workflow Execution">Responsable de Ejecución del Flujo de Trabajo</value>
+  <value column="Help" original="The ultimate responsibility for a workflow is with an actual user. The Workflow Responsible allows to define ways to find that actual User.">La responsabilidad de un flujo de trabajo está con un usuario actual.  El Responsable de Flujo de Trabajo permite definir formas de encontrar este usuario actual.</value>
  </row>
  <row id="523" trl="Y">
-  <value column="Name" original="Default Sales Rep">Default Sales Rep</value>
-  <value column="Description" original="If not defined on Business Partner Level">If not defined on Business Partner Level</value>
+  <value column="Name" original="Default Sales Rep">Representante Ventas por Defecto</value>
+  <value column="Description" original="If not defined on Business Partner Level">Si no está definido a nivel de Tercero</value>
   <value column="Help" original=""/>
  </row>
  <row id="524" trl="Y">
-  <value column="Name" original="Dunning Currency">Dunning Currency</value>
-  <value column="Description" original="Currency to create Dunning Letters">Currency to create Dunning Letters</value>
+  <value column="Name" original="Dunning Currency">Moneda Morosidad</value>
+  <value column="Description" original="Currency to create Dunning Letters">Moneda para crear cartas de morosidad</value>
   <value column="Help" original=""/>
  </row>
  <row id="50001" trl="Y">
@@ -173,7 +173,7 @@
   <value column="Help" original="Only documents within this date range which are also in open periods will be reset.">Solo los documentos dentro de este rango de fechas que estén en períodos abiertos serán reiniciados.</value>
  </row>
  <row id="53282" trl="Y">
-  <value column="Name" original="Client Name">Nombre Compañía</value>
+  <value column="Name" original="Client Name">Nombre Grupo Empresarial</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
@@ -195,31 +195,31 @@
  <row id="53291" trl="Y">
   <value column="Name" original="BP Accounting">Contabilidad Tercero</value>
   <value column="Description" original="Use BP accounting dimension">Usa dimensión contable tercero</value>
-  <value column="Help" original="Define if this client will use business partner accounting dimension.  This can be changed later in Accounting Schema window of the client.">Define si esta compañía usará tercero como dimensión contable.  Esto puede cambiarse posteriormetne en la ventana de Esquema Contable de la compañía.</value>
+  <value column="Help" original="Define if this client will use business partner accounting dimension.  This can be changed later in Accounting Schema window of the client.">Define si este grupo empresarial usará tercero como dimensión contable.  Esto puede cambiarse posteriormetne en la ventana de Esquema Contable del grupo empresarial.</value>
  </row>
  <row id="53292" trl="Y">
   <value column="Name" original="Product Accounting">Contabilidad Producto</value>
   <value column="Description" original="Use Product accounting dimension">Usa dimensión contable producto</value>
-  <value column="Help" original="Define if this client will use product accounting dimension.  This can be changed later in Accounting Schema window of the client.">Define si esta compañía usará producto como dimensión contable.  Esto puede cambiarse posteriormetne en la ventana de Esquema Contable de la compañía.</value>
+  <value column="Help" original="Define if this client will use product accounting dimension.  This can be changed later in Accounting Schema window of the client.">Define si este grupo empresarial usará producto como dimensión contable.  Esto puede cambiarse posteriormetne en la ventana de Esquema Contable del grupo empresarial.</value>
  </row>
  <row id="53293" trl="Y">
   <value column="Name" original="Project Accounting">Contabilidad Proyecto</value>
   <value column="Description" original="Use Project accounting dimension">Usa dimensión contable proyecto</value>
-  <value column="Help" original="Define if this client will use project accounting dimension.  This can be changed later in Accounting Schema window of the client.">Define si esta compañía usará proyecto como dimensión contable.  Esto puede cambiarse posteriormetne en la ventana de Esquema Contable de la compañía.</value>
+  <value column="Help" original="Define if this client will use project accounting dimension.  This can be changed later in Accounting Schema window of the client.">Define si este grupo empresarial usará proyecto como dimensión contable.  Esto puede cambiarse posteriormetne en la ventana de Esquema Contable del grupo empresarial.</value>
  </row>
  <row id="53294" trl="Y">
   <value column="Name" original="Campaign Accounting">Contabilidad Campaña</value>
   <value column="Description" original="Use Campaign accounting dimension">Usa dimensión contable campaña</value>
-  <value column="Help" original="Define if this client will use campaign accounting dimension.  This can be changed later in Accounting Schema window of the client.">Define si esta compañía usará campaña como dimensión contable.  Esto puede cambiarse posteriormetne en la ventana de Esquema Contable de la compañía.</value>
+  <value column="Help" original="Define if this client will use campaign accounting dimension.  This can be changed later in Accounting Schema window of the client.">Define si este grupo empresarial usará campaña como dimensión contable.  Esto puede cambiarse posteriormetne en la ventana de Esquema Contable del grupo empresarial.</value>
  </row>
  <row id="53295" trl="Y">
   <value column="Name" original="Sales Region Accounting">Contabilidad Región de Ventas</value>
   <value column="Description" original="Use Sales Region accounting dimension">Usa dimensión contable región de ventas</value>
-  <value column="Help" original="Define if this client will use sales region accounting dimension.  This can be changed later in Accounting Schema window of the client.">Define si esta compañía usará región de ventas como dimensión contable.  Esto puede cambiarse posteriormetne en la ventana de Esquema Contable de la compañía.</value>
+  <value column="Help" original="Define if this client will use sales region accounting dimension.  This can be changed later in Accounting Schema window of the client.">Define si este grupo empresarial usará región de ventas como dimensión contable.  Esto puede cambiarse posteriormetne en la ventana de Esquema Contable del grupo empresarial.</value>
  </row>
  <row id="53296" trl="Y">
   <value column="Name" original="Chart of Accounts File">Archivo Plan de Cuentas</value>
-  <value column="Description" original="Location of the chart of accounts to be used with this client.  At this stage just the default accounts will be created.">Localización del archivo de plan de cuentas a ser usado por esta compañía.  En este momento solamente las cuentas por defecto serán creadas.</value>
+  <value column="Description" original="Location of the chart of accounts to be used with this client.  At this stage just the default accounts will be created.">Localización del archivo de plan de cuentas a ser usado por este grupo empresarial.  En este momento solamente las cuentas por defecto serán creadas.</value>
   <value column="Help" original=""/>
  </row>
  <row id="53314" trl="Y">

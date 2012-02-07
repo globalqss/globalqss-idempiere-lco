@@ -747,7 +747,7 @@ Nos ayudará, si usted permitirá publicar su uso en Adempiere. Nos pondremos en
  <row id="254" trl="Y">
   <value column="Name" original="Accounting Fact Period">Asientos Contables por Período</value>
   <value column="Description" original="Accounting Fact Details summarized by Accounting Period">Detalles de asientos contables resumidos por período de contabilización</value>
-  <value column="Help" original="The Period is based on the the Calendar defined on Client level.">El período se basa en el calendario definido en nivel de la compañía.</value>
+  <value column="Help" original="The Period is based on the the Calendar defined on Client level.">El período se basa en el calendario definido en nivel del grupo empresarial.</value>
  </row>
  <row id="255" trl="Y">
   <value column="Name" original="Reopen Order">Reabrir Orden</value>
@@ -778,7 +778,7 @@ Nos ayudará, si usted permitirá publicar su uso en Adempiere. Nos pondremos en
  <row id="260" trl="Y">
   <value column="Name" original="Link Organization">Liga Organización</value>
   <value column="Description" original="Link Business Partner to an Organization">Integración de Tercero a una Organización</value>
-  <value column="Help" original="If the Business Partner is another Organization, select the Organization or set to empty to create a new Organization.  You link a Business Partner to an Organization to create explicit Documents for Inter-Org transaction.&#10;If you create a new Organization, you may supply a Organization Type.  If you select a Role, the access to the new Organization is limited to that role, otherwise all (non manual) roles of the Client will have access to the new Organization.">Si el tercero esta en otra organización, seleccione la organización o fije para crear una nueva organización. Usted liga a tercero a una organización para crear los documentos explícitos para la Integración-Org transacción. Si usted crea una nueva organización, usted puede proveer un tipo de la organización. Si usted selecciona un rol, el acceso a la nueva organización se limita a ese rol, si no todo los roles (no manual) de la compañía tendrán acceso a la nueva organización.</value>
+  <value column="Help" original="If the Business Partner is another Organization, select the Organization or set to empty to create a new Organization.  You link a Business Partner to an Organization to create explicit Documents for Inter-Org transaction.&#10;If you create a new Organization, you may supply a Organization Type.  If you select a Role, the access to the new Organization is limited to that role, otherwise all (non manual) roles of the Client will have access to the new Organization.">Si el tercero esta en otra organización, seleccione la organización o fije para crear una nueva organización. Usted liga a tercero a una organización para crear los documentos explícitos para la Integración-Org transacción. Si usted crea una nueva organización, usted puede proveer un tipo de la organización. Si usted selecciona un rol, el acceso a la nueva organización se limita a ese rol, si no todo los roles (no manual) del grupo empresarial tendrán acceso a la nueva organización.</value>
  </row>
  <row id="261" trl="Y">
   <value column="Name" original="Create &amp; Invite">Crea e Invita</value>
@@ -955,9 +955,9 @@ Entonces las valuaciones de todas las respuestas de cantidad se adicionan a la v
  </row>
  <row id="295" trl="Y">
   <value column="Name" original="Role Access Update">Actualización de Rol</value>
-  <value column="Description" original="Update the access rights of a role or roles of a client">Actualizar las reglas de acceso de un rol o roles de una compañía.</value>
-  <value column="Help" original="Update the access rights of a role or all roles of a client to windows, forms, processes and workflows. If run for System, all roles of all clients are updated. Note that a role is only updated if it is not marked as manual.">Actualize las reglas de acceso de un rol o de todos los roles de una compañía para Ventanas, Formatos y Flujos de Trabajo.
-Si lo ejecuta para System, todos los roles de todas las compañías son actualizados. Observe que un rol es solamente actualizado si no esta marcado como manual.</value>
+  <value column="Description" original="Update the access rights of a role or roles of a client">Actualizar las reglas de acceso de un rol o roles de un grupo empresarial.</value>
+  <value column="Help" original="Update the access rights of a role or all roles of a client to windows, forms, processes and workflows. If run for System, all roles of all clients are updated. Note that a role is only updated if it is not marked as manual.">Actualice las reglas de acceso de un rol o de todos los roles de un grupo empresarial para Ventanas, Formatos y Flujos de Trabajo.
+Si lo ejecuta para System, todos los roles de todas los grupo empresariales son actualizados. Observe que un rol es solamente actualizado si no esta marcado como manual.</value>
  </row>
  <row id="296" trl="Y">
   <value column="Name" original="Import Confirmations">Importar Confirmaciones</value>
@@ -995,7 +995,7 @@ Si lo ejecuta para System, todos los roles de todas las compañías son actualiz
   <value column="Help" original="Try to allocate invoices to payments for a business partner or group.  You may want to reset existing allocations first.&lt;br&gt;&#10;The allocation is based on (1) payments entered with reference to invoices (2) payment selections (3) business partner balance (4) matching amount of invoice &amp; payment.  Allocation is based on exact amount and includes AP/AR imvoices/payments.&lt;br&gt;&#10;Optionally as (5), you can enable to allocate payments to the oldest invoice. In this case, there might be an unallocated amount remaining.">Asignar facturas a los pagos para un Tercero o un Grupo de Terceros. Usted puede restaurar asignaciones existentes primero.</value>
  </row>
  <row id="303" trl="Y">
-  <value column="Name" original="Reset Allocation">Asignación (Reinicia)</value>
+  <value column="Name" original="Reset Allocation">Reinicia Asignación (Borra)</value>
   <value column="Description" original="Reset (delete) allocation of invoices to payments">Reinicia (Borra) Asignación automática de facturas a los pagos</value>
   <value column="Help" original="Delete Allocations for a business partner or business partner group, accounting date range or individual allocation. In contrast to &quot;Void&quot; in &quot;View Allocation&quot;, the allocation is deleted (no trace), if the period is open.">Borra Asignaciones para un Tercero o para un Grupo de Terceros</value>
  </row>
@@ -1026,8 +1026,8 @@ Si lo ejecuta para System, todos los roles de todas las compañías son actualiz
  </row>
  <row id="309" trl="Y">
   <value column="Name" original="Workflow to Client">Mueve Flujo de Trabajo</value>
-  <value column="Description" original="Move custom workflow elements to the current client">Mueva los elementos personalizados de Flujo de Trabajo a la compañía actual.</value>
-  <value column="Help" original="The security architecture prevents you from adding client specific modifications/customizations to existing standard workflows.  This process moves your customization made on system level to this client to add client specific details.">La arquitectura de la seguridad evita que usted agregue modificaciones/arreglos a la compañía para registros particulares a los Flujos de Trabajo estandares existentes. Este proceso mueve su arreglo para requisitos particulares hechos en nivel de sistema a esta compañía para arreglar los detalles específicos de la compañía.</value>
+  <value column="Description" original="Move custom workflow elements to the current client">Mueva los elementos personalizados de Flujo de Trabajo al grupo empresarial actual.</value>
+  <value column="Help" original="The security architecture prevents you from adding client specific modifications/customizations to existing standard workflows.  This process moves your customization made on system level to this client to add client specific details.">La arquitectura de la seguridad evita que usted agregue modificaciones/arreglos al grupo empresarial para registros particulares a los Flujos de Trabajo estandares existentes. Este proceso mueve su arreglo para requisitos particulares hechos en nivel de sistema a este grupo empresarial para arreglar los detalles específicos del grupo empresarial.</value>
  </row>
  <row id="310" trl="Y">
   <value column="Name" original="Trial Balance">Balance de Prueba</value>
@@ -1065,17 +1065,17 @@ Si se selecciona una cuenta, el balance es calculado en base al  tipo de cuenta 
  <row id="316" trl="Y">
   <value column="Name" original="UnAllocated Invoices">Facturas sin Asignar</value>
   <value column="Description" original="Invoices not allocated to Payments">Facturas no asignadas a los pagos</value>
-  <value column="Help" original="Report of not allocated Invoices (for partially paid/allocated invoices see Open Item)">Reporte de Facturas no asignadas (Para las Facturas de vea parcialmente el artículo</value>
+  <value column="Help" original="Report of not allocated Invoices (for partially paid/allocated invoices see Open Item)">Reporte de facturas no asignadas (para facturas pagadas/asignadas ver Saldos Abiertos)</value>
  </row>
  <row id="317" trl="Y">
   <value column="Name" original="UnAllocated Payments">Pagos sin Asignar</value>
   <value column="Description" original="Payments not allocated to Invoices">Pagos no asignados a las facturas</value>
-  <value column="Help" original="Report of not allocated Payments (for partially allocated payments, use Payment Detail)">Reporte de pagos no asignados (para las facturas de pago/asignado vea parcialmente el artículo abierto)</value>
+  <value column="Help" original="Report of not allocated Payments (for partially allocated payments, use Payment Detail)">Reporte de pagos no asignados (para pagos parcialmente asignados, use Detalles del Pago)</value>
  </row>
  <row id="318" trl="Y">
   <value column="Name" original="Payment Details">Detalles del Pago</value>
   <value column="Description" original="Payment Detail Report">Reporte de Detalles de Pagos</value>
-  <value column="Help" original="Type adjusted payments (receipts positive, payments negative) with allocated and available amounts">Mecanografie los pagos ajustados (Positivo de los recibos, negativa de los pagos) con cantidades asignadas y disponibles</value>
+  <value column="Help" original="Type adjusted payments (receipts positive, payments negative) with allocated and available amounts">Muestra los pagos ajustados (recaudos positivos, pagos negativos) con montos asignados y disponibles</value>
  </row>
  <row id="319" trl="Y">
   <value column="Name" original="Business Partner Open">Saldos de Tercero</value>
@@ -1090,7 +1090,7 @@ Si se selecciona una cuenta, el balance es calculado en base al  tipo de cuenta 
  <row id="321" trl="Y">
   <value column="Name" original="Synchronize Doc Translation">Sincroniza la traducción del documento</value>
   <value column="Description" original="Synchronize Document Translation">Sincroniza la traducción del documento</value>
-  <value column="Help" original="If the current client has not multi-lingual documents enabled, the translations for documents are synchronized with the main record (i.e. it copies the content of the main record to the translation records).  This process is necessary when swiching to a mono-lingual environment as there the terminoligy is maintained not in the translation records.&lt;br&gt;&#10;This applies to the client defined document translations, e.g. for UoM, Payment Terms, Product Info, etc.">Si la compañía actual no permite se hagan los documentos multilenguajes, las traducciones para los documentos se sincronizan con el registro principal (es decir copia el contenido del registro principal a los registros de la traducción). Este proceso es necesario en un ambiente monolenguaje ya que allí no se mantiene la terminologia en la traducción de registros. Esto se aplica a las traducciones definidas del documento de compañía, ej. para UM, los términos del pago, información de producto, etc.</value>
+  <value column="Help" original="If the current client has not multi-lingual documents enabled, the translations for documents are synchronized with the main record (i.e. it copies the content of the main record to the translation records).  This process is necessary when swiching to a mono-lingual environment as there the terminoligy is maintained not in the translation records.&lt;br&gt;&#10;This applies to the client defined document translations, e.g. for UoM, Payment Terms, Product Info, etc.">Si el grupo empresarial actual no permite se hagan los documentos multilenguajes, las traducciones para los documentos se sincronizan con el registro principal (es decir copia el contenido del registro principal a los registros de la traducción). Este proceso es necesario en un ambiente monolenguaje ya que allí no se mantiene la terminologia en la traducción de registros. Esto se aplica a las traducciones definidas del documento de grupo empresarial, ej. para UM, los términos del pago, información de producto, etc.</value>
  </row>
  <row id="322" trl="Y">
   <value column="Name" original="Material Reference">Referencia de Material</value>
@@ -1183,8 +1183,8 @@ y Recibi/Línea o directamente para el producto.</value>
 </value>
  </row>
  <row id="339" trl="Y">
-  <value column="Name" original="Report or Update Issue">Reportar o Actualizar Surtimiento</value>
-  <value column="Description" original="Report Issue to Adempiere">Reportar Surtimiento a Adempiere</value>
+  <value column="Name" original="Report or Update Issue">Reportar o Actualizar Problema</value>
+  <value column="Description" original="Report Issue to Adempiere">Reportar Problema a Adempiere</value>
   <value column="Help" original=""/>
  </row>
  <row id="340" trl="Y">
@@ -1465,7 +1465,7 @@ Puede también incluir órdenes de distribución que tienen confirmaciones pendi
  <row id="53050" trl="Y">
   <value column="Name" original="Create Doc Type to Manufacturing">Crear Tipo Doc para Manufactura</value>
   <value column="Description" original="Let create the document type to manufacturing">Permite crear los tipos de documento para manufactura</value>
-  <value column="Help" original="This process only need run one time by client">Solo debe ejecutar este proceso una vez por compañía</value>
+  <value column="Help" original="This process only need run one time by client">Solo debe ejecutar este proceso una vez por grupo empresarial</value>
  </row>
  <row id="53052" trl="Y">
   <value column="Name" original="Create Element">Crear Elemento</value>
@@ -1777,7 +1777,7 @@ Debe ser implementado cuando no haya usuarios conectados.</value>
   <value column="Help" original="Lets freeze or unfreeze the cost, If the Cost is UnFrozen then can be changed">Permite congelar o descongelar el costo, si el costo es descongelado puede ser cambiado</value>
  </row>
  <row id="53161" trl="Y">
-  <value column="Name" original="Initial Client Setup Process">Configuración Inicial de Compañía</value>
+  <value column="Name" original="Initial Client Setup Process">Configuración Inicial de Grupo Empresarial</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
@@ -1817,7 +1817,7 @@ Debe ser implementado cuando no haya usuarios conectados.</value>
   <value column="Help" original=""/>
  </row>
  <row id="53199" trl="Y">
-  <value column="Name" original="Reset Allocation Direct">Reinicia Asignación Directa</value>
+  <value column="Name" original="Reset Allocation Direct">Borra Esta Asignación</value>
   <value column="Description" original="Reset (delete) allocation of invoices to payments">Reinicia (borra) asignación de facturas a pagos</value>
   <value column="Help" original="Delete individual allocation. In contrast to &quot;Reverse&quot;, the allocation is deleted (no trace), if the period is open.">Borra asignaciones individuales.  En contraste a "Reversar", la asignación es borrada (no se guarda log), si el período está abierto.</value>
  </row>

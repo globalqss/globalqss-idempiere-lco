@@ -15,8 +15,8 @@
   <value column="Description" original=""/>
  </row>
  <row id="156" trl="Y">
-  <value column="Name" original="Client Rules">Reglas de la Compañía</value>
-  <value column="Description" original="Maintain Client Rules">Mantener Reglas de Compañía</value>
+  <value column="Name" original="Client Rules">Reglas del Grupo Empresarial</value>
+  <value column="Description" original="Maintain Client Rules">Mantener Reglas de Grupo Empresarial</value>
  </row>
  <row id="157" trl="Y">
   <value column="Name" original="Data">Datos</value>

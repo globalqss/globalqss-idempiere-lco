@@ -319,7 +319,7 @@
  </row>
  <row id="129" trl="Y">
   <value column="Name" original="AD_Client">AD_Client</value>
-  <value column="Description" original="Client selection">Selección de Compañía</value>
+  <value column="Description" original="Client selection">Selección de Grupo Empresarial</value>
   <value column="Help" original=""/>
  </row>
  <row id="130" trl="Y">

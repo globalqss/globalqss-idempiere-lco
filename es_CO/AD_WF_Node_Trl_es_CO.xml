@@ -54,8 +54,8 @@
   <value column="Help" original="Translate Name, Description and Help of Workflows and their Nodes.  You only need to translate the List Elements !!">Translate Name, Description and Help of Workflows and their Nodes. You only need to translate the List Elements !!</value>
  </row>
  <row id="152" trl="Y">
-  <value column="Name" original="Check Client Setup">Compañía</value>
-  <value column="Description" original="Check Client setup for Requests">Verificación de la Configuración de Compañía</value>
+  <value column="Name" original="Check Client Setup">Grupo Empresarial</value>
+  <value column="Description" original="Check Client setup for Requests">Verificación de la Configuración de Grupo Empresarial</value>
   <value column="Help" original="You need to have a mail server and an email address from which the requets an notifications are sent.  Optionally, if you define a mail user and password, requests are read from the mail users's folder and imported into the system.">Usted necesita tener un servidor de correo y una dirección de mail de los cuales las notificaciones de solicitudes se envien. Opcionalmente, si usted define un usuario y contraseña del mail, las solicitudes se leen en las carpetas de los usuarios del correo y se importan en el sistema.</value>
  </row>
  <row id="153" trl="Y">
