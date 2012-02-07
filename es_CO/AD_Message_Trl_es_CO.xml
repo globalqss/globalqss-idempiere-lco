@@ -67,7 +67,7 @@
   <value column="MsgTip" original="You don't have the privileges">Usted no tiene los privilegios requeridos</value>
  </row>
  <row id="117" trl="Y">
-  <value column="MsgText" original="Client &amp; Organization Data">Datos de Compañía y Organización</value>
+  <value column="MsgText" original="Client &amp; Organization Data">Datos de Grupo Empresarial y Organización</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="118" trl="Y">
@@ -87,7 +87,7 @@
   <value column="MsgTip" original=""/>
  </row>
  <row id="122" trl="Y">
-  <value column="MsgText" original="System &amp; Client Data">Datos del Sistema y Compañía</value>
+  <value column="MsgText" original="System &amp; Client Data">Datos del Sistema y Grupo Empresarial</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="123" trl="Y">
@@ -312,7 +312,7 @@ Por favor cambie la caja PDV solo después de completar la transacción</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="178" trl="Y">
-  <value column="MsgText" original="Client">Compañía</value>
+  <value column="MsgText" original="Client">Grupo Empresarial</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="179" trl="Y">
@@ -1221,7 +1221,7 @@ Entre el pago después de completar la transacción</value>
  </row>
  <row id="404" trl="Y">
   <value column="MsgText" original="Calendar Period not found">Período calendario no fue encontrado</value>
-  <value column="MsgTip" original="Check setup of Calendar and Accounting Schema as well as Accounting Schema assignment to Client or Organization">Revisar definición de calendario y esquema contable como asignación de esquema contable a compañía u organización.</value>
+  <value column="MsgTip" original="Check setup of Calendar and Accounting Schema as well as Accounting Schema assignment to Client or Organization">Revisar definición de calendario y esquema contable así como asignación de esquema contable a grupo empresarial u organización.</value>
  </row>
  <row id="405" trl="Y">
   <value column="MsgText" original="No valid period for this accounting date.">No existe período válido para ésta fecha contable.</value>
@@ -1527,7 +1527,7 @@ no existe dirección origen - por favor revise usuario</value>
  </row>
  <row id="480" trl="Y">
   <value column="MsgText" original="Cannot send EMail:&#10;No Mail Server (SMTP) found; Check Client Info">No fue posible enviar Email:
-no se encontró servidor SMTP; por favor revise información de la compañía</value>
+no se encontró servidor SMTP; por favor revise configuración del grupo empresarial</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="481" trl="Y">
@@ -1564,7 +1564,7 @@ No existe dirección del destinatario - revise información de contacto</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="489" trl="Y">
-  <value column="MsgText" original="Role and Client/Organization inconsistent">El rol y la compañía/organización son inconsistentes</value>
+  <value column="MsgText" original="Role and Client/Organization inconsistent">El rol y configuración grupo empresarial/organización son inconsistentes</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="490" trl="Y">
@@ -1974,7 +1974,7 @@ Detalles: </value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="590" trl="Y">
-  <value column="MsgText" original="Initial Client Setup">Definición inicial de compañía</value>
+  <value column="MsgText" original="Initial Client Setup">Definición Inicial de Grupo Empresarial</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="591" trl="Y">
@@ -2975,7 +2975,7 @@ Compruebe el registro de errores y el formato del archivo Accounting*.cvs - Ning
   <value column="MsgTip" original=""/>
  </row>
  <row id="847" trl="Y">
-  <value column="MsgText" original="Costing Level defined on Client Level - You cannot specify Organization nor Attribute">Nivel de Costeo Definido en Nivel de Compañía - Usted no puede especificar Organización o Atributo.</value>
+  <value column="MsgText" original="Costing Level defined on Client Level - You cannot specify Organization nor Attribute">Nivel de Costeo Definido en Nivel de Grupo Empresarial - Usted no puede especificar Organización o Atributo.</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="848" trl="Y">
@@ -3049,7 +3049,7 @@ Compruebe el registro de errores y el formato del archivo Accounting*.cvs - Ning
  </row>
  <row id="865" trl="Y">
   <value column="MsgText" original="Cache Windows">Caché de Ventana</value>
-  <value column="MsgTip" original="Cache Window Definitions on Client">Definición del Caché de Ventana en Compañía</value>
+  <value column="MsgTip" original="Cache Window Definitions on Client">Definición del Caché de Ventana en Grupo Empresarial</value>
  </row>
  <row id="866" trl="Y">
   <value column="MsgText" original="&amp;Performance"><![CDATA[&Desempeño]]></value>
@@ -3184,7 +3184,7 @@ Compruebe el registro de errores y el formato del archivo Accounting*.cvs - Ning
   <value column="MsgTip" original=""/>
  </row>
  <row id="50010" trl="Y">
-  <value column="MsgText" original="If you change the attachment storage method, the old attachments are no longer available to your client.">Si cambia el método de almacenamiento de archivo adjunto, los antiguos archivos adjuntos ya no están disponibles para su compañía.</value>
+  <value column="MsgText" original="If you change the attachment storage method, the old attachments are no longer available to your client.">Si cambia el método de almacenamiento de archivo adjunto, los antiguos archivos adjuntos ya no están disponibles para su grupo empresarial.</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="50011" trl="Y">
@@ -3196,7 +3196,7 @@ Compruebe el registro de errores y el formato del archivo Accounting*.cvs - Ning
   <value column="MsgTip" original=""/>
  </row>
  <row id="50015" trl="Y">
-  <value column="MsgText" original="If you change the archive storage method, the old archive entries are no longer available to your client.">Si cambia el método de archivo, las entradas antiguas no estarán disponibles para su compañía</value>
+  <value column="MsgText" original="If you change the archive storage method, the old archive entries are no longer available to your client.">Si cambia el método de archivo, las entradas antiguas no estarán disponibles para su grupo empresarial</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="50016" trl="Y">
@@ -5213,11 +5213,11 @@ Compruebe el registro de errores y el formato del archivo Accounting*.cvs - Ning
   <value column="MsgTip" original=""/>
  </row>
  <row id="53009" trl="Y">
-  <value column="MsgText" original="This is a system or client parameter, you can't save it as organization parameter">Este es un parámetro de compañía o sistema, no se puede guardar como un parámetro de organización.</value>
+  <value column="MsgText" original="This is a system or client parameter, you can't save it as organization parameter">Este es un parámetro de grupo empresarial o sistema, no se puede guardar como un parámetro de organización.</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="53010" trl="Y">
-  <value column="MsgText" original="This is a system parameter, you can't save it as client parameter">Este es un parámetro del sistema, no se puede guardar como parámetro de compañía</value>
+  <value column="MsgText" original="This is a system parameter, you can't save it as client parameter">Este es un parámetro del sistema, no se puede guardar como parámetro de grupo empresarial</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="53011" trl="Y">

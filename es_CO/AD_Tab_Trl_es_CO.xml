@@ -114,7 +114,7 @@
   <value column="Name" original="Role">Rol</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original="Define responsibility roles">Definir roles de responsabilidad</value>
-  <value column="Help" original="Define the role and add the client and organizations the role has access to. You can give users access to this role and modify the access of this role to windows, forms, processes and reports as well as tasks. &lt;br&gt;&#10;If the Role User Level is Manual, the assigned acces rights are not automatically updated (e.g. if a role has a restricted number of Windows/Processes it can access). You need to add organizational access unless the role has access to all organizations. The SuperUser and the user creating a new role are assigned to the role automatically.  &lt;br&gt;&#10;If you select an Organization Tree, the user has access to the leaves of  summary organizations.&#10;Note: You cannot change the System Administrator role.">Define el rol y adiciona la compañía y organizaciones a las cuales el rol tiene acceso. Es posible asignar usuarios acceso a este rol para que tengan acceso a las diferentes ventanas, procesos y tareas.</value>
+  <value column="Help" original="Define the role and add the client and organizations the role has access to. You can give users access to this role and modify the access of this role to windows, forms, processes and reports as well as tasks. &lt;br&gt;&#10;If the Role User Level is Manual, the assigned acces rights are not automatically updated (e.g. if a role has a restricted number of Windows/Processes it can access). You need to add organizational access unless the role has access to all organizations. The SuperUser and the user creating a new role are assigned to the role automatically.  &lt;br&gt;&#10;If you select an Organization Tree, the user has access to the leaves of  summary organizations.&#10;Note: You cannot change the System Administrator role.">Define el rol y adiciona el grupo empresarial y organizaciones a las cuales el rol tiene acceso. Es posible asignar usuarios acceso a este rol para que tengan acceso a las diferentes ventanas, procesos y tareas.</value>
  </row>
  <row id="120" trl="Y">
   <value column="Name" original="User Assignment">Asignación de Usuario</value>
@@ -226,10 +226,10 @@ Debe reiniciar su servidor de aplicaciones para que la mayoría de los cambios h
   <value column="Help" original="The Organization Tab is used to define an Organization.  Each Organization has a Key and Name and optionally a Description.  &#10;When adding a new organization, you must re-login to be able to access the new organization.">La pestaña de organización es usada para definir una organización. Cada organización tiene una clave y un nombre y opcionalmente una descripción. Cuando se adiciona una nueva organización es necesario salir del sistema y volver a entrar para que se pueda tener acceso a la nueva organización.</value>
  </row>
  <row id="145" trl="Y">
-  <value column="Name" original="Client">Compañía</value>
-  <value column="CommitWarning" original="Create a new client via &quot;Initial Client Setup&quot;. You can only change information here!  You need re-login and restart your application server for most changes made here to be effective.  The change of the Material Policy applies to future transactions.">La creación de una nueva compañía debe hacerse por medio de la ventana "Configuración Inicial Compañía".  Solo debe modificar información aquí!  Necesita volver a ingresar y reiniciar su servidor de aplicaciones para que la mayoría de cambios hechos aquí surtan efecto.  El cambio en la Política de Material aplicará para transacciones futuras.</value>
-  <value column="Description" original="Client/Tenant Definition">Definir Compañías</value>
-  <value column="Help" original="The Client Definition Tab defines a unique client.&#10;Do not create a new client in this window, but use &quot;Initial Client Setup&quot; (System Administrator Role) to set up the required security and access rules. If you create a new client here, you will not be able to view it and also the required client infrastructure would not have been set up.">La pestaña de definición de Compañía define una compañía única. No use esta ventana para crear una compañía, use el flujo de trabajo `Definir Compañía` para establecer las reglas de seguridad y de acceso requeridas. Si se crea una compañía aquí, la compañía no podrá ser vista dentro del sistema y su definición de parámetros no sera creada.</value>
+  <value column="Name" original="Client">Grupo Empresarial</value>
+  <value column="CommitWarning" original="Create a new client via &quot;Initial Client Setup&quot;. You can only change information here!  You need re-login and restart your application server for most changes made here to be effective.  The change of the Material Policy applies to future transactions.">La creación de un nuevo grupo empresarial debe hacerse por medio de la ventana "Configuración Inicial Grupo Empresarial".  Solo debe modificar información aquí!  Necesita volver a ingresar y reiniciar su servidor de aplicaciones para que la mayoría de cambios hechos aquí surtan efecto.  El cambio en la Política de Material aplicará para transacciones futuras.</value>
+  <value column="Description" original="Client/Tenant Definition">Definir Grupo Empresarial</value>
+  <value column="Help" original="The Client Definition Tab defines a unique client.&#10;Do not create a new client in this window, but use &quot;Initial Client Setup&quot; (System Administrator Role) to set up the required security and access rules. If you create a new client here, you will not be able to view it and also the required client infrastructure would not have been set up.">La pestaña de definición de grupo empresarial define un grupo empresarial único. No use esta ventana para crear un grupo empresarial, use el flujo de trabajo "Definir Grupo Empresarial" para establecer las reglas de seguridad y de acceso requeridas. Si se crea un grupo empresarial aquí, no podrá ser visto dentro del sistema y su definición de parámetros no será creada.</value>
  </row>
  <row id="146" trl="Y">
   <value column="Name" original="Sequence">Secuencia</value>
@@ -282,7 +282,7 @@ Debe reiniciar su servidor de aplicaciones para que la mayoría de los cambios h
  <row id="156" trl="Y">
   <value column="Name" original="Preference">Preferencia</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Maintain System Client Org and User Preferences">Mantener preferencias de Sistema, Compañía, Organización y Usuario</value>
+  <value column="Description" original="Maintain System Client Org and User Preferences">Mantener preferencias de Sistema, Grupo Empresarial, Organización y Usuario</value>
   <value column="Help" original=""/>
  </row>
  <row id="157" trl="Y">
@@ -292,10 +292,10 @@ Debe reiniciar su servidor de aplicaciones para que la mayoría de los cambios h
   <value column="Help" original="The Project Tab is used to define the Value, Name and Description for each project.  It also is defines the tracks the amounts assigned to, committed to and used for this project. Note that when the project Type is changed, the Phases and Tasks are re-created.">La pestaña de proyectos es usada para definir el valor, nombre y descripción de cada proyecto. También define y hace seguimiento a los totales asignados, comprometidos y usados.</value>
  </row>
  <row id="158" trl="Y">
-  <value column="Name" original="GL Category">Categoría Contabilidad</value>
+  <value column="Name" original="GL Category">Tipo Comprobante Contable</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Define General Ledger Categories">Definir categorías de contabilidad</value>
-  <value column="Help" original="The GL Category Tab defines optional identifiers for a document or journal.  Each Category may be used on a document, manual journal or import">La pestaña de Categoría Contabilidad define identificadores opcionales para un documento o entrada de diario. Cada categoría puede ser usada en un documento. Entrada de diario o un archivo a importar.</value>
+  <value column="Description" original="Define General Ledger Categories">Definir tipos de comprobante contable</value>
+  <value column="Help" original="The GL Category Tab defines optional identifiers for a document or journal.  Each Category may be used on a document, manual journal or import">La pestaña de Tipo Comprobante Contable define identificadores opcionales para un documento o entrada de diario. Cada tipo comprobante puede ser usado en un documento, nota contable o archivo a importar.</value>
  </row>
  <row id="159" trl="Y">
   <value column="Name" original="Batch">Lote</value>
@@ -322,10 +322,10 @@ Debe reiniciar su servidor de aplicaciones para que la mayoría de los cambios h
   <value column="Help" original="The Document Definition Tab defines the processing parameters and controls for the document.  Note that shipments for automatic documents like POS/Warehouse Orders cannot have confirmations!">La pestaña de definición de documento define los parámetros de procesamiento y control del documento.</value>
  </row>
  <row id="169" trl="Y">
-  <value column="Name" original="Client Info">Información de Compañía</value>
+  <value column="Name" original="Client Info">Información de Grupo Empresarial</value>
   <value column="CommitWarning" original="You need re-login and restart your application server for most changes made here to be effective.">Necesita volver a ingresar y reiniciar su servidor de aplicaciones para que la mayoría de cambios hechos aquí surtan efecto.</value>
-  <value column="Description" original="Client Info">Información de la compañía</value>
-  <value column="Help" original="The Client Info Tab defines the details for each client.  The accounting rules and high level defaults are defined here. The Calendar is used to determine if a period is open or closed.">La pestaña de información de la compañía define los detalles de cada compañía. Las reglas contables y los valores predeterminados de alto nivel son definidos aquí.</value>
+  <value column="Description" original="Client Info">Información del grupo empresarial</value>
+  <value column="Help" original="The Client Info Tab defines the details for each client.  The accounting rules and high level defaults are defined here. The Calendar is used to determine if a period is open or closed.">La pestaña de información del grupo empresarial define los detalles de cada grupo empresarial. Las reglas contables y los valores predeterminados de alto nivel son definidos aquí.</value>
  </row>
  <row id="170" trl="Y">
   <value column="Name" original="Organization Info">Información de la Organización</value>
@@ -464,7 +464,7 @@ Debe reiniciar su servidor de aplicaciones para que la mayoría de los cambios h
   <value column="CommitWarning" original="If you change the currency or costing method, you must reset all accounting transactions.&#10;For changes to become effective, you must re-login and re-start the Application Server. ">Si cambia la moneda o el método de costeo, debe resetear todas las transacciones contables.
 Necesita volver a ingresar y reiniciar su servidor de aplicaciones para que los cambios surtan efecto.</value>
   <value column="Description" original="Define your Account Schema Structure">Definir estructura del esquema contable</value>
-  <value column="Help" original="The Accounting Schema Tab defines the controls used for accounting.  You can define multiple accounting schema per client (for parallel accounting).  &#10;Postings are generated for an accounting schema, if the schema is valid and you have defined GL and Default accounts and after completion of the Add / Copy Accounts process.">La pestaña de Esquema Contable define los controles para la contabilidad. Puede definir múltiples esquemas contables por compañía (para contabilidades simultáneas, ej: en dólares y pesos).
+  <value column="Help" original="The Accounting Schema Tab defines the controls used for accounting.  You can define multiple accounting schema per client (for parallel accounting).  &#10;Postings are generated for an accounting schema, if the schema is valid and you have defined GL and Default accounts and after completion of the Add / Copy Accounts process.">La pestaña de Esquema Contable define los controles para la contabilidad. Puede definir múltiples esquemas contables por grupo empresarial (para contabilidades simultáneas, ej: en dólares y pesos).
 Los registros contables son generados para un esquema contable, si el esquema es válido y usted ha definido cuentas de contabilidad y por defecto, y despues de que complete el proceso de Añadir / Copiar cuentas.</value>
  </row>
  <row id="200" trl="Y">
@@ -2107,7 +2107,7 @@ Un inventario físico se crea por Almacén y Fecha de Movimiento.]]></value>
   <value column="Name" original="General Ledger">Contabilidad General</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original="Import General Ledger">Importar Contabilidad</value>
-  <value column="Help" original="A new Journal Batch is created, if the Batch Document No or accounting schema are different. A new Journal is created, if the Document No, Currency, Document Type, GL Category, Posting Type or Accounting type is different. You can also force the creation of a new Batch or Jornal by selecting the creat new flag.&lt;p&gt;&#10;Please note that there are three Organization Fields: The Document Organization is the owner of the document and set directly or per parameter default. The Organization is part of the accounting key and only required id no Valid Account Comination is specified; If not defined it is derived from the Document Organization. The Transaction Organization is part of the account combination.&lt;br&gt;&#10;The optional balance check applies to the entire import, not for individual batches or journals.&#10;&lt;br&gt;The document numbers will be overwritten if the document type is not set to manual sequences."><![CDATA[Una nueva nota contable es creada, si el documento de la nota no es diferente. Una nueva nota contable es creada, si el No. de documento,esquema de la contabilidad, moneda, tipo de documento, Categoría contable, tipo de contabilización o el tipo de contabilidad es diferente.<p >
+  <value column="Help" original="A new Journal Batch is created, if the Batch Document No or accounting schema are different. A new Journal is created, if the Document No, Currency, Document Type, GL Category, Posting Type or Accounting type is different. You can also force the creation of a new Batch or Jornal by selecting the creat new flag.&lt;p&gt;&#10;Please note that there are three Organization Fields: The Document Organization is the owner of the document and set directly or per parameter default. The Organization is part of the accounting key and only required id no Valid Account Comination is specified; If not defined it is derived from the Document Organization. The Transaction Organization is part of the account combination.&lt;br&gt;&#10;The optional balance check applies to the entire import, not for individual batches or journals.&#10;&lt;br&gt;The document numbers will be overwritten if the document type is not set to manual sequences."><![CDATA[Una nueva nota contable es creada, si el documento de la nota no es diferente. Una nueva nota contable es creada, si el No. de documento,esquema de la contabilidad, moneda, tipo de documento, tipo comprobante contable, tipo de contabilización o el tipo de contabilidad es diferente.<p >
 Observe por favor que hay tres campos de la organización: La organización del documento es el dueño del documento y del sistema directamente o por default del parámetro . La organización es parte de la llave de la contabilidad y solamente se especifica la identificación requerida ninguna combinación de cuenta válida, si no esta definido se deriva de la organización del documento. La organización de la transacción es parte de la combinación de la cuenta.]]></value>
  </row>
  <row id="510" trl="Y">
@@ -2429,7 +2429,7 @@ Observe por favor que hay tres campos de la organización: La organización del 
   <value column="Help" original="Note that some information is for reference only!  The ">¡Observe que una cierta información está solamente para la referencia!</value>
  </row>
  <row id="563" trl="Y">
-  <value column="Name" original="Company Agent">Agente de la Compañia</value>
+  <value column="Name" original="Company Agent">Agente de la Compañía</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original="Sales Representative Selection">Selección de Representante de Ventas</value>
   <value column="Help" original=""/>
@@ -3684,17 +3684,17 @@ Segmentos deseados de cuenta, Organización, Cuentas, Productos pueden tener alg
   <value column="Help" original=""/>
  </row>
  <row id="776" trl="Y">
-  <value column="Name" original="Client Share">Compartir Compañía</value>
+  <value column="Name" original="Client Share">Compartir Grupo Empresarial</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Force (not) sharing of client/org entities">Forzar o no el Compartir Entidades de Compañía/Organización</value>
-  <value column="Help" original="Business Partner can be either defined on Client level (shared) or on Org level (not shared).  You can define here of Products are always shared (i.e. always created under Organization &quot;*&quot;) or if they are not shared (i.e. you cannot enter them with Organization &quot;*&quot;).&lt;br&gt;&#10;The creation of  &quot;Client and Org&quot; shared records is the default and is ignored.">El tercero también puede ser definido en Nivel de Compañía (compartido) o en  Nivel Organización (No Compartidos).Aqui usted puede definir los productos que siemore son compartidos (ej. siempre creados bajo  Organización "*") o si no son compartidos (ej. no podrán ser ingresados con Organización "*").
-La creación de los registros compartidos "Compañía y Organización" es predeterminada y es ignorada.</value>
+  <value column="Description" original="Force (not) sharing of client/org entities">Forzar o no el Compartir Entidades de Grupo Empresarial/Organización</value>
+  <value column="Help" original="Business Partner can be either defined on Client level (shared) or on Org level (not shared).  You can define here of Products are always shared (i.e. always created under Organization &quot;*&quot;) or if they are not shared (i.e. you cannot enter them with Organization &quot;*&quot;).&lt;br&gt;&#10;The creation of  &quot;Client and Org&quot; shared records is the default and is ignored.">El tercero también puede ser definido en Nivel de Grupo Empresarial (compartido) o en  Nivel Organización (No Compartidos).Aqui usted puede definir los productos que siemore son compartidos (ej. siempre creados bajo  Organización "*") o si no son compartidos (ej. no podrán ser ingresados con Organización "*").
+La creación de los registros compartidos "Grupo Empresarial y Organización" es predeterminada y es ignorada.</value>
  </row>
  <row id="777" trl="Y">
-  <value column="Name" original="System Issue">Versión de Sistema</value>
+  <value column="Name" original="System Issue">Problema de Sistema</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Automatically created or manually entered System Issue Reporting">Creado Automáticamente o Reporte Versión de Sistema ingresado manualmente</value>
-  <value column="Help" original="System Issues are created to speed up the resolution of any system related issues (potential bugs).  If enabled, they are automatically reported to Adempiere.  No data or confidential information is transferred.">Las versiones de sistema son creadas para apresurar la resolución de cualquier versión de sistema relacionaddo (errores potenciales). Si habilitó, automáticaamente son reportados a Adempiere. No sé transfiere información confidencial.</value>
+  <value column="Description" original="Automatically created or manually entered System Issue Reporting">Problema de sistema creado automáticamente o ingresado manualmente</value>
+  <value column="Help" original="System Issues are created to speed up the resolution of any system related issues (potential bugs).  If enabled, they are automatically reported to Adempiere.  No data or confidential information is transferred.">El registro de problemas del sistema es creado para agilizar la resolución de problemas relacionados con el sistema (posibles errores).</value>
  </row>
  <row id="778" trl="Y">
   <value column="Name" original="Assigned Partners">Terceros Asignados</value>
@@ -3849,7 +3849,7 @@ La medida debe soportar la información, sino es ignorada.</value>
  <row id="807" trl="Y">
   <value column="Name" original="Advertisement Category">Categoría de publicidad</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Defines the categories to group Ads">Define las categorias para gupos de Ads</value>
+  <value column="Description" original="Defines the categories to group Ads">Define las categorías para gupos de Ads</value>
   <value column="Help" original=""/>
  </row>
  <row id="808" trl="Y">
@@ -4519,7 +4519,7 @@ La medida debe soportar la información, sino es ignorada.</value>
   <value column="Help" original=""/>
  </row>
  <row id="53066" trl="Y">
-  <value column="Name" original="Client Level">Nivel de Compañía</value>
+  <value column="Name" original="Client Level">Nivel de Grupo Empresarial</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original=""/>
   <value column="Help" original=""/>

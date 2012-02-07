@@ -7,7 +7,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="53" trl="Y">
-  <value column="Name" original="Client+Organization">Compañía+Organización</value>
+  <value column="Name" original="Client+Organization">Grupo Empresarial+Organización</value>
   <value column="Description" original=""/>
  </row>
  <row id="54" trl="Y">
@@ -351,7 +351,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="194" trl="Y">
-  <value column="Name" original="System+Client">Sistema+Compañía</value>
+  <value column="Name" original="System+Client">Sistema+Grupo Empresarial</value>
   <value column="Description" original=""/>
  </row>
  <row id="198" trl="Y">
@@ -367,8 +367,8 @@
   <value column="Description" original="Average Rates">Tasas Promedio</value>
  </row>
  <row id="201" trl="Y">
-  <value column="Name" original="Company">Compañía</value>
-  <value column="Description" original="Company Rate">Tasa de la Compañía</value>
+  <value column="Name" original="Company">Grupo Empresarial</value>
+  <value column="Description" original="Company Rate">Tasa del Grupo Empresarial</value>
  </row>
  <row id="202" trl="Y">
   <value column="Name" original="User Type">Tipo de Usuario</value>
@@ -1243,7 +1243,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="452" trl="Y">
-  <value column="Name" original="Client">Compañía</value>
+  <value column="Name" original="Client">Grupo Empresarial</value>
   <value column="Description" original=""/>
  </row>
  <row id="453" trl="Y">
@@ -1251,7 +1251,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="454" trl="Y">
-  <value column="Name" original="Client+Organization">Compañía+Organización</value>
+  <value column="Name" original="Client+Organization">Grupo Empresarial+Organización</value>
   <value column="Description" original=""/>
  </row>
  <row id="455" trl="Y">
@@ -1799,7 +1799,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="594" trl="Y">
-  <value column="Name" original="Client only">Sólo Compañía</value>
+  <value column="Name" original="Client only">Sólo Grupo Empresarial</value>
   <value column="Description" original=""/>
  </row>
  <row id="595" trl="Y">
@@ -2187,7 +2187,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="695" trl="Y">
-  <value column="Name" original="Client">Compañía</value>
+  <value column="Name" original="Client">Grupo Empresarial</value>
   <value column="Description" original=""/>
  </row>
  <row id="696" trl="Y">
@@ -2491,7 +2491,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="773" trl="Y">
-  <value column="Name" original="Client">Compañía</value>
+  <value column="Name" original="Client">Grupo Empresarial</value>
   <value column="Description" original=""/>
  </row>
  <row id="774" trl="Y">
@@ -2623,7 +2623,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="806" trl="Y">
-  <value column="Name" original="Client (all shared)">Compañía (todo compartido)</value>
+  <value column="Name" original="Client (all shared)">Grupo Empresarial (todo compartido)</value>
   <value column="Description" original=""/>
  </row>
  <row id="807" trl="Y">
@@ -2631,7 +2631,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="808" trl="Y">
-  <value column="Name" original="Client or Org">Org o Compañía</value>
+  <value column="Name" original="Client or Org">Org o Grupo Empresarial</value>
   <value column="Description" original=""/>
  </row>
  <row id="809" trl="Y">
@@ -3375,12 +3375,12 @@
   <value column="Description" original="Just allowed system configuration">Sólo permite configuración del sistema</value>
  </row>
  <row id="53229" trl="Y">
-  <value column="Name" original="Client">Compañía</value>
-  <value column="Description" original="Allowed system and client configuration">Permite configuración del sistema y compañía</value>
+  <value column="Name" original="Client">Grupo Empresarial</value>
+  <value column="Description" original="Allowed system and client configuration">Permite configuración del sistema y grupo empresarial</value>
  </row>
  <row id="53230" trl="Y">
   <value column="Name" original="Organization">Organización</value>
-  <value column="Description" original="Allowed system, client and organization configuration">Permite configuración del sistema, compañía y organización</value>
+  <value column="Description" original="Allowed system, client and organization configuration">Permite configuración del sistema, grupo empresarial y organización</value>
  </row>
  <row id="53232" trl="Y">
   <value column="Name" original="Maintenance Order">Orden de Mantenimiento</value>

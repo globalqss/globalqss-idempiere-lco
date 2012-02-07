@@ -48,9 +48,9 @@
   <value column="Help" original="The User Window allows you to maintain User of the system.  Users can log into the system and have access to functionality via one or more roles.  A user can also be a business partner contact.">La ventana de usuario permite que se defina cada usuario en el sistema. Los usuarios pueden entrar al sistema y tener acceso a la funcionalidad via uno o más roles.</value>
  </row>
  <row id="109" trl="Y">
-  <value column="Name" original="Client">Compañía</value>
-  <value column="Description" original="Maintain Clients/Tenants">Mantener Compañías</value>
-  <value column="Help" original="The Client is the highest level of an independent business entity.  Each Client will have one or more Organizations reporting to it.  Each Client defines the accounting parameters (Accounting Schema, Tree definition, Non Monetary UOM's). To create new Clients, run the Initial Client Setup with the System Administrator Role.&#10;Do not create a new client in this window, but use &quot;Initial Client Setup&quot; to set up the required security and access rules. If you create a new client here, you will not be able to view it and also the required client infrastructure would not have been set up.">La Compañía es el nivel mas alto de una entidad de negocios independiente. Cada compañía puede tener una o más organizaciones reportando a ella. Cada compañía define los parámetros contables (esquema contable, definición de árbol, unidades de medida no monetarias). No use esta ventana para crear la compañía, use el flujo de trabajo `Definir Compañía` para establecer las reglas de seguridad y de acceso requeridas. Si se crea una compañía aquí, la compañía no podrá ser vista dentro del sistema y su definición de parámetros no sera creada.</value>
+  <value column="Name" original="Client">Grupo Empresarial</value>
+  <value column="Description" original="Maintain Clients/Tenants">Mantener Grupos Empresariales</value>
+  <value column="Help" original="The Client is the highest level of an independent business entity.  Each Client will have one or more Organizations reporting to it.  Each Client defines the accounting parameters (Accounting Schema, Tree definition, Non Monetary UOM's). To create new Clients, run the Initial Client Setup with the System Administrator Role.&#10;Do not create a new client in this window, but use &quot;Initial Client Setup&quot; to set up the required security and access rules. If you create a new client here, you will not be able to view it and also the required client infrastructure would not have been set up.">El Grupo Empresarial es el nivel mas alto de una entidad de negocios independiente. Cada grupo empresarial puede tener una o más organizaciones reportando a ella. Cada grupo empresarial define los parámetros contables (esquema contable, definición de árbol, unidades de medida no monetarias). No use esta ventana para crear el grupo empresarial, use el flujo de trabajo "Definir Grupo Empresarial" para establecer las reglas de seguridad y de acceso requeridas. Si se crea un grupo empresarial aquí, el grupo empresarial no podrá ser vista dentro del sistema y su definición de parámetros no será creada.</value>
  </row>
  <row id="110" trl="Y">
   <value column="Name" original="Organization">Organización</value>
@@ -60,7 +60,7 @@
  <row id="111" trl="Y">
   <value column="Name" original="Role">Rol</value>
   <value column="Description" original="Maintain User Responsibilities">Mantener Responsabilidades del Usuario</value>
-  <value column="Help" original="The Role Window allows you to define the different roles that users of this system will have.  Roles control access to windows, tasks, reports, etc. For a client an Administrator and User role are predefined. You may add additional roles to control access for specific functionality or data.&#10;You can add users to the role.&#10;Note that access information is cached and requires re-login or reset of cache.">La ventana de rol permite definir los roles diferentes que los usuarios de este sistema tendrán. Los roles controlan el acceso a las ventanas, tareas, informes, etc. Para una compañía un rol de administrador y de usuario son predefinidos. Es posible adicionar roles para controlar el acceso a funcionalidad específica o datos. Los usuarios son adicionados a los roles</value>
+  <value column="Help" original="The Role Window allows you to define the different roles that users of this system will have.  Roles control access to windows, tasks, reports, etc. For a client an Administrator and User role are predefined. You may add additional roles to control access for specific functionality or data.&#10;You can add users to the role.&#10;Note that access information is cached and requires re-login or reset of cache.">La ventana de rol permite definir los roles diferentes que los usuarios de este sistema tendrán. Los roles controlan el acceso a las ventanas, tareas, informes, etc. Para un grupo empresarial un rol de administrador y de usuario son predefinidos. Es posible adicionar roles para controlar el acceso a funcionalidad específica o datos. Los usuarios son adicionados a los roles</value>
  </row>
  <row id="112" trl="Y">
   <value column="Name" original="Document Sequence">Secuencia de Documentos</value>
@@ -80,7 +80,7 @@
  <row id="115" trl="Y">
   <value column="Name" original="Currency">Moneda</value>
   <value column="Description" original="Maintain Currencies">Mantener Monedas</value>
-  <value column="Help" original="The Currency Window defines any currency which will be used in documents or reporting. You would define used currencies on System level and add currencies on Client level only for statistical currencies (e.g. for instable currencies) ">La ventana de monedas define cualquier moneda que vaya a ser usada en documentos o Informes. Las monedas usadas son definidas a nivel de sistema y se adicionan monedas a nivel compañía solo para monedas estadísticas (ej. Para monedas inestables)</value>
+  <value column="Help" original="The Currency Window defines any currency which will be used in documents or reporting. You would define used currencies on System level and add currencies on Client level only for statistical currencies (e.g. for instable currencies) ">La ventana de monedas define cualquier moneda que vaya a ser usada en documentos o Informes. Las monedas usadas son definidas a nivel de sistema y se adicionan monedas a nivel grupo empresarial solo para monedas estadísticas (ej. Para monedas inestables)</value>
  </row>
  <row id="116" trl="Y">
   <value column="Name" original="Currency Rate">Tasa de Cambio</value>
@@ -134,7 +134,7 @@
  </row>
  <row id="129" trl="Y">
   <value column="Name" original="Preference">Preferencia</value>
-  <value column="Description" original="Maintain System Client Org and User Preferences">Mantener preferencias de sistema, compañía, org. y usuario</value>
+  <value column="Description" original="Maintain System Client Org and User Preferences">Mantener preferencias de sistema, grupo empresarial, org. y usuario</value>
   <value column="Help" original="System Admin use only.">Para uso del administrador de sistema solamente.</value>
  </row>
  <row id="130" trl="Y">
@@ -143,9 +143,9 @@
   <value column="Help" original="The Project Window is used to define the projects which will can be tracked by phases and tasks.">La ventana de proyectos es usada para definir los proyectos que serán monitoreados por medio de documentos de la aplicación.</value>
  </row>
  <row id="131" trl="Y">
-  <value column="Name" original="GL Category">Categoría Contabilidad</value>
-  <value column="Description" original="Maintain General Ledger Categories">Mantener Categorías del Libro Mayor</value>
-  <value column="Help" original="The GL Category Window allows you to define categories to be used in journals.  These categories provide a method of optionally grouping and reporting on journals.">Esta ventana permite definir categorías para ser usada en los diarios contables. Estas categorías proveen un método de agrupamiento opcional y de Informe para los diarios</value>
+  <value column="Name" original="GL Category">Tipo Comprobante Contable</value>
+  <value column="Description" original="Maintain General Ledger Categories">Mantener Tipo Comprobante Contable</value>
+  <value column="Help" original="The GL Category Window allows you to define categories to be used in journals.  These categories provide a method of optionally grouping and reporting on journals.">Esta ventana permite definir tipos de comprobante contable para ser usada en las notas contables. Estos tipos de comprobante proveen un método de agrupamiento opcional</value>
  </row>
  <row id="132" trl="Y">
   <value column="Name" original="GL Journal">Nota de Contabilidad</value>
@@ -500,7 +500,7 @@
  <row id="224" trl="Y">
   <value column="Name" original="Print Form">Forma de Impresión</value>
   <value column="Description" original="Maintain Print Forms (Invoices, Checks, ..) used">Mantener formas de Impresión (facturas, cheques,...)</value>
-  <value column="Help" original="Define the documents you use for this Client/Organnization.  Note that the check format is defined in the Bank (Account) Window.&lt;p&gt;&#10;The highest priotity has the Print Format, you define on a Document Type (example specific Export Invoice format). The next level is the set of Print Formats, you defined for the organziation of the document printed. The default is the set of Print Formats defines for all organizations of the Client (Organization=*).">Define los documentos que se usan en esta Compañía. Note que el formato de cheques es definido en la ventana de bancos</value>
+  <value column="Help" original="Define the documents you use for this Client/Organnization.  Note that the check format is defined in the Bank (Account) Window.&lt;p&gt;&#10;The highest priotity has the Print Format, you define on a Document Type (example specific Export Invoice format). The next level is the set of Print Formats, you defined for the organziation of the document printed. The default is the set of Print Formats defines for all organizations of the Client (Organization=*).">Define los documentos que se usan en este grupo empresarial. Note que el formato de cheques es definido en la ventana de bancos</value>
  </row>
  <row id="225" trl="Y">
   <value column="Name" original="System Color">Color del Sistema</value>
@@ -1188,9 +1188,9 @@ Segmentos Contables de la organización deseada, Cuentas, Productos pueden tener
   <value column="Help" original="General Ledger Funds Control allows you to restrict the use of funds.  This is independent from budget control.">Control de fondos de contabilidad general te permite restringir el uso de fondos. Esto es independiente del control de presupuesto.</value>
  </row>
  <row id="363" trl="Y">
-  <value column="Name" original="System Issue Report">Reporte Versión Sistema</value>
-  <value column="Description" original="Automatically created or manually entered System Issue Reports">Creado Automáticamente o manualmente ingresado Reporte de Versión de Sistema</value>
-  <value column="Help" original="System Issues are created to speed up the resolution of any system related issues (potential bugs).  If enabled, they are automatically reported to Adempiere.  No data or confidential information is transferred.">Las versiones de sistema son creados para acelerar la resolución de cualquier versión de sistema relacionado (errores potenciales). Si habilitó, son automáticamente reportados a Adempiere. No se transfieren datos o información confidencial.</value>
+  <value column="Name" original="System Issue Report">Reporte Problemas Sistema</value>
+  <value column="Description" original="Automatically created or manually entered System Issue Reports">Reporte de problemas del sistema creados automáticamente o ingresados en forma manual</value>
+  <value column="Help" original="System Issues are created to speed up the resolution of any system related issues (potential bugs).  If enabled, they are automatically reported to Adempiere.  No data or confidential information is transferred.">El registro de problemas del sistema es creado para agilizar la resolución de problemas relacionados con el sistema (posibles errores).</value>
  </row>
  <row id="364" trl="Y">
   <value column="Name" original="Performance Color Schema">Esquema de Color del Desempeño</value>
@@ -1250,7 +1250,7 @@ Segmentos Contables de la organización deseada, Cuentas, Productos pueden tener
  </row>
  <row id="375" trl="Y">
   <value column="Name" original="Web Ad Management">Administración Web de AD</value>
-  <value column="Description" original="Content Management Ad Management defines the needed categories and items">Administrador de contenido de AD define la necesidad de categorias e items.</value>
+  <value column="Description" original="Content Management Ad Management defines the needed categories and items">Administrador de contenido de AD define la necesidad de categorías e items.</value>
   <value column="Help" original="Ad Management is used to create and manage advertisements in your conten management">La administración de Ad es usada para crear y administrar publicidad en la administración de contenido.</value>
  </row>
  <row id="376" trl="Y">

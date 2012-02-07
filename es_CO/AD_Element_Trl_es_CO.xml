@@ -13,10 +13,10 @@
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="102" trl="Y">
-  <value column="Name" original="Client">Compañía</value>
-  <value column="PrintName" original="Client">Compañía</value>
-  <value column="Description" original="Client/Tenant for this installation.">Compañía para esta instalación</value>
-  <value column="Help" original="A Client is a company or a legal entity. You cannot share data between Clients. Tenant is a synonym for Client.">Compañía o entidad legal. No se pueden compartir datos entre diferentes compañías.</value>
+  <value column="Name" original="Client">Grupo Empresarial</value>
+  <value column="PrintName" original="Client">Grupo Empresarial</value>
+  <value column="Description" original="Client/Tenant for this installation.">Grupo Empresarial para esta instalación</value>
+  <value column="Help" original="A Client is a company or a legal entity. You cannot share data between Clients. Tenant is a synonym for Client.">Grupo Empresarial. No se pueden compartir datos entre diferentes grupos empresariales.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -105,8 +105,8 @@
  <row id="113" trl="Y">
   <value column="Name" original="Organization">Organización</value>
   <value column="PrintName" original="Organization">Organización</value>
-  <value column="Description" original="Organizational entity within client">Entidad organizacional dentro de la compañía</value>
-  <value column="Help" original="An organization is a unit of your client or legal entity - examples are store, department. You can share data between organizations.">Una organización es una unidad de la compañía o entidad legal - Ej. Tiendas y departamentos. Es posible compartir datos entre organizaciones.</value>
+  <value column="Description" original="Organizational entity within client">Entidad organizacional dentro del grupo empresarial</value>
+  <value column="Help" original="An organization is a unit of your client or legal entity - examples are store, department. You can share data between organizations.">Una organización es una unidad del grupo empresarial o entidad legal - Ej. Tiendas y departamentos. Es posible compartir datos entre organizaciones.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -1526,10 +1526,10 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="309" trl="Y">
-  <value column="Name" original="GL Category">Categoría Contabilidad</value>
-  <value column="PrintName" original="GL Category">Categoría Contabilidad</value>
-  <value column="Description" original="General Ledger Category">Categoría de Contabilidad General</value>
-  <value column="Help" original="The General Ledger Category is an optional, user defined method of grouping journal lines.">La Categoría de Contabilidad General es un método opcional; definido por el usuario; de agrupación de líneas de las notas de contabilidad</value>
+  <value column="Name" original="GL Category">Tipo Comprobante Contable</value>
+  <value column="PrintName" original="GL Category">Tipo Comprobante Contable</value>
+  <value column="Description" original="General Ledger Category">Tipo Comprobante Contable</value>
+  <value column="Help" original="The General Ledger Category is an optional, user defined method of grouping journal lines.">El Tipo Comprobante Contable es un método opcional definido por el usuario para agrupación de líneas de las notas de contabilidad</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -1676,20 +1676,20 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="337" trl="Y">
-  <value column="Name" original="Intercompany Due From Acct">Cuenta Inter-Compañía Debido Desde</value>
-  <value column="PrintName" original="Intercompany Due From Acct">Desde la Cuenta Inter-Compañía</value>
-  <value column="Description" original="Intercompany Due From / Receivables Account">Cta. Intercompañía que debe a esta compañía / Cuenta por Cobrar</value>
-  <value column="Help" original="The Intercompany Due From account indicates the account that represents money owed to this organization from other organizations.">La cuenta Inter-compañía debido desde indica la cuenta que representa dinero que se debe a esta organización desde otras organizaciones</value>
+  <value column="Name" original="Intercompany Due From Acct">Cuenta Inter-Grupo Emp Debido Desde</value>
+  <value column="PrintName" original="Intercompany Due From Acct">Desde la Cuenta Inter-Grupo Emp</value>
+  <value column="Description" original="Intercompany Due From / Receivables Account">Cta. InterGrupo Emp que debe a este grupo emp / Cuenta por Cobrar</value>
+  <value column="Help" original="The Intercompany Due From account indicates the account that represents money owed to this organization from other organizations.">La cuenta Inter-Grupo Emp debido desde indica la cuenta que representa dinero que se debe a esta organización desde otras organizaciones</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="338" trl="Y">
-  <value column="Name" original="Intercompany Due To Acct">Cuenta Inter-Compañía Debido A</value>
-  <value column="PrintName" original="Intercompany Due To Acct">A la Cuenta Inter-Compañía</value>
-  <value column="Description" original="Intercompany Due To / Payable Account">Cta. Inter-compañía que esta compañía debe / Cuenta por Pagar</value>
-  <value column="Help" original="The Intercompany Due To Account indicates the account that represents money owed to other organizations.">La cuenta Ínter-compañía debido A indica la cuenta que representa dinero que debe esta organización a otras organizaciones</value>
+  <value column="Name" original="Intercompany Due To Acct">Cuenta Inter-Grupo Emp Debido A</value>
+  <value column="PrintName" original="Intercompany Due To Acct">A la Cuenta Inter-Grupo Emp</value>
+  <value column="Description" original="Intercompany Due To / Payable Account">Cta. Inter-Grupo Emp que este grupo emp debe / Cuenta por Pagar</value>
+  <value column="Help" original="The Intercompany Due To Account indicates the account that represents money owed to other organizations.">La cuenta Inter-Grupo Emp debido A indica la cuenta que representa dinero que debe esta organización a otras organizaciones</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -3548,8 +3548,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
  <row id="615" trl="Y">
   <value column="Name" original="User Level">Nivel del Usuario</value>
   <value column="PrintName" original="User Level">Nivel del Usuario</value>
-  <value column="Description" original="System Client Organization">Sistema compañía organización.</value>
-  <value column="Help" original="The User Level field determines if users of this Role will have access to System level data, Organization level data, Client level data or Client and Organization level data.">El campo Nivel de Usuario determina si los usuarios de este perfil tendrán acceso a datos de nivel de sistema ; datos de nivel de organización; datos a nivel de compañía o datos a nivel compañía y organización.</value>
+  <value column="Description" original="System Client Organization">Sistema / Grupo Emp / Organización.</value>
+  <value column="Help" original="The User Level field determines if users of this Role will have access to System level data, Organization level data, Client level data or Client and Organization level data.">El campo Nivel de Usuario determina si los usuarios de este perfil tendrán acceso a datos de nivel de sistema ; datos de nivel de organización; datos a nivel de grupo empresarial o datos a nivel grupo empresarial y organización.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -7276,9 +7276,9 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1431" trl="Y">
-  <value column="Name" original="Remote Host">Host Remoto</value>
-  <value column="PrintName" original="Remote Host">Host Remoto</value>
-  <value column="Description" original="Remote host Info"/>
+  <value column="Name" original="Remote Host">Servidor Remoto</value>
+  <value column="PrintName" original="Remote Host">Servidor Remoto</value>
+  <value column="Description" original="Remote host Info">Información Servidor Remoto</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -11179,7 +11179,7 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="Name" original="Asset">Activo</value>
   <value column="PrintName" original="Asset">Activo</value>
   <value column="Description" original="Asset used internally or by customers">Activo usado por la compañía o sus clientes</value>
-  <value column="Help" original="An asset is either created by purchasing or by delivering a product.  An asset can be used internally or be a customer asset.">Indica si es usado por la compañia o sus clientes</value>
+  <value column="Help" original="An asset is either created by purchasing or by delivering a product.  An asset can be used internally or be a customer asset.">Indica si es usado por la compañía o sus clientes</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -11346,10 +11346,10 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1903" trl="Y">
-  <value column="Name" original="Registered EMail">Usuario</value>
-  <value column="PrintName" original="Registered EMail">Usuario</value>
-  <value column="Description" original="Email of the responsible for the System">Usuario responsable por el sistema</value>
-  <value column="Help" original="Email of the responsible person for the system (registered in WebStore)">Persona responsable por el sistema</value>
+  <value column="Name" original="Registered EMail">Correo Registrado</value>
+  <value column="PrintName" original="Registered EMail">Correo Registrado</value>
+  <value column="Description" original="Email of the responsible for the System">Correo del responsable por el sistema</value>
+  <value column="Help" original="Email of the responsible person for the system (registered in WebStore)">Correo de la persona responsable por el sistema</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -13168,9 +13168,9 @@ Si no se incorpora ninguna, se utiliza la impresora por default. Usted especific
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2097" trl="Y">
-  <value column="Name" original="Client Key">Código Compañía</value>
-  <value column="PrintName" original="Client Key">Código Compañía</value>
-  <value column="Description" original="Key of the Client">Código Compañía</value>
+  <value column="Name" original="Client Key">Código Grupo Empresarial</value>
+  <value column="PrintName" original="Client Key">Código Grupo Empresarial</value>
+  <value column="Description" original="Key of the Client">Código Grupo Empresarial</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -20664,10 +20664,10 @@ Segmentos contables deseadosm Organizaciones, Cuentas, Productos pueden tener al
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2881" trl="Y">
-  <value column="Name" original="Client Share">Compartir Compañía</value>
-  <value column="PrintName" original="Client Share">Compartir Compañía</value>
-  <value column="Description" original="Force (not) sharing of client/org entities">Permite (o no) el compartir entidades como compañía/organización</value>
-  <value column="Help" original="For entities with data access level of Client+Organization either force to share the entries or not. Example: Product and Business Partner can be either defined on Client level (shared) or on Org level (not shared).  You can define here of Products are always shared (i.e. always created under Organization &quot;*&quot;) or if they are not shared (i.e. you cannot enter them with Organization &quot;*&quot;)">Para entidades con acceso a niveles de información Compañía+Organización también permite el compartir o no las entradas. Ejemplo: Producto y Tercero también pueden ser definidos en Nivel Compañía (Compartidos) o en Nivel de la Organización (no compartido). Aquí puede definir los Productos que siempre se compartirán (ej. siempre creados bajo Organización "*") o si no son compartidos (ej. usted no los puede ingresar con Organización "*")</value>
+  <value column="Name" original="Client Share">Compartir Grupo Empresarial</value>
+  <value column="PrintName" original="Client Share">Compartir Grupo Empresarial</value>
+  <value column="Description" original="Force (not) sharing of client/org entities">Permite (o no) el compartir entidades como Grupo Empresarial/Organización</value>
+  <value column="Help" original="For entities with data access level of Client+Organization either force to share the entries or not. Example: Product and Business Partner can be either defined on Client level (shared) or on Org level (not shared).  You can define here of Products are always shared (i.e. always created under Organization &quot;*&quot;) or if they are not shared (i.e. you cannot enter them with Organization &quot;*&quot;)">Para entidades con acceso a niveles de información Grupo Empresarial+Organización también permite el compartir o no las entradas. Ejemplo: Producto y Tercero también pueden ser definidos en Nivel Grupo Empresarial (Compartidos) o en Nivel de la Organización (no compartido). Aquí puede definir los Productos que siempre se compartirán (ej. siempre creados bajo Organización "*") o si no son compartidos (ej. usted no los puede ingresar con Organización "*")</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -20677,7 +20677,7 @@ Segmentos contables deseadosm Organizaciones, Cuentas, Productos pueden tener al
   <value column="Name" original="Share Type">Modo de Compartir</value>
   <value column="PrintName" original="Share Type">Modo de Compartir</value>
   <value column="Description" original="Type of sharing">Modo de Compartir</value>
-  <value column="Help" original="Defines if a table is shared within a client or not.">Define si una tabla es compartida dentro de la compañía o no.</value>
+  <value column="Help" original="Defines if a table is shared within a client or not.">Define si una tabla es compartida dentro del Grupo Empresarial o no.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -20719,7 +20719,7 @@ Ejemplo: si el precio de compra es $100 y la tolerancia es 1 ( porciento), el pr
   <value column="Name" original="Error Reporting">Reportar Errores</value>
   <value column="PrintName" original="Error Reporting">Reportando Error</value>
   <value column="Description" original="Automatically report Errors">Reporta Errores Automáticamente</value>
-  <value column="Help" original="To automate error reporting, submit errors to Adempiere. Only error (stack trace) information is submitted (no data or confidential information).  It helps us to react faster and proactively.  If you have a support contract, we will you inform about corrective measures.  This functionality is experimental at this point.">Para automatizar el reporte de errores, emvie los errores a Adempiere. Solamente información (seguimiento de pila) es enviada (No datos o Información confidencial). Esto nos ayuda a responder rápidamente. Si usted tiene un contrato de soporte, le informaremos sobre las medidas correctivas. Hasta el momento, esta funcionalidad es experimental.</value>
+  <value column="Help" original="To automate error reporting, submit errors to Adempiere. Only error (stack trace) information is submitted (no data or confidential information).  It helps us to react faster and proactively.  If you have a support contract, we will you inform about corrective measures.  This functionality is experimental at this point.">Para automatizar el reporte de errores, emvie los errores a Adempiere. Solamente información (pila de seguimiento) es enviada (No datos o Información confidencial). Esto nos ayuda a responder rápidamente. Si usted tiene un contrato de soporte, le informaremos sobre las medidas correctivas. Hasta el momento, esta funcionalidad es experimental.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -20736,9 +20736,9 @@ Ejemplo: si el precio de compra es $100 y la tolerancia es 1 ( porciento), el pr
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2888" trl="Y">
-  <value column="Name" original="Local Host">Control de fondos de Contabilidad</value>
-  <value column="PrintName" original="Local Host">Host Local </value>
-  <value column="Description" original="Local Host Info">Información Host Local </value>
+  <value column="Name" original="Local Host">Servidor Local</value>
+  <value column="PrintName" original="Local Host">Servidor Local </value>
+  <value column="Description" original="Local Host Info">Información Servidor Local </value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -20746,18 +20746,18 @@ Ejemplo: si el precio de compra es $100 y la tolerancia es 1 ( porciento), el pr
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2889" trl="Y">
-  <value column="Name" original="Error Trace">Control te permite restringir el uso de fondos.</value>
-  <value column="PrintName" original="Error Trace">Error de Seguimiento</value>
-  <value column="Description" original="System Error Trace">Error de Seguimiento del Sistema </value>
-  <value column="Help" original="Java Trace Info">Java Información de Seguimiento</value>
+  <value column="Name" original="Error Trace">Traza Error</value>
+  <value column="PrintName" original="Error Trace">Traza Error</value>
+  <value column="Description" original="System Error Trace">Traza Error Sistema</value>
+  <value column="Help" original="Java Trace Info">Información de Traza Java</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2890" trl="Y">
-  <value column="Name" original="Stack Trace">Seguimiento de Pila</value>
-  <value column="PrintName" original="Stack Trace">Seguimiento de Pila</value>
+  <value column="Name" original="Stack Trace">Pila de Seguimiento</value>
+  <value column="PrintName" original="Stack Trace">Pila de Seguimiento</value>
   <value column="Description" original="System Log Trace">Seguimiento de la Bitácora del Sistema</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -20766,9 +20766,9 @@ Ejemplo: si el precio de compra es $100 y la tolerancia es 1 ( porciento), el pr
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2891" trl="Y">
-  <value column="Name" original="Request Document No">Solicitud No Documento</value>
-  <value column="PrintName" original="Request Document No">Solicitud No Documento</value>
-  <value column="Description" original="Adempiere Request Document No">Adempiere Solicita No de Documento</value>
+  <value column="Name" original="Request Document No">No. Doc Solicitud</value>
+  <value column="PrintName" original="Request Document No">No. Doc Solicitud</value>
+  <value column="Description" original="Adempiere Request Document No">No. Doc Solicitud Adempiere</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -20796,10 +20796,10 @@ Ejemplo: si el precio de compra es $100 y la tolerancia es 1 ( porciento), el pr
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2894" trl="Y">
-  <value column="Name" original="Vanilla System">Sistema Vanilla</value>
-  <value column="PrintName" original="Vanilla System">Sistema Vanilla</value>
+  <value column="Name" original="Vanilla System">Sistema Original</value>
+  <value column="PrintName" original="Vanilla System">Sistema Original</value>
   <value column="Description" original="The system was NOT compiled from Source - i.e. standard distribution">El sistema NO fue Compilado desde fuente - ej. Distribución Estándar</value>
-  <value column="Help" original="You may have customizations, like additional columns, tables, etc - but no code modifications which require compiling from source.">Usted puede tener personalizaciones, Columnas adicionales, Tablas, etc - pero ninguna modificación  del código que requiere la compilación desde  fuente.
+  <value column="Help" original="You may have customizations, like additional columns, tables, etc - but no code modifications which require compiling from source.">Usted puede tener personalizaciones, Columnas adicionales, Tablas, etc - pero ninguna modificación  del código que requiere la compilación desde fuente.
 
 </value>
   <value column="PO_Description" original=""/>
@@ -20810,8 +20810,8 @@ Ejemplo: si el precio de compra es $100 y la tolerancia es 1 ( porciento), el pr
  <row id="2895" trl="Y">
   <value column="Name" original="Reproducible">Reproducible</value>
   <value column="PrintName" original="Reproducible">Reproducible</value>
-  <value column="Description" original="Problem can re reproduced in Gardenworld">Puede Problema ser reproducido en Gardenworld</value>
-  <value column="Help" original="The problem occurs also in the standard distribution in the demo client Gardenworld.">El problema también ocurre en la Distribución estándar en el demo compañía Gardenworld.</value>
+  <value column="Description" original="Problem can re reproduced in Gardenworld">El problema puede ser reproducido en Gardenworld</value>
+  <value column="Help" original="The problem occurs also in the standard distribution in the demo client Gardenworld.">El problema también ocurre en la Distribución estándar en el demo Grupo Empresarial Gardenworld.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -21269,9 +21269,9 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2941" trl="Y">
-  <value column="Name" original="Issue Summary">Edición Sumario</value>
-  <value column="PrintName" original="Issue Summary">Edición Sumario</value>
-  <value column="Description" original="Issue Summary">Edición Sumario</value>
+  <value column="Name" original="Issue Summary">Resumen Problema</value>
+  <value column="PrintName" original="Issue Summary">Resumen Problema</value>
+  <value column="Description" original="Issue Summary">Resumen Problema</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -21279,9 +21279,9 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2942" trl="Y">
-  <value column="Name" original="Source Class">Clase de Fuente</value>
-  <value column="PrintName" original="Source Class">Clase de Fuente</value>
-  <value column="Description" original="Source Class Name">Nombre De la Clase De la Fuente</value>
+  <value column="Name" original="Source Class">Clase Fuente</value>
+  <value column="PrintName" original="Source Class">Clase Fuente</value>
+  <value column="Description" original="Source Class Name">Nombre de la clase fuente</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -21289,9 +21289,9 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2943" trl="Y">
-  <value column="Name" original="Source Method">Método de Fuente</value>
-  <value column="PrintName" original="Source Method">Método de Fuente</value>
-  <value column="Description" original="Source Method Name">Nombre Método de Fuente</value>
+  <value column="Name" original="Source Method">Método Fuente</value>
+  <value column="PrintName" original="Source Method">Método Fuente</value>
+  <value column="Description" original="Source Method Name">Nombre Método Fuente</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -21319,9 +21319,9 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2946" trl="Y">
-  <value column="Name" original="Known Issue">Edición Conocida</value>
-  <value column="PrintName" original="Known Issue">Edición Conocida</value>
-  <value column="Description" original="Known Issue">Edición Conocida</value>
+  <value column="Name" original="Known Issue">Problema Conocido</value>
+  <value column="PrintName" original="Known Issue">Problema Conocido</value>
+  <value column="Description" original="Known Issue">Problema Conocido</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -21359,8 +21359,8 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2951" trl="Y">
-  <value column="Name" original="Java Info">Java Información</value>
-  <value column="PrintName" original="Java Info">Java Información</value>
+  <value column="Name" original="Java Info">Información Java</value>
+  <value column="PrintName" original="Java Info">Información Java</value>
   <value column="Description" original="Java Version Info">Información de la Versión de Java</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -21423,9 +21423,9 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2957" trl="Y">
-  <value column="Name" original="Issue System">Edición Sistema</value>
-  <value column="PrintName" original="Issue System">Edición Sistema</value>
-  <value column="Description" original="System creating the issue">Edición de la creación del sistema</value>
+  <value column="Name" original="Issue System">Sistema Problema</value>
+  <value column="PrintName" original="Issue System">Sistema Problema</value>
+  <value column="Description" original="System creating the issue">Sistema que está creando el problema</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -21443,9 +21443,9 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2959" trl="Y">
-  <value column="Name" original="IssueUser">Usuario Edición</value>
-  <value column="PrintName" original="Issue User">Usuario Edición</value>
-  <value column="Description" original="User who reported issues">Usuario quién reportó la edición</value>
+  <value column="Name" original="IssueUser">Usuario Problema</value>
+  <value column="PrintName" original="Issue User">Usuario Problema</value>
+  <value column="Description" original="User who reported issues">Usuario que reporta el problema</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -24200,7 +24200,7 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="Description" original="Configuration Level for this parameter">Nivel de configuración para este parametro</value>
   <value column="Help" original="Configuration Level for this parameter&#10;S - just allowed system configuration&#10;C - client configurable parameter&#10;O - org configurable parameter">Nivel de configuración para este parametro
 S - Solo permite configuración del SYSTEM 
-C - Parametro configurable de la compañía 
+C - Parametro configurable del Grupo Empresarial 
 O - Parametro configurable de la organización.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -25218,8 +25218,8 @@ La suma del Costo Precio Actual y el Costo Precio Actual Menor Nivel es el costo
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53330" trl="Y">
-  <value column="Name" original="Client Level">Nivel Compañía</value>
-  <value column="PrintName" original="Client Level">Nivel Compañía</value>
+  <value column="Name" original="Client Level">Nivel Grupo Empresarial</value>
+  <value column="PrintName" original="Client Level">Nivel Grupo Empresarial</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -25228,8 +25228,8 @@ La suma del Costo Precio Actual y el Costo Precio Actual Menor Nivel es el costo
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53331" trl="Y">
-  <value column="Name" original="Client Exception">Excepción Compañía</value>
-  <value column="PrintName" original="Client Exception">Excepción Compañía</value>
+  <value column="Name" original="Client Exception">Excepción Grupo Empresarial</value>
+  <value column="PrintName" original="Client Exception">Excepción Grupo Empresarial</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27834,7 +27834,7 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="Name" original="Autocomplete">Autocompletar</value>
   <value column="PrintName" original="Autocomplete">Autocompletar</value>
   <value column="Description" original="Automatic completion for textfields">Completar automático para campos de texto</value>
-  <value column="Help" original="The autocompletion uses all existing values (from the same client and organization) of the field.">La opción de autocompletar utiliza todos los valores existentes (de la misma compañía y organización) en el campo.</value>
+  <value column="Help" original="The autocompletion uses all existing values (from the same client and organization) of the field.">La opción de autocompletar utiliza todos los valores existentes (del mismo grupo empresarial y organización) en el campo.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
