@@ -23335,8 +23335,8 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="50055" trl="Y">
-  <value column="Name" original="Allow Info Schedule">Permitir Información de Cronograma</value>
-  <value column="PrintName" original="Allow Info Schedule">Permitir Información de Cronograma</value>
+  <value column="Name" original="Allow Info Schedule">Permitir Información Calendario de Recursos</value>
+  <value column="PrintName" original="Allow Info Schedule">Permitir Información Calendario de Recursos</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>

@@ -2147,7 +2147,7 @@ Detalles: </value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="633" trl="Y">
-  <value column="MsgText" original="Schedule Info">Información de Cronograma</value>
+  <value column="MsgText" original="Schedule Info">Información Calendario de Recursos</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="634" trl="Y">
