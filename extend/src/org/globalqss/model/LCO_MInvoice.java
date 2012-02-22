@@ -147,13 +147,13 @@ public class LCO_MInvoice extends MInvoice
 					+ "  FROM C_InvoiceLine il "
 					+ "  LEFT OUTER JOIN M_Product p ON (il.M_Product_ID = p.M_Product_ID) "
 					+ "  LEFT OUTER JOIN C_Charge c ON (il.C_Charge_ID = c.C_Charge_ID) "
-					+ "  WHERE C_Invoice_ID = ? AND il.IsActive='Y'";
+					+ "  WHERE C_Invoice_ID = ? AND il.IsActive='Y' AND (il.M_Product_ID>0 OR il.C_Charge_ID>0)";
 				int[] wcids = DB.getIDsEx(get_TrxName(), sqlwcs, new Object[] {getC_Invoice_ID()});
 				boolean addedlines = false;
 				for (int i = 0; i < wcids.length; i++) {
 					int wcid = wcids[i];
 					if (wcid > 0) {
-						if (i == 0) {
+						if (! addedlines) {
 							wherer.append(" AND LCO_WithholdingCategory_ID IN (");
 							addedlines = true;
 						} else {
@@ -174,13 +174,13 @@ public class LCO_MInvoice extends MInvoice
 					+ "  FROM C_InvoiceLine il "
 					+ "  LEFT OUTER JOIN M_Product p ON (il.M_Product_ID = p.M_Product_ID) "
 					+ "  LEFT OUTER JOIN C_Charge c ON (il.C_Charge_ID = c.C_Charge_ID) "
-					+ "  WHERE C_Invoice_ID = ? AND il.IsActive='Y'";
+					+ "  WHERE C_Invoice_ID = ? AND il.IsActive='Y' AND (il.M_Product_ID>0 OR il.C_Charge_ID>0)";
 				int[] wcids = DB.getIDsEx(get_TrxName(), sqlwct, new Object[] {getC_Invoice_ID()});
 				boolean addedlines = false;
 				for (int i = 0; i < wcids.length; i++) {
 					int wcid = wcids[i];
 					if (wcid > 0) {
-						if (i == 0) {
+						if (! addedlines) {
 							wherer.append(" AND C_TaxCategory_ID IN (");
 							addedlines = true;
 						} else {
