@@ -3331,7 +3331,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="52000" trl="Y">
-  <value column="Name" original="Mixed">Mezclado</value>
+  <value column="Name" original="Mixed">Multiples Medios de Pago</value>
   <value column="Description" original=""/>
  </row>
  <row id="52001" trl="Y">
@@ -4155,7 +4155,7 @@
   <value column="Description" original="Million">Millón</value>
  </row>
  <row id="53438" trl="Y">
-  <value column="Name" original="Cash">Caja</value>
+  <value column="Name" original="Cash">Efectivo</value>
   <value column="Description" original=""/>
  </row>
  <row id="53441" trl="Y">
