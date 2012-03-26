@@ -11156,9 +11156,9 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1882" trl="Y">
-  <value column="Name" original="Pay Selection Check">Revisión de Selección de Pago</value>
-  <value column="PrintName" original="Pay Selection Check">Revisión de Selección de Pago</value>
-  <value column="Description" original="Payment Selection Check">Revisión de selección de pago</value>
+  <value column="Name" original="Pay Selection Check">Pago Generado</value>
+  <value column="PrintName" original="Pay Selection Check">Pago Generado</value>
+  <value column="Description" original="Payment Selection Check">Pago Generado</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
