@@ -17,6 +17,8 @@
 
 package org.globalqss.util;
 
+import org.compiere.model.MSysConfig;
+
 /**
  *	Utils for Localization LCO
  *
@@ -58,5 +60,34 @@ public class LCO_Utils
 		    return 11 - iOperacion;
 		}
 	}	// calculateDigitDian
+	
+	public static final String SPACE = " ";
+	public static String getFullName(String fn1, String fn2, String ln1, String ln2, int AD_Client_ID) {
+		StringBuffer fullFirstNames = new StringBuffer();
+		StringBuffer fullLastNames = new StringBuffer();
+		StringBuffer fullName = new StringBuffer();
+
+		if (fn1 != null && fn1.trim().length() > 0)
+			fullFirstNames.append(fn1.trim());
+		if (fn2 != null && fn2.trim().length() > 0)
+			fullFirstNames.append(SPACE).append(fn2.trim());
+		if (ln1 != null && ln1.trim().length() > 0)
+			fullLastNames.append(ln1.trim());
+		if (ln2 != null && ln2.trim().length() > 0)
+			fullLastNames.append(SPACE).append(ln2.trim());
+
+		String nameSeparator = MSysConfig.getValue("QSSLCO_NameSeparator", " ", AD_Client_ID);
+		boolean namesFirst = MSysConfig.getBooleanValue("QSSLCO_NamesFirst", true, AD_Client_ID);
+		
+		if (fullFirstNames.length() == 0 && fullLastNames.length() == 0)
+			return null;
+
+		if (namesFirst)
+			fullName = fullFirstNames.append(nameSeparator).append(fullLastNames);
+		else
+			fullName = fullLastNames.append(nameSeparator).append(fullFirstNames);
+
+		return fullName.toString();
+	}
 
 }	// LCO_Utils

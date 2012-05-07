@@ -40,6 +40,7 @@ import org.compiere.model.MInvoicePaySchedule;
 import org.compiere.model.MInvoiceTax;
 import org.compiere.model.MPayment;
 import org.compiere.model.MPaymentAllocate;
+import org.compiere.model.MSysConfig;
 import org.compiere.model.ModelValidationEngine;
 import org.compiere.model.ModelValidator;
 import org.compiere.model.PO;
@@ -915,27 +916,19 @@ public class LCO_Validator implements ModelValidator
 			return null;
 		}
 
-		String filledName = null;
-
-		 if (bpartner.get_Value("FirstName1") == null || ((String) bpartner.get_Value("FirstName1")).length() == 0)
+		String fn1 = bpartner.get_ValueAsString("FirstName1");
+		String fn2 = bpartner.get_ValueAsString("FirstName2");
+		String ln1 = bpartner.get_ValueAsString("LastName1");
+		String ln2 = bpartner.get_ValueAsString("LastName2");
+		
+		if (fn1 == null || fn1.length() == 0)
 			 return Msg.getMsg(bpartner.getCtx(), "LCO_FirstName1Required");
 
-		 if (bpartner.get_Value("LastName1") == null || ((String) bpartner.get_Value("LastName1")).length() == 0)
+		 if (ln1 == null || ln1.length() == 0)
 			return Msg.getMsg(bpartner.getCtx(), "LCO_LastName1Required");
 
-		filledName = bpartner.get_ValueAsString("FirstName1").trim();
-		if (bpartner.get_Value("FirstName2") != null)
-			filledName = filledName + " " + bpartner.get_ValueAsString("FirstName2").trim();
-		
-		if (filledName != null)
-		//	filledName = filledName + ", "; -- Separate first and last names with comma
-			filledName = filledName + " ";
-		
-		filledName = filledName + bpartner.get_ValueAsString("LastName1").trim();
-		if (bpartner.get_Value("LastName2") != null)
-			filledName = filledName + " " + bpartner.get_ValueAsString("LastName2").trim();
-
-		bpartner.setName(filledName);
+		String fullName = LCO_Utils.getFullName(fn1, fn2, ln1, ln2, bpartner.getAD_Client_ID());
+		bpartner.setName(fullName);
 		return null;
 	}	//	mfillName
 	

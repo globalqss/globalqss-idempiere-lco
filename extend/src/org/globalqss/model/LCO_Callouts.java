@@ -22,6 +22,7 @@ import org.compiere.model.CalloutEngine;
 import org.compiere.model.GridField;
 import org.compiere.model.GridTab;
 import org.compiere.model.MBPartner;
+import org.compiere.model.MSysConfig;
 import org.compiere.util.Env;
 import org.globalqss.util.LCO_Utils;
 
@@ -93,42 +94,35 @@ public class LCO_Callouts extends CalloutEngine
 	}	//	taxIdType
 
 	/**
-	 *	taxIdType
+	 *	fillName
 	 */
 	public String fillName (Properties ctx, int WindowNo,
 			GridTab mTab, GridField mField, Object value, Object oldValue)
 	{
 		log.info("");
-		
-		if (mTab.getValue("FirstName1") == null 
-				&& mTab.getValue("FirstName2") == null
-				&& mTab.getValue("LastName1") == null
-				&& mTab.getValue("LastName2") == null)
-			mTab.setValue(MBPartner.COLUMNNAME_Name, null);
-		
-		String filledName = (String) mTab.getValue("FirstName1");
-		if (filledName == null)
-			filledName = new String("");
-		if (mTab.getValue("FirstName2") != null)
-			filledName = filledName + " " + ((String) mTab.getValue("FirstName2")).trim();
-		
-		if (filledName != null)
-		//	filledName = filledName + ", "; -- Separa nombres y apellidos con coma
-			filledName = filledName + " ";
-		
-		if (mTab.getValue("LastName1") != null)
-			filledName = filledName + ((String) mTab.getValue("LastName1")).trim();
-		if (mTab.getValue("LastName2") != null)
-			filledName = filledName + " " + ((String) mTab.getValue("LastName2")).trim();
-		
-		if (filledName.length() > 60)
-		{
-			// log.warning("Length > 60 - truncated");
-			filledName = filledName.substring(0, 60);
-		}
 
-		mTab.setValue(MBPartner.COLUMNNAME_Name, filledName);
+		String fn1 = mTab.get_ValueAsString("FirstName1");
+		String fn2 = mTab.get_ValueAsString("FirstName2");
+		String ln1 = mTab.get_ValueAsString("LastName1");
+		String ln2 = mTab.get_ValueAsString("LastName2");
+		int AD_Client_ID = Env.getAD_Client_ID(Env.getCtx());
+		String fullName = LCO_Utils.getFullName(fn1, fn2, ln1, ln2, AD_Client_ID);
+		mTab.setValue(MBPartner.COLUMNNAME_Name, fullName);
 		return "";
-	}	//	taxIdType
+	}	//	fillName
+
+	/**
+	 *	fillValueWithTaxID
+	 */
+	public String fillValueWithTaxID (Properties ctx, int WindowNo,
+			GridTab mTab, GridField mField, Object value, Object oldValue)
+	{
+		log.info("");
+		
+		int AD_Client_ID = Env.getAD_Client_ID(Env.getCtx());
+		if (MSysConfig.getBooleanValue("QSSLCO_FillValueWithTaxID", false, AD_Client_ID))
+			mTab.setValue(MBPartner.COLUMNNAME_Value, value);
+		return "";
+	}	//	fillValueWithTaxID
 
 }	//	LCO_Callouts
