@@ -81,8 +81,6 @@ public class MLCODIANConcept extends X_LCO_DIAN_Concept
 		if (bpID > 0) {
 			bp = MBPartner.get(getCtx(), bpID);
 			bpl = bp.getLocation(0);
-			if (bpl == null)
-				throw new AdempiereUserError("No BPLocation for BPartner = " + bp.getC_BPartner_ID() + " / " + bp.getName());
 		}
 		// for each position in sources
 		String sql = "SELECT DISTINCT dcs.CalcColumnPosition "
@@ -135,7 +133,9 @@ public class MLCODIANConcept extends X_LCO_DIAN_Concept
 						dssl.setLCO_DIAN_SendSchedule_ID(sendScheduleProcess.getLCO_DIAN_SendSchedule_ID());
 						if (bpID > 0)
 							dssl.setC_BPartner_ID(bpID);
-						if (bpl != null)
+						if (bpl == null)
+							throw new AdempiereUserError("No BPLocation for BPartner = " + bp.getC_BPartner_ID() + " / " + bp.getName());
+						else
 							dssl.setC_BPartner_Location_ID(bpl.getC_BPartner_Location_ID());
 						if (bpID2 > 0)
 							dssl.setC_BPartnerRelation_ID(bpID2);
