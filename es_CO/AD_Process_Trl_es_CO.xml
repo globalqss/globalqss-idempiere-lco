@@ -373,11 +373,6 @@ Nótese que Añadir traducciones faltantes las crea a partir del lenguaje del si
   <value column="Description" original="Set standard and future cost price">Establecer precio de costo futuro y estándar</value>
   <value column="Help" original="For Standard Costs you can set/recalculate the current or future cost price (for the cost type of the accounting schema). If the Costing Level of the Accounting Schema is set to Client, missing cost records are created. The historical costs are calculated based on the accumulated amount/quantity of the costing method.">Para costo estándar se puede actualizar el precio a futuro y establecer el costo estándar como el precio futuro</value>
  </row>
- <row id="183" trl="Y">
-  <value column="Name" original="Product Costing Report (old)">Reporte de Costo del Producto</value>
-  <value column="Description" original="Product Cost Report">Reporte de costo de producto</value>
-  <value column="Help" original=""/>
- </row>
  <row id="184" trl="Y">
   <value column="Name" original="Process Expenses">Procesar Gastos</value>
   <value column="Description" original=""/>

@@ -9426,20 +9426,20 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1695" trl="Y">
-  <value column="Name" original="Alert after Days Due">Alarma Después de Atraso</value>
-  <value column="PrintName" original="Alert days Due">Alarma después de los días de atraso</value>
-  <value column="Description" original="Send email alert after number of days due (0=no alerts)">Enviar un correo electrónico de alerta después de un número de días de vencido (0=no alerta)</value>
-  <value column="Help" original="Send an email alert after the item is Due (after Date Next Action). If set to zero, no alert is sent.">Enviar un Email de alerta después de que la partida está vencida. Si se establece en cero; ninguna alerta se envía.</value>
+  <value column="Name" original="Alert after Days Due">Días de Atraso para Correo Alerta</value>
+  <value column="PrintName" original="Alert days Due">Días de Atraso para Correo Alerta</value>
+  <value column="Description" original="Send email alert after number of days due (0=no alerts)">Enviar un correo electrónico de alerta después de un número de días de atraso (0=no alerta)</value>
+  <value column="Help" original="Send an email alert after the item is Due (after Date Next Action). If set to zero, no alert is sent.">Enviar un correo electrónico de alerta después de que la solicitud está atrasada. Si se establece en cero no se envía alerta.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1696" trl="Y">
-  <value column="Name" original="Escalate after Days Due">Extiéndase después de los días atraso</value>
-  <value column="PrintName" original="Escalate after Days">Extiéndase después de los días atraso</value>
-  <value column="Description" original="Escalation to superior after number of due days (0 = no)">Escalación a un número superior después de un número de días de vencido</value>
-  <value column="Help" original="The item will be escalated and assigned to the supervisor after the number of days over due. If 0, there is no escalation.">La partida será escalada y asignada al supervisor después de que el número de días esté vencida</value>
+  <value column="Name" original="Escalate after Days Due">Días para Alertar Supervisor</value>
+  <value column="PrintName" original="Escalate after Days">Días para Alertar Supervisor</value>
+  <value column="Description" original="Escalation to superior after number of due days (0 = no)">Enviar alerta al supervisor del representante (o del procesador si el representante no tiene supervisor) después de presentar atraso en el número de días especificado.</value>
+  <value column="Help" original="The item will be escalated and assigned to the supervisor after the number of days over due. If 0, there is no escalation.">Enviar alerta al supervisor del representante (o del procesador si el representante no tiene supervisor) después de presentar atraso en el número de días especificado.  El escalamiento no cambia el asignado, solamente envía correo de alerta al supervisor una sola vez.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -16656,7 +16656,7 @@ de proyecto - capacidad de publicar el material</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2467" trl="Y">
-  <value column="Name" original="Approve own Documents">Aprueba sus Documento</value>
+  <value column="Name" original="Approve own Documents">Aprueba Documentos Propios</value>
   <value column="PrintName" original="Approve own">Aprueba sus propios Documento</value>
   <value column="Description" original="Users with this role can approve their own documents">Los usuarios con este rol pueden aprobar sus propios documentos</value>
   <value column="Help" original="If a user cannot approve their own documents (orders, etc.), it needs to be approved by someone else.">Si un usuario no puede aprobar sus propios documentos (ordenes, etc.), necesita ser aprobado por algún otro.</value>
@@ -18210,50 +18210,50 @@ La secuencia de Ciudad/Región/Postal es determinada con la dirección de format
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2630" trl="Y">
-  <value column="Name" original="Due Date Tolerance">Tolerancia a la Fecha de Vencimiento</value>
-  <value column="PrintName" original="Due Date Tolerance">Tolerancia a la Fecha de Vencimiento</value>
-  <value column="Description" original="Tolerance in days between the Date Next Action and the date the request is regarded as overdue"/>
-  <value column="Help" original="When the Date Next Action is passed, the Request becomes Due. After the Due Date Tolerance, the Request becomes Overdue.">Cuando se pasa la acción siguiente de la fecha, La solicitud llega a ser debida. Después de la tolerancia de la fecha debida, la petición llega a ser atrasada.</value>
+  <value column="Name" original="Due Date Tolerance">Días de tolerancia al vencimiento</value>
+  <value column="PrintName" original="Due Date Tolerance">Días de tolerancia al vencimiento</value>
+  <value column="Description" original="Tolerance in days between the Date Next Action and the date the request is regarded as overdue">Tolerancia en días para determinar que la solicitud está muy atrasada</value>
+  <value column="Help" original="When the Date Next Action is passed, the Request becomes Due. After the Due Date Tolerance, the Request becomes Overdue.">Cuando la fecha de la siguiente acción se vence, la solicitud se marca como atrasada, después de los días de tolerancia se marca como muy atrasada.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2631" trl="Y">
-  <value column="Name" original="Reminder Days">Días de Recordatorio</value>
-  <value column="PrintName" original="Reminder Days">Días de Recordatorio</value>
-  <value column="Description" original="Days between sending Reminder Emails for a due or inactive Document">Días para enviar los emails de recordatorio para un documento debido o inactivo</value>
-  <value column="Help" original="When a document is due for too long without activity, a reminder is sent. 0 means no reminders.&#10;The Remind Days are the days when the next email reminder is sent.">Cuando un documento es debido A, demasiado largo sin actividad, se envía un recordatorio. 0 no significa ningún recordatorio. Los días del recordar son los días en que se envía el recordatorio siguiente del email.</value>
+  <value column="Name" original="Reminder Days">Días entre Alertas</value>
+  <value column="PrintName" original="Reminder Days">Días entre Alertas</value>
+  <value column="Description" original="Days between sending Reminder Emails for a due or inactive Document">Días que deben pasar para enviar nuevamente una alerta de inactividad o atraso.</value>
+  <value column="Help" original="When a document is due for too long without activity, a reminder is sent. 0 means no reminders.&#10;The Remind Days are the days when the next email reminder is sent.">Días que deben pasar para enviar nuevamente una alerta de inactividad o atraso.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2632" trl="Y">
-  <value column="Name" original="EMail when Due">Email Cuando esta Vencido</value>
-  <value column="PrintName" original="EMail when Due">Email Esta Vencido</value>
-  <value column="Description" original="Send EMail when Request becomes due">Envíe el email cuando la petición llega a ser debida</value>
-  <value column="Help" original="Send EMail when Request becomes due">Envíe el email cuando la petición llega a ser debida</value>
+  <value column="Name" original="EMail when Due">Correo cuando Atrasado</value>
+  <value column="PrintName" original="EMail when Due">Correo cuando Atrasado</value>
+  <value column="Description" original="Send EMail when Request becomes due">Enviar correo cuando se cumple la fecha de la siguiente acción</value>
+  <value column="Help" original="Send EMail when Request becomes due">Enviar correo cuando se cumple la fecha de la siguiente acción</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2633" trl="Y">
-  <value column="Name" original="EMail when Overdue">Email Vencidos</value>
-  <value column="PrintName" original="EMail when Overdue">Email cuando es vencido</value>
-  <value column="Description" original="Send EMail when Request becomes overdue">Envíe el email cuando la solicitud llega a ser atrasada</value>
-  <value column="Help" original="Send EMail when Request becomes overdue">Envíe el email cuando la solicitud llega a ser atrasada</value>
+  <value column="Name" original="EMail when Overdue">Correo cuando Muy Atrasado</value>
+  <value column="PrintName" original="EMail when Overdue">Correo cuando Muy Atrasado</value>
+  <value column="Description" original="Send EMail when Request becomes overdue">Enviar correo cuando se cumple la fecha de la siguiente acción más los días de tolerancia del tipo de solicitud</value>
+  <value column="Help" original="Send EMail when Request becomes overdue">Enviar correo cuando se cumple la fecha de la siguiente acción más los días de tolerancia del tipo de solicitud</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2634" trl="Y">
-  <value column="Name" original="Inactivity Alert Days">Alerta de días en inactividad</value>
-  <value column="PrintName" original="Inactivity Alert Days">Alerta de días en inactividad</value>
-  <value column="Description" original="Send Alert when there is no activity after days (0= no alert)">Enviar una alerta cuando esté en dias de inactividad. (0= no alerta)</value>
-  <value column="Help" original="An email alert is sent when the request shows no activity for the number of days defined.">Enviar un Email de alerta cuando el resultado no muestra actividad por el número de dias definido.</value>
+  <value column="Name" original="Inactivity Alert Days">Días Alerta por Inactividad</value>
+  <value column="PrintName" original="Inactivity Alert Days">Días Alerta por Inactividad</value>
+  <value column="Description" original="Send Alert when there is no activity after days (0= no alert)">Enviar una alerta cuando la solicitud no es actualizada en el número de días especificado. (0 = no alerta)</value>
+  <value column="Help" original="An email alert is sent when the request shows no activity for the number of days defined.">Enviar una alerta cuando la solicitud no es actualizada en el número de días especificado. (0 = no alerta)</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -19102,12 +19102,10 @@ Si el patrón del lenguaje no es correcto, porfavor cree una petición en la ayu
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2724" trl="Y">
-  <value column="Name" original="Auto Due Date Days">Auto Fecha Vencimiento Días</value>
-  <value column="PrintName" original="Auto Due Date Days">Auto Fecha Vencimiento Días</value>
-  <value column="Description" original="Automatic Due Date Days">Automaticamente Fecha Vencimiento Días</value>
-  <value column="Help" original="If a due date is not defined and the Auto Due Days ins greater then zero, a due date in the number of days is automatically created.">Si una Fecha de Vencimiento no se define y el campo de Auto, días de vencimiento es mayor que 0, una fecha de vencimiento, en número de días es autmaticamente creada.
-
-</value>
+  <value column="Name" original="Auto Due Date Days">Días Fecha Siguiente Acción</value>
+  <value column="PrintName" original="Auto Due Date Days">Días Fecha Siguiente Acción</value>
+  <value column="Description" original="Automatic Due Date Days">Asigna la fecha de la siguiente acción automáticamente</value>
+  <value column="Help" original="If a due date is not defined and the Auto Due Days ins greater then zero, a due date in the number of days is automatically created.">Si la fecha de la siguiente acción se deja en blanco y el campo Días Fecha Siguiente Acción es mayor que 0, se asigna la fecha de la siguiente acción según el número de días especificado.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -19430,8 +19428,8 @@ Si usted tiene multiples líneas, un activo es creado por línea.</value>
  <row id="2756" trl="Y">
   <value column="Name" original="Next Status">Siguiente Estado</value>
   <value column="PrintName" original="Next Status">Siguiente Estado</value>
-  <value column="Description" original="Move to next status automatically after timeout">Muéve al estado siguiente automáticamente después de tiempo agotado</value>
-  <value column="Help" original="After the timeout, change the status automatically">Despues de tiempo agotado, cambia el estado automaticamente.</value>
+  <value column="Description" original="Move to next status automatically after timeout">Mueve al estado automáticamente al siguiente estado después de los días de cambio automático</value>
+  <value column="Help" original="After the timeout, change the status automatically">Despues de los días de cambio automático, cambia el estado automaticamente al siguiente estado.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -19448,10 +19446,10 @@ Si usted tiene multiples líneas, un activo es creado por línea.</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2758" trl="Y">
-  <value column="Name" original="Timeout in Days">Descanso en días</value>
-  <value column="PrintName" original="Timeout Days">Descanso en días</value>
-  <value column="Description" original="Timeout in Days to change Status automatically">Descanso en los días para cambiar estado automáticamente</value>
-  <value column="Help" original="After the number of days of inactivity, the status is changed automatically to the Next Status.  If no Next Status is defined, the status is not changed.">Después del número de días de la inactividad, el estado se cambia automáticamente al estado siguiente. Si no se define ningún estado siguiente, el estado no se cambia.</value>
+  <value column="Name" original="Timeout in Days">Días Cambio Estado Automático</value>
+  <value column="PrintName" original="Timeout Days">Días Cambio Estado Automático</value>
+  <value column="Description" original="Timeout in Days to change Status automatically">Tiempo en días para cambiar el estado en forma automática</value>
+  <value column="Help" original="After the number of days of inactivity, the status is changed automatically to the Next Status.  If no Next Status is defined, the status is not changed.">Después del número de días de cambio de estado automático, el estado se cambia automáticamente al siguiente estado.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -19924,8 +19922,8 @@ Si usted tiene multiples líneas, un activo es creado por línea.</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2808" trl="Y">
-  <value column="Name" original="Server EMail">Servidor de Correo Electrónico</value>
-  <value column="PrintName" original="Server EMail">Servidor de Correo Electrónico</value>
+  <value column="Name" original="Server EMail">Correo Electrónico desde el Servidor</value>
+  <value column="PrintName" original="Server EMail">Correo Electrónico desde el Servidor</value>
   <value column="Description" original="Send EMail from Server">Enviar correo electrónico desde el servidor</value>
   <value column="Help" original="When selected, mail is sent from the server rather then the client.  This decreases availability.  You would select this when you do not want to enable email relay for the client addresses in your mail server.">Cuando está seleccionado, los correos electrónicos son enviados desde el servidor de la compañía. Usted puede seleccionar esto cuando no desea permitir contestar correos electrónicos para las direcciones almacenadas en su servidor de correo.</value>
   <value column="PO_Description" original=""/>
