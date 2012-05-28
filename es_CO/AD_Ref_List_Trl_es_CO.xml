@@ -1203,15 +1203,15 @@
   <value column="Description" original=""/>
  </row>
  <row id="442" trl="Y">
-  <value column="Name" original="Overdue">Vencido</value>
+  <value column="Name" original="Overdue">Muy Atrasado</value>
   <value column="Description" original=""/>
  </row>
  <row id="443" trl="Y">
-  <value column="Name" original="Due">Por vencer</value>
+  <value column="Name" original="Due">Atrasado</value>
   <value column="Description" original=""/>
  </row>
  <row id="444" trl="Y">
-  <value column="Name" original="Scheduled">Programado</value>
+  <value column="Name" original="Scheduled">Agendado</value>
   <value column="Description" original=""/>
  </row>
  <row id="445" trl="Y">

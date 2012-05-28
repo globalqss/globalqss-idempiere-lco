@@ -733,12 +733,6 @@ Necesita volver a ingresar y reiniciar su servidor de aplicaciones para que los 
   <value column="Description" original="Default Accounts">Cuentas por Defecto</value>
   <value column="Help" original="The Defaults Tab displays the Default accounts for an Accounting Schema.  These values will display when a new document is opened.  The user can override these defaults within the document.">La pestaña Por Defecto despliega las cuentas por defecto para un esquema contable. Estos valores se despliegan cuando una nueva cuenta es creada. El usuario puede cambiar estos valores predeterminados en los diferentes documentos donde se usan.</value>
  </row>
- <row id="254" trl="Y">
-  <value column="Name" original="Costing (old)">Costeo</value>
-  <value column="CommitWarning" original=""/>
-  <value column="Description" original="Old Product Costing Info">Definir Costeos</value>
-  <value column="Help" original="">La pestaña Costeo define el tipo de costeo usado en el sistema.</value>
- </row>
  <row id="255" trl="Y">
   <value column="Name" original="Inventory Count">Conteo de Inventario</value>
   <value column="CommitWarning" original=""/>
