@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--ADempiere(r) 3.6.0LTS+P20101216_2010-06-14 -Smart Suite ERP,CRM and SCM- (c) 1999-2010 ADempiere(r); Implementation: ADempiere - Supported by ADempiere community-->
-<!--<!DOCTYPE adempiereTrl PUBLIC "-//ComPiere, Inc.//DTD Adempiere Translation 1.0//EN" "http://www.adempiere.com/dtd/adempiereTrl.dtd">-->
-<adempiereTrl language="es_CO" table="AD_Element">
+<!--GlobalQSS - iDempiere -Smart Suite ERP,CRM and SCM- (c) 1999-2012 iDempiere(r); Implementation: iDempiere - Supported by GlobalQSS - Quality Systems & Solutions-->
+<!--<!DOCTYPE idempiereTrl PUBLIC "-//ComPiere, Inc.//DTD idempiere Translation 1.0//EN" "http://www.idempiere.com/dtd/idempiereTrl.dtd">-->
+<idempiereTrl language="es_CO" table="AD_Element">
  <row id="101" trl="Y">
   <value column="Name" original="Attachment">Adjunto</value>
   <value column="PrintName" original="Attachment">Adjunto</value>
@@ -3956,8 +3956,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="885" trl="Y">
-  <value column="Name" original="Accounting Fact">Hecho Contable</value>
-  <value column="PrintName" original="Accounting Fact">Hecho Contable</value>
+  <value column="Name" original="Accounting Fact">Asiento Contable</value>
+  <value column="PrintName" original="Accounting Fact">Asiento Contable</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -29402,6 +29402,88 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
+ <row id="54134" trl="Y">
+  <value column="Name" original="On Screen Keyboard layout">Distribución Teclado en Pantalla</value>
+  <value column="PrintName" original="On Screen Keyboard layout">Distribución Teclado en Pantalla</value>
+  <value column="Description" original="The key layout to use for on screen keyboard for text fields.">La Distribución de teclado en pantalla a utilizar para campos de texto.</value>
+  <value column="Help" original="If empty, the on screen keyboard will not be used.">Si se deja en blanco, la distribución del teclado en pantalla no se usará.</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54135" trl="Y">
+  <value column="Name" original="On Screen Number Pad layout">Distribución Teclado Numérico en Pantalla</value>
+  <value column="PrintName" original="On Screen Number Pad layout">Distribución Teclado Numérico en Pantalla</value>
+  <value column="Description" original="The key layout to use for on screen number pad for numeric fields.">La Distribución de teclado en pantalla a utilizar para campos numéricos.</value>
+  <value column="Help" original="If empty, the on screen numberpad will not be used.">Si se deja en blanco, la distribución del teclado numérico en pantalla no se usará.</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54136" trl="Y">
+  <value column="Name" original="Key Layout">Distribución Teclado</value>
+  <value column="PrintName" original="Key Layout">Distribución Teclado</value>
+  <value column="Description" original="Key Layout to be displayed when this key is pressed">La distribución de teclado a desplegar cuando esta tecla es pulsada.</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54137" trl="Y">
+  <value column="Name" original="Column span">Ancho en Columnas</value>
+  <value column="PrintName" original="Column span">Ancho en Columnas</value>
+  <value column="Description" original="Number of columns spanned">Número de columnas ocupadas</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54138" trl="Y">
+  <value column="Name" original="Row Span">Alto en Filas</value>
+  <value column="PrintName" original="Row Span">Alto en Filas</value>
+  <value column="Description" original="Number of rows spanned">Número de filas ocupadas</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54139" trl="Y">
+  <value column="Name" original="Columns">Columnas</value>
+  <value column="PrintName" original="Columns">Columnas</value>
+  <value column="Description" original="Number of columns">Número de columnas</value>
+  <value column="Help" original="The number of columns in the layout grid">El número de columnas en la disposición de grilla</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54140" trl="Y">
+  <value column="Name" original="POS Key Layout Type">Tipo Disposición Teclado PDV</value>
+  <value column="PrintName" original="POS Key Layout Type">Tipo Disposición Teclado PDV</value>
+  <value column="Description" original="The type of Key Layout">El Tipo Disposición Teclado PDV</value>
+  <value column="Help" original="Keyboard: used for POS text field on screen keyboard&#10;Numberpad: used for POS numeric field on screen numberpad&#10;Product: used to quickly add products to POS order">Teclado Alfanumérico: usado para campos de texto PDV en pantalla
+Teclado Numérico: usado para campos numéricos del PDV
+Producto: usado para adicionar rápidamente productos a la venta</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54141" trl="Y">
+  <value column="Name" original="Auto Logout Delay">Demora Salida Automática</value>
+  <value column="PrintName" original="Auto Logout Delay">Demora Salida Automática</value>
+  <value column="Description" original="Automatically logout if terminal inactive for this period">Cerrar la sesión automáticamente si la terminal permanece inactiva por este período</value>
+  <value column="Help" original="Measured in seconds, zero for no automatic logout">En segundos, cero para no cerrar sesión automáticamente</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
  <row id="54150" trl="Y">
   <value column="Name" original="Prepare Split Document">Prepare Divide Documento</value>
   <value column="PrintName" original="Prepare Split Doc">Prepare Divide Documento</value>
@@ -29437,6 +29519,16 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PrintName" original="Days Approval Accumulated">Días Aprobación Acumulado</value>
   <value column="Description" original="The days approval indicates the days to take into account to verify the accumulated approval amount.">Los días de aprobación acumulados indican los días a tener en cuenta para verificar el total de aprobación acumulado.</value>
   <value column="Help" original="The Days Approval Accumulated field indicates the days to take into account to verify the accumulated approval amount.">El campo días de aprobación acumulado indican los días a tener en cuenta para verificar el total de aprobación acumulado.</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54274" trl="Y">
+  <value column="Name" original="Match Code">Código Coincidente</value>
+  <value column="PrintName" original="Match Code">Código Coincidente</value>
+  <value column="Description" original="String identifying related accounting facts">Cadena identificando asientos contables relacionados</value>
+  <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -29552,4 +29644,254 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
-</adempiereTrl>
+ <row id="55256" trl="Y">
+  <value column="Name" original="Bank Account Description">Descripción Cuenta Bancaria</value>
+  <value column="PrintName" original="Bank Account Description">Descripción Cuenta Bancaria</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55297" trl="Y">
+  <value column="Name" original="Allow Copy">Permitir copia</value>
+  <value column="PrintName" original="Allow Copy">Permitir copia</value>
+  <value column="Description" original="Determine if a column must be copied when pushing the button to copy record">Determina si una columna debe ser copiada cuando se selecciona copiar registro</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200000" trl="Y">
+  <value column="Name" original="Recent Item">Registro Reciente</value>
+  <value column="PrintName" original="Recent Item">Registro Reciente</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200001" trl="Y">
+  <value column="Name" original="Accounting Fact Reconciliation">Conciliación Asientos Contables</value>
+  <value column="PrintName" original="Accounting Fact Reconciliation">Conciliación Asientos Contables</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200002" trl="Y">
+  <value column="Name" original="Last Migration Script Applied">Ultimo script de migración aplicado</value>
+  <value column="PrintName" original="Last Migration Script Applied">Ultimo script de migración aplicado</value>
+  <value column="Description" original="Register of the filename for the last migration script applied on this database">Registra el nombre del archivo del último script de migración aplicado en esta base de datos</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200003" trl="Y">
+  <value column="Name" original="Descending">Descendente</value>
+  <value column="PrintName" original="Descending">Descendente</value>
+  <value column="Description" original="Sort your data using a SQL Desc Order By statement">Ordenar sus datos usando la cláusula DESC en el ORDER BY del comando SQL (en forma descendente)</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200004" trl="Y">
+  <value column="Name" original="Mandatory Charge or Product">Cargo o Producto Obligatorio</value>
+  <value column="PrintName" original="Mandatory Charge or Product">Cargo o Producto Obligatorio</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200005" trl="Y">
+  <value column="Name" original="Cost History">Historia Costos</value>
+  <value column="PrintName" original="Cost History">Historia Costos</value>
+  <value column="Description" original="Movement history for M_Cost">Movimiento histórico para M_Cost</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200006" trl="Y">
+  <value column="Name" original="Cost History UUID">UUID Historia Costos</value>
+  <value column="PrintName" original="Cost History UUID">UUID Historia Costos</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200007" trl="Y">
+  <value column="Name" original="New Accumulated Amt">Nuevo Monto Acumulado</value>
+  <value column="PrintName" original="New Accumulated Amt">Nuevo Monto Acumulado</value>
+  <value column="Description" original="Accumulated Amt after processing of M_CostDetail">Nuevo monto acumulado después de procesar M_CostDetail</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200008" trl="Y">
+  <value column="Name" original="New Cost Price">Nuevo Precio Costo</value>
+  <value column="PrintName" original="New Cost Price">Nuevo Precio Costo</value>
+  <value column="Description" original="New current cost price after processing of M_CostDetail">Nuevo precio costo después de procesar M_CostDetail</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200009" trl="Y">
+  <value column="Name" original="New Accumulated Qty">Nueva Cantidad Acumulada</value>
+  <value column="PrintName" original="New Accumulated Qty">Nueva Cantidad Acumulada</value>
+  <value column="Description" original="New Accumulated Qty after processing of M_CostDetail">Nueva cantidad acumulada después de procesar M_CostDetail</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200010" trl="Y">
+  <value column="Name" original="New Current Quantity">Nueva Cantidad Actual</value>
+  <value column="PrintName" original="New Current Quantity">Nueva Cantidad Actual</value>
+  <value column="Description" original="New current quantity after processing of M_CostDetail">Nueva cantidad actual después de procesar M_CostDetail</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200011" trl="Y">
+  <value column="Name" original="Old Accumulated Amt">Monto Acumulado Anterior</value>
+  <value column="PrintName" original="Old Accumulated Amt">Monto Acumulado Anterior</value>
+  <value column="Description" original="Old accumulated amt before the processing of M_CostDetail">Monto acumulado anterior antes de procesar M_CostDetail</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200012" trl="Y">
+  <value column="Name" original="Old Current Cost Price">Precio Costo Anterior</value>
+  <value column="PrintName" original="Old Current Cost Price">Precio Costo Anterior</value>
+  <value column="Description" original="Old current cost price before the processing of M_CostDetail">Precio costo anterior antes de procesar M_CostDetail</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200013" trl="Y">
+  <value column="Name" original="Old Accumulated Qty">Cantidad Acumulada Anterior</value>
+  <value column="PrintName" original="Old Accumulated Qty">Cantidad Acumulada Anterior</value>
+  <value column="Description" original="Old accumulated qty before the processing of M_CostDetail">Cantidad acumulada anterior antes de procesar M_CostDetail</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200014" trl="Y">
+  <value column="Name" original="Old Current Quantity">Cantidad Actual Anterior</value>
+  <value column="PrintName" original="Old Current Quantity">Cantidad Actual Anterior</value>
+  <value column="Description" original="Old current quantity before the processing of M_CostDetail">Cantidad actual anterior antes de procesar M_CostDetail</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200016" trl="Y">
+  <value column="Name" original="ToolBar Button">Botón Barra Herramientas</value>
+  <value column="PrintName" original="ToolBar Button">Botón Barra Herramientas</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200017" trl="Y">
+  <value column="Name" original="Component Name">Nombre Componente</value>
+  <value column="PrintName" original="Component Name">Nombre Componente</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200018" trl="Y">
+  <value column="Name" original="Action Class Name">Nombre Clase Acción</value>
+  <value column="PrintName" original="Action Class Name">Nombre Clase Acción</value>
+  <value column="Description" original="The class name that implements the interface for toolbar actions">El nombre de la clase que implementa la interface para acciones de barra de herramientas</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200019" trl="Y">
+  <value column="Name" original="Action Name">Nombre Acción</value>
+  <value column="PrintName" original="Action Name">Nombre Acción</value>
+  <value column="Description" original="Action name on the toolbar">Nombre acción en la barra de herramientas</value>
+  <value column="Help" original="Used to get the corresponding message and Icon name prefix">Usado para obtener el mensaje correspondiente y el prefijo del ícono</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200020" trl="Y">
+  <value column="Name" original="KeyCode">Código Tecla</value>
+  <value column="PrintName" original="KeyCode">Código Tecla</value>
+  <value column="Description" original="KeyCode for shortcuts">Código Tecla para atajos</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200021" trl="Y">
+  <value column="Name" original="Keystroke Modifiers">Modificadores Teclado</value>
+  <value column="PrintName" original="Keystroke Modifiers">Modificadores Teclado</value>
+  <value column="Description" original="Keystroke Modifiers for shortcuts">Modificadores de teclado para atajos</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200022" trl="Y">
+  <value column="Name" original="ToolBar Button Restrict">Restringe Botón Barra Herramientas</value>
+  <value column="PrintName" original="ToolBar Button Restrict">Restringe Botón Barra Herramientas</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200023" trl="Y">
+  <value column="Name" original="Auto expand menu">Auto Expande Menú</value>
+  <value column="PrintName" original="Auto expand menu">Auto Expande Menú</value>
+  <value column="Description" original="If ticked, the menu is automatically expanded">Si se marca, el menú es automáticamente expandido</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+</idempiereTrl>

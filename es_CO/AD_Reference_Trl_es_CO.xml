@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--ADempiere(r) 3.6.0LTS+P20101216_2010-06-14 -Smart Suite ERP,CRM and SCM- (c) 1999-2010 ADempiere(r); Implementation: ADempiere - Supported by ADempiere community-->
-<!--<!DOCTYPE adempiereTrl PUBLIC "-//ComPiere, Inc.//DTD Adempiere Translation 1.0//EN" "http://www.adempiere.com/dtd/adempiereTrl.dtd">-->
-<adempiereTrl language="es_CO" table="AD_Reference">
+<!--GlobalQSS - iDempiere -Smart Suite ERP,CRM and SCM- (c) 1999-2012 iDempiere(r); Implementation: iDempiere - Supported by GlobalQSS - Quality Systems & Solutions-->
+<!--<!DOCTYPE idempiereTrl PUBLIC "-//ComPiere, Inc.//DTD idempiere Translation 1.0//EN" "http://www.idempiere.com/dtd/idempiereTrl.dtd">-->
+<idempiereTrl language="es_CO" table="AD_Reference">
  <row id="1" trl="Y">
   <value column="Name" original="AD_Reference Data Types">AD_Reference Data Types</value>
   <value column="Description" original="Data Type selection">Selección de tipo de datos</value>
@@ -2092,6 +2092,16 @@
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="53350" trl="Y">
+  <value column="Name" original="C_POSKeyLayout">C_POSKeyLayout</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53351" trl="Y">
+  <value column="Name" original="POSKeyLayoutType">POSKeyLayoutType</value>
+  <value column="Description" original="POS Key layout types">POS Key layout types</value>
+  <value column="Help" original=""/>
+ </row>
  <row id="53352" trl="Y">
   <value column="Name" original="RelType C_BPartner &lt;= Vendor/Customer Return"><![CDATA[RelType C_BPartner_ID->Customer_RMA]]></value>
   <value column="Description" original=""/>
@@ -2107,8 +2117,18 @@
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="53371" trl="Y">
+  <value column="Name" original="Reconciliation Type">Reconciliation Type</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53372" trl="Y">
+  <value column="Name" original="Reconciliation Rules">Reconciliation Rules</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row id="53382" trl="Y">
-  <value column="Name" original="Sales/Purchase/Both Usage">C_PaymentTerm PaymentTermUsage</value>
+  <value column="Name" original="C_PaymentTerm PaymentTermUsage">C_PaymentTerm PaymentTermUsage</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
@@ -2137,4 +2157,4 @@
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
-</adempiereTrl>
+</idempiereTrl>

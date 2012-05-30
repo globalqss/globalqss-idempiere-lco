@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--ADempiere(r) 3.6.0LTS+P20101216_2010-06-14 -Smart Suite ERP,CRM and SCM- (c) 1999-2010 ADempiere(r); Implementation: ADempiere - Supported by ADempiere community-->
-<!--<!DOCTYPE adempiereTrl PUBLIC "-//ComPiere, Inc.//DTD Adempiere Translation 1.0//EN" "http://www.adempiere.com/dtd/adempiereTrl.dtd">-->
-<adempiereTrl language="es_CO" table="AD_Form">
+<!--GlobalQSS - iDempiere -Smart Suite ERP,CRM and SCM- (c) 1999-2012 iDempiere(r); Implementation: iDempiere - Supported by GlobalQSS - Quality Systems & Solutions-->
+<!--<!DOCTYPE idempiereTrl PUBLIC "-//ComPiere, Inc.//DTD idempiere Translation 1.0//EN" "http://www.idempiere.com/dtd/idempiereTrl.dtd">-->
+<idempiereTrl language="es_CO" table="AD_Form">
  <row id="100" trl="Y">
   <value column="Name" original="Generate Invoices (manual)">Generar Facturas por Selección</value>
   <value column="Description" original="Select and generate invoices">Seleccionar y Generar Facturas</value>
@@ -195,4 +195,9 @@ Seleccione las ordenes con las cuales desea generar entregas y facturas</value>
   <value column="Description" original="Edit Manufacturing Workflows">Editor de Flujos de Trabajo de Manufactura</value>
   <value column="Help" original="Edit the graphical layout of manufacturing workflows">Edita el esquema gráfico de los flujos de trabajo de manufactura</value>
  </row>
-</adempiereTrl>
+ <row id="53016" trl="Y">
+  <value column="Name" original="Accounting Fact Reconcilation (manual)">Conciliación Asientos Contables (manual)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+</idempiereTrl>

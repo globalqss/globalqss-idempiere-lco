@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--ADempiere(r) 3.6.0LTS+P20101216_2010-06-14 -Smart Suite ERP,CRM and SCM- (c) 1999-2010 ADempiere(r); Implementation: ADempiere - Supported by ADempiere community-->
-<!--<!DOCTYPE adempiereTrl PUBLIC "-//ComPiere, Inc.//DTD Adempiere Translation 1.0//EN" "http://www.adempiere.com/dtd/adempiereTrl.dtd">-->
-<adempiereTrl language="es_CO" table="AD_Field">
+<!--GlobalQSS - iDempiere -Smart Suite ERP,CRM and SCM- (c) 1999-2012 iDempiere(r); Implementation: iDempiere - Supported by GlobalQSS - Quality Systems & Solutions-->
+<!--<!DOCTYPE idempiereTrl PUBLIC "-//ComPiere, Inc.//DTD idempiere Translation 1.0//EN" "http://www.idempiere.com/dtd/idempiereTrl.dtd">-->
+<idempiereTrl language="es_CO" table="AD_Field">
  <row id="1546" trl="Y">
   <value column="Name" original="Link Column">Columna Enlace</value>
   <value column="Description" original="Link Column for Multi-Parent tables">Columna Enlace para tables con múltiples padres</value>
@@ -516,4 +516,4 @@ Las fechas Válido desde y Válido hasta indican el período de tiempo a utiliza
   <value column="Description" original="Copy From Another Cash Plan">Copiar de otro plan de caja</value>
   <value column="Help" original="Copy From Another Cash Plan">Copiar desde otro plan de caja</value>
  </row>
-</adempiereTrl>
+</idempiereTrl>
