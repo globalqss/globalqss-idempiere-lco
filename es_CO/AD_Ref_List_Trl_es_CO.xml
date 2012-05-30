@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--ADempiere(r) 3.6.0LTS+P20101216_2010-06-14 -Smart Suite ERP,CRM and SCM- (c) 1999-2010 ADempiere(r); Implementation: ADempiere - Supported by ADempiere community-->
-<!--<!DOCTYPE adempiereTrl PUBLIC "-//ComPiere, Inc.//DTD Adempiere Translation 1.0//EN" "http://www.adempiere.com/dtd/adempiereTrl.dtd">-->
-<adempiereTrl language="es_CO" table="AD_Ref_List">
+<!--GlobalQSS - iDempiere -Smart Suite ERP,CRM and SCM- (c) 1999-2012 iDempiere(r); Implementation: iDempiere - Supported by GlobalQSS - Quality Systems & Solutions-->
+<!--<!DOCTYPE idempiereTrl PUBLIC "-//ComPiere, Inc.//DTD idempiere Translation 1.0//EN" "http://www.idempiere.com/dtd/idempiereTrl.dtd">-->
+<idempiereTrl language="es_CO" table="AD_Ref_List">
  <row id="51" trl="Y">
   <value column="Name" original="Organization">Organización</value>
   <value column="Description" original=""/>
@@ -4466,9 +4466,37 @@
   <value column="Name" original="Cron Scheduling Pattern">Patrón Agendamiento Crontab</value>
   <value column="Description" original="Use cron style scheduling pattern">Utilice patrón de agendamiento estilo crontab</value>
  </row>
+ <row id="53578" trl="Y">
+  <value column="Name" original="Keyboard">Teclado Alfanúmerico</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53579" trl="Y">
+  <value column="Name" original="Numberpad">Teclado Númerico</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53580" trl="Y">
+  <value column="Name" original="Product">Producto</value>
+  <value column="Description" original=""/>
+ </row>
  <row id="53583" trl="Y">
   <value column="Name" original="Custom Separator Char">Caracter Separador Personalizado</value>
   <value column="Description" original=""/>
+ </row>
+ <row id="53624" trl="Y">
+  <value column="Name" original="Bank In Transit">Banco en Tránsito</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53625" trl="Y">
+  <value column="Name" original="Payment Clearing (Unalloc Cash/Payment Selection)">Conciliación pagos (Pagos sin asignar/Selección de pagos)</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53626" trl="Y">
+  <value column="Name" original="AR/AP Trade (Receivables/Vendor Liabilities)">CxC/CxP (Cuentas por Cobrar/Cuentas por pagar)</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53627" trl="Y">
+  <value column="Name" original="GL Reconciliation">Conciliación Contable</value>
+  <value column="Description" original="SQL subquery used in GL Reconciliation (auto)">Subconsulta SQL usada para conciliación contable (auto)</value>
  </row>
  <row id="53660" trl="Y">
   <value column="Name" original="Both">Ambos</value>
@@ -4546,4 +4574,4 @@
   <value column="Name" original="4_Actual Debt (Invoices)">4_Deuda Actual (Facturas)</value>
   <value column="Description" original=""/>
  </row>
-</adempiereTrl>
+</idempiereTrl>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--ADempiere(r) 3.6.0LTS+P20101216_2010-06-14 -Smart Suite ERP,CRM and SCM- (c) 1999-2010 ADempiere(r); Implementation: ADempiere - Supported by ADempiere community-->
-<!--<!DOCTYPE adempiereTrl PUBLIC "-//ComPiere, Inc.//DTD Adempiere Translation 1.0//EN" "http://www.adempiere.com/dtd/adempiereTrl.dtd">-->
-<adempiereTrl language="es_CO" table="AD_Message">
+<!--GlobalQSS - iDempiere -Smart Suite ERP,CRM and SCM- (c) 1999-2012 iDempiere(r); Implementation: iDempiere - Supported by GlobalQSS - Quality Systems & Solutions-->
+<!--<!DOCTYPE idempiereTrl PUBLIC "-//ComPiere, Inc.//DTD idempiere Translation 1.0//EN" "http://www.idempiere.com/dtd/idempiereTrl.dtd">-->
+<idempiereTrl language="es_CO" table="AD_Message">
  <row id="101" trl="Y">
   <value column="MsgText" original="zero">cero</value>
   <value column="MsgTip" original=""/>
@@ -5490,6 +5490,18 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgText" original="Invalid cron scheduling pattern">Patrón de agendamiento crontab no válido</value>
   <value column="MsgTip" original="Invalid cron scheduling pattern - check syntax">Patrón de agendamiento crontab no válido - chequee la sintaxis</value>
  </row>
+ <row id="53096" trl="Y">
+  <value column="MsgText" original="Subtotal">Subtotal</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="53097" trl="Y">
+  <value column="MsgText" original="Tender Amount">Monto Importe</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="53098" trl="Y">
+  <value column="MsgText" original="Change">Cambio</value>
+  <value column="MsgTip" original=""/>
+ </row>
  <row id="53099" trl="Y">
   <value column="MsgText" original="The page or component you request is no longer available. This is normally caused by timeout or rebooting the server.">La página o componente solicitado no está disponible.  Esto puede ser causado por demasiado tiempo sin utilizar la aplicación o porque se reinició el servidor.</value>
   <value column="MsgTip" original=""/>
@@ -5505,6 +5517,14 @@ Por favor contacte al ADMINISTRADOR.</value>
  <row id="53119" trl="Y">
   <value column="MsgText" original="Error in payment schedule">Error en programa de pagos</value>
   <value column="MsgTip" original="Check the payment schedule.  If the payment term has a schema then the document must have a schedule (is auto-generated if empty) and the schedule must sum the total of the document.  If the payment term doesn't have a schema, then the document must not have schedule.">Chequee el programa de pagos.  Si el término de pago tiene un esquema entonces el documento debe tener un programa de pagos (es auto-generado si se encuentra vacío) y el programa de pagos debe sumar el total del documento.  Si el término de pago no tiene un esquema, entonces el documento no debe tener un programa de pagos.</value>
+ </row>
+ <row id="53120" trl="Y">
+  <value column="MsgText" original="c">b</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="53121" trl="Y">
+  <value column="MsgText" original="c">Borrar</value>
+  <value column="MsgTip" original=""/>
  </row>
  <row id="53122" trl="Y">
   <value column="MsgText" original="The table doesn't have associated button for the process">La tabla no tiene asociado un botón para el proceso</value>
@@ -5550,6 +5570,38 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgText" original="Negative inventory disallowed in this warehouse">No se permite inventario negativo en este almacén</value>
   <value column="MsgTip" original=""/>
  </row>
+ <row id="53136" trl="Y">
+  <value column="MsgText" original="Total">Total</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="53148" trl="Y">
+  <value column="MsgText" original="Add">Añadir</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="53149" trl="Y">
+  <value column="MsgText" original="Reply">Responder</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="53161" trl="Y">
+  <value column="MsgText" original="This RMA cannot be voided because it has associated returns, please void the returns first">Esta autorización no puede ser anulada porque tiene devoluciones asociadas, favor anular las devoluciones primero</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200000" trl="Y">
+  <value column="MsgText" original="Unprocessed Documents">Documentos sin Procesar</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200001" trl="Y">
+  <value column="MsgText" original="Map">Mapa</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200002" trl="Y">
+  <value column="MsgText" original="Route">Ruta</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200003" trl="Y">
+  <value column="MsgText" original="On this document is mandatory to fill the product or the charge">En este documento se debe diligenciar el cargo o el producto</value>
+  <value column="MsgTip" original=""/>
+ </row>
  <row id="520010" trl="Y">
   <value column="MsgText" original="1 Rupee">1 Rupia</value>
   <value column="MsgTip" original=" "/>
@@ -5582,4 +5634,4 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgText" original="Shipment/Receipt has different Sales/Purchase transaction than RMA">Recibo/Entrega tiene diferente transacción de ventas/compras que la autorización de devolución</value>
   <value column="MsgTip" original=""/>
  </row>
-</adempiereTrl>
+</idempiereTrl>

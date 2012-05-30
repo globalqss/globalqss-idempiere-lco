@@ -1,89 +1,110 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--ADempiere(r) 3.6.0LTS+P20101216_2010-06-14 -Smart Suite ERP,CRM and SCM- (c) 1999-2010 ADempiere(r); Implementation: ADempiere - Supported by ADempiere community-->
-<!--<!DOCTYPE adempiereTrl PUBLIC "-//ComPiere, Inc.//DTD Adempiere Translation 1.0//EN" "http://www.adempiere.com/dtd/adempiereTrl.dtd">-->
-<adempiereTrl language="es_CO" table="AD_PrintFormatItem">
+<!--GlobalQSS - iDempiere -Smart Suite ERP,CRM and SCM- (c) 1999-2012 iDempiere(r); Implementation: iDempiere - Supported by GlobalQSS - Quality Systems & Solutions-->
+<!--<!DOCTYPE idempiereTrl PUBLIC "-//ComPiere, Inc.//DTD idempiere Translation 1.0//EN" "http://www.idempiere.com/dtd/idempiereTrl.dtd">-->
+<idempiereTrl language="es_CO" table="AD_PrintFormatItem">
  <row id="2147" trl="Y">
+  <value column="Name" original="Rectangle">Rectangle</value>
   <value column="PrintName" original=""/>
   <value column="PrintNameSuffix" original=""/>
  </row>
  <row id="2148" trl="Y">
+  <value column="Name" original="Product Image">URL de la Imagen</value>
   <value column="PrintName" original=""/>
   <value column="PrintNameSuffix" original=""/>
  </row>
  <row id="2325" trl="Y">
+  <value column="Name" original="DocumentNo Barcode">No. del Documento</value>
   <value column="PrintName" original=""/>
   <value column="PrintNameSuffix" original=""/>
  </row>
  <row id="2326" trl="Y">
+  <value column="Name" original="UPC">UPC/EAN</value>
   <value column="PrintName" original=""/>
   <value column="PrintNameSuffix" original=""/>
  </row>
  <row id="2327" trl="Y">
+  <value column="Name" original="Postal">Código Postal</value>
   <value column="PrintName" original=""/>
   <value column="PrintNameSuffix" original=""/>
  </row>
  <row id="50477" trl="Y">
+  <value column="Name" original="VendorProductNo">No. de Producto del Proveedor</value>
   <value column="PrintName" original="VendorProductNo">No. de Producto del Proveedor</value>
   <value column="PrintNameSuffix" original=""/>
  </row>
  <row id="50992" trl="Y">
+  <value column="Name" original="Setup T">Tiempo por lote</value>
   <value column="PrintName" original="Setup">Configuración</value>
   <value column="PrintNameSuffix" original=""/>
  </row>
  <row id="51001" trl="Y">
+  <value column="Name" original="Cost T">Costo</value>
   <value column="PrintName" original="Cost T">Costo T</value>
   <value column="PrintNameSuffix" original=""/>
  </row>
  <row id="51005" trl="Y">
+  <value column="Name" original="Cost TL">Costo Actual</value>
   <value column="PrintName" original="Cost TL">Costo TL</value>
   <value column="PrintNameSuffix" original=""/>
  </row>
  <row id="51006" trl="Y">
+  <value column="Name" original="Cost LL">CurrentCostPriceLL</value>
   <value column="PrintName" original="Cost LL">Cost NM</value>
   <value column="PrintNameSuffix" original=""/>
  </row>
  <row id="51013" trl="Y">
+  <value column="Name" original="Levels">Levels</value>
   <value column="PrintName" original="Levels">Niveles</value>
   <value column="PrintNameSuffix" original=""/>
  </row>
  <row id="51018" trl="Y">
+  <value column="Name" original="Parent">Producto</value>
   <value column="PrintName" original="Parent">Padre</value>
   <value column="PrintNameSuffix" original=""/>
  </row>
  <row id="51026" trl="Y">
+  <value column="Name" original="Acct Schema">Esquema Contable</value>
   <value column="PrintName" original=""/>
   <value column="PrintNameSuffix" original=""/>
  </row>
  <row id="51066" trl="Y">
+  <value column="Name" original="F Cost">Costo Futuro</value>
   <value column="PrintName" original="F  Cost">Costo F</value>
   <value column="PrintNameSuffix" original=""/>
  </row>
  <row id="51067" trl="Y">
+  <value column="Name" original="F Cost LL">Future Cost Price Lower Level</value>
   <value column="PrintName" original="F  Cost LL">Costo F NM</value>
   <value column="PrintNameSuffix" original=""/>
  </row>
  <row id="51068" trl="Y">
+  <value column="Name" original="S Cost">Costo Estándar</value>
   <value column="PrintName" original="S Cost">Costo E</value>
   <value column="PrintNameSuffix" original=""/>
  </row>
  <row id="51069" trl="Y">
+  <value column="Name" original="Frozen">Is Cost Frozen</value>
   <value column="PrintName" original=""/>
   <value column="PrintNameSuffix" original=""/>
  </row>
  <row id="51074" trl="Y">
+  <value column="Name" original="Description">Descripción</value>
   <value column="PrintName" original="Description">Descripción</value>
   <value column="PrintNameSuffix" original=""/>
  </row>
  <row id="51075" trl="Y">
+  <value column="Name" original="Help">Ayuda</value>
   <value column="PrintName" original="Help">Ayuda</value>
   <value column="PrintNameSuffix" original=""/>
  </row>
  <row id="51076" trl="Y">
+  <value column="Name" original="Help">Ayuda</value>
   <value column="PrintName" original="Help"/>
   <value column="PrintNameSuffix" original=""/>
  </row>
  <row id="51337" trl="Y">
+  <value column="Name" original="PP_Order_Node_ID">PP_Order_Node_ID</value>
   <value column="PrintName" original=""/>
   <value column="PrintNameSuffix" original=""/>
  </row>
-</adempiereTrl>
+</idempiereTrl>

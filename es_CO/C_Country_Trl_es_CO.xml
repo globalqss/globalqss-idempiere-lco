@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--ADempiere(r) 3.6.0LTS+P20101216_2010-06-14 -Smart Suite ERP,CRM and SCM- (c) 1999-2010 ADempiere(r); Implementation: ADempiere - Supported by ADempiere community-->
-<!--<!DOCTYPE adempiereTrl PUBLIC "-//ComPiere, Inc.//DTD Adempiere Translation 1.0//EN" "http://www.adempiere.com/dtd/adempiereTrl.dtd">-->
-<adempiereTrl language="es_CO" table="C_Country">
+<!--GlobalQSS - iDempiere -Smart Suite ERP,CRM and SCM- (c) 1999-2012 iDempiere(r); Implementation: iDempiere - Supported by GlobalQSS - Quality Systems & Solutions-->
+<!--<!DOCTYPE idempiereTrl PUBLIC "-//ComPiere, Inc.//DTD idempiere Translation 1.0//EN" "http://www.idempiere.com/dtd/idempiereTrl.dtd">-->
+<idempiereTrl language="es_CO" table="C_Country">
  <row id="100" trl="Y">
   <value column="Name" original="United States">Estados Unidos</value>
   <value column="Description" original="United States of America">Estados Unidos de America</value>
@@ -1237,4 +1237,4 @@
   <value column="Description" original="Saint Martin">Isla de San Martín</value>
   <value column="RegionName" original="State">Estado</value>
  </row>
-</adempiereTrl>
+</idempiereTrl>

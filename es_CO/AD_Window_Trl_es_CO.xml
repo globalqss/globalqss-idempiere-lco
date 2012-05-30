@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--ADempiere(r) 3.6.0LTS+P20101216_2010-06-14 -Smart Suite ERP,CRM and SCM- (c) 1999-2010 ADempiere(r); Implementation: ADempiere - Supported by ADempiere community-->
-<!--<!DOCTYPE adempiereTrl PUBLIC "-//ComPiere, Inc.//DTD Adempiere Translation 1.0//EN" "http://www.adempiere.com/dtd/adempiereTrl.dtd">-->
-<adempiereTrl language="es_CO" table="AD_Window">
+<!--GlobalQSS - iDempiere -Smart Suite ERP,CRM and SCM- (c) 1999-2012 iDempiere(r); Implementation: iDempiere - Supported by GlobalQSS - Quality Systems & Solutions-->
+<!--<!DOCTYPE idempiereTrl PUBLIC "-//ComPiere, Inc.//DTD idempiere Translation 1.0//EN" "http://www.idempiere.com/dtd/idempiereTrl.dtd">-->
+<idempiereTrl language="es_CO" table="AD_Window">
  <row id="100" trl="Y">
   <value column="Name" original="Table and Column">Tabla y Columna</value>
   <value column="Description" original="Maintain Tables and Columns">Mantener tablas y columnas</value>
@@ -1789,9 +1789,24 @@ y otros</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="53125" trl="Y">
+  <value column="Name" original="Fact Reconciliation">Conciliación Asientos</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row id="53134" trl="Y">
   <value column="Name" original="Cash Plan">Plan de Caja</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
-</adempiereTrl>
+ <row id="200000" trl="Y">
+  <value column="Name" original="ToolBar Button">Botón Barra Herramientas</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200001" trl="Y">
+  <value column="Name" original="ToolBar Button Restrict">Restringe Botón Barra Herramientas</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+</idempiereTrl>

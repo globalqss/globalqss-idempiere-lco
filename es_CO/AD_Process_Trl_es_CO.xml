@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!--ADempiere(r) 3.6.0LTS+P20101216_2010-06-14 -Smart Suite ERP,CRM and SCM- (c) 1999-2010 ADempiere(r); Implementation: ADempiere - Supported by ADempiere community-->
-<!--<!DOCTYPE adempiereTrl PUBLIC "-//ComPiere, Inc.//DTD Adempiere Translation 1.0//EN" "http://www.adempiere.com/dtd/adempiereTrl.dtd">-->
-<adempiereTrl language="es_CO" table="AD_Process">
+<!--GlobalQSS - iDempiere -Smart Suite ERP,CRM and SCM- (c) 1999-2012 iDempiere(r); Implementation: iDempiere - Supported by GlobalQSS - Quality Systems & Solutions-->
+<!--<!DOCTYPE idempiereTrl PUBLIC "-//ComPiere, Inc.//DTD idempiere Translation 1.0//EN" "http://www.idempiere.com/dtd/idempiereTrl.dtd">-->
+<idempiereTrl language="es_CO" table="AD_Process">
  <row id="100" trl="Y">
   <value column="Name" original="Create Periods ">Crear Períodos</value>
   <value column="Description" original="Create 12 standard calendar periods.">Crear 12 períodos de calendario estándar (Ene-Dic)</value>
@@ -1821,6 +1821,21 @@ Debe ser implementado cuando no haya usuarios conectados.</value>
   <value column="Description" original="Import Product Planning and Forecast">Importa Planeación de Productos y Pronóstico</value>
   <value column="Help" original="Import and update  product planning data and forecast">Importa y Actualiza Planeación de Productos y Pronóstico</value>
  </row>
+ <row id="53202" trl="Y">
+  <value column="Name" original="POS Key Generate">Generar Tecla PDV</value>
+  <value column="Description" original="Generate POS Keys from products.">Generar tecla PDV para productos.</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53220" trl="Y">
+  <value column="Name" original="Unreconciled accounting facts">Asientos contables sin conciliar</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53221" trl="Y">
+  <value column="Name" original="Automatic account reconciliation">Conciliación contable automática</value>
+  <value column="Description" original="Reconcile account transactions according to standard rules">Conciliar asientos contables automáticamente de acuerdo a reglas estándar</value>
+  <value column="Help" original=""/>
+ </row>
  <row id="53245" trl="Y">
   <value column="Name" original="Validate">Validar</value>
   <value column="Description" original="Validate Payment Schedule">Validar Programa de Pagos</value>
@@ -1841,4 +1856,4 @@ Debe ser implementado cuando no haya usuarios conectados.</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
-</adempiereTrl>
+</idempiereTrl>
