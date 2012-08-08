@@ -773,7 +773,7 @@ Por favor cambie la caja PDV solo después de completar la transacción</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="293" trl="Y">
-  <value column="MsgText" original="&amp;Menu"><![CDATA[&Menú]]></value>
+  <value column="MsgText" original="&amp;Home"><![CDATA[&Menú]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="294" trl="Y">
@@ -5570,6 +5570,18 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgText" original="Negative inventory disallowed in this warehouse">No se permite inventario negativo en este almacén</value>
   <value column="MsgTip" original=""/>
  </row>
+ <row id="53133" trl="Y">
+  <value column="MsgText" original="Save and Create New">Guardar cambios y crear nuevo</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="53134" trl="Y">
+  <value column="MsgText" original="zip - 2Pack zip file">zip - Archivo zip 2Pack</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="53135" trl="Y">
+  <value column="MsgText" original="Export current row only?">¿Exportar sólo la fila actual?</value>
+  <value column="MsgTip" original=""/>
+ </row>
  <row id="53136" trl="Y">
   <value column="MsgText" original="Total">Total</value>
   <value column="MsgTip" original=""/>
@@ -5600,6 +5612,38 @@ Por favor contacte al ADMINISTRADOR.</value>
  </row>
  <row id="200003" trl="Y">
   <value column="MsgText" original="On this document is mandatory to fill the product or the charge">En este documento se debe diligenciar el cargo o el producto</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200004" trl="Y">
+  <value column="MsgText" original="Add all items on tree ?">¿Añadir todos los elementos al árbol?</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200005" trl="Y">
+  <value column="MsgText" original="Remove all items from tree ?">¿Eliminar todos los elementos del árbol?</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200006" trl="Y">
+  <value column="MsgText" original="Cannot post inactive document">No puedo contabilizar documento inactivo</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200007" trl="Y">
+  <value column="MsgText" original="Cannot Lock - ReSubmit">No puedo bloquear - reenvíe</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200008" trl="Y">
+  <value column="MsgText" original="Cannot Lock - ReSubmit or RePost with Force">No puedo bloquear - reenvíe o recontabilice con forzado</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200009" trl="Y">
+  <value column="MsgText" original="Select Role">Seleccionar Rol</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200011" trl="Y">
+  <value column="MsgText" original="Password Errors">Errores de Clave</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200012" trl="Y">
+  <value column="MsgText" original="Flat View">Vista Plana</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="520010" trl="Y">

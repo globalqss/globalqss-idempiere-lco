@@ -511,6 +511,11 @@ Las fechas Válido desde y Válido hasta indican el período de tiempo a utiliza
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="59449" trl="Y">
+  <value column="Name" original="Import Inventory Move">Importar Movimientos Inventario</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row id="60944" trl="Y">
   <value column="Name" original="Copy From Cash Plan">Copiar desde plan de caja</value>
   <value column="Description" original="Copy From Another Cash Plan">Copiar de otro plan de caja</value>

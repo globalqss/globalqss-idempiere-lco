@@ -1826,6 +1826,16 @@ Debe ser implementado cuando no haya usuarios conectados.</value>
   <value column="Description" original="Generate POS Keys from products.">Generar tecla PDV para productos.</value>
   <value column="Help" original=""/>
  </row>
+ <row id="53206" trl="Y">
+  <value column="Name" original="Copy from product">Copiar desde producto</value>
+  <value column="Description" original="Copy prices etc from other product">Copiar precios y otros datos desde otro producto</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53216" trl="Y">
+  <value column="Name" original="ImportInventoryMovement">Importa Movimiento Inventario</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row id="53220" trl="Y">
   <value column="Name" original="Unreconciled accounting facts">Asientos contables sin conciliar</value>
   <value column="Description" original=""/>
@@ -1854,6 +1864,22 @@ Debe ser implementado cuando no haya usuarios conectados.</value>
  <row id="53248" trl="Y">
   <value column="Name" original="Cash Flow Report">Reporte Flujo de Caja</value>
   <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53252" trl="Y">
+  <value column="Name" original="UUID Generator">Generador de UUID</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53259" trl="Y">
+  <value column="Name" original="Convert passwords to hashes">Convertir contraseñas a hash</value>
+  <value column="Description" original="Convert existing plain text/encrypted user passwords to one way hash">Convierte las contraseñas existentes planas/encriptadas a valores hash de una sola vía</value>
+  <value column="Help" original="This process will overwrite existing user passwords with a salted SHA-512 hash of the password so that they cannot be recovered if your database is compromised.&#10;(Note: If your password column is currently encrypted, the hash will also be encrypted.)">Este proceso sobreescribirá las contraseñas de usuario existentes con un hash SHA-512 salted de manera que no pueden recuperarse las contraseñas si su base de datos es comprometida.
+(Nota: Si su columna contraseña está actualmente encriptada, la cadena de hash también será encriptada.)</value>
+ </row>
+ <row id="200005" trl="Y">
+  <value column="Name" original="Copy Details">Copiar Detalles</value>
+  <value column="Description" original="Copy Journal/Lines from other Journal">Copiar líneas de otra nota contable</value>
   <value column="Help" original=""/>
  </row>
 </idempiereTrl>
