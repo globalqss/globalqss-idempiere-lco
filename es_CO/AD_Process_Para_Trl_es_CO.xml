@@ -242,6 +242,11 @@
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="200005" trl="Y">
+  <value column="Name" original="New EMail Confirm">Confirmación Clave Correo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row id="200007" trl="Y">
   <value column="Name" original="Reset Existing Access">Reiniciar Accesso Existentes</value>
   <value column="Description" original="Reset Existing Access">Reiniciar Accesso Existentes</value>

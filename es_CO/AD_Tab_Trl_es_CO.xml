@@ -5406,6 +5406,12 @@ Imprimiendo:
   <value column="Description" original="Key Sequence">Secuencia Teclado</value>
   <value column="Help" original=""/>
  </row>
+ <row id="53335" trl="Y">
+  <value column="Name" original="Import Inventory Move">Importar Movimiento Inventario</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row id="53341" trl="Y">
   <value column="Name" original="Reconciliation">Conciliación</value>
   <value column="CommitWarning" original=""/>
@@ -5471,5 +5477,23 @@ Imprimiendo:
   <value column="CommitWarning" original=""/>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
+ </row>
+ <row id="200004" trl="Y">
+  <value column="Name" original="Password Rule">Política de Contraseña</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200007" trl="Y">
+  <value column="Name" original="Journal">Nota Contable</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="General Ledger Journal"/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200008" trl="Y">
+  <value column="Name" original="Line">Línea</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="General Ledger Journal Line"/>
+  <value column="Help" original="The GL Journal Line Tab defines the individual debit and credit transactions that comprise a journal."/>
  </row>
 </idempiereTrl>

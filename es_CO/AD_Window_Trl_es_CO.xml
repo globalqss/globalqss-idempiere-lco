@@ -148,7 +148,7 @@
   <value column="Help" original="The GL Category Window allows you to define categories to be used in journals.  These categories provide a method of optionally grouping and reporting on journals.">Esta ventana permite definir tipos de comprobante contable para ser usada en las notas contables. Estos tipos de comprobante proveen un método de agrupamiento opcional</value>
  </row>
  <row id="132" trl="Y">
-  <value column="Name" original="GL Journal">Nota de Contabilidad</value>
+  <value column="Name" original="GL Journal Batch">Lote de Contabilidad</value>
   <value column="Description" original="Enter and change Manual Journal Entries">Entrar y cambiar entradas de diario manuales</value>
   <value column="Help" original="The GL Journal Window allows you to enter and modify manual journal entries">Esta ventana permite entrar y modificar asientos de diario</value>
  </row>
@@ -1324,8 +1324,8 @@ Segmentos Contables de la organización deseada, Cuentas, Productos pueden tener
   <value column="Help" original="Review package installation.  Also perform package rollback if required">Revisa la instalación de paquetes. Tambien ejecuta un rollback si se requiere.</value>
  </row>
  <row id="50003" trl="Y">
-  <value column="Name" original="PackOut - Create a package">Exportar Paquete (PackOut)</value>
-  <value column="Description" original="Package build Application">El paquete construye una aplicación.</value>
+  <value column="Name" original="Pack Out">Exportar Paquete (PackOut)</value>
+  <value column="Description" original="Create 2pack package">El paquete construye una aplicación.</value>
   <value column="Help" original=""/>
  </row>
  <row id="50004" trl="Y">
@@ -1334,7 +1334,7 @@ Segmentos Contables de la organización deseada, Cuentas, Productos pueden tener
   <value column="Help" original="Create and maintain common package element details">Crea y mantiene detalles de elementos de paquetes comunes.</value>
  </row>
  <row id="50005" trl="Y">
-  <value column="Name" original="PackIn - Import a package">Importar un paquete (PackIn)</value>
+  <value column="Name" original="Pack In">Importar un paquete (PackIn)</value>
   <value column="Description" original="Imports a package">Importar un paquete (PackIn)</value>
   <value column="Help" original="Imports a package previously created by PackOut">Importar un paquete previamente creado por el Exportador de Paquetes</value>
  </row>
@@ -1789,6 +1789,11 @@ y otros</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="53121" trl="Y">
+  <value column="Name" original="Import Inventory Move">Importa Movimiento Inventario</value>
+  <value column="Description" original="This window allow import Inventory Move transaction"/>
+  <value column="Help" original=""/>
+ </row>
  <row id="53125" trl="Y">
   <value column="Name" original="Fact Reconciliation">Conciliación Asientos</value>
   <value column="Description" original=""/>
@@ -1808,5 +1813,15 @@ y otros</value>
   <value column="Name" original="ToolBar Button Restrict">Restringe Botón Barra Herramientas</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
+ </row>
+ <row id="200002" trl="Y">
+  <value column="Name" original="Password Rule">Política de Contraseña</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200005" trl="Y">
+  <value column="Name" original="GL Journal">Nota de Contabilidad</value>
+  <value column="Description" original="Enter and change Manual Journal Entries">Ingrese y cambia entradas de contabilidad manuales</value>
+  <value column="Help" original="The GL Journal Window allows you to enter and modify manual journal entries">La ventana Nota de Contabilidad le permite ingresar y modificar entradas contables manuales</value>
  </row>
 </idempiereTrl>

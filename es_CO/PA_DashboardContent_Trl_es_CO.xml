@@ -26,4 +26,8 @@
   <value column="Name" original="Recent Items">Registros Recientes</value>
   <value column="Description" original="Recent items">Registros Recientes</value>
  </row>
+ <row id="200001" trl="Y">
+  <value column="Name" original="Menu">Menú</value>
+  <value column="Description" original="Menu">Menú</value>
+ </row>
 </idempiereTrl>
