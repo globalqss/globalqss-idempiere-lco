@@ -516,9 +516,24 @@ Las fechas Válido desde y Válido hasta indican el período de tiempo a utiliza
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="59822" trl="Y">
+  <value column="Name" original="Attribute Set Instance">Conjunto Instancia Atributo</value>
+  <value column="Description" original="Product Attribute Values">Valores de Atributos de Producto</value>
+  <value column="Help" original="The values of the actual Product Attributes. Product Instance attributes are defined in the actual transactions.">Los valores de los atributos de producto. Los atributos de instancia de producto son definidos en las transacciones.</value>
+ </row>
  <row id="60944" trl="Y">
   <value column="Name" original="Copy From Cash Plan">Copiar desde plan de caja</value>
   <value column="Description" original="Copy From Another Cash Plan">Copiar de otro plan de caja</value>
   <value column="Help" original="Copy From Another Cash Plan">Copiar desde otro plan de caja</value>
+ </row>
+ <row id="62015" trl="Y">
+  <value column="Name" original="Create/Update Production lines">Crear/Actualizar Líneas de Producción</value>
+  <value column="Description" original="Process which will create production lines based on BOM, or recreate with an optional adjusted quantity">Proceso que crea líneas de producción basado en LDM, o las actualiza con una cantidad ajustada opcional</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="62016" trl="Y">
+  <value column="Name" original="Complete Production">Completar Producción</value>
+  <value column="Description" original="Complete Production">Completar Producción</value>
+  <value column="Help" original="Indication that this is complete">Indica que la producción está completa</value>
  </row>
 </idempiereTrl>

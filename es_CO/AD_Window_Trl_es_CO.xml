@@ -1799,9 +1799,29 @@ y otros</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="53127" trl="Y">
+  <value column="Name" original="Production (Single Product)">Producción (Un Producto)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53128" trl="Y">
+  <value column="Name" original="Parts and BOMs">Partes y LDMs</value>
+  <value column="Description" original="Maintain Bill of Materials">Mantener Listas de Materiales</value>
+  <value column="Help" original="The Bill of Materials Window defines all product bills of materials used by an organization for light manufacturing.">La lista de materiales define las listas usadas por una organización para producir productos terminados.</value>
+ </row>
  <row id="53134" trl="Y">
   <value column="Name" original="Cash Plan">Plan de Caja</value>
   <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53149" trl="Y">
+  <value column="Name" original="Quality Test">Prueba de Calidad</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53150" trl="Y">
+  <value column="Name" original="Part Type">Tipo de Parte</value>
+  <value column="Description" original="Manufacturing Part Types">Tipos de Parte Manufactura</value>
   <value column="Help" original=""/>
  </row>
  <row id="200000" trl="Y">
@@ -1823,5 +1843,10 @@ y otros</value>
   <value column="Name" original="GL Journal">Nota de Contabilidad</value>
   <value column="Description" original="Enter and change Manual Journal Entries">Ingrese y cambia entradas de contabilidad manuales</value>
   <value column="Help" original="The GL Journal Window allows you to enter and modify manual journal entries">La ventana Nota de Contabilidad le permite ingresar y modificar entradas contables manuales</value>
+ </row>
+ <row id="200006" trl="Y">
+  <value column="Name" original="Dashboard Preference">Preferencia Consola</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
  </row>
 </idempiereTrl>

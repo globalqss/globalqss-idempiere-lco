@@ -1846,6 +1846,31 @@ Debe ser implementado cuando no haya usuarios conectados.</value>
   <value column="Description" original="Reconcile account transactions according to standard rules">Conciliar asientos contables automáticamente de acuerdo a reglas estándar</value>
   <value column="Help" original=""/>
  </row>
+ <row id="53226" trl="Y">
+  <value column="Name" original="Create Production">Crear Producción</value>
+  <value column="Description" original="Create production lines">Crear líneas de producción</value>
+  <value column="Help" original="Create Production will generate the production lines.">Crear líneas de producción generará las líneas de producción.</value>
+ </row>
+ <row id="53227" trl="Y">
+  <value column="Name" original="Post Production">Procesar Producción</value>
+  <value column="Description" original="Process the production">Procesar la producción</value>
+  <value column="Help" original="Post Production will process the production.">Procesar la producción.</value>
+ </row>
+ <row id="53228" trl="Y">
+  <value column="Name" original="Validate BOM Flags">Validar Casillas LDM</value>
+  <value column="Description" original="Validate BOM Flags">Validar casillas LDM</value>
+  <value column="Help" original="The Validate BOM Flags process checks that all Products with bills of materials are correctly flagged.">El proceso validar casillas LDM chequea si los productos con listas de materiales están correctamente marcados.</value>
+ </row>
+ <row id="53229" trl="Y">
+  <value column="Name" original="Verify BOM Structure">Verificar estructura LDM</value>
+  <value column="Description" original="Verify BOM for correctness">Verificar que la estructura LDM esté correcta</value>
+  <value column="Help" original="The Verify BOM process checks for circular BOMs (unsupported).">El proceso verificar estructura LDM chequea por LDM circulares (no soportadas).</value>
+ </row>
+ <row id="53230" trl="Y">
+  <value column="Name" original="Rollup BOM Cost">Acumulación Costos LDM</value>
+  <value column="Description" original="Rollup BOM cost">Acumulación Costos LDM</value>
+  <value column="Help" original="Rollup BOM costs from the lowest level recursively.">Acumulación de costos de LDM desde los niveles inferiores recursivamente.</value>
+ </row>
  <row id="53245" trl="Y">
   <value column="Name" original="Validate">Validar</value>
   <value column="Description" original="Validate Payment Schedule">Validar Programa de Pagos</value>
@@ -1877,9 +1902,39 @@ Debe ser implementado cuando no haya usuarios conectados.</value>
   <value column="Help" original="This process will overwrite existing user passwords with a salted SHA-512 hash of the password so that they cannot be recovered if your database is compromised.&#10;(Note: If your password column is currently encrypted, the hash will also be encrypted.)">Este proceso sobreescribirá las contraseñas de usuario existentes con un hash SHA-512 salted de manera que no pueden recuperarse las contraseñas si su base de datos es comprometida.
 (Nota: Si su columna contraseña está actualmente encriptada, la cadena de hash también será encriptada.)</value>
  </row>
+ <row id="53264" trl="Y">
+  <value column="Name" original="Production Plan">Plan de Producción</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53265" trl="Y">
+  <value column="Name" original="Universal substitution">Sustitución Universal</value>
+  <value column="Description" original="Substitute one product for another in all BOMs">Sustituye un producto con otro en todas las LDMs</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53266" trl="Y">
+  <value column="Name" original="Indented Bill of Material">Lista de Materiales Indentada</value>
+  <value column="Description" original="Indented BOM report">Reporte indentado de listas de materiales</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53267" trl="Y">
+  <value column="Name" original="Replenish Report incl. Production">Reporte Reabastecimiento incluyendo Producción</value>
+  <value column="Description" original="Inventory Replenish Report">Reporte Reabastecimiento incluyendo Producción</value>
+  <value column="Help" original="Report lists products to be replenished. Note that a product can have only one current vendor. If there are more then vendor per product, both records are reset.  You need to select a current vendor manually.&lt;br&gt;&#13;&#10;Movements are only created, if a sourcing warehouse is defined for the warehouse to be replenished."><![CDATA[El reporte muestra los productos a ser reabastecidos]]></value>
+ </row>
  <row id="200005" trl="Y">
   <value column="Name" original="Copy Details">Copiar Detalles</value>
   <value column="Description" original="Copy Journal/Lines from other Journal">Copiar líneas de otra nota contable</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200006" trl="Y">
+  <value column="Name" original="OrderLine Create Production">Crear Producción Línea Orden</value>
+  <value column="Description" original="Create Production Header and Plan for single ordered product">Crear encabezado y plan de producción para un producto</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200007" trl="Y">
+  <value column="Name" original="OrderLine Create Shipment">Crear Despacho Línea Orden</value>
+  <value column="Description" original="Create Shipment for single ordered product">Crear despacho para un producto</value>
   <value column="Help" original=""/>
  </row>
 </idempiereTrl>

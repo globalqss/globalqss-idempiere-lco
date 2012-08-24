@@ -4574,4 +4574,52 @@
   <value column="Name" original="4_Actual Debt (Invoices)">4_Deuda Actual (Facturas)</value>
   <value column="Description" original=""/>
  </row>
+ <row id="53708" trl="Y">
+  <value column="Name" original="Distribution Order">Orden Distribución</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53709" trl="Y">
+  <value column="Name" original="Inventory Movement">Movimiento Inventario</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53710" trl="Y">
+  <value column="Name" original="Purchase Order">Orden de Compra</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53711" trl="Y">
+  <value column="Name" original="Requistion">Requisición</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53712" trl="Y">
+  <value column="Name" original="Production">Producción</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200008" trl="Y">
+  <value column="Name" original="New">Nuevo</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200009" trl="Y">
+  <value column="Name" original="Pending">Pendiente</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200010" trl="Y">
+  <value column="Name" original="Finished">Terminado</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200011" trl="Y">
+  <value column="Name" original="In-Progress">En Curso</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200012" trl="Y">
+  <value column="Name" original="Skipped">Omitido</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200013" trl="Y">
+  <value column="Name" original="Delayed">Pospuesto</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200014" trl="Y">
+  <value column="Name" original="Wizard">Asistente</value>
+  <value column="Description" original=""/>
+ </row>
 </idempiereTrl>

@@ -5586,6 +5586,10 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgText" original="Total">Total</value>
   <value column="MsgTip" original=""/>
  </row>
+ <row id="53137" trl="Y">
+  <value column="MsgText" original="Charge to apply difference amount to.">Cargo al cual aplicar la diferencia.</value>
+  <value column="MsgTip" original=""/>
+ </row>
  <row id="53148" trl="Y">
   <value column="MsgText" original="Add">Añadir</value>
   <value column="MsgTip" original=""/>
@@ -5638,12 +5642,28 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgText" original="Select Role">Seleccionar Rol</value>
   <value column="MsgTip" original=""/>
  </row>
+ <row id="200010" trl="Y">
+  <value column="MsgText" original="Change Role">Cambiar Rol</value>
+  <value column="MsgTip" original=""/>
+ </row>
  <row id="200011" trl="Y">
   <value column="MsgText" original="Password Errors">Errores de Clave</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="200012" trl="Y">
   <value column="MsgText" original="Flat View">Vista Plana</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200013" trl="Y">
+  <value column="MsgText" original="Properties">Propiedades</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200014" trl="Y">
+  <value column="MsgText" original="{0} tasks completed from {1} ({2}% advance)">{0} tareas finalizadas de {1} ({2}% avance)</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200015" trl="Y">
+  <value column="MsgText" original="Saved Query">Búsqueda Guardada</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="520010" trl="Y">

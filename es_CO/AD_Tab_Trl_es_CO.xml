@@ -5418,6 +5418,30 @@ Imprimiendo:
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="53344" trl="Y">
+  <value column="Name" original="Production">Producción</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53345" trl="Y">
+  <value column="Name" original="Production Line">Línea Producción</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53346" trl="Y">
+  <value column="Name" original="Part">Parte</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="El producto que sera fabricado con esta lista de materiales</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53347" trl="Y">
+  <value column="Name" original="Bill of Materials">Lista de Materiales</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="The component products.">Los productos componentes.</value>
+  <value column="Help" original=""/>
+ </row>
  <row id="53372" trl="Y">
   <value column="Name" original="Translation">Traducción</value>
   <value column="CommitWarning" original=""/>
@@ -5450,6 +5474,30 @@ Imprimiendo:
  </row>
  <row id="53377" trl="Y">
   <value column="Name" original="Cash Plan Line">Línea Plan de Caja</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53421" trl="Y">
+  <value column="Name" original="QC Test">Prueba Control Calidad</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53422" trl="Y">
+  <value column="Name" original="Test">Prueba</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53423" trl="Y">
+  <value column="Name" original="Product">Producto</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53424" trl="Y">
+  <value column="Name" original="Type">Tipo</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
@@ -5495,5 +5543,23 @@ Imprimiendo:
   <value column="CommitWarning" original=""/>
   <value column="Description" original="General Ledger Journal Line"/>
   <value column="Help" original="The GL Journal Line Tab defines the individual debit and credit transactions that comprise a journal."/>
+ </row>
+ <row id="200009" trl="Y">
+  <value column="Name" original="Grid Sequence">Secuencia Grilla</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Defined field order for grid layout">Definir orden de secuencia de campos para modo grilla</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200010" trl="Y">
+  <value column="Name" original="Ref List">Lista Referencia</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200011" trl="Y">
+  <value column="Name" original="Preference">Preferencia</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
  </row>
 </idempiereTrl>

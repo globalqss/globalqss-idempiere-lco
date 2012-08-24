@@ -2157,6 +2157,11 @@
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="53412" trl="Y">
+  <value column="Name" original="M_Replenishment Production Create ">M_Replenishment Production Create </value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row id="200001" trl="Y">
   <value column="Name" original="C_ValidCombination (with Alias defined)">C_ValidCombination (with Alias defined)</value>
   <value column="Description" original="Valid Account combinations">Valid Account combinations</value>
@@ -2165,6 +2170,11 @@
  <row id="200002" trl="Y">
   <value column="Name" original="C_ElementValue (trx) Not Doc Controlled">C_ElementValue (trx) Not Doc Controlled</value>
   <value column="Description" original="Element Values">Element Values</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200003" trl="N">
+  <value column="Name" original="AD_WizardProcess Status">AD_WizardProcess Status</value>
+  <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
 </idempiereTrl>
