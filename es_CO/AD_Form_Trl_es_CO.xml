@@ -200,4 +200,16 @@ Seleccione las ordenes con las cuales desea generar entregas y facturas</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="53017" trl="Y">
+  <value column="Name" original="BOM Viewer">Visor LDM</value>
+  <value column="Description" original="Shows the parent-component relationship for the product entered in the Product field.">Muestra la relación de componentes padre con el producto ingresado.</value>
+  <value column="Help" original="Selecting a product will display a hierarchy of components and sub-BOMs for that product.&#13;&#10;&#13;&#10;Selecting the &quot;Where Used&quot; check box will display the BOMs that this product is used in.">Al seleccionar un producto mostrará la jerarquía de componentes para ese producto.&#13;
+&#13;
+Seleccionando "dónde es usado" mostrará las LDM que usan este producto.</value>
+ </row>
+ <row id="200000" trl="Y">
+  <value column="Name" original="Setup Wizard">Asistente de Configuración Inicial</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
 </idempiereTrl>

@@ -242,6 +242,16 @@
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="53516" trl="Y">
+  <value column="Name" original="Recreate">Recrear</value>
+  <value column="Description" original="Overwrite existing production lines">Sobreescribe las líneas de producción existentes</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53526" trl="Y">
+  <value column="Name" original="Is Kanban">Es Kanban</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row id="200005" trl="Y">
   <value column="Name" original="New EMail Confirm">Confirmación Clave Correo</value>
   <value column="Description" original=""/>

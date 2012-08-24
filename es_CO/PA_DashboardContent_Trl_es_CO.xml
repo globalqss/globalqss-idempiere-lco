@@ -20,7 +20,7 @@
  </row>
  <row id="50004" trl="Y">
   <value column="Name" original="Calendar">Calendario</value>
-  <value column="Description" original="Google Calendar">Calendario de Google</value>
+  <value column="Description" original="Request Calendar">Calendario de Solicitudes</value>
  </row>
  <row id="200000" trl="Y">
   <value column="Name" original="Recent Items">Registros Recientes</value>

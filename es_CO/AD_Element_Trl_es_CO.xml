@@ -6916,17 +6916,17 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1387" trl="Y">
-  <value column="Name" original="Charge Expense">Cargo Gasto</value>
-  <value column="PrintName" original="Charge Expense">Cargo Gasto</value>
-  <value column="Description" original="Charge Expense Account">Cuenta gasto para el cargo</value>
-  <value column="Help" original="The Charge Expense Account identifies the account to use when recording charges paid to vendors.">La cuenta de gasto para el cargo identifica la cuenta a usar cuando se registran cargos pagados a proveedores.</value>
+  <value column="Name" original="Charge Account">Cuenta Cargo</value>
+  <value column="PrintName" original="Charge Account">Cuenta Cargo</value>
+  <value column="Description" original="Charge Account">Cuenta para el cargo</value>
+  <value column="Help" original="The Charge Account identifies the account to use when recording charges">La cuenta del cargo identifica la cuenta a usar cuando se registran cargos.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1388" trl="Y">
-  <value column="Name" original="Charge Revenue">Cargo Ingreso</value>
+  <value column="Name" original="Charge Revenue (Deprecated)">Cargo Ingreso (No se usa!)</value>
   <value column="PrintName" original="Charge Revenue">Cargo Ingreso</value>
   <value column="Description" original="Charge Revenue Account">Cuenta de ingreso para el cargo</value>
   <value column="Help" original="The Charge Revenue Account identifies the account to use when recording charges paid by customers.">La cuenta de ingreso para el cargo dentifica la cuenta a usar cuando se registran cargos pagados por los clientes</value>
@@ -36904,6 +36904,136 @@ Producto: usado para adicionar rápidamente productos a la venta</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
+ <row id="55236" trl="Y">
+  <value column="Name" original="Quantity Used">Cantidad Usada</value>
+  <value column="PrintName" original="Quantity Used in production">Cantidad usada en producción</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55237" trl="Y">
+  <value column="Name" original="End Product">Fin Producto</value>
+  <value column="PrintName" original="End Product">Fin Producto</value>
+  <value column="Description" original="End Product of production">Fin producto de producción</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55238" trl="Y">
+  <value column="Name" original="Quality Test Result">Resultado Prueba Calidad</value>
+  <value column="PrintName" original="Quality Test Result">Resultado Prueba Calidad</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55239" trl="Y">
+  <value column="Name" original="Quality Test">Prueba Calidad</value>
+  <value column="PrintName" original="Quality Test">Prueba Calidad</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55240" trl="Y">
+  <value column="Name" original="QC Pass">Paso Control Calidad</value>
+  <value column="PrintName" original="QC Pass">Paso Control Calidad</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55241" trl="Y">
+  <value column="Name" original="Expected Result">Resultado Esperado</value>
+  <value column="PrintName" original="Expected Result">Resultado Esperado</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55242" trl="Y">
+  <value column="Name" original="Product Quality Test">Prueba Calidad Producto</value>
+  <value column="PrintName" original="Product Quality Test">Prueba Calidad Producto</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55243" trl="Y">
+  <value column="Name" original="Part Type">Tipo Parte</value>
+  <value column="PrintName" original="Part Type">Tipo Parte</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55244" trl="Y">
+  <value column="Name" original="Kanban controlled">Controlado Kanban</value>
+  <value column="PrintName" original="Kanban controlled">Controlado Kanban</value>
+  <value column="Description" original="This part is Kanban controlled">Esta parte es controlada con Kanban</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55245" trl="Y">
+  <value column="Name" original="Manufactured">Fabricado</value>
+  <value column="PrintName" original="Manufactured">Fabricado</value>
+  <value column="Description" original="This product is manufactured">Este producto es fabricado</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55246" trl="Y">
+  <value column="Name" original="Bill of Materials">Lista de Materiales</value>
+  <value column="PrintName" original="BOM">LDM</value>
+  <value column="Description" original="Bill of Materials">Lista de Materiales</value>
+  <value column="Help" original="The Bill of Materials check box indicates if this product consists of a bill of materials.">La marca de Lista de Materiales indica que este producto posee una lista de materiales.</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55247" trl="Y">
+  <value column="Name" original="Indented BOM Report">Reporte LDM Indentado</value>
+  <value column="PrintName" original="Indented BOM Report">Reporte LDM Indentado</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55248" trl="Y">
+  <value column="Name" original="Future Cost">Costo Futuro</value>
+  <value column="PrintName" original="Future Cost">Costo Futuro</value>
+  <value column="Description" original="Cost information">Información Costo</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
  <row id="55256" trl="Y">
   <value column="Name" original="Bank Account Description">Descripción Cuenta Bancaria</value>
   <value column="PrintName" original="Bank Account Description">Descripción Cuenta Bancaria</value>
@@ -37458,6 +37588,136 @@ Producto: usado para adicionar rápidamente productos a la venta</value>
   <value column="Name" original="Content Color">Color Contenido</value>
   <value column="PrintName" original="Content Color">Color Contenido</value>
   <value column="Description" original="Content color of calendar dashlet">Color del contenido en el calendario</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200079" trl="Y">
+  <value column="Name" original="Create Production">Crear Producción</value>
+  <value column="PrintName" original="Create Production">Crear Producción</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200080" trl="Y">
+  <value column="Name" original="Create Shipment">Crear Despacho</value>
+  <value column="PrintName" original="Create Shipment">Crear Despacho</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200081" trl="Y">
+  <value column="Name" original="Tab Customization">Personalización Pestaña</value>
+  <value column="PrintName" original="Tab Customization">Personalización Pestaña</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200082" trl="Y">
+  <value column="Name" original="Custom">Personalizado</value>
+  <value column="PrintName" original="Custom">Personalizado</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200083" trl="Y">
+  <value column="Name" original="Show in Grid">Mostrar en Grilla</value>
+  <value column="PrintName" original="Show in Grid">Mostrar en Grilla</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200084" trl="Y">
+  <value column="Name" original="Grid Sequence No">Secuencia Grilla</value>
+  <value column="PrintName" original="Grid Sequence No">Secuencia Grilla</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200090" trl="Y">
+  <value column="Name" original="ASP_Ref_List">Lista SaaS</value>
+  <value column="PrintName" original="ASP_Ref_List">Lista SaaS</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200091" trl="Y">
+  <value column="Name" original="ASP_Ref_List_UU">asp_ref_list_uu</value>
+  <value column="PrintName" original="ASP_Ref_List_UU">asp_ref_list_uu</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200092" trl="Y">
+  <value column="Name" original="Wizard Process">Proceso Asistente</value>
+  <value column="PrintName" original="Wizard Process">Proceso Asistente</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200093" trl="Y">
+  <value column="Name" original="AD_WizardProcess_UU">AD_WizardProcess_UU</value>
+  <value column="PrintName" original="AD_WizardProcess_UU">AD_WizardProcess_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200094" trl="Y">
+  <value column="Name" original="Wizard Status">Estado Asistente</value>
+  <value column="PrintName" original="Wizard Status">Estado Asistente</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200096" trl="Y">
+  <value column="Name" original="Selection Column Sequence">Secuencia Columna Selección</value>
+  <value column="PrintName" original="Selection Column Sequence">Secuencia Columna Selección</value>
+  <value column="Description" original="Selection Column Sequence">Secuencia Columna Selección</value>
+  <value column="Help" original="For ordering sequence of selection column">Para ordenar las columnas de selección</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200097" trl="Y">
+  <value column="Name" original="Dashboard Preference">Preferencia Consola</value>
+  <value column="PrintName" original="Dashboard Preference">Preferencia Consola</value>
+  <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
