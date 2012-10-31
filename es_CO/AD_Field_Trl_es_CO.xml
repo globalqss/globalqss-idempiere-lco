@@ -22,11 +22,6 @@
   <value column="Description" original="Tax Amount for Credit Card transaction">Valor del impuesto para las transacciones con tarjeta de crédito</value>
   <value column="Help" original="The Tax Amount displays the total tax amount. The tax amount is only used for credit card processing.">El monto del impuesto exhibe la cantidad total del impuesto. El monto del impuesto se utiliza solamente para el proceso de la tarjeta de crédito.</value>
  </row>
- <row id="4253" trl="Y">
-  <value column="Name" original="Only Currency">Moneda Única</value>
-  <value column="Description" original="Restrict accepting only this currency">Restringe aceptar solamente esta moneda.</value>
-  <value column="Help" original="The Only Currency field indicates that this bank account accepts only the currency identified here.">El campo moneda única indica que esta cuenta bancaria acepta solamente la moneda identificada aquí.</value>
- </row>
  <row id="4462" trl="Y">
   <value column="Name" original="Business Partner / Sales Rep">Tercero / Repr Comercial</value>
   <value column="Description" original="Identifies a Business Partner (Sales Rep) receiving the Commission">Identifica al tercero (representante de ventas) que recibe una comisión.</value>
@@ -404,6 +399,11 @@ Para una Orden de Manufactura es la fecha cuand el último movimiento de orden d
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="56011" trl="Y">
+  <value column="Name" original="Current Period">Período Actual</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row id="56190" trl="Y">
   <value column="Name" original="Period 1 %">Período 1 %</value>
   <value column="Description" original=""/>
@@ -511,10 +511,30 @@ Las fechas Válido desde y Válido hasta indican el período de tiempo a utiliza
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="59028" trl="Y">
+  <value column="Name" original="Account Date">Fecha Contable</value>
+  <value column="Description" original="Accounting Date">Fecha Contable</value>
+  <value column="Help" original="The Accounting Date indicates the date to be used on the General Ledger account entries generated from this document. It is also used for any currency conversion.">La fecha contable indica la fecha que se usará en la contabilidad para este documento.</value>
+ </row>
+ <row id="59306" trl="Y">
+  <value column="Name" original="ID">ID</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row id="59449" trl="Y">
   <value column="Name" original="Import Inventory Move">Importar Movimientos Inventario</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
+ </row>
+ <row id="59499" trl="Y">
+  <value column="Name" original="Import Fixed Asset">Importar Activos Fijos</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="59500" trl="Y">
+  <value column="Name" original="Processed">Procesado</value>
+  <value column="Description" original="The document has been processed">El documento se ha procesado</value>
+  <value column="Help" original="The Processed checkbox indicates that a document has been processed.">La marca de procesado indica que el documento ha sido procesado.</value>
  </row>
  <row id="59822" trl="Y">
   <value column="Name" original="Attribute Set Instance">Conjunto Instancia Atributo</value>
@@ -535,5 +555,10 @@ Las fechas Válido desde y Válido hasta indican el período de tiempo a utiliza
   <value column="Name" original="Complete Production">Completar Producción</value>
   <value column="Description" original="Complete Production">Completar Producción</value>
   <value column="Help" original="Indication that this is complete">Indica que la producción está completa</value>
+ </row>
+ <row id="200585" trl="Y">
+  <value column="Name" original="Only Currency">Sólo Moneda</value>
+  <value column="Description" original="Restrict accepting only this currency">Restringe para aceptar sólo la moneda actual</value>
+  <value column="Help" original="The Only Currency field indicates that this bank account accepts only the currency identified here.">El campo Sólo Moneda indica que esta cuenta sólo acepta la moneda identificada aquí.</value>
  </row>
 </idempiereTrl>

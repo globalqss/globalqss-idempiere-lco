@@ -143,4 +143,28 @@
  <row id="50012" trl="Y">
   <value column="Name" original="Logo">Logo</value>
  </row>
+ <row id="50016" trl="Y">
+  <value column="Name" original="Location">Localización</value>
+ </row>
+ <row id="50017" trl="Y">
+  <value column="Name" original="Fixed Asset">Activo Fijo</value>
+ </row>
+ <row id="50018" trl="Y">
+  <value column="Name" original="Maintenance">Mantenimiento</value>
+ </row>
+ <row id="50019" trl="Y">
+  <value column="Name" original="Funding">Financiamiento</value>
+ </row>
+ <row id="50020" trl="Y">
+  <value column="Name" original="Depreciation">Depreciación</value>
+ </row>
+ <row id="200000" trl="Y">
+  <value column="Name" original="Swing Position">Intercambiar Posición</value>
+ </row>
+ <row id="200001" trl="Y">
+  <value column="Name" original="Web Position">Posición Web</value>
+ </row>
+ <row id="200003" trl="Y">
+  <value column="Name" original="User Locking">Bloqueo Usuario</value>
+ </row>
 </idempiereTrl>

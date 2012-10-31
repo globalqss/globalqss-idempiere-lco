@@ -769,7 +769,7 @@ Por favor cambie la caja PDV solo después de completar la transacción</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="292" trl="Y">
-  <value column="MsgText" original="Histor&amp;Y records">Registros históricos</value>
+  <value column="MsgText" original="History records">Registros históricos</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="293" trl="Y">
@@ -5664,6 +5664,298 @@ Por favor contacte al ADMINISTRADOR.</value>
  </row>
  <row id="200015" trl="Y">
   <value column="MsgText" original="Saved Query">Búsqueda Guardada</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200024" trl="Y">
+  <value column="MsgText" original="Show Location">Muestra Localización</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200025" trl="Y">
+  <value column="MsgText" original="Document type cannot be changed when overwrite document number on complete is set and the document was already processed">El tipo de documento no se puede modificar cuando se configuró sobreescribir el número de documento al completar y el documento ya fue procesado</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200026" trl="Y">
+  <value column="MsgText" original="Date cannot be changed when overwrite date on complete is set and the document was already processed">La fecha no se puede modificar cuando se configuró sobreescribir el número de documento al completar y el documento ya fue procesado</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200027" trl="Y">
+  <value column="MsgText" original="Old Password">Contraseña Anterior</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200028" trl="Y">
+  <value column="MsgText" original="New Password">Nueva Contraseña</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200029" trl="Y">
+  <value column="MsgText" original="Confirm New Password">Confirmar Nueva Contraseña</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200030" trl="Y">
+  <value column="MsgText" original="Confirm New Password is Mandatory">La confirmación de nueva contraseña es obligatoria</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200031" trl="Y">
+  <value column="MsgText" original="Password does not match the Confirm Password">Contraseña no coincide con la confirmación</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200032" trl="Y">
+  <value column="MsgText" original="User account ({0}) is locked, please contact the system administrator">La cuenta de usuario '{0}' está bloqueada, favor contactar al administrador del sistema</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200033" trl="Y">
+  <value column="MsgText" original="Reached the maximum number of login attempts, user account ({0}) is locked">Se alcanzó el máximo número de intentos de ingreso, la cuenta de usuario '{0}' ha sido bloqueada</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200034" trl="Y">
+  <value column="MsgText" original="Invalid User ID or Password (Login Attempts: {0} / {1})">Credenciales de ingreso no válidas (Intentos de ingreso: {0} / {1})</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200035" trl="Y">
+  <value column="MsgText" original="Name is required">Nombre es requerido</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200036" trl="Y">
+  <value column="MsgText" original="New Query">Nueva Búsqueda</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200037" trl="Y">
+  <value column="MsgText" original="Current Row Only">Sólo la fila actual</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200038" trl="Y">
+  <value column="MsgText" original="All Columns">Todas las columnas</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200039" trl="Y">
+  <value column="MsgText" original="Print Format is Mandatory">Formato de impresión es obligatorio</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200040" trl="Y">
+  <value column="MsgText" original="Export File of Type is Mandatory">Tipo de archivo a exportar es obligatorio</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200041" trl="Y">
+  <value column="MsgText" original="There are not POS invoice(s)">No hay factura(s) PDV</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200042" trl="Y">
+  <value column="MsgText" original="Total POS Payments differ from Total Invoice">Total de pagos PDV difiere del total de la factura</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200043" trl="Y">
+  <value column="MsgText" original="No account defined for this organization / currency">No hay cuenta definida para esta organización/moneda</value>
+  <value column="MsgTip" original="Create an account on the bank account window for the organization / currency, the POS payments will be created on the defined account">Cree una cuenta en la ventana de bancos/cajas para la organización/moneda, los pagos PDV serán creados en la cuenta definida</value>
+ </row>
+ <row id="200044" trl="Y">
+  <value column="MsgText" original="Reset Password">Reinicia Contraseña</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200045" trl="Y">
+  <value column="MsgText" original="Security Question">Pregunta Seguridad</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200048" trl="Y">
+  <value column="MsgText" original="Security Question is Mandatory">Pregunta seguridad es obligatoria</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200049" trl="Y">
+  <value column="MsgText" original="Answer is Mandatory">Respuesta es obligatoria</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200050" trl="Y">
+  <value column="MsgText" original="Invalid Security Question and Answer!">¡Pregunta de seguridad y respuesta no válidas!</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200051" trl="Y">
+  <value column="MsgText" original="What was your childhood nickname?">¿Cual es su apodo de la niñez?</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200052" trl="Y">
+  <value column="MsgText" original="Who was your childhood hero?">¿Quién es el héroe de su niñez?</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200053" trl="Y">
+  <value column="MsgText" original="What was the name of your elementary / primary school?">¿Cuál es el nombre de su escuela primaria?</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200054" trl="Y">
+  <value column="MsgText" original="What are the last 5 digits of your driver's license number?">¿Cuáles son los 5 últimos dígitos de su licencia de conducción?</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200055" trl="Y">
+  <value column="MsgText" original="Where did you meet your spouse / significant other?">¿Dónde conoció a su pareja?</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200056" trl="Y">
+  <value column="MsgText" original="Language">Lenguaje</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200057" trl="Y">
+  <value column="MsgText" original="Role">Perfil</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200058" trl="Y">
+  <value column="MsgText" original="Change Password">Cambiar Contraseña</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200059" trl="Y">
+  <value column="MsgText" original="Invalid User Name and EMail!">¡Nombre Usuario y Correo no válidos!</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200060" trl="Y">
+  <value column="MsgText" original="Invoice Processed: ">Factura Procesada: </value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200061" trl="Y">
+  <value column="MsgText" original="Payment Allocated: ">Pago Asignado: </value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200062" trl="Y">
+  <value column="MsgText" original="Allocation Processed: ">Asignación Procesada: </value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200063" trl="Y">
+  <value column="MsgText" original="Shipment Processed: ">Entrega Procesada: </value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200064" trl="Y">
+  <value column="MsgText" original="Order Created: ">Orden Creada: </value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200065" trl="Y">
+  <value column="MsgText" original="Generated PO: ">Orden Generada: </value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200066" trl="Y">
+  <value column="MsgText" original="New Password must differ from Old Password">La nueva contraseña debe ser diferente a la anterior</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200067" trl="Y">
+  <value column="MsgText" original="User is Mandatory">Usuario es obligatorio</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200068" trl="Y">
+  <value column="MsgText" original="New EMail does not match the Confirm New EMail">El nuevo correo no coincide con el de confirmación</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200069" trl="Y">
+  <value column="MsgText" original="Confirm New EMail is Mandatory">Nuevo correo de confirmación es obligatorio</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200070" trl="Y">
+  <value column="MsgText" original="Confirm New EMail">Confirmar nuevo correo</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200071" trl="Y">
+  <value column="MsgText" original="New EMail">Nuevo Correo</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200072" trl="Y">
+  <value column="MsgText" original="New EMail User">Nuevo Usuario Correo</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200073" trl="Y">
+  <value column="MsgText" original="New EMail User Password">Nueva Contraseña Usuario Correo</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200074" trl="Y">
+  <value column="MsgText" original="Forgot My Password">Olvidé mi contraseña</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200075" trl="Y">
+  <value column="MsgText" original="Passwords for all tenants using ({0}) as email have been reset">La contraseña para todos los usuarios usando ({0}) como correo se ha reiniciado</value>
+  <value column="MsgTip" original=" "> </value>
+ </row>
+ <row id="200076" trl="Y">
+  <value column="MsgText" original="The new password is now valid for all tenants">La nueva contraseña es ahora válida en todos los clientes</value>
+  <value column="MsgTip" original=" "> </value>
+ </row>
+ <row id="200077" trl="Y">
+  <value column="MsgText" original="Failed to create payment">Falló la creación del pago</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200078" trl="Y">
+  <value column="MsgText" original="Failed to cancel payment">Falló la cancelación del pago</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200079" trl="Y">
+  <value column="MsgText" original="Failed to cancel cash">Falló la cancelación de caja</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200080" trl="Y">
+  <value column="MsgText" original="Failed to create cash">Falló la creación de caja</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200081" trl="Y">
+  <value column="MsgText" original="Card not processed">Tarjeta no procesada</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200082" trl="Y">
+  <value column="MsgText" original="Field {0} not found">Campo {0} no se encontró</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200083" trl="Y">
+  <value column="MsgText" original="{0} not a window field">{0} no es un campo de la ventana</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200084" trl="Y">
+  <value column="MsgText" original="{0} is readonly">{0} es de solo lectura</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200085" trl="Y">
+  <value column="MsgText" original="{0} is not displayed">{0} no está desplegado</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200086" trl="Y">
+  <value column="MsgText" original="{0} not resolved = ({1})">{0} no resuelto = ({1})</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200087" trl="Y">
+  <value column="MsgText" original="ERROR: {0} parent cannot be changed">ERROR: {0} llave padre no se puede cambiar</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200088" trl="Y">
+  <value column="MsgText" original="ERROR: {0} not editable">ERROR: {0} no editable</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200089" trl="Y">
+  <value column="MsgText" original="Successfully saved [{0}]">Guardado exitosamente [{0}]</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200090" trl="Y">
+  <value column="MsgText" original="Wizard Reports">Asistente de Reportes</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200091" trl="Y">
+  <value column="MsgText" original="Fields Displayed">Campos a Desplegar</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200092" trl="Y">
+  <value column="MsgText" original="Order Fields">Ordenamiento Campos</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200093" trl="Y">
+  <value column="MsgText" original="Sort Criteria">Criterio Ordenamiento</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200094" trl="Y">
+  <value column="MsgText" original="Grouping Criteria">Criterio Agrupamiento</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200095" trl="Y">
+  <value column="MsgText" original="Summary Fields">Campos Agregados</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200096" trl="Y">
+  <value column="MsgText" original="Copy Print Format">Nuevo Formato Impresión</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200099" trl="Y">
+  <value column="MsgText" original="Deselect All">Desmarcar Todos</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200100" trl="Y">
+  <value column="MsgText" original="Run Report">Ejecutar Reporte</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="520010" trl="Y">

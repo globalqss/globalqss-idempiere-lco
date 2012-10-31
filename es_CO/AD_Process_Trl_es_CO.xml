@@ -1641,12 +1641,12 @@ Costo Total LDM = Suma de cada Elemento de Costo]]></value>
   <value column="Help" original=""/>
  </row>
  <row id="53115" trl="Y">
-  <value column="Name" original="RV_Asset_Parent_Report">Reporte Padre Activo</value>
+  <value column="Name" original="Asset Parent Report">Reporte Padre Activo</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
  <row id="53117" trl="Y">
-  <value column="Name" original="RV_Depreciation_Table">Tabla Depreciación</value>
+  <value column="Name" original="Depreciation Table">Tabla Depreciación</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
@@ -1656,7 +1656,7 @@ Costo Total LDM = Suma de cada Elemento de Costo]]></value>
   <value column="Help" original=""/>
  </row>
  <row id="53121" trl="Y">
-  <value column="Name" original="RV_Asset_Depreciation_Method">Método Depreciación Activo</value>
+  <value column="Name" original="Asset Depreciation Method">Método Depreciación Activo</value>
   <value column="Description" original="List Depreciation Methods">Lista Métodos de Depreciación Activos</value>
   <value column="Help" original=""/>
  </row>
@@ -1666,7 +1666,7 @@ Costo Total LDM = Suma de cada Elemento de Costo]]></value>
   <value column="Help" original=""/>
  </row>
  <row id="53125" trl="Y">
-  <value column="Name" original="RV_Asset_Convention_Rpt">Reporte Convención Activo</value>
+  <value column="Name" original="Asset Convention Report">Reporte Convención Activo</value>
   <value column="Description" original="Asset Convention Report">Reporte Convención Activo</value>
   <value column="Help" original=""/>
  </row>
@@ -1676,29 +1676,14 @@ Costo Total LDM = Suma de cada Elemento de Costo]]></value>
   <value column="Help" original=""/>
  </row>
  <row id="53129" trl="Y">
-  <value column="Name" original="RV_Depreciation_Calculation_Methods">Métodos Cálculo Depreciación</value>
+  <value column="Name" original="Depreciation Calculation Methods">Métodos Cálculo Depreciación</value>
   <value column="Description" original="List Depreciation Calculation Methods Available">Lista los Métodos de Cálculo de Depreciación disponibles</value>
   <value column="Help" original=""/>
  </row>
  <row id="53131" trl="Y">
-  <value column="Name" original="RV_Asset_Group_Defaults">Valores por Defecto Grupo Activos</value>
+  <value column="Name" original="Asset Group Defaults">Valores por Defecto Grupo Activos</value>
   <value column="Description" original="Lists Asset Group Settings &amp; Defaults">Lista la configuración de grupos de activos y valores por defecto</value>
   <value column="Help" original=""/>
- </row>
- <row id="53133" trl="Y">
-  <value column="Name" original="Inbound Charges for GL">Cargos internos para contabilidad</value>
-  <value column="Description" original="Process invoice charges from GL">Procesa cargos internos para contabilidad</value>
-  <value column="Help" original="This process processes charges to Fixed Assets from GL">Procesa los cargos de activos fijos para contabilidad</value>
- </row>
- <row id="53135" trl="Y">
-  <value column="Name" original="Inbound Charge Entry Report">Reporte Entrada Cargos Internos</value>
-  <value column="Description" original="Used to review Assets Inbound Entry ">Usado para revisar Entrada Cargos Internos</value>
-  <value column="Help" original=""/>
- </row>
- <row id="53137" trl="Y">
-  <value column="Name" original="Inbound Charges for AP">Cargos Internos para AP</value>
-  <value column="Description" original="Process invoice charges from AP">Procesa cargos internos para AP</value>
-  <value column="Help" original="This process processes charges to Fixed Assets from AP">Procesa cargos internos para AP</value>
  </row>
  <row id="53139" trl="Y">
   <value column="Name" original="Import Asset ">Importa Activos</value>
@@ -1831,6 +1816,46 @@ Debe ser implementado cuando no haya usuarios conectados.</value>
   <value column="Description" original="Copy prices etc from other product">Copiar precios y otros datos desde otro producto</value>
   <value column="Help" original=""/>
  </row>
+ <row id="53207" trl="Y">
+  <value column="Name" original="Update depreciation">Actualizar Depreciación</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53208" trl="Y">
+  <value column="Name" original="Asset Addition Process">Proceso Adición Activo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53210" trl="Y">
+  <value column="Name" original="Asset Disposed Process">Proceso Dar de Baja Activo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53211" trl="Y">
+  <value column="Name" original="Process Depreciation Expense">Proceso Gasto Depreciación</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53212" trl="Y">
+  <value column="Name" original="Asset Transfer Process">Proceso Transferencia Activo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53213" trl="Y">
+  <value column="Name" original="Asset Reval Process">Proceso Revaluación Activo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53214" trl="Y">
+  <value column="Name" original="Process Depreciation Entry">Proceso Depreciación Entrada</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53215" trl="Y">
+  <value column="Name" original="Import Fixed Assets">Importar Activos Fijos</value>
+  <value column="Description" original=""/>
+  <value column="Help" original="Import All Fixed Assets">Importar Activos Fijos</value>
+ </row>
  <row id="53216" trl="Y">
   <value column="Name" original="ImportInventoryMovement">Importa Movimiento Inventario</value>
   <value column="Description" original=""/>
@@ -1920,7 +1945,16 @@ Debe ser implementado cuando no haya usuarios conectados.</value>
  <row id="53267" trl="Y">
   <value column="Name" original="Replenish Report incl. Production">Reporte Reabastecimiento incluyendo Producción</value>
   <value column="Description" original="Inventory Replenish Report">Reporte Reabastecimiento incluyendo Producción</value>
-  <value column="Help" original="Report lists products to be replenished. Note that a product can have only one current vendor. If there are more then vendor per product, both records are reset.  You need to select a current vendor manually.&lt;br&gt;&#13;&#10;Movements are only created, if a sourcing warehouse is defined for the warehouse to be replenished."><![CDATA[El reporte muestra los productos a ser reabastecidos]]></value>
+  <value column="Help" original="Report lists products to be replenished. Note that a product can have only one current vendor. If there are more then vendor per product, both records are reset.  You need to select a current vendor manually.&lt;br&gt;&#13;&#10;Movements are only created, if a sourcing warehouse is defined for the warehouse to be replenished.">El reporte muestra los productos a ser reabastecidos</value>
+ </row>
+ <row id="200000" trl="Y">
+  <value column="Name" original="FA_ProjectCreateAsset">Crear Activo de proyecto</value>
+  <value column="Description" original="This process creates asset from project and automatically close the project">Este proceso crea un activo desde un proyecto y automáticamente cierra el proyecto</value>
+  <value column="Help" original="There are four parameters:&#10;a. Project, is the Project that will be converted to asset. This project will be closed after this process completes&#10;b. Product, is the asset product that will be act as the base for the newly created asset&#10;c. UseLifeYears, is an optional parameter. Use this if you want a different use life years for the newly created asset, instead of the default uselifeyears from asset group accounting.&#10;d. Transaction Date, will become in-service-date for the newly created asset.">Hay cuatro parámetros:
+a. Proyecto, si el proyecto será convertido a un activo.  Este proyecto se cerrará al finalizar este proceso
+b. Producto, es el producto que actuará como base para el activo que se está creando
+c. Años vida útil, es un parámetro opcional.  Uselo si desea un valor diferenet al del activo en vez de utilizar el definido en la contabilidad del grupo de activos
+d. Fecha transacción, se volverá la fecha de inicio en servicio del activo</value>
  </row>
  <row id="200005" trl="Y">
   <value column="Name" original="Copy Details">Copiar Detalles</value>
@@ -1935,6 +1969,16 @@ Debe ser implementado cuando no haya usuarios conectados.</value>
  <row id="200007" trl="Y">
   <value column="Name" original="OrderLine Create Shipment">Crear Despacho Línea Orden</value>
   <value column="Description" original="Create Shipment for single ordered product">Crear despacho para un producto</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200008" trl="Y">
+  <value column="Name" original="Reset Locked Account">Reiniciar Cuenta Bloqueada</value>
+  <value column="Description" original="Reset Locked Account for User">Reiniciar Cuenta Bloqueada para un Usuario</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200010" trl="Y">
+  <value column="Name" original="Generate GL Journal">Generar Nota Contable</value>
+  <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
 </idempiereTrl>

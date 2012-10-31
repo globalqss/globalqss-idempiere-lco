@@ -258,14 +258,6 @@
   <value column="Name" original="Customer Service">Servicio al Cliente</value>
   <value column="Description" original="Customer Related Assets">Activos Relacionados con Clientes</value>
  </row>
- <row id="53134" trl="Y">
-  <value column="Name" original="Fixed Assets">Activos Fijos</value>
-  <value column="Description" original="Applications to setup and maintain fixed assets">Aplicaciónpara configurar y mantener activos fijos</value>
- </row>
- <row id="53135" trl="Y">
-  <value column="Name" original="Processing">Procesamiento</value>
-  <value column="Description" original="Process Fixed Assets">Procesar Activos Fijos</value>
- </row>
  <row id="53136" trl="Y">
   <value column="Name" original="Asset Revaluation">Revaluación Activos</value>
   <value column="Description" original="Process Asset Revaluations">Procesar Revaluación Activos</value>
@@ -281,14 +273,6 @@
  <row id="53155" trl="Y">
   <value column="Name" original="Reporting">Reportando</value>
   <value column="Description" original="Reporting for fixed assets">Reportes para activos fijos</value>
- </row>
- <row id="53163" trl="Y">
-  <value column="Name" original="Setup and Maintain">Configuración y Mantenimiento</value>
-  <value column="Description" original="Setup and maintain assets">Configurar y Mantener activos</value>
- </row>
- <row id="53164" trl="Y">
-  <value column="Name" original="Fixed Assets Setup">Configuración Activos Fijos</value>
-  <value column="Description" original="Setup and Maintain Fixed Assets">Configurar y Mantener activos fijos</value>
  </row>
  <row id="53171" trl="Y">
   <value column="Name" original="Depreciation Setup">Configuración Depreciación</value>

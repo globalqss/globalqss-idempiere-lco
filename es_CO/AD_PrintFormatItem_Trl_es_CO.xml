@@ -159,7 +159,7 @@
  </row>
  <row id="200075" trl="Y">
   <value column="Name" original="Part Type">Tipo Parte</value>
-  <value column="PrintName" original=""></value>
+  <value column="PrintName" original=""/>
   <value column="PrintNameSuffix" original=""/>
  </row>
  <row id="200076" trl="Y">

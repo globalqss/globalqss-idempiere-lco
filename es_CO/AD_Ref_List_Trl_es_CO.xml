@@ -3331,7 +3331,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="52000" trl="Y">
-  <value column="Name" original="Mixed">Multiples Medios de Pago</value>
+  <value column="Name" original="Mixed POS Payment">Multiples Medios de Pago</value>
   <value column="Description" original=""/>
  </row>
  <row id="52001" trl="Y">
@@ -3848,7 +3848,7 @@
  </row>
  <row id="53361" trl="Y">
   <value column="Name" original="Disposals">Desechos</value>
-  <value column="Description" original="Disposal Entries for Fixed Assets">Entradas Desecho para Activos Fijos</value>
+  <value column="Description" original="Disposal Entries for Fixed Asset">Entradas Desecho para Activos Fijos</value>
  </row>
  <row id="53362" trl="Y">
   <value column="Name" original="Forecasts">Pronósticos</value>
@@ -4482,6 +4482,118 @@
   <value column="Name" original="Custom Separator Char">Caracter Separador Personalizado</value>
   <value column="Description" original=""/>
  </row>
+ <row id="53587" trl="Y">
+  <value column="Name" original="Activated">Activado</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53588" trl="Y">
+  <value column="Name" original="Disposed">Dado de baja</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53589" trl="Y">
+  <value column="Name" original="Depreciated">Depreciado</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53590" trl="Y">
+  <value column="Name" original="New">Nuevo</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53591" trl="Y">
+  <value column="Name" original="Preservation">Preservación</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53592" trl="Y">
+  <value column="Name" original="Retired">Retirado</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53593" trl="Y">
+  <value column="Name" original="Sold">Vendido</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53594" trl="Y">
+  <value column="Name" original="Dispose">Dar de Baja</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53595" trl="Y">
+  <value column="Name" original="Inbound">Entrante</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53596" trl="Y">
+  <value column="Name" original="Modify">Modificar</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53597" trl="Y">
+  <value column="Name" original="Outbound">Saliente</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53598" trl="Y">
+  <value column="Name" original="Reevaluate">Reevaluar</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53599" trl="Y">
+  <value column="Name" original="Retire">Retirar</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53600" trl="Y">
+  <value column="Name" original="Transfer">Transferir</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53601" trl="Y">
+  <value column="Name" original="Cofinantare">Cofinanciado</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53602" trl="Y">
+  <value column="Name" original="Proprie">Propio</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53603" trl="Y">
+  <value column="Name" original="Terti">Tercero</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53604" trl="Y">
+  <value column="Name" original="Project">Proyecto</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53605" trl="Y">
+  <value column="Name" original="Cash_">Caja_</value>
+  <value column="Description" original="Sold for cash">Vendido por caja</value>
+ </row>
+ <row id="53606" trl="Y">
+  <value column="Name" original="Partial Retirement">Retiro Parcial</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53607" trl="Y">
+  <value column="Name" original="Preservation">Preservación</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53608" trl="Y">
+  <value column="Name" original="Simple_">Simple_</value>
+  <value column="Description" original="No cash or trade">No caja</value>
+ </row>
+ <row id="53609" trl="Y">
+  <value column="Name" original="Activation">Activación</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53610" trl="Y">
+  <value column="Name" original="No">No</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53611" trl="Y">
+  <value column="Name" original="- / Default No">- / No por Defecto</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53612" trl="Y">
+  <value column="Name" original="-">-</value>
+  <value column="Description" original="Don't know / Doesn't matter">No sabe / No importa</value>
+ </row>
+ <row id="53613" trl="Y">
+  <value column="Name" original="- / Default Yes">- / Si por Defecto</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53614" trl="Y">
+  <value column="Name" original="Yes">Si</value>
+  <value column="Description" original=""/>
+ </row>
  <row id="53624" trl="Y">
   <value column="Name" original="Bank In Transit">Banco en Tránsito</value>
   <value column="Description" original=""/>
@@ -4620,6 +4732,50 @@
  </row>
  <row id="200014" trl="Y">
   <value column="Name" original="Wizard">Asistente</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200020" trl="Y">
+  <value column="Name" original="Charged">Cargado</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200021" trl="Y">
+  <value column="Name" original="Delayed">Retrasado</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200022" trl="Y">
+  <value column="Name" original="Replaced">Reemplazado</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200023" trl="Y">
+  <value column="Name" original="Received">Recibido</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200024" trl="Y">
+  <value column="Name" original="Returned">Devuelto</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200025" trl="Y">
+  <value column="Name" original="Cash">Caja</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200026" trl="Y">
+  <value column="Name" original="Card">Tarjeta</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200027" trl="Y">
+  <value column="Name" original="Column">Columna</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200028" trl="Y">
+  <value column="Name" original="Fixed">Fijo</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200029" trl="Y">
+  <value column="Name" original="Same">Mismo</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200039" trl="Y">
+  <value column="Name" original="Asset">Activo</value>
   <value column="Description" original=""/>
  </row>
 </idempiereTrl>

@@ -2117,6 +2117,56 @@
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="53357" trl="Y">
+  <value column="Name" original="A_Asset_Group">A_Asset_Group</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53358" trl="Y">
+  <value column="Name" original="A_Asset_Class (all)">A_Asset_Class (all)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53359" trl="Y">
+  <value column="Name" original="A_Asset Status">A_Asset Status</value>
+  <value column="Description" original="Asset Status">Asset Status</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53360" trl="Y">
+  <value column="Name" original="A_Asset Actions">A_Asset Actions</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53361" trl="Y">
+  <value column="Name" original="A_Tip_Finantare">A_Tip_Finantare</value>
+  <value column="Description" original="Tip finantare investitii">Tip finantare investitii</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53362" trl="Y">
+  <value column="Name" original="A_Depreciation_Method">A_Depreciation_Method</value>
+  <value column="Description" original="Depreciation Calculation Method">Depreciation Calculation Method</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53363" trl="Y">
+  <value column="Name" original="M_MatchInv for Asset Addition">M_MatchInv for Asset Addition</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53364" trl="Y">
+  <value column="Name" original="A_Activation_Method">A_Activation_Method</value>
+  <value column="Description" original="Activation Methods">Activation Methods</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53365" trl="Y">
+  <value column="Name" original="Yes-No-Unknown">Yes-No-Unknown</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53366" trl="Y">
+  <value column="Name" original="C_Period - all, acct, sysdate, desc">C_Period - all, acct, sysdate, desc</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row id="53371" trl="Y">
   <value column="Name" original="Reconciliation Type">Reconciliation Type</value>
   <value column="Description" original=""/>
@@ -2172,9 +2222,24 @@
   <value column="Description" original="Element Values">Element Values</value>
   <value column="Help" original=""/>
  </row>
- <row id="200003" trl="N">
+ <row id="200003" trl="Y">
   <value column="Name" original="AD_WizardProcess Status">AD_WizardProcess Status</value>
   <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200007" trl="Y">
+  <value column="Name" original="Check Status">Check Status</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200008" trl="Y">
+  <value column="Name" original="GL_JournalGeneratorLine BPDimensionType">GL_JournalGeneratorLine BPDimensionType</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200012" trl="Y">
+  <value column="Name" original="Payment">Payment</value>
+  <value column="Description" original="Payment Rule list and Process Payment button">Payment Rule list and Process Payment button</value>
   <value column="Help" original=""/>
  </row>
 </idempiereTrl>
