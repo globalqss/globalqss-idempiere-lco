@@ -212,4 +212,14 @@ Seleccionando "dónde es usado" mostrará las LDM que usan este producto.</value
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="200001" trl="Y">
+  <value column="Name" original="Reset Password">Reinicia Contraseña</value>
+  <value column="Description" original="Reset Password">Reinicia Contraseña</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200002" trl="Y">
+  <value column="Name" original="Report Wizard">Asistente Reportes</value>
+  <value column="Description" original="Report Wizard">Asistente Reportes</value>
+  <value column="Help" original=""/>
+ </row>
 </idempiereTrl>

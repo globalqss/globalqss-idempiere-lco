@@ -243,9 +243,9 @@
   <value column="Help" original=""/>
  </row>
  <row id="158" trl="Y">
-  <value column="Name" original="Bank">Bancos/Cajas</value>
-  <value column="Description" original="Maintain Bank">Mantener Bancos/Cajas</value>
-  <value column="Help" original="The Bank Window is used to define the banks and accounts associated with an organization or business partner">Es usada para definir bancos y cuentas bancarias asociadas con una organización o tercero.</value>
+  <value column="Name" original="Bank / Cash">Bancos/Cajas</value>
+  <value column="Description" original="Maintain Bank / Cash">Mantener Bancos/Cajas</value>
+  <value column="Help" original="The Bank / Cash Window is used to define the banks and accounts associated with an organization or business partner">Es usada para definir bancos y cuentas bancarias asociadas con una organización o tercero.</value>
  </row>
  <row id="159" trl="Y">
   <value column="Name" original="Dunning">Morosidad</value>
@@ -1648,16 +1648,6 @@ y otros</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53055" trl="Y">
-  <value column="Name" original="Inbound Asset Entry">Entrada Activo Interior</value>
-  <value column="Description" original="Create Inbound Asset Entry">Crear Entrada Activo Interior</value>
-  <value column="Help" original="The Inbound Asset Entry window allows you to create and post asset AP to the GL">La ventana Entrada Activo Interior permite crear y contabilizar activos</value>
- </row>
- <row id="53056" trl="Y">
-  <value column="Name" original="Post Imported Assets">Importa Activos</value>
-  <value column="Description" original="Import Fixed Assets">Importa Activos Fijos</value>
-  <value column="Help" original="The Import Asset window allow the user to import assets to Adempiere">La ventana Importa Activos permite al usuario importar activos</value>
- </row>
  <row id="53057" trl="Y">
   <value column="Name" original="Depreciation Period Spread Type">Tipo Propagación Período Depreciación</value>
   <value column="Description" original="Period Spread Type">Tipo Propagación Período Depreciación</value>
@@ -1789,6 +1779,46 @@ y otros</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="53113" trl="Y">
+  <value column="Name" original="Asset Addition">Adición Activo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53114" trl="Y">
+  <value column="Name" original="Asset Activation/Disposal">Activación/Baja Activo</value>
+  <value column="Description" original="Activate/Dispose of Assets">Activar/Dar de baja activos</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53115" trl="Y">
+  <value column="Name" original="Asset Change Account">Cuenta Cambio Activo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53116" trl="Y">
+  <value column="Name" original="Asset Class">Clase Activo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53117" trl="Y">
+  <value column="Name" original="Asset Funding Mode">Modo Financiamiento Activo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53118" trl="Y">
+  <value column="Name" original="Revaluation Asset">Revaluación Activo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53119" trl="Y">
+  <value column="Name" original="Asset Type">Tipo Activo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53120" trl="Y">
+  <value column="Name" original="Imported Fixed Asset">Importación Activos Fijos</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row id="53121" trl="Y">
   <value column="Name" original="Import Inventory Move">Importa Movimiento Inventario</value>
   <value column="Description" original="This window allow import Inventory Move transaction"/>
@@ -1825,13 +1855,13 @@ y otros</value>
   <value column="Help" original=""/>
  </row>
  <row id="200000" trl="Y">
-  <value column="Name" original="ToolBar Button">Botón Barra Herramientas</value>
+  <value column="Name" original="Toolbar Button">Botón Barra Herramientas</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
  <row id="200001" trl="Y">
-  <value column="Name" original="ToolBar Button Restrict">Restringe Botón Barra Herramientas</value>
-  <value column="Description" original=""/>
+  <value column="Name" original="Role Toolbar Button Access">Restringe Botón Barra Herramientas</value>
+  <value column="Description" original="Maintain toolbar button access rule"/>
   <value column="Help" original=""/>
  </row>
  <row id="200002" trl="Y">
@@ -1847,6 +1877,36 @@ y otros</value>
  <row id="200006" trl="Y">
   <value column="Name" original="Dashboard Preference">Preferencia Consola</value>
   <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200008" trl="Y">
+  <value column="Name" original="POS Payment">Pago PDV</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200009" trl="Y">
+  <value column="Name" original="POS Tender Type">Tipo Pago PDV</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200012" trl="Y">
+  <value column="Name" original="Schedule">Programación</value>
+  <value column="Description" original="Times for the scheduler">Programaciones para la agenda</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200013" trl="Y">
+  <value column="Name" original="GL Journal Generator">Generador Notas Contables</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200015" trl="Y">
+  <value column="Name" original="Payment Processor">Procesador de Pagos</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200016" trl="Y">
+  <value column="Name" original="Active Session">Sesiones Activas</value>
+  <value column="Description" original="List of Current Logged in user">Lista de usuarios actualmente en el sistema</value>
   <value column="Help" original=""/>
  </row>
 </idempiereTrl>

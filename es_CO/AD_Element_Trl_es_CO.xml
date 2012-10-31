@@ -1026,8 +1026,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
  <row id="236" trl="Y">
   <value column="Name" original="Average Cost">Costo Promedio</value>
   <value column="PrintName" original="Average Cost">Costo Promedio</value>
-  <value column="Description" original="Weighted average costs">Costo promedio ponderado</value>
-  <value column="Help" original="Weighted average (actual) costs">Costos promedio ponderado (actual)</value>
+  <value column="Description" original="Weighted average costs">Costo Promedio Ponderado</value>
+  <value column="Help" original="Weighted average (actual) costs">Costo Promedio Ponderado (actual)</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -1277,7 +1277,7 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="Name" original="Discontinued by">Descontinuado en</value>
   <value column="PrintName" original="Discontinued by">Descontinuado en</value>
   <value column="Description" original="Discontinued By">Descontinuado en</value>
-  <value column="Help" original="The Discontinued By indicates the individual who discontinued this product">El campo descontinuado en indica la fecha en que se descontinuó este producto</value>
+  <value column="Help" original="The Discontinued By indicates the individual who discontinued this product">El campo Descontinuado en indica la fecha en que se descontinuó este producto</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -4418,8 +4418,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
  <row id="983" trl="Y">
   <value column="Name" original="URL">Dirección Web</value>
   <value column="PrintName" original="URL">Dirección Web</value>
-  <value column="Description" original="Full URL address - e.g. http://www.adempiere.org">Dirección Web complete - e.g. http://www.globalqss.com</value>
-  <value column="Help" original="The URL defines an fully qualified web address like http://www.adempiere.org">El URL define una dirección web para este Tercero</value>
+  <value column="Description" original="Full URL address - e.g. http://www.idempiere.org">Dirección Web complete - e.g. http://www.globalqss.com</value>
+  <value column="Help" original="The URL defines an fully qualified web address like http://www.idempiere.org">El URL define una dirección web para este Tercero</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -9766,20 +9766,20 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1732" trl="Y">
-  <value column="Name" original="Average Cost Amount Sum">Costo Promedio Acumulado</value>
-  <value column="PrintName" original="Average Cost Amount Sum">Sumatoria del Costo Promedio</value>
-  <value column="Description" original="Cumulative average cost amounts (internal)">Total acumulado actual para el cálculo del costo promedio (interno)</value>
-  <value column="Help" original="Current cumulative costs for calculating the average costs">Costos actuales acumulados para calcular los costos promedio</value>
+  <value column="Name" original="Average Cost Amount Sum">Suma Monto Costo Promedio</value>
+  <value column="PrintName" original="Average Cost Amount Sum">Suma Monto Costo Promedio</value>
+  <value column="Description" original="Cumulative average cost amounts (internal)"></value>
+  <value column="Help" original="Current cumulative costs for calculating the average costs">Current cumulative costs for calculating the average costs</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1733" trl="Y">
-  <value column="Name" original="Average Cost Quantity Sum">Cantidad Promedio Acumulada</value>
-  <value column="PrintName" original="Average Cost Quantity Sum">Sumatoria de la Cantidad del Costo Promedio</value>
-  <value column="Description" original="Cumulative average cost quantities (internal)">Cantidad acumulada para cálculo de costo promedio (interno)</value>
-  <value column="Help" original="Current cumulative quantity for calculating the average costs">Cantidad Acumulada Actual para calcular los costos promedio</value>
+  <value column="Name" original="Average Cost Quantity Sum">Suma Cantidad Costo Promedio</value>
+  <value column="PrintName" original="Average Cost Quantity Sum">Suma Cantidad Costo Promedio</value>
+  <value column="Description" original="Cumulative average cost quantities (internal)"></value>
+  <value column="Help" original="Current cumulative quantity for calculating the average costs">Current cumulative quantity for calculating the average costs</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -9796,30 +9796,30 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1735" trl="Y">
-  <value column="Name" original="Std Cost Quantity Sum">Cantidad de la Factura Acumulada</value>
-  <value column="PrintName" original="Std Cost Quantity Sum">Sumatoria de la Cantidad del Costo Estandar</value>
-  <value column="Description" original="Standard Cost Invoice Quantity Sum (internal)">Cantidad acumulada de la factura para el cálculo del costo estándar interno</value>
-  <value column="Help" original="Current cumulative quantity for calculating the standard cost difference based on (actual) invoice price">Cantidad Acumulada Actual para calcular la diferencia en costo estándar basada en el precio de la factura (actual)</value>
+  <value column="Name" original="Std Cost Quantity Sum">Suma Cantidad Costo Estándar</value>
+  <value column="PrintName" original="Std Cost Quantity Sum">Suma Cantidad Costo Estándar</value>
+  <value column="Description" original="Standard Cost Invoice Quantity Sum (internal)"></value>
+  <value column="Help" original="Current cumulative quantity for calculating the standard cost difference based on (actual) invoice price"></value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1736" trl="Y">
-  <value column="Name" original="Std PO Cost Amount Sum">Costo Acumulado de OC</value>
-  <value column="PrintName" original="Std PO Cost Amount Sum">Sumatoria del Costo Estandar OC</value>
-  <value column="Description" original="Standard Cost Purchase Order Amount Sum (internal)">Total acumulado de la orden de compra para el cálculo del costo estándar interno</value>
-  <value column="Help" original="Current cumulative amount for calculating the standard cost difference based on (planned) purchase order price">Total acumulado actual para calcular la diferencia en costo estándar basada en el precio de la orden de compra (planeado)</value>
+  <value column="Name" original="Std PO Cost Amount Sum">Suma Monto Costo OC</value>
+  <value column="PrintName" original="Std PO Cost Amount Sum">Suma Monto Costo OC</value>
+  <value column="Description" original="Standard Cost Purchase Order Amount Sum (internal)"></value>
+  <value column="Help" original="Current cumulative amount for calculating the standard cost difference based on (planned) purchase order price"></value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1737" trl="Y">
-  <value column="Name" original="Std PO Cost Quantity Sum">Cantidad Acumulada de la OC</value>
-  <value column="PrintName" original="Std PO Cost Quantity Sum">Sumatoria de la Cantidad del Costo Estandar OC</value>
-  <value column="Description" original="Standard Cost Purchase Order Quantity Sum (internal)">Cantidad acumulado de la orden de compra para el cálculo del costo estándar interno)</value>
-  <value column="Help" original="Current cumulative quantity for calculating the standard cost difference based on (planned) purchase order price">Cantidad Acumulada Actual para calcular la diferencia en costo estándar basada en el precio de la orden de compra (planeada)</value>
+  <value column="Name" original="Std PO Cost Quantity Sum">Suma Cantidad Costo OC</value>
+  <value column="PrintName" original="Std PO Cost Quantity Sum">Suma Cantidad Costo OC</value>
+  <value column="Description" original="Standard Cost Purchase Order Quantity Sum (internal)"></value>
+  <value column="Help" original="Current cumulative quantity for calculating the standard cost difference based on (planned) purchase order price"></value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -9856,20 +9856,20 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1741" trl="Y">
-  <value column="Name" original="Total Invoice Amount">Total Total de la Factura</value>
-  <value column="PrintName" original="Total Invoice Amount">Total Total de la Factura</value>
-  <value column="Description" original="Cumulative total lifetime invoice amount">Total Total de la Factura</value>
-  <value column="Help" original="The cumulative total lifetime invoice amount is used to calculate the total average price">El Total acumulado total facturado en el tiempo de vida. Se usa para calcular el precio estándar total</value>
+  <value column="Name" original="Total Invoice Amount">Monto Total Factura</value>
+  <value column="PrintName" original="Total Invoice Amount">Monto Total Factura</value>
+  <value column="Description" original="Cumulative total lifetime invoice amount"></value>
+  <value column="Help" original="The cumulative total lifetime invoice amount is used to calculate the total average price"></value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1742" trl="Y">
-  <value column="Name" original="Total Invoice Quantity">Cantidad Total de la Factura</value>
-  <value column="PrintName" original="Total Invoice Quantity">Cantidad Total de la Factura</value>
-  <value column="Description" original="Cumulative total lifetime invoice quantity">Cantidad Total de la Factura</value>
-  <value column="Help" original="The cumulative total lifetime invoice quantity is used to calculate the total average price">La cantidad total facturada en el tiempo de vida. Se usa para calcular el precio estándar total</value>
+  <value column="Name" original="Total Invoice Quantity">Total Cantidad Factura</value>
+  <value column="PrintName" original="Total Invoice Quantity">Total Cantidad Factura</value>
+  <value column="Description" original="Cumulative total lifetime invoice quantity"></value>
+  <value column="Help" original="The cumulative total lifetime invoice quantity is used to calculate the total average price"></value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -9936,29 +9936,29 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1749" trl="Y">
-  <value column="Name" original="Standard Cost Invoice Difference">Variación factura a costo estandar</value>
-  <value column="PrintName" original="Standard Cost Invoice Diff">Variación de facturas a costo estandar</value>
-  <value column="Description" original="Standard Cost Invoice Difference">Variación de factura a costo estandar</value>
-  <value column="Help" original="Accumulated difference of Invoice Costs to Standard Costs">Diferencia acumulada de costo de facturas a costo estandar</value>
+  <value column="Name" original="Standard Cost Invoice Difference">Diferencia Factura Costo Estándar</value>
+  <value column="PrintName" original="Standard Cost Invoice Diff">Diferencia Factura Costo Estándar</value>
+  <value column="Description" original="Standard Cost Invoice Difference"></value>
+  <value column="Help" original="Accumulated difference of Invoice Costs to Standard Costs"></value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1750" trl="Y">
-  <value column="Name" original="Standard Cost PO Difference">Variación OC Costo Estándar</value>
-  <value column="PrintName" original="Standard Cost PO Diff">Diferencias Costo Estandar OC</value>
-  <value column="Description" original="Standard Cost Purchase Order Difference">Variación de costo estándar contra la orden de compra</value>
-  <value column="Help" original="Accumulated difference of Purchase Order Costs to Standard Costs">Diferencia Acumulada del costo de la Orden de compra contra el Costo estándar</value>
+  <value column="Name" original="Standard Cost PO Difference">Diferencia OC Costo Estándar</value>
+  <value column="PrintName" original="Standard Cost PO Diff">Diferencia OC Costo Estándar</value>
+  <value column="Description" original="Standard Cost Purchase Order Difference"></value>
+  <value column="Help" original="Accumulated difference of Purchase Order Costs to Standard Costs"></value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1751" trl="Y">
-  <value column="Name" original="Total Invoice Cost">Costo Total de la Factura</value>
-  <value column="PrintName" original="Total Invoice Cost">Costo Total de la Factura</value>
-  <value column="Description" original="Total lifetime invoice costs">Costo Total de la Factura</value>
+  <value column="Name" original="Total Invoice Cost">Total Costo Factura</value>
+  <value column="PrintName" original="Total Invoice Cost">Total Costo Factura</value>
+  <value column="Description" original="Total lifetime invoice costs"></value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -21177,9 +21177,9 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2932" trl="Y">
-  <value column="Name" original="Next Maintenance">Siguiente Mantenimiento</value>
-  <value column="PrintName" original="Next Maintenance">Siguiente Mantenimiento</value>
-  <value column="Description" original="Next Maintenance Date">Fecha del Siguiente Mantenimiento</value>
+  <value column="Name" original="Next Maintenence">Siguiente Mantenimiento</value>
+  <value column="PrintName" original="Next Maintenence">Siguiente Mantenimiento</value>
+  <value column="Description" original="Next Maintenence Date">Fecha del Siguiente Mantenimiento</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -21199,7 +21199,7 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
  <row id="2934" trl="Y">
   <value column="Name" original="Next Unit">Unidad Siguiente</value>
   <value column="PrintName" original="Next Unit">Unidad Siguiente</value>
-  <value column="Description" original="Next Maintenance Unit">Unidad Siguiente de Mantenimiento</value>
+  <value column="Description" original="Next Maintenence Unit">Unidad Siguiente de Mantenimiento</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -26129,8 +26129,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53473" trl="Y">
-  <value column="Name" original="Depreciation Type">Tipo Depreciación</value>
-  <value column="PrintName" original="Depreciation Type">Tipo Depreciación</value>
+  <value column="Name" original="Depreciation">Tipo Depreciación</value>
+  <value column="PrintName" original="Depreciation">Tipo Depreciación</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26149,8 +26149,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53475" trl="Y">
-  <value column="Name" original="Text">Texto</value>
-  <value column="PrintName" original="Text">Texto</value>
+  <value column="Name" original="Description">Texto</value>
+  <value column="PrintName" original="Description">Texto</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26169,8 +26169,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53477" trl="Y">
-  <value column="Name" original="Period/Yearly">Período/Anualmente</value>
-  <value column="PrintName" original="Period/Yearly">Período/Anualmente</value>
+  <value column="Name" original="Asset Period">Período/Anualmente</value>
+  <value column="PrintName" original="Asset Period">Período/Anualmente</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26209,8 +26209,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53481" trl="Y">
-  <value column="Name" original="Depreciation Table Header">Encabezado Tabla Depreciación</value>
-  <value column="PrintName" original="Depreciation Table Header">Encabezado Tabla Depreciación</value>
+  <value column="Name" original="A_Depreciation_Table_Header_ID">Encabezado Tabla Depreciación</value>
+  <value column="PrintName" original="A_Depreciation_Table_Header_ID">Encabezado Tabla Depreciación</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26229,8 +26229,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53483" trl="Y">
-  <value column="Name" original="Depreciation Exp.">Depreciación Exp</value>
-  <value column="PrintName" original="Depreciation Exp.">Depreciación Exp</value>
+  <value column="Name" original="A_Depreciation_Exp_ID">Depreciación Exp</value>
+  <value column="PrintName" original="A_Depreciation_Exp_ID">Depreciación Exp</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26259,8 +26259,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53486" trl="Y">
-  <value column="Name" original="Account Number">Número Cuenta</value>
-  <value column="PrintName" original="Account Number">Número Cuenta</value>
+  <value column="Name" original="A_Account_Number">Número Cuenta</value>
+  <value column="PrintName" original="A_Account_Number">Número Cuenta</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26269,8 +26269,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53487" trl="Y">
-  <value column="Name" original="Depreciation Workfile">Archivo Trabajo Depreciación</value>
-  <value column="PrintName" original="Depreciation Workfile">Archivo Trabajo Depreciación</value>
+  <value column="Name" original="A_Depreciation_Workfile_ID">Archivo Trabajo Depreciación</value>
+  <value column="PrintName" original="A_Depreciation_Workfile_ID">Archivo Trabajo Depreciación</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26299,8 +26299,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53490" trl="Y">
-  <value column="Name" original="Asset Life Current Year">Vida Actuvo Año Actual</value>
-  <value column="PrintName" original="Asset Life Current Year">Vida Actuvo Año Actual</value>
+  <value column="Name" original="A_Asset_Life_Current_Year">Vida Actuvo Año Actual</value>
+  <value column="PrintName" original="A_Asset_Life_Current_Year">Vida Actuvo Año Actual</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26309,8 +26309,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53491" trl="Y">
-  <value column="Name" original="Forecast Period">Pronóstico Período</value>
-  <value column="PrintName" original="Forecast Period">Pronóstico Período</value>
+  <value column="Name" original="A_Period_Forecast">Pronóstico Período</value>
+  <value column="PrintName" original="A_Period_Forecast">Pronóstico Período</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26319,8 +26319,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53492" trl="Y">
-  <value column="Name" original="Prior. Year Accumulated Depr.">Depreciación Acumulada Año Anterior</value>
-  <value column="PrintName" original="Prior. Year Accumulated Depr.">Depreciación Acumulada Año Anterior</value>
+  <value column="Name" original="A_Prior_Year_Accumulated_Depr">Depreciación Acumulada Año Anterior</value>
+  <value column="PrintName" original="A_Prior_Year_Accumulated_Depr">Depreciación Acumulada Año Anterior</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26329,8 +26329,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53493" trl="Y">
-  <value column="Name" original="Salvage Value">Valor Salvamento</value>
-  <value column="PrintName" original="Salvage Value">Valor Salvamento</value>
+  <value column="Name" original="Asset Salvage Value">Valor Salvamento</value>
+  <value column="PrintName" original="Asset Salvage Value">Valor Salvamento</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26339,8 +26339,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53494" trl="Y">
-  <value column="Name" original="Quantity">Cantidad</value>
-  <value column="PrintName" original="Quantity">Cantidad</value>
+  <value column="Name" original="Current Qty">Cantidad</value>
+  <value column="PrintName" original="Current Qty">Cantidad</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26349,8 +26349,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53495" trl="Y">
-  <value column="Name" original="Period Posted">Período Contabilizado</value>
-  <value column="PrintName" original="Period Posted">Período Contabilizado</value>
+  <value column="Name" original="A_Period_Posted">Período Contabilizado</value>
+  <value column="PrintName" original="A_Period_Posted">Período Contabilizado</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26359,8 +26359,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53496" trl="Y">
-  <value column="Name" original="A_Life_Period">Período Vida</value>
-  <value column="PrintName" original="A_Life_Period">Período Vida</value>
+  <value column="Name" original="Life Periods">Período Vida</value>
+  <value column="PrintName" original="Life Periods">Período Vida</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26369,8 +26369,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53497" trl="Y">
-  <value column="Name" original="Asset Life Years">Vida Años Activo</value>
-  <value column="PrintName" original="Asset Life Years">Vida Años Activo</value>
+  <value column="Name" original="Life Years">Vida Años Activo</value>
+  <value column="PrintName" original="Life Years">Vida Años Activo</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26379,8 +26379,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53498" trl="Y">
-  <value column="Name" original="Base Amount">Monto Base</value>
-  <value column="PrintName" original="Base Amount">Monto Base</value>
+  <value column="Name" original="A_Base_Amount">Monto Base</value>
+  <value column="PrintName" original="A_Base_Amount">Monto Base</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26389,8 +26389,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53499" trl="Y">
-  <value column="Name" original="Calc. Accumulated Depr.">Depreciación Acumulada Calc</value>
-  <value column="PrintName" original="Calc. Accumulated Depr.">Depreciación Acumulada Calc</value>
+  <value column="Name" original="A_Calc_Accumulated_Depr">Depreciación Acumulada Calc</value>
+  <value column="PrintName" original="A_Calc_Accumulated_Depr">Depreciación Acumulada Calc</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26399,8 +26399,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53500" trl="Y">
-  <value column="Name" original="Curr. Dep. Exp.">Depreciación Exp Actual</value>
-  <value column="PrintName" original="Curr. Dep. Exp.">Depreciación Exp Actual</value>
+  <value column="Name" original="A_Curr_Dep_Exp">Depreciación Exp Actual</value>
+  <value column="PrintName" original="A_Curr_Dep_Exp">Depreciación Exp Actual</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26449,8 +26449,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53505" trl="Y">
-  <value column="Name" original="End Aset ID">Fin Activo</value>
-  <value column="PrintName" original="End Aset ID">Fin Activo</value>
+  <value column="Name" original="To Asset">Fin Activo</value>
+  <value column="PrintName" original="To Asset">Fin Activo</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26459,8 +26459,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53506" trl="Y">
-  <value column="Name" original="Start Asset">Inicio Activo</value>
-  <value column="PrintName" original="Start Asset">Inicio Activo</value>
+  <value column="Name" original="From Asset">Inicio Activo</value>
+  <value column="PrintName" original="From Asset">Inicio Activo</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26489,8 +26489,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53509" trl="Y">
-  <value column="Name" original="Revaluation Calculation Method">Método Cálculo Revaluación</value>
-  <value column="PrintName" original="Revaluation Calculation Method">Método Cálculo Revaluación</value>
+  <value column="Name" original="A_Reval_Cal_Method">Método Cálculo Revaluación</value>
+  <value column="PrintName" original="A_Reval_Cal_Method">Método Cálculo Revaluación</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26589,8 +26589,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53519" trl="Y">
-  <value column="Name" original="Asset Acct.">Cuenta Activo</value>
-  <value column="PrintName" original="Asset Acct.">Cuenta Activo</value>
+  <value column="Name" original="A_Asset_Acct_ID">Cuenta Activo</value>
+  <value column="PrintName" original="A_Asset_Acct_ID">Cuenta Activo</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26619,8 +26619,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53522" trl="Y">
-  <value column="Name" original="Transfer Balance IS">Transfiere Saldo</value>
-  <value column="PrintName" original="Transfer Balance IS">Transfiere Saldo</value>
+  <value column="Name" original="A_Transfer_Balance_IS">Transfiere Saldo</value>
+  <value column="PrintName" original="A_Transfer_Balance_IS">Transfiere Saldo</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26659,8 +26659,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53526" trl="Y">
-  <value column="Name" original="Asset Creation Date">Fecha Creación Activo</value>
-  <value column="PrintName" original="Asset Creation Date">Fecha Creación Activo</value>
+  <value column="Name" original="Create Date">Fecha Creación Activo</value>
+  <value column="PrintName" original="Create Date">Fecha Creación Activo</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26669,8 +26669,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53527" trl="Y">
-  <value column="Name" original="Asset Reval. Date">Fecha Revaluación Activo</value>
-  <value column="PrintName" original="Asset Reval. Date">Fecha Revaluación Activo</value>
+  <value column="Name" original="Revaluation Date">Fecha Revaluación Activo</value>
+  <value column="PrintName" original="Revaluation Date">Fecha Revaluación Activo</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26679,8 +26679,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53528" trl="Y">
-  <value column="Name" original="Asset ID">ID Activo</value>
-  <value column="PrintName" original="Asset ID">ID Activo</value>
+  <value column="Name" original="Parent Asset">ID Activo</value>
+  <value column="PrintName" original="Parent Asset">ID Activo</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26689,8 +26689,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53529" trl="Y">
-  <value column="Name" original="Original Qty">Cantidad Original</value>
-  <value column="PrintName" original="Original Qty">Cantidad Original</value>
+  <value column="Name" original="A_QTY_Original">Cantidad Original</value>
+  <value column="PrintName" original="A_QTY_Original">Cantidad Original</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26699,8 +26699,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53530" trl="Y">
-  <value column="Name" original="Depreciation Expense Account">Cuenta Gastos Depreciación</value>
-  <value column="PrintName" original="Depreciation Expense Account">Cuenta Gastos Depreciación</value>
+  <value column="Name" original="Depreciation Account">Cuenta Gastos Depreciación</value>
+  <value column="PrintName" original="Depreciation Account">Cuenta Gastos Depreciación</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26709,8 +26709,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53531" trl="Y">
-  <value column="Name" original="Depreciation Manual Period">Período Manual Depreciación</value>
-  <value column="PrintName" original="Depreciation Manual Period">Período Manual Depreciación</value>
+  <value column="Name" original="A_Depreciation_Manual_Period">Período Manual Depreciación</value>
+  <value column="PrintName" original="A_Depreciation_Manual_Period">Período Manual Depreciación</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26769,8 +26769,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53537" trl="Y">
-  <value column="Name" original="Period Start">Inicio Período</value>
-  <value column="PrintName" original="Period Start">Inicio Período</value>
+  <value column="Name" original="A_Period_Start">Inicio Período</value>
+  <value column="PrintName" original="A_Period_Start">Inicio Período</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26779,8 +26779,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53538" trl="Y">
-  <value column="Name" original="Period End">Fin Período</value>
-  <value column="PrintName" original="Period End">Fin Período</value>
+  <value column="Name" original="A_Period_End">Fin Período</value>
+  <value column="PrintName" original="A_Period_End">Fin Período</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26809,8 +26809,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53541" trl="Y">
-  <value column="Name" original="Split Percentage">Porcentaje División</value>
-  <value column="PrintName" original="Split Percentage">Porcentaje División</value>
+  <value column="Name" original="Split Percent">Porcentaje División</value>
+  <value column="PrintName" original="Split Percent">Porcentaje División</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26829,8 +26829,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53543" trl="Y">
-  <value column="Name" original="Depreciation Variable Perc.">Porcentaje Variable Depreciación</value>
-  <value column="PrintName" original="Depreciation Variable Perc.">Porcentaje Variable Depreciación</value>
+  <value column="Name" original="Variable Percent">Porcentaje Variable Depreciación</value>
+  <value column="PrintName" original="Variable Percent">Porcentaje Variable Depreciación</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26839,8 +26839,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53544" trl="Y">
-  <value column="Name" original="Depreciation Calculation Type">Tipo Cálculo Depreciación</value>
-  <value column="PrintName" original="Depreciation Calculation Type">Tipo Cálculo Depreciación</value>
+  <value column="Name" original="Depreciation Method">Tipo Cálculo Depreciación</value>
+  <value column="PrintName" original="Depreciation Method">Tipo Cálculo Depreciación</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26849,8 +26849,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53545" trl="Y">
-  <value column="Name" original="Depreciation Manual Amount">Cantidad Manual Depreciación</value>
-  <value column="PrintName" original="Depreciation Manual Amount">Cantidad Manual Depreciación</value>
+  <value column="Name" original="A_Depreciation_Manual_Amount">Cantidad Manual Depreciación</value>
+  <value column="PrintName" original="A_Depreciation_Manual_Amount">Cantidad Manual Depreciación</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26869,8 +26869,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53547" trl="Y">
-  <value column="Name" original="Asset Spread">Propagación Activo</value>
-  <value column="PrintName" original="Asset Spread">Propagación Activo</value>
+  <value column="Name" original="A_Asset_Spread_ID">Propagación Activo</value>
+  <value column="PrintName" original="A_Asset_Spread_ID">Propagación Activo</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26879,8 +26879,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53548" trl="Y">
-  <value column="Name" original="Accumulated Depreciation">Depreciación Acumulada</value>
-  <value column="PrintName" original="Accumulated Depreciation">Depreciación Acumulada</value>
+  <value column="Name" original="Accumulated Depreciation Account">Depreciación Acumulada</value>
+  <value column="PrintName" original="Accumulated Depreciation Account">Depreciación Acumulada</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26889,8 +26889,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53549" trl="Y">
-  <value column="Name" original="Asset Cost Account">Cuenta Costo Activo</value>
-  <value column="PrintName" original="Asset Cost Account">Cuenta Costo Activo</value>
+  <value column="Name" original="Asset Acct">Cuenta Costo Activo</value>
+  <value column="PrintName" original="AssetAcct">Cuenta Costo Activo</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26899,8 +26899,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53550" trl="Y">
-  <value column="Name" original="Disposed Asset">Activo Desechado</value>
-  <value column="PrintName" original="Disposed Asset">Activo Desechado</value>
+  <value column="Name" original="Asset Disposed">Activo Desechado</value>
+  <value column="PrintName" original="Asset Disposed">Activo Desechado</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26919,8 +26919,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53552" trl="Y">
-  <value column="Name" original="Disposed Reason Code">Razón Desecho</value>
-  <value column="PrintName" original="Disposed Reason Code">Razón Desecho</value>
+  <value column="Name" original="Disposed Reason">Razón Desecho</value>
+  <value column="PrintName" original="Disposed Reason">Razón Desecho</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26929,8 +26929,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53553" trl="Y">
-  <value column="Name" original="Proceeds">Beneficios</value>
-  <value column="PrintName" original="Proceeds">Beneficios</value>
+  <value column="Name" original="Asset Proceeds">Beneficios</value>
+  <value column="PrintName" original="Asset Proceeds">Beneficios</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26939,8 +26939,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53554" trl="Y">
-  <value column="Name" original="Disposal Method">Método Desecho</value>
-  <value column="PrintName" original="Disposal Method">Método Desecho</value>
+  <value column="Name" original="Disposed Method">Método Desecho</value>
+  <value column="PrintName" original="Disposed Method">Método Desecho</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26959,8 +26959,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53556" trl="Y">
-  <value column="Name" original="Asset Transfer">Transferencia Activo</value>
-  <value column="PrintName" original="Asset Transfer">Transferencia Activo</value>
+  <value column="Name" original="A_Asset_Transfer_ID">Transferencia Activo</value>
+  <value column="PrintName" original="A_Asset_Transfer_ID">Transferencia Activo</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26979,8 +26979,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53558" trl="Y">
-  <value column="Name" original="Old Depreciation Exp Acct">Cuenta Exp Antigua Depreciación</value>
-  <value column="PrintName" original="Old Depreciation Exp Acct">Cuenta Exp Antigua Depreciación</value>
+  <value column="Name" original="A_Depreciation_Acct_Str">Cuenta Exp Antigua Depreciación</value>
+  <value column="PrintName" original="A_Depreciation_Acct_Str">Cuenta Exp Antigua Depreciación</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -26999,8 +26999,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53560" trl="Y">
-  <value column="Name" original="Transfer Balance Sheet">Hoja Transferencia Saldo</value>
-  <value column="PrintName" original="Transfer Balance Sheet">Hoja Transferencia Saldo</value>
+  <value column="Name" original="A_Transfer_Balance">Hoja Transferencia Saldo</value>
+  <value column="PrintName" original="A_Transfer_Balance">Hoja Transferencia Saldo</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27009,8 +27009,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53561" trl="Y">
-  <value column="Name" original="Old Disposal Revenue">Ingreso Desecho Anterior</value>
-  <value column="PrintName" original="Old Disposal Revenue">Ingreso Desecho Anterior</value>
+  <value column="Name" original="Disposal Revenue Str">Ingreso Desecho Anterior</value>
+  <value column="PrintName" original="Disposal Revenue Str">Ingreso Desecho Anterior</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27029,8 +27029,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53563" trl="Y">
-  <value column="Name" original="Old Disposal Loss">Pérdida Desecho Anterior</value>
-  <value column="PrintName" original="Old Disposal Loss">A_Disposal_Loss_Str</value>
+  <value column="Name" original="Disposal Loss Str">Pérdida Desecho Anterior</value>
+  <value column="PrintName" original="Disposal Loss Str">A_Disposal_Loss_Str</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27049,8 +27049,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53565" trl="Y">
-  <value column="Name" original="Old Asset Cost Acct">Cuenta Costos Anterior Activo</value>
-  <value column="PrintName" original="Old Asset Cost Acct">Cuenta Costos Anterior Activo</value>
+  <value column="Name" original="A_Asset_Acct_Str">Cuenta Costos Anterior Activo</value>
+  <value column="PrintName" original="A_Asset_Acct_Str">Cuenta Costos Anterior Activo</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27069,8 +27069,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53567" trl="Y">
-  <value column="Name" original="Old Accum Depreciation Acct">Cuenta Depreciación Acumulada Anterior</value>
-  <value column="PrintName" original="Old Accum Depreciation Acct">Cuenta Depreciación Acumulada Anterior</value>
+  <value column="Name" original="Old Asset Cost Acct">Cuenta Depreciación Acumulada Anterior</value>
+  <value column="PrintName" original="Old Asset Cost Acct">Cuenta Depreciación Acumulada Anterior</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27079,8 +27079,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53568" trl="Y">
-  <value column="Name" original="Depreciation Build">Construcción Depreciación</value>
-  <value column="PrintName" original="Depreciation Build">Construcción Depreciación</value>
+  <value column="Name" original="Build Depreciation">Construcción Depreciación</value>
+  <value column="PrintName" original="Build Depreciation">Construcción Depreciación</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27089,8 +27089,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53569" trl="Y">
-  <value column="Name" original="Asset Spread Type">Tipo Propagación Activo</value>
-  <value column="PrintName" original="Asset Spread Type">Tipo Propagación Activo</value>
+  <value column="Name" original="Spread Type">Tipo Propagación Activo</value>
+  <value column="PrintName" original="Spread Type">Tipo Propagación Activo</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27259,8 +27259,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53587" trl="Y">
-  <value column="Name" original="Asset Group Acct.">Cuenta Grupo Activo</value>
-  <value column="PrintName" original="Asset Group Acct.">Cuenta Grupo Activo</value>
+  <value column="Name" original="Asset Group Accounting">Cuenta Grupo Activo</value>
+  <value column="PrintName" original="Asset Group Accounting">Cuenta Grupo Activo</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27269,8 +27269,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53588" trl="Y">
-  <value column="Name" original="Depreciation Calculation Type">Tipo Cálculo Depreciación</value>
-  <value column="PrintName" original="Depreciation Calculation Type">Tipo Cálculo Depreciación</value>
+  <value column="Name" original="Calculation Type">Tipo Cálculo Depreciación</value>
+  <value column="PrintName" original="Calculation Type">Tipo Cálculo Depreciación</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27289,8 +27289,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53590" trl="Y">
-  <value column="Name" original="Investment Credit">Inversion CR</value>
-  <value column="PrintName" original="Investment Credit">Inversion CR</value>
+  <value column="Name" original="Asset Investment CR">Inversion CR</value>
+  <value column="PrintName" original="Asset Investment CR">Inversion CR</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27299,8 +27299,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53591" trl="Y">
-  <value column="Name" original="Tax Entity">Entidad Impuesto</value>
-  <value column="PrintName" original="Tax Entity">Entidad Impuesto</value>
+  <value column="Name" original="Asset Tax Entity">Entidad Impuesto</value>
+  <value column="PrintName" original="Asset Tax Entity">Entidad Impuesto</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27309,8 +27309,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53592" trl="Y">
-  <value column="Name" original="Purchased New?">Adquirido Nuevo?</value>
-  <value column="PrintName" original="Purchased New?">Adquirido Nuevo?</value>
+  <value column="Name" original="Asset New Used">Adquirido Nuevo?</value>
+  <value column="PrintName" original="Asset New Used">Adquirido Nuevo?</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27319,8 +27319,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53593" trl="Y">
-  <value column="Name" original="Finance Method">Método Financiero</value>
-  <value column="PrintName" original="Finance Method">Método Financiero</value>
+  <value column="Name" original="Asset Finance Method">Método Financiero</value>
+  <value column="PrintName" original="Asset Finance Method">Método Financiero</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27329,8 +27329,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53594" trl="Y">
-  <value column="Name" original="Asset Info Fin.">Info Fin Activo</value>
-  <value column="PrintName" original="Asset Info Fin.">Info Fin Activo</value>
+  <value column="Name" original="Asset Info Financial ID">Info Fin Activo</value>
+  <value column="PrintName" original="Asset Info Financial ID">Info Fin Activo</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27339,8 +27339,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53595" trl="Y">
-  <value column="Name" original="Payment Due Date">Fecha Vencimiento Pago</value>
-  <value column="PrintName" original="Payment Due Date">Fecha Vencimiento Pago</value>
+  <value column="Name" original="Asset Due On">Fecha Vencimiento Pago</value>
+  <value column="PrintName" original="Asset Due On">Fecha Vencimiento Pago</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27369,8 +27369,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53598" trl="Y">
-  <value column="Name" original="Option Purchase Price">Precio Opción Compra</value>
-  <value column="PrintName" original="Option Purchase Price">Precio Opción Compra</value>
+  <value column="Name" original="Purchase Price">Precio Opción Compra</value>
+  <value column="PrintName" original="Purchase Price">Precio Opción Compra</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27389,8 +27389,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53600" trl="Y">
-  <value column="Name" original="Monthly Payment">Pago Mensual</value>
-  <value column="PrintName" original="Monthly Payment">Pago Mensual</value>
+  <value column="Name" original="Asset Monthly Payment">Pago Mensual</value>
+  <value column="PrintName" original="Asset Monthly Payment">Pago Mensual</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27399,8 +27399,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53601" trl="Y">
-  <value column="Name" original="Contract Expiration Date">Fecha Expiración Contrato</value>
-  <value column="PrintName" original="Contract Expiration Date">Fecha Expiración Contrato</value>
+  <value column="Name" original="Asset Expired Date">Fecha Expiración Contrato</value>
+  <value column="PrintName" original="Asset Expired Date">Fecha Expiración Contrato</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27419,8 +27419,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53603" trl="Y">
-  <value column="Name" original="Asset Change">Cambio Activo</value>
-  <value column="PrintName" original="Asset Change">Cambio Activo</value>
+  <value column="Name" original="A_Asset_Change_ID">Cambio Activo</value>
+  <value column="PrintName" original="A_Asset_Change_ID">Cambio Activo</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27429,8 +27429,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53604" trl="Y">
-  <value column="Name" original="Asset Book value amt.">Monto Valor Libros Activo</value>
-  <value column="PrintName" original="Asset Book value amt.">Monto Valor Libros Activo</value>
+  <value column="Name" original="AssetBookValueAmt">Monto Valor Libros Activo</value>
+  <value column="PrintName" original="AssetBookValueAmt">Monto Valor Libros Activo</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27439,8 +27439,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53605" trl="Y">
-  <value column="Name" original="Asset Accum. Depreciation Amt.">Monto Depreciación Acumulada Activo</value>
-  <value column="PrintName" original="Asset Accum. Depreciation Amt.">Monto Depreciación Acumulada Activo</value>
+  <value column="Name" original="AssetAccumDepreciationAmt">Monto Depreciación Acumulada Activo</value>
+  <value column="PrintName" original="AssetAccumDepreciationAmt">Monto Depreciación Acumulada Activo</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27489,8 +27489,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53613" trl="Y">
-  <value column="Name" original="Asset Info Lic.">Info Lic Activo</value>
-  <value column="PrintName" original="Asset Info Lic.">Info Lic Activo</value>
+  <value column="Name" original="A_Asset_Info_Lic_ID">Info Lic Activo</value>
+  <value column="PrintName" original="A_Asset_Info_Lic_ID">Info Lic Activo</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27499,8 +27499,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53614" trl="Y">
-  <value column="Name" original="License Fee">Cuota Licencia</value>
-  <value column="PrintName" original="License Fee">Cuota Licencia</value>
+  <value column="Name" original="Asset License Fee">Cuota Licencia</value>
+  <value column="PrintName" original="Asset License Fee">Cuota Licencia</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27509,8 +27509,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53615" trl="Y">
-  <value column="Name" original="Policy Renewal Date">Fecha Renovación Póliza</value>
-  <value column="PrintName" original="Policy Renewal Date">Fecha Renovación Póliza</value>
+  <value column="Name" original="Asset Renewal Date">Fecha Renovación Póliza</value>
+  <value column="PrintName" original="Asset Renewal Date">Fecha Renovación Póliza</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27519,8 +27519,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53616" trl="Y">
-  <value column="Name" original="License No">No. Licencia</value>
-  <value column="PrintName" original="License No">No. Licencia</value>
+  <value column="Name" original="Asset License No">No. Licencia</value>
+  <value column="PrintName" original="Asset License No">No. Licencia</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27539,8 +27539,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53618" trl="Y">
-  <value column="Name" original="Asset Info Ins.">Info Seg Activo</value>
-  <value column="PrintName" original="Asset Info Ins.">Info Seg Activo</value>
+  <value column="Name" original="A_Asset_Info_Ins_ID">Info Seg Activo</value>
+  <value column="PrintName" original="A_Asset_Info_Ins_ID">Info Seg Activo</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27549,8 +27549,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53619" trl="Y">
-  <value column="Name" original="Insured Value">Valor Asegurado</value>
-  <value column="PrintName" original="Insured Value">Valor Asegurado</value>
+  <value column="Name" original="Asset Insurance Value">Valor Asegurado</value>
+  <value column="PrintName" original="Asset Insurance Value">Valor Asegurado</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27559,8 +27559,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53620" trl="Y">
-  <value column="Name" original="Policy Number">No. Póliza</value>
-  <value column="PrintName" original="Policy Number">No. Póliza</value>
+  <value column="Name" original="Asset Policy No">No. Póliza</value>
+  <value column="PrintName" original="Asset Policy No">No. Póliza</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27569,8 +27569,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53621" trl="Y">
-  <value column="Name" original="Replacement Costs">Costos Reemplazo</value>
-  <value column="PrintName" original="Replacement Costs">Costos Reemplazo</value>
+  <value column="Name" original="Asset Replace Cost">Costos Reemplazo</value>
+  <value column="PrintName" original="Asset Replace Cost">Costos Reemplazo</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27589,8 +27589,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53623" trl="Y">
-  <value column="Name" original="Insurance Premium">Seguro Premium</value>
-  <value column="PrintName" original="Insurance Premium">Seguro Premium</value>
+  <value column="Name" original="Asset Insurance Premium">Seguro Premium</value>
+  <value column="PrintName" original="Asset Insurance Premium">Seguro Premium</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27599,8 +27599,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53624" trl="Y">
-  <value column="Name" original="Asset Info Oth.">Info Otr Activo</value>
-  <value column="PrintName" original="Asset Info Oth.">Info Otr Activo</value>
+  <value column="Name" original="A_Asset_Info_Oth_ID">Info Otr Activo</value>
+  <value column="PrintName" original="A_Asset_Info_Oth_ID">Info Otr Activo</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27609,8 +27609,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53625" trl="Y">
-  <value column="Name" original="User 1">Usuario 1</value>
-  <value column="PrintName" original="User 1">Usuario 1</value>
+  <value column="Name" original="A_User1">Usuario 1</value>
+  <value column="PrintName" original="A_User1">Usuario 1</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27619,8 +27619,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53626" trl="Y">
-  <value column="Name" original="User 10">Usuario 10</value>
-  <value column="PrintName" original="User 10">Usuario 10</value>
+  <value column="Name" original="A_User10">Usuario 10</value>
+  <value column="PrintName" original="A_User10">Usuario 10</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27629,8 +27629,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53627" trl="Y">
-  <value column="Name" original="User 11">Usuario 11</value>
-  <value column="PrintName" original="User 11">Usuario 11</value>
+  <value column="Name" original="A_User11">Usuario 11</value>
+  <value column="PrintName" original="A_User11">Usuario 11</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27639,8 +27639,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53628" trl="Y">
-  <value column="Name" original="User 12">Usuario 12</value>
-  <value column="PrintName" original="User 12">Usuario 12</value>
+  <value column="Name" original="A_User12">Usuario 12</value>
+  <value column="PrintName" original="A_User12">Usuario 12</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27649,8 +27649,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53629" trl="Y">
-  <value column="Name" original="User 13">Usuario 13</value>
-  <value column="PrintName" original="User 13">Usuario 13</value>
+  <value column="Name" original="A_User13">Usuario 13</value>
+  <value column="PrintName" original="A_User13">Usuario 13</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27659,8 +27659,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53630" trl="Y">
-  <value column="Name" original="User 14">Usuario 14</value>
-  <value column="PrintName" original="User 14">Usuario 14</value>
+  <value column="Name" original="A_User14">Usuario 14</value>
+  <value column="PrintName" original="A_User14">Usuario 14</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27669,8 +27669,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53631" trl="Y">
-  <value column="Name" original="User 15">Usuario 15</value>
-  <value column="PrintName" original="User 15">Usuario 15</value>
+  <value column="Name" original="A_User15">Usuario 15</value>
+  <value column="PrintName" original="A_User15">Usuario 15</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27679,8 +27679,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53632" trl="Y">
-  <value column="Name" original="User 2">Usuario 2</value>
-  <value column="PrintName" original="User 2">Usuario 2</value>
+  <value column="Name" original="A_User2">Usuario 2</value>
+  <value column="PrintName" original="A_User2">Usuario 2</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27689,8 +27689,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53633" trl="Y">
-  <value column="Name" original="User 3">Usuario 3</value>
-  <value column="PrintName" original="User 3">Usuario 3</value>
+  <value column="Name" original="A_User3">Usuario 3</value>
+  <value column="PrintName" original="A_User3">Usuario 3</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27699,8 +27699,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53634" trl="Y">
-  <value column="Name" original="User 4">Usuario 4</value>
-  <value column="PrintName" original="User 4">Usuario 4</value>
+  <value column="Name" original="A_User4">Usuario 4</value>
+  <value column="PrintName" original="A_User4">Usuario 4</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27709,8 +27709,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53635" trl="Y">
-  <value column="Name" original="User 5">Usuario 5</value>
-  <value column="PrintName" original="User 5">Usuario 5</value>
+  <value column="Name" original="A_User5">Usuario 5</value>
+  <value column="PrintName" original="A_User5">Usuario 5</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27719,8 +27719,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53636" trl="Y">
-  <value column="Name" original="User 6">Usuario 6</value>
-  <value column="PrintName" original="User 6">Usuario 6</value>
+  <value column="Name" original="A_User6">Usuario 6</value>
+  <value column="PrintName" original="A_User6">Usuario 6</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27729,8 +27729,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53637" trl="Y">
-  <value column="Name" original="User 7">Usuario 7</value>
-  <value column="PrintName" original="User 7">Usuario 7</value>
+  <value column="Name" original="A_User7">Usuario 7</value>
+  <value column="PrintName" original="A_User7">Usuario 7</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27739,8 +27739,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53638" trl="Y">
-  <value column="Name" original="User 8">Usuario 8</value>
-  <value column="PrintName" original="User 8">Usuario 8</value>
+  <value column="Name" original="A_User8">Usuario 8</value>
+  <value column="PrintName" original="A_User8">Usuario 8</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27749,8 +27749,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53639" trl="Y">
-  <value column="Name" original="User 9">Usuario 9</value>
-  <value column="PrintName" original="User 9">Usuario 9</value>
+  <value column="Name" original="A_User9">Usuario 9</value>
+  <value column="PrintName" original="A_User9">Usuario 9</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27759,8 +27759,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53640" trl="Y">
-  <value column="Name" original="Source of Entry">Fuente de Entrada</value>
-  <value column="PrintName" original="Source of Entry">Fuente de Entrada</value>
+  <value column="Name" original="Source Type">Fuente de Entrada</value>
+  <value column="PrintName" original="Source Type">Fuente de Entrada</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27769,8 +27769,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53641" trl="Y">
-  <value column="Name" original="Capital vs Expense">Capital vs Gasto</value>
-  <value column="PrintName" original="Capital vs Expense">Capital vs Gasto</value>
+  <value column="Name" original="Capital/Expense">Capital vs Gasto</value>
+  <value column="PrintName" original="Capital/Expense">Capital vs Gasto</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27779,8 +27779,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53642" trl="Y">
-  <value column="Name" original="Asset Use">Uso Activo</value>
-  <value column="PrintName" original="Asset Use">Uso Activo</value>
+  <value column="Name" original="A_Asset_Use_ID">Uso Activo</value>
+  <value column="PrintName" original="A_Asset_Use_ID">Uso Activo</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -27809,8 +27809,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53646" trl="Y">
-  <value column="Name" original="Asset Related?">Relacionado Activo?</value>
-  <value column="PrintName" original="Asset Related?">Relacionado Activo?</value>
+  <value column="Name" original="Create Asset">Relacionado Activo?</value>
+  <value column="PrintName" original="Create Asset">Relacionado Activo?</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -28443,8 +28443,8 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53761" trl="Y">
-  <value column="Name" original="Scheduled Receipts Quantity">Cantidad Recibos Programada</value>
-  <value column="PrintName" original="Scheduled Receipts Qty">Cantidad Recibos Programada</value>
+  <value column="Name" original="Scheduled Receipts Quantity">Cantidad Prevista Recibos</value>
+  <value column="PrintName" original="Scheduled Receipts Qty">Cantidad Prevista Recibos</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -28455,8 +28455,8 @@ Crédito Cuenta Trabajo en Proceso</value>
  <row id="53762" trl="Y">
   <value column="Name" original="On Hand Projected Quantity">Cantidad Proyectada Existencia</value>
   <value column="PrintName" original="On Hand Projected Qty">Cantidad Proyectada Existencia</value>
-  <value column="Description" original="On Hand Projected Quantity">Cantidad Proyectada Existencia</value>
-  <value column="Help" original="The On Hand Projected Quantity indicates the quantity of a product that is on hand in time line.">La cantidad proyectada de existencia indica la cantidad de un producto que está en existencia en una línea de tiempo.</value>
+  <value column="Description" original="On Hand Projected Quantity"></value>
+  <value column="Help" original="The On Hand Projected Quantity indicates the quantity of a product that is on hand in time line."></value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -29366,7 +29366,7 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="Name" original="Cron Scheduling Pattern">Patrón Programación Crontab</value>
   <value column="PrintName" original="Cron Scheduling Pattern">Patrón Programación Crontab</value>
   <value column="Description" original="Cron pattern to define when the process should be invoked.">Patrón Programación Crontab define cuándo el proceso será ejecutado.</value>
-  <value column="Help" original="Cron pattern to define when the process should be invoked. See http://en.wikipedia.org/wiki/Cron#crontab_syntax for cron scheduling syntax and example.">Patrón Programación Crontab define cuándo el proceso debe ser ejecutado.  Ver http://es.wikipedia.org/wiki/Cron_(Unix)#Sintaxis para ejemplos y explicación de la sintaxis a usar.</value>
+  <value column="Help" original="Cron pattern to define when the process should be invoked. See http://www.sauronsoftware.it/projects/cron4j/api/it/sauronsoftware/cron4j/SchedulingPattern.html">Patrón Programación Crontab define cuándo el proceso debe ser ejecutado.  Ver http://es.wikipedia.org/wiki/Cron_(Unix)#Sintaxis para ejemplos y explicación de la sintaxis a usar.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -29504,9 +29504,729 @@ Producto: usado para adicionar rápidamente productos a la venta</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
+ <row id="54165" trl="Y">
+  <value column="Name" original="Asset class">Clase Activo</value>
+  <value column="PrintName" original="Asset class">Clase Activo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54166" trl="Y">
+  <value column="Name" original="Asset Status">Estado Activo</value>
+  <value column="PrintName" original="Asset Status">Estado Activo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54167" trl="Y">
+  <value column="Name" original="Asset Action">Acción Activo</value>
+  <value column="PrintName" original="Asset Action">Acción Activo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54168" trl="Y">
+  <value column="Name" original="Activation Date">Fecha Activación</value>
+  <value column="PrintName" original="Activation Date">Fecha Activación</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54169" trl="Y">
+  <value column="Name" original="Inventory No">No. Inventario</value>
+  <value column="PrintName" original="Inventory No">No. Inventario</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54170" trl="Y">
+  <value column="Name" original="Asset Type">Tipo Activo</value>
+  <value column="PrintName" original="Asset Type">Tipo Activo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54171" trl="Y">
+  <value column="Name" original="Asset Type">Tipo Activo</value>
+  <value column="PrintName" original="Asset Type">Tipo Activo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54172" trl="Y">
+  <value column="Name" original="Manufactured Year">Año Fabricado</value>
+  <value column="PrintName" original="Manufactured Year">Año Fabricado</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54173" trl="Y">
+  <value column="Name" original="Asset Product">Activo Producto</value>
+  <value column="PrintName" original="Asset Product">Activo Producto</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54174" trl="Y">
+  <value column="Name" original="All Assets">Todos los Activos</value>
+  <value column="PrintName" original="AllAssets">Todos los Activos</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54175" trl="Y">
+  <value column="Name" original="Accumulated Depreciation (fiscal)">Depreciación Acumulada (fiscal)</value>
+  <value column="PrintName" original="Accumulated Depreciation (fiscal)">Depreciación Acumulada (fiscal)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54176" trl="Y">
+  <value column="Name" original="Life Years (fiscal)">Años Vida (fiscal)</value>
+  <value column="PrintName" original="Life Years (fiscal)">Años Vida (fiscal)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54177" trl="Y">
+  <value column="Name" original="Life Period (fiscal)">Período Vida (fiscal)</value>
+  <value column="PrintName" original="Life Period (fiscal)">Período Vida (fiscal)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54178" trl="Y">
+  <value column="Name" original="Use Life - Years (fiscal)">Vida útil - Años (fiscal)</value>
+  <value column="PrintName" original="Use Life - Years (fiscal)">Vida útil - Años (fiscal)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54179" trl="Y">
+  <value column="Name" original="Use Life - Months (fiscal)">Vida útil - Meses (fiscal)</value>
+  <value column="PrintName" original="Use Life - Months (fiscal)">Vida útil - Meses (fiscal)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54180" trl="Y">
+  <value column="Name" original="Remaining Amt">Monto Remanente</value>
+  <value column="PrintName" original="Remaining Amt">Monto Remanente</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54181" trl="Y">
+  <value column="Name" original="Remaining Amt (fiscal)">Monto Remanente (fiscal)</value>
+  <value column="PrintName" original="Remaining Amt (fiscal)">Monto Remanente (fiscal)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54182" trl="Y">
+  <value column="Name" original="SL Expense/Period">SL Gasto/Período</value>
+  <value column="PrintName" original="SL Expense/Period">SL Gasto/Período</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54183" trl="Y">
+  <value column="Name" original="SL Expense/Period (fiscal)">SL Gasto/Período (fiscal)</value>
+  <value column="PrintName" original="SL Expense/Period (fiscal)">SL Gasto/Período (fiscal)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54184" trl="Y">
+  <value column="Name" original="Life periods (max)">Períodos Vida (máx)</value>
+  <value column="PrintName" original="Life periods (max)">Períodos Vida (máx)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54185" trl="Y">
+  <value column="Name" original="Life periods (min)">Períodos Vida (mín)</value>
+  <value column="PrintName" original="Life periods (min)">Períodos Vida (mín)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54186" trl="Y">
+  <value column="Name" original="Financing Type">Tipo Financiación</value>
+  <value column="PrintName" original="Financing Type">Tipo Financiación</value>
+  <value column="Description" original="Financing Type">Tipo Financiación</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54187" trl="Y">
+  <value column="Name" original="Own contribution">Contribución Propia</value>
+  <value column="PrintName" original="Own contribution">Contribución Propia</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54188" trl="Y">
+  <value column="Name" original="Third contribution">Contribución Tercero</value>
+  <value column="PrintName" original="Third contribution">Contribución Tercero</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54189" trl="Y">
+  <value column="Name" original="Asset Funding Mode">Modo Financiamiento Activo</value>
+  <value column="PrintName" original="Asset Funding Mode">Modo Financiamiento Activo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54190" trl="Y">
+  <value column="Name" original="Disposal Gain Acct">Cuenta Ganancia Dar de Baja</value>
+  <value column="PrintName" original="Disposal Gain Acct">Cuenta Ganancia Dar de Baja</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54191" trl="Y">
+  <value column="Name" original="Reval Cost Offset Prior Acct">Cuenta Compensación Reval Anterior</value>
+  <value column="PrintName" original="Reval Cost Offset Prior Acct">Cuenta Compensación Reval Anterior</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54192" trl="Y">
+  <value column="Name" original="Reval Cost Offset Acct">Cuenta Compensación Reval Costo</value>
+  <value column="PrintName" original="Reval Cost Offset Acct">Cuenta Compensación Reval Costo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54193" trl="Y">
+  <value column="Name" original="A_Reval_Accumdep_Offset_Prior">Reval Acum Dep Anterior</value>
+  <value column="PrintName" original="A_Reval_Accumdep_Offset_Prior">Reval Acum Dep Anterior</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54194" trl="Y">
+  <value column="Name" original="A_Reval_Accumdep_Offset_Cur">Reval Acum Dep Compens</value>
+  <value column="PrintName" original="A_Reval_Accumdep_Offset_Cur">Reval Acum Dep Compens</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54195" trl="Y">
+  <value column="Name" original="Disposal Revenue Acct">Cuenta Ingreso Dar de Baja</value>
+  <value column="PrintName" original="Disposal Revenue Acct">Cuenta Ingreso Dar de Baja</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54196" trl="Y">
+  <value column="Name" original="Disposal Loss Acct">Cuenta Pérdida Dar de Baja</value>
+  <value column="PrintName" original="Disposal Loss Acct">Cuenta Pérdida Dar de Baja</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54197" trl="Y">
+  <value column="Name" original="Reval Depexp Offset Acct">Cuenta Reval Dep Compens</value>
+  <value column="PrintName" original="Reval Depexp Offset Acct">Cuenta Reval Dep Compens</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54198" trl="Y">
+  <value column="Name" original="Depreciation Method (fiscal)">Método Depreciación (fiscal)</value>
+  <value column="PrintName" original="Depreciation Method (fiscal)">Método Depreciación (fiscal)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54199" trl="Y">
+  <value column="Name" original="Depreciation (fiscal)">Depreciación (fiscal)</value>
+  <value column="PrintName" original="Depreciation (fiscal)">Depreciación (fiscal)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54200" trl="Y">
+  <value column="Name" original="Depreciation Convention (fiscal)">Convención Depreciación (fiscal)</value>
+  <value column="PrintName" original="Depreciation Convention (fiscal)">Convención Depreciación (fiscal)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54201" trl="Y">
+  <value column="Name" original="Variable Percent (fiscal)">Porcentaje Variable (fiscal)</value>
+  <value column="PrintName" original="Variable Percent (fiscal)">Porcentaje Variable (fiscal)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54202" trl="Y">
+  <value column="Name" original="Source Amount">Monto Fuente</value>
+  <value column="PrintName" original="Source Amount">Monto Fuente</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54203" trl="Y">
+  <value column="Name" original="Delta Use Life Years">Variación Años Vida Util</value>
+  <value column="PrintName" original="Delta Use Life Years">Variación Años Vida Util</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54204" trl="Y">
+  <value column="Name" original="Delta Use Life Years (fiscal)">Variación Años Vida Util (fiscal)</value>
+  <value column="PrintName" original="Delta Use Life Years (fiscal)">Variación Años Vida Util (fiscal)</value>
+  <value column="Description" original="Delta Use Life Years (fiscal)">Variación Años Vida Util (fiscal)</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54205" trl="Y">
+  <value column="Name" original="Imported Fixed Asset">Importar Activo Fijo</value>
+  <value column="PrintName" original="Imported Fixed Asset">Importar Activo Fijo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54206" trl="Y">
+  <value column="Name" original="Adjust Accumulated Depreciation">Ajuste Depreciación Acumulada</value>
+  <value column="PrintName" original="Adjust Accumulated Depreciation">Ajuste Depreciación Acumulada</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54207" trl="Y">
+  <value column="Name" original="Entered Amount">Monto Ingresado</value>
+  <value column="PrintName" original="Amount">Monto</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54208" trl="Y">
+  <value column="Name" original="Activation Method">Método Activación</value>
+  <value column="PrintName" original="Activation Method">Método Activación</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54209" trl="Y">
+  <value column="Name" original="Disposal Amount">Monto Dar de Baja</value>
+  <value column="PrintName" original="Disposal Amt">Monto Dar de Baja</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54210" trl="Y">
+  <value column="Name" original="Accumulated Depreciation (delta)">Depreciación Acumulada (variación)</value>
+  <value column="PrintName" original="Accumulated Depreciation (delta)">Depreciación Acumulada (variación)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54211" trl="Y">
+  <value column="Name" original="Account (debit)">Cuenta (débito)</value>
+  <value column="PrintName" original="Account (debit)">Cuenta (débito)</value>
+  <value column="Description" original="Account used"></value>
+  <value column="Help" original="The (natural) account used"></value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54212" trl="Y">
+  <value column="Name" original="Account (credit)">Cuenta (crédito)</value>
+  <value column="PrintName" original="Account (credit)">Cuenta (crédito)</value>
+  <value column="Description" original="Account used"></value>
+  <value column="Help" original="The (natural) account used"></value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54213" trl="Y">
+  <value column="Name" original="Expense (fiscal)">Gasto (fiscal)</value>
+  <value column="PrintName" original="Expense (fiscal)">Gasto (fiscal)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54214" trl="Y">
+  <value column="Name" original="Delta Asset Cost">Variación Costo Activo</value>
+  <value column="PrintName" original="Delta Asset Cost">Variación Costo Activo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54215" trl="Y">
+  <value column="Name" original="Accumulated Depreciation - fiscal (delta)">Depreciación Acumulada - fiscal (variación)</value>
+  <value column="PrintName" original="Accumulated Depreciation - fiscal (delta)">Depreciación Acumulada - fiscal (variación)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54216" trl="Y">
+  <value column="Name" original="Accumulated Depreciation Account (new)">Cuenta Depreciación Acumulada (nueva)</value>
+  <value column="PrintName" original="Accumulated Depreciation Account (new)">Cuenta Depreciación Acumulada (nueva)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54217" trl="Y">
+  <value column="Name" original="Depreciation Acct (new)">Cuenta Depreciación (nueva)</value>
+  <value column="PrintName" original="Depreciation Acct (new)">Cuenta Depreciación (nueva)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54218" trl="Y">
+  <value column="Name" original="Disposal Revenue Acct (new)">Cuenta Ingreso Baja (nueva)</value>
+  <value column="PrintName" original="Disposal Revenue Acct (new)">Cuenta Ingreso Baja (nueva)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54219" trl="Y">
+  <value column="Name" original="Disposal Loss Acct (new)">Cuenta Pérdida Baja (nueva)</value>
+  <value column="PrintName" original="Disposal Loss Acct (new)">Cuenta Pérdida Baja (nueva)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54220" trl="Y">
+  <value column="Name" original="Asset Acct (new)">Cuenta Activo (nueva)</value>
+  <value column="PrintName" original="Asset Acct (new)">Cuenta Activo (nueva)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54221" trl="Y">
+  <value column="Name" original="Value 2004">Value 2004</value>
+  <value column="PrintName" original="Value 2004">Value 2004</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54222" trl="Y">
+  <value column="Name" original="Life Periods 2004 (min)">Períodos Vida 2004 (mín)</value>
+  <value column="PrintName" original="Life Periods 2004 (min)">Períodos Vida 2004 (mín)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54223" trl="Y">
+  <value column="Name" original="Fixed Asset Group">Grupo Activo Fijo</value>
+  <value column="PrintName" original="Fixed Asset Group">Grupo Activo Fijo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54224" trl="Y">
+  <value column="Name" original="Fixed Asset Subgroup">Subgrupo Activo Fijo</value>
+  <value column="PrintName" original="Fixed Asset SubGroup">Subgrupo Activo Fijo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54225" trl="Y">
+  <value column="Name" original="Fixed Asset Class">Clase Activo Fijo</value>
+  <value column="PrintName" original="Fixed Asset Class">Clase Activo Fijo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54226" trl="Y">
+  <value column="Name" original="Fixed Asset Subclass">Subclase Activo Fijo</value>
+  <value column="PrintName" original="Fixed Asset Subclass">Subclase Activo Fijo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54227" trl="Y">
+  <value column="Name" original="Funding Mode Account">Cuenta Modo Financiamiento</value>
+  <value column="PrintName" original="Funding Mode Acct">Cuenta Modo Financiamiento</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54228" trl="Y">
+  <value column="Name" original="Asset Revaluation">Revaluación Activo</value>
+  <value column="PrintName" original="Asset Revaluation">Revaluación Activo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54229" trl="Y">
+  <value column="Name" original="Asset Cost Change">Costo Cambio Activo</value>
+  <value column="PrintName" original="Asset Cost Change">Costo Cambio Activo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54230" trl="Y">
+  <value column="Name" original="Change Acumulated Depreciation">Cambio Depreciación Acumulada</value>
+  <value column="PrintName" original="Change Acumulated Depreciation">Cambio Depreciación Acumulada</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54231" trl="Y">
+  <value column="Name" original="Is Depreciable">Es Depreciable</value>
+  <value column="PrintName" original="Is Depreciable">Es Depreciable</value>
+  <value column="Description" original="This asset CAN be depreciated">Este activo PUEDE ser depreciado</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54233" trl="Y">
+  <value column="Name" original="Asset Group Key">Código Grupo Activo</value>
+  <value column="PrintName" original="Asset Group Key">Código Grupo Activo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54234" trl="Y">
+  <value column="Name" original="Asset Class Key">Código Clase Activo</value>
+  <value column="PrintName" original="Asset Class Key">Código Clase Activo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54235" trl="Y">
+  <value column="Name" original="Remaining Period">Período Remanente</value>
+  <value column="PrintName" original="Remaining Period">Período Remanente</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54236" trl="Y">
+  <value column="Name" original="Depreciation Amount / Period">Monto Depreciación / Período</value>
+  <value column="PrintName" original="Depreciation Amount / Period">Monto Depreciación / Período</value>
+  <value column="Description" original="Applies to Straight Line depreciation">Aplica a depreciación en línea recta</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54237" trl="Y">
+  <value column="Name" original="City Value">Código Ciudad</value>
+  <value column="PrintName" original="City Value">Código Ciudad</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
  <row id="54238" trl="Y">
-  <value column="Name" original="I_Movement_ID">I_Movement_ID</value>
-  <value column="PrintName" original="I_Movement_ID">I_Movement_ID</value>
+  <value column="Name" original="I_Movement_ID">Importa Movimiento</value>
+  <value column="PrintName" original="I_Movement_ID">Importa Movimiento</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -29537,6 +30257,16 @@ Producto: usado para adicionar rápidamente productos a la venta</value>
  <row id="54241" trl="Y">
   <value column="Name" original="CampaignValue">Código Campaña</value>
   <value column="PrintName" original="CampaignValue">Código Campaña</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54244" trl="Y">
+  <value column="Name" original="Asset Type Value">Código Tipo Activo</value>
+  <value column="PrintName" original="Asset Type Value">Código Tipo Activo</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -36894,6 +37624,16 @@ Producto: usado para adicionar rápidamente productos a la venta</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
+ <row id="55168" trl="Y">
+  <value column="Name" original="IsFixedAssetInvoice">Es Factura de Activo Fijo</value>
+  <value column="PrintName" original="IsFixedAssetInvoice">Es Factura de Activo Fijo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
  <row id="55218" trl="Y">
   <value column="Name" original="Salt">Semilla</value>
   <value column="PrintName" original="Salt">Semilla</value>
@@ -37204,6 +37944,16 @@ Producto: usado para adicionar rápidamente productos a la venta</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
+ <row id="200015" trl="Y">
+  <value column="Name" original="A_Account_Number_Acct">Cuenta Número Cuenta</value>
+  <value column="PrintName" original="A_Account_Number_Acct">Cuenta Número Cuenta</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
  <row id="200016" trl="Y">
   <value column="Name" original="ToolBar Button">Botón Barra Herramientas</value>
   <value column="PrintName" original="ToolBar Button">Botón Barra Herramientas</value>
@@ -37225,10 +37975,10 @@ Producto: usado para adicionar rápidamente productos a la venta</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="200018" trl="Y">
-  <value column="Name" original="Action Class Name">Nombre Clase Acción</value>
-  <value column="PrintName" original="Action Class Name">Nombre Clase Acción</value>
-  <value column="Description" original="The class name that implements the interface for toolbar actions">El nombre de la clase que implementa la interface para acciones de barra de herramientas</value>
-  <value column="Help" original=""/>
+  <value column="Name" original="Service Component Name">Nombre Clase Acción</value>
+  <value column="PrintName" original="Service Component Name">Nombre Clase Acción</value>
+  <value column="Description" original="The service component name that implements the interface for toolbar actions">El nombre de la clase que implementa la interface para acciones de barra de herramientas</value>
+  <value column="Help" original="The OSGi service component name that implements the IAction interface for toolbar action"/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -37438,6 +38188,36 @@ Producto: usado para adicionar rápidamente productos a la venta</value>
   <value column="Name" original="T_Reconciliation_UU">T_Reconciliation_UU</value>
   <value column="PrintName" original="T_Reconciliation_UU">T_Reconciliation_UU</value>
   <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200060" trl="Y">
+  <value column="Name" original="Restart sequence every month">Reinicia secuencia cada mes</value>
+  <value column="PrintName" original="Restart sequence every month">Reinicia secuencia cada mes</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200061" trl="Y">
+  <value column="Name" original="Organization level">Nivel Organización</value>
+  <value column="PrintName" original="Organization level">Nivel Organización</value>
+  <value column="Description" original="This sequence can be defined for each organization">Esta secuencia puede ser definida por cada organización</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200062" trl="Y">
+  <value column="Name" original="YearMonth">Año-Mes</value>
+  <value column="PrintName" original="YearMonth">Año-Mes</value>
+  <value column="Description" original="YYYYMM">YYYYMM</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -37717,6 +38497,726 @@ Producto: usado para adicionar rápidamente productos a la venta</value>
  <row id="200097" trl="Y">
   <value column="Name" original="Dashboard Preference">Preferencia Consola</value>
   <value column="PrintName" original="Dashboard Preference">Preferencia Consola</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200098" trl="Y">
+  <value column="Name" original="Column Span">Espacio Columnas</value>
+  <value column="PrintName" original="Column Span">Espacio Columnas</value>
+  <value column="Description" original="Number of column for a box of field">Número de columnas para la caja del campo</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200099" trl="Y">
+  <value column="Name" original="Number of Lines">Número Líneas</value>
+  <value column="PrintName" original="Number of Lines">Número Líneas</value>
+  <value column="Description" original="Number of lines for a field">Número de líneas para el campo</value>
+  <value column="Help" original="Number of lines for a field">Número de líneas para el campo</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200111" trl="Y">
+  <value column="Name" original="Locked">Bloqueado</value>
+  <value column="PrintName" original="Locked">Bloqueado</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200112" trl="Y">
+  <value column="Name" original="Date Account Locked">Fecha Bloque Cuenta</value>
+  <value column="PrintName" original="Date Account Locked">Fecha Bloque Cuenta</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200113" trl="Y">
+  <value column="Name" original="Failed Login Count">Conteo Ingresos Fallidos</value>
+  <value column="PrintName" original="Failed Login Count">Conteo Ingresos Fallidos</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200114" trl="Y">
+  <value column="Name" original="Date Password Changed">Fecha Cambio Contraseña</value>
+  <value column="PrintName" original="Date Password Changed">Fecha Cambio Contraseña</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200115" trl="Y">
+  <value column="Name" original="Date Last Login">Fecha Ultimo Ingreso</value>
+  <value column="PrintName" original="Date Last Login">Fecha Ultimo Ingreso</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200116" trl="Y">
+  <value column="Name" original="No Password Reset">No Reiniciar Contraseña</value>
+  <value column="PrintName" original="No Password Reset">No Reiniciar Contraseña</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200117" trl="Y">
+  <value column="Name" original="Master Role">Perfil Maestro</value>
+  <value column="PrintName" original="Master Role">Perfil Maestro</value>
+  <value column="Description" original="A master role cannot be assigned to users, it is intended to define access to menu option and documents and inherit to other roles">Un perfil maestro no puede asignarse a usuarios, se utiliza para definir accesos a las opciones de menú y documentos y heredar a otros roles</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200118" trl="Y">
+  <value column="Name" original="POS Tender Type">Tipo Pago PDV</value>
+  <value column="PrintName" original="POS Tender Type">Tipo Pago PDV</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200119" trl="Y">
+  <value column="Name" original="C_POSTenderType_UU">C_POSTenderType_UU</value>
+  <value column="PrintName" original="C_POSTenderType_UU">C_POSTenderType_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200120" trl="Y">
+  <value column="Name" original="Guarantee">Es Garantía</value>
+  <value column="PrintName" original="Guarantee">Es Garantía</value>
+  <value column="Description" original="Guarantee for a Credit">Garantía para un crédito</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200121" trl="Y">
+  <value column="Name" original="Post Dated">Postfechado</value>
+  <value column="PrintName" original="Post Dated">Postfechado</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200122" trl="Y">
+  <value column="Name" original="POS Payment">Pago PDV</value>
+  <value column="PrintName" original="POS Payment">Pago PDV</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200123" trl="Y">
+  <value column="Name" original="C_POSPayment_UU">C_POSPayment_UU</value>
+  <value column="PrintName" original="C_POSPayment_UU">C_POSPayment_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200124" trl="Y">
+  <value column="Name" original="Check Status">Estado Cheque</value>
+  <value column="PrintName" original="Check Status">Estado Cheque</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200125" trl="Y">
+  <value column="Name" original="Deposit Group">Grupo Depósito</value>
+  <value column="PrintName" original="Deposit Group">Grupo Depósito</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200126" trl="Y">
+  <value column="Name" original="Expired">Expirado</value>
+  <value column="PrintName" original="Expired">Expirado</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200127" trl="Y">
+  <value column="Name" original="Security Question">Pregunta Seguridad</value>
+  <value column="PrintName" original="Security Question">Pregunta Seguridad</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200128" trl="Y">
+  <value column="Name" original="Answer">Respuesta</value>
+  <value column="PrintName" original="Answer">Respuesta</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200132" trl="Y">
+  <value column="Name" original="Schedule">Programación</value>
+  <value column="PrintName" original="Schedule">Programación</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200134" trl="Y">
+  <value column="Name" original="GL Journal Generator">Generador Nota Contable</value>
+  <value column="PrintName" original="GL Journal Generator">Generador Nota Contable</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200135" trl="Y">
+  <value column="Name" original="Account Adjust DR">Cuenta Ajuste DB</value>
+  <value column="PrintName" original="Account Adjust DR">Cuenta Ajuste DB</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200136" trl="Y">
+  <value column="Name" original="Account Adjust CR">Cuenta Ajuste CR</value>
+  <value column="PrintName" original="Account Adjust CR">Cuenta Ajuste CR</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200137" trl="Y">
+  <value column="Name" original="Generate GL Journal">Generar Nota Contable</value>
+  <value column="PrintName" original="Generate GL Journal">Generar Nota Contable</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200138" trl="Y">
+  <value column="Name" original="Generator Line">Línea Generador</value>
+  <value column="PrintName" original="Generator Line">Línea Generador</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200139" trl="Y">
+  <value column="Name" original="Account DR">Cuenta DB</value>
+  <value column="PrintName" original="Account DR">Cuenta DB</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200140" trl="Y">
+  <value column="Name" original="Account CR">Cuenta CR</value>
+  <value column="PrintName" original="Account CR">Cuenta CR</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200141" trl="Y">
+  <value column="Name" original="Type of BP Dimension">Tipo Dimensión Tercero</value>
+  <value column="PrintName" original="Type of BP Dimension">Tipo Dimensión Tercero</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200142" trl="Y">
+  <value column="Name" original="BP Column">Columna Tercero</value>
+  <value column="PrintName" original="BP Column">Columna Tercero</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200143" trl="Y">
+  <value column="Name" original="Copy All Dimensions">Copiar Todas las Dimensiones</value>
+  <value column="PrintName" original="Copy All Dimensions">Copiar Todas las Dimensiones</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200144" trl="Y">
+  <value column="Name" original="Same Product">Mismo Producto</value>
+  <value column="PrintName" original="Same Product">Mismo Producto</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200145" trl="Y">
+  <value column="Name" original="Round Factor">Factor Redondeo</value>
+  <value column="PrintName" original="Round Factor">Factor Redondeo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200146" trl="Y">
+  <value column="Name" original="Generator Source">Fuente Generador</value>
+  <value column="PrintName" original="Generator Source">Fuente Generador</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200154" trl="Y">
+  <value column="Name" original="GL_JournalGenerator_UU">GL_JournalGenerator_UU</value>
+  <value column="PrintName" original="GL_JournalGenerator_UU">GL_JournalGenerator_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200155" trl="Y">
+  <value column="Name" original="GL_JournalGeneratorLine_UU">GL_JournalGeneratorLine_UU</value>
+  <value column="PrintName" original="GL_JournalGeneratorLine_UU">GL_JournalGeneratorLine_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200156" trl="Y">
+  <value column="Name" original="GL_JournalGeneratorSource_UU">GL_JournalGeneratorSource_UU</value>
+  <value column="PrintName" original="GL_JournalGeneratorSource_UU">GL_JournalGeneratorSource_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200157" trl="Y">
+  <value column="Name" original="System Schedule">Es Programación Sistema</value>
+  <value column="PrintName" original="System Schedule">Es Programación Sistema</value>
+  <value column="Description" original="Schedule Just For System">Programación sólo para uso en el cliente System</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200158" trl="Y">
+  <value column="Name" original="AD_Schedule_UU">AD_Schedule_UU</value>
+  <value column="PrintName" original="AD_Schedule_UU">AD_Schedule_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200159" trl="Y">
+  <value column="Name" original="Run only on IP">Ejecutar sólo en IP</value>
+  <value column="PrintName" original="Run only on IP">Ejecutar sólo en IP</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200170" trl="Y">
+  <value column="Name" original="SMTP Port">Puerto SMTP</value>
+  <value column="PrintName" original="SMTP Port">Puerto SMTP</value>
+  <value column="Description" original="SMTP Port Number">Número del puerto SMTP</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200171" trl="Y">
+  <value column="Name" original="SMTP SSL/TLS">SMTP SSL/TLS</value>
+  <value column="PrintName" original="SMTP SSL/TLS">SMTP SSL/TLS</value>
+  <value column="Description" original="Use SSL/TLS for SMTP">Usa SSL/TLS para SMTP</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200176" trl="Y">
+  <value column="Name" original="IsFixedAsset">Es Activo Fijo</value>
+  <value column="PrintName" original="Fixed Asset ?">Es Activo Fijo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200177" trl="Y">
+  <value column="Name" original="Customer Payment Profile ID">ID Perfil Pago Cliente</value>
+  <value column="PrintName" original="Customer Payment Profile ID">ID Perfil Pago Cliente</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200178" trl="Y">
+  <value column="Name" original="Customer Profile ID">ID Perfil Cliente</value>
+  <value column="PrintName" original="Customer Profile ID">ID Perfil Cliente</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200179" trl="Y">
+  <value column="Name" original="Customer Address ID">ID Dirección Cliente</value>
+  <value column="PrintName" original="Customer Address ID">ID Dirección Cliente</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200180" trl="Y">
+  <value column="Name" original="Voided">Anulado</value>
+  <value column="PrintName" original="Voided">Anulado</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200181" trl="Y">
+  <value column="Name" original="Void Message">Mensaje Anulación</value>
+  <value column="PrintName" original="Void Message">Mensaje Anulación</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200182" trl="Y">
+  <value column="Name" original="Server Name">Nombre Servidor</value>
+  <value column="PrintName" original="Server Name">Nombre Servidor</value>
+  <value column="Description" original=""/>
+  <value column="Help" original="Node instance name">Nombre instancia nodo</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200185" trl="Y">
+  <value column="Name" original="C_BankAccount_Processor_UU">C_BankAccount_Processor_UU</value>
+  <value column="PrintName" original="C_BankAccount_Processor_UU">C_BankAccount_Processor_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200186" trl="Y">
+  <value column="Name" original="Client Name">Nombre Cliente</value>
+  <value column="PrintName" original="Client Name">Nombre Cliente</value>
+  <value column="Description" original=""/>
+  <value column="Help" original="Client in which current session user logged in"/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200187" trl="Y">
+  <value column="Name" original="Toolbar Button">Botón Barra Herramientas</value>
+  <value column="PrintName" original="Toolbar Button">Botón Barra Herramientas</value>
+  <value column="Description" original="Add the column button to the toolbar"></value>
+  <value column="Help" original="There IsToolbarButton check box indicates if this column button is part of the toolbar's process button popup list or render as field."></value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200189" trl="Y">
+  <value column="Name" original="Login Org">Org Ingreso</value>
+  <value column="PrintName" original="Login Org">Org Ingreso</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200190" trl="Y">
+  <value column="Name" original="AD_SessionInfo_v">AD_SessionInfo_v</value>
+  <value column="PrintName" original="AD_SessionInfo_v">AD_SessionInfo_v</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200191" trl="Y">
+  <value column="Name" original="ad_sessioninfo_v_uu">ad_sessioninfo_v_uu</value>
+  <value column="PrintName" original="ad_sessioninfo_v_uu">ad_sessioninfo_v_uu</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200192" trl="Y">
+  <value column="Name" original="Login Locale">Lenguaje Ingreso</value>
+  <value column="PrintName" original="Login Locale">Lenguaje Ingreso</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200197" trl="Y">
+  <value column="Name" original="User Name">Nombre Usuario</value>
+  <value column="PrintName" original="User Name">Nombre Usuario</value>
+  <value column="Description" original=""/>
+  <value column="Help" original="Login User Name"/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200198" trl="Y">
+  <value column="Name" original="Login Role">Perfil Usuario</value>
+  <value column="PrintName" original="Login Role">Perfil Usuario</value>
+  <value column="Description" original=""/>
+  <value column="Help" original="Role name of user logged in with"/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200202" trl="Y">
+  <value column="Name" original="M_QualityTestResult_UU">M_QualityTestResult_UU</value>
+  <value column="PrintName" original="M_QualityTestResult_UU">M_QualityTestResult_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200203" trl="Y">
+  <value column="Name" original="M_QualityTest_UU">M_QualityTest_UU</value>
+  <value column="PrintName" original="M_QualityTest_UU">M_QualityTest_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200204" trl="Y">
+  <value column="Name" original="M_Product_QualityTest_UU">M_Product_QualityTest_UU</value>
+  <value column="PrintName" original="M_Product_QualityTest_UU">M_Product_QualityTest_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200205" trl="Y">
+  <value column="Name" original="M_PartType_UU">M_PartType_UU</value>
+  <value column="PrintName" original="M_PartType_UU">M_PartType_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200206" trl="Y">
+  <value column="Name" original="T_BOM_Indented_UU">T_BOM_Indented_UU</value>
+  <value column="PrintName" original="T_BOM_Indented_UU">T_BOM_Indented_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200207" trl="Y">
+  <value column="Name" original="AD_Tab_Customization_UU">AD_Tab_Customization_UU</value>
+  <value column="PrintName" original="AD_Tab_Customization_UU">AD_Tab_Customization_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200208" trl="Y">
+  <value column="Name" original="PA_DashboardPreference_UU">PA_DashboardPreference_UU</value>
+  <value column="PrintName" original="PA_DashboardPreference_UU">PA_DashboardPreference_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200209" trl="Y">
+  <value column="Name" original="A_Asset_Product_UU">A_Asset_Product_UU</value>
+  <value column="PrintName" original="A_Asset_Product_UU">A_Asset_Product_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200210" trl="Y">
+  <value column="Name" original="A_Asset_Class_UU">A_Asset_Class_UU</value>
+  <value column="PrintName" original="A_Asset_Class_UU">A_Asset_Class_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200211" trl="Y">
+  <value column="Name" original="A_FundingMode_UU">A_FundingMode_UU</value>
+  <value column="PrintName" original="A_FundingMode_UU">A_FundingMode_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200212" trl="Y">
+  <value column="Name" original="A_FundingMode_Acct_UU">A_FundingMode_Acct_UU</value>
+  <value column="PrintName" original="A_FundingMode_Acct_UU">A_FundingMode_Acct_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200213" trl="Y">
+  <value column="Name" original="A_Asset_Type_UU">A_Asset_Type_UU</value>
+  <value column="PrintName" original="A_Asset_Type_UU">A_Asset_Type_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200214" trl="Y">
+  <value column="Name" original="I_FixedAsset_UU">I_FixedAsset_UU</value>
+  <value column="PrintName" original="I_FixedAsset_UU">I_FixedAsset_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200215" trl="Y">
+  <value column="Name" original="A_Asset_Reval_UU">A_Asset_Reval_UU</value>
+  <value column="PrintName" original="A_Asset_Reval_UU">A_Asset_Reval_UU</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
