@@ -3656,10 +3656,10 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="630" trl="Y">
-  <value column="Name" original="Sql WHERE">Cláusula Where SQL</value>
-  <value column="PrintName" original="Where clause">Cláusula Where SQL</value>
-  <value column="Description" original="Fully qualified SQL WHERE clause">Cláusula WHERE completamente calificada</value>
-  <value column="Help" original="The Where Clause indicates the SQL WHERE clause to use for record selection. The WHERE clause is added to the query. Fully qualified means &quot;tablename.columnname&quot;.">La cláusula Where indica la cláusula SQL WHERE a usar para la selección del registro</value>
+  <value column="Name" original="Sql WHERE">Sql WHERE</value>
+  <value column="PrintName" original="Where clause">Cláusula Where</value>
+  <value column="Description" original="Fully qualified SQL WHERE clause">Cláusula Sql WHERE completamente calificada</value>
+  <value column="Help" original="The Where Clause indicates the SQL WHERE clause to use for record selection. The WHERE clause is added to the query. Fully qualified means &quot;tablename.columnname&quot;.">La cláusula Where indica la cláusula SQL WHERE a usar para seleccionar los registros.  No incluya la palabra WHERE.  Completamente calidifcado significa que las columnas se deben mencionar como &quot;tablename.columnname&quot;.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -8606,10 +8606,10 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1599" trl="Y">
-  <value column="Name" original="Sql SELECT">Cláusula Select</value>
+  <value column="Name" original="Sql SELECT">Sql SELECT</value>
   <value column="PrintName" original="Select Clause">Cláusula Select</value>
-  <value column="Description" original="SQL SELECT clause">Seleccione la cláusula</value>
-  <value column="Help" original="The Select Clause indicates the SQL SELECT clause to use for selecting the record for a measure calculation. Do not include the SELECT itself.">La Cláusula Select indica la cláusula SQL SELECT a usar para seleccionar el registro en un cálculo de medida</value>
+  <value column="Description" original="SQL SELECT clause">Cláusula Sql SELECT</value>
+  <value column="Help" original="The Select Clause indicates the SQL SELECT clause to use for selecting the record for a measure calculation. Do not include the SELECT itself.">La cláusula Select indica la cláusula SQL SELECT a usar para seleccionar los registros.  No incluya la palabra SELECT</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -13048,20 +13048,20 @@ Si no se incorpora ninguna, se utiliza la impresora por default. Usted especific
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2085" trl="Y">
-  <value column="Name" original="Post Processing">Acción SQL Procesador de Línea</value>
-  <value column="PrintName" original="Post Processing">Acción SQL Procesador de Línea</value>
-  <value column="Description" original="Process SQL after executing the query">Fila de proceso de fila (proceso no fijado)</value>
-  <value column="Help" original="Could be Update/Delete/etc. statement"/>
+  <value column="Name" original="Post Processing">Proceso Posterior</value>
+  <value column="PrintName" original="Post Processing">Proceso Posterior</value>
+  <value column="Description" original="Process SQL after executing the query">Proceso SQL después de ejecutar la búsqueda</value>
+  <value column="Help" original="Could be Update/Delete/etc. statement">Puede ser un comando Update/Delete/etc.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2086" trl="Y">
-  <value column="Name" original="Pre Processing">Acción SQL Grupo de Procesos</value>
-  <value column="PrintName" original="Pre Processing">Acción SQL Grupo de Procesos</value>
-  <value column="Description" original="Process SQL before executing the query">Sistema del SQL de proceso (no fila-por-fila)</value>
-  <value column="Help" original="Could be Update/Delete/etc. statement"/>
+  <value column="Name" original="Pre Processing">Proceso Previo</value>
+  <value column="PrintName" original="Pre Processing">Proceso Previo</value>
+  <value column="Description" original="Process SQL before executing the query">Proceso SQL antes de ejecutar la búsqueda</value>
+  <value column="Help" original="Could be Update/Delete/etc. statement">Puede ser un comando Update/Delete/etc.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -13208,10 +13208,10 @@ Si no se incorpora ninguna, se utiliza la impresora por default. Usted especific
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2101" trl="Y">
-  <value column="Name" original="Sql FROM">De Clausula</value>
-  <value column="PrintName" original="From Clause">De Clausula</value>
-  <value column="Description" original="SQL FROM clause">SQL de clausula</value>
-  <value column="Help" original="The Select Clause indicates the SQL FROM clause to use for selecting the record for a measure calculation. It can have JOIN clauses. Do not include the FROM itself."/>
+  <value column="Name" original="Sql FROM">Sql FROM</value>
+  <value column="PrintName" original="From Clause">Cláusula FROM</value>
+  <value column="Description" original="SQL FROM clause">Cláusula Sql FROM</value>
+  <value column="Help" original="The Select Clause indicates the SQL FROM clause to use for selecting the record for a measure calculation. It can have JOIN clauses. Do not include the FROM itself.">La cláusula FROM indica la cláusula a utilizar para seleccionar los registros.  Puede tener cláusulas JOIN.  No incluya la palabra FROM.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -18330,10 +18330,10 @@ La secuencia de Ciudad/Región/Postal es determinada con la dirección de format
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2642" trl="Y">
-  <value column="Name" original="Other SQL Clause">Otra Cláusula</value>
-  <value column="PrintName" original="Other Clause">Otra Cláusula</value>
-  <value column="Description" original="Other SQL Clause">Otra Cláusula SQL</value>
-  <value column="Help" original="Any other complete clause like GROUP BY, HAVING, ORDER BY, etc. after WHERE clause.">Cualquier otra cláusula completa al gusto GRUPO CERCA, TENIENDO, ORDEN CERCA, Etc. Despues DONDE cláusula.</value>
+  <value column="Name" original="Other SQL Clause">Otra Cláusula Sql</value>
+  <value column="PrintName" original="Other Clause">Otra Cláusula Sql</value>
+  <value column="Description" original="Other SQL Clause">Otra Cláusula Sql</value>
+  <value column="Help" original="Any other complete clause like GROUP BY, HAVING, ORDER BY, etc. after WHERE clause.">Cualquier otra cláusula completa como GROUP BY, HAVING, ORDER BY, etc. que puede ir después de la cláusula WHERE.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
