@@ -12,7 +12,7 @@
  </row>
  <row id="101" trl="Y">
   <value column="Meta_Description" original="This is the homesite of GardenWorld, it would be a good idea to place some real content in here">Este es el sitio de GardenWorld, seria una buena idea agregar un verdadero contenido aqui.</value>
-  <value column="Meta_Keywords" original="GardenWorld, Adempiere">GardenWorld, Adempiere</value>
+  <value column="Meta_Keywords" original="GardenWorld, iDempiere">GardenWorld, iDempiere</value>
   <value column="Name" original="Home of Gardenworld">Hogar de Gardenworld</value>
   <value column="ContainerXML" original=""/>
   <value column="StructureXML" original=""/>

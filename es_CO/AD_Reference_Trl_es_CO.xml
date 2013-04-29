@@ -1937,6 +1937,11 @@
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="53288" trl="Y">
+  <value column="Name" original="WS Parameter Type">WS Parameter Type</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row id="53289" trl="Y">
   <value column="Name" original="C_DocType MFG Cost Collector">C_DocType MFG Cost Collector</value>
   <value column="Description" original=""/>
@@ -2238,8 +2243,213 @@
   <value column="Help" original=""/>
  </row>
  <row id="200012" trl="Y">
-  <value column="Name" original="Payment">Payment</value>
-  <value column="Description" original="Payment Rule list and Process Payment button">Payment Rule list and Process Payment button</value>
+  <value column="Name" original="Payment">Pago</value>
+  <value column="Description" original="Payment Rule list and Process Payment button">Lista Regla de Pago y Botón Procesar Pago</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200014" trl="Y">
+  <value column="Name" original="C_PaymentTransaction">C_PaymentTransaction</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200017" trl="Y">
+  <value column="Name" original="M_MatchPO">M_MatchPO</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200018" trl="Y">
+  <value column="Name" original="M_MatchInv">M_MatchInv</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200019" trl="Y">
+  <value column="Name" original="StorageProvider">StorageProvider</value>
+  <value column="Description" original="StorageProvider">StorageProvider</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200020" trl="Y">
+  <value column="Name" original="AD_BroadcastMessage_Frequency">AD_BroadcastMessage_Frequency</value>
+  <value column="Description" original="Frequency of Broadcast">Frequency of Broadcast</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200021" trl="Y">
+  <value column="Name" original="AD_BroadcastMessage_Type">AD_BroadcastMessage_Type</value>
+  <value column="Description" original="Type of broadcast messages">Type of broadcast messages</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200022" trl="Y">
+  <value column="Name" original="AD_BroadcastMessage_Target">AD_BroadcastMessag_Target</value>
+  <value column="Description" original="Target Client">Target Client</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200023" trl="Y">
+  <value column="Name" original="AD_StorageProvider_ID">AD_StorageProvider_ID</value>
+  <value column="Description" original="AD_StorageProvider_ID">AD_StorageProvider_ID</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200024" trl="Y">
+  <value column="Name" original="DotHazardClassOrDivision">DotHazardClassOrDivision</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200025" trl="Y">
+  <value column="Name" original="HomeDeliveryPremiumType">HomeDeliveryPremiumType</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200026" trl="Y">
+  <value column="Name" original="M_Package Notification Type">M_Package Notification Type</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200027" trl="Y">
+  <value column="Name" original="LabelPrintMethods">LabelPrintMethods</value>
+  <value column="Description" original="Label Print Methods">Label Print Methods</value>
+  <value column="Help" original="Label print methods - Image, Zebra or Eltron">Label print methods - Image, Zebra or Eltron</value>
+ </row>
+ <row id="200028" trl="Y">
+  <value column="Name" original="Freight Charges">Freight Charges</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200029" trl="Y">
+  <value column="Name" original="Insurance">Insurance</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200030" trl="Y">
+  <value column="Name" original="Freight Terms">Freight Terms</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200031" trl="Y">
+  <value column="Name" original="DeliveryConfirmationType">DeliveryConfirmationType</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200037" trl="Y">
+  <value column="Name" original="M_Shipper">M_Shipper</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200038" trl="Y">
+  <value column="Name" original="M_ShippingProcessor">M_ShippingProcessor</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200039" trl="Y">
+  <value column="Name" original="M_ShipperPackaging">M_ShipperPackaging</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200040" trl="Y">
+  <value column="Name" original="M_ShipperLabels">M_ShipperLabels</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200041" trl="Y">
+  <value column="Name" original="M_ShipperPickupTypes">M_ShipperPickupTypes</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200042" trl="Y">
+  <value column="Name" original="M_ShippingTransaction Action">M_ShippingTransaction Action</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200043" trl="Y">
+  <value column="Name" original="C_DunningLevel">C_DunningLevel</value>
+  <value column="Description" original="DunningLevel"/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200044" trl="Y">
+  <value column="Name" original="C_Dunning">C_Dunning</value>
+  <value column="Description" original="Dunning">Dunning</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200045" trl="Y">
+  <value column="Name" original="C_BP_Group">C_BP_Group</value>
+  <value column="Description" original="Business Partner Group">Business Partner Group</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200046" trl="Y">
+  <value column="Name" original="C_InvoiceSchedule">C_InvoiceSchedule</value>
+  <value column="Description" original="InvoiceSchedule">InvoiceSchedule</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200047" trl="Y">
+  <value column="Name" original="C_TaxGroup">C_TaxGroup</value>
+  <value column="Description" original="TaxGroup">TaxGroup</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200048" trl="Y">
+  <value column="Name" original="M_Promotion">M_Promotion</value>
+  <value column="Description" original="Promotion">Promotion</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200051" trl="Y">
+  <value column="Name" original="M_FreightCategory">M_FreightCategory</value>
+  <value column="Description" original="Freight Category">Freight Category</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200053" trl="Y">
+  <value column="Name" original="C_TaxCategory">C_TaxCategory</value>
+  <value column="Description" original="Tax Category">Tax Category</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200055" trl="Y">
+  <value column="Name" original="M_AttributeSet">M_AttributeSet</value>
+  <value column="Description" original="Attribute Set">Attribute Set</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200056" trl="Y">
+  <value column="Name" original="C_ProjectPhase">C_ProjectPhase</value>
+  <value column="Description" original="Project Phase">Project Phase</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200057" trl="Y">
+  <value column="Name" original="C_ProjectTask">C_ProjectTask</value>
+  <value column="Description" original="Project Task">Project Task</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200058" trl="Y">
+  <value column="Name" original="C_Phase">C_Phase</value>
+  <value column="Description" original="Phase">Phase</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200059" trl="Y">
+  <value column="Name" original="C_ProjectType">C_ProjectType</value>
+  <value column="Description" original="Project Type">Project Type</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200060" trl="Y">
+  <value column="Name" original="C_ProjectIssue">C_ProjectIssue</value>
+  <value column="Description" original="Project Issue">Project Issue</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200061" trl="Y">
+  <value column="Name" original="InfoQueryOperators">InfoQueryOperators</value>
+  <value column="Description" original="Operator list for info query criteria">Operator list for info query criteria</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200064" trl="Y">
+  <value column="Name" original="AD_CtxHelp CtxType">AD_CtxHelp CtxType</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200065" trl="Y">
+  <value column="Name" original="ASU_1099Box">ASU_1099Box</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200068" trl="Y">
+  <value column="Name" original="C_DocType SubTypeInv">C_DocType SubTypeInv</value>
+  <value column="Description" original="M_Inventory Types list">M_Inventory Types list</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200069" trl="Y">
+  <value column="Name" original="AD_Language NOT System/Base">AD_Language NOT System/Base</value>
+  <value column="Description" original="Language not system neither base">Language not system neither base</value>
   <value column="Help" original=""/>
  </row>
 </idempiereTrl>

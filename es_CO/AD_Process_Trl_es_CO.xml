@@ -484,7 +484,7 @@ Los parámetros son valores por defecto que se asignan a valores nulos que venga
  <row id="205" trl="Y">
   <value column="Name" original="Cache Reset">Reinicia Cache</value>
   <value column="Description" original="Reset Cache of the System ** Close all Windows before proceeding **">Reinicia el Cache del sitema ** Cerrar todas las ventanas antes de iniciar **</value>
-  <value column="Help" original="To increase performance, Adempiere caches repeatedly used data. This process clears the local cache.">Para aumentar funcionamiento, Adempiere reasigna los datos usados. Este proceso despeja el cache local.</value>
+  <value column="Help" original="To increase performance, iDempiere caches repeatedly used data. This process clears the local cache.">Para aumentar el desempeño iDempiere mantiene en memoria algunos datos usados. Este proceso despeja el cache local.</value>
  </row>
  <row id="206" trl="Y">
   <value column="Name" original="Import Orders">Importa Ordenes</value>
@@ -720,9 +720,9 @@ Seleccione cualquier grupo de terceros o un tercero especifico.]]></value>
  </row>
  <row id="250" trl="Y">
   <value column="Name" original="Register Now!">Registrarce Ahora!!!</value>
-  <value column="Description" original="Registrations help us to better serve the Adempiere User Base.">Los registros nos ayudan a mejorar servicio de la base de usuario de Adempiere.</value>
-  <value column="Help" original="We will NOT make the data available to any third party or use the information for other than statistical purposes.  &#10;It will help us, if you would allow to publish your use of Adempiere. We will contact you directly before we publish any information.&#10;">No pondremos los datos a disposición de terceros ni utilizaremos la información para propósitos estadísticos.  
-Nos ayudará, si usted permitirá publicar su uso en Adempiere. Nos pondremos en contacto directamente antes de que publiquemos cualquier información.</value>
+  <value column="Description" original="Registrations help us to better serve the iDempiere User Base.">Los registros nos ayudan a mejorar servicio de la base de usuario de iDempiere.</value>
+  <value column="Help" original="We will NOT make the data available to any third party or use the information for other than statistical purposes.  &#10;It will help us, if you would allow to publish your use of iDempiere. We will contact you directly before we publish any information.&#10;">No pondremos los datos a disposición de terceros ni utilizaremos la información para propósitos estadísticos.  
+Nos ayudará, si usted permitirá publicar su uso en iDempiere. Nos pondremos en contacto directamente antes de que publiquemos cualquier información.</value>
  </row>
  <row id="251" trl="Y">
   <value column="Name" original="Invoice Tax">Impuesto de Factura</value>
@@ -885,7 +885,7 @@ Entonces las valuaciones de todas las respuestas de cantidad se adicionan a la v
  </row>
  <row id="282" trl="Y">
   <value column="Name" original="Create Package">Crear Paquete</value>
-  <value column="Description" original="Create Package for Shipmet"/>
+  <value column="Description" original="Create Package for Shipment"/>
   <value column="Help" original=""/>
  </row>
  <row id="283" trl="Y">
@@ -1085,7 +1085,7 @@ Si se selecciona una cuenta, el balance es calculado en base al  tipo de cuenta 
  <row id="321" trl="Y">
   <value column="Name" original="Synchronize Doc Translation">Sincroniza la traducción del documento</value>
   <value column="Description" original="Synchronize Document Translation">Sincroniza la traducción del documento</value>
-  <value column="Help" original="If the current client has not multi-lingual documents enabled, the translations for documents are synchronized with the main record (i.e. it copies the content of the main record to the translation records).  This process is necessary when swiching to a mono-lingual environment as there the terminoligy is maintained not in the translation records.&lt;br&gt;&#10;This applies to the client defined document translations, e.g. for UoM, Payment Terms, Product Info, etc.">Si el grupo empresarial actual no permite se hagan los documentos multilenguajes, las traducciones para los documentos se sincronizan con el registro principal (es decir copia el contenido del registro principal a los registros de la traducción). Este proceso es necesario en un ambiente monolenguaje ya que allí no se mantiene la terminologia en la traducción de registros. Esto se aplica a las traducciones definidas del documento de grupo empresarial, ej. para UM, los términos del pago, información de producto, etc.</value>
+  <value column="Help" original="This applies to the client defined document translations, e.g. for UoM, Payment Terms, Product Info, etc.&lt;br&gt;&#10;&lt;br&gt;&#10;If the current client has multi-lingual documents enabled, then the main record is copied to the client language (defined in Client window).  BE CAREFUL as this option can potentially damage data you modified, it is recommended to take a backup and plan carefully what you're doing if this is the first time running this process.&lt;br&gt;&#10;&lt;br&gt;&#10;If the current client has not multi-lingual documents enabled, the translations for documents are synchronized with the main record (i.e. it copies the content of the main record to the translation records).  This process is necessary when swiching to a mono-lingual environment as there the terminoligy is maintained not in the translation records.">Si el grupo empresarial actual no permite se hagan los documentos multilenguajes, las traducciones para los documentos se sincronizan con el registro principal (es decir copia el contenido del registro principal a los registros de la traducción). Este proceso es necesario en un ambiente monolenguaje ya que allí no se mantiene la terminologia en la traducción de registros. Esto se aplica a las traducciones definidas del documento de grupo empresarial, ej. para UM, los términos del pago, información de producto, etc.</value>
  </row>
  <row id="322" trl="Y">
   <value column="Name" original="Material Reference">Referencia de Material</value>
@@ -1179,7 +1179,7 @@ y Recibi/Línea o directamente para el producto.</value>
  </row>
  <row id="339" trl="Y">
   <value column="Name" original="Report or Update Issue">Reportar o Actualizar Problema</value>
-  <value column="Description" original="Report Issue to Adempiere">Reportar Problema a Adempiere</value>
+  <value column="Description" original="Report Issue to iDempiere">Reportar Problema a iDempiere</value>
   <value column="Help" original=""/>
  </row>
  <row id="340" trl="Y">
@@ -1196,7 +1196,7 @@ y Recibi/Línea o directamente para el producto.</value>
  <row id="342" trl="Y">
   <value column="Name" original="Validate Support">Validar Soporte</value>
   <value column="Description" original="Validate Support Contract">Validar Contrato de Soporte</value>
-  <value column="Help" original="The process connects to the Adempiere Support Services server and validates the support contract.  To sign up for support, please go to http://www.adempiere.org">El proceso se conecta al servidor de  Servicios de Soporte Adempiere y vsñifs el contrato de soporte. Para contratar soporte por favor ingrese a www.e-evolution.com.mx
+  <value column="Help" original="The process connects to the iDempiere Support Services server and validates the support contract.  To sign up for support, please go to http://www.idempiere.org">El proceso se conecta al servidor de Servicios de Soporte iDempiere y verifica el contrato de soporte. Para contratar soporte por favor ingrese a www.globalqss.com
 </value>
  </row>
  <row id="343" trl="Y">
@@ -1226,8 +1226,8 @@ y Recibi/Línea o directamente para el producto.</value>
  </row>
  <row id="348" trl="Y">
   <value column="Name" original="Register Extension">Registrar Extensión</value>
-  <value column="Description" original="Register your extension with Adempiere">Registre su extensión con Adempiere</value>
-  <value column="Help" original="You can register the four character extension with Adempiere. This makes sure that your extension can be automatically distributed and implemented.  You will also be able to certify extensions.  Contact Adempiere for details.">Usted puede registrar los 4 caracteres de extensión con Adempiere. Esto asegura que su extensión pueda ser automaticamente distribuida e implementada. Usted tambien puede certificar extensiones. Contacte Adempiere para detalles.</value>
+  <value column="Description" original="Register your extension with iDempiere">Registre su extensión con iDempiere</value>
+  <value column="Help" original="You can register the four character extension with iDempiere. This makes sure that your extension can be automatically distributed and implemented.  You will also be able to certify extensions.  Contact iDempiere for details.">Usted puede registrar los 4 caracteres de extensión con Adempiere. Esto asegura que su extensión pueda ser automaticamente distribuida e implementada. Usted tambien puede certificar extensiones. Contacte iDempiere para detalles.</value>
  </row>
  <row id="349" trl="Y">
   <value column="Name" original="Validate">Validar</value>
@@ -1536,7 +1536,7 @@ Costo Total LDM = Suma de cada Elemento de Costo]]></value>
   <value column="Help" original=""/>
  </row>
  <row id="53072" trl="Y">
-  <value column="Name" original="C_Invoce Calculate Tax">Calcular Impuesto Factura</value>
+  <value column="Name" original="C_Invoice Calculate Tax">Calcular Impuesto Factura</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
@@ -1980,5 +1980,137 @@ d. Fecha transacción, se volverá la fecha de inicio en servicio del activo</va
   <value column="Name" original="Generate GL Journal">Generar Nota Contable</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
+ </row>
+ <row id="200012" trl="Y">
+  <value column="Name" original="Copy Lines">Copiar Líneas</value>
+  <value column="Description" original="Copy Lines from other bank statement">Copia líneas de un estado de cuentas a otro</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200014" trl="Y">
+  <value column="Name" original="Void Online Authorization Payment Transaction Process">Anula Autorización Transacción Pago En Línea</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200015" trl="Y">
+  <value column="Name" original="Tab Editor">Editor de Pestañas</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200016" trl="Y">
+  <value column="Name" original="Reverse PO Matching">Reversa Cotejo OC</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200017" trl="Y">
+  <value column="Name" original="Reverse Invoice Matching">Reversa Cotejo Factura</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200018" trl="Y">
+  <value column="Name" original="Expire Broadcast Message">Expira Mensaje Difusión</value>
+  <value column="Description" original="Expire Broadcast Message">Expira Mensaje Difusión</value>
+  <value column="Help" original="Selecting OK will expire current message. Do you want to expire message?">¿Desea expirar este mensaje de difusión?</value>
+ </row>
+ <row id="200019" trl="Y">
+  <value column="Name" original="Publish Broadcast message">Publica Mensaje Difusión</value>
+  <value column="Description" original="Publish Broadcast message">Publica Mensaje Difusión</value>
+  <value column="Help" original="Selecting ok will publish message.  Do you want to publish message?">¿Desea publicar este mensaje de difusión?</value>
+ </row>
+ <row id="200020" trl="Y">
+  <value column="Name" original="Test Broadcast Message">Probar Mensaje Difusión</value>
+  <value column="Description" original="Test and verify message before broadcasting">Probar y Verificar el Mensaje antes de Publicar</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200021" trl="Y">
+  <value column="Name" original="Kill Current Session">Terminar Sesión Actual</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200022" trl="Y">
+  <value column="Name" original="Kill All Session">Terminar Todas las Sesiones</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200023" trl="Y">
+  <value column="Name" original="Print Shipping Label">Imprime Rótulo Despacho</value>
+  <value column="Description" original="Print shipping label">Imprime Rótulo Despacho</value>
+  <value column="Help" original="Print shipping label return from online shipping services.">Imprime Rótulo Despacho que retorna el servicio de despacho en línea.</value>
+ </row>
+ <row id="200024" trl="Y">
+  <value column="Name" original="Process Shipment Online">Procesa Despacho En Línea</value>
+  <value column="Description" original="Create shipment using web services provided by shipper">Crea un despacho utilizando los web services provistos por el transportista</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200025" trl="Y">
+  <value column="Name" original="Online Shipping Rate Inquiry">Solicitar Tasa Despacho En Línea</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200026" trl="Y">
+  <value column="Name" original="Void Shipment Online">Anular Despacho En Línea</value>
+  <value column="Description" original="Void shipment using web services provided by shipper">Anular Despacho En Línea utilizando los web services provistos por el transportista</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200028" trl="Y">
+  <value column="Name" original="Shipper Create From ...">Shipper Create From ...</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200029" trl="Y">
+  <value column="Name" original="Shipper Copy From ...">Transportista - Copiar Desde ...</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200030" trl="Y">
+  <value column="Name" original="Online Shipping Sales Order Rate Inquiry">Solicitar Tasa Despacho Orden de Ventas</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200031" trl="Y">
+  <value column="Name" original="Deposit Batch Close">Cerrar Lote Depósito</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200032" trl="Y">
+  <value column="Name" original="Bank Statement Create From Batch">Crear Estado Caja/Bancos desde Lote</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200034" trl="Y">
+  <value column="Name" original="1099 Extract">Extracto 1099</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200035" trl="Y">
+  <value column="Name" original="Bank Register Report">Reporte Registro Banco</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200036" trl="Y">
+  <value column="Name" original="Product/Component Where Used">Dónde se usa Producto/Componente</value>
+  <value column="Description" original="Product/Component Where Used">Dónde se usa Producto/Componente</value>
+  <value column="Help" original="Enter a product/component below, and the system will check for BOM(s) that contain that product/component.  This report is non-recursive.  In other words, it will only show one parent level above the product/component.">Ingrese un producto/componente, el sistema verificará las LDM(s) que contengan el producto/componente.  Este reporte no es recursivo.  En otras palabras, solo muestra un nivel sobre el producto/componente.</value>
+ </row>
+ <row id="200037" trl="Y">
+  <value column="Name" original="Simple Fact View">Vista Simple Asientos</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200038" trl="Y">
+  <value column="Name" original="Complex Fact View">Vista Compleja Asientos</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200039" trl="Y">
+  <value column="Name" original="Verify Language Configuration">Verificar Configuración Lenguaje</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200040" trl="Y">
+  <value column="Name" original="Change Base Language">Cambiar Lenguaje Base</value>
+  <value column="Description" original="Change Base Language">Cambiar Lenguaje Base</value>
+  <value column="Help" original="In order to enable en_US as a translation you can enable any other language as base language.&#10;If you don't want to have a base language choose a language that won't be used for login.&#10;If all languages are going to be used as login, create a xx_XX language not login and use it as base.&#10;Please note that base language cannot be a system language.">Para habilitar en_US como una traducción debe habilitar otro lenguaje como base.
+Si no tiene un lenguaje base escoja alguno que no se utilice para ingresar al sistema.
+Si planea usar todos los lenguajes entonces cree un lenguaje xx_XX y úselo como base pero no como ingreso.</value>
  </row>
 </idempiereTrl>

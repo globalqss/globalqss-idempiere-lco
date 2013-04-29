@@ -222,4 +222,14 @@ Seleccionando "dónde es usado" mostrará las LDM que usan este producto.</value
   <value column="Description" original="Report Wizard">Asistente Reportes</value>
   <value column="Help" original=""/>
  </row>
+ <row id="200005" trl="Y">
+  <value column="Name" original="Tab Editor">Editor de Pestañas</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200006" trl="Y">
+  <value column="Name" original="Bank Statement Create From Batch">Crear Estado Banco/Caja desde Lote</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
 </idempiereTrl>
