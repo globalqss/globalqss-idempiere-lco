@@ -1387,8 +1387,8 @@
   <value column="Description" original="Application Dictionary (synchronized)">Diccionario de la aplicación (Sincronizado)</value>
  </row>
  <row id="488" trl="Y">
-  <value column="Name" original="Adempiere">Adempiere</value>
-  <value column="Description" original="Adempiere Application (synchronized)">Aplicación Adempiere (sincronizada)</value>
+  <value column="Name" original="iDempiere">Adempiere</value>
+  <value column="Description" original="iDempiere Application (synchronized)">Aplicación iDempiere (sincronizada)</value>
  </row>
  <row id="489" trl="Y">
   <value column="Name" original="User maintained">Mantenido por el Usuario</value>
@@ -4198,6 +4198,14 @@
   <value column="Name" original="Make-To-Kit">Hacer-un-kit</value>
   <value column="Description" original="Create a Manufacturing Order, Receipt the finish product and issue the Components automaticaly ">Crear una orden de manufactura, recibir el producdto final y emitir los componentes automáticamente</value>
  </row>
+ <row id="53451" trl="Y">
+  <value column="Name" original="Constant">Constante</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53452" trl="Y">
+  <value column="Name" original="Free">Libre</value>
+  <value column="Description" original=""/>
+ </row>
  <row id="53453" trl="Y">
   <value column="Name" original="Manufacturing Cost Collector">Colector de Costos de Manufactura</value>
   <value column="Description" original=""/>
@@ -4776,6 +4784,370 @@
  </row>
  <row id="200039" trl="Y">
   <value column="Name" original="Asset">Activo</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200043" trl="Y">
+  <value column="Name" original="File System">Sistema de Archivos</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200044" trl="Y">
+  <value column="Name" original="Database">Base de Datos</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200045" trl="Y">
+  <value column="Name" original="Just Once">Solo una vez</value>
+  <value column="Description" original="Message will be broadcasted one time">El mensaje se difundirá solo una vez</value>
+ </row>
+ <row id="200046" trl="Y">
+  <value column="Name" original="Until Expiration">Hasta expirar</value>
+  <value column="Description" original="Repeat it until message expiration value">Repetir el mensaje hasta que expire</value>
+ </row>
+ <row id="200047" trl="Y">
+  <value column="Name" original="Immediate">Inmediato</value>
+  <value column="Description" original="show a modal popup dialog to all users connected">Mostrar una ventana a todos los usuarios conectados</value>
+ </row>
+ <row id="200048" trl="Y">
+  <value column="Name" original="Immediate + Login">Inmediato + Ingreso</value>
+  <value column="Description" original="Immediate + Login">Inmediato + Ingreso</value>
+ </row>
+ <row id="200049" trl="Y">
+  <value column="Name" original="Login">Ingreso</value>
+  <value column="Description" original="Shows a modal popup dialog at login time">Mostrar una ventana a los usuarios cuando ingresen</value>
+ </row>
+ <row id="200050" trl="Y">
+  <value column="Name" original="Client">Grupo Empresarial</value>
+  <value column="Description" original="Client">Grupo Empresarial</value>
+ </row>
+ <row id="200051" trl="Y">
+  <value column="Name" original="Everybody">Todos</value>
+  <value column="Description" original="Everybody will receive message">Todos recibirán este mensaje</value>
+ </row>
+ <row id="200052" trl="Y">
+  <value column="Name" original="Role">Rol</value>
+  <value column="Description" original="Message will reach out to all users with this role">El mensaje se mostrará a los usuarios de este rol</value>
+ </row>
+ <row id="200053" trl="Y">
+  <value column="Name" original="User">Usuario</value>
+  <value column="Description" original="User will receive message">El mensaje se mostrará solo a un usuario configurado</value>
+ </row>
+ <row id="200054" trl="Y">
+  <value column="Name" original="Class 1 - Explosives">Clase 1 - Explosivos</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200055" trl="Y">
+  <value column="Name" original="Class 2 - Gases">Clase 2 - Gases</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200056" trl="Y">
+  <value column="Name" original="2.1 - Flammable Gas">2.1 - Gases Inflamables</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200057" trl="Y">
+  <value column="Name" original="2.2 - Nonflammable Gas">2.2 - Gases No Inflamables</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200058" trl="Y">
+  <value column="Name" original="Class 3 - Flammable Liquids">Clase 3 - Líquidos Inflamables</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200059" trl="Y">
+  <value column="Name" original="Class 4">Clase 4</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200060" trl="Y">
+  <value column="Name" original="4.1 - Flammable Solids">4.1 - Sólidos Inflamables</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200061" trl="Y">
+  <value column="Name" original="4.2 - Spontaneous Combustibles">4.2 - Combustibles Espontáneos</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200062" trl="Y">
+  <value column="Name" original="4.3 - Dangerous When Wet">4.3 - Peligroso Si Se Humedece</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200064" trl="Y">
+  <value column="Name" original="Class 5 - Oxidizing Substances and Organic Peroxides">Clase 5 - Sustancias Oxidantes y Peróxidos Orgánicos</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200065" trl="Y">
+  <value column="Name" original="5.1 - Oxidizers">5.1 - Oxidantes</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200066" trl="Y">
+  <value column="Name" original="5.2 - Organic Peroxides">5.2 - Peróxidos Orgánicos</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200067" trl="Y">
+  <value column="Name" original="Class 6 - Toxic (Poisonous) and Infectious Substances">Clase 6 - Sustancias Tóxicas (Venenosas) e Infecciosas</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200068" trl="Y">
+  <value column="Name" original="6.1 - Toxic Substances">6.1 - Sustancias Tóxicas</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200069" trl="Y">
+  <value column="Name" original="6.2 - Infectious Substances">6.2 - Sustancias Infecciosas</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200070" trl="Y">
+  <value column="Name" original="Class 7 - Radioactive Material">Clase 7 - Material Radioactivo</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200071" trl="Y">
+  <value column="Name" original="Class 8 - Corrosives">Clase 8 - Corrosivos</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200072" trl="Y">
+  <value column="Name" original="Class 9 - Miscellaneous Dangerous Goods">Clase 9 - Bienes Peligrosos Varios</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200073" trl="Y">
+  <value column="Name" original="Appointment">Cita</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200074" trl="Y">
+  <value column="Name" original="Date Certain">Fecha Determinada</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200075" trl="Y">
+  <value column="Name" original="Evening">Noche</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200076" trl="Y">
+  <value column="Name" original="Recipient">Receptor</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200077" trl="Y">
+  <value column="Name" original="Recipient / Sender">Receptor / Emisor</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200078" trl="Y">
+  <value column="Name" original="Sender">Emisor</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200079" trl="Y">
+  <value column="Name" original="Eltron">Eltron</value>
+  <value column="Description" original="Print using eltron label printer language">Imprimir usando lenguaje de impresora de rótulos eltron</value>
+ </row>
+ <row id="200080" trl="Y">
+  <value column="Name" original="Image">Imagen</value>
+  <value column="Description" original="Print as Image">Imprimir como Imagen</value>
+ </row>
+ <row id="200081" trl="Y">
+  <value column="Name" original="Zebra">Zebra</value>
+  <value column="Description" original="Print using zebra label printer language">Imprimir usando lenguaje de impresora de rótulos zebra</value>
+ </row>
+ <row id="200082" trl="Y">
+  <value column="Name" original="Collect">Recolectar</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200083" trl="Y">
+  <value column="Name" original="3rd Party">Tercero</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200084" trl="Y">
+  <value column="Name" original="Consignee">Consignación</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200085" trl="Y">
+  <value column="Name" original="Prepaid">Prepago</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200086" trl="Y">
+  <value column="Name" original="Prepaid and Bill">Prepago y Factura</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200087" trl="Y">
+  <value column="Name" original="Insure">Asegurar</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200088" trl="Y">
+  <value column="Name" original="Do Not Insure">No Asegurar</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200089" trl="Y">
+  <value column="Name" original="FOB Origin">Origen FOB</value>
+  <value column="Description" original="Domestic FOB Origin - default for domestic shipping">Origen Doméstico FOB - valor por defecto para despachos domésticos</value>
+ </row>
+ <row id="200090" trl="Y">
+  <value column="Name" original="Ex Works">Ex Works</value>
+  <value column="Description" original="Ex Works - default for international shipping">EXW - Ex Works - valor por defecto para despachos internacionales</value>
+ </row>
+ <row id="200091" trl="Y">
+  <value column="Name" original="CFR - Cost and Freight">CFR - Costo y Fletos</value>
+  <value column="Description" original="CFR - Cost and Freight (sea shipments only)">CFR - Costo y Fletes (solo para despachos marítimos)</value>
+ </row>
+ <row id="200092" trl="Y">
+  <value column="Name" original="CIF - Cost, Insurance, and Freight (FedEx)">CIF - Costo, Seguro y Fletes</value>
+  <value column="Description" original="CIF - Cost, Insurance, and Freight (sea shipments only)">CIF - Costo, Seguro y Fletes (solo para despachos marítimos)</value>
+ </row>
+ <row id="200093" trl="Y">
+  <value column="Name" original="CIP - Carriage and Insurance Paid To (FedEx)">CIP - Transporte y Seguro Pagado</value>
+  <value column="Description" original="CIP - Carriage and Insurance Paid To">CIP - Transporte y Seguro Pagado</value>
+ </row>
+ <row id="200094" trl="Y">
+  <value column="Name" original="CPT - Carriage Paid To">CPT - Transporte Pagado</value>
+  <value column="Description" original="CPT - Carriage Paid To">CPT - Transporte Pagado</value>
+ </row>
+ <row id="200095" trl="Y">
+  <value column="Name" original="DAF - Delivered at Frontier">DAF - Despachado a Frontera</value>
+  <value column="Description" original="DAF - Delivered at Frontier">DAF - Despachado a Frontera</value>
+ </row>
+ <row id="200096" trl="Y">
+  <value column="Name" original="DDP - Delivered Duty Paid (FedEx)">DDP - Impuesto Despacho Pagado</value>
+  <value column="Description" original="DDP - Delivered Duty Paid">DDP - Impuesto Despacho Pagado</value>
+ </row>
+ <row id="200097" trl="Y">
+  <value column="Name" original="DDU - Delivered Duty Unpaid (FedEx)">DDU - Impuesto Despacho No Pagado</value>
+  <value column="Description" original="DDU - Delivered Duty Unpaid">DDU - Impuesto Despacho No Pagado</value>
+ </row>
+ <row id="200098" trl="Y">
+  <value column="Name" original="DEQ - Delivered Ex Quay">DEQ - Despachado en Muelle</value>
+  <value column="Description" original="DEQ - Delivered Ex Quay (sea shipments only)">DEQ - Despachado en Muelle (solo para despachos marítimos)</value>
+ </row>
+ <row id="200099" trl="Y">
+  <value column="Name" original="DES - Delivered Ex Ship">DES - Delivered Ex Ship</value>
+  <value column="Description" original="DES - Delivered Ex Ship (sea shipments only)">DES - Despachado en Buque (solo para despachos marítimos)</value>
+ </row>
+ <row id="200100" trl="Y">
+  <value column="Name" original="Domestic FOB Destination">Domestic FOB Destination</value>
+  <value column="Description" original="Domestic FOB Destination">Destino Doméstico FOB</value>
+ </row>
+ <row id="200101" trl="Y">
+  <value column="Name" original="EXW - Ex Works (FedEx)">EXW - Ex Works (FedEx)</value>
+  <value column="Description" original="EXW-Ex Works">EXW-Ex Works</value>
+ </row>
+ <row id="200102" trl="Y">
+  <value column="Name" original="FAS - Free Alongside Ship">FAS - Libre al Costado del Buque</value>
+  <value column="Description" original="FAS - Free Alongside Ship (sea shipments only)">FAS - Libre al Costado del Buque (solo para despachos marítimos)</value>
+ </row>
+ <row id="200103" trl="Y">
+  <value column="Name" original="FCA - Free Carrier (FedEx)">FCA - Free Carrier</value>
+  <value column="Description" original="FCA - Free Carrier">FCA - Free Carrier</value>
+ </row>
+ <row id="200104" trl="Y">
+  <value column="Name" original="FOB - Free on Board (FedEx)">FOB - Free on Board</value>
+  <value column="Description" original="FOB - Free on Board (sea shipments only)">FOB - Free on Board (solo para despachos marítimos)</value>
+ </row>
+ <row id="200105" trl="Y">
+  <value column="Name" original="Adult">Adulto</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200106" trl="Y">
+  <value column="Name" original="Direct">Directo</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200107" trl="Y">
+  <value column="Name" original="Indirect">Indirecto</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200108" trl="Y">
+  <value column="Name" original="Service Default">Servicio por Defecto</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200109" trl="Y">
+  <value column="Name" original="Rate Inquiry">Solicitud Tasa</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200110" trl="Y">
+  <value column="Name" original="Void Shipment">Anular Despacho</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200111" trl="Y">
+  <value column="Name" original="Process Shipment">Procesar Despacho</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200112" trl="Y">
+  <value column="Name" original="Like">Como</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200113" trl="Y">
+  <value column="Name" original="=">=</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200114" trl="Y">
+  <value column="Name" original="&gt;"><![CDATA[>]]></value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200115" trl="Y">
+  <value column="Name" original="&gt;="><![CDATA[>=]]></value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200116" trl="Y">
+  <value column="Name" original="&lt;"><![CDATA[<]]></value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200117" trl="Y">
+  <value column="Name" original="&lt;="><![CDATA[<=]]></value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200118" trl="Y">
+  <value column="Name" original="!=">!=</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200119" trl="Y">
+  <value column="Name" original="Info">Info</value>
+  <value column="Description" original="Info Window">Ventana Info</value>
+ </row>
+ <row id="200126" trl="Y">
+  <value column="Name" original="Tab">Pestaña</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200127" trl="Y">
+  <value column="Name" original="Process">Proceso</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200128" trl="Y">
+  <value column="Name" original="Form">Forma</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200129" trl="Y">
+  <value column="Name" original="Info">Info</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200130" trl="Y">
+  <value column="Name" original="Workflow">Flujo de Trabajo</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200132" trl="Y">
+  <value column="Name" original="Task">Tarea</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200133" trl="Y">
+  <value column="Name" original="Home">Inicio</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200134" trl="Y">
+  <value column="Name" original="Product Cost">Costo Producto</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200135" trl="Y">
+  <value column="Name" original="All">Todos</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200136" trl="Y">
+  <value column="Name" original="Node">Nodo</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200137" trl="Y">
+  <value column="Name" original="Physical Inventory">Inventario Físico</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200138" trl="Y">
+  <value column="Name" original="Internal Use Inventory">Inventario Uso Interno</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200139" trl="Y">
+  <value column="Name" original="Fixed Assets Addition">Adición Activos Fijos</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200140" trl="Y">
+  <value column="Name" original="Fixed Assets Disposal">Desechar Activos Fijos</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200141" trl="Y">
+  <value column="Name" original="Fixed Assets Depreciation">Depreciación Activos Fijos</value>
   <value column="Description" original=""/>
  </row>
 </idempiereTrl>

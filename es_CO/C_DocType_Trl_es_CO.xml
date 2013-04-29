@@ -227,4 +227,24 @@
   <value column="PrintName" original="Manufacturing Cost Collector">Recolector de Costos de Manufactura</value>
   <value column="DocumentNote" original=""/>
  </row>
+ <row id="200000" trl="Y">
+  <value column="Name" original="Internal Use Inventory">Inventario Uso Interno</value>
+  <value column="PrintName" original="Internal Use Inventory">Inventario Uso Interno</value>
+  <value column="DocumentNote" original=""/>
+ </row>
+ <row id="200001" trl="Y">
+  <value column="Name" original="Asset Addition">Adición Activo</value>
+  <value column="PrintName" original="Asset Addition">Adición Activo</value>
+  <value column="DocumentNote" original=""/>
+ </row>
+ <row id="200002" trl="Y">
+  <value column="Name" original="Asset Depreciation">Depreciación Activo</value>
+  <value column="PrintName" original="Asset Depreciation">Depreciación Activo</value>
+  <value column="DocumentNote" original=""/>
+ </row>
+ <row id="200003" trl="Y">
+  <value column="Name" original="Asset Disposal">Desechar Activo</value>
+  <value column="PrintName" original="Asset Disposal">Desechar Activo</value>
+  <value column="DocumentNote" original=""/>
+ </row>
 </idempiereTrl>

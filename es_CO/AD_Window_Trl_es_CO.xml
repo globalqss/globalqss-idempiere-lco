@@ -741,12 +741,12 @@ Tenga en cuenta que el acceso a la información está en caché y requiere volve
  <row id="273" trl="Y">
   <value column="Name" original="Click">Click</value>
   <value column="Description" original="Maintain Web Click">Mantenga el tecleo del Web</value>
-  <value column="Help" original="Web Clicks allow you to track number of clicks.  Example:&#10;&amp;lt;a href=&quot;http://www.adempiere.com/wstore/click?http://www.adempiere.de&quot; target=&quot;_blank&quot;&amp;gt;&#10;where &quot;http://www.adempiere.com/wstore/click&quot; is your side and &quot;http://www.adempiere.de&quot; is the target page.&#10;If you created a web click for http://www.adempiere.de, you will be able to see details and total of web clicks."/>
+  <value column="Help" original="Web Clicks allow you to track number of clicks.  Example:&#10;&amp;lt;a href=&quot;http://www.idempiere.org/wstore/click?http://www.idempiere.org target=&quot;_blank&quot;&amp;gt; where&#10;&quot;http://www.idempiere.org/wstore/click&quot; is your side and &quot;http://www.idempiere.de&quot; is the target page.&#10;If you created a web click for http://www.idempiere.de, you will be able to see details and total of web clicks.&#10;"/>
  </row>
  <row id="274" trl="Y">
   <value column="Name" original="Counter">Contador</value>
   <value column="Description" original="Web Counter">Contador Web</value>
-  <value column="Help" original="A web counter maintains how often a page or item was displayed.  Add a call to&#10;http://www.adempiere.com/wstore/counter to the page (e.g. display a 1x1 image)&#10;"/>
+  <value column="Help" original="A web counter maintains how often a page or item was displayed.  Add a call to&#10;http://www.idempiere.org/wstore/counter to the page (e.g. display a 1x1 image)&#10;"/>
  </row>
  <row id="275" trl="Y">
   <value column="Name" original="Invoice Payment Schedule">Programa de Pagos de Facturas</value>
@@ -755,8 +755,8 @@ Tenga en cuenta que el acceso a la información está en caché y requiere volve
  </row>
  <row id="276" trl="Y">
   <value column="Name" original="Alert">Alerta</value>
-  <value column="Description" original="Adempiere Alert">Alterta Adempiere</value>
-  <value column="Help" original="Adempiere Alerts allow you define system conditions you want to be alerted of">Las alarmas de Adempiere le permiten definen condiciones de sistema que usted desea ser alertado</value>
+  <value column="Description" original="iDempiere Alert">Alerta iDempiere</value>
+  <value column="Help" original="iDempiere Alerts allow you define system conditions you want to be alerted of">Las alertas de iDempiere le permiten definen condiciones de sistema que usted desea ser alertado</value>
  </row>
  <row id="277" trl="Y">
   <value column="Name" original="Import Bank Statement">Importar Estado de Cuenta</value>
@@ -1190,12 +1190,12 @@ Segmentos Contables de la organización deseada, Cuentas, Productos pueden tener
  <row id="363" trl="Y">
   <value column="Name" original="System Issue Report">Reporte Problemas Sistema</value>
   <value column="Description" original="Automatically created or manually entered System Issue Reports">Reporte de problemas del sistema creados automáticamente o ingresados en forma manual</value>
-  <value column="Help" original="System Issues are created to speed up the resolution of any system related issues (potential bugs).  If enabled, they are automatically reported to Adempiere.  No data or confidential information is transferred.">El registro de problemas del sistema es creado para agilizar la resolución de problemas relacionados con el sistema (posibles errores).</value>
+  <value column="Help" original="System Issues are created to speed up the resolution of any system related issues (potential bugs).  If enabled, they are automatically reported to iDempiere.  No data or confidential information is transferred.">El registro de problemas del sistema es creado para agilizar la resolución de problemas relacionados con el sistema (posibles errores).</value>
  </row>
  <row id="364" trl="Y">
   <value column="Name" original="Performance Color Schema">Esquema de Color del Desempeño</value>
   <value column="Description" original="Maintain Performance Color Schema">Mantener Esquema de Color del Desempeño</value>
-  <value column="Help" original="Visual representation of performance by color.  The Schema has often three levels (e.g. red-yellow-green).  Adempiere support two levels (e.g. red-green) or four levels (e.g. gray-bronce-silver-gold).  Note that Measures without a goal are represented white.  The percentages could be beween 0 and unlimited (i.e. above 100%).">Representación visual del desempeño mediante colores. El esquema frecuentemente tiene tres niveles (ej. rojo-amarillo-verde). Adempiere sporta dos niveles (ej. rojo-verde) o cuatro niveles (ej. gris-bronce-plata-oro). Note que las medidas sin límite son representadas en blanco. Los porcentajes pueden ser entre cero y sin límite (ej. superior a 100%).</value>
+  <value column="Help" original="Visual representation of performance by color.  The Schema has often three levels (e.g. red-yellow-green).  iDempiere support two levels (e.g. red-green) or four levels (e.g. gray-bronce-silver-gold).  Note that Measures without a goal are represented white.  The percentages could be beween 0 and unlimited (i.e. above 100%).">Representación visual del desempeño mediante colores. El esquema frecuentemente tiene tres niveles (ej. rojo-amarillo-verde). iDempiere sporta dos niveles (ej. rojo-verde) o cuatro niveles (ej. gris-bronce-plata-oro). Note que las medidas sin límite son representadas en blanco. Los porcentajes pueden ser entre cero y sin límite (ej. superior a 100%).</value>
  </row>
  <row id="365" trl="Y">
   <value column="Name" original="Performance Benchmark">Desempeño Punto de Control</value>
@@ -1276,7 +1276,7 @@ Segmentos Contables de la organización deseada, Cuentas, Productos pueden tener
  <row id="381" trl="Y">
   <value column="Name" original="Entity Type">Tipo de entidad</value>
   <value column="Description" original="Maintain System Entity Type">Mantenimiento del tipo de entidad del sistema.</value>
-  <value column="Help" original="The entity type determines the ownership of Application Dictionary entries.  The types &quot;Dictionary&quot; and &quot;Adempiere&quot; should not be used and are maintainted by Adempiere (i.e. all changes are reversed during migration to the current definition).">El tipo de entidad determina la posesión de las entradas del diccionario de la aplicación. El tipo "Diccionario" y "Adempiere" no deben ser usados, estos son mantenidos por Adempiere.</value>
+  <value column="Help" original="The entity type determines the ownership of Application Dictionary entries.  The types &quot;Dictionary&quot; and &quot;iDempiere&quot; should not be used and are maintainted by iDempiere (i.e. all changes are reversed during migration to the current definition).">El tipo de entidad determina la posesión de las entradas del diccionario de la aplicación. El tipo "Diccionario" y "iDempiere" no deben ser usados, estos son mantenidos por iDempiere.</value>
  </row>
  <row id="383" trl="Y">
   <value column="Name" original="Web Access">Acceso Web</value>
@@ -1310,8 +1310,8 @@ Segmentos Contables de la organización deseada, Cuentas, Productos pueden tener
  </row>
  <row id="389" trl="Y">
   <value column="Name" original="LDAP Server">Servidor LDAP</value>
-  <value column="Description" original="LDAP Server to authenticate and authorize external systems based on Adempiere">Servidor LDAP para autenticar y autorizar sistemas externos basados en Adempiere.</value>
-  <value column="Help" original="The LDAP Server allows third party software (e.g. Apache) to use the users defined in the system to authentificate and authorize them.  There is only one server per Adempiere system.  The &quot;o&quot; is the Client key and the optional &quot;ou&quot; is the Interest Area key.">El Servidor LDAP permite software de terceros (e.j Apache) para utilizar los usuarios definidos en el sistema para autenticarlos y autorizarlos. Hay solo un servidor por sistema Adempiere. La "o" es la llave del cliente y "ou" es la llave del área de interés.</value>
+  <value column="Description" original="LDAP Server to authenticate and authorize external systems based on iDempiere">Servidor LDAP para autenticar y autorizar sistemas externos basados en iDempiere.</value>
+  <value column="Help" original="The LDAP Server allows third party software (e.g. Apache) to use the users defined in the system to authentificate and authorize them.  There is only one server per iDempiere system.  The &quot;o&quot; is the Client key and the optional &quot;ou&quot; is the Interest Area key.">El Servidor LDAP permite software de terceros (e.j Apache) para utilizar los usuarios definidos en el sistema para autenticarlos y autorizarlos. Hay solo un servidor por sistema iDempiere. La "o" es la llave del cliente y "ou" es la llave del área de interés.</value>
  </row>
  <row id="50001" trl="Y">
   <value column="Name" original="Packages Installed">Paquetes Instalados</value>
@@ -1619,7 +1619,7 @@ y otros</value>
   <value column="Help" original="The Asset Split window allows you to process asset splits">La ventana División Activo permite procesar la división de activos</value>
  </row>
  <row id="53049" trl="Y">
-  <value column="Name" original="Asset Disposal">Desechamiento Activo</value>
+  <value column="Name" original="Asset Disposal2">Desechamiento Activo</value>
   <value column="Description" original="Dispose of Assets">Desechamiento de activos</value>
   <value column="Help" original="The Asset Disposal window allows you to create the necessary GL entries to dispose of an asset">La ventana Desechamiento Activo permite crear las entradas contables necesarias para desecharun activo</value>
  </row>
@@ -1690,6 +1690,16 @@ y otros</value>
  </row>
  <row id="53065" trl="Y">
   <value column="Name" original="Web POS Terminal">Terminal PDV Web</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53067" trl="Y">
+  <value column="Name" original="Web Service Definition">Definición Servicio Web</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53068" trl="Y">
+  <value column="Name" original="Web Service Security">Seguridad Servicio Web</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
@@ -1785,8 +1795,8 @@ y otros</value>
   <value column="Help" original=""/>
  </row>
  <row id="53114" trl="Y">
-  <value column="Name" original="Asset Activation/Disposal">Activación/Baja Activo</value>
-  <value column="Description" original="Activate/Dispose of Assets">Activar/Dar de baja activos</value>
+  <value column="Name" original="Asset Disposal">Desecho Activo</value>
+  <value column="Description" original="Dispose of Assets">Dar de baja activos</value>
   <value column="Help" original=""/>
  </row>
  <row id="53115" trl="Y">
@@ -1907,6 +1917,76 @@ y otros</value>
  <row id="200016" trl="Y">
   <value column="Name" original="Active Session">Sesiones Activas</value>
   <value column="Description" original="List of Current Logged in user">Lista de usuarios actualmente en el sistema</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200017" trl="Y">
+  <value column="Name" original="Payment Transaction">Transacción de Pago</value>
+  <value column="Description" original="Payment Transactions">Transacción de Pago</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200018" trl="Y">
+  <value column="Name" original="Online Transaction History">Historia de Transacción en Línea</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200020" trl="Y">
+  <value column="Name" original="Setup Wizard Maintenance">Mantenimiento Asistente Configuración</value>
+  <value column="Description" original="Maintenance Setup Wizard window">Mantenimiento Asistente Configuración</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200022" trl="Y">
+  <value column="Name" original="Storage Provider">Proveedor de Almacenamiento</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200023" trl="Y">
+  <value column="Name" original="Broadcast Message">Mensaje de Difusión</value>
+  <value column="Description" original="Broadcast Message">Mensaje de Difusión</value>
+  <value column="Help" original="Window allows to enter broadcast messages">Esta ventana permite ingresar y configurar Mensajes de Difusión</value>
+ </row>
+ <row id="200024" trl="Y">
+  <value column="Name" original="Shipping Processor">Procesador Despacho</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200025" trl="Y">
+  <value column="Name" original="Shipment Package">Paquete Despacho</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200026" trl="Y">
+  <value column="Name" original="Commodity Shipment">Despacho Producto Básico</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200028" trl="Y">
+  <value column="Name" original="Shipping Processor Configuration">Configuración Despacho</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200029" trl="Y">
+  <value column="Name" original="Shipper Configuration">Configuración Transportista</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200030" trl="Y">
+  <value column="Name" original="Shipping Transaction">Transacción Despacho</value>
+  <value column="Description" original="Shipping Transactions">Transacción Despacho</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200031" trl="Y">
+  <value column="Name" original="Payments into Batch">Pagos en Lote</value>
+  <value column="Description" original="Process Payments">Procesar Pagos</value>
+  <value column="Help" original="The Process Payments Window allows you to enter payments for invoices.  If the payment is for a single invoice then it can be processed here.">La ventana Pagos en Lote permite ingresar pagos para facturas.  Si el pago es para una sola factura puede ser procesada aquí.</value>
+ </row>
+ <row id="200034" trl="Y">
+  <value column="Name" original="Context Help">Ayuda Contextual</value>
+  <value column="Description" original="Maintain Context Helps"/>
+  <value column="Help" original="La ventana Ayuda Contextual permite definir mensajes de contexto a desplegar en el panel de ayuda. Solo para el cliente Web."/>
+ </row>
+ <row id="200036" trl="Y">
+  <value column="Name" original="1099 Box">Caja 1099</value>
+  <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
 </idempiereTrl>

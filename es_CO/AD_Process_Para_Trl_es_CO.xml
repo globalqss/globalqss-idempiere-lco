@@ -262,4 +262,19 @@
   <value column="Description" original="Reset Existing Access">Reiniciar Accesso Existentes</value>
   <value column="Help" original=""/>
  </row>
+ <row id="200055" trl="Y">
+  <value column="Name" original="Product">Producto</value>
+  <value column="Description" original="Please enter the product (component) you wish to search for">Por favor ingrese el producto (componente) que desea buscar</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200060" trl="Y">
+  <value column="Name" original="Financial Year Month">Año-Mes Financiero</value>
+  <value column="Description" original="The only valid date format is: YYYY-MM">El formato de fecha válido es: AAAA-MM</value>
+  <value column="Help" original="The only valid date format is: YYYY-MM">El formato de fecha válido es: AAAA-MM</value>
+ </row>
+ <row id="200062" trl="Y">
+  <value column="Name" original="Financial Year Month">Año-Mes Financiero</value>
+  <value column="Description" original="The only valid date format is: YYYY-MM">El formato de fecha válido es: AAAA-MM</value>
+  <value column="Help" original="The only valid date format is: YYYY-MM">El formato de fecha válido es: AAAA-MM</value>
+ </row>
 </idempiereTrl>

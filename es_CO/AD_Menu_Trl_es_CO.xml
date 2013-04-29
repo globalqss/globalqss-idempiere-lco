@@ -124,7 +124,7 @@
  </row>
  <row id="456" trl="Y">
   <value column="Name" original="Server">Servidor</value>
-  <value column="Description" original="Adempiere Server Maintenance">Mantenimiento del Servidor Adempiere</value>
+  <value column="Description" original="iDempiere Server Maintenance">Mantenimiento del Servidor Adempiere</value>
  </row>
  <row id="457" trl="Y">
   <value column="Name" original="Sales Orders">Ordenes de Venta</value>
@@ -144,7 +144,7 @@
  </row>
  <row id="501" trl="Y">
   <value column="Name" original="Workflow">Flujo de Trabajo</value>
-  <value column="Description" original="Adempiere Workflow">Flujo de Trabajo Adempiere</value>
+  <value column="Description" original="iDempiere Workflow">Flujo de Trabajo iDempiere</value>
  </row>
  <row id="522" trl="Y">
   <value column="Name" original="Costing">Costos</value>
@@ -263,8 +263,8 @@
   <value column="Description" original="Process Asset Revaluations">Procesar Revaluación Activos</value>
  </row>
  <row id="53139" trl="Y">
-  <value column="Name" original="Splits Transfers and Disposals">Divisiones, Transferencias y Desechos</value>
-  <value column="Description" original="Process Assets Splits Transfers and Disposals">Procesar Divisiones, Transferencias y Desechos de Activos</value>
+  <value column="Name" original="Asset Transactions ">Divisiones, Transferencias y Desechos</value>
+  <value column="Description" original="Asset Transactions (Addition, Disposal, Split &amp; Transfer)">Procesar Divisiones, Transferencias y Desechos de Activos</value>
  </row>
  <row id="53149" trl="Y">
   <value column="Name" original="Depreciation Processing">Procesamiento Depreciación</value>

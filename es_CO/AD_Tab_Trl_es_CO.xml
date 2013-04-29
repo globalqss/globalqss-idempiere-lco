@@ -208,13 +208,13 @@
  </row>
  <row id="135" trl="Y">
   <value column="Name" original="Country">País</value>
-  <value column="CommitWarning" original="Please create a support request (http://www.adempiere.org/support/requests.html), if the country data is not correct.">Por favor crear un registro de soporte (http://www.adempiere.org/support/requests.html) si los datos del país no son correctos.</value>
+  <value column="CommitWarning" original="Please create a support request (http://www.idempiere.org/support/requests.html), if the country data is not correct.">Por favor crear un registro de soporte (http://www.idempiere.org/support/requests.html) si los datos del país no son correctos.</value>
   <value column="Description" original="Define Country">Definir País</value>
   <value column="Help" original="The Country Tab defines any country in which you do business.  Values entered here are referenced in location records for Business Partners.">La pestaña de país define cada país en la cual se ejecutan negocios. Los valores entrados aquí son referenciados en las direcciones de terceros.</value>
  </row>
  <row id="136" trl="Y">
   <value column="Name" original="Region">Región</value>
-  <value column="CommitWarning" original="Please create a support request (http://www.adempiere.org/support/requests.html), if the region info is not correct/incomplete.">Por favor crear un registro de soporte (http://www.adempiere.org/support/requests.html) si los datos de la región no son correctos.</value>
+  <value column="CommitWarning" original="Please create a support request (http://www.idempiere.org/support/requests.html), if the region info is not correct/incomplete.">Por favor crear un registro de soporte (http://www.idempiere.org/support/requests.html) si los datos de la región no son correctos.</value>
   <value column="Description" original="Define Regions">Definir regiones</value>
   <value column="Help" original="The Region Tab  defines a Region within a Country.  This tab is enabled only if the Has Region checkbox is selected for the Country.">La pestaña de Región define una región dentro de un país. Esta pestaña es activa solamente si en la pestaña de país el cuadro de validación `Tiene Región` ha sido activado.</value>
  </row>
@@ -564,12 +564,12 @@ Los registros contables son generados para un esquema contable, si el esquema es
   <value column="Help" original="The Cities Tab defines Cities within a Country or Region.  Cities entered here are not referenced when entering the address.">La pestaña Ciudades define ciudades dentro de un país o región.</value>
  </row>
  <row id="217" trl="Y">
-  <value column="Name" original="Account Schema Element">Elemento del Esquema Contable</value>
+  <value column="Name" original="Account Schema Dimensions">Elemento del Esquema Contable</value>
   <value column="CommitWarning" original="ATTENTION: ANY CHANGES here will effect the structure of your chart of accounts!&#10;Depending what changes you did, you should reset accounting.&#10;For changes to become effective, you must re-login and re-start the Application Server.&#10;Saving/deleting the record starts processes which may take a while.">ATENCION: CUALQUIER CAMBIO que haga aquí afectará la estructura de su plan de cuentas!
 Dependiendo de los cambios que haga, debe resetear la contabilidad.
 Necesita volver a ingresar y reiniciar su servidor de aplicaciones para que los cambios surtan efecto.</value>
-  <value column="Description" original="Define the elements of your Account Key">Definir los elementos de su cuenta primaria</value>
-  <value column="Help" original="The Account Schema Element Tab defines the elements that comprise the account key. A name is defined which will display in documents.  Also the order of the elements and if they are balanced and mandatory are indicated.">La pestaña Elementos del Esquema Contable define los elementos que comprenden la clave contable. Un nombre es definido el cual se despliega en los documentos. También se indica el orden de los diferentes elementos y si ellos están balanceados y son obligatorios.</value>
+  <value column="Description" original="Define the dimensions of your Account Key">Definir los elementos de su cuenta primaria</value>
+  <value column="Help" original="The Account Schema Dimensions Tab defines the dimensions that comprise the account key. A name is defined which will display in documents.  Also the order of the dimensions and if they are balanced and mandatory are indicated.">La pestaña Elementos del Esquema Contable define los elementos que comprenden la clave contable. Un nombre es definido el cual se despliega en los documentos. También se indica el orden de los diferentes elementos y si ellos están balanceados y son obligatorios.</value>
  </row>
  <row id="220" trl="Y">
   <value column="Name" original="Business Partner">Tercero</value>
@@ -1715,7 +1715,7 @@ Nuevo precio de lista: Base =Lista, Recargo=0, Descuento=0, Redondeo]]></value>
   <value column="Name" original="Import Product">Importar Productos</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original="Import Products">Importar Productos</value>
-  <value column="Help" original="Before importing, Adempiere checks the Unit of Measure (default if not set), the Product Category (default if not set), the Business Partner, the Currency (defaults to accounting currency if not set), the Product Type (only Items and Services), the uniqueness of UPC, Key and uniqueness and existence of the Vendor Product No.&lt;br&gt;&#10;Adempiere tries to map to existing products, if the UPC, the Key and the Vendor Product No matches (in this sequence). If the imported record could be matched, product field values will only be overwritten, if the corresponding  Import field is explicitly defined.  Example: the Product Category will only be overwritten if explicitly set in the Import."><![CDATA[Antes de importar, Adempiere comprueba la unidad de la medida (por default si no es fijado), La categoría del producto (por default si no es fijado), El tercero, la moneda (Por default la moneda de la contabilidad si no es fijada), El tipo de producto (solamente artículos y servicios), la unicidad de UPC, llave y existencia del No. de producto.<br>
+  <value column="Help" original="Before importing, iDempiere checks the Unit of Measure (default if not set), the Product Category (default if not set), the Business Partner, the Currency (defaults to accounting currency if not set), the Product Type (only Items and Services), the uniqueness of UPC, Key and uniqueness and existence of the Vendor Product No.&lt;br&gt;&#10;iDempiere tries to map to existing products, if the UPC, the Key and the Vendor Product No matches (in this sequence). If the imported record could be matched, product field values will only be overwritten, if the corresponding  Import field is explicitly defined.  Example: the Product Category will only be overwritten if explicitly set in the Import."><![CDATA[Antes de importar, iDempiere comprueba la unidad de la medida (por default si no es fijado), La categoría del producto (por default si no es fijado), El tercero, la moneda (Por default la moneda de la contabilidad si no es fijada), El tipo de producto (solamente artículos y servicios), la unicidad de UPC, llave y existencia del No. de producto.<br>
 Adempiere intenta asignar a productos existentes, si el UPC, La llave y el proveedor del producto no coinciden (en esta secuencia). Si el registro importado pudo ser asignado, los valores del campo del producto serán sobreescritos solamente, si el campo correspondiente de la importación se define explícitamente. Ejemplo: la categoría del producto será sobreescrita solamente si está fijada explícitamente en la importación.]]></value>
  </row>
  <row id="443" trl="Y">
@@ -2070,8 +2070,8 @@ Un inventario físico se crea por Almacén y Fecha de Movimiento.]]></value>
  <row id="504" trl="Y">
   <value column="Name" original="Alert">Alerta</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Adempiere Alert">Adempiere Alerta</value>
-  <value column="Help" original="Adempiere Alerts allow you define system conditions you want to be alerted of.">Adempiere Alerta permíte definir condiciones de sistema que usted desea ser alertado</value>
+  <value column="Description" original="iDempiere Alert">Alerta iDempiere</value>
+  <value column="Help" original="iDempiere Alerts allow you define system conditions you want to be alerted of.">Alerta iDempiere permíte definir condiciones de sistema que usted desea ser alertado</value>
  </row>
  <row id="505" trl="Y">
   <value column="Name" original="Alert Rule">Regla Alerta</value>
@@ -3682,7 +3682,7 @@ La creación de los registros compartidos "Grupo Empresarial y Organización" es
   <value column="Name" original="System Issue">Problema de Sistema</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original="Automatically created or manually entered System Issue Reporting">Problema de sistema creado automáticamente o ingresado manualmente</value>
-  <value column="Help" original="System Issues are created to speed up the resolution of any system related issues (potential bugs).  If enabled, they are automatically reported to Adempiere.  No data or confidential information is transferred.">El registro de problemas del sistema es creado para agilizar la resolución de problemas relacionados con el sistema (posibles errores).</value>
+  <value column="Help" original="System Issues are created to speed up the resolution of any system related issues (potential bugs).  If enabled, they are automatically reported to iDempiere.  No data or confidential information is transferred.">El registro de problemas del sistema es creado para agilizar la resolución de problemas relacionados con el sistema (posibles errores).</value>
  </row>
  <row id="778" trl="Y">
   <value column="Name" original="Assigned Partners">Terceros Asignados</value>
@@ -3694,7 +3694,7 @@ La creación de los registros compartidos "Grupo Empresarial y Organización" es
   <value column="Name" original="Color Schema">Esquema de Color</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original="Performance Color Schema">Desmpeño Esquema de Color</value>
-  <value column="Help" original="Visual representation of performance by color.  The Schema has often three levels (e.g. red-yellow-green).  Adempiere support two levels (e.g. red-green) or four levels (e.g. gray-bronce-silver-gold).  Note that Measures without a goal are represented white.  The percentages could be beween 0 and unlimited (i.e. above 100%).">Representación Visual del desempeño mediante colores. Frecuentemente el esquema tiene tres niveles (ej. rojo - amarillo - verde). Adempiere soporta dos niveles (ej. rojo - verde) o cuatro niveles (ej. gris - bronce - plata - oro). Note que las medidasd sin límite son representadas en Blanco. Los porcentajes pueden ser entre 0 y sin límite (ej. superior a 100%).</value>
+  <value column="Help" original="Visual representation of performance by color.  The Schema has often three levels (e.g. red-yellow-green).  iDempiere support two levels (e.g. red-green) or four levels (e.g. gray-bronce-silver-gold).  Note that Measures without a goal are represented white.  The percentages could be beween 0 and unlimited (i.e. above 100%).">Representación Visual del desempeño mediante colores. Frecuentemente el esquema tiene tres niveles (ej. rojo - amarillo - verde). iDempiere soporta dos niveles (ej. rojo - verde) o cuatro niveles (ej. gris - bronce - plata - oro). Note que las medidas sin límite son representadas en Blanco. Los porcentajes pueden ser entre 0 y sin límite (ej. superior a 100%).</value>
  </row>
  <row id="780" trl="Y">
   <value column="Name" original="Restriction">Restricción</value>
@@ -3982,7 +3982,7 @@ La medida debe soportar la información, sino es ignorada.</value>
   <value column="Name" original="Entity Type">Tipo de entidad</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original="System Entity Type">Tipo de entidad del sistema</value>
-  <value column="Help" original="The entity type determines the ownership of Application Dictionary entries.  The types &quot;Dictionary&quot; and &quot;Adempiere&quot; should not be used and are maintainted by Adempiere (i.e. all changes are reversed during migration to the current definition).">El tipo de entidad determina el propietario de las entradas al diccionario de la aplicación. Los tipos "Diccionario" y "Adempiere" no deben ser usados y son mantenidos por Adempiere</value>
+  <value column="Help" original="The entity type determines the ownership of Application Dictionary entries.  The types &quot;Dictionary&quot; and &quot;iDempiere&quot; should not be used and are maintainted by iDempiere (i.e. all changes are reversed during migration to the current definition).">El tipo de entidad determina el propietario de las entradas al diccionario de la aplicación. Los tipos "Diccionario" y "iDempiere" no deben ser usados y son mantenidos por iDempiere</value>
  </row>
  <row id="832" trl="Y">
   <value column="Name" original="System Modifin">Modificación de sistema</value>
@@ -4089,8 +4089,8 @@ La medida debe soportar la información, sino es ignorada.</value>
  <row id="849" trl="Y">
   <value column="Name" original="LDAP Server">Servidor LDAP</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="LDAP Server to authenticate and authorize external systems based on Adempiere">Servidor LDAP para autenticar y autorizar sistemas externos basados en Adempiere</value>
-  <value column="Help" original="The LDAP Server allows third party software (e.g. Apache) to use the users defined in the system to authentificate and authorize them.  There is only one server per Adempiere system.  The &quot;o&quot; is the Client key and the optional &quot;ou&quot; is the Interest Area key.">El Servidor LDAP permite software de terceros (Ej : Apache ) para el uso de usuarios definidos en el sistema para autenticarlos y autorizarlos . Hay un solo servidor por sistema Adempiere. La "o" es la llave del cliente y la opción "ou" es la llave de área de interés.</value>
+  <value column="Description" original="LDAP Server to authenticate and authorize external systems based on iDempiere">Servidor LDAP para autenticar y autorizar sistemas externos basados en iDempiere</value>
+  <value column="Help" original="The LDAP Server allows third party software (e.g. Apache) to use the users defined in the system to authentificate and authorize them.  There is only one server per iDempiere system.  The &quot;o&quot; is the Client key and the optional &quot;ou&quot; is the Interest Area key.">El Servidor LDAP permite software de terceros (Ej : Apache ) para el uso de usuarios definidos en el sistema para autenticarlos y autorizarlos . Hay un solo servidor por sistema iDempiere. La "o" es la llave del cliente y la opción "ou" es la llave de área de interés.</value>
  </row>
  <row id="850" trl="Y">
   <value column="Name" original="LDAP Server Log">Log de Servidor LDAP</value>
@@ -5068,6 +5068,48 @@ Válido Desde/Hasta es determinado por el impuesto padre.]]></value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="53185" trl="Y">
+  <value column="Name" original="Web Service">Servicio Web</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53186" trl="Y">
+  <value column="Name" original="Web Service Method">Método Servicio Web</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53187" trl="Y">
+  <value column="Name" original="Web Service Type">Tipo Servicio Web</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53188" trl="Y">
+  <value column="Name" original="Web Service Parameters">Parámetros Servicio Web</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53189" trl="Y">
+  <value column="Name" original="Web Service Field Input">Campo Entrada Servicio Web</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53190" trl="Y">
+  <value column="Name" original="Web Service Field Output">Campo Salida Servicio Web</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53191" trl="Y">
+  <value column="Name" original="Web Service Access">Acceso Servicio Web</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row id="53192" trl="Y">
   <value column="Name" original="Attributes">Atributos</value>
   <value column="CommitWarning" original=""/>
@@ -5407,15 +5449,9 @@ Imprimiendo:
   <value column="Help" original=""/>
  </row>
  <row id="53325" trl="Y">
-  <value column="Name" original="Asset Disposal/Activation">Activación/Baja Activo</value>
+  <value column="Name" original="Asset Disposal">Desecho Activo</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Process the Disposal/Activation">Procesar la activación/baja de activos</value>
-  <value column="Help" original=""/>
- </row>
- <row id="53326" trl="Y">
-  <value column="Name" original="Step1 Select an Asset">Paso 1 Seleccione un Activo</value>
-  <value column="CommitWarning" original=""/>
-  <value column="Description" original="Select Asset for Disposal">Seleccione activo para baja</value>
+  <value column="Description" original="Process the Disposal">Procesar la baja de activos</value>
   <value column="Help" original=""/>
  </row>
  <row id="53327" trl="Y">
@@ -5682,8 +5718,242 @@ Imprimiendo:
   <value column="Description" original="Maintain Bank Account Payment Processors">Mantiene los procesadores de cuentas de banco</value>
   <value column="Help" original=""/>
  </row>
+ <row id="200027" trl="Y">
+  <value column="Name" original="Payment Transaction">Transacción Pago</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row id="200028" trl="Y">
   <value column="Name" original="Toolbar Button">Botón Barra de Herramientas</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200029" trl="Y">
+  <value column="Name" original="Online Transaction History">Historia Transacción En Línea</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200031" trl="Y">
+  <value column="Name" original="Setup Wizard">Asistente Configuración</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Setup Wizard">Asistente Configuración</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200032" trl="Y">
+  <value column="Name" original="Storage Provider">Proveedor de Almacenamiento</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Storage Provider">Proveedor de Almacenamiento</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200033" trl="Y">
+  <value column="Name" original="Broadcast Message">Mensaje de Difusión</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Broadcast Message">Mensaje de Difusión</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200035" trl="Y">
+  <value column="Name" original="Message Log">Bitácora Mensaje</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200036" trl="Y">
+  <value column="Name" original="Shipping Processor">Procesador Despacho</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Shipping Processors">Procesador Despacho</value>
+  <value column="Help" original="Shipping processor tab to define integration details with online shipping services.">La pestaña Procesador Despacho define los detalles de integración con los servicios en línea de los transportistas.</value>
+ </row>
+ <row id="200037" trl="Y">
+  <value column="Name" original="Packaging">Empaquetado</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Packaging Options supported by the Shipper">Opciones de Empaqueatado soportadas por el transportista</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200038" trl="Y">
+  <value column="Name" original="Label Type">Tipo Rótulo</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Label Types Supported by the Shipper.">Tipos de rótulo soportados por el transportista.</value>
+  <value column="Help" original="Used when booking a shipment online to define the label format that will be printed.">Utilizado cuando se está asignando un despacho en línea para definir el formato de rótulo a imprimir.</value>
+ </row>
+ <row id="200039" trl="Y">
+  <value column="Name" original="Pickup Types">Tipos de Recogida</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Methods that the Shipper will support for picking up from your location">Métodos que el transportista soporta para recoger desde su dirección</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200040" trl="Y">
+  <value column="Name" original="Shipping Accounts">Cuentas Despacho</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200044" trl="Y">
+  <value column="Name" original="Packages">Paquete</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200045" trl="Y">
+  <value column="Name" original="MPS Lines">Líneas MPS</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200046" trl="Y">
+  <value column="Name" original="Package Lines">Líneas Paquete</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200047" trl="Y">
+  <value column="Name" original="Packages">Paquetes</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200048" trl="Y">
+  <value column="Name" original="MPS Lines">Líneas MPS</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200049" trl="Y">
+  <value column="Name" original="Package Lines">Líneas Paquete</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200050" trl="Y">
+  <value column="Name" original="Commodity Shipment">Despacho Productos Básicos</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200051" trl="Y">
+  <value column="Name" original="Shipping Processor">Procesador Despacho</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Shipping Processors">Procesador Despacho</value>
+  <value column="Help" original="Shipping processor tab to define integration details with online shipping services.">La pestaña Procesador Despacho define los detalles de integración con los servicios en línea del transportista.</value>
+ </row>
+ <row id="200052" trl="Y">
+  <value column="Name" original="Shipper">Transportista</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Shippers">Transportista</value>
+  <value column="Help" original="The Shippers Tab defines any entity who will provide shipping to or shipping from an Organization.">La pestaña Transportista define una entidad que provee servicios de transporte desde o hacia su organización.</value>
+ </row>
+ <row id="200053" trl="Y">
+  <value column="Name" original="Packaging">Empaquetado</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Packaging Options supported by the Shipper">Opciones de empaquetado soportadas por el transportista</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200054" trl="Y">
+  <value column="Name" original="Label Type">Tipo Rótulo</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Label Types Supported by the Shipper.">Tipos de rótulo soportados por el transportista.</value>
+  <value column="Help" original="Used when booking a shipment online to define the label format that will be printed.">Utilizado cuando se está asignando un despacho en línea para definir el formato de rótulo a imprimir.</value>
+ </row>
+ <row id="200055" trl="Y">
+  <value column="Name" original="Pickup Types">Tipos de Recogida</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Methods that the Shipper will support for picking up from your location">Métodos que el transportista soporta para recoger desde su dirección</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200057" trl="Y">
+  <value column="Name" original="Shipper">Transportista</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Shippers">Transportista</value>
+  <value column="Help" original="The Shippers Tab defines any entity who will provide shipping to or shipping from an Organization.">La pestaña Transportista define una entidad que provee servicios de transporte desde o hacia su organización.</value>
+ </row>
+ <row id="200058" trl="Y">
+  <value column="Name" original="Packaging">Empaquetado</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Packaging Options supported by the Shipper">Opciones de empaquetado soportadas por el transportista</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200059" trl="Y">
+  <value column="Name" original="Label Type">Tipo Rótulo</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Label Types Supported by the Shipper.">Tipos de rótulo soportados por el transportista.</value>
+  <value column="Help" original="Used when booking a shipment online to define the label format that will be printed.">Utilizado cuando se está asignando un despacho en línea para definir el formato de rótulo a imprimir.</value>
+ </row>
+ <row id="200060" trl="Y">
+  <value column="Name" original="Pickup Types">Tipos de Recogida</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Methods that the Shipper will support for picking up from your location">Métodos que el transportista soporta para recoger desde su dirección</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200061" trl="Y">
+  <value column="Name" original="Shipping Transaction">Transacción Despacho</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200062" trl="Y">
+  <value column="Name" original="Shipping Transaction Line">Línea Transacción Despacho</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200064" trl="Y">
+  <value column="Name" original="Info Access">Acceso Info</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200065" trl="Y">
+  <value column="Name" original="RMA Tax">Impuesto Autorización Devolución</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="RMA Tax">Impuesto Autorización Devolución</value>
+  <value column="Help" original="The RMA Tax Tab displays the tax amount for a RMA based on the lines entered.">La pestaña Impuesto Autorización Devolución muestra los montos de impuestos basado en las líneas ingresadas.</value>
+ </row>
+ <row id="200066" trl="Y">
+  <value column="Name" original="RMA Tax">Impuesto Autorización Devolución</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="RMA Tax">Impuesto Autorización Devolución</value>
+  <value column="Help" original="The RMA Tax Tab displays the tax associated with the RMA Lines.">La pestaña Impuesto Autorización Devolución muestra los montos de impuestos basado en las líneas ingresadas.</value>
+ </row>
+ <row id="200067" trl="Y">
+  <value column="Name" original="Batch">Lote</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200068" trl="Y">
+  <value column="Name" original="Lines">Líneas</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200074" trl="Y">
+  <value column="Name" original="Context Help">Ayuda Contextual</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Context Helps"/>
+  <value column="Help" original="The Context Help tab defines the type of context help"/>
+ </row>
+ <row id="200075" trl="Y">
+  <value column="Name" original="Message">Mensaje Contexto</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Context Help Messages"/>
+  <value column="Help" original="The Message tab displays message text"/>
+ </row>
+ <row id="200076" trl="Y">
+  <value column="Name" original="Translation">Traducción</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200078" trl="Y">
+  <value column="Name" original="1099 Box">Caja 1099</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200079" trl="Y">
+  <value column="Name" original="Used in Field">Usado en Campo</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original=""/>
   <value column="Help" original=""/>

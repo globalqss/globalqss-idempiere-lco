@@ -27,16 +27,16 @@
   <value column="Name" original="Warehouse">Almacén</value>
  </row>
  <row id="109" trl="Y">
-  <value column="Name" original="Bank">Banco/Caja</value>
+  <value column="Name" original="Bank Accounts">Cuentas Banco/Caja</value>
  </row>
  <row id="110" trl="Y">
-  <value column="Name" original="Cash Book">Caja PDV</value>
+  <value column="Name" original="Cash Book Accounts">Cuentas Caja PDV</value>
  </row>
  <row id="111" trl="Y">
-  <value column="Name" original="Tax">Impuesto</value>
+  <value column="Name" original="Tax Accounts">Cuentas Impuesto</value>
  </row>
  <row id="112" trl="Y">
-  <value column="Name" original="Project">Proyecto</value>
+  <value column="Name" original="Project Accounts">Cuentas Proyecto</value>
  </row>
  <row id="113" trl="Y">
   <value column="Name" original="General">General</value>
@@ -138,7 +138,7 @@
   <value column="Name" original="Database">Base de Datos</value>
  </row>
  <row id="50010" trl="Y">
-  <value column="Name" original="Manufacturing">Manufactura</value>
+  <value column="Name" original="Manufacturing Accounts">Cuentas Manufactura</value>
  </row>
  <row id="50012" trl="Y">
   <value column="Name" original="Logo">Logo</value>
@@ -166,5 +166,41 @@
  </row>
  <row id="200003" trl="Y">
   <value column="Name" original="User Locking">Bloqueo Usuario</value>
+ </row>
+ <row id="200004" trl="Y">
+  <value column="Name" original="Overwritten From Column">Sobreescribe de Columna</value>
+ </row>
+ <row id="200005" trl="Y">
+  <value column="Name" original="Customer Information">Información Cliente</value>
+ </row>
+ <row id="200006" trl="Y">
+  <value column="Name" original="Vendor Information">Información Proveedor</value>
+ </row>
+ <row id="200007" trl="Y">
+  <value column="Name" original="Sales Information">Información Ventas</value>
+ </row>
+ <row id="200008" trl="Y">
+  <value column="Name" original="Document Preferences">Preferencias de Documentos</value>
+ </row>
+ <row id="200009" trl="Y">
+  <value column="Name" original="Charge Account">Cuenta Cargo</value>
+ </row>
+ <row id="200010" trl="Y">
+  <value column="Name" original="Business Partner Accounts">Cuentas Tercero</value>
+ </row>
+ <row id="200011" trl="Y">
+  <value column="Name" original="Product Accounts">Cuentas Producto</value>
+ </row>
+ <row id="200012" trl="Y">
+  <value column="Name" original="Warehouse Accounts">Cuentas Almacén</value>
+ </row>
+ <row id="200013" trl="Y">
+  <value column="Name" original="Product Category Accounts">Cuentas Categoría Producto</value>
+ </row>
+ <row id="200014" trl="Y">
+  <value column="Name" original="Business Partner Group Accounts">Cuentas Grupo de Terceros</value>
+ </row>
+ <row id="200015" trl="Y">
+  <value column="Name" original="Technical">Técnico</value>
  </row>
 </idempiereTrl>
