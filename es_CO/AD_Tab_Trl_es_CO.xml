@@ -3122,21 +3122,21 @@ Usted puede definir el contra de documentos para todas las organizaciones (de la
   <value column="Help" original="The Inventory Count Line defines the counts of the individual products in inventory.">La línea de la cuenta del inventario define las cuentas de los productos individuales en inventario.</value>
  </row>
  <row id="684" trl="Y">
-  <value column="Name" original="Allocation">Facturas Pagadas</value>
+  <value column="Name" original="Allocation">Pagos Asignados</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Allocation of the Invoice to Payments or Cash">Asignación de la Factura a los Pagos o al Efectivo</value>
+  <value column="Description" original="Allocation of the Invoice to Payments or Cash">Pagos/Recaudos/NC asignados a la factura</value>
   <value column="Help" original=""/>
  </row>
  <row id="685" trl="Y">
   <value column="Name" original="Allocation">Pagos Asignados</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Allocation of the Invoice to Payments or Cash">Asignación de Facturas para pagos o Efectivo</value>
+  <value column="Description" original="Allocation of the Invoice to Payments or Cash">Pagos/Recaudos/NC asignados a la factura</value>
   <value column="Help" original="">Asignación de Facturas para pagos o Efectivo</value>
  </row>
  <row id="686" trl="Y">
-  <value column="Name" original="Allocations">Facturas Pagadas</value>
+  <value column="Name" original="Allocations">Asignación Facturas</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Display Allocation of the Payment/Receipt to Invoices">Asignación de Pagos/Recaudos a Factura</value>
+  <value column="Description" original="Display Allocation of the Payment/Receipt to Invoices">Facturas/NC asignadas al pago/recaudo</value>
   <value column="Help" original=""/>
  </row>
  <row id="687" trl="Y">
