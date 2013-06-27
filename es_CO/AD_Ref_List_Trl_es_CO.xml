@@ -340,7 +340,7 @@
  </row>
  <row id="188" trl="Y">
   <value column="Name" original="Re-activate">Reactivar</value>
-  <value column="Description" original="Reopen Document and Reverse automaticly generated documents; You need to Complete the transaction after the change. ">Reabrir el documento y reversar automáticamente los documentos generados, debe Completar la transacción después del cambio</value>
+  <value column="Description" original="Reopen Document and Reverse automatically generated documents; You need to Complete the transaction after the change. ">Reabrir el documento y reversar automáticamente los documentos generados, debe Completar la transacción después del cambio</value>
  </row>
  <row id="189" trl="Y">
   <value column="Name" original="&lt;None&gt;"><![CDATA[<Ninguno>]]></value>
@@ -852,7 +852,7 @@
  </row>
  <row id="345" trl="Y">
   <value column="Name" original="Prepare">Preparar</value>
-  <value column="Description" original="Check Document conistency and check Inventory">Chequear consistencia del documento y chequear inventarios</value>
+  <value column="Description" original="Check Document consistency and check Inventory">Chequear consistencia del documento y chequear inventarios</value>
  </row>
  <row id="346" trl="Y">
   <value column="Name" original="Waiting Payment">Esperando Pago</value>
@@ -2176,7 +2176,7 @@
  </row>
  <row id="691" trl="Y">
   <value column="Name" original="Wait Complete">Espera Condición de Completar</value>
-  <value column="Description" original="Wait Condition ok Complete Docuement">Wait Condition ok, Complete Docuement</value>
+  <value column="Description" original="Wait Condition ok Complete Document">Condición de espera ok Completa Documento</value>
  </row>
  <row id="692" trl="Y">
   <value column="Name" original="Purchase Order">Orden de Compra</value>

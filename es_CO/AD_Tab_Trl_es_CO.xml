@@ -1076,10 +1076,10 @@ Necesita volver a ingresar y reiniciar su servidor de aplicaciones para que los 
   <value column="Help" original="The Accounting Tab is used to define the accounts used for transactions with this Bank.">La pestaña Contabilidad es usada para definir las cuentas usadas para transacciones con este banco.</value>
  </row>
  <row id="328" trl="Y">
-  <value column="Name" original="Bank Statement">Estado Cuenta Banco/Caja</value>
+  <value column="Name" original="Bank/Cash Statement">Estado Cuenta Banco/Caja</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Bank Statement">Estado de Cuenta Banco/Caja</value>
-  <value column="Help" original="The Bank Statement Tab defines the Bank Statement to be reconciled.">La pestaña Estado de Cuenta define el estado de cuentas bancario o de caja que va a ser conciliado.</value>
+  <value column="Description" original="Bank/Cash Statement">Estado de Cuenta Banco/Caja</value>
+  <value column="Help" original="The Bank/Cash Statement Tab defines the Bank/Cash Statement to be reconciled.">La pestaña Estado de Cuenta define el estado de cuentas bancario o de caja que va a ser conciliado.</value>
  </row>
  <row id="329" trl="Y">
   <value column="Name" original="Statement Line">Línea Estado Cuenta</value>
@@ -2141,9 +2141,9 @@ Observe por favor que hay tres campos de la organización: La organización del 
   <value column="Help" original="Please note that you will not be able to create new entities in this window if you have not default set for all mandatory values!&#10;">¡Observe por favor que usted no podrá crear entidades nuevas en esta ventana si usted no tiene defecto fijado para todos los valores obligatorios!.</value>
  </row>
  <row id="517" trl="Y">
-  <value column="Name" original="Acitivity Dimension">Dimensión Actividad</value>
+  <value column="Name" original="Activity Dimension">Dimensión Actividad</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Maintain Acitivity Accounting Dimension Tree">Mantenga el árbol de la dimensión de la actividad de contabilidad</value>
+  <value column="Description" original="Maintain Activity Accounting Dimension Tree">Mantenga el árbol de la dimensión de la actividad de contabilidad</value>
   <value column="Help" original="Please note that you will not be able to create new entities in this window if you have not default set for all mandatory values!&#10;">¡Observe por favor que usted no podrá crear entidades nuevas en esta ventana si usted no tiene defecto fijado para todos los valores obligatorios!</value>
  </row>
  <row id="518" trl="Y">
@@ -5956,6 +5956,12 @@ Imprimiendo:
   <value column="Name" original="Used in Field">Usado en Campo</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200095" trl="N">
+  <value column="Name" original="City (Without Regions)">Ciudad (sin Región)</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Cities without Region">Ciudades sin Región</value>
   <value column="Help" original=""/>
  </row>
 </idempiereTrl>
