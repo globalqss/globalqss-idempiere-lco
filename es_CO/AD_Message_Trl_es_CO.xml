@@ -5927,7 +5927,7 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="200090" trl="Y">
-  <value column="MsgText" original="Wizard Reports">Asistente de Reportes</value>
+  <value column="MsgText" original="Report Wizard">Asistente de Reportes</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="200091" trl="Y">
@@ -6220,6 +6220,38 @@ Por favor contacte al ADMINISTRADOR.</value>
  </row>
  <row id="200172" trl="Y">
   <value column="MsgText" original="Start Time, must be less than End Time">Hora inicio debe ser menor que hora fin</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200175" trl="N">
+  <value column="MsgText" original="The reference of an encrypted field cannot be changed">No se puede modificar la referencia de un campo encriptado</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200176" trl="N">
+  <value column="MsgText" original="Inactive payment processor">Procesador de pagos inactivo</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200177" trl="N">
+  <value column="MsgText" original="Posting">Asiento Contable</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200178" trl="N">
+  <value column="MsgText" original="Move into">Mover dentro</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200179" trl="N">
+  <value column="MsgText" original="Insert after">Insertar después</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200180" trl="N">
+  <value column="MsgText" original="Please fill in required data for:">Favor diligenciar la información requerida para:</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200183" trl="N">
+  <value column="MsgText" original="Feedback">Soporte</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200184" trl="N">
+  <value column="MsgText" original="Delete All">Borrar Todos</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="520010" trl="Y">

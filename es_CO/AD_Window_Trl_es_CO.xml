@@ -383,7 +383,7 @@
   <value column="Help" original="The system creates messages while performing processes. In this window you can view them.">El sistema crea mensajes mientras ejecuta procesos. En esta ventana es posible ver estos mensajes.</value>
  </row>
  <row id="194" trl="Y">
-  <value column="Name" original="Bank Statement">Estado de Cuenta Banco/Caja</value>
+  <value column="Name" original="Bank/Cash Statement">Estado de Cuenta Banco/Caja</value>
   <value column="Description" original="Process Bank Statements">Procesar conciliación del estado de cuenta Banco/Caja</value>
   <value column="Help" original="The Process Bank Statements window allows you to reconcile your Bank Statements.  You can either enter the line items from the statement in the Statement Line tab or select the 'Create From' button to automatically generate the statement from all unreconciled payments to this bank account.  Once you have completed reconciling, select the 'Process Statement' button to mark the payments as reconciled and update the appropriate GL accounts.">Esta ventana permite conciliar sus saldos bancarios. Usted puede ya sea introducir líneas desde el estado de cuenta en la pestaña de línea de estado de cuenta o seleccionar el botón `Crear desde` para generar automáticamente el balance de todos los pagos no conciliados para esta cuenta bancaria. Una vez que la conciliación esta completa, seleccione el botón `Procesar Estado de Cuenta` para marcar los pagos como conciliados y actualizar las cuentas correspondientes de la Contabilidad General</value>
  </row>
@@ -1982,7 +1982,7 @@ y otros</value>
  <row id="200034" trl="Y">
   <value column="Name" original="Context Help">Ayuda Contextual</value>
   <value column="Description" original="Maintain Context Helps"/>
-  <value column="Help" original="La ventana Ayuda Contextual permite definir mensajes de contexto a desplegar en el panel de ayuda. Solo para el cliente Web."/>
+  <value column="Help" original="The Context Help window defines the context help message text to display in the help pane. It is for Web UI only.">La ventana Ayuda Contextual permite definir mensajes de contexto a desplegar en el panel de ayuda. Solo para el cliente Web.</value>
  </row>
  <row id="200036" trl="Y">
   <value column="Name" original="1099 Box">Caja 1099</value>

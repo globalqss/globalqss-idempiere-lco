@@ -996,7 +996,7 @@ Si lo ejecuta para System, todos los roles de todas los grupo empresariales son 
  </row>
  <row id="304" trl="Y">
   <value column="Name" original="Validate Workflow">Valida Flujo de Trabajo</value>
-  <value column="Description" original="Validate thet the workflos is correct">Valida cuando el Flujo de Trabajo es correcto</value>
+  <value column="Description" original="Validate that the workflow is correct">Valida que el Flujo de Trabajo es correcto</value>
   <value column="Help" original="(limited checking)">(Comprobación limitada)</value>
  </row>
  <row id="305" trl="Y">

@@ -22,6 +22,11 @@
   <value column="Description" original="Tax Amount for Credit Card transaction">Valor del impuesto para las transacciones con tarjeta de crédito</value>
   <value column="Help" original="The Tax Amount displays the total tax amount. The tax amount is only used for credit card processing.">El monto del impuesto exhibe la cantidad total del impuesto. El monto del impuesto se utiliza solamente para el proceso de la tarjeta de crédito.</value>
  </row>
+ <row id="4121" trl="Y">
+  <value column="Name" original="Account Conversion Date">Fecha Contable Conversión</value>
+  <value column="Description" original="Accounting Conversion Date">Fecha contable conversión</value>
+  <value column="Help" original="The Accounting Date indicates the date to be used on the General Ledger account entries generated from this document. It is also used for any currency conversion.&#10;The Accounting Date on Bank/Cash Statement Line is used for currency conversion and reporting purposes, the accounting is posted using the header date account.">La fecha contable en las líneas de estado de cuenta se usa para propósitos de conversión de moneda y reportes, los asientos son contabilizados utiliando la fecha contable del encabezado.</value>
+ </row>
  <row id="4462" trl="Y">
   <value column="Name" original="Business Partner / Sales Rep">Tercero / Repr Comercial</value>
   <value column="Description" original="Identifies a Business Partner (Sales Rep) receiving the Commission">Identifica al tercero (representante de ventas) que recibe una comisión.</value>
@@ -247,6 +252,11 @@ Email de la persona responsable del sistema (Registrado en la tienda Web)</value
   <value column="Name" original="Notes">Notas</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
+ </row>
+ <row id="50166" trl="Y">
+  <value column="Name" original="Configured Value">Valor Configurado</value>
+  <value column="Description" original="Value for the configuration key">Valor para la configuración</value>
+  <value column="Help" original="You can check the valid variables and values at http://wiki.idempiere.org/en/System_Configurator_(Window_ID-50006)">Puede verificar las claves y valores en http://wiki.idempiere.org/en/System_Configurator_(Window_ID-50006)</value>
  </row>
  <row id="53360" trl="Y">
   <value column="Name" original="Value">Valor</value>
@@ -599,7 +609,7 @@ Las fechas Válido desde y Válido hasta indican el período de tiempo a utiliza
  <row id="201256" trl="Y">
   <value column="Name" original="Partner Location (For UPS only)">Dirección Tercero (solo para UPS)</value>
   <value column="Description" original="Identifies the (ship to) address for this Business Partner">Identifica la dirección de despacho del tercero</value>
-  <value column="Help" original="The Partner address indicates the location of a Business Partner"></value>
+  <value column="Help" original="The Partner address indicates the location of a Business Partner">La dirección del tercero indica la ubicación donde se localiza el tercero</value>
  </row>
  <row id="201262" trl="Y">
   <value column="Name" original="Future Day Shipment (For FedEx only)">Día Despacho Futuro (solo para Fedex)</value>

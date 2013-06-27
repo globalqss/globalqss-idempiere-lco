@@ -68,7 +68,7 @@
  </row>
  <row id="118" trl="Y">
   <value column="Name" original="Process_Invoice">Proceso Factura</value>
-  <value column="Description" original="(Standard Process Onvoice)">(Proceso de Factura Estándar)</value>
+  <value column="Description" original="(Standard Process Invoice)">(Proceso de Factura Estándar)</value>
  </row>
  <row id="119" trl="Y">
   <value column="Name" original="Process_Cash">Proceso Efectivo</value>
