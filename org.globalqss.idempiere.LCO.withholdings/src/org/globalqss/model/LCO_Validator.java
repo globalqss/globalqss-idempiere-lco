@@ -40,7 +40,6 @@ import org.compiere.model.MInvoicePaySchedule;
 import org.compiere.model.MInvoiceTax;
 import org.compiere.model.MPayment;
 import org.compiere.model.MPaymentAllocate;
-import org.compiere.model.MSysConfig;
 import org.compiere.model.ModelValidationEngine;
 import org.compiere.model.ModelValidator;
 import org.compiere.model.PO;
