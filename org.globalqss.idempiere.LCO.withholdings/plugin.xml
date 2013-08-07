@@ -2,11 +2,11 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension
-         id="org.globalqss.model.LCO_Validator"
-         name="LCO_Validator"
+         id="org.globalqss.model.LCO_ValidatorWH"
+         name="LCO_ValidatorWH"
          point="org.adempiere.base.ModelValidator">
       <listener
-            class="org.globalqss.model.LCO_Validator"
+            class="org.globalqss.model.LCO_ValidatorWH"
             priority="0">
       </listener>
    </extension>
@@ -18,42 +18,6 @@
             class="org.globalqss.process.LCO_GenerateWithholding"
             priority="0">
       </process>
-   </extension>
-   <extension
-         id="org.globalqss.process.LCO_DianExportXML"
-         name="LCO_DianExportXML"
-         point="org.adempiere.base.Process">
-      <process
-            class="org.globalqss.process.LCO_DianExportXML"
-            priority="0">
-      </process>
-   </extension>
-   <extension
-         id="org.globalqss.process.LCO_DianGenerateXML"
-         name="LCO_DianGenerateXML"
-         point="org.adempiere.base.Process">
-      <process
-            class="org.globalqss.process.LCO_DianGenerateXML"
-            priority="0">
-      </process>
-   </extension>
-   <extension
-         id="org.globalqss.process.LCO_DianProcessContent"
-         name="LCO_DianProcessContent"
-         point="org.adempiere.base.Process">
-      <process
-            class="org.globalqss.process.LCO_DianProcessContent"
-            priority="0">
-      </process>
-   </extension>
-   <extension
-         id="org.globalqss.model.LCO_Callouts"
-         name="LCO_Callouts"
-         point="org.compiere.model.Callout">
-      <callout
-            class="org.globalqss.model.LCO_Callouts"
-            prioriy="0">
-      </callout>
    </extension>
    <extension
          id="org.globalqss.model.LCO_CalloutWithholding"

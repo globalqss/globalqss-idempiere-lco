@@ -1,5 +1,5 @@
 /******************************************************************************
- * Product: Adempiere ERP & CRM Smart Business Solution                       *
+ * Product: iDempiere ERP & CRM Smart Business Solution                       *
  * Copyright (C) 1999-2006 ComPiere, Inc. All Rights Reserved.                *
  * This program is free software; you can redistribute it and/or modify it    *
  * under the terms version 2 of the GNU General Public License as published   *
@@ -31,7 +31,6 @@ import org.compiere.acct.FactLine;
 import org.compiere.model.MAcctSchema;
 import org.compiere.model.MAllocationHdr;
 import org.compiere.model.MAllocationLine;
-import org.compiere.model.MBPartner;
 import org.compiere.model.MClient;
 import org.compiere.model.MDocType;
 import org.compiere.model.MInvoice;
@@ -47,7 +46,6 @@ import org.compiere.util.CLogger;
 import org.compiere.util.DB;
 import org.compiere.util.Env;
 import org.compiere.util.Msg;
-import org.globalqss.util.LCO_Utils;
 
 /**
  *	Validator or Localization Colombia (Withholdings)
@@ -55,19 +53,19 @@ import org.globalqss.util.LCO_Utils;
  *  @author Carlos Ruiz - globalqss - Quality Systems & Solutions - http://globalqss.com 
  *	@version $Id: LCO_Validator.java,v 1.4 2007/05/13 06:53:26 cruiz Exp $
  */
-public class LCO_Validator implements ModelValidator
+public class LCO_ValidatorWH implements ModelValidator
 {
 	/**
 	 *	Constructor.
 	 *	The class is instantiated when logging in and client is selected/known
 	 */
-	public LCO_Validator ()
+	public LCO_ValidatorWH ()
 	{
 		super ();
 	}	//	MyValidator
 	
 	/**	Logger			*/
-	private static CLogger log = CLogger.getCLogger(LCO_Validator.class);
+	private static CLogger log = CLogger.getCLogger(LCO_ValidatorWH.class);
 	/** Client			*/
 	private int		m_AD_Client_ID = -1;
 	
@@ -90,8 +88,6 @@ public class LCO_Validator implements ModelValidator
 		//	Tables to be monitored
 		engine.addModelChange(MInvoice.Table_Name, this);
 		engine.addModelChange(MInvoiceLine.Table_Name, this);
-		engine.addModelChange(MBPartner.Table_Name, this);
-		engine.addModelChange(X_LCO_TaxIdType.Table_Name, this);
 		engine.addModelChange(X_LCO_WithholdingCalc.Table_Name, this);
 
 		//	Documents to be monitored
@@ -135,26 +131,6 @@ public class LCO_Validator implements ModelValidator
 				return msg;
 		}
 
-		// Check Digit based on TaxID
-		if (po.get_TableName().equals(MBPartner.Table_Name) && ( type == TYPE_BEFORE_NEW || type == TYPE_BEFORE_CHANGE))
-		{
-			MBPartner bpartner = (MBPartner)po;
-			msg = mcheckTaxIdDigit(bpartner);
-			if (msg != null)
-				return msg;
-
-			msg = mfillName(bpartner);
-			if (msg != null)
-				return msg;
-		}
-		
-		if (po.get_TableName().equals(X_LCO_TaxIdType.Table_Name) && ( type == TYPE_BEFORE_NEW || type == TYPE_BEFORE_CHANGE))
-		{
-			X_LCO_TaxIdType taxidtype = (X_LCO_TaxIdType) po;
-			if ((!taxidtype.isUseTaxIdDigit()) && taxidtype.isDigitChecked())
-				taxidtype.setIsDigitChecked(false);
-		}
-		
 		if (po.get_TableName().equals(X_LCO_WithholdingCalc.Table_Name)
 				&& (type == ModelValidator.TYPE_BEFORE_CHANGE || type == ModelValidator.TYPE_BEFORE_NEW)) {
 			X_LCO_WithholdingCalc lwc = (X_LCO_WithholdingCalc) po;
@@ -839,96 +815,5 @@ public class LCO_Validator implements ModelValidator
 		StringBuffer sb = new StringBuffer ("LCO_Validator");
 		return sb.toString ();
 	}	//	toString
-	
-	/**
-	 *	Check Digit based on TaxID.
-	 */
-	private String mcheckTaxIdDigit (MBPartner bpartner)
-	{
-		Integer taxidtype_I = (Integer) bpartner.get_Value("LCO_TaxIdType_ID");
-		
-		if (taxidtype_I == null) {
-			// Returning error here has problems with Initial Client Setup and other processes
-			// that creates BPs
-			// Mandatory must be delegated to UI (in AD_Field.ismandatory)
-			// return Msg.getMsg(bpartner.getCtx(), "LCO_TaxIDTypeRequired");
-			return null;
-		}
-		
-		X_LCO_TaxIdType taxidtype = new X_LCO_TaxIdType(bpartner.getCtx(), taxidtype_I.intValue(), bpartner.get_TrxName());
-		
-		bpartner.set_ValueOfColumn("IsDetailedNames", taxidtype.isDetailedNames());
-		bpartner.set_ValueOfColumn("IsUseTaxIdDigit", taxidtype.isUseTaxIdDigit());
-		
-		if (!taxidtype.isUseTaxIdDigit()) {
-			bpartner.set_ValueOfColumn("TaxIdDigit", null);
-			return null;
-		}
-			
-		// Is Juridical
-		String taxid = bpartner.getTaxID();
-		if (taxid == null || taxid.trim().length() == 0)
-			return Msg.getMsg(bpartner.getCtx(), "LCO_NoTaxID");
 
-		int correctDigit = LCO_Utils.calculateDigitDian(taxid);
-		if (correctDigit == -1) // Error on the Tax ID - possibly invalid characters
-			return Msg.getMsg(bpartner.getCtx(), "LCO_NotValidID");
-
-		String taxIDDigit = (String) bpartner.get_Value("TaxIdDigit");
-		if (taxidtype.isDigitChecked()) {
-			if (taxIDDigit == null || taxIDDigit.trim().length() == 0)
-				return Msg.getMsg(bpartner.getCtx(), "LCO_NoDigit"); // No Tax ID Digit
-			int taxIDDigit_int;
-			try {
-				taxIDDigit_int = Integer.parseInt(taxIDDigit);
-			} catch (NumberFormatException e) {
-				return Msg.getMsg(bpartner.getCtx(), "LCO_NotANumber");  // Error on the check digit
-			}
-			if (correctDigit != taxIDDigit_int)
-				return Msg.getMsg(bpartner.getCtx(), "LCO_VerifyCheckDigit");
-		} else {
-			bpartner.set_ValueOfColumn("TaxIdDigit", String.valueOf(correctDigit));
-		}
-		
-		log.info(bpartner.toString());
-		return null;
-	}	//	mcheckTaxIdDigit
-
-	/**
-	 * 	Fill Name based on First and Last Names
-	 *	@param bpartner bpartner
-	 *	@return error message or null
-	 */
-	public String mfillName (MBPartner bpartner)
-	{
-		log.info("");
-		boolean isDetailedNames = false;
-		Boolean boolIsDetailedNames = (Boolean)bpartner.get_Value("IsDetailedNames");
-		if (boolIsDetailedNames != null)
-			isDetailedNames = boolIsDetailedNames.booleanValue();
-		
-		if (! isDetailedNames) {
-			bpartner.set_ValueOfColumn("FirstName1", null);
-			bpartner.set_ValueOfColumn("FirstName2", null);
-			bpartner.set_ValueOfColumn("LastName1", null);
-			bpartner.set_ValueOfColumn("LastName2", null);
-			return null;
-		}
-
-		String fn1 = bpartner.get_ValueAsString("FirstName1");
-		String fn2 = bpartner.get_ValueAsString("FirstName2");
-		String ln1 = bpartner.get_ValueAsString("LastName1");
-		String ln2 = bpartner.get_ValueAsString("LastName2");
-		
-		if (fn1 == null || fn1.length() == 0)
-			 return Msg.getMsg(bpartner.getCtx(), "LCO_FirstName1Required");
-
-		 if (ln1 == null || ln1.length() == 0)
-			return Msg.getMsg(bpartner.getCtx(), "LCO_LastName1Required");
-
-		String fullName = LCO_Utils.getFullName(fn1, fn2, ln1, ln2, bpartner.getAD_Client_ID());
-		bpartner.setName(fullName);
-		return null;
-	}	//	mfillName
-	
 }	//	LCO_Validator
