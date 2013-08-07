@@ -3647,15 +3647,15 @@ Segmentos deseados de cuenta, Organización, Cuentas, Productos pueden tener alg
   <value column="Help" original="If defined, you can use the fund only for the accounts selected. You can select summary values.">Si esta definida, usted puede usar los fondos solo para cuentas seleccionadas. Usted puede seleccionar un resumen de valores.</value>
  </row>
  <row id="772" trl="Y">
-  <value column="Name" original="Used in Column">Empleado en Columna</value>
+  <value column="Name" original="Used in Column">Usado en Columna</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Used in Column">Empleado en Columna</value>
+  <value column="Description" original="Used in Column">Usado en Columna</value>
   <value column="Help" original=""/>
  </row>
  <row id="773" trl="Y">
-  <value column="Name" original="Used in Column">Empleado en Columna</value>
+  <value column="Name" original="Used in Column">Usado en Columna</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Used in Column (Reference)">Empleado en Columna (Referencia)</value>
+  <value column="Description" original="Used in Column (Reference)">Usado en Columna (Referencia)</value>
   <value column="Help" original=""/>
  </row>
  <row id="774" trl="Y">

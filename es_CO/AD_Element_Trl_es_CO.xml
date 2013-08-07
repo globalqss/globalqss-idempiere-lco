@@ -20935,7 +20935,7 @@ Ejemplo: si el precio de compra es $100 y la tolerancia es 1 ( porciento), el pr
   <value column="Name" original="Mark 3 Percent">Porcentaje Marca 3</value>
   <value column="PrintName" original="Mark 3 Percent">Porcentaje Marca 3</value>
   <value column="Description" original="Percentage up to this color is used">Porcentaje máximo de este color</value>
-  <value column="Help" original="Example 100 - e.g., if Mark 2 is 80 - this color is used between 80% and 100%">Ejemplo 100 - ej. Si Marca 2 es 80 - este color es empleado entre 80% y 100%.
+  <value column="Help" original="Example 100 - e.g., if Mark 2 is 80 - this color is used between 80% and 100%">Ejemplo 100 - ej. Si Marca 2 es 80 - este color es usado entre 80% y 100%.
 
 </value>
   <value column="PO_Description" original=""/>
