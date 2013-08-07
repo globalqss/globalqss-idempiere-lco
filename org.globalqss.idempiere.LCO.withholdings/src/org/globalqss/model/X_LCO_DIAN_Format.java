@@ -1,6 +1,6 @@
 /******************************************************************************
- * Product: Adempiere ERP & CRM Smart Business Solution                       *
- * Copyright (C) 1999-2007 ComPiere, Inc. All Rights Reserved.                *
+ * Product: iDempiere ERP & CRM Smart Business Solution                       *
+ * Copyright (C) 1999-2012 ComPiere, Inc. All Rights Reserved.                *
  * This program is free software, you can redistribute it and/or modify it    *
  * under the terms version 2 of the GNU General Public License as published   *
  * by the Free Software Foundation. This program is distributed in the hope   *
@@ -23,15 +23,15 @@ import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
 /** Generated Model for LCO_DIAN_Format
- *  @author Adempiere (generated) 
- *  @version 360LTS.010_P20110222 - $Id$ */
+ *  @author iDempiere (generated) 
+ *  @version Release 1.0c - $Id$ */
 public class X_LCO_DIAN_Format extends PO implements I_LCO_DIAN_Format, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20110408L;
+	private static final long serialVersionUID = 20130807L;
 
     /** Standard Constructor */
     public X_LCO_DIAN_Format (Properties ctx, int LCO_DIAN_Format_ID, String trxName)
@@ -81,9 +81,9 @@ public class X_LCO_DIAN_Format extends PO implements I_LCO_DIAN_Format, I_Persis
       return sb.toString();
     }
 
-	public I_AD_Sequence getAD_Sequence() throws RuntimeException
+	public org.compiere.model.I_AD_Sequence getAD_Sequence() throws RuntimeException
     {
-		return (I_AD_Sequence)MTable.get(getCtx(), I_AD_Sequence.Table_Name)
+		return (org.compiere.model.I_AD_Sequence)MTable.get(getCtx(), org.compiere.model.I_AD_Sequence.Table_Name)
 			.getPO(getAD_Sequence_ID(), get_TrxName());	}
 
 	/** Set Sequence.
@@ -109,9 +109,9 @@ public class X_LCO_DIAN_Format extends PO implements I_LCO_DIAN_Format, I_Persis
 		return ii.intValue();
 	}
 
-	public I_C_AcctSchema getC_AcctSchema() throws RuntimeException
+	public org.compiere.model.I_C_AcctSchema getC_AcctSchema() throws RuntimeException
     {
-		return (I_C_AcctSchema)MTable.get(getCtx(), I_C_AcctSchema.Table_Name)
+		return (org.compiere.model.I_C_AcctSchema)MTable.get(getCtx(), org.compiere.model.I_C_AcctSchema.Table_Name)
 			.getPO(getC_AcctSchema_ID(), get_TrxName());	}
 
 	/** Set Accounting Schema.
@@ -216,9 +216,23 @@ public class X_LCO_DIAN_Format extends PO implements I_LCO_DIAN_Format, I_Persis
 		return ii.intValue();
 	}
 
-	public I_LCO_DIAN_XMLPrintLabel getLCO_DIAN_XMLPrintLabel() throws RuntimeException
+	/** Set LCO_DIAN_Format_UU.
+		@param LCO_DIAN_Format_UU LCO_DIAN_Format_UU	  */
+	public void setLCO_DIAN_Format_UU (String LCO_DIAN_Format_UU)
+	{
+		set_Value (COLUMNNAME_LCO_DIAN_Format_UU, LCO_DIAN_Format_UU);
+	}
+
+	/** Get LCO_DIAN_Format_UU.
+		@return LCO_DIAN_Format_UU	  */
+	public String getLCO_DIAN_Format_UU () 
+	{
+		return (String)get_Value(COLUMNNAME_LCO_DIAN_Format_UU);
+	}
+
+	public org.globalqss.model.I_LCO_DIAN_XMLPrintLabel getLCO_DIAN_XMLPrintLabel() throws RuntimeException
     {
-		return (I_LCO_DIAN_XMLPrintLabel)MTable.get(getCtx(), I_LCO_DIAN_XMLPrintLabel.Table_Name)
+		return (org.globalqss.model.I_LCO_DIAN_XMLPrintLabel)MTable.get(getCtx(), org.globalqss.model.I_LCO_DIAN_XMLPrintLabel.Table_Name)
 			.getPO(getLCO_DIAN_XMLPrintLabel_ID(), get_TrxName());	}
 
 	/** Set DIAN XML Print Label.
@@ -283,9 +297,9 @@ public class X_LCO_DIAN_Format extends PO implements I_LCO_DIAN_Format, I_Persis
         return new KeyNamePair(get_ID(), getName());
     }
 
-	public I_PA_Hierarchy getPA_Hierarchy() throws RuntimeException
+	public org.compiere.model.I_PA_Hierarchy getPA_Hierarchy() throws RuntimeException
     {
-		return (I_PA_Hierarchy)MTable.get(getCtx(), I_PA_Hierarchy.Table_Name)
+		return (org.compiere.model.I_PA_Hierarchy)MTable.get(getCtx(), org.compiere.model.I_PA_Hierarchy.Table_Name)
 			.getPO(getPA_Hierarchy_ID(), get_TrxName());	}
 
 	/** Set Reporting Hierarchy.

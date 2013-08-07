@@ -1,6 +1,6 @@
 /******************************************************************************
- * Product: Adempiere ERP & CRM Smart Business Solution                       *
- * Copyright (C) 1999-2007 ComPiere, Inc. All Rights Reserved.                *
+ * Product: iDempiere ERP & CRM Smart Business Solution                       *
+ * Copyright (C) 1999-2012 ComPiere, Inc. All Rights Reserved.                *
  * This program is free software, you can redistribute it and/or modify it    *
  * under the terms version 2 of the GNU General Public License as published   *
  * by the Free Software Foundation. This program is distributed in the hope   *
@@ -22,9 +22,10 @@ import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
 /** Generated Interface for LCO_InvoiceWithholding
- *  @author Adempiere (generated) 
- *  @version Release 3.6.0LTS
+ *  @author iDempiere (generated) 
+ *  @version Release 1.0c
  */
+@SuppressWarnings("all")
 public interface I_LCO_InvoiceWithholding 
 {
 
@@ -76,7 +77,7 @@ public interface I_LCO_InvoiceWithholding
 	  */
 	public int getC_AllocationLine_ID();
 
-	public I_C_AllocationLine getC_AllocationLine() throws RuntimeException;
+	public org.compiere.model.I_C_AllocationLine getC_AllocationLine() throws RuntimeException;
 
     /** Column name C_Invoice_ID */
     public static final String COLUMNNAME_C_Invoice_ID = "C_Invoice_ID";
@@ -91,7 +92,7 @@ public interface I_LCO_InvoiceWithholding
 	  */
 	public int getC_Invoice_ID();
 
-	public I_C_Invoice getC_Invoice() throws RuntimeException;
+	public org.compiere.model.I_C_Invoice getC_Invoice() throws RuntimeException;
 
     /** Column name Created */
     public static final String COLUMNNAME_Created = "Created";
@@ -122,7 +123,7 @@ public interface I_LCO_InvoiceWithholding
 	  */
 	public int getC_Tax_ID();
 
-	public I_C_Tax getC_Tax() throws RuntimeException;
+	public org.compiere.model.I_C_Tax getC_Tax() throws RuntimeException;
 
     /** Column name DateAcct */
     public static final String COLUMNNAME_DateAcct = "DateAcct";
@@ -193,6 +194,15 @@ public interface I_LCO_InvoiceWithholding
 
 	/** Get Invoice Withholding	  */
 	public int getLCO_InvoiceWithholding_ID();
+
+    /** Column name LCO_InvoiceWithholding_UU */
+    public static final String COLUMNNAME_LCO_InvoiceWithholding_UU = "LCO_InvoiceWithholding_UU";
+
+	/** Set LCO_InvoiceWithholding_UU	  */
+	public void setLCO_InvoiceWithholding_UU (String LCO_InvoiceWithholding_UU);
+
+	/** Get LCO_InvoiceWithholding_UU	  */
+	public String getLCO_InvoiceWithholding_UU();
 
     /** Column name LCO_WithholdingRule_ID */
     public static final String COLUMNNAME_LCO_WithholdingRule_ID = "LCO_WithholdingRule_ID";

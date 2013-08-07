@@ -1,6 +1,6 @@
 /******************************************************************************
- * Product: Adempiere ERP & CRM Smart Business Solution                       *
- * Copyright (C) 1999-2007 ComPiere, Inc. All Rights Reserved.                *
+ * Product: iDempiere ERP & CRM Smart Business Solution                       *
+ * Copyright (C) 1999-2012 ComPiere, Inc. All Rights Reserved.                *
  * This program is free software, you can redistribute it and/or modify it    *
  * under the terms version 2 of the GNU General Public License as published   *
  * by the Free Software Foundation. This program is distributed in the hope   *
@@ -25,15 +25,15 @@ import org.compiere.model.*;
 import org.compiere.util.Env;
 
 /** Generated Model for LCO_InvoiceWithholding
- *  @author Adempiere (generated) 
- *  @version Release 3.6.0LTS - $Id$ */
+ *  @author iDempiere (generated) 
+ *  @version Release 1.0c - $Id$ */
 public class X_LCO_InvoiceWithholding extends PO implements I_LCO_InvoiceWithholding, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20100617L;
+	private static final long serialVersionUID = 20130807L;
 
     /** Standard Constructor */
     public X_LCO_InvoiceWithholding (Properties ctx, int LCO_InvoiceWithholding_ID, String trxName)
@@ -81,9 +81,9 @@ public class X_LCO_InvoiceWithholding extends PO implements I_LCO_InvoiceWithhol
       return sb.toString();
     }
 
-	public I_C_AllocationLine getC_AllocationLine() throws RuntimeException
+	public org.compiere.model.I_C_AllocationLine getC_AllocationLine() throws RuntimeException
     {
-		return (I_C_AllocationLine)MTable.get(getCtx(), I_C_AllocationLine.Table_Name)
+		return (org.compiere.model.I_C_AllocationLine)MTable.get(getCtx(), org.compiere.model.I_C_AllocationLine.Table_Name)
 			.getPO(getC_AllocationLine_ID(), get_TrxName());	}
 
 	/** Set Allocation Line.
@@ -109,9 +109,9 @@ public class X_LCO_InvoiceWithholding extends PO implements I_LCO_InvoiceWithhol
 		return ii.intValue();
 	}
 
-	public I_C_Invoice getC_Invoice() throws RuntimeException
+	public org.compiere.model.I_C_Invoice getC_Invoice() throws RuntimeException
     {
-		return (I_C_Invoice)MTable.get(getCtx(), I_C_Invoice.Table_Name)
+		return (org.compiere.model.I_C_Invoice)MTable.get(getCtx(), org.compiere.model.I_C_Invoice.Table_Name)
 			.getPO(getC_Invoice_ID(), get_TrxName());	}
 
 	/** Set Invoice.
@@ -137,9 +137,9 @@ public class X_LCO_InvoiceWithholding extends PO implements I_LCO_InvoiceWithhol
 		return ii.intValue();
 	}
 
-	public I_C_Tax getC_Tax() throws RuntimeException
+	public org.compiere.model.I_C_Tax getC_Tax() throws RuntimeException
     {
-		return (I_C_Tax)MTable.get(getCtx(), I_C_Tax.Table_Name)
+		return (org.compiere.model.I_C_Tax)MTable.get(getCtx(), org.compiere.model.I_C_Tax.Table_Name)
 			.getPO(getC_Tax_ID(), get_TrxName());	}
 
 	/** Set Tax.
@@ -262,6 +262,20 @@ public class X_LCO_InvoiceWithholding extends PO implements I_LCO_InvoiceWithhol
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	/** Set LCO_InvoiceWithholding_UU.
+		@param LCO_InvoiceWithholding_UU LCO_InvoiceWithholding_UU	  */
+	public void setLCO_InvoiceWithholding_UU (String LCO_InvoiceWithholding_UU)
+	{
+		set_Value (COLUMNNAME_LCO_InvoiceWithholding_UU, LCO_InvoiceWithholding_UU);
+	}
+
+	/** Get LCO_InvoiceWithholding_UU.
+		@return LCO_InvoiceWithholding_UU	  */
+	public String getLCO_InvoiceWithholding_UU () 
+	{
+		return (String)get_Value(COLUMNNAME_LCO_InvoiceWithholding_UU);
 	}
 
 	public org.globalqss.model.I_LCO_WithholdingRule getLCO_WithholdingRule() throws RuntimeException

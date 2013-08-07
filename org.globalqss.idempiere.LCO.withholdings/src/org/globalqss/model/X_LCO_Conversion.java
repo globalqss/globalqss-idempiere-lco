@@ -1,6 +1,6 @@
 /******************************************************************************
- * Product: Adempiere ERP & CRM Smart Business Solution                       *
- * Copyright (C) 1999-2007 ComPiere, Inc. All Rights Reserved.                *
+ * Product: iDempiere ERP & CRM Smart Business Solution                       *
+ * Copyright (C) 1999-2012 ComPiere, Inc. All Rights Reserved.                *
  * This program is free software, you can redistribute it and/or modify it    *
  * under the terms version 2 of the GNU General Public License as published   *
  * by the Free Software Foundation. This program is distributed in the hope   *
@@ -23,15 +23,15 @@ import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
 /** Generated Model for LCO_Conversion
- *  @author Adempiere (generated) 
- *  @version Release 3.6.0LTS - $Id$ */
+ *  @author iDempiere (generated) 
+ *  @version Release 1.0c - $Id$ */
 public class X_LCO_Conversion extends PO implements I_LCO_Conversion, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20100617L;
+	private static final long serialVersionUID = 20130807L;
 
     /** Standard Constructor */
     public X_LCO_Conversion (Properties ctx, int LCO_Conversion_ID, String trxName)
@@ -74,9 +74,9 @@ public class X_LCO_Conversion extends PO implements I_LCO_Conversion, I_Persiste
       return sb.toString();
     }
 
-	public I_AD_Column getAD_Column() throws RuntimeException
+	public org.compiere.model.I_AD_Column getAD_Column() throws RuntimeException
     {
-		return (I_AD_Column)MTable.get(getCtx(), I_AD_Column.Table_Name)
+		return (org.compiere.model.I_AD_Column)MTable.get(getCtx(), org.compiere.model.I_AD_Column.Table_Name)
 			.getPO(getAD_Column_ID(), get_TrxName());	}
 
 	/** Set Column.
@@ -102,9 +102,9 @@ public class X_LCO_Conversion extends PO implements I_LCO_Conversion, I_Persiste
 		return ii.intValue();
 	}
 
-	public I_AD_Table getAD_Table() throws RuntimeException
+	public org.compiere.model.I_AD_Table getAD_Table() throws RuntimeException
     {
-		return (I_AD_Table)MTable.get(getCtx(), I_AD_Table.Table_Name)
+		return (org.compiere.model.I_AD_Table)MTable.get(getCtx(), org.compiere.model.I_AD_Table.Table_Name)
 			.getPO(getAD_Table_ID(), get_TrxName());	}
 
 	/** Set Table.
@@ -148,6 +148,20 @@ public class X_LCO_Conversion extends PO implements I_LCO_Conversion, I_Persiste
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	/** Set LCO_Conversion_UU.
+		@param LCO_Conversion_UU LCO_Conversion_UU	  */
+	public void setLCO_Conversion_UU (String LCO_Conversion_UU)
+	{
+		set_Value (COLUMNNAME_LCO_Conversion_UU, LCO_Conversion_UU);
+	}
+
+	/** Get LCO_Conversion_UU.
+		@return LCO_Conversion_UU	  */
+	public String getLCO_Conversion_UU () 
+	{
+		return (String)get_Value(COLUMNNAME_LCO_Conversion_UU);
 	}
 
 	/** Set Name.

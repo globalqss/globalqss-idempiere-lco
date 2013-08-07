@@ -1,6 +1,6 @@
 /******************************************************************************
- * Product: Adempiere ERP & CRM Smart Business Solution                       *
- * Copyright (C) 1999-2007 ComPiere, Inc. All Rights Reserved.                *
+ * Product: iDempiere ERP & CRM Smart Business Solution                       *
+ * Copyright (C) 1999-2012 ComPiere, Inc. All Rights Reserved.                *
  * This program is free software, you can redistribute it and/or modify it    *
  * under the terms version 2 of the GNU General Public License as published   *
  * by the Free Software Foundation. This program is distributed in the hope   *
@@ -22,15 +22,15 @@ import java.util.Properties;
 import org.compiere.model.*;
 
 /** Generated Model for LCO_DIAN_ConceptSource
- *  @author Adempiere (generated) 
- *  @version Release 3.6.0LTS - $Id$ */
+ *  @author iDempiere (generated) 
+ *  @version Release 1.0c - $Id$ */
 public class X_LCO_DIAN_ConceptSource extends PO implements I_LCO_DIAN_ConceptSource, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20100617L;
+	private static final long serialVersionUID = 20130807L;
 
     /** Standard Constructor */
     public X_LCO_DIAN_ConceptSource (Properties ctx, int LCO_DIAN_ConceptSource_ID, String trxName)
@@ -88,9 +88,9 @@ public class X_LCO_DIAN_ConceptSource extends PO implements I_LCO_DIAN_ConceptSo
 		return ii.intValue();
 	}
 
-	public I_C_ElementValue getC_ElementValue() throws RuntimeException
+	public org.compiere.model.I_C_ElementValue getC_ElementValue() throws RuntimeException
     {
-		return (I_C_ElementValue)MTable.get(getCtx(), I_C_ElementValue.Table_Name)
+		return (org.compiere.model.I_C_ElementValue)MTable.get(getCtx(), org.compiere.model.I_C_ElementValue.Table_Name)
 			.getPO(getC_ElementValue_ID(), get_TrxName());	}
 
 	/** Set Account Element.
@@ -130,9 +130,9 @@ public class X_LCO_DIAN_ConceptSource extends PO implements I_LCO_DIAN_ConceptSo
 		return (String)get_Value(COLUMNNAME_FieldExpression);
 	}
 
-	public I_GL_Category getGL_Category() throws RuntimeException
+	public org.compiere.model.I_GL_Category getGL_Category() throws RuntimeException
     {
-		return (I_GL_Category)MTable.get(getCtx(), I_GL_Category.Table_Name)
+		return (org.compiere.model.I_GL_Category)MTable.get(getCtx(), org.compiere.model.I_GL_Category.Table_Name)
 			.getPO(getGL_Category_ID(), get_TrxName());	}
 
 	/** Set GL Category.
@@ -201,5 +201,19 @@ public class X_LCO_DIAN_ConceptSource extends PO implements I_LCO_DIAN_ConceptSo
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	/** Set LCO_DIAN_ConceptSource_UU.
+		@param LCO_DIAN_ConceptSource_UU LCO_DIAN_ConceptSource_UU	  */
+	public void setLCO_DIAN_ConceptSource_UU (String LCO_DIAN_ConceptSource_UU)
+	{
+		set_Value (COLUMNNAME_LCO_DIAN_ConceptSource_UU, LCO_DIAN_ConceptSource_UU);
+	}
+
+	/** Get LCO_DIAN_ConceptSource_UU.
+		@return LCO_DIAN_ConceptSource_UU	  */
+	public String getLCO_DIAN_ConceptSource_UU () 
+	{
+		return (String)get_Value(COLUMNNAME_LCO_DIAN_ConceptSource_UU);
 	}
 }

@@ -1,6 +1,6 @@
 /******************************************************************************
- * Product: Adempiere ERP & CRM Smart Business Solution                       *
- * Copyright (C) 1999-2007 ComPiere, Inc. All Rights Reserved.                *
+ * Product: iDempiere ERP & CRM Smart Business Solution                       *
+ * Copyright (C) 1999-2012 ComPiere, Inc. All Rights Reserved.                *
  * This program is free software, you can redistribute it and/or modify it    *
  * under the terms version 2 of the GNU General Public License as published   *
  * by the Free Software Foundation. This program is distributed in the hope   *
@@ -22,9 +22,10 @@ import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
 /** Generated Interface for LCO_WithholdingRuleConf
- *  @author Adempiere (generated) 
- *  @version Release 3.6.0LTS
+ *  @author iDempiere (generated) 
+ *  @version Release 1.0c
  */
+@SuppressWarnings("all")
 public interface I_LCO_WithholdingRuleConf 
 {
 
@@ -163,6 +164,15 @@ public interface I_LCO_WithholdingRuleConf
 
 	/** Get Is Use Withholding Category	  */
 	public boolean isUseWithholdingCategory();
+
+    /** Column name LCO_WithholdingRuleConf_UU */
+    public static final String COLUMNNAME_LCO_WithholdingRuleConf_UU = "LCO_WithholdingRuleConf_UU";
+
+	/** Set LCO_WithholdingRuleConf_UU	  */
+	public void setLCO_WithholdingRuleConf_UU (String LCO_WithholdingRuleConf_UU);
+
+	/** Get LCO_WithholdingRuleConf_UU	  */
+	public String getLCO_WithholdingRuleConf_UU();
 
     /** Column name LCO_WithholdingType_ID */
     public static final String COLUMNNAME_LCO_WithholdingType_ID = "LCO_WithholdingType_ID";

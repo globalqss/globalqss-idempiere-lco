@@ -1,6 +1,6 @@
 /******************************************************************************
- * Product: Adempiere ERP & CRM Smart Business Solution                       *
- * Copyright (C) 1999-2007 ComPiere, Inc. All Rights Reserved.                *
+ * Product: iDempiere ERP & CRM Smart Business Solution                       *
+ * Copyright (C) 1999-2012 ComPiere, Inc. All Rights Reserved.                *
  * This program is free software, you can redistribute it and/or modify it    *
  * under the terms version 2 of the GNU General Public License as published   *
  * by the Free Software Foundation. This program is distributed in the hope   *
@@ -22,15 +22,15 @@ import java.util.Properties;
 import org.compiere.model.*;
 
 /** Generated Model for LCO_WithholdingRuleConf
- *  @author Adempiere (generated) 
- *  @version Release 3.6.0LTS - $Id$ */
+ *  @author iDempiere (generated) 
+ *  @version Release 1.0c - $Id$ */
 public class X_LCO_WithholdingRuleConf extends PO implements I_LCO_WithholdingRuleConf, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20100617L;
+	private static final long serialVersionUID = 20130807L;
 
     /** Standard Constructor */
     public X_LCO_WithholdingRuleConf (Properties ctx, int LCO_WithholdingRuleConf_ID, String trxName)
@@ -236,6 +236,20 @@ public class X_LCO_WithholdingRuleConf extends PO implements I_LCO_WithholdingRu
 			return "Y".equals(oo);
 		}
 		return false;
+	}
+
+	/** Set LCO_WithholdingRuleConf_UU.
+		@param LCO_WithholdingRuleConf_UU LCO_WithholdingRuleConf_UU	  */
+	public void setLCO_WithholdingRuleConf_UU (String LCO_WithholdingRuleConf_UU)
+	{
+		set_Value (COLUMNNAME_LCO_WithholdingRuleConf_UU, LCO_WithholdingRuleConf_UU);
+	}
+
+	/** Get LCO_WithholdingRuleConf_UU.
+		@return LCO_WithholdingRuleConf_UU	  */
+	public String getLCO_WithholdingRuleConf_UU () 
+	{
+		return (String)get_Value(COLUMNNAME_LCO_WithholdingRuleConf_UU);
 	}
 
 	public org.globalqss.model.I_LCO_WithholdingType getLCO_WithholdingType() throws RuntimeException

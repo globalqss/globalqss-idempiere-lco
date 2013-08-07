@@ -1,6 +1,6 @@
 /******************************************************************************
- * Product: Adempiere ERP & CRM Smart Business Solution                       *
- * Copyright (C) 1999-2007 ComPiere, Inc. All Rights Reserved.                *
+ * Product: iDempiere ERP & CRM Smart Business Solution                       *
+ * Copyright (C) 1999-2012 ComPiere, Inc. All Rights Reserved.                *
  * This program is free software, you can redistribute it and/or modify it    *
  * under the terms version 2 of the GNU General Public License as published   *
  * by the Free Software Foundation. This program is distributed in the hope   *
@@ -22,16 +22,17 @@ import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
 /** Generated Interface for LCO_DIAN_Concept
- *  @author Adempiere (generated) 
- *  @version Release 3.6.0LTS
+ *  @author iDempiere (generated) 
+ *  @version Release 1.0c
  */
+@SuppressWarnings("all")
 public interface I_LCO_DIAN_Concept 
 {
 
     /** TableName=LCO_DIAN_Concept */
     public static final String Table_Name = "LCO_DIAN_Concept";
 
-    /** AD_Table_ID=1000010 */
+    /** AD_Table_ID=1000012 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -113,6 +114,15 @@ public interface I_LCO_DIAN_Concept
 
 	/** Get DIAN Concept	  */
 	public int getLCO_DIAN_Concept_ID();
+
+    /** Column name LCO_DIAN_Concept_UU */
+    public static final String COLUMNNAME_LCO_DIAN_Concept_UU = "LCO_DIAN_Concept_UU";
+
+	/** Set LCO_DIAN_Concept_UU	  */
+	public void setLCO_DIAN_Concept_UU (String LCO_DIAN_Concept_UU);
+
+	/** Get LCO_DIAN_Concept_UU	  */
+	public String getLCO_DIAN_Concept_UU();
 
     /** Column name Name */
     public static final String COLUMNNAME_Name = "Name";

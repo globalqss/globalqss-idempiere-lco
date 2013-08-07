@@ -1,6 +1,6 @@
 /******************************************************************************
- * Product: Adempiere ERP & CRM Smart Business Solution                       *
- * Copyright (C) 1999-2007 ComPiere, Inc. All Rights Reserved.                *
+ * Product: iDempiere ERP & CRM Smart Business Solution                       *
+ * Copyright (C) 1999-2012 ComPiere, Inc. All Rights Reserved.                *
  * This program is free software, you can redistribute it and/or modify it    *
  * under the terms version 2 of the GNU General Public License as published   *
  * by the Free Software Foundation. This program is distributed in the hope   *
@@ -22,9 +22,10 @@ import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
 /** Generated Interface for LCO_WithholdingRule
- *  @author Adempiere (generated) 
- *  @version Release 3.6.0LTS
+ *  @author iDempiere (generated) 
+ *  @version Release 1.0c
  */
+@SuppressWarnings("all")
 public interface I_LCO_WithholdingRule 
 {
 
@@ -92,7 +93,7 @@ public interface I_LCO_WithholdingRule
 	  */
 	public int getC_TaxCategory_ID();
 
-	public I_C_TaxCategory getC_TaxCategory() throws RuntimeException;
+	public org.compiere.model.I_C_TaxCategory getC_TaxCategory() throws RuntimeException;
 
     /** Column name Description */
     public static final String COLUMNNAME_Description = "Description";
@@ -214,7 +215,7 @@ public interface I_LCO_WithholdingRule
 	/** Get City Business Partner	  */
 	public int getLCO_BP_City_ID();
 
-	public I_C_City getLCO_BP_City() throws RuntimeException;
+	public org.compiere.model.I_C_City getLCO_BP_City() throws RuntimeException;
 
     /** Column name LCO_BP_ISIC_ID */
     public static final String COLUMNNAME_LCO_BP_ISIC_ID = "LCO_BP_ISIC_ID";
@@ -247,7 +248,7 @@ public interface I_LCO_WithholdingRule
 	/** Get City Organization	  */
 	public int getLCO_Org_City_ID();
 
-	public I_C_City getLCO_Org_City() throws RuntimeException;
+	public org.compiere.model.I_C_City getLCO_Org_City() throws RuntimeException;
 
     /** Column name LCO_Org_ISIC_ID */
     public static final String COLUMNNAME_LCO_Org_ISIC_ID = "LCO_Org_ISIC_ID";
@@ -301,6 +302,15 @@ public interface I_LCO_WithholdingRule
 
 	/** Get Withholding Rule	  */
 	public int getLCO_WithholdingRule_ID();
+
+    /** Column name LCO_WithholdingRule_UU */
+    public static final String COLUMNNAME_LCO_WithholdingRule_UU = "LCO_WithholdingRule_UU";
+
+	/** Set LCO_WithholdingRule_UU	  */
+	public void setLCO_WithholdingRule_UU (String LCO_WithholdingRule_UU);
+
+	/** Get LCO_WithholdingRule_UU	  */
+	public String getLCO_WithholdingRule_UU();
 
     /** Column name LCO_WithholdingType_ID */
     public static final String COLUMNNAME_LCO_WithholdingType_ID = "LCO_WithholdingType_ID";

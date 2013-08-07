@@ -1,6 +1,6 @@
 /******************************************************************************
- * Product: Adempiere ERP & CRM Smart Business Solution                       *
- * Copyright (C) 1999-2007 ComPiere, Inc. All Rights Reserved.                *
+ * Product: iDempiere ERP & CRM Smart Business Solution                       *
+ * Copyright (C) 1999-2012 ComPiere, Inc. All Rights Reserved.                *
  * This program is free software, you can redistribute it and/or modify it    *
  * under the terms version 2 of the GNU General Public License as published   *
  * by the Free Software Foundation. This program is distributed in the hope   *
@@ -22,16 +22,17 @@ import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
 /** Generated Interface for LCO_Conversion
- *  @author Adempiere (generated) 
- *  @version Release 3.6.0LTS
+ *  @author iDempiere (generated) 
+ *  @version Release 1.0c
  */
+@SuppressWarnings("all")
 public interface I_LCO_Conversion 
 {
 
     /** TableName=LCO_Conversion */
     public static final String Table_Name = "LCO_Conversion";
 
-    /** AD_Table_ID=1000018 */
+    /** AD_Table_ID=1000020 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -63,7 +64,7 @@ public interface I_LCO_Conversion
 	  */
 	public int getAD_Column_ID();
 
-	public I_AD_Column getAD_Column() throws RuntimeException;
+	public org.compiere.model.I_AD_Column getAD_Column() throws RuntimeException;
 
     /** Column name AD_Org_ID */
     public static final String COLUMNNAME_AD_Org_ID = "AD_Org_ID";
@@ -91,7 +92,7 @@ public interface I_LCO_Conversion
 	  */
 	public int getAD_Table_ID();
 
-	public I_AD_Table getAD_Table() throws RuntimeException;
+	public org.compiere.model.I_AD_Table getAD_Table() throws RuntimeException;
 
     /** Column name Created */
     public static final String COLUMNNAME_Created = "Created";
@@ -130,6 +131,15 @@ public interface I_LCO_Conversion
 
 	/** Get LCO_Conversion	  */
 	public int getLCO_Conversion_ID();
+
+    /** Column name LCO_Conversion_UU */
+    public static final String COLUMNNAME_LCO_Conversion_UU = "LCO_Conversion_UU";
+
+	/** Set LCO_Conversion_UU	  */
+	public void setLCO_Conversion_UU (String LCO_Conversion_UU);
+
+	/** Get LCO_Conversion_UU	  */
+	public String getLCO_Conversion_UU();
 
     /** Column name Name */
     public static final String COLUMNNAME_Name = "Name";
