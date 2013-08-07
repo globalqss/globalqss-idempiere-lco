@@ -1,6 +1,6 @@
 /******************************************************************************
- * Product: Adempiere ERP & CRM Smart Business Solution                       *
- * Copyright (C) 1999-2007 ComPiere, Inc. All Rights Reserved.                *
+ * Product: iDempiere ERP & CRM Smart Business Solution                       *
+ * Copyright (C) 1999-2012 ComPiere, Inc. All Rights Reserved.                *
  * This program is free software, you can redistribute it and/or modify it    *
  * under the terms version 2 of the GNU General Public License as published   *
  * by the Free Software Foundation. This program is distributed in the hope   *
@@ -24,15 +24,15 @@ import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
 /** Generated Model for LCO_DIAN_SendSchedule
- *  @author Adempiere (generated) 
- *  @version Release 3.6.0LTS - $Id$ */
+ *  @author iDempiere (generated) 
+ *  @version Release 1.0c - $Id$ */
 public class X_LCO_DIAN_SendSchedule extends PO implements I_LCO_DIAN_SendSchedule, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20100617L;
+	private static final long serialVersionUID = 20130807L;
 
     /** Standard Constructor */
     public X_LCO_DIAN_SendSchedule (Properties ctx, int LCO_DIAN_SendSchedule_ID, String trxName)
@@ -78,9 +78,9 @@ public class X_LCO_DIAN_SendSchedule extends PO implements I_LCO_DIAN_SendSchedu
       return sb.toString();
     }
 
-	public I_C_Year getC_Year() throws RuntimeException
+	public org.compiere.model.I_C_Year getC_Year() throws RuntimeException
     {
-		return (I_C_Year)MTable.get(getCtx(), I_C_Year.Table_Name)
+		return (org.compiere.model.I_C_Year)MTable.get(getCtx(), org.compiere.model.I_C_Year.Table_Name)
 			.getPO(getC_Year_ID(), get_TrxName());	}
 
 	/** Set Year.
@@ -214,6 +214,20 @@ public class X_LCO_DIAN_SendSchedule extends PO implements I_LCO_DIAN_SendSchedu
 		return ii.intValue();
 	}
 
+	/** Set LCO_DIAN_SendSchedule_UU.
+		@param LCO_DIAN_SendSchedule_UU LCO_DIAN_SendSchedule_UU	  */
+	public void setLCO_DIAN_SendSchedule_UU (String LCO_DIAN_SendSchedule_UU)
+	{
+		set_Value (COLUMNNAME_LCO_DIAN_SendSchedule_UU, LCO_DIAN_SendSchedule_UU);
+	}
+
+	/** Get LCO_DIAN_SendSchedule_UU.
+		@return LCO_DIAN_SendSchedule_UU	  */
+	public String getLCO_DIAN_SendSchedule_UU () 
+	{
+		return (String)get_Value(COLUMNNAME_LCO_DIAN_SendSchedule_UU);
+	}
+
 	/** Set Process Content.
 		@param ProcessContent Process Content	  */
 	public void setProcessContent (String ProcessContent)
@@ -252,8 +266,6 @@ public class X_LCO_DIAN_SendSchedule extends PO implements I_LCO_DIAN_SendSchedu
 		return false;
 	}
 
-	/** SendConceptCode AD_Reference_ID=1000006 */
-	public static final int SENDCONCEPTCODE_AD_Reference_ID=1000006;
 	/** Insertion = 1 */
 	public static final String SENDCONCEPTCODE_Insertion = "1";
 	/** Substitution = 2 */

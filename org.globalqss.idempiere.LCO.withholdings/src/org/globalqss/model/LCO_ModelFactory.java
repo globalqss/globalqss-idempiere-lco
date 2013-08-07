@@ -49,8 +49,6 @@ public class LCO_ModelFactory implements IModelFactory {
 			return X_LCO_DIAN_FieldFormat.class;
 		if (tableName.equals("LCO_DIAN_Format"))
 			return MLCODIANFormat.class;
-		if (tableName.equals("LCO_DIAN_MediaFile"))
-			return X_LCO_DIAN_MediaFile.class;
 		if (tableName.equals("LCO_DIAN_SendSchedule"))
 			return X_LCO_DIAN_SendSchedule.class;
 		if (tableName.equals("LCO_DIAN_SendScheduleLine"))
@@ -96,8 +94,6 @@ public class LCO_ModelFactory implements IModelFactory {
 			return new X_LCO_DIAN_FieldFormat(Env.getCtx(), Record_ID, trxName);
 		if (tableName.equals("LCO_DIAN_Format"))
 			return new MLCODIANFormat(Env.getCtx(), Record_ID, trxName);
-		if (tableName.equals("LCO_DIAN_MediaFile"))
-			return new X_LCO_DIAN_MediaFile(Env.getCtx(), Record_ID, trxName);
 		if (tableName.equals("LCO_DIAN_SendSchedule"))
 			return new X_LCO_DIAN_SendSchedule(Env.getCtx(), Record_ID, trxName);
 		if (tableName.equals("LCO_DIAN_SendScheduleLine"))
@@ -143,8 +139,6 @@ public class LCO_ModelFactory implements IModelFactory {
 			return new X_LCO_DIAN_FieldFormat(Env.getCtx(), rs, trxName);
 		if (tableName.equals("LCO_DIAN_Format"))
 			return new MLCODIANFormat(Env.getCtx(), rs, trxName);
-		if (tableName.equals("LCO_DIAN_MediaFile"))
-			return new X_LCO_DIAN_MediaFile(Env.getCtx(), rs, trxName);
 		if (tableName.equals("LCO_DIAN_SendSchedule"))
 			return new X_LCO_DIAN_SendSchedule(Env.getCtx(), rs, trxName);
 		if (tableName.equals("LCO_DIAN_SendScheduleLine"))

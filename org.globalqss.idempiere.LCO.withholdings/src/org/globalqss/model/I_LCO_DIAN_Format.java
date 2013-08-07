@@ -1,6 +1,6 @@
 /******************************************************************************
- * Product: Adempiere ERP & CRM Smart Business Solution                       *
- * Copyright (C) 1999-2007 ComPiere, Inc. All Rights Reserved.                *
+ * Product: iDempiere ERP & CRM Smart Business Solution                       *
+ * Copyright (C) 1999-2012 ComPiere, Inc. All Rights Reserved.                *
  * This program is free software, you can redistribute it and/or modify it    *
  * under the terms version 2 of the GNU General Public License as published   *
  * by the Free Software Foundation. This program is distributed in the hope   *
@@ -22,16 +22,17 @@ import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
 /** Generated Interface for LCO_DIAN_Format
- *  @author Adempiere (generated) 
- *  @version 360LTS.010_P20110222
+ *  @author iDempiere (generated) 
+ *  @version Release 1.0c
  */
+@SuppressWarnings("all")
 public interface I_LCO_DIAN_Format 
 {
 
     /** TableName=LCO_DIAN_Format */
     public static final String Table_Name = "LCO_DIAN_Format";
 
-    /** AD_Table_ID=5000028 */
+    /** AD_Table_ID=1000014 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -76,7 +77,7 @@ public interface I_LCO_DIAN_Format
 	  */
 	public int getAD_Sequence_ID();
 
-	public I_AD_Sequence getAD_Sequence() throws RuntimeException;
+	public org.compiere.model.I_AD_Sequence getAD_Sequence() throws RuntimeException;
 
     /** Column name C_AcctSchema_ID */
     public static final String COLUMNNAME_C_AcctSchema_ID = "C_AcctSchema_ID";
@@ -91,7 +92,7 @@ public interface I_LCO_DIAN_Format
 	  */
 	public int getC_AcctSchema_ID();
 
-	public I_C_AcctSchema getC_AcctSchema() throws RuntimeException;
+	public org.compiere.model.I_C_AcctSchema getC_AcctSchema() throws RuntimeException;
 
     /** Column name Created */
     public static final String COLUMNNAME_Created = "Created";
@@ -162,6 +163,15 @@ public interface I_LCO_DIAN_Format
 	/** Get DIAN Format	  */
 	public int getLCO_DIAN_Format_ID();
 
+    /** Column name LCO_DIAN_Format_UU */
+    public static final String COLUMNNAME_LCO_DIAN_Format_UU = "LCO_DIAN_Format_UU";
+
+	/** Set LCO_DIAN_Format_UU	  */
+	public void setLCO_DIAN_Format_UU (String LCO_DIAN_Format_UU);
+
+	/** Get LCO_DIAN_Format_UU	  */
+	public String getLCO_DIAN_Format_UU();
+
     /** Column name LCO_DIAN_XMLPrintLabel_ID */
     public static final String COLUMNNAME_LCO_DIAN_XMLPrintLabel_ID = "LCO_DIAN_XMLPrintLabel_ID";
 
@@ -171,7 +181,7 @@ public interface I_LCO_DIAN_Format
 	/** Get DIAN XML Print Label	  */
 	public int getLCO_DIAN_XMLPrintLabel_ID();
 
-	public I_LCO_DIAN_XMLPrintLabel getLCO_DIAN_XMLPrintLabel() throws RuntimeException;
+	public org.globalqss.model.I_LCO_DIAN_XMLPrintLabel getLCO_DIAN_XMLPrintLabel() throws RuntimeException;
 
     /** Column name MaxXMLRecords */
     public static final String COLUMNNAME_MaxXMLRecords = "MaxXMLRecords";
@@ -208,7 +218,7 @@ public interface I_LCO_DIAN_Format
 	  */
 	public int getPA_Hierarchy_ID();
 
-	public I_PA_Hierarchy getPA_Hierarchy() throws RuntimeException;
+	public org.compiere.model.I_PA_Hierarchy getPA_Hierarchy() throws RuntimeException;
 
     /** Column name PostProcessClass */
     public static final String COLUMNNAME_PostProcessClass = "PostProcessClass";

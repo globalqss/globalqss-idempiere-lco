@@ -1,6 +1,6 @@
 /******************************************************************************
- * Product: Adempiere ERP & CRM Smart Business Solution                       *
- * Copyright (C) 1999-2007 ComPiere, Inc. All Rights Reserved.                *
+ * Product: iDempiere ERP & CRM Smart Business Solution                       *
+ * Copyright (C) 1999-2012 ComPiere, Inc. All Rights Reserved.                *
  * This program is free software, you can redistribute it and/or modify it    *
  * under the terms version 2 of the GNU General Public License as published   *
  * by the Free Software Foundation. This program is distributed in the hope   *
@@ -24,15 +24,15 @@ import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
 /** Generated Model for LCO_WithholdingRule
- *  @author Adempiere (generated) 
- *  @version Release 3.6.0LTS - $Id$ */
+ *  @author iDempiere (generated) 
+ *  @version Release 1.0c - $Id$ */
 public class X_LCO_WithholdingRule extends PO implements I_LCO_WithholdingRule, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20100617L;
+	private static final long serialVersionUID = 20130807L;
 
     /** Standard Constructor */
     public X_LCO_WithholdingRule (Properties ctx, int LCO_WithholdingRule_ID, String trxName)
@@ -74,9 +74,9 @@ public class X_LCO_WithholdingRule extends PO implements I_LCO_WithholdingRule, 
       return sb.toString();
     }
 
-	public I_C_TaxCategory getC_TaxCategory() throws RuntimeException
+	public org.compiere.model.I_C_TaxCategory getC_TaxCategory() throws RuntimeException
     {
-		return (I_C_TaxCategory)MTable.get(getCtx(), I_C_TaxCategory.Table_Name)
+		return (org.compiere.model.I_C_TaxCategory)MTable.get(getCtx(), org.compiere.model.I_C_TaxCategory.Table_Name)
 			.getPO(getC_TaxCategory_ID(), get_TrxName());	}
 
 	/** Set Tax Category.
@@ -303,9 +303,9 @@ public class X_LCO_WithholdingRule extends PO implements I_LCO_WithholdingRule, 
 		return false;
 	}
 
-	public I_C_City getLCO_BP_City() throws RuntimeException
+	public org.compiere.model.I_C_City getLCO_BP_City() throws RuntimeException
     {
-		return (I_C_City)MTable.get(getCtx(), I_C_City.Table_Name)
+		return (org.compiere.model.I_C_City)MTable.get(getCtx(), org.compiere.model.I_C_City.Table_Name)
 			.getPO(getLCO_BP_City_ID(), get_TrxName());	}
 
 	/** Set City Business Partner.
@@ -378,9 +378,9 @@ public class X_LCO_WithholdingRule extends PO implements I_LCO_WithholdingRule, 
 		return ii.intValue();
 	}
 
-	public I_C_City getLCO_Org_City() throws RuntimeException
+	public org.compiere.model.I_C_City getLCO_Org_City() throws RuntimeException
     {
-		return (I_C_City)MTable.get(getCtx(), I_C_City.Table_Name)
+		return (org.compiere.model.I_C_City)MTable.get(getCtx(), org.compiere.model.I_C_City.Table_Name)
 			.getPO(getLCO_Org_City_ID(), get_TrxName());	}
 
 	/** Set City Organization.
@@ -521,6 +521,20 @@ public class X_LCO_WithholdingRule extends PO implements I_LCO_WithholdingRule, 
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	/** Set LCO_WithholdingRule_UU.
+		@param LCO_WithholdingRule_UU LCO_WithholdingRule_UU	  */
+	public void setLCO_WithholdingRule_UU (String LCO_WithholdingRule_UU)
+	{
+		set_Value (COLUMNNAME_LCO_WithholdingRule_UU, LCO_WithholdingRule_UU);
+	}
+
+	/** Get LCO_WithholdingRule_UU.
+		@return LCO_WithholdingRule_UU	  */
+	public String getLCO_WithholdingRule_UU () 
+	{
+		return (String)get_Value(COLUMNNAME_LCO_WithholdingRule_UU);
 	}
 
 	public org.globalqss.model.I_LCO_WithholdingType getLCO_WithholdingType() throws RuntimeException

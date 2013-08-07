@@ -1,6 +1,6 @@
 /******************************************************************************
- * Product: Adempiere ERP & CRM Smart Business Solution                       *
- * Copyright (C) 1999-2007 ComPiere, Inc. All Rights Reserved.                *
+ * Product: iDempiere ERP & CRM Smart Business Solution                       *
+ * Copyright (C) 1999-2012 ComPiere, Inc. All Rights Reserved.                *
  * This program is free software, you can redistribute it and/or modify it    *
  * under the terms version 2 of the GNU General Public License as published   *
  * by the Free Software Foundation. This program is distributed in the hope   *
@@ -24,15 +24,15 @@ import org.compiere.model.*;
 import org.compiere.util.Env;
 
 /** Generated Model for LCO_DIAN_SendScheduleLine
- *  @author Adempiere (generated) 
- *  @version 360LTS.010_P20110222 - $Id$ */
+ *  @author iDempiere (generated) 
+ *  @version Release 1.0c - $Id$ */
 public class X_LCO_DIAN_SendScheduleLine extends PO implements I_LCO_DIAN_SendScheduleLine, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20110408L;
+	private static final long serialVersionUID = 20130807L;
 
     /** Standard Constructor */
     public X_LCO_DIAN_SendScheduleLine (Properties ctx, int LCO_DIAN_SendScheduleLine_ID, String trxName)
@@ -233,9 +233,9 @@ public class X_LCO_DIAN_SendScheduleLine extends PO implements I_LCO_DIAN_SendSc
 		return (String)get_Value(COLUMNNAME_AttributeNm9);
 	}
 
-	public I_C_BPartner getC_BPartner() throws RuntimeException
+	public org.compiere.model.I_C_BPartner getC_BPartner() throws RuntimeException
     {
-		return (I_C_BPartner)MTable.get(getCtx(), I_C_BPartner.Table_Name)
+		return (org.compiere.model.I_C_BPartner)MTable.get(getCtx(), org.compiere.model.I_C_BPartner.Table_Name)
 			.getPO(getC_BPartner_ID(), get_TrxName());	}
 
 	/** Set Business Partner .
@@ -261,9 +261,9 @@ public class X_LCO_DIAN_SendScheduleLine extends PO implements I_LCO_DIAN_SendSc
 		return ii.intValue();
 	}
 
-	public I_C_BPartner_Location getC_BPartner_Location() throws RuntimeException
+	public org.compiere.model.I_C_BPartner_Location getC_BPartner_Location() throws RuntimeException
     {
-		return (I_C_BPartner_Location)MTable.get(getCtx(), I_C_BPartner_Location.Table_Name)
+		return (org.compiere.model.I_C_BPartner_Location)MTable.get(getCtx(), org.compiere.model.I_C_BPartner_Location.Table_Name)
 			.getPO(getC_BPartner_Location_ID(), get_TrxName());	}
 
 	/** Set Partner Location.
@@ -289,9 +289,9 @@ public class X_LCO_DIAN_SendScheduleLine extends PO implements I_LCO_DIAN_SendSc
 		return ii.intValue();
 	}
 
-	public I_C_BPartner getC_BPartnerRelation() throws RuntimeException
+	public org.compiere.model.I_C_BPartner getC_BPartnerRelation() throws RuntimeException
     {
-		return (I_C_BPartner)MTable.get(getCtx(), I_C_BPartner.Table_Name)
+		return (org.compiere.model.I_C_BPartner)MTable.get(getCtx(), org.compiere.model.I_C_BPartner.Table_Name)
 			.getPO(getC_BPartnerRelation_ID(), get_TrxName());	}
 
 	/** Set Related Partner.
@@ -487,9 +487,9 @@ public class X_LCO_DIAN_SendScheduleLine extends PO implements I_LCO_DIAN_SendSc
 		return bd;
 	}
 
-	public I_LCO_DIAN_Concept getLCO_DIAN_Concept() throws RuntimeException
+	public org.globalqss.model.I_LCO_DIAN_Concept getLCO_DIAN_Concept() throws RuntimeException
     {
-		return (I_LCO_DIAN_Concept)MTable.get(getCtx(), I_LCO_DIAN_Concept.Table_Name)
+		return (org.globalqss.model.I_LCO_DIAN_Concept)MTable.get(getCtx(), org.globalqss.model.I_LCO_DIAN_Concept.Table_Name)
 			.getPO(getLCO_DIAN_Concept_ID(), get_TrxName());	}
 
 	/** Set DIAN Concept.
@@ -512,9 +512,9 @@ public class X_LCO_DIAN_SendScheduleLine extends PO implements I_LCO_DIAN_SendSc
 		return ii.intValue();
 	}
 
-	public I_LCO_DIAN_SendSchedule getLCO_DIAN_SendSchedule() throws RuntimeException
+	public org.globalqss.model.I_LCO_DIAN_SendSchedule getLCO_DIAN_SendSchedule() throws RuntimeException
     {
-		return (I_LCO_DIAN_SendSchedule)MTable.get(getCtx(), I_LCO_DIAN_SendSchedule.Table_Name)
+		return (org.globalqss.model.I_LCO_DIAN_SendSchedule)MTable.get(getCtx(), org.globalqss.model.I_LCO_DIAN_SendSchedule.Table_Name)
 			.getPO(getLCO_DIAN_SendSchedule_ID(), get_TrxName());	}
 
 	/** Set DIAN Send Schedule.
@@ -557,9 +557,23 @@ public class X_LCO_DIAN_SendScheduleLine extends PO implements I_LCO_DIAN_SendSc
 		return ii.intValue();
 	}
 
-	public I_LCO_DIAN_XML_Header getLCO_DIAN_XML_Header() throws RuntimeException
+	/** Set LCO_DIAN_SendScheduleLine_UU.
+		@param LCO_DIAN_SendScheduleLine_UU LCO_DIAN_SendScheduleLine_UU	  */
+	public void setLCO_DIAN_SendScheduleLine_UU (String LCO_DIAN_SendScheduleLine_UU)
+	{
+		set_Value (COLUMNNAME_LCO_DIAN_SendScheduleLine_UU, LCO_DIAN_SendScheduleLine_UU);
+	}
+
+	/** Get LCO_DIAN_SendScheduleLine_UU.
+		@return LCO_DIAN_SendScheduleLine_UU	  */
+	public String getLCO_DIAN_SendScheduleLine_UU () 
+	{
+		return (String)get_Value(COLUMNNAME_LCO_DIAN_SendScheduleLine_UU);
+	}
+
+	public org.globalqss.model.I_LCO_DIAN_XML_Header getLCO_DIAN_XML_Header() throws RuntimeException
     {
-		return (I_LCO_DIAN_XML_Header)MTable.get(getCtx(), I_LCO_DIAN_XML_Header.Table_Name)
+		return (org.globalqss.model.I_LCO_DIAN_XML_Header)MTable.get(getCtx(), org.globalqss.model.I_LCO_DIAN_XML_Header.Table_Name)
 			.getPO(getLCO_DIAN_XML_Header_ID(), get_TrxName());	}
 
 	/** Set DIAN XML Header.

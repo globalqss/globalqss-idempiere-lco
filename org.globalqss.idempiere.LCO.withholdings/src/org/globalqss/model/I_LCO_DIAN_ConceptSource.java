@@ -1,6 +1,6 @@
 /******************************************************************************
- * Product: Adempiere ERP & CRM Smart Business Solution                       *
- * Copyright (C) 1999-2007 ComPiere, Inc. All Rights Reserved.                *
+ * Product: iDempiere ERP & CRM Smart Business Solution                       *
+ * Copyright (C) 1999-2012 ComPiere, Inc. All Rights Reserved.                *
  * This program is free software, you can redistribute it and/or modify it    *
  * under the terms version 2 of the GNU General Public License as published   *
  * by the Free Software Foundation. This program is distributed in the hope   *
@@ -22,16 +22,17 @@ import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
 /** Generated Interface for LCO_DIAN_ConceptSource
- *  @author Adempiere (generated) 
- *  @version Release 3.6.0LTS
+ *  @author iDempiere (generated) 
+ *  @version Release 1.0c
  */
+@SuppressWarnings("all")
 public interface I_LCO_DIAN_ConceptSource 
 {
 
     /** TableName=LCO_DIAN_ConceptSource */
     public static final String Table_Name = "LCO_DIAN_ConceptSource";
 
-    /** AD_Table_ID=1000016 */
+    /** AD_Table_ID=1000018 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -85,7 +86,7 @@ public interface I_LCO_DIAN_ConceptSource
 	  */
 	public int getC_ElementValue_ID();
 
-	public I_C_ElementValue getC_ElementValue() throws RuntimeException;
+	public org.compiere.model.I_C_ElementValue getC_ElementValue() throws RuntimeException;
 
     /** Column name Created */
     public static final String COLUMNNAME_Created = "Created";
@@ -125,7 +126,7 @@ public interface I_LCO_DIAN_ConceptSource
 	  */
 	public int getGL_Category_ID();
 
-	public I_GL_Category getGL_Category() throws RuntimeException;
+	public org.compiere.model.I_GL_Category getGL_Category() throws RuntimeException;
 
     /** Column name IsActive */
     public static final String COLUMNNAME_IsActive = "IsActive";
@@ -159,6 +160,15 @@ public interface I_LCO_DIAN_ConceptSource
 
 	/** Get DIAN Concept Source	  */
 	public int getLCO_DIAN_ConceptSource_ID();
+
+    /** Column name LCO_DIAN_ConceptSource_UU */
+    public static final String COLUMNNAME_LCO_DIAN_ConceptSource_UU = "LCO_DIAN_ConceptSource_UU";
+
+	/** Set LCO_DIAN_ConceptSource_UU	  */
+	public void setLCO_DIAN_ConceptSource_UU (String LCO_DIAN_ConceptSource_UU);
+
+	/** Get LCO_DIAN_ConceptSource_UU	  */
+	public String getLCO_DIAN_ConceptSource_UU();
 
     /** Column name Updated */
     public static final String COLUMNNAME_Updated = "Updated";

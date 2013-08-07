@@ -1,6 +1,6 @@
 /******************************************************************************
- * Product: Adempiere ERP & CRM Smart Business Solution                       *
- * Copyright (C) 1999-2007 ComPiere, Inc. All Rights Reserved.                *
+ * Product: iDempiere ERP & CRM Smart Business Solution                       *
+ * Copyright (C) 1999-2012 ComPiere, Inc. All Rights Reserved.                *
  * This program is free software, you can redistribute it and/or modify it    *
  * under the terms version 2 of the GNU General Public License as published   *
  * by the Free Software Foundation. This program is distributed in the hope   *
@@ -22,15 +22,15 @@ import java.util.Properties;
 import org.compiere.model.*;
 
 /** Generated Model for LCO_DIAN_ConceptFormat
- *  @author Adempiere (generated) 
- *  @version Release 3.6.0LTS - $Id$ */
+ *  @author iDempiere (generated) 
+ *  @version Release 1.0c - $Id$ */
 public class X_LCO_DIAN_ConceptFormat extends PO implements I_LCO_DIAN_ConceptFormat, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20100617L;
+	private static final long serialVersionUID = 20130807L;
 
     /** Standard Constructor */
     public X_LCO_DIAN_ConceptFormat (Properties ctx, int LCO_DIAN_ConceptFormat_ID, String trxName)
@@ -88,6 +88,20 @@ public class X_LCO_DIAN_ConceptFormat extends PO implements I_LCO_DIAN_ConceptFo
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	/** Set LCO_DIAN_ConceptFormat_UU.
+		@param LCO_DIAN_ConceptFormat_UU LCO_DIAN_ConceptFormat_UU	  */
+	public void setLCO_DIAN_ConceptFormat_UU (String LCO_DIAN_ConceptFormat_UU)
+	{
+		set_Value (COLUMNNAME_LCO_DIAN_ConceptFormat_UU, LCO_DIAN_ConceptFormat_UU);
+	}
+
+	/** Get LCO_DIAN_ConceptFormat_UU.
+		@return LCO_DIAN_ConceptFormat_UU	  */
+	public String getLCO_DIAN_ConceptFormat_UU () 
+	{
+		return (String)get_Value(COLUMNNAME_LCO_DIAN_ConceptFormat_UU);
 	}
 
 	public org.globalqss.model.I_LCO_DIAN_Concept getLCO_DIAN_Concept() throws RuntimeException

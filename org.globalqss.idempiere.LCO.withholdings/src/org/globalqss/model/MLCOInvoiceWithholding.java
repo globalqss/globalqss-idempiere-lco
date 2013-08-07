@@ -35,6 +35,7 @@ public class MLCOInvoiceWithholding extends X_LCO_InvoiceWithholding
 	 */
 	private static final long serialVersionUID = -3086189821486687908L;
 	/**	Static Logger	*/
+	@SuppressWarnings("unused")
 	private static CLogger	s_log	= CLogger.getCLogger (MLCOInvoiceWithholding.class);
 
 	

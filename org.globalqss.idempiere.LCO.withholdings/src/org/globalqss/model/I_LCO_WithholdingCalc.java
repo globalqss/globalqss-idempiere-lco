@@ -1,6 +1,6 @@
 /******************************************************************************
- * Product: Adempiere ERP & CRM Smart Business Solution                       *
- * Copyright (C) 1999-2007 ComPiere, Inc. All Rights Reserved.                *
+ * Product: iDempiere ERP & CRM Smart Business Solution                       *
+ * Copyright (C) 1999-2012 ComPiere, Inc. All Rights Reserved.                *
  * This program is free software, you can redistribute it and/or modify it    *
  * under the terms version 2 of the GNU General Public License as published   *
  * by the Free Software Foundation. This program is distributed in the hope   *
@@ -22,9 +22,10 @@ import org.compiere.model.*;
 import org.compiere.util.KeyNamePair;
 
 /** Generated Interface for LCO_WithholdingCalc
- *  @author Adempiere (generated) 
- *  @version Release 3.6.0LTS
+ *  @author iDempiere (generated) 
+ *  @version Release 1.0c
  */
+@SuppressWarnings("all")
 public interface I_LCO_WithholdingCalc 
 {
 
@@ -90,7 +91,7 @@ public interface I_LCO_WithholdingCalc
 	/** Get Base Tax	  */
 	public int getC_BaseTax_ID();
 
-	public I_C_Tax getC_BaseTax() throws RuntimeException;
+	public org.compiere.model.I_C_Tax getC_BaseTax() throws RuntimeException;
 
     /** Column name Created */
     public static final String COLUMNNAME_Created = "Created";
@@ -121,7 +122,7 @@ public interface I_LCO_WithholdingCalc
 	  */
 	public int getC_Tax_ID();
 
-	public I_C_Tax getC_Tax() throws RuntimeException;
+	public org.compiere.model.I_C_Tax getC_Tax() throws RuntimeException;
 
     /** Column name Description */
     public static final String COLUMNNAME_Description = "Description";
@@ -184,6 +185,15 @@ public interface I_LCO_WithholdingCalc
 
 	/** Get Withholding Calculation	  */
 	public int getLCO_WithholdingCalc_ID();
+
+    /** Column name LCO_WithholdingCalc_UU */
+    public static final String COLUMNNAME_LCO_WithholdingCalc_UU = "LCO_WithholdingCalc_UU";
+
+	/** Set LCO_WithholdingCalc_UU	  */
+	public void setLCO_WithholdingCalc_UU (String LCO_WithholdingCalc_UU);
+
+	/** Get LCO_WithholdingCalc_UU	  */
+	public String getLCO_WithholdingCalc_UU();
 
     /** Column name LCO_WithholdingType_ID */
     public static final String COLUMNNAME_LCO_WithholdingType_ID = "LCO_WithholdingType_ID";

@@ -1,6 +1,6 @@
 /******************************************************************************
- * Product: Adempiere ERP & CRM Smart Business Solution                       *
- * Copyright (C) 1999-2007 ComPiere, Inc. All Rights Reserved.                *
+ * Product: iDempiere ERP & CRM Smart Business Solution                       *
+ * Copyright (C) 1999-2012 ComPiere, Inc. All Rights Reserved.                *
  * This program is free software, you can redistribute it and/or modify it    *
  * under the terms version 2 of the GNU General Public License as published   *
  * by the Free Software Foundation. This program is distributed in the hope   *
@@ -25,15 +25,15 @@ import org.compiere.util.Env;
 import org.compiere.util.KeyNamePair;
 
 /** Generated Model for LCO_WithholdingCalc
- *  @author Adempiere (generated) 
- *  @version Release 3.6.0LTS - $Id$ */
+ *  @author iDempiere (generated) 
+ *  @version Release 1.0c - $Id$ */
 public class X_LCO_WithholdingCalc extends PO implements I_LCO_WithholdingCalc, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20100617L;
+	private static final long serialVersionUID = 20130807L;
 
     /** Standard Constructor */
     public X_LCO_WithholdingCalc (Properties ctx, int LCO_WithholdingCalc_ID, String trxName)
@@ -92,8 +92,6 @@ public class X_LCO_WithholdingCalc extends PO implements I_LCO_WithholdingCalc, 
 		return bd;
 	}
 
-	/** BaseType AD_Reference_ID=1000000 */
-	public static final int BASETYPE_AD_Reference_ID=1000000;
 	/** Document = D */
 	public static final String BASETYPE_Document = "D";
 	/** Line = L */
@@ -115,9 +113,9 @@ public class X_LCO_WithholdingCalc extends PO implements I_LCO_WithholdingCalc, 
 		return (String)get_Value(COLUMNNAME_BaseType);
 	}
 
-	public I_C_Tax getC_BaseTax() throws RuntimeException
+	public org.compiere.model.I_C_Tax getC_BaseTax() throws RuntimeException
     {
-		return (I_C_Tax)MTable.get(getCtx(), I_C_Tax.Table_Name)
+		return (org.compiere.model.I_C_Tax)MTable.get(getCtx(), org.compiere.model.I_C_Tax.Table_Name)
 			.getPO(getC_BaseTax_ID(), get_TrxName());	}
 
 	/** Set Base Tax.
@@ -140,9 +138,9 @@ public class X_LCO_WithholdingCalc extends PO implements I_LCO_WithholdingCalc, 
 		return ii.intValue();
 	}
 
-	public I_C_Tax getC_Tax() throws RuntimeException
+	public org.compiere.model.I_C_Tax getC_Tax() throws RuntimeException
     {
-		return (I_C_Tax)MTable.get(getCtx(), I_C_Tax.Table_Name)
+		return (org.compiere.model.I_C_Tax)MTable.get(getCtx(), org.compiere.model.I_C_Tax.Table_Name)
 			.getPO(getC_Tax_ID(), get_TrxName());	}
 
 	/** Set Tax.
@@ -266,6 +264,20 @@ public class X_LCO_WithholdingCalc extends PO implements I_LCO_WithholdingCalc, 
 		if (ii == null)
 			 return 0;
 		return ii.intValue();
+	}
+
+	/** Set LCO_WithholdingCalc_UU.
+		@param LCO_WithholdingCalc_UU LCO_WithholdingCalc_UU	  */
+	public void setLCO_WithholdingCalc_UU (String LCO_WithholdingCalc_UU)
+	{
+		set_Value (COLUMNNAME_LCO_WithholdingCalc_UU, LCO_WithholdingCalc_UU);
+	}
+
+	/** Get LCO_WithholdingCalc_UU.
+		@return LCO_WithholdingCalc_UU	  */
+	public String getLCO_WithholdingCalc_UU () 
+	{
+		return (String)get_Value(COLUMNNAME_LCO_WithholdingCalc_UU);
 	}
 
 	public org.globalqss.model.I_LCO_WithholdingType getLCO_WithholdingType() throws RuntimeException
