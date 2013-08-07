@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="org.globalqss.model.LCO_ValidatorDN"
+         name="LCO_ValidatorDN"
+         point="org.adempiere.base.ModelValidator">
+      <listener
+            class="org.globalqss.model.LCO_ValidatorDN"
+            priority="0">
+      </listener>
+   </extension>
+   <extension
+         id="org.globalqss.model.LCO_Callouts"
+         name="LCO_Callouts"
+         point="org.compiere.model.Callout">
+      <callout
+            class="org.globalqss.model.LCO_Callouts"
+            prioriy="0">
+      </callout>
+   </extension>
+</plugin>
