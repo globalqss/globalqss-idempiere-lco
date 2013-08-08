@@ -62,7 +62,7 @@ public class LCO_ValidatorDN extends AbstractEventHandler
 		String msg;
 
 		// Check Digit based on TaxID
-		if (po.get_TableName().equals(MBPartner.Table_Name) && ( type == IEventTopics.PO_BEFORE_NEW || type == IEventTopics.PO_BEFORE_CHANGE))
+		if (po.get_TableName().equals(MBPartner.Table_Name) && ( type.equals(IEventTopics.PO_BEFORE_NEW) || type.equals(IEventTopics.PO_BEFORE_CHANGE)))
 		{
 			MBPartner bpartner = (MBPartner)po;
 			msg = mcheckTaxIdDigit(bpartner);
@@ -74,7 +74,7 @@ public class LCO_ValidatorDN extends AbstractEventHandler
 				throw new RuntimeException(msg);
 		}
 		
-		if (po.get_TableName().equals(X_LCO_TaxIdType.Table_Name) && ( type == IEventTopics.PO_BEFORE_NEW || type == IEventTopics.PO_BEFORE_CHANGE))
+		if (po.get_TableName().equals(X_LCO_TaxIdType.Table_Name) && ( type.equals(IEventTopics.PO_BEFORE_NEW) || type.equals(IEventTopics.PO_BEFORE_CHANGE)))
 		{
 			X_LCO_TaxIdType taxidtype = (X_LCO_TaxIdType) po;
 			if ((!taxidtype.isUseTaxIdDigit()) && taxidtype.isDigitChecked())
