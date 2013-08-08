@@ -19551,4 +19551,100 @@ There are two reasons for de-activating and not deleting records:
             </AD_Menu>
         </AD_Menu>
     </AD_Menu>
+    <SQLStatement type="custom">
+        <DBType>ALL</DBType>
+        <statement><![CDATA[COMMIT /* we need to commit here to avoid the rollback because the following statements will fail second time applying */]]></statement>
+    </SQLStatement>
+    <SQLStatement type="custom">
+        <DBType>ALL</DBType>
+        <statement><![CDATA[ALTER TABLE LCO_Conversion ADD CONSTRAINT ADColumn_LCOConversion FOREIGN KEY (AD_Column_ID) REFERENCES AD_Column DEFERRABLE INITIALLY DEFERRED]]></statement>
+    </SQLStatement>
+    <SQLStatement type="custom">
+        <DBType>ALL</DBType>
+        <statement><![CDATA[ALTER TABLE LCO_Conversion ADD CONSTRAINT ADTable_LCOConversion FOREIGN KEY (AD_Table_ID) REFERENCES AD_Table DEFERRABLE INITIALLY DEFERRED]]></statement>
+    </SQLStatement>
+    <SQLStatement type="custom">
+        <DBType>ALL</DBType>
+        <statement><![CDATA[ALTER TABLE LCO_ConversionCode ADD CONSTRAINT LCOConversion_LCOConversionCod FOREIGN KEY (LCO_Conversion_ID) REFERENCES LCO_Conversion DEFERRABLE INITIALLY DEFERRED]]></statement>
+    </SQLStatement>
+    <SQLStatement type="custom">
+        <DBType>ALL</DBType>
+        <statement><![CDATA[ALTER TABLE LCO_DIAN_ConceptFormat ADD CONSTRAINT LCODIANConcept_LCODIANConceptF FOREIGN KEY (LCO_DIAN_Concept_ID) REFERENCES LCO_DIAN_Concept DEFERRABLE INITIALLY DEFERRED]]></statement>
+    </SQLStatement>
+    <SQLStatement type="custom">
+        <DBType>ALL</DBType>
+        <statement><![CDATA[ALTER TABLE LCO_DIAN_ConceptFormat ADD CONSTRAINT LCODIANFormat_LCODIANConceptFo FOREIGN KEY (LCO_DIAN_Format_ID) REFERENCES LCO_DIAN_Format DEFERRABLE INITIALLY DEFERRED]]></statement>
+    </SQLStatement>
+    <SQLStatement type="custom">
+        <DBType>ALL</DBType>
+        <statement><![CDATA[ALTER TABLE LCO_DIAN_ConceptSource ADD CONSTRAINT CElementValue_LCODIANConceptSo FOREIGN KEY (C_ElementValue_ID) REFERENCES C_ElementValue DEFERRABLE INITIALLY DEFERRED]]></statement>
+    </SQLStatement>
+    <SQLStatement type="custom">
+        <DBType>ALL</DBType>
+        <statement><![CDATA[ALTER TABLE LCO_DIAN_ConceptSource ADD CONSTRAINT GLCategory_LCODIANConceptSourc FOREIGN KEY (GL_Category_ID) REFERENCES GL_Category DEFERRABLE INITIALLY DEFERRED]]></statement>
+    </SQLStatement>
+    <SQLStatement type="custom">
+        <DBType>ALL</DBType>
+        <statement><![CDATA[ALTER TABLE LCO_DIAN_ConceptSource ADD CONSTRAINT LCODIANConcept_LCODIANConceptS FOREIGN KEY (LCO_DIAN_Concept_ID) REFERENCES LCO_DIAN_Concept DEFERRABLE INITIALLY DEFERRED]]></statement>
+    </SQLStatement>
+    <SQLStatement type="custom">
+        <DBType>ALL</DBType>
+        <statement><![CDATA[ALTER TABLE LCO_DIAN_FieldFormat ADD CONSTRAINT LCODIANFormat_LCODIANFieldForm FOREIGN KEY (LCO_DIAN_Format_ID) REFERENCES LCO_DIAN_Format DEFERRABLE INITIALLY DEFERRED]]></statement>
+    </SQLStatement>
+    <SQLStatement type="custom">
+        <DBType>ALL</DBType>
+        <statement><![CDATA[ALTER TABLE LCO_DIAN_FieldFormat ADD CONSTRAINT LCODIANXMLPrintLabel_LCODIANFi FOREIGN KEY (LCO_DIAN_XMLPrintLabel_ID) REFERENCES LCO_DIAN_XMLPrintLabel DEFERRABLE INITIALLY DEFERRED]]></statement>
+    </SQLStatement>
+    <SQLStatement type="custom">
+        <DBType>ALL</DBType>
+        <statement><![CDATA[ALTER TABLE LCO_DIAN_Format ADD CONSTRAINT ADSequence_LCODIANFormat FOREIGN KEY (AD_Sequence_ID) REFERENCES AD_Sequence DEFERRABLE INITIALLY DEFERRED]]></statement>
+    </SQLStatement>
+    <SQLStatement type="custom">
+        <DBType>ALL</DBType>
+        <statement><![CDATA[ALTER TABLE LCO_DIAN_Format ADD CONSTRAINT CAcctSchema_LCODIANFormat FOREIGN KEY (C_AcctSchema_ID) REFERENCES C_AcctSchema DEFERRABLE INITIALLY DEFERRED]]></statement>
+    </SQLStatement>
+    <SQLStatement type="custom">
+        <DBType>ALL</DBType>
+        <statement><![CDATA[ALTER TABLE LCO_DIAN_Format ADD CONSTRAINT LCODIANXMLPrintLabel_LCODIANFo FOREIGN KEY (LCO_DIAN_XMLPrintLabel_ID) REFERENCES LCO_DIAN_XMLPrintLabel DEFERRABLE INITIALLY DEFERRED]]></statement>
+    </SQLStatement>
+    <SQLStatement type="custom">
+        <DBType>ALL</DBType>
+        <statement><![CDATA[ALTER TABLE LCO_DIAN_Format ADD CONSTRAINT PAHierarchy_LCODIANFormat FOREIGN KEY (PA_Hierarchy_ID) REFERENCES PA_Hierarchy DEFERRABLE INITIALLY DEFERRED]]></statement>
+    </SQLStatement>
+    <SQLStatement type="custom">
+        <DBType>ALL</DBType>
+        <statement><![CDATA[ALTER TABLE LCO_DIAN_SendSchedule ADD CONSTRAINT CYear_LCODIANSendSchedule FOREIGN KEY (C_Year_ID) REFERENCES C_Year DEFERRABLE INITIALLY DEFERRED]]></statement>
+    </SQLStatement>
+    <SQLStatement type="custom">
+        <DBType>ALL</DBType>
+        <statement><![CDATA[ALTER TABLE LCO_DIAN_SendSchedule ADD CONSTRAINT LCODIANFormat_LCODIANSendSched FOREIGN KEY (LCO_DIAN_Format_ID) REFERENCES LCO_DIAN_Format DEFERRABLE INITIALLY DEFERRED]]></statement>
+    </SQLStatement>
+    <SQLStatement type="custom">
+        <DBType>ALL</DBType>
+        <statement><![CDATA[ALTER TABLE LCO_DIAN_SendScheduleLine ADD CONSTRAINT CBPartner_LCODIANSendScheduleL FOREIGN KEY (C_BPartner_ID) REFERENCES C_BPartner DEFERRABLE INITIALLY DEFERRED]]></statement>
+    </SQLStatement>
+    <SQLStatement type="custom">
+        <DBType>ALL</DBType>
+        <statement><![CDATA[ALTER TABLE LCO_DIAN_SendScheduleLine ADD CONSTRAINT CBPartnerLocation_LCODIANSendS FOREIGN KEY (C_BPartner_Location_ID) REFERENCES C_BPartner_Location DEFERRABLE INITIALLY DEFERRED]]></statement>
+    </SQLStatement>
+    <SQLStatement type="custom">
+        <DBType>ALL</DBType>
+        <statement><![CDATA[ALTER TABLE LCO_DIAN_SendScheduleLine ADD CONSTRAINT CBPartnerRelation_LCODIANSendS FOREIGN KEY (C_BPartnerRelation_ID) REFERENCES C_BPartner DEFERRABLE INITIALLY DEFERRED]]></statement>
+    </SQLStatement>
+    <SQLStatement type="custom">
+        <DBType>ALL</DBType>
+        <statement><![CDATA[ALTER TABLE LCO_DIAN_SendScheduleLine ADD CONSTRAINT LCODIANConcept_LCODIANSendSche FOREIGN KEY (LCO_DIAN_Concept_ID) REFERENCES LCO_DIAN_Concept DEFERRABLE INITIALLY DEFERRED]]></statement>
+    </SQLStatement>
+    <SQLStatement type="custom">
+        <DBType>ALL</DBType>
+        <statement><![CDATA[ALTER TABLE LCO_DIAN_SendScheduleLine ADD CONSTRAINT LCODIANSendSchedule_LCODIANSen FOREIGN KEY (LCO_DIAN_SendSchedule_ID) REFERENCES LCO_DIAN_SendSchedule DEFERRABLE INITIALLY DEFERRED]]></statement>
+    </SQLStatement>
+    <SQLStatement type="custom">
+        <DBType>ALL</DBType>
+        <statement><![CDATA[ALTER TABLE LCO_DIAN_SendScheduleLine ADD CONSTRAINT LCODIANXMLHeader_LCODIANSendSc FOREIGN KEY (LCO_DIAN_XML_Header_ID) REFERENCES LCO_DIAN_XML_Header DEFERRABLE INITIALLY DEFERRED]]></statement>
+    </SQLStatement>
+    <SQLStatement type="custom">
+        <DBType>ALL</DBType>
+        <statement><![CDATA[ALTER TABLE LCO_DIAN_XML_Header ADD CONSTRAINT LCODIANSendSchedule_LCODIANXML FOREIGN KEY (LCO_DIAN_SendSchedule_ID) REFERENCES LCO_DIAN_SendSchedule DEFERRABLE INITIALLY DEFERRED]]></statement>
+    </SQLStatement>
 </idempiere>
