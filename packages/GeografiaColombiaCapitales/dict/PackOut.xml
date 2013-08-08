@@ -1,310 +1,757 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<adempiereAD Name="GeografiaColombiaCapitales" Version="1.0"
-	CompVer="all" DataBase="2007-04-01"
-	Description="Registro de regiones, y ciudades capitales de Colombia en Adempiere."
-	creator="Quality Systems &amp; Solutions - Carlos Ruiz" creatorcontact="info@globalqss.com"
-	createddate="2007-04-23" updateddate="2009-09-22" PackOutVer="005">
-	<adempieredata clientname="System">
-		<SQLStatement DBType="ALL"
-			statement="UPDATE ad_column SET isupdateable = 'Y' WHERE ad_column_id IN (866, 7057)" />
-		<dtable name="C_Region">
-			<drow name="ANTIOQUIA">
-				<dcolumn name="Description" class="String" value="05 - ANTIOQUIA" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="ATLÁNTICO">
-				<dcolumn name="Description" class="String" value="08 - ATLÁNTICO" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="D.C.">
-				<dcolumn name="Description" class="String" value="11 - D.C." />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-				<dcolumn name="IsDefault" class="Boolean" value="true" />
-			</drow>
-			<drow name="BOLÍVAR">
-				<dcolumn name="Description" class="String" value="13 - BOLÍVAR" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="BOYACÁ">
-				<dcolumn name="Description" class="String" value="15 - BOYACÁ" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="CALDAS">
-				<dcolumn name="Description" class="String" value="17 - CALDAS" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="CAQUETÁ">
-				<dcolumn name="Description" class="String" value="18 - CAQUETÁ" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="CAUCA">
-				<dcolumn name="Description" class="String" value="19 - CAUCA" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="CESAR">
-				<dcolumn name="Description" class="String" value="20 - CESAR" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="CÓRDOBA">
-				<dcolumn name="Description" class="String" value="23 - CÓRDOBA" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="CUNDINAMARCA">
-				<dcolumn name="Description" class="String" value="25 - CUNDINAMARCA" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="CHOCÓ">
-				<dcolumn name="Description" class="String" value="27 - CHOCÓ" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="HUILA">
-				<dcolumn name="Description" class="String" value="41 - HUILA" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="LA GUAJIRA">
-				<dcolumn name="Description" class="String" value="44 - LA GUAJIRA" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="MAGDALENA">
-				<dcolumn name="Description" class="String" value="47 - MAGDALENA" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="META">
-				<dcolumn name="Description" class="String" value="50 - META" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="NARIÑO">
-				<dcolumn name="Description" class="String" value="52 - NARIÑO" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="NORTE DE SANTANDER">
-				<dcolumn name="Description" class="String" value="54 - NORTE DE SANTANDER" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="QUINDÍO">
-				<dcolumn name="Description" class="String" value="63 - QUINDÍO" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="RISARALDA">
-				<dcolumn name="Description" class="String" value="66 - RISARALDA" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="SANTANDER">
-				<dcolumn name="Description" class="String" value="68 - SANTANDER" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="SUCRE">
-				<dcolumn name="Description" class="String" value="70 - SUCRE" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="TOLIMA">
-				<dcolumn name="Description" class="String" value="73 - TOLIMA" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="VALLE">
-				<dcolumn name="Description" class="String" value="76 - VALLE" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="ARAUCA">
-				<dcolumn name="Description" class="String" value="81 - ARAUCA" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="CASANARE">
-				<dcolumn name="Description" class="String" value="85 - CASANARE" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="PUTUMAYO">
-				<dcolumn name="Description" class="String" value="86 - PUTUMAYO" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="SAN ANDRÉS">
-				<dcolumn name="Description" class="String" value="88 - SAN ANDRÉS" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="AMAZONAS">
-				<dcolumn name="Description" class="String" value="91 - AMAZONAS" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="GUAINÍA">
-				<dcolumn name="Description" class="String" value="94 - GUAINÍA" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="GUAVIARE">
-				<dcolumn name="Description" class="String" value="95 - GUAVIARE" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="VAUPÉS">
-				<dcolumn name="Description" class="String" value="97 - VAUPÉS" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="VICHADA">
-				<dcolumn name="Description" class="String" value="99 - VICHADA" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-		</dtable>
-		<dtable name="C_City">
-			<drow name="MEDELLÍN">
-				<dcolumn name="C_Region_ID" lookupname="ANTIOQUIA" />
-				<dcolumn name="Postal" class="String" value="05001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="BARRANQUILLA">
-				<dcolumn name="C_Region_ID" lookupname="ATLÁNTICO" />
-				<dcolumn name="Postal" class="String" value="08001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="BOGOTÁ">
-				<dcolumn name="C_Region_ID" lookupname="D.C." />
-				<dcolumn name="Postal" class="String" value="11001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="CARTAGENA">
-				<dcolumn name="C_Region_ID" lookupname="BOLÍVAR" />
-				<dcolumn name="Postal" class="String" value="13001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="TUNJA">
-				<dcolumn name="C_Region_ID" lookupname="BOYACÁ" />
-				<dcolumn name="Postal" class="String" value="15001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="MANIZALES">
-				<dcolumn name="C_Region_ID" lookupname="CALDAS" />
-				<dcolumn name="Postal" class="String" value="17001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="FLORENCIA">
-				<dcolumn name="C_Region_ID" lookupname="CAQUETÁ" />
-				<dcolumn name="Postal" class="String" value="18001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="POPAYÁN">
-				<dcolumn name="C_Region_ID" lookupname="CAUCA" />
-				<dcolumn name="Postal" class="String" value="19001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="VALLEDUPAR">
-				<dcolumn name="C_Region_ID" lookupname="CESAR" />
-				<dcolumn name="Postal" class="String" value="20001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="MONTERÍA">
-				<dcolumn name="C_Region_ID" lookupname="CÓRDOBA" />
-				<dcolumn name="Postal" class="String" value="23001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="QUIBDÓ">
-				<dcolumn name="C_Region_ID" lookupname="CHOCÓ" />
-				<dcolumn name="Postal" class="String" value="27001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="NEIVA">
-				<dcolumn name="C_Region_ID" lookupname="HUILA" />
-				<dcolumn name="Postal" class="String" value="41001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="RIOHACHA">
-				<dcolumn name="C_Region_ID" lookupname="LA GUAJIRA" />
-				<dcolumn name="Postal" class="String" value="44001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="SANTA MARTA">
-				<dcolumn name="C_Region_ID" lookupname="MAGDALENA" />
-				<dcolumn name="Postal" class="String" value="47001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="VILLAVICENCIO">
-				<dcolumn name="C_Region_ID" lookupname="META" />
-				<dcolumn name="Postal" class="String" value="50001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="PASTO">
-				<dcolumn name="C_Region_ID" lookupname="NARIÑO" />
-				<dcolumn name="Postal" class="String" value="52001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="CÚCUTA">
-				<dcolumn name="C_Region_ID" lookupname="NORTE DE SANTANDER" />
-				<dcolumn name="Postal" class="String" value="54001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="ARMENIA">
-				<dcolumn name="C_Region_ID" lookupname="QUINDÍO" />
-				<dcolumn name="Postal" class="String" value="63001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="PEREIRA">
-				<dcolumn name="C_Region_ID" lookupname="RISARALDA" />
-				<dcolumn name="Postal" class="String" value="66001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="BUCARAMANGA">
-				<dcolumn name="C_Region_ID" lookupname="SANTANDER" />
-				<dcolumn name="Postal" class="String" value="68001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="SINCELEJO">
-				<dcolumn name="C_Region_ID" lookupname="SUCRE" />
-				<dcolumn name="Postal" class="String" value="70001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="IBAGUÉ">
-				<dcolumn name="C_Region_ID" lookupname="TOLIMA" />
-				<dcolumn name="Postal" class="String" value="73001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="CALI">
-				<dcolumn name="C_Region_ID" lookupname="VALLE" />
-				<dcolumn name="Postal" class="String" value="76001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="ARAUCA">
-				<dcolumn name="C_Region_ID" lookupname="ARAUCA" />
-				<dcolumn name="Postal" class="String" value="81001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="YOPAL">
-				<dcolumn name="C_Region_ID" lookupname="CASANARE" />
-				<dcolumn name="Postal" class="String" value="85001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="MOCOA">
-				<dcolumn name="C_Region_ID" lookupname="PUTUMAYO" />
-				<dcolumn name="Postal" class="String" value="86001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="SAN ANDRÉS">
-				<dcolumn name="C_Region_ID" lookupname="SAN ANDRÉS" />
-				<dcolumn name="Postal" class="String" value="88001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="LETICIA">
-				<dcolumn name="C_Region_ID" lookupname="AMAZONAS" />
-				<dcolumn name="Postal" class="String" value="91001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="INÍRIDA">
-				<dcolumn name="C_Region_ID" lookupname="GUAINÍA" />
-				<dcolumn name="Postal" class="String" value="94001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="SAN JOSÉ DEL GUAVIARE">
-				<dcolumn name="C_Region_ID" lookupname="GUAVIARE" />
-				<dcolumn name="Postal" class="String" value="95001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="MITÚ">
-				<dcolumn name="C_Region_ID" lookupname="VAUPÉS" />
-				<dcolumn name="Postal" class="String" value="97001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-			<drow name="PUERTO CARREÑO">
-				<dcolumn name="C_Region_ID" lookupname="VICHADA" />
-				<dcolumn name="Postal" class="String" value="99001" />
-				<dcolumn name="C_Country_ID" lookupname="Colombia" />
-			</drow>
-		</dtable>
-		<SQLStatement DBType="ALL"
-			statement="UPDATE ad_column SET isupdateable = 'N' WHERE ad_column_id IN (866, 7057)" />
-	</adempieredata>
-</adempiereAD>
+<idempiere Name="GeografiaColombiaCapitales" Version="1.0" idempiereVersion="" DataBaseVersion="" Description="Geografía Capitales Colombia" Author="" AuthorEmail="info@globalqss.com" CreatedDate="2013-08-08 11:56:37.264" UpdatedDate="2013-08-08 11:59:47.859" PackOutVersion="100" Client="0-SYSTEM-System">
+    <SQLStatement type="custom">
+        <DBType>ALL</DBType>
+        <statement><![CDATA[UPDATE ad_column SET isupdateable = 'Y' WHERE ad_column_id IN (866, 7057)]]></statement>
+    </SQLStatement>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>05 - ANTIOQUIA</Description>
+        <Name>ANTIOQUIA</Name>
+        <C_Region_UU>37375263-310e-4d02-8898-2a816b325c38</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>08 - ATLÁNTICO</Description>
+        <Name>ATLÁNTICO</Name>
+        <C_Region_UU>e34f6000-5511-4027-8e1e-3b697569520f</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>true</IsDefault>
+        <Description>11 - D.C.</Description>
+        <Name>D.C.</Name>
+        <C_Region_UU>eda02e6d-0ff6-4f40-9073-4d9a0e7c7cd1</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>13 - BOLÍVAR</Description>
+        <Name>BOLÍVAR</Name>
+        <C_Region_UU>296ca964-4037-419d-8680-003dab587c74</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>15 - BOYACÁ</Description>
+        <Name>BOYACÁ</Name>
+        <C_Region_UU>d3361c61-1e78-4899-9281-06b80670c25d</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>17 - CALDAS</Description>
+        <Name>CALDAS</Name>
+        <C_Region_UU>fc89a575-3b4b-49c2-8d43-b92ecc9fae69</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>18 - CAQUETÁ</Description>
+        <Name>CAQUETÁ</Name>
+        <C_Region_UU>fd10aa38-9b97-4a4d-af2b-8b8493101c6c</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>19 - CAUCA</Description>
+        <Name>CAUCA</Name>
+        <C_Region_UU>d73f44bc-2a0a-4241-a7df-4f953b7541df</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>20 - CESAR</Description>
+        <Name>CESAR</Name>
+        <C_Region_UU>c4e51844-76f9-4334-9c9c-b3c1b2863641</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>23 - CÓRDOBA</Description>
+        <Name>CÓRDOBA</Name>
+        <C_Region_UU>af5c45f8-6dae-405d-bcd6-fc625af97645</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>25 - CUNDINAMARCA</Description>
+        <Name>CUNDINAMARCA</Name>
+        <C_Region_UU>f1a4ea81-c52c-4861-87c3-ac9f576b9025</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>27 - CHOCÓ</Description>
+        <Name>CHOCÓ</Name>
+        <C_Region_UU>76942396-3fee-4968-b7ab-34da5b0ce1e4</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>41 - HUILA</Description>
+        <Name>HUILA</Name>
+        <C_Region_UU>d6837959-4eea-492a-9682-1c147f565001</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>44 - LA GUAJIRA</Description>
+        <Name>LA GUAJIRA</Name>
+        <C_Region_UU>68f64691-e6ee-4751-aab9-3ac8fd09bab8</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>47 - MAGDALENA</Description>
+        <Name>MAGDALENA</Name>
+        <C_Region_UU>67717ed1-eb80-4a39-8d6d-d4fb7e8bf4f0</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>50 - META</Description>
+        <Name>META</Name>
+        <C_Region_UU>a14dadca-8cad-4afa-9b63-05020874b89f</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>52 - NARIÑO</Description>
+        <Name>NARIÑO</Name>
+        <C_Region_UU>0f101b83-c041-4d9c-9351-ad71d9a09fe0</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>54 - NORTE DE SANTANDER</Description>
+        <Name>NORTE DE SANTANDER</Name>
+        <C_Region_UU>21782e7c-e79e-40be-b7e1-ca5fff2406df</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>63 - QUINDÍO</Description>
+        <Name>QUINDÍO</Name>
+        <C_Region_UU>1cfa1f8e-56bd-4284-86ef-d541681fd93c</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>66 - RISARALDA</Description>
+        <Name>RISARALDA</Name>
+        <C_Region_UU>436807e8-70c7-49ac-9531-0344ac724b50</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>68 - SANTANDER</Description>
+        <Name>SANTANDER</Name>
+        <C_Region_UU>04ba142c-c430-4716-ae33-9a19c5df4434</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>70 - SUCRE</Description>
+        <Name>SUCRE</Name>
+        <C_Region_UU>deee0c36-ba46-4423-92fa-73c38983a6f1</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>73 - TOLIMA</Description>
+        <Name>TOLIMA</Name>
+        <C_Region_UU>a36c60d0-d472-4cd8-b55a-646cb701db0c</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>76 - VALLE</Description>
+        <Name>VALLE</Name>
+        <C_Region_UU>8c73c3ec-1777-4b6a-85bf-adc020ef8296</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>81 - ARAUCA</Description>
+        <Name>ARAUCA</Name>
+        <C_Region_UU>a06f94e6-79be-4f30-b0e7-4b89ee772128</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>85 - CASANARE</Description>
+        <Name>CASANARE</Name>
+        <C_Region_UU>e707706d-ed1c-4949-a261-f9d3cf46a9f9</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>86 - PUTUMAYO</Description>
+        <Name>PUTUMAYO</Name>
+        <C_Region_UU>64dcf5ef-78be-44bd-a08e-652d75eda922</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>88 - SAN ANDRÉS</Description>
+        <Name>SAN ANDRÉS</Name>
+        <C_Region_UU>3bca93ee-a8e9-45f3-bc44-779765e5d6d8</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>91 - AMAZONAS</Description>
+        <Name>AMAZONAS</Name>
+        <C_Region_UU>8c3da3cc-9b16-4b1e-aafc-f06b5bdea8d5</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>94 - GUAINÍA</Description>
+        <Name>GUAINÍA</Name>
+        <C_Region_UU>a1804300-649b-42e7-94cc-16dd3f96783e</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>95 - GUAVIARE</Description>
+        <Name>GUAVIARE</Name>
+        <C_Region_UU>af2ada76-13e4-476c-a1ad-698fec933a79</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>97 - VAUPÉS</Description>
+        <Name>VAUPÉS</Name>
+        <C_Region_UU>74e8e4d6-9aca-4399-a057-9e5b27e63ec1</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_Region type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <IsDefault>false</IsDefault>
+        <Description>99 - VICHADA</Description>
+        <Name>VICHADA</Name>
+        <C_Region_UU>1d2c330b-b712-44e3-adea-568519f02356</C_Region_UU>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_Region>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>05001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">37375263-310e-4d02-8898-2a816b325c38</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>96b09a53-0ca3-4f07-9abf-67bbe3932b62</C_City_UU>
+        <Name>MEDELLÍN</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>08001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">e34f6000-5511-4027-8e1e-3b697569520f</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>98cf23b4-76ad-4fa2-9b59-bf9e228595c7</C_City_UU>
+        <Name>BARRANQUILLA</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>11001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">eda02e6d-0ff6-4f40-9073-4d9a0e7c7cd1</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>e98cfa8a-efdb-482c-baab-fbc7d775f125</C_City_UU>
+        <Name>BOGOTÁ</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>13001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">296ca964-4037-419d-8680-003dab587c74</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>3cab5593-5fcb-4186-8c6c-2d7fecdac9aa</C_City_UU>
+        <Name>CARTAGENA</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>15001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">d3361c61-1e78-4899-9281-06b80670c25d</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>f224b130-9f4a-4eb1-834a-a6235b592816</C_City_UU>
+        <Name>TUNJA</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>17001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">fc89a575-3b4b-49c2-8d43-b92ecc9fae69</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>7bc86e6e-4eaf-4b81-9b90-9fc437c9a95c</C_City_UU>
+        <Name>MANIZALES</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>18001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">fd10aa38-9b97-4a4d-af2b-8b8493101c6c</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>65fdab2c-c746-46ec-8bfa-2b480a49a073</C_City_UU>
+        <Name>FLORENCIA</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>19001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">d73f44bc-2a0a-4241-a7df-4f953b7541df</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>1eadabac-caf3-4620-b1f9-cb78af520e12</C_City_UU>
+        <Name>POPAYÁN</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>20001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">c4e51844-76f9-4334-9c9c-b3c1b2863641</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>a81a2ced-60a5-4416-95eb-3e0c0fe771fe</C_City_UU>
+        <Name>VALLEDUPAR</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>23001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">af5c45f8-6dae-405d-bcd6-fc625af97645</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>91e04f2a-5277-45dd-a01c-ad01e2921e49</C_City_UU>
+        <Name>MONTERÍA</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>27001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">76942396-3fee-4968-b7ab-34da5b0ce1e4</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>0ca99767-0af1-4994-8b6e-a3f84c481f21</C_City_UU>
+        <Name>QUIBDÓ</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>41001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">d6837959-4eea-492a-9682-1c147f565001</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>2e70ed20-c21a-421b-a4fa-21ee93328c28</C_City_UU>
+        <Name>NEIVA</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>44001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">68f64691-e6ee-4751-aab9-3ac8fd09bab8</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>fb6be3ad-1931-47f9-ace1-4b490a4003c2</C_City_UU>
+        <Name>RIOHACHA</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>47001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">67717ed1-eb80-4a39-8d6d-d4fb7e8bf4f0</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>4c18869c-f786-4a7e-8a94-bfe07f2ec547</C_City_UU>
+        <Name>SANTA MARTA</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>50001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">a14dadca-8cad-4afa-9b63-05020874b89f</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>8f0f0e3d-0265-47ec-9ebf-be95c5398cbf</C_City_UU>
+        <Name>VILLAVICENCIO</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>52001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">0f101b83-c041-4d9c-9351-ad71d9a09fe0</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>722490d3-3fdd-4049-853a-f2a45603f812</C_City_UU>
+        <Name>PASTO</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>54001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">21782e7c-e79e-40be-b7e1-ca5fff2406df</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>cb8eb582-5642-4be6-b6f9-511b665b478f</C_City_UU>
+        <Name>CÚCUTA</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>63001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">1cfa1f8e-56bd-4284-86ef-d541681fd93c</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>f37be378-1f44-4ecc-bae5-c14d63d39323</C_City_UU>
+        <Name>ARMENIA</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>66001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">436807e8-70c7-49ac-9531-0344ac724b50</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>c84abf1c-35e8-4ea4-87f0-58bba7f1d748</C_City_UU>
+        <Name>PEREIRA</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>68001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">04ba142c-c430-4716-ae33-9a19c5df4434</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>642562d7-38cd-4f37-b993-eac19c18db90</C_City_UU>
+        <Name>BUCARAMANGA</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>70001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">deee0c36-ba46-4423-92fa-73c38983a6f1</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>7a66f4d7-30e9-4ef8-8257-ce93feaec26e</C_City_UU>
+        <Name>SINCELEJO</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>73001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">a36c60d0-d472-4cd8-b55a-646cb701db0c</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>637af1d1-1b67-4398-baf4-1ec691762f6e</C_City_UU>
+        <Name>IBAGUÉ</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>76001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">8c73c3ec-1777-4b6a-85bf-adc020ef8296</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>d55131a6-4aca-47a2-af94-bb627fbfb585</C_City_UU>
+        <Name>CALI</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>81001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">a06f94e6-79be-4f30-b0e7-4b89ee772128</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>a035eaed-2578-4886-971b-d35be0767f16</C_City_UU>
+        <Name>ARAUCA</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>85001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">e707706d-ed1c-4949-a261-f9d3cf46a9f9</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>ca1ba3db-b220-440b-bd23-f77bd4961ec7</C_City_UU>
+        <Name>YOPAL</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>86001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">64dcf5ef-78be-44bd-a08e-652d75eda922</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>86b56c55-d424-4a68-9757-ac1a17ade81e</C_City_UU>
+        <Name>MOCOA</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>88001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">3bca93ee-a8e9-45f3-bc44-779765e5d6d8</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>e3fdca0a-b4e8-4fb1-8053-44dddd922222</C_City_UU>
+        <Name>SAN ANDRÉS</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>91001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">8c3da3cc-9b16-4b1e-aafc-f06b5bdea8d5</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>681e45d1-9381-43d4-b7b5-df71d33e55ee</C_City_UU>
+        <Name>LETICIA</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>94001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">a1804300-649b-42e7-94cc-16dd3f96783e</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>bac48b49-a562-43cb-b3b5-31935f7df6d9</C_City_UU>
+        <Name>INÍRIDA</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>95001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">af2ada76-13e4-476c-a1ad-698fec933a79</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>213ac40c-1426-418b-a635-01416fc15d68</C_City_UU>
+        <Name>SAN JOSÉ DEL GUAVIARE</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>97001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">74e8e4d6-9aca-4399-a057-9e5b27e63ec1</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>426e1f5f-529b-4d0a-9e61-a5bc73c35feb</C_City_UU>
+        <Name>MITÚ</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <C_City type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <Postal>99001</Postal>
+        <C_Region_ID reference="uuid" reference-key="C_Region">1d2c330b-b712-44e3-adea-568519f02356</C_Region_ID>
+        <AreaCode/>
+        <C_City_UU>a3333e19-9cbc-412d-b7f4-da5c5808a2e3</C_City_UU>
+        <Name>PUERTO CARREÑO</Name>
+        <Locode/>
+        <Coordinates/>
+        <IsActive>true</IsActive>
+        <C_Country_ID reference="id">156</C_Country_ID>
+    </C_City>
+    <SQLStatement type="custom">
+        <DBType>ALL</DBType>
+        <statement><![CDATA[UPDATE ad_column SET isupdateable = 'N' WHERE ad_column_id IN (866, 7057)]]></statement>
+    </SQLStatement>
+</idempiere>
