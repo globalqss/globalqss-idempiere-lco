@@ -1,5 +1,5 @@
 /******************************************************************************
- * Product: Adempiere ERP & CRM Smart Business Solution                       *
+ * Product: iDempiere ERP & CRM Smart Business Solution                       *
  * Copyright (C) 1999-2006 ComPiere, Inc. All Rights Reserved.                *
  * This program is free software; you can redistribute it and/or modify it    *
  * under the terms version 2 of the GNU General Public License as published   *
@@ -23,11 +23,15 @@ import java.sql.SQLException;
 import java.util.Properties;
 import java.util.logging.Level;
 
-import org.compiere.model.CalloutEngine;
+import org.adempiere.base.IColumnCallout;
+import org.adempiere.base.IColumnCalloutFactory;
 import org.compiere.model.GridField;
 import org.compiere.model.GridTab;
+import org.compiere.model.I_C_Payment;
+import org.compiere.model.I_C_PaymentAllocate;
 import org.compiere.model.MPriceList;
 import org.compiere.model.MTax;
+import org.compiere.util.CLogger;
 import org.compiere.util.DB;
 import org.compiere.util.Env;
 
@@ -37,21 +41,38 @@ import org.compiere.util.Env;
  *  @author Carlos Ruiz - globalqss - Quality Systems & Solutions - http://globalqss.com 
  *  @version  $Id: LCO_CalloutWithholding.java,v 1.3 2007/05/09 10:43:28 cruiz Exp $
  */
-public class LCO_CalloutWithholding extends CalloutEngine
+public class LCO_CalloutWithholding implements IColumnCalloutFactory
 {
-	/**
-	 *	The string in the Callout field is: 
-	 *  <code>org.compiere.model.LCO_CalloutWithholding.fillIsUse</code> 
-	 *
-	 *  @param ctx      Context
-	 *  @param WindowNo current Window No
-	 *  @param mTab     Model Tab
-	 *  @param mField   Model Field
-	 *  @param value    The new value
-	 *  @param oldValue The old value
-	 *	@return error message or "" if OK
-	 */
-	public String fillIsUse (Properties ctx, int WindowNo,
+	/**	Logger			*/
+	private static CLogger log = CLogger.getCLogger(LCO_CalloutWithholding.class);
+
+	@Override
+	public IColumnCallout[] getColumnCallouts(String tableName, String columnName) {
+		if (tableName.equalsIgnoreCase(I_LCO_WithholdingRule.Table_Name)) {
+			if (columnName.equalsIgnoreCase(I_LCO_WithholdingRule.COLUMNNAME_LCO_WithholdingType_ID))
+				return new IColumnCallout[]{new FillIsUse()};
+		} else if (tableName.equalsIgnoreCase(I_LCO_InvoiceWithholding.Table_Name)) {
+			if (columnName.equalsIgnoreCase(I_LCO_InvoiceWithholding.COLUMNNAME_C_Tax_ID))
+				return new IColumnCallout[]{new FillPercentFromTax()};
+			if (columnName.equalsIgnoreCase(I_LCO_InvoiceWithholding.COLUMNNAME_TaxBaseAmt))
+				return new IColumnCallout[]{new Recalc_TaxAmt()};
+		} else if (tableName.equalsIgnoreCase(I_C_Payment.Table_Name)) {
+			if (columnName.equalsIgnoreCase(I_C_Payment.COLUMNNAME_C_Invoice_ID))
+				return new IColumnCallout[]{new FillWriteOff()};
+		} else if (tableName.equalsIgnoreCase(I_C_PaymentAllocate.Table_Name)) {
+			if (columnName.equalsIgnoreCase(I_C_PaymentAllocate.COLUMNNAME_C_Invoice_ID))
+				return new IColumnCallout[]{new FillWriteOff()};
+		// } else if (tableName.equalsIgnoreCase(I_C_CashLine.Table_Name)) {
+		// 	if (columnName.equalsIgnoreCase(I_C_CashLine.COLUMNNAME_C_Invoice_ID))
+		//		return new IColumnCallout[]{new FillWriteOff()};
+		}
+
+		return null;
+	}
+
+  private static class FillIsUse implements IColumnCallout {
+	@Override
+	public String start (Properties ctx, int WindowNo,
 		GridTab mTab, GridField mField, Object value, Object oldValue)
 	{
 		log.info("");
@@ -97,9 +118,12 @@ public class LCO_CalloutWithholding extends CalloutEngine
 
 		return "";
 	}	//	fillIsUse
-	
+  }
+
+  private static class FillPercentFromTax implements IColumnCallout {
 	// Called from LCO_InvoiceWithholding.C_Tax_ID
-	public String fillPercentFromTax (Properties ctx, int WindowNo,
+	@Override
+	public String start (Properties ctx, int WindowNo,
 			GridTab mTab, GridField mField, Object value, Object oldValue)
 	{
 		log.info("");
@@ -115,13 +139,23 @@ public class LCO_CalloutWithholding extends CalloutEngine
 
 		return recalc_taxamt(ctx, WindowNo, mTab, mField, value, oldValue);
 	}	//	fillPercentFromTax
+  }
 
+  private static class Recalc_TaxAmt implements IColumnCallout {
 	// Called from LCO_InvoiceWithholding.C_Tax_ID and tax base
-	public String recalc_taxamt(Properties ctx, int WindowNo,
+	@Override
+	public String start(Properties ctx, int WindowNo,
 			GridTab mTab, GridField mField, Object value, Object oldValue)
 	{
 		log.info("");
-		
+
+		return recalc_taxamt(ctx, WindowNo, mTab, mField, value, oldValue);
+	}	//	recalc_taxamt
+
+  }
+
+	private static String recalc_taxamt(Properties ctx, int WindowNo, GridTab mTab, GridField mField,
+			Object value, Object oldValue) {
 		// don't recalculate if callout called from field TaxBaseAmt and didn't change 
 		if (mField.getColumnName().equals("TaxBaseAmt") && value != null && oldValue != null) {
 			BigDecimal newtaxbaseamt = (BigDecimal) value;
@@ -147,15 +181,15 @@ public class LCO_CalloutWithholding extends CalloutEngine
 		mTab.setValue(MLCOInvoiceWithholding.COLUMNNAME_TaxAmt, taxamt);
 
 		return "";
-	}	//	fillPercentFromTax
+	}
 
-	// Called from C_Payment.C_Invoice_ID
-	public String fillWriteOff (Properties ctx, int WindowNo,
+  private static class FillWriteOff implements IColumnCallout {
+    // Called from C_Payment.C_Invoice_ID
+	@Override
+	public String start (Properties ctx, int WindowNo,
 			GridTab mTab, GridField mField, Object value, Object oldValue)
 	{
 		log.info("");
-		if (isCalloutActive())
-			return "";
 		Integer invInt = (Integer) value;
 		int inv_id = 0;
 		if (value != null)
@@ -192,5 +226,6 @@ public class LCO_CalloutWithholding extends CalloutEngine
 
 		return "";
 	}	//	fillWriteOff
+  }
 
 }	//	LCO_CalloutWithholding
