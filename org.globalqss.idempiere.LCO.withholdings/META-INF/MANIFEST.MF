@@ -11,4 +11,7 @@ Require-Bundle: org.adempiere.base;bundle-version="1.0.0",
 Bundle-ActivationPolicy: lazy
 Export-Package: org.globalqss.model,
  org.globalqss.process
-Service-Component: defaultmodelfactory.xml
+Service-Component: OSGI-INF/defaultmodelfactory.xml,
+ OSGI-INF/lco_calloutswhfactory.xml,
+ OSGI-INF/lcovalidatorwh.xml
+Import-Package: org.osgi.service.event

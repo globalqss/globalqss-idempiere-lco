@@ -23,6 +23,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 
+import org.adempiere.base.event.AbstractEventHandler;
+import org.adempiere.base.event.IEventTopics;
 import org.compiere.acct.Doc;
 import org.compiere.acct.DocLine;
 import org.compiere.acct.DocTax;
@@ -31,7 +33,6 @@ import org.compiere.acct.FactLine;
 import org.compiere.model.MAcctSchema;
 import org.compiere.model.MAllocationHdr;
 import org.compiere.model.MAllocationLine;
-import org.compiere.model.MClient;
 import org.compiere.model.MDocType;
 import org.compiere.model.MInvoice;
 import org.compiere.model.MInvoiceLine;
@@ -39,13 +40,12 @@ import org.compiere.model.MInvoicePaySchedule;
 import org.compiere.model.MInvoiceTax;
 import org.compiere.model.MPayment;
 import org.compiere.model.MPaymentAllocate;
-import org.compiere.model.ModelValidationEngine;
-import org.compiere.model.ModelValidator;
 import org.compiere.model.PO;
 import org.compiere.util.CLogger;
 import org.compiere.util.DB;
 import org.compiere.util.Env;
 import org.compiere.util.Msg;
+import org.osgi.service.event.Event;
 
 /**
  *	Validator or Localization Colombia (Withholdings)
@@ -53,93 +53,202 @@ import org.compiere.util.Msg;
  *  @author Carlos Ruiz - globalqss - Quality Systems & Solutions - http://globalqss.com 
  *	@version $Id: LCO_Validator.java,v 1.4 2007/05/13 06:53:26 cruiz Exp $
  */
-public class LCO_ValidatorWH implements ModelValidator
+public class LCO_ValidatorWH extends AbstractEventHandler
 {
-	/**
-	 *	Constructor.
-	 *	The class is instantiated when logging in and client is selected/known
-	 */
-	public LCO_ValidatorWH ()
-	{
-		super ();
-	}	//	MyValidator
-	
 	/**	Logger			*/
 	private static CLogger log = CLogger.getCLogger(LCO_ValidatorWH.class);
-	/** Client			*/
-	private int		m_AD_Client_ID = -1;
 	
 	/**
 	 *	Initialize Validation
-	 *	@param engine validation engine 
-	 *	@param client client
 	 */
-	public void initialize (ModelValidationEngine engine, MClient client)
-	{
-		//client = null for global validator
-		if (client != null) {	
-			m_AD_Client_ID = client.getAD_Client_ID();
-			log.info(client.toString());
-		}
-		else  {
-			log.info("Initializing global validator: "+this.toString());
-		}
-
+	@Override
+	protected void initialize() {
 		//	Tables to be monitored
-		engine.addModelChange(MInvoice.Table_Name, this);
-		engine.addModelChange(MInvoiceLine.Table_Name, this);
-		engine.addModelChange(X_LCO_WithholdingCalc.Table_Name, this);
+		registerTableEvent(IEventTopics.PO_BEFORE_CHANGE, MInvoice.Table_Name);
+		registerTableEvent(IEventTopics.PO_BEFORE_NEW, MInvoiceLine.Table_Name);
+		registerTableEvent(IEventTopics.PO_BEFORE_CHANGE, MInvoiceLine.Table_Name);
+		registerTableEvent(IEventTopics.PO_BEFORE_DELETE, MInvoiceLine.Table_Name);
+		registerTableEvent(IEventTopics.PO_BEFORE_NEW, X_LCO_WithholdingCalc.Table_Name);
+		registerTableEvent(IEventTopics.PO_BEFORE_CHANGE, X_LCO_WithholdingCalc.Table_Name);
 
 		//	Documents to be monitored
-		engine.addDocValidate(MInvoice.Table_Name, this);
-		engine.addDocValidate(MPayment.Table_Name, this);
-		engine.addDocValidate(MAllocationHdr.Table_Name, this);
-
+		registerTableEvent(IEventTopics.DOC_BEFORE_PREPARE, MInvoice.Table_Name);
+		registerTableEvent(IEventTopics.DOC_BEFORE_COMPLETE, MInvoice.Table_Name);
+		registerTableEvent(IEventTopics.DOC_AFTER_COMPLETE, MInvoice.Table_Name);
+		registerTableEvent(IEventTopics.DOC_BEFORE_COMPLETE, MPayment.Table_Name);
+		registerTableEvent(IEventTopics.DOC_AFTER_COMPLETE, MAllocationHdr.Table_Name);
+		registerTableEvent(IEventTopics.DOC_BEFORE_POST, MAllocationHdr.Table_Name);
+		registerTableEvent(IEventTopics.DOC_AFTER_VOID, MAllocationHdr.Table_Name);
+		registerTableEvent(IEventTopics.DOC_AFTER_REVERSECORRECT, MAllocationHdr.Table_Name);
+		registerTableEvent(IEventTopics.DOC_AFTER_REVERSEACCRUAL, MAllocationHdr.Table_Name);
 	}	//	initialize
 
     /**
-     *	Model Change of a monitored Table.
-     *	Called after PO.beforeSave/PO.beforeDelete
-     *	when you called addModelChange for the table
-     *	@param po persistent object
-     *	@param type TYPE_
-     *	@return error message or null
+     *	Model Change of a monitored Table or Document
+     *  @param event
      *	@exception Exception if the recipient wishes the change to be not accept.
      */
-	public String modelChange (PO po, int type) throws Exception
-	{
+	@Override
+	protected void doHandleEvent(Event event) {
+		PO po = getPO(event);
+		String type = event.getTopic();
 		log.info(po.get_TableName() + " Type: "+type);
 		String msg;
 
-		if (po.get_TableName().equals(MInvoice.Table_Name) && type == ModelValidator.TYPE_BEFORE_CHANGE) {
+		// Model Events
+		if (po.get_TableName().equals(MInvoice.Table_Name) && type.equals(IEventTopics.PO_BEFORE_CHANGE)) {
 			msg = clearInvoiceWithholdingAmtFromInvoice((MInvoice) po);
 			if (msg != null)
-				return msg;
+				throw new RuntimeException(msg);
 		}
 
 		// when invoiceline is changed clear the withholding amount on invoice
 		// in order to force a regeneration
 		if (po.get_TableName().equals(MInvoiceLine.Table_Name) &&
-				(type == ModelValidator.TYPE_BEFORE_NEW ||
-				 type == ModelValidator.TYPE_BEFORE_CHANGE ||
-				 type == ModelValidator.TYPE_BEFORE_DELETE
+				(type.equals(IEventTopics.PO_BEFORE_NEW) ||
+				 type.equals(IEventTopics.PO_BEFORE_CHANGE) ||
+				 type.equals(IEventTopics.PO_BEFORE_DELETE)
 				)
 			)
 		{
 			msg = clearInvoiceWithholdingAmtFromInvoiceLine((MInvoiceLine) po, type);
 			if (msg != null)
-				return msg;
+				throw new RuntimeException(msg);
 		}
 
 		if (po.get_TableName().equals(X_LCO_WithholdingCalc.Table_Name)
-				&& (type == ModelValidator.TYPE_BEFORE_CHANGE || type == ModelValidator.TYPE_BEFORE_NEW)) {
+				&& (type.equals(IEventTopics.PO_BEFORE_CHANGE) || type.equals(IEventTopics.PO_BEFORE_NEW))) {
 			X_LCO_WithholdingCalc lwc = (X_LCO_WithholdingCalc) po;
 			if (lwc.isCalcOnInvoice() && lwc.isCalcOnPayment())
 				lwc.setIsCalcOnPayment(false);
 		}
+		
+		// Document Events
+		// before preparing a reversal invoice add the invoice withholding taxes
+		if (po.get_TableName().equals(MInvoice.Table_Name)
+				&& type.equals(IEventTopics.DOC_BEFORE_PREPARE)) {
+			MInvoice inv = (MInvoice) po;
+			if (inv.isReversal()) {
+				int invid = inv.getReversal_ID();
+				
+				if (invid > 0) {
+					MInvoice invreverted = new MInvoice(inv.getCtx(), invid, inv.get_TrxName());
+					String sql = 
+						  "SELECT LCO_InvoiceWithholding_ID "
+						 + " FROM LCO_InvoiceWithholding "
+						+ " WHERE C_Invoice_ID = ? "
+						+ " ORDER BY LCO_InvoiceWithholding_ID";
+					PreparedStatement pstmt = null;
+					ResultSet rs = null;
+					try
+					{
+						pstmt = DB.prepareStatement(sql, inv.get_TrxName());
+						pstmt.setInt(1, invreverted.getC_Invoice_ID());
+						rs = pstmt.executeQuery();
+						while (rs.next()) {
+							MLCOInvoiceWithholding iwh = new MLCOInvoiceWithholding(inv.getCtx(), rs.getInt(1), inv.get_TrxName());
+							MLCOInvoiceWithholding newiwh = new MLCOInvoiceWithholding(inv.getCtx(), 0, inv.get_TrxName());
+							newiwh.setAD_Org_ID(iwh.getAD_Org_ID());
+							newiwh.setC_Invoice_ID(inv.getC_Invoice_ID());
+							newiwh.setLCO_WithholdingType_ID(iwh.getLCO_WithholdingType_ID());
+							newiwh.setPercent(iwh.getPercent());
+							newiwh.setTaxAmt(iwh.getTaxAmt().negate());
+							newiwh.setTaxBaseAmt(iwh.getTaxBaseAmt().negate());
+							newiwh.setC_Tax_ID(iwh.getC_Tax_ID());
+							newiwh.setIsCalcOnPayment(iwh.isCalcOnPayment());
+							newiwh.setIsActive(iwh.isActive());	// Reviewme
+							if (!newiwh.save())
+								throw new RuntimeException("Error saving LCO_InvoiceWithholding docValidate");
+						}
+					} catch (Exception e) {
+						log.log(Level.SEVERE, sql, e);
+						throw new RuntimeException("Error creating LCO_InvoiceWithholding for reversal invoice");
+					} finally {
+						DB.close(rs, pstmt);
+						rs = null; pstmt = null;
+					}
+				} else {
+					throw new RuntimeException("Can't get the number of the invoice reversed");
+				}
+			}
+		}
 
-		return null;
-	}	//	modelChange
+		// before preparing invoice validate if withholdings has been generated
+		if (po.get_TableName().equals(MInvoice.Table_Name)
+				&& type.equals(IEventTopics.DOC_BEFORE_PREPARE)) {
+			MInvoice inv = (MInvoice) po;
+			/* @TODO: Change this to IsReversal & Reversal_ID on 3.5 */
+			if (inv.getDescription() != null 
+					&& inv.getDescription().contains("{->")
+					&& inv.getDescription().endsWith(")")) {
+				// don't validate this for autogenerated reversal invoices
+			} else {
+				if (inv.get_Value("WithholdingAmt") == null) {
+					MDocType dt = new MDocType(inv.getCtx(), inv.getC_DocTypeTarget_ID(), inv.get_TrxName());
+					String genwh = dt.get_ValueAsString("GenerateWithholding");
+					if (genwh != null) {
+
+						if (genwh.equals("Y")) {
+							// document type configured to compel generation of withholdings
+							throw new RuntimeException(Msg.getMsg(inv.getCtx(), "LCO_WithholdingNotGenerated"));
+						}
+						
+						if (genwh.equals("A")) {
+							// document type configured to generate withholdings automatically
+							LCO_MInvoice lcoinv = new LCO_MInvoice(inv.getCtx(), inv.getC_Invoice_ID(), inv.get_TrxName());
+							lcoinv.recalcWithholdings();
+						}
+					}
+				}
+			}
+		}
+
+		// after preparing invoice move invoice withholdings to taxes and recalc grandtotal of invoice
+		if (po.get_TableName().equals(MInvoice.Table_Name) && type.equals(IEventTopics.DOC_BEFORE_COMPLETE)) {
+			msg = translateWithholdingToTaxes((MInvoice) po);
+			if (msg != null)
+				throw new RuntimeException(msg);
+		}
+
+		// after completing the invoice fix the dates on withholdings and mark the invoice withholdings as processed
+		if (po.get_TableName().equals(MInvoice.Table_Name) && type.equals(IEventTopics.DOC_AFTER_COMPLETE)) {
+			msg = completeInvoiceWithholding((MInvoice) po);
+			if (msg != null)
+				throw new RuntimeException(msg);
+		}
+
+		// before completing the payment - validate that writeoff amount must be greater than sum of payment withholdings  
+		if (po.get_TableName().equals(MPayment.Table_Name) && type.equals(IEventTopics.DOC_BEFORE_COMPLETE)) {
+			msg = validateWriteOffVsPaymentWithholdings((MPayment) po);
+			if (msg != null)
+				throw new RuntimeException(msg);
+		}
+
+		// after completing the allocation - complete the payment withholdings  
+		if (po.get_TableName().equals(MAllocationHdr.Table_Name) && type.equals(IEventTopics.DOC_AFTER_COMPLETE)) {
+			msg = completePaymentWithholdings((MAllocationHdr) po);
+			if (msg != null)
+				throw new RuntimeException(msg);
+		}
+
+		// before posting the allocation - post the payment withholdings vs writeoff amount  
+		if (po.get_TableName().equals(MAllocationHdr.Table_Name) && type.equals(IEventTopics.DOC_BEFORE_POST)) {
+			msg = accountingForInvoiceWithholdingOnPayment((MAllocationHdr) po);
+			if (msg != null)
+				throw new RuntimeException(msg);
+		}
+
+		// after completing the allocation - complete the payment withholdings  
+		if (po.get_TableName().equals(MAllocationHdr.Table_Name)
+				&& (type.equals(IEventTopics.DOC_AFTER_VOID) || 
+					type.equals(IEventTopics.DOC_AFTER_REVERSECORRECT) || 
+					type.equals(IEventTopics.DOC_AFTER_REVERSEACCRUAL))) {
+			msg = reversePaymentWithholdings((MAllocationHdr) po);
+			if (msg != null)
+				throw new RuntimeException(msg);
+		}
+		
+	}	//	doHandleEvent
 	
 	private String clearInvoiceWithholdingAmtFromInvoice(MInvoice inv) {
 		// Clear invoice withholding amount
@@ -172,11 +281,11 @@ public class LCO_ValidatorWH implements ModelValidator
 		return null;
 	}
 
-	private String clearInvoiceWithholdingAmtFromInvoiceLine(MInvoiceLine invline, int type) {
+	private String clearInvoiceWithholdingAmtFromInvoiceLine(MInvoiceLine invline, String type) {
 		
-		if (   type == ModelValidator.TYPE_BEFORE_NEW
-			|| type == ModelValidator.TYPE_BEFORE_DELETE
-			|| (   type == ModelValidator.TYPE_BEFORE_CHANGE 
+		if (   type.equals(IEventTopics.PO_BEFORE_NEW)
+			|| type.equals(IEventTopics.PO_BEFORE_DELETE)
+			|| (   type.equals(IEventTopics.PO_BEFORE_CHANGE) 
 				&& (   invline.is_ValueChanged("LineNetAmt")
 					|| invline.is_ValueChanged("M_Product_ID")
 					|| invline.is_ValueChanged("C_Charge_ID")
@@ -234,147 +343,6 @@ public class LCO_ValidatorWH implements ModelValidator
 		}
 		return thereAreCalc;
 	}
-
-	/**
-	 *	Validate Document.
-	 *	Called as first step of DocAction.prepareIt 
-     *	when you called addDocValidate for the table.
-     *	Note that totals, etc. may not be correct.
-	 *	@param po persistent object
-	 *	@param timing see TIMING_ constants
-     *	@return error message or null
-	 */
-	public String docValidate (PO po, int timing)
-	{
-		log.info(po.get_TableName() + " Timing: "+timing);
-		String msg;
-
-		// before preparing a reversal invoice add the invoice withholding taxes
-		if (po.get_TableName().equals(MInvoice.Table_Name)
-				&& timing == TIMING_BEFORE_PREPARE) {
-			MInvoice inv = (MInvoice) po;
-			if (inv.isReversal()) {
-				int invid = inv.getReversal_ID();
-				
-				if (invid > 0) {
-					MInvoice invreverted = new MInvoice(inv.getCtx(), invid, inv.get_TrxName());
-					String sql = 
-						  "SELECT LCO_InvoiceWithholding_ID "
-						 + " FROM LCO_InvoiceWithholding "
-						+ " WHERE C_Invoice_ID = ? "
-						+ " ORDER BY LCO_InvoiceWithholding_ID";
-					PreparedStatement pstmt = null;
-					ResultSet rs = null;
-					try
-					{
-						pstmt = DB.prepareStatement(sql, inv.get_TrxName());
-						pstmt.setInt(1, invreverted.getC_Invoice_ID());
-						rs = pstmt.executeQuery();
-						while (rs.next()) {
-							MLCOInvoiceWithholding iwh = new MLCOInvoiceWithholding(inv.getCtx(), rs.getInt(1), inv.get_TrxName());
-							MLCOInvoiceWithholding newiwh = new MLCOInvoiceWithholding(inv.getCtx(), 0, inv.get_TrxName());
-							newiwh.setAD_Org_ID(iwh.getAD_Org_ID());
-							newiwh.setC_Invoice_ID(inv.getC_Invoice_ID());
-							newiwh.setLCO_WithholdingType_ID(iwh.getLCO_WithholdingType_ID());
-							newiwh.setPercent(iwh.getPercent());
-							newiwh.setTaxAmt(iwh.getTaxAmt().negate());
-							newiwh.setTaxBaseAmt(iwh.getTaxBaseAmt().negate());
-							newiwh.setC_Tax_ID(iwh.getC_Tax_ID());
-							newiwh.setIsCalcOnPayment(iwh.isCalcOnPayment());
-							newiwh.setIsActive(iwh.isActive());	// Reviewme
-							if (!newiwh.save())
-								return "Error saving LCO_InvoiceWithholding docValidate";
-						}
-					} catch (Exception e) {
-						log.log(Level.SEVERE, sql, e);
-						return "Error creating LCO_InvoiceWithholding for reversal invoice";
-					} finally {
-						DB.close(rs, pstmt);
-						rs = null; pstmt = null;
-					}
-				} else {
-					return "Can't get the number of the invoice reversed";
-				}
-			}
-		}
-
-		// before preparing invoice validate if withholdings has been generated
-		if (po.get_TableName().equals(MInvoice.Table_Name)
-				&& timing == TIMING_BEFORE_PREPARE) {
-			MInvoice inv = (MInvoice) po;
-			/* @TODO: Change this to IsReversal & Reversal_ID on 3.5 */
-			if (inv.getDescription() != null 
-					&& inv.getDescription().contains("{->")
-					&& inv.getDescription().endsWith(")")) {
-				// don't validate this for autogenerated reversal invoices
-			} else {
-				if (inv.get_Value("WithholdingAmt") == null) {
-					MDocType dt = new MDocType(inv.getCtx(), inv.getC_DocTypeTarget_ID(), inv.get_TrxName());
-					String genwh = dt.get_ValueAsString("GenerateWithholding");
-					if (genwh != null) {
-
-						if (genwh.equals("Y")) {
-							// document type configured to compel generation of withholdings
-							return Msg.getMsg(inv.getCtx(), "LCO_WithholdingNotGenerated");
-						}
-						
-						if (genwh.equals("A")) {
-							// document type configured to generate withholdings automatically
-							LCO_MInvoice lcoinv = new LCO_MInvoice(inv.getCtx(), inv.getC_Invoice_ID(), inv.get_TrxName());
-							lcoinv.recalcWithholdings();
-						}
-					}
-				}
-			}
-		}
-
-		// after preparing invoice move invoice withholdings to taxes and recalc grandtotal of invoice
-		if (po.get_TableName().equals(MInvoice.Table_Name) && timing == TIMING_BEFORE_COMPLETE) {
-			msg = translateWithholdingToTaxes((MInvoice) po);
-			if (msg != null)
-				return msg;
-		}
-
-		// after completing the invoice fix the dates on withholdings and mark the invoice withholdings as processed
-		if (po.get_TableName().equals(MInvoice.Table_Name) && timing == TIMING_AFTER_COMPLETE) {
-			msg = completeInvoiceWithholding((MInvoice) po);
-			if (msg != null)
-				return msg;
-		}
-
-		// before completing the payment - validate that writeoff amount must be greater than sum of payment withholdings  
-		if (po.get_TableName().equals(MPayment.Table_Name) && timing == TIMING_BEFORE_COMPLETE) {
-			msg = validateWriteOffVsPaymentWithholdings((MPayment) po);
-			if (msg != null)
-				return msg;
-		}
-
-		// after completing the allocation - complete the payment withholdings  
-		if (po.get_TableName().equals(MAllocationHdr.Table_Name) && timing == TIMING_AFTER_COMPLETE) {
-			msg = completePaymentWithholdings((MAllocationHdr) po);
-			if (msg != null)
-				return msg;
-		}
-
-		// before posting the allocation - post the payment withholdings vs writeoff amount  
-		if (po.get_TableName().equals(MAllocationHdr.Table_Name) && timing == TIMING_BEFORE_POST) {
-			msg = accountingForInvoiceWithholdingOnPayment((MAllocationHdr) po);
-			if (msg != null)
-				return msg;
-		}
-
-		// after completing the allocation - complete the payment withholdings  
-		if (po.get_TableName().equals(MAllocationHdr.Table_Name)
-				&& (timing == TIMING_AFTER_VOID || 
-					timing == TIMING_AFTER_REVERSECORRECT || 
-					timing == TIMING_AFTER_REVERSEACCRUAL)) {
-			msg = reversePaymentWithholdings((MAllocationHdr) po);
-			if (msg != null)
-				return msg;
-		}
-
-		return null;
-	}	//	docValidate
 
 	private String validateWriteOffVsPaymentWithholdings(MPayment pay) {
 		if (pay.getC_Invoice_ID() > 0) {
@@ -780,40 +748,5 @@ public class LCO_ValidatorWH implements ModelValidator
 
 		return null;
 	}
-
-	/**
-	 *	User Login.
-	 *	Called when preferences are set
-	 *	@param AD_Org_ID org
-	 *	@param AD_Role_ID role
-	 *	@param AD_User_ID user
-	 *	@return error message or null
-	 */
-	public String login (int AD_Org_ID, int AD_Role_ID, int AD_User_ID)
-	{
-		log.info("AD_User_ID=" + AD_User_ID);
-		return null;
-	}	//	login
-
-	
-	/**
-	 *	Get Client to be monitored
-	 *	@return AD_Client_ID client
-	 */
-	public int getAD_Client_ID()
-	{
-		return m_AD_Client_ID;
-	}	//	getAD_Client_ID
-
-	
-	/**
-	 * 	String Representation
-	 *	@return info
-	 */
-	public String toString ()
-	{
-		StringBuffer sb = new StringBuffer ("LCO_Validator");
-		return sb.toString ();
-	}	//	toString
 
 }	//	LCO_Validator
