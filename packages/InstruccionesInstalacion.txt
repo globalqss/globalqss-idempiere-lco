@@ -1,1 +1,1 @@
-Ver http://adempiere.com/wiki/index.php/LCO_Instrucciones_Instalacion
+Ver http://wiki.idempiere.org/es/LCO_Instrucciones_Instalacion
