@@ -3268,7 +3268,7 @@ There are two reasons for de-activating and not deleting records:
                             <Name>Export XML</Name>
                             <IsAllowCopy>true</IsAllowCopy>
                             <IsActive>true</IsActive>
-                            <IsToolbarButton>true</IsToolbarButton>
+                            <IsToolbarButton>false</IsToolbarButton>
                             <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
                             <EntityType>QSS_LCO</EntityType>
                             <VFormat/>
@@ -16923,7 +16923,7 @@ There are two reasons for de-activating and not deleting records:
                             <Name>Generate XML</Name>
                             <IsAllowCopy>true</IsAllowCopy>
                             <IsActive>true</IsActive>
-                            <IsToolbarButton>true</IsToolbarButton>
+                            <IsToolbarButton>false</IsToolbarButton>
                             <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
                             <EntityType>QSS_LCO</EntityType>
                             <VFormat/>
@@ -17034,7 +17034,7 @@ There are two reasons for de-activating and not deleting records:
                             <Name>Process Content</Name>
                             <IsAllowCopy>true</IsAllowCopy>
                             <IsActive>true</IsActive>
-                            <IsToolbarButton>true</IsToolbarButton>
+                            <IsToolbarButton>false</IsToolbarButton>
                             <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
                             <EntityType>QSS_LCO</EntityType>
                             <VFormat/>
