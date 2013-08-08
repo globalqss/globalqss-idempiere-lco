@@ -1,5 +1,5 @@
 /******************************************************************************
- * Product: Adempiere ERP & CRM Smart Business Solution                       *
+ * Product: iDempiere ERP & CRM Smart Business Solution                       *
  * Copyright (C) 1999-2006 ComPiere, Inc. All Rights Reserved.                *
  * This program is free software; you can redistribute it and/or modify it    *
  * under the terms version 2 of the GNU General Public License as published   *
@@ -18,11 +18,14 @@ package org.globalqss.model;
 
 import java.util.Properties;
 
-import org.compiere.model.CalloutEngine;
+import org.adempiere.base.IColumnCallout;
+import org.adempiere.base.IColumnCalloutFactory;
 import org.compiere.model.GridField;
 import org.compiere.model.GridTab;
+import org.compiere.model.I_C_BPartner;
 import org.compiere.model.MBPartner;
 import org.compiere.model.MSysConfig;
+import org.compiere.util.CLogger;
 import org.compiere.util.Env;
 import org.globalqss.util.LCO_Utils;
 
@@ -33,13 +36,37 @@ import org.globalqss.util.LCO_Utils;
  *  @author Carlos Ruiz
  *  @version  $Id: LCO_Callouts.java,v 1.0 2008/05/26
  */
-public class LCO_Callouts extends CalloutEngine
+public class LCO_Callouts implements IColumnCalloutFactory
 {
+	/**	Logger			*/
+	private static CLogger log = CLogger.getCLogger(LCO_Callouts.class);
 
+	@Override
+	public IColumnCallout[] getColumnCallouts(String tableName, String columnName) {
+
+		if (tableName.equalsIgnoreCase(I_C_BPartner.Table_Name)) {
+			if (columnName.equalsIgnoreCase("TaxIdDigit"))
+				return new IColumnCallout[]{new CheckTaxIdDigit()};
+			else if (columnName.equalsIgnoreCase("LCO_TaxIdType_ID"))
+				return new IColumnCallout[]{new TaxIdType()};
+			else if (   columnName.equalsIgnoreCase("FirstName1")
+					  || columnName.equalsIgnoreCase("FirstName2")
+					  || columnName.equalsIgnoreCase("LastName1")
+					  || columnName.equalsIgnoreCase("LastName2"))
+				return new IColumnCallout[]{new FillName()};
+			else if (columnName.equalsIgnoreCase(I_C_BPartner.COLUMNNAME_TaxID))
+				return new IColumnCallout[]{new FillValueWithTaxID()};
+		}
+
+		return null;
+	}
+
+  private static class CheckTaxIdDigit implements IColumnCallout {
 	/**
 	 *	Check Digit based on TaxID.
 	 */
-	public String checkTaxIdDigit (Properties ctx, int WindowNo,
+	@Override
+	public String start (Properties ctx, int WindowNo,
 			GridTab mTab, GridField mField, Object value, Object oldValue)
 	{
 		log.info("");
@@ -68,11 +95,14 @@ public class LCO_Callouts extends CalloutEngine
 			return "LCO_VerifyCheckDigit";
 		return "";
 	}	//	checkTaxIdDigit
+  }
 
+  private static class TaxIdType implements IColumnCallout {
 	/**
 	 *	taxIdType
 	 */
-	public String taxIdType (Properties ctx, int WindowNo,
+	@Override
+	public String start (Properties ctx, int WindowNo,
 			GridTab mTab, GridField mField, Object value, Object oldValue)
 	{
 		log.info("");
@@ -92,11 +122,14 @@ public class LCO_Callouts extends CalloutEngine
 		
 		return "";
 	}	//	taxIdType
+  }
 
+  private static class FillName implements IColumnCallout {
 	/**
 	 *	fillName
 	 */
-	public String fillName (Properties ctx, int WindowNo,
+	@Override
+	public String start (Properties ctx, int WindowNo,
 			GridTab mTab, GridField mField, Object value, Object oldValue)
 	{
 		log.info("");
@@ -110,11 +143,14 @@ public class LCO_Callouts extends CalloutEngine
 		mTab.setValue(MBPartner.COLUMNNAME_Name, fullName);
 		return "";
 	}	//	fillName
+  }
 
+  private static class FillValueWithTaxID implements IColumnCallout {
 	/**
 	 *	fillValueWithTaxID
 	 */
-	public String fillValueWithTaxID (Properties ctx, int WindowNo,
+	@Override
+	public String start (Properties ctx, int WindowNo,
 			GridTab mTab, GridField mField, Object value, Object oldValue)
 	{
 		log.info("");
@@ -124,5 +160,6 @@ public class LCO_Callouts extends CalloutEngine
 			mTab.setValue(MBPartner.COLUMNNAME_Value, value);
 		return "";
 	}	//	fillValueWithTaxID
+  }
 
 }	//	LCO_Callouts
