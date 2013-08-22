@@ -2870,10 +2870,6 @@ There are two reasons for de-activating and not deleting records:
     </AD_Menu>
     <SQLStatement type="custom">
         <DBType>ALL</DBType>
-        <statement><![CDATA[COMMIT /* we need to commit here to avoid the rollback because the following statements will fail second time applying */]]></statement>
-    </SQLStatement>
-    <SQLStatement type="custom">
-        <DBType>ALL</DBType>
-        <statement><![CDATA[COMMIT; ALTER TABLE C_BPartner ADD CONSTRAINT LCOTaxIDType_CBPartner FOREIGN KEY (LCO_TaxIdType_ID) REFERENCES LCO_TaxIDType DEFERRABLE INITIALLY DEFERRED; COMMIT;]]></statement>
+        <statement><![CDATA[ALTER TABLE C_BPartner ADD CONSTRAINT LCOTaxIDType_CBPartner FOREIGN KEY (LCO_TaxIdType_ID) REFERENCES LCO_TaxIDType DEFERRABLE INITIALLY DEFERRED]]></statement>
     </SQLStatement>
 </idempiere>

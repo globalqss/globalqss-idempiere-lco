@@ -19190,110 +19190,106 @@ There are two reasons for de-activating and not deleting records:
     </AD_Menu>
     <SQLStatement type="custom">
         <DBType>ALL</DBType>
-        <statement><![CDATA[COMMIT /* we need to commit here to avoid the rollback because the following statements will fail second time applying */]]></statement>
+        <statement><![CDATA[ALTER TABLE AD_OrgInfo ADD CONSTRAINT LCOISIC_ADOrgInfo FOREIGN KEY (LCO_ISIC_ID) REFERENCES LCO_ISIC DEFERRABLE INITIALLY DEFERRED]]></statement>
     </SQLStatement>
     <SQLStatement type="custom">
         <DBType>ALL</DBType>
-        <statement><![CDATA[COMMIT; ALTER TABLE AD_OrgInfo ADD CONSTRAINT LCOISIC_ADOrgInfo FOREIGN KEY (LCO_ISIC_ID) REFERENCES LCO_ISIC DEFERRABLE INITIALLY DEFERRED; COMMIT;]]></statement>
+        <statement><![CDATA[ALTER TABLE AD_OrgInfo ADD CONSTRAINT LCOTaxPayerType_ADOrgInfo FOREIGN KEY (LCO_TaxPayerType_ID) REFERENCES LCO_TaxPayerType DEFERRABLE INITIALLY DEFERRED]]></statement>
     </SQLStatement>
     <SQLStatement type="custom">
         <DBType>ALL</DBType>
-        <statement><![CDATA[COMMIT; ALTER TABLE AD_OrgInfo ADD CONSTRAINT LCOTaxPayerType_ADOrgInfo FOREIGN KEY (LCO_TaxPayerType_ID) REFERENCES LCO_TaxPayerType DEFERRABLE INITIALLY DEFERRED; COMMIT;]]></statement>
+        <statement><![CDATA[ALTER TABLE C_BPartner ADD CONSTRAINT LCOISIC_CBPartner FOREIGN KEY (LCO_ISIC_ID) REFERENCES LCO_ISIC DEFERRABLE INITIALLY DEFERRED]]></statement>
     </SQLStatement>
     <SQLStatement type="custom">
         <DBType>ALL</DBType>
-        <statement><![CDATA[COMMIT; ALTER TABLE C_BPartner ADD CONSTRAINT LCOISIC_CBPartner FOREIGN KEY (LCO_ISIC_ID) REFERENCES LCO_ISIC DEFERRABLE INITIALLY DEFERRED; COMMIT;]]></statement>
+        <statement><![CDATA[ALTER TABLE C_BPartner ADD CONSTRAINT LCOTaxPayerType_CBPartner FOREIGN KEY (LCO_TaxPayerType_ID) REFERENCES LCO_TaxPayerType DEFERRABLE INITIALLY DEFERRED]]></statement>
     </SQLStatement>
     <SQLStatement type="custom">
         <DBType>ALL</DBType>
-        <statement><![CDATA[COMMIT; ALTER TABLE C_BPartner ADD CONSTRAINT LCOTaxPayerType_CBPartner FOREIGN KEY (LCO_TaxPayerType_ID) REFERENCES LCO_TaxPayerType DEFERRABLE INITIALLY DEFERRED; COMMIT;]]></statement>
+        <statement><![CDATA[ALTER TABLE C_Charge ADD CONSTRAINT LCOWithholdingCategory_CCharge FOREIGN KEY (LCO_WithholdingCategory_ID) REFERENCES LCO_WithholdingCategory DEFERRABLE INITIALLY DEFERRED]]></statement>
     </SQLStatement>
     <SQLStatement type="custom">
         <DBType>ALL</DBType>
-        <statement><![CDATA[COMMIT; ALTER TABLE C_Charge ADD CONSTRAINT LCOWithholdingCategory_CCharge FOREIGN KEY (LCO_WithholdingCategory_ID) REFERENCES LCO_WithholdingCategory DEFERRABLE INITIALLY DEFERRED; COMMIT;]]></statement>
+        <statement><![CDATA[ALTER TABLE LCO_InvoiceWithholding ADD CONSTRAINT CAllocationLine_LCOInvoiceWith FOREIGN KEY (C_AllocationLine_ID) REFERENCES C_AllocationLine DEFERRABLE INITIALLY DEFERRED]]></statement>
     </SQLStatement>
     <SQLStatement type="custom">
         <DBType>ALL</DBType>
-        <statement><![CDATA[COMMIT; ALTER TABLE LCO_InvoiceWithholding ADD CONSTRAINT CAllocationLine_LCOInvoiceWith FOREIGN KEY (C_AllocationLine_ID) REFERENCES C_AllocationLine DEFERRABLE INITIALLY DEFERRED; COMMIT;]]></statement>
+        <statement><![CDATA[ALTER TABLE LCO_InvoiceWithholding ADD CONSTRAINT CInvoice_LCOInvoiceWithholding FOREIGN KEY (C_Invoice_ID) REFERENCES C_Invoice DEFERRABLE INITIALLY DEFERRED]]></statement>
     </SQLStatement>
     <SQLStatement type="custom">
         <DBType>ALL</DBType>
-        <statement><![CDATA[COMMIT; ALTER TABLE LCO_InvoiceWithholding ADD CONSTRAINT CInvoice_LCOInvoiceWithholding FOREIGN KEY (C_Invoice_ID) REFERENCES C_Invoice DEFERRABLE INITIALLY DEFERRED; COMMIT;]]></statement>
+        <statement><![CDATA[ALTER TABLE LCO_InvoiceWithholding ADD CONSTRAINT CTax_LCOInvoiceWithholding FOREIGN KEY (C_Tax_ID) REFERENCES C_Tax DEFERRABLE INITIALLY DEFERRED]]></statement>
     </SQLStatement>
     <SQLStatement type="custom">
         <DBType>ALL</DBType>
-        <statement><![CDATA[COMMIT; ALTER TABLE LCO_InvoiceWithholding ADD CONSTRAINT CTax_LCOInvoiceWithholding FOREIGN KEY (C_Tax_ID) REFERENCES C_Tax DEFERRABLE INITIALLY DEFERRED; COMMIT;]]></statement>
+        <statement><![CDATA[ALTER TABLE LCO_InvoiceWithholding ADD CONSTRAINT LCOWithholdingRule_LCOInvoiceW FOREIGN KEY (LCO_WithholdingRule_ID) REFERENCES LCO_WithholdingRule DEFERRABLE INITIALLY DEFERRED]]></statement>
     </SQLStatement>
     <SQLStatement type="custom">
         <DBType>ALL</DBType>
-        <statement><![CDATA[COMMIT; ALTER TABLE LCO_InvoiceWithholding ADD CONSTRAINT LCOWithholdingRule_LCOInvoiceW FOREIGN KEY (LCO_WithholdingRule_ID) REFERENCES LCO_WithholdingRule DEFERRABLE INITIALLY DEFERRED; COMMIT;]]></statement>
+        <statement><![CDATA[ALTER TABLE LCO_InvoiceWithholding ADD CONSTRAINT LCOWithholdingType_LCOInvoiceW FOREIGN KEY (LCO_WithholdingType_ID) REFERENCES LCO_WithholdingType DEFERRABLE INITIALLY DEFERRED]]></statement>
     </SQLStatement>
     <SQLStatement type="custom">
         <DBType>ALL</DBType>
-        <statement><![CDATA[COMMIT; ALTER TABLE LCO_InvoiceWithholding ADD CONSTRAINT LCOWithholdingType_LCOInvoiceW FOREIGN KEY (LCO_WithholdingType_ID) REFERENCES LCO_WithholdingType DEFERRABLE INITIALLY DEFERRED; COMMIT;]]></statement>
+        <statement><![CDATA[ALTER TABLE LCO_WithholdingCalc ADD CONSTRAINT CBaseTax_LCOWithholdingCalc FOREIGN KEY (C_BaseTax_ID) REFERENCES C_Tax DEFERRABLE INITIALLY DEFERRED]]></statement>
     </SQLStatement>
     <SQLStatement type="custom">
         <DBType>ALL</DBType>
-        <statement><![CDATA[COMMIT; ALTER TABLE LCO_WithholdingCalc ADD CONSTRAINT CBaseTax_LCOWithholdingCalc FOREIGN KEY (C_BaseTax_ID) REFERENCES C_Tax DEFERRABLE INITIALLY DEFERRED; COMMIT;]]></statement>
+        <statement><![CDATA[ALTER TABLE LCO_WithholdingCalc ADD CONSTRAINT CTax_LCOWithholdingCalc FOREIGN KEY (C_Tax_ID) REFERENCES C_Tax DEFERRABLE INITIALLY DEFERRED]]></statement>
     </SQLStatement>
     <SQLStatement type="custom">
         <DBType>ALL</DBType>
-        <statement><![CDATA[COMMIT; ALTER TABLE LCO_WithholdingCalc ADD CONSTRAINT CTax_LCOWithholdingCalc FOREIGN KEY (C_Tax_ID) REFERENCES C_Tax DEFERRABLE INITIALLY DEFERRED; COMMIT;]]></statement>
+        <statement><![CDATA[ALTER TABLE LCO_WithholdingCalc ADD CONSTRAINT LCOWithholdingType_LCOWHCalc FOREIGN KEY (LCO_WithholdingType_ID) REFERENCES LCO_WithholdingType DEFERRABLE INITIALLY DEFERRED]]></statement>
     </SQLStatement>
     <SQLStatement type="custom">
         <DBType>ALL</DBType>
-        <statement><![CDATA[COMMIT; ALTER TABLE LCO_WithholdingCalc ADD CONSTRAINT LCOWithholdingType_LCOWHCalc FOREIGN KEY (LCO_WithholdingType_ID) REFERENCES LCO_WithholdingType DEFERRABLE INITIALLY DEFERRED; COMMIT;]]></statement>
+        <statement><![CDATA[ALTER TABLE LCO_WithholdingRule ADD CONSTRAINT CTaxCategory_LCOWithholdingRul FOREIGN KEY (C_TaxCategory_ID) REFERENCES C_TaxCategory DEFERRABLE INITIALLY DEFERRED]]></statement>
     </SQLStatement>
     <SQLStatement type="custom">
         <DBType>ALL</DBType>
-        <statement><![CDATA[COMMIT; ALTER TABLE LCO_WithholdingRule ADD CONSTRAINT CTaxCategory_LCOWithholdingRul FOREIGN KEY (C_TaxCategory_ID) REFERENCES C_TaxCategory DEFERRABLE INITIALLY DEFERRED; COMMIT;]]></statement>
+        <statement><![CDATA[ALTER TABLE LCO_WithholdingRule ADD CONSTRAINT LCOBPCity_LCOWithholdingRule FOREIGN KEY (LCO_BP_City_ID) REFERENCES C_City DEFERRABLE INITIALLY DEFERRED]]></statement>
     </SQLStatement>
     <SQLStatement type="custom">
         <DBType>ALL</DBType>
-        <statement><![CDATA[COMMIT; ALTER TABLE LCO_WithholdingRule ADD CONSTRAINT LCOBPCity_LCOWithholdingRule FOREIGN KEY (LCO_BP_City_ID) REFERENCES C_City DEFERRABLE INITIALLY DEFERRED; COMMIT;]]></statement>
+        <statement><![CDATA[ALTER TABLE LCO_WithholdingRule ADD CONSTRAINT LCOBPISIC_LCOWithholdingRule FOREIGN KEY (LCO_BP_ISIC_ID) REFERENCES LCO_ISIC DEFERRABLE INITIALLY DEFERRED]]></statement>
     </SQLStatement>
     <SQLStatement type="custom">
         <DBType>ALL</DBType>
-        <statement><![CDATA[COMMIT; ALTER TABLE LCO_WithholdingRule ADD CONSTRAINT LCOBPISIC_LCOWithholdingRule FOREIGN KEY (LCO_BP_ISIC_ID) REFERENCES LCO_ISIC DEFERRABLE INITIALLY DEFERRED; COMMIT;]]></statement>
+        <statement><![CDATA[ALTER TABLE LCO_WithholdingRule ADD CONSTRAINT LCOBPTaxPayerType_LCOWithholdi FOREIGN KEY (LCO_BP_TaxPayerType_ID) REFERENCES LCO_TaxPayerType DEFERRABLE INITIALLY DEFERRED]]></statement>
     </SQLStatement>
     <SQLStatement type="custom">
         <DBType>ALL</DBType>
-        <statement><![CDATA[COMMIT; ALTER TABLE LCO_WithholdingRule ADD CONSTRAINT LCOBPTaxPayerType_LCOWithholdi FOREIGN KEY (LCO_BP_TaxPayerType_ID) REFERENCES LCO_TaxPayerType DEFERRABLE INITIALLY DEFERRED; COMMIT;]]></statement>
+        <statement><![CDATA[ALTER TABLE LCO_WithholdingRule ADD CONSTRAINT LCOOrgCity_LCOWithholdingRule FOREIGN KEY (LCO_Org_City_ID) REFERENCES C_City DEFERRABLE INITIALLY DEFERRED]]></statement>
     </SQLStatement>
     <SQLStatement type="custom">
         <DBType>ALL</DBType>
-        <statement><![CDATA[COMMIT; ALTER TABLE LCO_WithholdingRule ADD CONSTRAINT LCOOrgCity_LCOWithholdingRule FOREIGN KEY (LCO_Org_City_ID) REFERENCES C_City DEFERRABLE INITIALLY DEFERRED; COMMIT;]]></statement>
+        <statement><![CDATA[ALTER TABLE LCO_WithholdingRule ADD CONSTRAINT LCOOrgISIC_LCOWithholdingRule FOREIGN KEY (LCO_Org_ISIC_ID) REFERENCES LCO_ISIC DEFERRABLE INITIALLY DEFERRED]]></statement>
     </SQLStatement>
     <SQLStatement type="custom">
         <DBType>ALL</DBType>
-        <statement><![CDATA[COMMIT; ALTER TABLE LCO_WithholdingRule ADD CONSTRAINT LCOOrgISIC_LCOWithholdingRule FOREIGN KEY (LCO_Org_ISIC_ID) REFERENCES LCO_ISIC DEFERRABLE INITIALLY DEFERRED; COMMIT;]]></statement>
+        <statement><![CDATA[ALTER TABLE LCO_WithholdingRule ADD CONSTRAINT LCOOrgTaxPayerType_LCOWithhold FOREIGN KEY (LCO_Org_TaxPayerType_ID) REFERENCES LCO_TaxPayerType DEFERRABLE INITIALLY DEFERRED]]></statement>
     </SQLStatement>
     <SQLStatement type="custom">
         <DBType>ALL</DBType>
-        <statement><![CDATA[COMMIT; ALTER TABLE LCO_WithholdingRule ADD CONSTRAINT LCOOrgTaxPayerType_LCOWithhold FOREIGN KEY (LCO_Org_TaxPayerType_ID) REFERENCES LCO_TaxPayerType DEFERRABLE INITIALLY DEFERRED; COMMIT;]]></statement>
+        <statement><![CDATA[ALTER TABLE LCO_WithholdingRule ADD CONSTRAINT LCOWithholdingCalc_LCOWithhold FOREIGN KEY (LCO_WithholdingCalc_ID) REFERENCES LCO_WithholdingCalc DEFERRABLE INITIALLY DEFERRED]]></statement>
     </SQLStatement>
     <SQLStatement type="custom">
         <DBType>ALL</DBType>
-        <statement><![CDATA[COMMIT; ALTER TABLE LCO_WithholdingRule ADD CONSTRAINT LCOWithholdingCalc_LCOWithhold FOREIGN KEY (LCO_WithholdingCalc_ID) REFERENCES LCO_WithholdingCalc DEFERRABLE INITIALLY DEFERRED; COMMIT;]]></statement>
+        <statement><![CDATA[ALTER TABLE LCO_WithholdingRule ADD CONSTRAINT LCOWithholdingCategory_LCOWith FOREIGN KEY (LCO_WithholdingCategory_ID) REFERENCES LCO_WithholdingCategory DEFERRABLE INITIALLY DEFERRED]]></statement>
     </SQLStatement>
     <SQLStatement type="custom">
         <DBType>ALL</DBType>
-        <statement><![CDATA[COMMIT; ALTER TABLE LCO_WithholdingRule ADD CONSTRAINT LCOWithholdingCategory_LCOWith FOREIGN KEY (LCO_WithholdingCategory_ID) REFERENCES LCO_WithholdingCategory DEFERRABLE INITIALLY DEFERRED; COMMIT;]]></statement>
+        <statement><![CDATA[ALTER TABLE LCO_WithholdingRule ADD CONSTRAINT LCOWithholdingType_LCOWHRule FOREIGN KEY (LCO_WithholdingType_ID) REFERENCES LCO_WithholdingType DEFERRABLE INITIALLY DEFERRED]]></statement>
     </SQLStatement>
     <SQLStatement type="custom">
         <DBType>ALL</DBType>
-        <statement><![CDATA[COMMIT; ALTER TABLE LCO_WithholdingRule ADD CONSTRAINT LCOWithholdingType_LCOWHRule FOREIGN KEY (LCO_WithholdingType_ID) REFERENCES LCO_WithholdingType DEFERRABLE INITIALLY DEFERRED; COMMIT;]]></statement>
+        <statement><![CDATA[ALTER TABLE LCO_WithholdingRuleConf ADD CONSTRAINT LCOWithholdingType_LCOWHRC FOREIGN KEY (LCO_WithholdingType_ID) REFERENCES LCO_WithholdingType DEFERRABLE INITIALLY DEFERRED]]></statement>
     </SQLStatement>
     <SQLStatement type="custom">
         <DBType>ALL</DBType>
-        <statement><![CDATA[COMMIT; ALTER TABLE LCO_WithholdingRuleConf ADD CONSTRAINT LCO_WithholdingRuleConf_pkey PRIMARY KEY (LCO_WithholdingType_ID) DEFERRABLE INITIALLY DEFERRED; COMMIT;]]></statement>
+        <statement><![CDATA[ALTER TABLE M_Product ADD CONSTRAINT LCOWithholdingCategory_MProduc FOREIGN KEY (LCO_WithholdingCategory_ID) REFERENCES LCO_WithholdingCategory DEFERRABLE INITIALLY DEFERRED]]></statement>
     </SQLStatement>
     <SQLStatement type="custom">
         <DBType>ALL</DBType>
-        <statement><![CDATA[COMMIT; ALTER TABLE LCO_WithholdingRuleConf ADD CONSTRAINT LCOWithholdingType_LCOWHRC FOREIGN KEY (LCO_WithholdingType_ID) REFERENCES LCO_WithholdingType DEFERRABLE INITIALLY DEFERRED; COMMIT;]]></statement>
-    </SQLStatement>
-    <SQLStatement type="custom">
-        <DBType>ALL</DBType>
-        <statement><![CDATA[COMMIT; ALTER TABLE M_Product ADD CONSTRAINT LCOWithholdingCategory_MProduc FOREIGN KEY (LCO_WithholdingCategory_ID) REFERENCES LCO_WithholdingCategory DEFERRABLE INITIALLY DEFERRED; COMMIT;]]></statement>
+        <statement><![CDATA[ALTER TABLE LCO_WithholdingRuleConf ADD CONSTRAINT LCO_WithholdingRuleConf_pkey PRIMARY KEY (LCO_WithholdingType_ID)]]></statement>
     </SQLStatement>
 </idempiere>
