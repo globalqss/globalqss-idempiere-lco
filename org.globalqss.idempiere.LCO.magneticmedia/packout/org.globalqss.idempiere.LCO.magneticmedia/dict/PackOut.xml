@@ -3098,7 +3098,7 @@ There are two reasons for de-activating and not deleting records:
                             <Help/>
                             <JasperReport/>
                             <IsDirectPrint>false</IsDirectPrint>
-                            <AD_ReportView_ID reference="id">0</AD_ReportView_ID>
+                            <AD_ReportView_ID/>
                             <IsReport>false</IsReport>
                             <AD_Process_UU>00e48c19-6679-413a-9c19-5b462595a529</AD_Process_UU>
                             <AccessLevel>3</AccessLevel>
@@ -3801,14 +3801,14 @@ There are two reasons for de-activating and not deleting records:
                             <IsActive>true</IsActive>
                             <IsDisplayedGrid>true</IsDisplayedGrid>
                             <SeqNoGrid>60</SeqNoGrid>
-                            <XPosition>1</XPosition>
+                            <XPosition>2</XPosition>
                             <IsQuickEntry>false</IsQuickEntry>
                             <MandatoryLogic/>
                             <IsUpdateable/>
                             <IsAlwaysUpdateable/>
                             <ReadOnlyLogic/>
                             <IsToolbarButton/>
-                            <ColumnSpan>1</ColumnSpan>
+                            <ColumnSpan>2</ColumnSpan>
                             <NumLines>1</NumLines>
                             <IsAdvancedField>false</IsAdvancedField>
                             <AD_Field_Trl type="translation">
@@ -16856,7 +16856,7 @@ There are two reasons for de-activating and not deleting records:
                             <Help/>
                             <JasperReport/>
                             <IsDirectPrint>false</IsDirectPrint>
-                            <AD_ReportView_ID reference="id">0</AD_ReportView_ID>
+                            <AD_ReportView_ID/>
                             <IsReport>false</IsReport>
                             <AD_Process_UU>374ae3a7-d7e5-4c30-9e6a-29e7fa46fa39</AD_Process_UU>
                             <AccessLevel>3</AccessLevel>
@@ -16967,7 +16967,7 @@ There are two reasons for de-activating and not deleting records:
                             <Help/>
                             <JasperReport/>
                             <IsDirectPrint>false</IsDirectPrint>
-                            <AD_ReportView_ID reference="id">0</AD_ReportView_ID>
+                            <AD_ReportView_ID/>
                             <IsReport>false</IsReport>
                             <AD_Process_UU>4fc2ddfd-ef58-40d2-94f6-69bfd27cdd05</AD_Process_UU>
                             <AccessLevel>3</AccessLevel>
@@ -17673,14 +17673,14 @@ There are two reasons for de-activating and not deleting records:
                             <IsActive>true</IsActive>
                             <IsDisplayedGrid>true</IsDisplayedGrid>
                             <SeqNoGrid>70</SeqNoGrid>
-                            <XPosition>1</XPosition>
+                            <XPosition>2</XPosition>
                             <IsQuickEntry>false</IsQuickEntry>
                             <MandatoryLogic/>
                             <IsUpdateable/>
                             <IsAlwaysUpdateable/>
                             <ReadOnlyLogic/>
                             <IsToolbarButton/>
-                            <ColumnSpan>1</ColumnSpan>
+                            <ColumnSpan>2</ColumnSpan>
                             <NumLines>1</NumLines>
                             <IsAdvancedField>false</IsAdvancedField>
                             <AD_Field_Trl type="translation">
@@ -17726,14 +17726,14 @@ There are two reasons for de-activating and not deleting records:
                             <IsActive>true</IsActive>
                             <IsDisplayedGrid>true</IsDisplayedGrid>
                             <SeqNoGrid>80</SeqNoGrid>
-                            <XPosition>1</XPosition>
+                            <XPosition>5</XPosition>
                             <IsQuickEntry>false</IsQuickEntry>
                             <MandatoryLogic/>
                             <IsUpdateable/>
                             <IsAlwaysUpdateable/>
                             <ReadOnlyLogic/>
                             <IsToolbarButton/>
-                            <ColumnSpan>1</ColumnSpan>
+                            <ColumnSpan>2</ColumnSpan>
                             <NumLines>1</NumLines>
                             <IsAdvancedField>false</IsAdvancedField>
                             <AD_Field_Trl type="translation">
