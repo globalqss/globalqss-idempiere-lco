@@ -276,7 +276,7 @@
  </row>
  <row id="53171" trl="Y">
   <value column="Name" original="Depreciation Setup">Configuración Depreciación</value>
-  <value column="Description" original="Applications to setup and maintain depreciation">aplicación para configurar y mantener depreciaciones</value>
+  <value column="Description" original="Applications to setup and maintain depreciation">Aplicación para configurar y mantener depreciaciones</value>
  </row>
  <row id="53180" trl="Y">
   <value column="Name" original="Forecast Management">Administración de Pronóstico</value>
@@ -288,6 +288,26 @@
  </row>
  <row id="53247" trl="Y">
   <value column="Name" original="EDI">EDI</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53296" trl="Y">
+  <value column="Name" original="Manufacturing">Manufactura</value>
+  <value column="Description" original=""/>
+ </row>
+ <row trl="Y" uuid="a18acb98-2108-4004-b6ae-b5d794e14e96">
+  <value column="Name" original="Colombia Localization">Localización Colombia</value>
+  <value column="Description" original=""/>
+ </row>
+ <row trl="Y" uuid="bd3a10db-a00e-4c11-8df8-f135ed9fd22f">
+  <value column="Name" original="Detailed Names">Nombres Detallados</value>
+  <value column="Description" original=""/>
+ </row>
+ <row trl="Y" uuid="15b4307e-555b-4e93-a48f-7132edfd324c">
+  <value column="Name" original="Withholdings">Retenciones</value>
+  <value column="Description" original=""/>
+ </row>
+ <row trl="Y" uuid="b1d1ec95-4fb1-4b30-96fd-89e7c5f3353d">
+  <value column="Name" original="Magnetic Media (DIAN)">Medios Magnéticos (DIAN)</value>
   <value column="Description" original=""/>
  </row>
 </idempiereTrl>
