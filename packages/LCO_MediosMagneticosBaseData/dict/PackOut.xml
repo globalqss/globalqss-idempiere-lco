@@ -285,7 +285,7 @@
         <AD_Org_ID>0</AD_Org_ID>
         <C_ElementValue_ID reference="id">596</C_ElementValue_ID>
         <FieldExpression>@script:beanshell:MM1002vabo</FieldExpression>
-        <GL_Category_ID reference="id">0</GL_Category_ID>
+        <GL_Category_ID/>
         <IsActive>true</IsActive>
         <LCO_DIAN_Concept_ID reference="uuid" reference-key="LCO_DIAN_Concept">c116c9c2-398e-4fc6-87e9-494bc52cce91</LCO_DIAN_Concept_ID>
         <CalcColumnPosition>2</CalcColumnPosition>
@@ -295,7 +295,7 @@
         <AD_Org_ID>0</AD_Org_ID>
         <C_ElementValue_ID reference="id">596</C_ElementValue_ID>
         <FieldExpression>@script:beanshell:MM1002vret</FieldExpression>
-        <GL_Category_ID reference="id">0</GL_Category_ID>
+        <GL_Category_ID/>
         <IsActive>true</IsActive>
         <LCO_DIAN_Concept_ID reference="uuid" reference-key="LCO_DIAN_Concept">c116c9c2-398e-4fc6-87e9-494bc52cce91</LCO_DIAN_Concept_ID>
         <CalcColumnPosition>1</CalcColumnPosition>
@@ -305,7 +305,7 @@
         <AD_Org_ID>0</AD_Org_ID>
         <C_ElementValue_ID reference="id">597</C_ElementValue_ID>
         <FieldExpression>@script:beanshell:MM1002vabo</FieldExpression>
-        <GL_Category_ID reference="id">0</GL_Category_ID>
+        <GL_Category_ID/>
         <IsActive>true</IsActive>
         <LCO_DIAN_Concept_ID reference="uuid" reference-key="LCO_DIAN_Concept">58c11cec-ea67-4338-b35b-85ba6e53bdd0</LCO_DIAN_Concept_ID>
         <CalcColumnPosition>2</CalcColumnPosition>
@@ -315,7 +315,7 @@
         <AD_Org_ID>0</AD_Org_ID>
         <C_ElementValue_ID reference="id">597</C_ElementValue_ID>
         <FieldExpression>@script:beanshell:MM1002vret</FieldExpression>
-        <GL_Category_ID reference="id">0</GL_Category_ID>
+        <GL_Category_ID/>
         <IsActive>true</IsActive>
         <LCO_DIAN_Concept_ID reference="uuid" reference-key="LCO_DIAN_Concept">58c11cec-ea67-4338-b35b-85ba6e53bdd0</LCO_DIAN_Concept_ID>
         <CalcColumnPosition>1</CalcColumnPosition>
@@ -325,7 +325,7 @@
         <AD_Org_ID>0</AD_Org_ID>
         <C_ElementValue_ID reference="id">534</C_ElementValue_ID>
         <FieldExpression>@script:beanshell:MM1002vabo</FieldExpression>
-        <GL_Category_ID reference="id">0</GL_Category_ID>
+        <GL_Category_ID/>
         <IsActive>true</IsActive>
         <LCO_DIAN_Concept_ID reference="uuid" reference-key="LCO_DIAN_Concept">db01aa8a-2afe-47d7-856a-2bb11c7d90f6</LCO_DIAN_Concept_ID>
         <CalcColumnPosition>2</CalcColumnPosition>
@@ -335,7 +335,7 @@
         <AD_Org_ID>0</AD_Org_ID>
         <C_ElementValue_ID reference="id">534</C_ElementValue_ID>
         <FieldExpression>@script:beanshell:MM1002vret</FieldExpression>
-        <GL_Category_ID reference="id">0</GL_Category_ID>
+        <GL_Category_ID/>
         <IsActive>true</IsActive>
         <LCO_DIAN_Concept_ID reference="uuid" reference-key="LCO_DIAN_Concept">db01aa8a-2afe-47d7-856a-2bb11c7d90f6</LCO_DIAN_Concept_ID>
         <CalcColumnPosition>1</CalcColumnPosition>
@@ -345,7 +345,7 @@
         <AD_Org_ID>0</AD_Org_ID>
         <C_ElementValue_ID reference="id">535</C_ElementValue_ID>
         <FieldExpression>@script:beanshell:MM1002vabo</FieldExpression>
-        <GL_Category_ID reference="id">0</GL_Category_ID>
+        <GL_Category_ID/>
         <IsActive>true</IsActive>
         <LCO_DIAN_Concept_ID reference="uuid" reference-key="LCO_DIAN_Concept">9b2f0b01-d3aa-453c-a3b0-fd5536e0bb31</LCO_DIAN_Concept_ID>
         <CalcColumnPosition>2</CalcColumnPosition>
@@ -355,7 +355,7 @@
         <AD_Org_ID>0</AD_Org_ID>
         <C_ElementValue_ID reference="id">535</C_ElementValue_ID>
         <FieldExpression>@script:beanshell:MM1002vret</FieldExpression>
-        <GL_Category_ID reference="id">0</GL_Category_ID>
+        <GL_Category_ID/>
         <IsActive>true</IsActive>
         <LCO_DIAN_Concept_ID reference="uuid" reference-key="LCO_DIAN_Concept">9b2f0b01-d3aa-453c-a3b0-fd5536e0bb31</LCO_DIAN_Concept_ID>
         <CalcColumnPosition>1</CalcColumnPosition>
