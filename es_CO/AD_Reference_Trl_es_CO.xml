@@ -2452,4 +2452,49 @@
   <value column="Description" original="Language not system neither base">Language not system neither base</value>
   <value column="Help" original=""/>
  </row>
+ <row trl="Y" uuid="4d3708dd-50f2-485b-8bda-934768e94d43">
+  <value column="Name" original="LCO_ISIC_ID">LCO_ISIC_ID</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="dab10b92-1daf-4e1b-b1d3-f91f9e954ec7">
+  <value column="Name" original="LCO_GenerateWithdHolding on DocType">LCO_GenerateWithdHolding on DocType</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="3884d73d-1cba-44f2-88f4-a94a49bbb54f">
+  <value column="Name" original="LCO_TaxPayerType_ID">LCO_TaxPayerType_ID</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="70254406-0230-4378-8354-6131658e585a">
+  <value column="Name" original="LCO_C_City_ID">LCO_C_City_ID</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="1cc8a6db-37e5-48f5-9f64-b059ce762e13">
+  <value column="Name" original="LCO_WithholdingType BaseType">LCO_WithholdingType BaseType</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="56c2901e-a29b-43a8-a47e-dcce88af7cf9">
+  <value column="Name" original="LCO_DIAN_Concept">LCO_DIAN_Concept</value>
+  <value column="Description" original="DIAN Concept">DIAN Concept</value>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="7e6fb2b1-e0b1-42f7-8962-449ff31e63e2">
+  <value column="Name" original="LCO_XMLPrintLabel">LCO_XMLPrintLabel</value>
+  <value column="Description" original="XML Print Label">XML Print Label</value>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="b53e3172-4d7d-40cb-a4a5-9618b9791a5b">
+  <value column="Name" original="LCO_DIAN_Format">LCO_DIAN_Format</value>
+  <value column="Description" original="DIAN Format">DIAN Format</value>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="9cef3a71-20b7-4be5-b61b-62ea286932e9">
+  <value column="Name" original="LCO_SendConceptCode">LCO_SendConceptCode</value>
+  <value column="Description" original="Send Concept Code">Send Concept Code</value>
+  <value column="Help" original=""/>
+ </row>
 </idempiereTrl>

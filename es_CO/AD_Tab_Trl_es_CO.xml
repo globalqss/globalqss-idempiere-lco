@@ -5273,10 +5273,10 @@ Válido Desde/Hasta es determinado por el impuesto padre.]]></value>
   <value column="Help" original="The Customer Return Tab allows you to generate, maintain, enter and process Returns from a Customer. ">La pestaña devoluciones de cliente permite genera generar, mantener, ingresar y procesar devoluciones de un cliente</value>
  </row>
  <row id="53272" trl="Y">
-  <value column="Name" original="Receipt Line">Línea Recibo</value>
+  <value column="Name" original="Customer Return Line">Línea Devolución Cliente</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Shipment Line">Línea de la Entrega</value>
-  <value column="Help" original="The Shipment Line Tab defines the individual items in a Shipment.">La pestaña Línea de la Entrega define cada ítem en una entrega.</value>
+  <value column="Description" original="Customer Return Line">Línea de la Devolución Cliente</value>
+  <value column="Help" original="The Customer Return Line Tab defines the individual items in a Customer Return.">La pestaña Línea de la Devolución Cliente define cada ítem en una entrega.</value>
  </row>
  <row id="53273" trl="Y">
   <value column="Name" original="Confirmations">Confirmaciones</value>
@@ -5303,15 +5303,15 @@ Válido Desde/Hasta es determinado por el impuesto padre.]]></value>
   <value column="Help" original="The Return to Vendor Tab allows you to generate, maintain, enter and process Shipments to a Vendor because of a Return">La pestaña Devolución a Proveedor permite generar, mantener, ingresar y procesar despachos a proveedores debido a devoluciones. </value>
  </row>
  <row id="53277" trl="Y">
-  <value column="Name" original="Shipment Line">Línea de la Entrega</value>
+  <value column="Name" original="Return to Vendor Line">Línea de la Devolución a Proveedor</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Shipment Line">Línea de la Entrega</value>
-  <value column="Help" original="The Shipment Line Tab defines the individual items in a Shipment.">La pestaña Línea de la Entrega define cada ítem en una entrega.</value>
+  <value column="Description" original="Return to Vendor Line">Línea de la Devolución a Proveedor</value>
+  <value column="Help" original="The Return to Vendor Line Tab defines the individual items in a Return to Vendor.">La pestaña Línea de la Devolución a Proveedor define cada ítem en una entrega.</value>
  </row>
  <row id="53278" trl="Y">
   <value column="Name" original="Confirmations">Confirmaciones</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Optional Confirmations of Shipment Lines">Confirmaciones opcionales de las líneas del recibo.</value>
+  <value column="Description" original="Optional Confirmations of Return to Vendor Lines">Confirmaciones opcionales de las líneas de la Devolución a Proveedor.</value>
   <value column="Help" original="The quantities are in the storage Unit of Measure!">¡Las cantidades están en la unidad del almacenaje de la medida!</value>
  </row>
  <row id="53279" trl="Y">
@@ -5946,6 +5946,12 @@ Imprimiendo:
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="200077" trl="Y">
+  <value column="Name" original="Zoom Condition">Condición de Acercamiento</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row id="200078" trl="Y">
   <value column="Name" original="1099 Box">Caja 1099</value>
   <value column="CommitWarning" original=""/>
@@ -5958,10 +5964,172 @@ Imprimiendo:
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="200095" trl="N">
+ <row id="200095" trl="Y">
   <value column="Name" original="City (Without Regions)">Ciudad (sin Región)</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original="Cities without Region">Ciudades sin Región</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200102" trl="Y">
+  <value column="Name" original="Cost Adjustment">Ajuste Costo</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200103" trl="Y">
+  <value column="Name" original="Cost Adjustment Line">Línea Ajuste Costo</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="0545cbb1-ef68-4e60-b6f6-a9ca4d726b28">
+  <value column="Name" original="TaxId Type">Tipo Identificación</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="a29a9723-4050-4802-907d-5d5353a9e96a">
+  <value column="Name" original="Withholding">Retención</value>
+  <value column="CommitWarning" original="Please take account that changes on Withholding will be lost if you change invoice lines after making this change.">Favor tener en cuenta que los cambios en retenciones se perderán si cambia líneas de factura después de realizar este cambio.</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="7c0e1c65-1ac3-43eb-8dde-cf0cffabc574">
+  <value column="Name" original="Withholding">Retención</value>
+  <value column="CommitWarning" original="Please take account that changes on Withholding will be lost if you change invoice lines after making this change.">Favor tener en cuenta que los cambios en retenciones se perderán si cambia líneas de factura después de realizar este cambio.</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="bd04f674-fb55-470a-a06e-5d077d315086">
+  <value column="Name" original="Withholding">Retención</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="7f2e17fb-df1e-48e1-a260-2a02f59d09ef">
+  <value column="Name" original="Withholding (Multi)">Retención (Multi)</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="2cf7a3e2-e8bf-4e7e-a36e-2d021fbaccc0">
+  <value column="Name" original="Tax Payer Type">Tipo Contribuyente</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="76163303-fcae-43fb-9725-34f87f24930b">
+  <value column="Name" original="ISIC">CIIU</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="82114add-9cff-4495-ae9f-39e78f896693">
+  <value column="Name" original="Withholding Category">Categoría Retención</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="62848fe5-62f8-4ebf-a5b3-4818ffc78293">
+  <value column="Name" original="Withholding Type">Tipo Retención</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="c207065e-c79b-4d24-ad04-7ce651b2cf37">
+  <value column="Name" original="Withholding Rule Conf">Configuración Regla Retención</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="9f296b72-8716-4151-82a9-50d1590b7c50">
+  <value column="Name" original="Withholding Rule">Regla Retención</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="c78e19d4-1c2a-45c8-8e26-23a4f6eed7ae">
+  <value column="Name" original="Withholding Calc">Cálculo Retención</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="7b06e66c-cda4-436a-baa5-031406c2a1d6">
+  <value column="Name" original="Invoice Withholding">Retención</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="132e77a4-df8e-41ad-92ec-3be55dce1eb9">
+  <value column="Name" original="Conversion">Tabla Conversión</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="89b90e65-21a1-4923-8355-a0157f16a03f">
+  <value column="Name" original="Code">Código</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="9defbd8f-5ca5-4f70-b4d9-5e9ff499e231">
+  <value column="Name" original="XML Header">Encabezado XML</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="6c07dadb-2819-4885-9940-f787e605837c">
+  <value column="Name" original="XML Content">Contenido XML</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="bf52e47e-78de-49c6-b30c-ff870946e4f5">
+  <value column="Name" original="XML Print Label">Rótulo XML</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="593ef44c-55a4-42a5-a416-f8b609515223">
+  <value column="Name" original="Concept">Concepto</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="51e8c2b1-3145-4d2c-8ebb-8dca6815c87c">
+  <value column="Name" original="Source">Fuente</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="4a4241e9-43d0-4f2c-814f-f223e4e54d91">
+  <value column="Name" original="Format">Formato</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="8da518a0-7fae-4890-ad60-020303c3c6fb">
+  <value column="Name" original="Concept Format">Conceptos Formato</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="d6646dee-f0ad-4da5-8966-ae281b1126b4">
+  <value column="Name" original="Field Format">Campos Formato</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="a43e641a-5eb9-40e7-8a3c-173d93a91a76">
+  <value column="Name" original="Send Schedule">Programación Envío</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="dc719a52-f0c3-41ac-a30b-76dc45ffa9a5">
+  <value column="Name" original="Send Schedule Line">Línea Envío</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
 </idempiereTrl>

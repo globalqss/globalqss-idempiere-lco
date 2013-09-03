@@ -11348,8 +11348,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
  <row id="1903" trl="Y">
   <value column="Name" original="User Name">Nombre Usuario</value>
   <value column="PrintName" original="User Name">Nombre Usuario</value>
-  <value column="Description" original=""></value>
-  <value column="Help" original=""></value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -21725,8 +21725,8 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
  <row id="2991" trl="Y">
   <value column="Name" original="Secure content">Contenido seguro</value>
   <value column="PrintName" original="Secure content">Contenido seguro</value>
-  <value column="Description" original="Defines whether content needs to get encrypted">Define si el contenido necesita ser encriptado.</value>
-  <value column="Help" original="If you select this parameter this container will only get delivered over a secure connection i.e. SSL etc. if no encryption can be found no content will be delivered">Si tu selecionas este parametro este contenedor solo obtendra información sobre una conexion segura Ej, SSL etc. Si ninguna encripción es encontrada, ninguna información será entregada.</value>
+  <value column="Description" original="Defines whether content must be treated as secure">Define si el contenido necesita ser tratado como seguro.</value>
+  <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -53044,6 +53044,16 @@ Producto: usado para adicionar rápidamente productos a la venta</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
+ <row id="202220" trl="Y">
+  <value column="Name" original="Zoom condition">Condición Acercamiento</value>
+  <value column="PrintName" original="Zoom Condition">Condición Acercamiento</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
  <row id="202222" trl="Y">
   <value column="Name" original="T_1099Extract_UU">T_1099EXTRACT_UU</value>
   <value column="PrintName" original="T_1099Extract_UU">T_1099EXTRACT_UU</value>
@@ -53907,6 +53917,1116 @@ Producto: usado para adicionar rápidamente productos a la venta</value>
  <row id="202511" trl="Y">
   <value column="Name" original="WS_WebServiceMethod_UU">WS_WebServiceMethod_UU</value>
   <value column="PrintName" original="WS_WebServiceMethod_UU">WS_WebServiceMethod_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202570" trl="Y">
+  <value column="Name" original="Fill UUID">Llenar UUID</value>
+  <value column="PrintName" original="Fill UUID">Llenar UUID</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202574" trl="Y">
+  <value column="Name" original="Advanced Field">Campo Avanzado</value>
+  <value column="PrintName" original="Advanced Field">Campo Avanzado</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202575" trl="Y">
+  <value column="Name" original="Access Advanced ">Accesa Avanzados</value>
+  <value column="PrintName" original="Access Advanced ">Accesa Avanzados</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202578" trl="Y">
+  <value column="Name" original="AD_ZoomCondition_UU">AD_ZoomCondition_UU</value>
+  <value column="PrintName" original="AD_ZoomCondition_UU">AD_ZoomCondition_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202600" trl="Y">
+  <value column="Name" original="UUID Mapping">Mapeo UUID</value>
+  <value column="PrintName" original="UUID Mapping">Mapeo UUID</value>
+  <value column="Description" original="UUID Mapping between client">Mapeo UUID entre grupos empresariales</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202601" trl="Y">
+  <value column="Name" original="AD_Package_UUID_Map_UU">AD_Package_UUID_Map_UU</value>
+  <value column="PrintName" original="AD_Package_UUID_Map_UU">AD_Package_UUID_Map_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202602" trl="Y">
+  <value column="Name" original="Source UUID">UUID Origen</value>
+  <value column="PrintName" original="Source UUID">UUID Origen</value>
+  <value column="Description" original="UUID from the source client">UUID del grupo empresarial origen</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202603" trl="Y">
+  <value column="Name" original="Target UUID">UUID Destino</value>
+  <value column="PrintName" original="Target UUID">UUID Destino</value>
+  <value column="Description" original="New UUID created by the pack in client">Nuevo UUID creado en el nuevo grupo empresarial</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="5bd18069-629e-4246-bd40-9bbedd02e009">
+  <value column="Name" original="Tax ID Type">Tipo Identificación</value>
+  <value column="PrintName" original="Tax ID Type">Tipo Documento</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="3fafd88a-e6ba-4f10-b3ed-965a19b578da">
+  <value column="Name" original="Tax ID Digit">Dígito Verificación</value>
+  <value column="PrintName" original="Tax ID Digit">Dígito Verificación</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="cf6f98a2-6273-48d5-9b46-692cf6ebca4a">
+  <value column="Name" original="Use Tax Id Digit">Usa Dígito Verificación</value>
+  <value column="PrintName" original="Use Tax Id Digit">Usa Dígito Verificación</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="99058ca6-b088-4085-97ea-d36124178c4c">
+  <value column="Name" original="Detailed Names">Nombres detallados</value>
+  <value column="PrintName" original="Detailed Names">Nombres detallados</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="70dcc71f-1d37-421c-b8b1-294780c788c4">
+  <value column="Name" original="First Name 1">Primer Nombre</value>
+  <value column="PrintName" original="First Name 1">Primer Nombre</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="bfa3dd2f-8248-49eb-9b56-20969f73fd2c">
+  <value column="Name" original="First Name 2">Segundo Nombre</value>
+  <value column="PrintName" original="First Name 2">Segundo Nombre</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="2ec30713-88a7-4b98-b383-3c1d78699ba5">
+  <value column="Name" original="Last Name 1">Primer Apellido</value>
+  <value column="PrintName" original="Last Name 1">Primer Apellido</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="3d0069af-ca0a-44b1-8475-f3ef64f99efa">
+  <value column="Name" original="Last Name 2">Segundo Apellido</value>
+  <value column="PrintName" original="Last Name 2">Segundo Apellido</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="de886b7d-2f17-418d-bdfb-99f951ef50a2">
+  <value column="Name" original="Is Digit Checked">Chequea Dígito</value>
+  <value column="PrintName" original="Is Digit Checked">Chequea Dígito</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="5ef90ee6-2644-4464-a8a9-84da52371ba3">
+  <value column="Name" original="Tax Code">Código Documento DIAN</value>
+  <value column="PrintName" original="Tax Code">Código Documento DIAN</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="7e6a4297-accd-426b-8458-43c568a1753c">
+  <value column="Name" original="LCO_TaxIdType_UU">LCO_TaxIdType_UU</value>
+  <value column="PrintName" original="LCO_TaxIdType_UU">LCO_TaxIdType_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="b03e4465-2e9a-433b-9c43-c9f77bed209a">
+  <value column="Name" original="Tax Payer Type">Tipo Contribuyente</value>
+  <value column="PrintName" original="Tax Payer Type">Tipo Contribuyente</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="8d9041ae-d585-40e9-859c-817b45659d42">
+  <value column="Name" original="ISIC">CIIU</value>
+  <value column="PrintName" original="ISIC">CIIU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="24151ac4-a681-4a29-889d-ec0847a760e3">
+  <value column="Name" original="Withholding Category">Categoría Retención</value>
+  <value column="PrintName" original="Withholding Category">Categoría Retención</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="bb3993eb-bd98-41c2-9b7b-fdc29ad9b684">
+  <value column="Name" original="Generate Withholding">Genera Retención</value>
+  <value column="PrintName" original="Generate Withholding">Genera Retención</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="33b525c3-1007-4ea4-ab8c-5961b5a22a7c">
+  <value column="Name" original="Invoice Withholding">Retención Factura</value>
+  <value column="PrintName" original="Invoice Withholding">Retención Factura</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="d59eaed0-455e-4a07-860d-a7dc1770ef21">
+  <value column="Name" original="Is Calc On Payment">Aplicable en Pago</value>
+  <value column="PrintName" original="Is Calc On Payment">Aplicable en Pago</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="3b40daaa-e2b4-4d90-82c4-27bcbcff0420">
+  <value column="Name" original="Withholding Rule">Regla Retención</value>
+  <value column="PrintName" original="Withholding Rule">Regla Retención</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="a5bcdc79-6e3e-470a-9e9c-2947e64ca9f2">
+  <value column="Name" original="Withholding Type">Tipo Retención</value>
+  <value column="PrintName" original="Withholding Type">Tipo Retención</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="dbc48ad2-6300-481a-882b-f2381065d8d2">
+  <value column="Name" original="LCO_InvoiceWithholding_UU">LCO_InvoiceWithholding_UU</value>
+  <value column="PrintName" original="LCO_InvoiceWithholding_UU">LCO_InvoiceWithholding_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="4ed062fa-b42a-4f0b-a910-4263c7b03ff4">
+  <value column="Name" original="Withholding Amount">Cantidad Retención</value>
+  <value column="PrintName" original="Withholding Amount">Cantidad Retención</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="8c0b1e36-02b5-47b3-a7e3-1895b1c292ad">
+  <value column="Name" original="Is Withholding">Es Retención</value>
+  <value column="PrintName" original="Is Withholding">Es Retención</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="028ee96c-e282-4a8e-a0fe-a8470f9321e1">
+  <value column="Name" original="LCO_TaxPayerType_UU">LCO_TaxPayerType_UU</value>
+  <value column="PrintName" original="LCO_TaxPayerType_UU">LCO_TaxPayerType_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="f9143727-cd52-4151-ae14-632d395797fd">
+  <value column="Name" original="LCO_ISIC_UU">LCO_ISIC_UU</value>
+  <value column="PrintName" original="LCO_ISIC_UU">LCO_ISIC_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="581fb589-3b19-47f7-b0b9-bda2a9c5acd6">
+  <value column="Name" original="LCO_WithholdingCategory_UU">LCO_WithholdingCategory_UU</value>
+  <value column="PrintName" original="LCO_WithholdingCategory_UU">LCO_WithholdingCategory_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="625eb4d1-6a66-4188-8517-d86309e9a02f">
+  <value column="Name" original="LCO_WithholdingType_UU">LCO_WithholdingType_UU</value>
+  <value column="PrintName" original="LCO_WithholdingType_UU">LCO_WithholdingType_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="9d316ade-c8c6-4b19-a88f-de775b9fe01f">
+  <value column="Name" original="Is Use BP ISIC">Usa CIIU Tercero</value>
+  <value column="PrintName" original="Is Use BP ISIC">Usa CIIU Tercero</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="70e58c17-535d-41b9-89e2-34eccdd5e126">
+  <value column="Name" original="Is Use Org ISIC">Usa CIIU Organización</value>
+  <value column="PrintName" original="Is Use Org ISIC">Usa CIIU Organización</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="7abc66a8-953f-4b7b-a6d6-684f45da324b">
+  <value column="Name" original="Is Use Org Tax Payer Type">Usa Tipo Contribuyente Organización</value>
+  <value column="PrintName" original="Is Use Org Tax Payer Type">Usa Tipo Contribuyente Organización</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="9cdcf27e-3e04-4eb5-8de0-22989a450f58">
+  <value column="Name" original="Is Use Withholding Category">Usa Categoría Retención</value>
+  <value column="PrintName" original="Is Use Withholding Category">Usa Categoría Retención</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="8c434d50-1dbe-4949-91ae-ffa8e2549aca">
+  <value column="Name" original="Is Use Product Tax Category">Usa Impuesto Producto</value>
+  <value column="PrintName" original="Is Use Product Tax Category">Usa Impuesto Producto</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="0abe0186-b2f6-4570-9cee-aa76f9140dfe">
+  <value column="Name" original="Is Use BP Tax Payer Type">Usa Tipo Contribuyente Tercero</value>
+  <value column="PrintName" original="Is Use BP Tax Payer Type">Usa Tipo Contribuyente Tercero</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="e219bfa7-5640-4498-a66f-1608fd2ee1e7">
+  <value column="Name" original="Is Use BP City">Usa Ciudad Tercero</value>
+  <value column="PrintName" original="Is Use BP City">Usa Ciudad Tercero</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="a51d607e-7cc6-49e2-ba66-81bdc0c59498">
+  <value column="Name" original="Is Use Org City">Usa Ciudad Organización</value>
+  <value column="PrintName" original="Is Use Org City">Usa Ciudad Organización</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="c952e12d-8345-4b31-adec-0c5490e7f5ac">
+  <value column="Name" original="LCO_WithholdingRuleConf_UU">LCO_WithholdingRuleConf_UU</value>
+  <value column="PrintName" original="LCO_WithholdingRuleConf_UU">LCO_WithholdingRuleConf_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="626134e2-517b-453a-87fe-1437abad15ca">
+  <value column="Name" original="ISIC Business Partner">CIIU Tercero</value>
+  <value column="PrintName" original="ISIC Business Partner">CIIU Tercero</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="e31c6b04-c730-4dee-bf60-176f8cccdd08">
+  <value column="Name" original="Tax Payer Type Business Partner">Tipo Contribuyente Tercero</value>
+  <value column="PrintName" original="Tax Payer Type Business Partner">Tipo Contribuyente Tercero</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="e2d0aad0-99f4-4e7f-a48a-cbc50038b755">
+  <value column="Name" original="ISIC Organization">CIIU Organización</value>
+  <value column="PrintName" original="ISIC Organization">CIIU Organización</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="7ffe460a-85b9-4b0f-b876-7248803c430c">
+  <value column="Name" original="Tax Payer Type Organization">Tipo Contribuyente Organización</value>
+  <value column="PrintName" original="Tax Payer Type Organization">Tipo Contribuyente Organización</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="0e42d360-55a3-4b7f-99ec-eb0c6f5cea27">
+  <value column="Name" original="Withholding Calculation">Cálculo Retención</value>
+  <value column="PrintName" original="Withholding Calculation">Cálculo Retención</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="2bb48dd7-b9ce-4c1c-b97c-26c82d793c72">
+  <value column="Name" original="City Business Partner">Ciudad Tercero</value>
+  <value column="PrintName" original="City Business Partner">Ciudad Tercero</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="7d344495-d3d7-4b8d-8a74-e20699571942">
+  <value column="Name" original="City Organization">Ciudad Organización</value>
+  <value column="PrintName" original="City Organization">Ciudad Organización</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="391177d1-13f1-4481-bea6-cdf74ca4de59">
+  <value column="Name" original="LCO_WithholdingRule_UU">LCO_WithholdingRule_UU</value>
+  <value column="PrintName" original="LCO_WithholdingRule_UU">LCO_WithholdingRule_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="504031e5-7028-4607-9c85-d11aac7bb969">
+  <value column="Name" original="Base Type">Tipo Base</value>
+  <value column="PrintName" original="Base Type">Tipo Base</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="f2ea56b2-716e-4733-8995-4a37cc83127b">
+  <value column="Name" original="Base Tax">Impuesto Base</value>
+  <value column="PrintName" original="Base Tax">Impuesto Base</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="4ea35583-080e-4779-982e-02bfa26a6220">
+  <value column="Name" original="Is Calc On Invoice">Aplicable en Factura</value>
+  <value column="PrintName" original="Is Calc On Invoice">Aplicable en Factura</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="9160b0df-39ac-45ad-8412-21a8a0fba5aa">
+  <value column="Name" original="Is Modifiable On Payment">Modificable en Pago</value>
+  <value column="PrintName" original="Is Modifiable On Payment">Modificable en Pago</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="e2aa30c9-be9f-4931-bc09-afca5fc8100a">
+  <value column="Name" original="LCO_WithholdingCalc_UU">LCO_WithholdingCalc_UU</value>
+  <value column="PrintName" original="LCO_WithholdingCalc_UU">LCO_WithholdingCalc_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="425d7198-4c78-4f4d-a65e-453412670078">
+  <value column="Name" original="LCO_Conversion">Tabla Conversión</value>
+  <value column="PrintName" original="LCO_Conversion">Tabla Conversión</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="136002cf-3ad3-4079-a865-b1f6aff47356">
+  <value column="Name" original="LCO_Conversion_UU">LCO_Conversion_UU</value>
+  <value column="PrintName" original="LCO_Conversion_UU">LCO_Conversion_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="3411a71d-14dd-4106-a269-2ebce18cbbb9">
+  <value column="Name" original="LCO_ConversionCode">Conversión Códigos</value>
+  <value column="PrintName" original="LCO_ConversionCode">Conversión Códigos</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="613c0c26-f5f7-41e8-9723-724b55f29523">
+  <value column="Name" original="Internal Code">Código Interno</value>
+  <value column="PrintName" original="Internal Code">Código Interno</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="64c8ba3e-3b8b-4330-83f1-98d0d6cd0c31">
+  <value column="Name" original="External Code">Código Externo</value>
+  <value column="PrintName" original="External Code">Código Externo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="17f28e1a-3b27-4c82-9f0c-4266d4f902f3">
+  <value column="Name" original="LCO_ConversionCode_UU">LCO_ConversionCode_UU</value>
+  <value column="PrintName" original="LCO_ConversionCode_UU">LCO_ConversionCode_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="1187608e-e22b-4f95-afb2-7644ecd74619">
+  <value column="Name" original="DIAN XML Header">Encabezado XML</value>
+  <value column="PrintName" original="DIAN XML Header">Encabezado XML</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="9637a46d-40ab-4441-a226-013056951687">
+  <value column="Name" original="RecordsQty">Cantidad Registros</value>
+  <value column="PrintName" original="Record Qty">Cantidad Registros</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="579afbac-3201-452f-b976-fb72307a013a">
+  <value column="Name" original="DIAN Send Schedule">Programación Envío</value>
+  <value column="PrintName" original="DIAN Send Schedule">Programación Envío</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="c013a536-29c2-40d7-8bea-a93d6396a1fd">
+  <value column="Name" original="LCO_DIAN_XML_Header_UU">LCO_DIAN_XML_Header_UU</value>
+  <value column="PrintName" original="LCO_DIAN_XML_Header_UU">LCO_DIAN_XML_Header_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="8521c899-7f1c-49d2-bc92-0e4a69e18975">
+  <value column="Name" original="DIAN Send Schedule Line">Línea Programación</value>
+  <value column="PrintName" original="DIAN Send Schedule Line">Línea Programación</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="959c2eb3-2c8a-480d-b26e-c6e506881ada">
+  <value column="Name" original="DIAN Concept">Concepto</value>
+  <value column="PrintName" original="DIAN Concept">Concepto</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="ac62cfc1-0b15-4945-8fd4-f5378d4ff7ec">
+  <value column="Name" original="Field Amt 1">Valor 1</value>
+  <value column="PrintName" original="Field Amt 1">Valor 1</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="9d514109-4a1e-4c91-a8d1-b06e6ef23478">
+  <value column="Name" original="Field Amt 2">Valor 2</value>
+  <value column="PrintName" original="Field Amt 2">Valor 2</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="8b275d56-0b9b-4d93-a9d2-acaf472ee0e9">
+  <value column="Name" original="Field Amt 3">Valor 3</value>
+  <value column="PrintName" original="Field Amt 3">Valor 3</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="9e3ebf26-1945-4c92-9e6f-694fb6e0622f">
+  <value column="Name" original="Field Amt 4">Valor 4</value>
+  <value column="PrintName" original="Field Amt 4">Valor 4</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="ada7921e-f899-4660-9e7a-3ee10d2a37c2">
+  <value column="Name" original="Field Amt 5">Valor 5</value>
+  <value column="PrintName" original="Field Amt 5">Valor 5</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="2102f93e-499b-4e72-aad1-96b81c862df8">
+  <value column="Name" original="Field Amt 6">Valor 6</value>
+  <value column="PrintName" original="Field Amt 6">Valor 6</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="60d05ff3-713c-402c-a245-1488bb27ed26">
+  <value column="Name" original="Field Amt 7">Valor 7</value>
+  <value column="PrintName" original="Field Amt 7">Valor 7</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="90fef89b-8923-4398-a15e-6ea249a0a0ff">
+  <value column="Name" original="Field Amt 8">Valor 8</value>
+  <value column="PrintName" original="Field Amt 8">Valor 8</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="e438d188-202d-45cb-8f78-ef60edad39d6">
+  <value column="Name" original="Field Amt 9">Valor 9</value>
+  <value column="PrintName" original="Field Amt 9">Valor 9</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="e47eba8f-74d6-48f3-b22c-be5daa3ba6fd">
+  <value column="Name" original="Field Amt 10">Valor 10</value>
+  <value column="PrintName" original="Field Amt 10">Valor 10</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="c1757f11-e6c3-44d2-b60b-e30be2a79cb4">
+  <value column="Name" original="Attribute Name 1">Nomb 1</value>
+  <value column="PrintName" original="Attribute Name 1">Nomb 1</value>
+  <value column="Description" original="Name of the Attribute">Name of the Attribute</value>
+  <value column="Help" original="Identifier of the attribute">Identifier of the attribute</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="7471114a-f674-45ce-9456-50acc7241f8d">
+  <value column="Name" original="Attribute Name 2">Nomb 2</value>
+  <value column="PrintName" original="Attribute Name 2">Nomb 2</value>
+  <value column="Description" original="Name of the Attribute 2">Name of the Attribute 2</value>
+  <value column="Help" original="Identifier of the attribute">Identifier of the attribute</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="cf59f38e-db2e-4f87-a825-f2e311bf1d67">
+  <value column="Name" original="Attribute Name 3">Nomb 3</value>
+  <value column="PrintName" original="Attribute Name 3">Nomb 3</value>
+  <value column="Description" original="Name of the Attribute 3">Name of the Attribute 3</value>
+  <value column="Help" original="Identifier of the attribute">Identifier of the attribute</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="ae23d890-2a68-414a-85f7-244e6a762a99">
+  <value column="Name" original="Attribute Name 4">Nomb 4</value>
+  <value column="PrintName" original="Attribute Name 4">Nomb 4</value>
+  <value column="Description" original="Name of the Attribute 4">Name of the Attribute 4</value>
+  <value column="Help" original="Identifier of the attribute">Identifier of the attribute</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="fa8d1b2a-2ebc-465c-85ea-a49ecab8bf54">
+  <value column="Name" original="Attribute Name 5">Nomb 5</value>
+  <value column="PrintName" original="Attribute Name 5">Nomb 5</value>
+  <value column="Description" original="Name of the Attribute 5">Name of the Attribute 5</value>
+  <value column="Help" original="Identifier of the attribute">Identifier of the attribute</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="51018fb6-9ebd-4728-b348-ba29683302d0">
+  <value column="Name" original="Attribute Name 6">Nomb 6</value>
+  <value column="PrintName" original="Attribute Name 6">Nomb 6</value>
+  <value column="Description" original="Name of the Attribute 6">Name of the Attribute 6</value>
+  <value column="Help" original="Identifier of the attribute">Identifier of the attribute</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="9d914b14-f96c-4b99-b29b-f10df3be1f77">
+  <value column="Name" original="Attribute Name 7">Nomb 7</value>
+  <value column="PrintName" original="Attribute Name 7">Nomb 7</value>
+  <value column="Description" original="Name of the Attribute 7">Name of the Attribute 7</value>
+  <value column="Help" original="Identifier of the attribute">Identifier of the attribute</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="85504fba-dc6f-453d-be79-1fcfc0848e30">
+  <value column="Name" original="Attribute Name 8">Nomb 8</value>
+  <value column="PrintName" original="Attribute Name 8">Nomb 8</value>
+  <value column="Description" original="Name of the Attribute 8">Name of the Attribute 8</value>
+  <value column="Help" original="Identifier of the attribute">Identifier of the attribute</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="87127378-7ad1-44b0-894f-dc0ae1508421">
+  <value column="Name" original="Attribute Name 9">Nomb 9</value>
+  <value column="PrintName" original="Attribute Name 9">Nomb 9</value>
+  <value column="Description" original="Name of the Attribute 9">Name of the Attribute 9</value>
+  <value column="Help" original="Identifier of the attribute">Identifier of the attribute</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="b09f5f3f-1880-4cdf-b211-bb794952781d">
+  <value column="Name" original="Attribute Name 10">Nomb 10</value>
+  <value column="PrintName" original="Attribute Name 10">Nomb 10</value>
+  <value column="Description" original="Name of the Attribute 10">Name of the Attribute 10</value>
+  <value column="Help" original="Identifier of the attribute">Identifier of the attribute</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="4cefd2b6-dbc5-4a78-98f6-9aff9b3a303c">
+  <value column="Name" original="LCO_DIAN_SendScheduleLine_UU">LCO_DIAN_SendScheduleLine_UU</value>
+  <value column="PrintName" original="LCO_DIAN_SendScheduleLine_UU">LCO_DIAN_SendScheduleLine_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="ba922e36-c498-41ce-9161-72f6f63a2728">
+  <value column="Name" original="DIAN XML Print Label">Rótulo XML</value>
+  <value column="PrintName" original="DIAN XML Print Label">Rótulo XML</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="1b60c424-e50d-4655-ae38-c9c69debba45">
+  <value column="Name" original="LCO_DIAN_XMLPrintLabel_UU">LCO_DIAN_XMLPrintLabel_UU</value>
+  <value column="PrintName" original="LCO_DIAN_XMLPrintLabel_UU">LCO_DIAN_XMLPrintLabel_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="aebd6893-03b1-4524-9b22-daad84737064">
+  <value column="Name" original="LCO_DIAN_Concept_UU">LCO_DIAN_Concept_UU</value>
+  <value column="PrintName" original="LCO_DIAN_Concept_UU">LCO_DIAN_Concept_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="297042b9-fa53-41b4-9501-bbc2ce384275">
+  <value column="Name" original="DIAN Concept Source">Fuente Concepto</value>
+  <value column="PrintName" original="DIAN Concept Source">Fuente Concepto</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="50024c4c-d271-4e82-b1de-6db6ec51c152">
+  <value column="Name" original="Field Expression">Expresión Cálculo</value>
+  <value column="PrintName" original="Field Expression">Expresión Cálculo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="7625ded0-d738-4cbd-9da5-ed9531db9b60">
+  <value column="Name" original="CalcColumnPosition">Posición Columna Cálculo</value>
+  <value column="PrintName" original="Calc Column Position">Posición Columna Cálculo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="d36c4b45-d920-4dbb-a0d1-bfe3959e4847">
+  <value column="Name" original="LCO_DIAN_ConceptSource_UU">LCO_DIAN_ConceptSource_UU</value>
+  <value column="PrintName" original="LCO_DIAN_ConceptSource_UU">LCO_DIAN_ConceptSource_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="11189d98-870d-4e1f-9367-4ceeccaa1ae3">
+  <value column="Name" original="DIAN Format">Formato</value>
+  <value column="PrintName" original="DIAN Format">Formato</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="e75d9fcd-1094-4e76-8450-6864b04da1ad">
+  <value column="Name" original="IsBPartnerDetailed">Detallado por Tercero</value>
+  <value column="PrintName" original="BPartner Detailed">Detallado por Tercero</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="91550355-6117-4948-8a54-b6be53717a13">
+  <value column="Name" original="IsBPartner2Detailed">Detallado por Tercero Proyecto</value>
+  <value column="PrintName" original="BPartner 2 Detailed">Detallado por Tercero Proyecto</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="1ff13b96-4cea-412f-9dea-fea62a11bbcb">
+  <value column="Name" original="Post Process Class">Clase Post Proceso</value>
+  <value column="PrintName" original="Post Process Class">Clase Post Proceso</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="be05c772-b843-4e75-b5b4-a1801eeac504">
+  <value column="Name" original="MaxXMLRecords">Máximos Registros XML</value>
+  <value column="PrintName" original="Max XML Records">Máximos Registros XML</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="44a1d653-3ec7-40bf-ac83-afd3c26f0846">
+  <value column="Name" original="URL_XSD">URL XSD</value>
+  <value column="PrintName" original="URL XSD">URL XSD</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="5e8150a9-21bf-4e32-9a63-26c4f2e93ac9">
+  <value column="Name" original="LCO_DIAN_Format_UU">LCO_DIAN_Format_UU</value>
+  <value column="PrintName" original="LCO_DIAN_Format_UU">LCO_DIAN_Format_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="dbb53937-fe55-4caf-a3b8-3096523caa85">
+  <value column="Name" original="DIAN Concept Format">Concepto Formato</value>
+  <value column="PrintName" original="DIAN Concept Format">Concepto Formato</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="75c263a9-5e4a-41ca-a44c-8f87527c4084">
+  <value column="Name" original="LCO_DIAN_ConceptFormat_UU">LCO_DIAN_ConceptFormat_UU</value>
+  <value column="PrintName" original="LCO_DIAN_ConceptFormat_UU">LCO_DIAN_ConceptFormat_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="7994e807-579f-4f0b-8d38-2c8beae139da">
+  <value column="Name" original="DIAN Field Format">Campo Formato</value>
+  <value column="PrintName" original="DIAN Field Format">Campo Formato</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="88629deb-00d7-4a05-879d-cc7107973be3">
+  <value column="Name" original="Field Print Format">Formato Campo</value>
+  <value column="PrintName" original="Field Print Format">Formato Campo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="c02dafd8-3874-49eb-9b73-b2966159e723">
+  <value column="Name" original="LCO_DIAN_FieldFormat_UU">LCO_DIAN_FieldFormat_UU</value>
+  <value column="PrintName" original="LCO_DIAN_FieldFormat_UU">LCO_DIAN_FieldFormat_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="29d9c6d2-7195-4c30-b04c-a66d6af294f0">
+  <value column="Name" original="Send Concept Code">Concepto Envío</value>
+  <value column="PrintName" original="Send Concept Code">Concepto Envío</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="724726e8-a770-4d1d-ae73-f4f457d8848b">
+  <value column="Name" original="Send Date">Fecha Envío</value>
+  <value column="PrintName" original="Send Date">Fecha Envío</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="aa6bbaeb-1d9b-45a3-abaf-89795e440fba">
+  <value column="Name" original="LCO_DIAN_SendSchedule_UU">LCO_DIAN_SendSchedule_UU</value>
+  <value column="PrintName" original="LCO_DIAN_SendSchedule_UU">LCO_DIAN_SendSchedule_UU</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>

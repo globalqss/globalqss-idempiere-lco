@@ -277,4 +277,9 @@
   <value column="Description" original="The only valid date format is: YYYY-MM">El formato de fecha válido es: AAAA-MM</value>
   <value column="Help" original="The only valid date format is: YYYY-MM">El formato de fecha válido es: AAAA-MM</value>
  </row>
+ <row id="200071" trl="Y">
+  <value column="Name" original="Document Type">Tipo Documento</value>
+  <value column="Description" original="Inventory Cost Adjustment Document Type">Tipo Documento Ajuste Costo Inventario</value>
+  <value column="Help" original=""/>
+ </row>
 </idempiereTrl>

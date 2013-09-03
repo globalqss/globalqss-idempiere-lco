@@ -504,6 +504,16 @@ Para una Orden de Manufactura es la fecha cuand el último movimiento de orden d
   <value column="Description" original="System Notice acknowledged">Aviso del sistema de acuse de recibo</value>
   <value column="Help" original="The Acknowledged checkbox indicates if this notice does not need to be retained.">La casilla de vericación Acuse de recibo indica si este aviso no necesita ser conservado.</value>
  </row>
+ <row id="57761" trl="Y">
+  <value column="Name" original="Customer Return">Devolución Cliente</value>
+  <value column="Description" original="Customer Return Document">Documento Devolución Cliente</value>
+  <value column="Help" original="The Customer Return">La ID de Devolución Cliente indica el documento único para esta devolución</value>
+ </row>
+ <row id="57900" trl="Y">
+  <value column="Name" original="Return to Vendor">Devolución Proveedor</value>
+  <value column="Description" original="Return to Vendor Document">Documento de Devolución Proveedor</value>
+  <value column="Help" original="The Return to Vendor">La ID de Devolución Proveedor indica el documento único para esta devolución</value>
+ </row>
  <row id="57987" trl="Y">
   <value column="Name" original="Search Key">Código</value>
   <value column="Description" original="Search key for the record in the format required">Código para el registro en el formato requerido; debe ser único</value>
@@ -685,5 +695,10 @@ Las fechas Válido desde y Válido hasta indican el período de tiempo a utiliza
   <value column="Name" original="Verbal Confirmation (For UPS only)">Confirmación Verbal (solo para UPS)</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
+ </row>
+ <row id="202325" trl="Y">
+  <value column="Name" original="Cost Adjustment">Ajuste Costo</value>
+  <value column="Description" original="Inventory Cost Adjustment">Ajuste Costo Inventario</value>
+  <value column="Help" original="The Inventory Cost Adjustment document allows user to enter cost adjustment for products">El ajuste costo inventario le permite ingresar ajustes de costos a productos.</value>
  </row>
 </idempiereTrl>

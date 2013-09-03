@@ -5150,4 +5150,48 @@
   <value column="Name" original="Fixed Assets Depreciation">Depreciación Activos Fijos</value>
   <value column="Description" original=""/>
  </row>
+ <row id="200155" trl="Y">
+  <value column="Name" original="Cost Adjustment">Ajuste Costo</value>
+  <value column="Description" original="Inventory Cost Adjustment">Ajuste Costo Inventario</value>
+ </row>
+ <row id="200156" trl="Y">
+  <value column="Name" original="Until Acknowledge">Hasta Acuse Recibo</value>
+  <value column="Description" original="Repeat it until the message has been acknowledged">Repetir el mensaje hasta que se acuse recibo</value>
+ </row>
+ <row id="200157" trl="Y">
+  <value column="Name" original="Until Expiration or Acknowledge">Hasta Expiración o Acuse Recibo</value>
+  <value column="Description" original="Repeat it until the message expires or until it has been acknowledged, whatever happens first">Repetir el mensaje hasta que expire o se acuse recibo, lo que suceda primero</value>
+ </row>
+ <row trl="Y" uuid="5b51b2ba-cd8e-4958-a276-541c866ce01a">
+  <value column="Name" original="Yes">Si</value>
+  <value column="Description" original=""/>
+ </row>
+ <row trl="Y" uuid="611b1745-25bd-4f80-8cbe-5c7d4525ab3b">
+  <value column="Name" original="No">No</value>
+  <value column="Description" original=""/>
+ </row>
+ <row trl="Y" uuid="b3add610-f487-42b0-a875-5dac7cc9c041">
+  <value column="Name" original="Auto">Auto</value>
+  <value column="Description" original=""/>
+ </row>
+ <row trl="Y" uuid="53684e57-39f2-45df-bf9f-01ebbb2cf6ab">
+  <value column="Name" original="Document">Documento</value>
+  <value column="Description" original=""/>
+ </row>
+ <row trl="Y" uuid="629e9732-a424-4735-be62-5ff073104d0b">
+  <value column="Name" original="Line">Línea</value>
+  <value column="Description" original=""/>
+ </row>
+ <row trl="Y" uuid="84f804f0-ed46-4d1b-8202-725839241908">
+  <value column="Name" original="Tax">Impuesto</value>
+  <value column="Description" original=""/>
+ </row>
+ <row trl="Y" uuid="3afeb3dd-3e2e-4b08-ad08-a7626b8c710d">
+  <value column="Name" original="Insertion">Inserción</value>
+  <value column="Description" original=""/>
+ </row>
+ <row trl="Y" uuid="0816a1a5-a9dd-4379-8bdd-b783f5b99637">
+  <value column="Name" original="Substitution">Sustitución</value>
+  <value column="Description" original=""/>
+ </row>
 </idempiereTrl>
