@@ -203,4 +203,7 @@
  <row id="200015" trl="Y">
   <value column="Name" original="Technical">Técnico</value>
  </row>
+ <row trl="Y" uuid="a5a3386b-4128-4801-8e68-79d21dea64fb">
+  <value column="Name" original="Withholding Information">Información Retenciones</value>
+ </row>
 </idempiereTrl>

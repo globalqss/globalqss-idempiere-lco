@@ -1989,4 +1989,69 @@ y otros</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="200043" trl="Y">
+  <value column="Name" original="Cost Adjustment">Ajuste Costo</value>
+  <value column="Description" original="Enter Inventory Cost Adjustment">Ingrese Ajuste Costo Inventario</value>
+  <value column="Help" original="The Cost Adjustment Window allow user to enter cost adjustment for products">La ventana Ajuste Costo permite al usuario ingresar ajustes de costos para productos</value>
+ </row>
+ <row trl="Y" uuid="ecd46492-ebb1-410a-8627-44df151cdfbb">
+  <value column="Name" original="TaxId Type">Tipo Identificación</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="7b857ee3-d8de-498a-bb69-3bde24bcce66">
+  <value column="Name" original="Tax Payer Type">Tipo Contribuyente</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="1d5a441c-d7ec-4cec-a135-9d563078dd0c">
+  <value column="Name" original="ISIC">CIIU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="1b0449b2-8712-4775-a363-a97191755ad0">
+  <value column="Name" original="Withholding Category">Categoría Retención</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="371c7c45-e78a-4f91-964c-e986b4a8cc29">
+  <value column="Name" original="Withholding Type">Tipo Retención</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="ca9dd9db-821a-4f64-ae9a-a80aad1b7aa7">
+  <value column="Name" original="View Withholdings">Ver Retenciones</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="34718501-8bd9-442d-bcfb-3272326372b0">
+  <value column="Name" original="Conversion Table">Tabla Conversión</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="4f189a5f-b210-48fa-8426-894659de92b3">
+  <value column="Name" original="XML Media (DIAN)">Medio XML (DIAN)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="1bab5e34-734a-4588-ab19-5b9c486741e7">
+  <value column="Name" original="XML Print Label (DIAN)">Rótulo XML (DIAN)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="b1aea4b8-6516-4c9c-ac92-dc80f8ab6619">
+  <value column="Name" original="Concept (DIAN)">Concepto (DIAN)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="2e2be0e5-d11e-4533-8395-f12a58b48c68">
+  <value column="Name" original="Format (DIAN)">Formato (DIAN)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="f8098d47-2f35-4327-bb79-a2339ff47bd4">
+  <value column="Name" original="Send Schedule (DIAN)">Programación Envíos (DIAN)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
 </idempiereTrl>

@@ -247,4 +247,9 @@
   <value column="PrintName" original="Asset Disposal">Desechar Activo</value>
   <value column="DocumentNote" original=""/>
  </row>
+ <row id="200004" trl="Y">
+  <value column="Name" original="Cost Adjustment">Ajuste Costo</value>
+  <value column="PrintName" original="Cost Adjustment">Ajuste Costo</value>
+  <value column="DocumentNote" original=""/>
+ </row>
 </idempiereTrl>

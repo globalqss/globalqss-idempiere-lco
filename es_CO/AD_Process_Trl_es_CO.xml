@@ -2113,4 +2113,9 @@ d. Fecha transacción, se volverá la fecha de inicio en servicio del activo</va
 Si no tiene un lenguaje base escoja alguno que no se utilice para ingresar al sistema.
 Si planea usar todos los lenguajes entonces cree un lenguaje xx_XX y úselo como base pero no como ingreso.</value>
  </row>
+ <row id="200059" trl="Y">
+  <value column="Name" original="Refresh Current Cost">Refrescar Costo Actual</value>
+  <value column="Description" original="Refresh current cost for cost adjustment line">Refrescar costo actual para la línea de ajuste de costo</value>
+  <value column="Help" original=""/>
+ </row>
 </idempiereTrl>

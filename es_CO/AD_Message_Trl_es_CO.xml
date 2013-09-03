@@ -6222,36 +6222,68 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgText" original="Start Time, must be less than End Time">Hora inicio debe ser menor que hora fin</value>
   <value column="MsgTip" original=""/>
  </row>
- <row id="200175" trl="N">
+ <row id="200175" trl="Y">
   <value column="MsgText" original="The reference of an encrypted field cannot be changed">No se puede modificar la referencia de un campo encriptado</value>
   <value column="MsgTip" original=""/>
  </row>
- <row id="200176" trl="N">
+ <row id="200176" trl="Y">
   <value column="MsgText" original="Inactive payment processor">Procesador de pagos inactivo</value>
   <value column="MsgTip" original=""/>
  </row>
- <row id="200177" trl="N">
+ <row id="200177" trl="Y">
   <value column="MsgText" original="Posting">Asiento Contable</value>
   <value column="MsgTip" original=""/>
  </row>
- <row id="200178" trl="N">
+ <row id="200178" trl="Y">
   <value column="MsgText" original="Move into">Mover dentro</value>
   <value column="MsgTip" original=""/>
  </row>
- <row id="200179" trl="N">
+ <row id="200179" trl="Y">
   <value column="MsgText" original="Insert after">Insertar después</value>
   <value column="MsgTip" original=""/>
  </row>
- <row id="200180" trl="N">
+ <row id="200180" trl="Y">
   <value column="MsgText" original="Please fill in required data for:">Favor diligenciar la información requerida para:</value>
   <value column="MsgTip" original=""/>
  </row>
- <row id="200183" trl="N">
+ <row id="200183" trl="Y">
   <value column="MsgText" original="Feedback">Soporte</value>
   <value column="MsgTip" original=""/>
  </row>
- <row id="200184" trl="N">
+ <row id="200184" trl="Y">
   <value column="MsgText" original="Delete All">Borrar Todos</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200186" trl="Y">
+  <value column="MsgText" original="Save Column Width">Guardar Ancho Columnas</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200207" trl="Y">
+  <value column="MsgText" original="There are records that haven't been saved yet. ">Hay registros pendientes de guardar. </value>
+  <value column="MsgTip" original="Do you still want to proceed?">¿Desea continuar?</value>
+ </row>
+ <row id="200208" trl="Y">
+  <value column="MsgText" original="You're trying to close this tab.">Intenta cerrar esta pestaña.</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200216" trl="Y">
+  <value column="MsgText" original="No costing record.">No hay registro de costo.</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200217" trl="Y">
+  <value column="MsgText" original="The database operation timed out. Please try again later.">La operación de la base de datos expiró.  Intente más tarde.</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200218" trl="Y">
+  <value column="MsgText" original="Sent by iDempiereMail">Enviado por iDempiereMail</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200220" trl="Y">
+  <value column="MsgText" original="Only one @C_Tax_ID@ per @C_TaxCategory_ID@ can be marked as Default!">Sólo un @C_Tax_ID@ por @C_TaxCategory_ID@ puede marcarse como Predeterminado</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200224" trl="Y">
+  <value column="MsgText" original="Open in Grid Mode">Abrir en modo Grilla</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="520010" trl="Y">
@@ -6284,6 +6316,42 @@ Por favor contacte al ADMINISTRADOR.</value>
  </row>
  <row id="523853" trl="Y">
   <value column="MsgText" original="Shipment/Receipt has different Sales/Purchase transaction than RMA">Recibo/Entrega tiene diferente transacción de ventas/compras que la autorización de devolución</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row trl="Y" uuid="2232728c-a9df-43a8-a0bb-0181a12cad07">
+  <value column="MsgText" original="No Tax ID">No hay documento de identidad</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row trl="Y" uuid="39df78b3-42f6-4ec1-b229-dd4362e9fc7c">
+  <value column="MsgText" original="Invalid characters in Tax ID">Caracteres no válidos en documento</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row trl="Y" uuid="92d1b54d-cc8b-4693-9672-4486065f6107">
+  <value column="MsgText" original="No Check Digit">No hay dígito de chequeo</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row trl="Y" uuid="79ebf2d8-dd9f-49d2-8146-f62ae1a145fd">
+  <value column="MsgText" original="Invalid Number">Número no válido</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row trl="Y" uuid="8378d307-894f-4e0c-b3fc-71149f0207bc">
+  <value column="MsgText" original="First Name 1 required">Primer nombre requerido</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row trl="Y" uuid="78068c86-6300-4306-ab60-a5518cd3f9e7">
+  <value column="MsgText" original="Last Name 1 required">Primer apellido requerido</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row trl="Y" uuid="534ad4e7-99cf-4e7b-8efe-7b696d083770">
+  <value column="MsgText" original="Verify check digit">Verifique el dígito de chequeo</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row trl="Y" uuid="53e4eb38-18de-4820-aa53-7ecbace1d44b">
+  <value column="MsgText" original="Withholding Not Generated">No se han generado retenciones</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row trl="Y" uuid="2ce82e64-4425-4be1-9637-b798eedb46ca">
+  <value column="MsgText" original="Write-Off Amount must be equal or greater than Withholdings">El valor del ajuste debe ser mayor o igual que las retenciones</value>
   <value column="MsgTip" original=""/>
  </row>
 </idempiereTrl>
