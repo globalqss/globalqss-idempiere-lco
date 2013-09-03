@@ -3352,7 +3352,7 @@ There are two reasons for de-activating and not deleting records:
         <Help/>
         <JasperReport/>
         <IsDirectPrint>false</IsDirectPrint>
-        <AD_ReportView_ID reference="id">0</AD_ReportView_ID>
+        <AD_ReportView_ID/>
         <IsReport>false</IsReport>
         <AD_Process_UU>0450d998-4a98-45d6-9487-d74051bfc47f</AD_Process_UU>
         <AccessLevel>3</AccessLevel>
