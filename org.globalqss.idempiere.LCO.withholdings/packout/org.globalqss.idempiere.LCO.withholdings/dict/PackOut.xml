@@ -3461,14 +3461,14 @@ There are two reasons for de-activating and not deleting records:
         <IsActive>true</IsActive>
         <IsDisplayedGrid>true</IsDisplayedGrid>
         <SeqNoGrid/>
-        <XPosition>1</XPosition>
+        <XPosition>2</XPosition>
         <IsQuickEntry>false</IsQuickEntry>
         <MandatoryLogic/>
         <IsUpdateable/>
         <IsAlwaysUpdateable/>
         <ReadOnlyLogic/>
         <IsToolbarButton/>
-        <ColumnSpan>1</ColumnSpan>
+        <ColumnSpan>2</ColumnSpan>
         <NumLines>1</NumLines>
         <IsAdvancedField>false</IsAdvancedField>
         <AD_Field_Trl type="translation">
@@ -3514,14 +3514,14 @@ There are two reasons for de-activating and not deleting records:
         <IsActive>true</IsActive>
         <IsDisplayedGrid>true</IsDisplayedGrid>
         <SeqNoGrid/>
-        <XPosition>1</XPosition>
+        <XPosition>4</XPosition>
         <IsQuickEntry>false</IsQuickEntry>
         <MandatoryLogic/>
         <IsUpdateable/>
         <IsAlwaysUpdateable/>
         <ReadOnlyLogic/>
         <IsToolbarButton/>
-        <ColumnSpan>1</ColumnSpan>
+        <ColumnSpan>2</ColumnSpan>
         <NumLines>1</NumLines>
         <IsAdvancedField>false</IsAdvancedField>
         <AD_Field_Trl type="translation">
@@ -4464,14 +4464,14 @@ There are two reasons for de-activating and not deleting records:
         <IsActive>true</IsActive>
         <IsDisplayedGrid>true</IsDisplayedGrid>
         <SeqNoGrid/>
-        <XPosition>1</XPosition>
+        <XPosition>2</XPosition>
         <IsQuickEntry>false</IsQuickEntry>
         <MandatoryLogic/>
         <IsUpdateable/>
         <IsAlwaysUpdateable/>
         <ReadOnlyLogic/>
         <IsToolbarButton/>
-        <ColumnSpan>1</ColumnSpan>
+        <ColumnSpan>2</ColumnSpan>
         <NumLines>1</NumLines>
         <IsAdvancedField>false</IsAdvancedField>
         <AD_Field_Trl type="translation">
@@ -4517,14 +4517,14 @@ There are two reasons for de-activating and not deleting records:
         <IsActive>true</IsActive>
         <IsDisplayedGrid>true</IsDisplayedGrid>
         <SeqNoGrid/>
-        <XPosition>1</XPosition>
+        <XPosition>4</XPosition>
         <IsQuickEntry>false</IsQuickEntry>
         <MandatoryLogic/>
         <IsUpdateable/>
         <IsAlwaysUpdateable/>
         <ReadOnlyLogic/>
         <IsToolbarButton/>
-        <ColumnSpan>1</ColumnSpan>
+        <ColumnSpan>2</ColumnSpan>
         <NumLines>1</NumLines>
         <IsAdvancedField>false</IsAdvancedField>
         <AD_Field_Trl type="translation">
