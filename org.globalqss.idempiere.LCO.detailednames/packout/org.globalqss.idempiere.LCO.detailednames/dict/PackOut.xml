@@ -1314,7 +1314,7 @@
         <AD_Process_ID reference="id"/>
         <AD_Form_ID reference="id"/>
         <EntityType>QSS_LCO</EntityType>
-        <IsCentrallyMaintained>true</IsCentrallyMaintained>
+        <IsCentrallyMaintained>false</IsCentrallyMaintained>
         <Name>Colombia Localization</Name>
         <Description/>
         <AD_Menu_UU>a18acb98-2108-4004-b6ae-b5d794e14e96</AD_Menu_UU>
@@ -1323,7 +1323,7 @@
         <IsActive>true</IsActive>
         <AD_InfoWindow_ID reference="id"/>
         <AD_Menu_Trl type="translation">
-            <Name>Localizacion Colombia</Name>
+            <Name>Localización Colombia</Name>
             <Description/>
             <AD_Language>es_CO</AD_Language>
             <IsActive>true</IsActive>
@@ -1342,7 +1342,7 @@
             <AD_Process_ID reference="id"/>
             <AD_Form_ID reference="id"/>
             <EntityType>QSS_LCO</EntityType>
-            <IsCentrallyMaintained>true</IsCentrallyMaintained>
+            <IsCentrallyMaintained>false</IsCentrallyMaintained>
             <Name>Detailed Names</Name>
             <Description/>
             <AD_Menu_UU>bd3a10db-a00e-4c11-8df8-f135ed9fd22f</AD_Menu_UU>
@@ -2868,6 +2868,39 @@ There are two reasons for de-activating and not deleting records:
             </AD_Menu>
         </AD_Menu>
     </AD_Menu>
+    <AD_SysConfig type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <ConfigurationLevel>C</ConfigurationLevel>
+        <Value>Y</Value>
+        <Description>On Business Partner window - defines if the Search Key is filled automatically with the Tax ID</Description>
+        <AD_SysConfig_UU>05974233-dfc1-4477-b9e2-efb4af0c092e</AD_SysConfig_UU>
+        <IsActive>true</IsActive>
+        <Name>QSSLCO_FillValueWithTaxID</Name>
+        <EntityType>QSS_LCO</EntityType>
+    </AD_SysConfig>
+    <AD_SysConfig type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <ConfigurationLevel>C</ConfigurationLevel>
+        <Value>,</Value>
+        <Description>On Business Partner window - define the name separator when using detailed names</Description>
+        <AD_SysConfig_UU>959f3ec8-077a-4395-827b-a6faa68195f8</AD_SysConfig_UU>
+        <IsActive>true</IsActive>
+        <Name>QSSLCO_NameSeparator</Name>
+        <EntityType>QSS_LCO</EntityType>
+    </AD_SysConfig>
+    <AD_SysConfig type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <ConfigurationLevel>C</ConfigurationLevel>
+        <Value>Y</Value>
+        <Description>On Business Partner window - when constructing the full name based on detailed names, define if the names comes first (otherwise last names will come first)</Description>
+        <AD_SysConfig_UU>3eda56f3-4d5a-4a87-84ca-a106bb08aabe</AD_SysConfig_UU>
+        <IsActive>true</IsActive>
+        <Name>QSSLCO_NamesFirst</Name>
+        <EntityType>QSS_LCO</EntityType>
+    </AD_SysConfig>
     <SQLStatement type="custom">
         <DBType>ALL</DBType>
         <statement><![CDATA[ALTER TABLE C_BPartner ADD CONSTRAINT LCOTaxIDType_CBPartner FOREIGN KEY (LCO_TaxIdType_ID) REFERENCES LCO_TaxIDType DEFERRABLE INITIALLY DEFERRED]]></statement>

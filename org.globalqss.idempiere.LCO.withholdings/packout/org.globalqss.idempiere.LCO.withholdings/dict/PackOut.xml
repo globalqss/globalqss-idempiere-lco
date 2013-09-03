@@ -4644,7 +4644,7 @@ There are two reasons for de-activating and not deleting records:
         <IsActive>true</IsActive>
         <IsDisplayedGrid>true</IsDisplayedGrid>
         <SeqNoGrid/>
-        <XPosition>1</XPosition>
+        <XPosition>2</XPosition>
         <IsQuickEntry>false</IsQuickEntry>
         <MandatoryLogic/>
         <IsUpdateable/>
@@ -6469,7 +6469,7 @@ There are two reasons for de-activating and not deleting records:
         <AD_Process_ID reference="id"/>
         <AD_Form_ID reference="id"/>
         <EntityType>QSS_LCO</EntityType>
-        <IsCentrallyMaintained>true</IsCentrallyMaintained>
+        <IsCentrallyMaintained>false</IsCentrallyMaintained>
         <Name>Colombia Localization</Name>
         <Description/>
         <AD_Menu_UU>a18acb98-2108-4004-b6ae-b5d794e14e96</AD_Menu_UU>
@@ -6478,7 +6478,7 @@ There are two reasons for de-activating and not deleting records:
         <IsActive>true</IsActive>
         <AD_InfoWindow_ID reference="id"/>
         <AD_Menu_Trl type="translation">
-            <Name>Localizacion Colombia</Name>
+            <Name>Localización Colombia</Name>
             <Description/>
             <AD_Language>es_CO</AD_Language>
             <IsActive>true</IsActive>
@@ -6497,7 +6497,7 @@ There are two reasons for de-activating and not deleting records:
             <AD_Process_ID reference="id"/>
             <AD_Form_ID reference="id"/>
             <EntityType>QSS_LCO</EntityType>
-            <IsCentrallyMaintained>true</IsCentrallyMaintained>
+            <IsCentrallyMaintained>false</IsCentrallyMaintained>
             <Name>Withholdings</Name>
             <Description/>
             <AD_Menu_UU>15b4307e-555b-4e93-a48f-7132edfd324c</AD_Menu_UU>
@@ -18172,7 +18172,7 @@ There are two reasons for de-activating and not deleting records:
                     <IsActive>true</IsActive>
                     <AD_Window_Trl type="translation">
                         <Help/>
-                        <Name>View Withholdings</Name>
+                        <Name>Ver Retenciones</Name>
                         <Description/>
                         <AD_Language>es_CO</AD_Language>
                         <IsActive>true</IsActive>
