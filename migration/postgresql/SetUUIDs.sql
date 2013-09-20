@@ -863,6 +863,12 @@ update ad_ref_list set ad_ref_list_uu='0816a1a5-a9dd-4379-8bdd-b783f5b99637' whe
 update ad_ref_list set ad_ref_list_uu='53684e57-39f2-45df-bf9f-01ebbb2cf6ab' where value='D' and ad_reference_id=(select ad_reference_id from ad_reference where name='LCO_WithholdingType BaseType');
 update ad_ref_list set ad_ref_list_uu='629e9732-a424-4735-be62-5ff073104d0b' where value='L' and ad_reference_id=(select ad_reference_id from ad_reference where name='LCO_WithholdingType BaseType');
 update ad_ref_list set ad_ref_list_uu='84f804f0-ed46-4d1b-8202-725839241908' where value='T' and ad_reference_id=(select ad_reference_id from ad_reference where name='LCO_WithholdingType BaseType');
+update ad_ref_table set ad_ref_table_uu='5c56450e-8a5a-4beb-8300-0c98f1efe9df' where ad_reference_id=(select ad_reference_id from ad_reference where name='LCO_C_City_ID');
+update ad_ref_table set ad_ref_table_uu='1bc4c391-fb49-4983-96c5-0b5fff5adfe1' where ad_reference_id=(select ad_reference_id from ad_reference where name='LCO_DIAN_Concept');
+update ad_ref_table set ad_ref_table_uu='42abe21e-6b71-42d4-8c0b-8d1d985ffd04' where ad_reference_id=(select ad_reference_id from ad_reference where name='LCO_DIAN_Format');
+update ad_ref_table set ad_ref_table_uu='18efdef9-1bab-46e8-9165-72eecf0e6227' where ad_reference_id=(select ad_reference_id from ad_reference where name='LCO_ISIC_ID');
+update ad_ref_table set ad_ref_table_uu='a6f33528-087f-4c4f-adf8-b39cb65c5502' where ad_reference_id=(select ad_reference_id from ad_reference where name='LCO_TaxPayerType_ID');
+update ad_ref_table set ad_ref_table_uu='52be965c-66e1-4208-a899-80c3a925db4c' where ad_reference_id=(select ad_reference_id from ad_reference where name='LCO_XMLPrintLabel');
 update ad_rule set ad_rule_uu='18fc9b08-84b0-42ef-b75c-d1c99e3ca9ad' where value='beanshell:MM1002vabo';
 update ad_rule set ad_rule_uu='59557469-6cd4-4a38-8eb5-21e30141d12f' where value='beanshell:MM1002vret';
 update ad_sequence set ad_sequence_uu='69e555aa-8aa2-4f53-9a3e-d125420c3d2f' where name='LCO_Conversion';
