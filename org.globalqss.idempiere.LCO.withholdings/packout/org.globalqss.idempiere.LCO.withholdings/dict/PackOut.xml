@@ -2313,7 +2313,7 @@ There are two reasons for de-activating and not deleting records:
             <PO_PrintName/>
             <AD_Element_UU>dbc48ad2-6300-481a-882b-f2381065d8d2</AD_Element_UU>
             <IsActive>true</IsActive>
-            <EntityType>U</EntityType>
+            <EntityType>QSS_LCO</EntityType>
             <AD_Element_Trl type="translation">
                 <Help/>
                 <PO_Description/>
@@ -2367,7 +2367,7 @@ There are two reasons for de-activating and not deleting records:
             <IsActive>true</IsActive>
             <IsToolbarButton>true</IsToolbarButton>
             <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
-            <EntityType>U</EntityType>
+            <EntityType>QSS_LCO</EntityType>
             <VFormat/>
             <IsEncrypted>N</IsEncrypted>
             <AD_Element_ID reference="uuid" reference-key="AD_Element">dbc48ad2-6300-481a-882b-f2381065d8d2</AD_Element_ID>
@@ -7088,7 +7088,7 @@ There are two reasons for de-activating and not deleting records:
                             <PO_PrintName/>
                             <AD_Element_UU>028ee96c-e282-4a8e-a0fe-a8470f9321e1</AD_Element_UU>
                             <IsActive>true</IsActive>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <AD_Element_Trl type="translation">
                                 <Help/>
                                 <PO_Description/>
@@ -7142,7 +7142,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsActive>true</IsActive>
                             <IsToolbarButton>true</IsToolbarButton>
                             <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <VFormat/>
                             <IsEncrypted>N</IsEncrypted>
                             <AD_Element_ID reference="uuid" reference-key="AD_Element">028ee96c-e282-4a8e-a0fe-a8470f9321e1</AD_Element_ID>
@@ -8245,7 +8245,7 @@ If you leave the search key empty, the system automatically creates a numeric nu
                             <PO_PrintName/>
                             <AD_Element_UU>f9143727-cd52-4151-ae14-632d395797fd</AD_Element_UU>
                             <IsActive>true</IsActive>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <AD_Element_Trl type="translation">
                                 <Help/>
                                 <PO_Description/>
@@ -8299,7 +8299,7 @@ If you leave the search key empty, the system automatically creates a numeric nu
                             <IsActive>true</IsActive>
                             <IsToolbarButton>true</IsToolbarButton>
                             <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <VFormat/>
                             <IsEncrypted>N</IsEncrypted>
                             <AD_Element_ID reference="uuid" reference-key="AD_Element">f9143727-cd52-4151-ae14-632d395797fd</AD_Element_ID>
@@ -9418,7 +9418,7 @@ There are two reasons for de-activating and not deleting records:
                             <PO_PrintName/>
                             <AD_Element_UU>581fb589-3b19-47f7-b0b9-bda2a9c5acd6</AD_Element_UU>
                             <IsActive>true</IsActive>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <AD_Element_Trl type="translation">
                                 <Help/>
                                 <PO_Description/>
@@ -9472,7 +9472,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsActive>true</IsActive>
                             <IsToolbarButton>true</IsToolbarButton>
                             <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <VFormat/>
                             <IsEncrypted>N</IsEncrypted>
                             <AD_Element_ID reference="uuid" reference-key="AD_Element">581fb589-3b19-47f7-b0b9-bda2a9c5acd6</AD_Element_ID>
@@ -10529,7 +10529,7 @@ There are two reasons for de-activating and not deleting records:
                             <PO_PrintName/>
                             <AD_Element_UU>625eb4d1-6a66-4188-8517-d86309e9a02f</AD_Element_UU>
                             <IsActive>true</IsActive>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <AD_Element_Trl type="translation">
                                 <Help/>
                                 <PO_Description/>
@@ -10583,7 +10583,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsActive>true</IsActive>
                             <IsToolbarButton>true</IsToolbarButton>
                             <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <VFormat/>
                             <IsEncrypted>N</IsEncrypted>
                             <AD_Element_ID reference="uuid" reference-key="AD_Element">625eb4d1-6a66-4188-8517-d86309e9a02f</AD_Element_ID>
@@ -12056,7 +12056,7 @@ There are two reasons for de-activating and not deleting records:
                             <PO_PrintName/>
                             <AD_Element_UU>c952e12d-8345-4b31-adec-0c5490e7f5ac</AD_Element_UU>
                             <IsActive>true</IsActive>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <AD_Element_Trl type="translation">
                                 <Help/>
                                 <PO_Description/>
@@ -12110,7 +12110,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsActive>true</IsActive>
                             <IsToolbarButton>true</IsToolbarButton>
                             <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <VFormat/>
                             <IsEncrypted>N</IsEncrypted>
                             <AD_Element_ID reference="uuid" reference-key="AD_Element">c952e12d-8345-4b31-adec-0c5490e7f5ac</AD_Element_ID>
@@ -12821,7 +12821,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLogic/>
                             <AD_Reference_ID reference="id"/>
                             <IsMandatory/>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <AD_Reference_Value_ID reference="id"/>
                             <AD_Val_Rule_ID reference="id"/>
                             <Included_Tab_ID reference="id"/>
@@ -14534,7 +14534,7 @@ There are two reasons for de-activating and not deleting records:
                             <PO_PrintName/>
                             <AD_Element_UU>391177d1-13f1-4481-bea6-cdf74ca4de59</AD_Element_UU>
                             <IsActive>true</IsActive>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <AD_Element_Trl type="translation">
                                 <Help/>
                                 <PO_Description/>
@@ -14588,7 +14588,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsActive>true</IsActive>
                             <IsToolbarButton>true</IsToolbarButton>
                             <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <VFormat/>
                             <IsEncrypted>N</IsEncrypted>
                             <AD_Element_ID reference="uuid" reference-key="AD_Element">391177d1-13f1-4481-bea6-cdf74ca4de59</AD_Element_ID>
@@ -17171,7 +17171,7 @@ There are two reasons for de-activating and not deleting records:
                             <PO_PrintName/>
                             <AD_Element_UU>e2aa30c9-be9f-4931-bc09-afca5fc8100a</AD_Element_UU>
                             <IsActive>true</IsActive>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <AD_Element_Trl type="translation">
                                 <Help/>
                                 <PO_Description/>
@@ -17225,7 +17225,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsActive>true</IsActive>
                             <IsToolbarButton>true</IsToolbarButton>
                             <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <VFormat/>
                             <IsEncrypted>N</IsEncrypted>
                             <AD_Element_ID reference="uuid" reference-key="AD_Element">e2aa30c9-be9f-4931-bc09-afca5fc8100a</AD_Element_ID>
@@ -18349,7 +18349,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLogic/>
                             <AD_Reference_ID reference="id"/>
                             <IsMandatory/>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <AD_Reference_Value_ID reference="id"/>
                             <AD_Val_Rule_ID reference="id"/>
                             <Included_Tab_ID reference="id"/>
