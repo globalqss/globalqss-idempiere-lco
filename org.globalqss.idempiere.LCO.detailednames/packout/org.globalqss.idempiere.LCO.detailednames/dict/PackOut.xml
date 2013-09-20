@@ -2171,7 +2171,7 @@ There are two reasons for de-activating and not deleting records:
                             <PO_PrintName/>
                             <AD_Element_UU>7e6a4297-accd-426b-8458-43c568a1753c</AD_Element_UU>
                             <IsActive>true</IsActive>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <AD_Element_Trl type="translation">
                                 <Help/>
                                 <PO_Description/>
@@ -2225,7 +2225,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsActive>true</IsActive>
                             <IsToolbarButton>true</IsToolbarButton>
                             <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <VFormat/>
                             <IsEncrypted>N</IsEncrypted>
                             <AD_Element_ID reference="uuid" reference-key="AD_Element">7e6a4297-accd-426b-8458-43c568a1753c</AD_Element_ID>
