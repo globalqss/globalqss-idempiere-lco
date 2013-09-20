@@ -2903,6 +2903,10 @@ There are two reasons for de-activating and not deleting records:
     </AD_SysConfig>
     <SQLStatement type="custom">
         <DBType>ALL</DBType>
-        <statement><![CDATA[ALTER TABLE C_BPartner ADD CONSTRAINT LCOTaxIDType_CBPartner FOREIGN KEY (LCO_TaxIdType_ID) REFERENCES LCO_TaxIDType DEFERRABLE INITIALLY DEFERRED]]></statement>
+        <statement><![CDATA[COMMIT]]></statement>
+    </SQLStatement>
+    <SQLStatement type="custom">
+        <DBType>ALL</DBType>
+        <statement><![CDATA[ALTER TABLE C_BPartner ADD CONSTRAINT LCOTaxIDType_CBPartner FOREIGN KEY (LCO_TaxIdType_ID) REFERENCES LCO_TaxIDType DEFERRABLE INITIALLY DEFERRED; COMMIT]]></statement>
     </SQLStatement>
 </idempiere>
