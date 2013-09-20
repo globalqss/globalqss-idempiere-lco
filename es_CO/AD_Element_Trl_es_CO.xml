@@ -54574,6 +54574,26 @@ Producto: usado para adicionar rápidamente productos a la venta</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
+ <row trl="Y" uuid="f8f88f39-ddac-4f30-884e-00f2c41a5ca8">
+  <value column="Name" original="Export XML">Exporta XML</value>
+  <value column="PrintName" original="Export XML">Exporta XML</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="c6f7c49e-3c50-4002-bcbf-13d73fb7a842">
+  <value column="Name" original="Attach XML">Adjunta XML</value>
+  <value column="PrintName" original="Attach XML">Adjunta XML</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
  <row trl="Y" uuid="c013a536-29c2-40d7-8bea-a93d6396a1fd">
   <value column="Name" original="LCO_DIAN_XML_Header_UU">LCO_DIAN_XML_Header_UU</value>
   <value column="PrintName" original="LCO_DIAN_XML_Header_UU">LCO_DIAN_XML_Header_UU</value>
@@ -55017,6 +55037,26 @@ Producto: usado para adicionar rápidamente productos a la venta</value>
  <row trl="Y" uuid="724726e8-a770-4d1d-ae73-f4f457d8848b">
   <value column="Name" original="Send Date">Fecha Envío</value>
   <value column="PrintName" original="Send Date">Fecha Envío</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="c8a832d4-e4d7-4c37-b808-e5d9491fb2ef">
+  <value column="Name" original="Generate XML">Generar Medio XML</value>
+  <value column="PrintName" original="Generate XML">Generar Medio XML</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row trl="Y" uuid="8522c28f-2a3b-4a94-b5a9-0004c44557bd">
+  <value column="Name" original="Process Content">Procesar Contenido</value>
+  <value column="PrintName" original="Process Content">Procesar Contenido</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
