@@ -2118,4 +2118,24 @@ Si planea usar todos los lenguajes entonces cree un lenguaje xx_XX y úselo como
   <value column="Description" original="Refresh current cost for cost adjustment line">Refrescar costo actual para la línea de ajuste de costo</value>
   <value column="Help" original=""/>
  </row>
+ <row trl="Y" uuid="0450d998-4a98-45d6-9487-d74051bfc47f">
+  <value column="Name" original="Generate Withholding">Genera Retenciones</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="00e48c19-6679-413a-9c19-5b462595a529">
+  <value column="Name" original="Dian Export XML">Exportar a XML</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="374ae3a7-d7e5-4c30-9e6a-29e7fa46fa39">
+  <value column="Name" original="Dian Generate XML">Generar Medio XML</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="4fc2ddfd-ef58-40d2-94f6-69bfd27cdd05">
+  <value column="Name" original="Dian Process Content">Procesar Contenido</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
 </idempiereTrl>

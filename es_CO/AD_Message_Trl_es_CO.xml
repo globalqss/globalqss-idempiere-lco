@@ -6286,6 +6286,14 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgText" original="Open in Grid Mode">Abrir en modo Grilla</value>
   <value column="MsgTip" original=""/>
  </row>
+ <row id="200230" trl="Y">
+  <value column="MsgText" original="Export ZIP">Exporta ZIP</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200231" trl="Y">
+  <value column="MsgText" original="Record is not in current search">El registro no se encuentra en la búsqueda actual</value>
+  <value column="MsgTip" original=""/>
+ </row>
  <row id="520010" trl="Y">
   <value column="MsgText" original="1 Rupee">1 Rupia</value>
   <value column="MsgTip" original=" "/>
