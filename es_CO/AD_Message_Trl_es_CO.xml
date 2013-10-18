@@ -99,8 +99,8 @@
   <value column="MsgTip" original="You don't have the privileges (your Role does not allow to access the information) - or - set profile (e.g. if you want to see accounting records, Show Accounting must be set)"/>
  </row>
  <row id="125" trl="Y">
-  <value column="MsgText" original="iDempiere, Inc.">Adempiere</value>
-  <value column="MsgTip" original="http://www.idempiere.org">http://www.adempiere.org</value>
+  <value column="MsgText" original="iDempiere, Inc.">iDempiere</value>
+  <value column="MsgTip" original="http://www.idempiere.org">http://www.idempiere.org</value>
  </row>
  <row id="126" trl="Y">
   <value column="MsgText" original="40 Old Tannery Rd Monroe CT 06460 USA"> </value>

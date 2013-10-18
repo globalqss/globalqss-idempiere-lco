@@ -1387,7 +1387,7 @@
   <value column="Description" original="Application Dictionary (synchronized)">Diccionario de la aplicación (Sincronizado)</value>
  </row>
  <row id="488" trl="Y">
-  <value column="Name" original="iDempiere">Adempiere</value>
+  <value column="Name" original="iDempiere">iDempiere</value>
   <value column="Description" original="iDempiere Application (synchronized)">Aplicación iDempiere (sincronizada)</value>
  </row>
  <row id="489" trl="Y">
@@ -3160,11 +3160,11 @@
  </row>
  <row id="50001" trl="Y">
   <value column="Name" original="Local Transfer">Transferencia local</value>
-  <value column="Description" original="This type of transfer will transfer objects to the same Adempiere instance">Este tipo de transferencia transferira objetos a la misma instancia de Adempiere</value>
+  <value column="Description" original="This type of transfer will transfer objects to the same Adempiere instance">Este tipo de transferencia transferirá objetos a la misma instancia de iDempiere</value>
  </row>
  <row id="50002" trl="Y">
   <value column="Name" original="Remote Transfer">Transferencia Remota</value>
-  <value column="Description" original="This type of transfer will transfer objects to another Adempiere installation accessible by network.">Este tipo de trasferencia, transferirá objetos a otra instalación de adempiere accesible a través de la red</value>
+  <value column="Description" original="This type of transfer will transfer objects to another Adempiere installation accessible by network.">Este tipo de trasferencia, transferirá objetos a otra instalación de iDempiere accesible a través de la red</value>
  </row>
  <row id="50003" trl="Y">
   <value column="Name" original="XML File">Archivo XML</value>
