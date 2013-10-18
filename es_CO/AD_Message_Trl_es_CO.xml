@@ -6294,6 +6294,14 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgText" original="Record is not in current search">El registro no se encuentra en la búsqueda actual</value>
   <value column="MsgTip" original=""/>
  </row>
+ <row id="200235" trl="Y">
+  <value column="MsgText" original="EMail format is invalid: ">Formato Correo Electrónico no es válido: </value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200236" trl="Y">
+  <value column="MsgText" original="(Drag and drop menu item here)">(Arrastre un elemento del menú aquí)</value>
+  <value column="MsgTip" original=""/>
+ </row>
  <row id="520010" trl="Y">
   <value column="MsgText" original="1 Rupee">1 Rupia</value>
   <value column="MsgTip" original=" "/>

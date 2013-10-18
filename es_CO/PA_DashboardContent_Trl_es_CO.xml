@@ -5,29 +5,36 @@
  <row id="50000" trl="Y">
   <value column="Name" original="Activities">Actividades</value>
   <value column="Description" original="Workflow activities, notices and requests">Actividades de flujo de trabajo, avisos y solicitudes</value>
+  <value column="HTML" original=""/>
  </row>
  <row id="50001" trl="Y">
   <value column="Name" original="Favourites">Favoritos</value>
   <value column="Description" original="User favourities">Favoritos de usuario</value>
+  <value column="HTML" original=""/>
  </row>
  <row id="50002" trl="Y">
   <value column="Name" original="Views">Vistas</value>
   <value column="Description" original="Info views">Vistas de Información</value>
+  <value column="HTML" original=""/>
  </row>
  <row id="50003" trl="Y">
   <value column="Name" original="Performance">Desempeño</value>
   <value column="Description" original="Performance meters">Indicadores de Desempeño</value>
+  <value column="HTML" original=""/>
  </row>
  <row id="50004" trl="Y">
   <value column="Name" original="Calendar">Calendario</value>
   <value column="Description" original="Request Calendar">Calendario de Solicitudes</value>
+  <value column="HTML" original=""/>
  </row>
  <row id="200000" trl="Y">
   <value column="Name" original="Recent Items">Registros Recientes</value>
   <value column="Description" original="Recent items">Registros Recientes</value>
+  <value column="HTML" original=""/>
  </row>
  <row id="200001" trl="Y">
   <value column="Name" original="Menu">Menú</value>
   <value column="Description" original="Menu">Menú</value>
+  <value column="HTML" original=""/>
  </row>
 </idempiereTrl>

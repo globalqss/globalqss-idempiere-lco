@@ -54004,6 +54004,16 @@ Producto: usado para adicionar rápidamente productos a la venta</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
+ <row id="202618" trl="Y">
+  <value column="Name" original="Export Dictionary Entity">Exportar Diccionario Oficial</value>
+  <value column="PrintName" original="Export Dictionary Entity">Exportar Diccionario Oficial</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
  <row trl="Y" uuid="5bd18069-629e-4246-bd40-9bbedd02e009">
   <value column="Name" original="Tax ID Type">Tipo Identificación</value>
   <value column="PrintName" original="Tax ID Type">Tipo Documento</value>
