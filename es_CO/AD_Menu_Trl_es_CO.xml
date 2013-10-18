@@ -124,7 +124,7 @@
  </row>
  <row id="456" trl="Y">
   <value column="Name" original="Server">Servidor</value>
-  <value column="Description" original="iDempiere Server Maintenance">Mantenimiento del Servidor Adempiere</value>
+  <value column="Description" original="iDempiere Server Maintenance">Mantenimiento del Servidor iDempiere</value>
  </row>
  <row id="457" trl="Y">
   <value column="Name" original="Sales Orders">Ordenes de Venta</value>

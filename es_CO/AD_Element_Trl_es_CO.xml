@@ -4418,7 +4418,7 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
  <row id="983" trl="Y">
   <value column="Name" original="URL">Dirección Web</value>
   <value column="PrintName" original="URL">Dirección Web</value>
-  <value column="Description" original="Full URL address - e.g. http://www.idempiere.org">Dirección Web complete - e.g. http://www.globalqss.com</value>
+  <value column="Description" original="Full URL address - e.g. http://www.idempiere.org">Dirección Web completa - e.g. http://www.globalqss.com</value>
   <value column="Help" original="The URL defines an fully qualified web address like http://www.idempiere.org">El URL define una dirección web para este Tercero</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -18651,7 +18651,7 @@ Si el patrón para el lenguaje no es correcto, porfavor cree una petición en la
 
 Los mil separadores son el contrario.
 
-Si el patrón para su lenguaje no está correcto, cree por favor una petición en la ayuda de Adempiere con la información correcta.</value>
+Si el patrón para su lenguaje no está correcto, cree por favor una petición en la ayuda de iDempiere con la información correcta.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -18673,7 +18673,7 @@ Si el patrón para su lenguaje no está correcto, cree por favor una petición e
   <value column="Description" original="Java Time Pattern">Patrón de tiempo en Java.</value>
   <value column="Help" original="Option Time pattern in Java notation. Examples: &quot;hh:mm:ss aaa z&quot; - &quot;HH:mm:ss&quot;&#10;If the pattern for your language is not correct, please create a iDempiere support request with the correct information">Patrón de tiempo en notación Java. Ejemplos: "hh:mm:ss aaa z" - "HH:mm:ss"
 
-Si el patrón del lenguaje no es correcto, porfavor cree una petición en la ayuda de Adempiere con la información correcta.</value>
+Si el patrón del lenguaje no es correcto, por favor cree una petición en la ayuda de iDempiere con la información correcta.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -20881,7 +20881,7 @@ Ejemplo: si el precio de compra es $100 y la tolerancia es 1 ( porciento), el pr
   <value column="Name" original="Color Schema">Esquema de Color</value>
   <value column="PrintName" original="Color Schema">Esquema de Color</value>
   <value column="Description" original="Performance Color Schema">Desempeño Esquema de Colores</value>
-  <value column="Help" original="Visual representation of performance by color.  The Schema has often three levels (e.g. red-yellow-green).  iDempiere support two levels (e.g. red-green) or four levels (e.g. gray-bronce-silver-gold).  Note that Measures without a goal are represented white.  The percentages could be beween 0 and unlimited (i.e. above 100%).">Representación visual del Desempeño mediante colores. El esquema frecuentemente tiene 3 niveles (ej. rojo-amarillo-verde). Adempiere soporta dos niveles (ej. rojo-verde) o cuatro niveles (ej. gris-bronce-plata-oro). Note que una Meta sin Medida es representada en Blanco. El porcentaje puede ser entre 0 y sin limite (ej. sobre 100%).</value>
+  <value column="Help" original="Visual representation of performance by color.  The Schema has often three levels (e.g. red-yellow-green).  iDempiere support two levels (e.g. red-green) or four levels (e.g. gray-bronce-silver-gold).  Note that Measures without a goal are represented white.  The percentages could be beween 0 and unlimited (i.e. above 100%).">Representación visual del Desempeño mediante colores. El esquema frecuentemente tiene 3 niveles (ej. rojo-amarillo-verde). iDempiere soporta dos niveles (ej. rojo-verde) o cuatro niveles (ej. gris-bronce-plata-oro). Note que una Meta sin Medida es representada en Blanco. El porcentaje puede ser entre 0 y sin limite (ej. sobre 100%).</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -22296,7 +22296,7 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="Name" original="ModelPackage">Paquete modelo</value>
   <value column="PrintName" original="ModelPackage">Paquete modelo</value>
   <value column="Description" original="Java Package of the model classes">Paquete Java del modelo de clases.</value>
-  <value column="Help" original="By default, the Java model classes for extensions are in the compiere.model package.  If you provide a jar file in the classpath, you can define here your specific model package.  The model classes are used to save/modify/delete entries and as well as in Workflow.  Refer to the Compiere naming convention to make sure that your class is used rather then the base classes.">Por defecto, el modelo de clases de java para extensiones estan en el paquete Compiere.model. Si usted provee un archivo .jar en la ruta de clases (Classpath), usted puede definir aqui su paquete específico. Los modelos de clases son usados para Guardar / Modificar/ Borrar entradas asi como en un flujo de trabajo. Observe la convención de nombres de Compiere para estar seguro que su clase es usada sobre las clases base.</value>
+  <value column="Help" original="By default, the Java model classes for extensions are in the compiere.model package.  If you provide a jar file in the classpath, you can define here your specific model package.  The model classes are used to save/modify/delete entries and as well as in Workflow.  Refer to the Compiere naming convention to make sure that your class is used rather then the base classes.">Por defecto, el modelo de clases de java para extensiones estan en el paquete compiere.model. Si usted provee un archivo .jar en la ruta de clases (Classpath), usted puede definir aqui su paquete específico. Los modelos de clases son usados para Guardar / Modificar/ Borrar entradas asi como en un flujo de trabajo. Observe la convención de nombres de iDempiere para estar seguro que su clase es usada sobre las clases base.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -22696,7 +22696,7 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="Name" original="Ldap Processor">Procesador LDAP</value>
   <value column="PrintName" original="Ldap Processor">Procesador LDAP</value>
   <value column="Description" original="LDAP Server to authenticate and authorize external systems based on iDempiere">Servidor LDAP para autenticar y autorizar sistemas externos basados en iDempiere.</value>
-  <value column="Help" original="The LDAP Server allows third party software (e.g. Apache) to use the users defined in the system to authentificate and authorize them.  There is only one server per iDempiere system.  The &quot;o&quot; is the Client key and the optional &quot;ou&quot; is the Interest Area key.">El servidor LDAP permite a software de terceros ( Ej, Apache) usar los clientes definidos en el sistema para autenticar y autorizar. Hay un solo servidor por sistema de Adempiere. La "o" es el código del cliente o la opción "ou" es la clave del área de interés.</value>
+  <value column="Help" original="The LDAP Server allows third party software (e.g. Apache) to use the users defined in the system to authentificate and authorize them.  There is only one server per iDempiere system.  The &quot;o&quot; is the Client key and the optional &quot;ou&quot; is the Interest Area key.">El servidor LDAP permite a software de terceros ( Ej, Apache) usar los clientes definidos en el sistema para autenticar y autorizar. Hay un solo servidor por sistema de iDempiere. La "o" es el código del cliente o la opción "ou" es la clave del área de interés.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -23125,7 +23125,7 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
  <row id="50033" trl="Y">
   <value column="Name" original="Package Directory">Directorio Paquete</value>
   <value column="PrintName" original="Package Directory">Directorio Paquete</value>
-  <value column="Description" original="Package directory, default to AdempiereHome/packages">Directorio paquete, por defecto AdempiereHome/packages</value>
+  <value column="Description" original="Package directory, default to AdempiereHome/packages">Directorio paquete, por defecto iDempiereHome/packages</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -24175,7 +24175,7 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
  <row id="53227" trl="Y">
   <value column="Name" original="Post if Clearing Equal">Contabilice si las cuentas de conciliación son iguales.</value>
   <value column="PrintName" original="Post if Clearing Equal">Contabilice si las cuentas de conciliación son iguales.</value>
-  <value column="Description" original="This flag controls if Adempiere must post when clearing (transit) and final accounts are the same">Esta bandera controla si adempiere debe contabilizar cuando la cuenta transito y las cuentas finales son las mismas.</value>
+  <value column="Description" original="This flag controls if Adempiere must post when clearing (transit) and final accounts are the same">Esta bandera controla si iDempiere debe contabilizar cuando la cuenta transito y las cuentas finales son las mismas.</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -24631,7 +24631,7 @@ Use el campo Grupo de Autolimpieza para agrupar los componentes en el método de
   <value column="Name" original="Yield %">% Rendimiento</value>
   <value column="PrintName" original="Yield %">% Rendimiento</value>
   <value column="Description" original="The Yield is the percentage of a lot that is expected to be of acceptable wuality may fall below 100 percent">El rendimiento es el porcentaje que se espera sea aceptable calidad en un lote. Debe ser menor a 100%</value>
-  <value column="Help" original="ADempiere Calculate the total yield for a product from the yield for each activity when the process Workflow Cost Roll-Up is executed.&#10;&#10;The expected yield for an Activity can be expressed as:&#10;&#10;Yield = Acceptable Units at Activity End x 100&#10;&#10;The Total manufacturing yield for a product is determined by multiplying the yied percentage for each activity.&#10;&#10;Manufacturing Yield = Yield % for Activity 10 x Yied % for Activity 20 , etc &#10;&#10;Take care when setting yield to anything but 100% particularly when yied is used for multiples activities&#10;&#10;">ADempiere calcula el rendimiento total para un producto desde el rendimiento para cada actividad cuando el proceso Resumen Costo Flujo de Trabajo es ejecutado.
+  <value column="Help" original="ADempiere Calculate the total yield for a product from the yield for each activity when the process Workflow Cost Roll-Up is executed.&#10;&#10;The expected yield for an Activity can be expressed as:&#10;&#10;Yield = Acceptable Units at Activity End x 100&#10;&#10;The Total manufacturing yield for a product is determined by multiplying the yied percentage for each activity.&#10;&#10;Manufacturing Yield = Yield % for Activity 10 x Yied % for Activity 20 , etc &#10;&#10;Take care when setting yield to anything but 100% particularly when yied is used for multiples activities&#10;&#10;">iDempiere calcula el rendimiento total para un producto desde el rendimiento para cada actividad cuando el proceso Resumen Costo Flujo de Trabajo es ejecutado.
 
 El rendimiento esperado para una actividad puede ser expresado como:
 

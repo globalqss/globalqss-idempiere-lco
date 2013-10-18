@@ -1227,7 +1227,7 @@ y Recibi/Línea o directamente para el producto.</value>
  <row id="348" trl="Y">
   <value column="Name" original="Register Extension">Registrar Extensión</value>
   <value column="Description" original="Register your extension with iDempiere">Registre su extensión con iDempiere</value>
-  <value column="Help" original="You can register the four character extension with iDempiere. This makes sure that your extension can be automatically distributed and implemented.  You will also be able to certify extensions.  Contact iDempiere for details.">Usted puede registrar los 4 caracteres de extensión con Adempiere. Esto asegura que su extensión pueda ser automaticamente distribuida e implementada. Usted tambien puede certificar extensiones. Contacte iDempiere para detalles.</value>
+  <value column="Help" original="You can register the four character extension with iDempiere. This makes sure that your extension can be automatically distributed and implemented.  You will also be able to certify extensions.  Contact iDempiere for details.">Usted puede registrar los 4 caracteres de extensión con iDempiere. Esto asegura que su extensión pueda ser automaticamente distribuida e implementada. Usted tambien puede certificar extensiones. Contacte iDempiere para detalles.</value>
  </row>
  <row id="349" trl="Y">
   <value column="Name" original="Validate">Validar</value>
