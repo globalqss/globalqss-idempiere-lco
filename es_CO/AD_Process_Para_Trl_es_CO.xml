@@ -252,6 +252,11 @@
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="53582" trl="Y">
+  <value column="Name" original="CreateOpportunity">Crea Oportunidad</value>
+  <value column="Description" original="Create Opportunity">Crea Oportunidad</value>
+  <value column="Help" original="Create a new Sales Opportunity when converting a lead">Crea una nueva oportunidad de ventas cuando se convierte un cliente potencial</value>
+ </row>
  <row id="200005" trl="Y">
   <value column="Name" original="New EMail Confirm">Confirmación Clave Correo</value>
   <value column="Description" original=""/>

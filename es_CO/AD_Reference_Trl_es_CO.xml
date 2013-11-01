@@ -2172,6 +2172,11 @@
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="53370" trl="Y">
+  <value column="Name" original="Chart">Chart</value>
+  <value column="Description" original="Chart">Chart</value>
+  <value column="Help" original="A chart provides a graphical display of information.">A chart provides a graphical display of information.</value>
+ </row>
  <row id="53371" trl="Y">
   <value column="Name" original="Reconciliation Type">Reconciliation Type</value>
   <value column="Description" original=""/>
@@ -2180,6 +2185,21 @@
  <row id="53372" trl="Y">
   <value column="Name" original="Reconciliation Rules">Reconciliation Rules</value>
   <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53375" trl="Y">
+  <value column="Name" original="ChartOrientation">ChartOrientation</value>
+  <value column="Description" original="Chart Orientation">Chart Orientation</value>
+  <value column="Help" original="Horizontal or vertical">Horizontal or vertical</value>
+ </row>
+ <row id="53376" trl="Y">
+  <value column="Name" original="TimeUnit">TimeUnit</value>
+  <value column="Description" original="Time units for charting.">Time units for charting.</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53377" trl="Y">
+  <value column="Name" original="ChartType">ChartType</value>
+  <value column="Description" original="Chart Type">Chart Type</value>
   <value column="Help" original=""/>
  </row>
  <row id="53382" trl="Y">
@@ -2212,8 +2232,33 @@
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="53410" trl="Y">
+  <value column="Name" original="PriceOverrideType">PriceOverrideType</value>
+  <value column="Description" original="Price Override Type">Price Override Type</value>
+  <value column="Help" original="Fixed price or discount off list">Fixed price or discount off list</value>
+ </row>
  <row id="53412" trl="Y">
   <value column="Name" original="M_Replenishment Production Create ">M_Replenishment Production Create </value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53415" trl="Y">
+  <value column="Name" original="Lead Source">Lead Source</value>
+  <value column="Description" original="Lead Source">Lead Source</value>
+  <value column="Help" original="The source of a lead">The source of a lead</value>
+ </row>
+ <row id="53416" trl="Y">
+  <value column="Name" original="Lead Status">Lead Status</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53423" trl="Y">
+  <value column="Name" original="C_ContactActivity Type">C_ContactActivity Type</value>
+  <value column="Description" original="Contact Activity Types">Contact Activity Types</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53424" trl="Y">
+  <value column="Name" original="C_SalesStage">C_SalesStage</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
@@ -2450,6 +2495,16 @@
  <row id="200069" trl="Y">
   <value column="Name" original="AD_Language NOT System/Base">AD_Language NOT System/Base</value>
   <value column="Description" original="Language not system neither base">Language not system neither base</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200070" trl="Y">
+  <value column="Name" original="Database Data Type">Database Data Type</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200075" trl="Y">
+  <value column="Name" original="Foreign Key Constraint Type">Foreign Key Constraint Type</value>
+  <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
  <row trl="Y" uuid="4d3708dd-50f2-485b-8bda-934768e94d43">

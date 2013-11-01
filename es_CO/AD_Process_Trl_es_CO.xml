@@ -1947,6 +1947,11 @@ Debe ser implementado cuando no haya usuarios conectados.</value>
   <value column="Description" original="Inventory Replenish Report">Reporte Reabastecimiento incluyendo Producción</value>
   <value column="Help" original="Report lists products to be replenished. Note that a product can have only one current vendor. If there are more then vendor per product, both records are reset.  You need to select a current vendor manually.&lt;br&gt;&#13;&#10;Movements are only created, if a sourcing warehouse is defined for the warehouse to be replenished.">El reporte muestra los productos a ser reabastecidos</value>
  </row>
+ <row id="53276" trl="Y">
+  <value column="Name" original="Convert Lead">Convierte Cliente Potencial</value>
+  <value column="Description" original="Convert Lead to BP and Opportunity">Convierte Cliente Potencial a un Tercero y Oportunidad</value>
+  <value column="Help" original="Convert Lead into a Business Partner and (optional) Sales Opportunity">Convierte un cliente potencial en un tercero y (opcional) oportunidad de ventas</value>
+ </row>
  <row id="200000" trl="Y">
   <value column="Name" original="FA_ProjectCreateAsset">Crear Activo de proyecto</value>
   <value column="Description" original="This process creates asset from project and automatically close the project">Este proceso crea un activo desde un proyecto y automáticamente cierra el proyecto</value>
@@ -2113,9 +2118,44 @@ d. Fecha transacción, se volverá la fecha de inicio en servicio del activo</va
 Si no tiene un lenguaje base escoja alguno que no se utilice para ingresar al sistema.
 Si planea usar todos los lenguajes entonces cree un lenguaje xx_XX y úselo como base pero no como ingreso.</value>
  </row>
+ <row id="200055" trl="Y">
+  <value column="Name" original="Index Validate">Valida Índice</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200056" trl="Y">
+  <value column="Name" original="View Validate">Valida Vista</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200057" trl="Y">
+  <value column="Name" original="Create Table Index">Crea Índice de Tabla</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200058" trl="Y">
+  <value column="Name" original="Create Foreign Key">Crea Llave Foránea</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row id="200059" trl="Y">
   <value column="Name" original="Refresh Current Cost">Refrescar Costo Actual</value>
   <value column="Description" original="Refresh current cost for cost adjustment line">Refrescar costo actual para la línea de ajuste de costo</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200060" trl="Y">
+  <value column="Name" original="Validate Connection">Valida Conexión</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200061" trl="Y">
+  <value column="Name" original="Validate Address">Valida Dirección</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200064" trl="Y">
+  <value column="Name" original="Captured Process Parameter">Captura Parámetros Proceso</value>
+  <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
  <row trl="Y" uuid="0450d998-4a98-45d6-9487-d74051bfc47f">

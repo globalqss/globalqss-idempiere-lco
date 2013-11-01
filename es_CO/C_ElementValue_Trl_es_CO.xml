@@ -1514,4 +1514,8 @@
   <value column="Name" original="Average Cost Variance">Varianza Costeo Promedio</value>
   <value column="Description" original="Account for Average Cost Variance">Cuenta para Varianza Costeo Promedio</value>
  </row>
+ <row id="200000" trl="N">
+  <value column="Name" original="Landed Cost Clearing">Landed Cost Clearing</value>
+  <value column="Description" original="Account for Landed Cost Clearing">Account for Landed Cost Clearing</value>
+ </row>
 </idempiereTrl>
