@@ -581,6 +581,21 @@ Las fechas Válido desde y Válido hasta indican el período de tiempo a utiliza
   <value column="Description" original="Complete Production">Completar Producción</value>
   <value column="Help" original="Indication that this is complete">Indica que la producción está completa</value>
  </row>
+ <row id="62236" trl="Y">
+  <value column="Name" original="Sales Rep Name">Nombre Representante Ventas</value>
+  <value column="Description" original="Sales Representative Name">Nombre Representante Ventas</value>
+  <value column="Help" original="The name of the sales rep that this dashboard relates to.">El nombre del representante de ventas al que se refiere esta consola.</value>
+ </row>
+ <row id="62779" trl="Y">
+  <value column="Name" original="Language">Lenguaje</value>
+  <value column="Description" original="Language for this Business Partner if Multi-Language enabled">Lenguaje para este tercero si está habilitado el multi-lenguaje</value>
+  <value column="Help" original="The Language identifies the language to use for display and formatting documents. It requires, that on Client level, Multi-Lingual documents are selected and that you have created/loaded the language.">El lenguaje que va a ser usado para desplegar y formatear documentos. Requiere que a nivel de grupo empresarial el modo multi-lenguaje esté seleccionado y que se haya creado/cargado el lenguaje.</value>
+ </row>
+ <row id="62991" trl="Y">
+  <value column="Name" original="Expected Close">Cierre Esperado</value>
+  <value column="Description" original="Expected Close">Cierre Esperado</value>
+  <value column="Help" original="The Expected Close Date indicates the expected last or final date">Fecha esperada de cierre</value>
+ </row>
  <row id="200585" trl="Y">
   <value column="Name" original="Only Currency">Sólo Moneda</value>
   <value column="Description" original="Restrict accepting only this currency">Restringe para aceptar sólo la moneda actual</value>
@@ -696,9 +711,24 @@ Las fechas Válido desde y Válido hasta indican el período de tiempo a utiliza
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="202210" trl="Y">
+  <value column="Name" original="Index Validate">Valida Índice</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="202252" trl="Y">
+  <value column="Name" original="View Validate">Valida Vista</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row id="202325" trl="Y">
   <value column="Name" original="Cost Adjustment">Ajuste Costo</value>
   <value column="Description" original="Inventory Cost Adjustment">Ajuste Costo Inventario</value>
   <value column="Help" original="The Inventory Cost Adjustment document allows user to enter cost adjustment for products">El ajuste costo inventario le permite ingresar ajustes de costos a productos.</value>
+ </row>
+ <row id="202443" trl="Y">
+  <value column="Name" original="Purchase Order Line">Línea Órden Compra</value>
+  <value column="Description" original="Purchase Order Line">Línea Órden Compra</value>
+  <value column="Help" original="The Purchase Order Line is a unique identifier for a line in an order."></value>
  </row>
 </idempiereTrl>

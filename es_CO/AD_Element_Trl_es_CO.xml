@@ -28179,10 +28179,10 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53710" trl="Y">
-  <value column="Name" original="ZUL File Path">Ruta Archivo ZUL</value>
-  <value column="PrintName" original="ZUL File Path">Ruta Archivo ZUL</value>
-  <value column="Description" original="Absolute path to zul file">Ruta absoluta al archivo zul</value>
-  <value column="Help" original="Absolute path to zul file that is use to generate dashboard content">Ruta absoluta al archivo zul que es usado para generar el contenido del tablero de control</value>
+  <value column="Name" original="Gadget URI">Ruta Artefacto</value>
+  <value column="PrintName" original="Gadget URI">Ruta Artefacto</value>
+  <value column="Description" original="URI for Dashboard Gadget">Ruta para el artefacto de la consola</value>
+  <value column="Help" original="URI for Dashboard Gadget. This can be absolute path to a zul file or an unique gadget id which is instantiated through OSGi factory services.">Ruta para el artefacto de la consola. Este puede ser la ruta absoluta de un archivo zul o un id de artefacto único el cual es instanciado mediante OSGi factory services</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -29035,7 +29035,7 @@ Crédito Cuenta Trabajo en Proceso</value>
  <row id="53894" trl="Y">
   <value column="Name" original="Chart Type">Tipo Cuadro</value>
   <value column="PrintName" original="Chart Type">Tipo Cuadro</value>
-  <value column="Description" original="Type fo chart to render">Tipo de cuadro para desplegar</value>
+  <value column="Description" original="Type of chart to render">Tipo de cuadro para desplegar</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -30364,10 +30364,130 @@ Producto: usado para adicionar rápidamente productos a la venta</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
+ <row id="54268" trl="Y">
+  <value column="Name" original="Chart">Gráfico</value>
+  <value column="PrintName" original="Chart">Gráfico</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54269" trl="Y">
+  <value column="Name" original="Chart Datasource">Fuente Datos Gráfico</value>
+  <value column="PrintName" original="Chart Datasource">Fuente Datos Gráfico</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54270" trl="Y">
+  <value column="Name" original="Value Column">Columna Valor</value>
+  <value column="PrintName" original="Value Column">Columna Valor</value>
+  <value column="Description" original="Fully qualified data value column">Columna con el dato de valor completamente calificada</value>
+  <value column="Help" original="The Value Column contains the value data for the chart">La columna Valor contiene los datos de valores para el gráfico</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54271" trl="Y">
+  <value column="Name" original="Category Column">Columna Categoría</value>
+  <value column="PrintName" original="Category Column">Columna Categoría</value>
+  <value column="Description" original="Fully qualified data category column">Columna con el dato de categoría completamente calificada</value>
+  <value column="Help" original="The Category Column determines how the chart data is grouped">La columna Categoría determina cómo se agrupan los datos del gráfico</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
  <row id="54274" trl="Y">
   <value column="Name" original="Match Code">Código Coincidente</value>
   <value column="PrintName" original="Match Code">Código Coincidente</value>
   <value column="Description" original="String identifying related accounting facts">Cadena identificando asientos contables relacionados</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54315" trl="Y">
+  <value column="Name" original="Display Legend">Despliega Leyenda</value>
+  <value column="PrintName" original="Display Legend">Despliega Leyenda</value>
+  <value column="Description" original="Display chart legend">Despliega Leyenda en el Gráfico</value>
+  <value column="Help" original="Toggles the display of the chart legend">Define si se despliega la leyenda en el gráfico</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54316" trl="Y">
+  <value column="Name" original="Orientation">Orientación</value>
+  <value column="PrintName" original="Orientation">Orientación</value>
+  <value column="Description" original="The orientation of the chart.">La orientación del gráfico.</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54317" trl="Y">
+  <value column="Name" original="Time Series">Series de Tiempo</value>
+  <value column="PrintName" original="Time Series">Series de Tiempo</value>
+  <value column="Description" original="The domain data for the chart is organised by time.">El dominio de los datos para los cuales el gráfico es organizado por tiempo.</value>
+  <value column="Help" original="A time series chart will automatically group and restrict the data by the time unit and scope specified.">Un gráfico de series de tiempo automáticamente agrupa y restringe los datos por la unidad de tiempo y alcance definidos.</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54318" trl="Y">
+  <value column="Name" original="Time Scope">Alcance Tiempo</value>
+  <value column="PrintName" original="Time Scope">Alcance Tiempo</value>
+  <value column="Description" original="The number of time units to include the chart result.">El número de unidades de tiempo para incluir en el resultado del gráfico.</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54319" trl="Y">
+  <value column="Name" original="Time Unit">Unidad de Tiempo</value>
+  <value column="PrintName" original="Time Unit">Unidad de Tiempo</value>
+  <value column="Description" original="The unit of time for grouping chart data.">La Unidad de Tiempo para agrupar los datos del gráfico.</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54320" trl="Y">
+  <value column="Name" original="Time Offset">Corrimiento Tiempo</value>
+  <value column="PrintName" original="Time Offset">Corrimiento Tiempo</value>
+  <value column="Description" original="Number of time units to offset displayed chart data from the current date.">Número de unidades de tiempo para correr los datos desplegados en el gráfico desde la fecha actual.</value>
+  <value column="Help" original="For example an offset of -12 with a chart time unit of Month will result in previous year data being displayed.">Por ejemplo un corrimiento de -12 con una unidad de tiempo Mes desplegará los datos del año anterior.</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54321" trl="Y">
+  <value column="Name" original="Range Label">Rótulo Rango</value>
+  <value column="PrintName" original="Range Label">Rótulo Rango</value>
+  <value column="Description" original="Label for the range axis.">Rótulo para el eje de rango.</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="54322" trl="Y">
+  <value column="Name" original="Domain Label">Rótulo Dominio</value>
+  <value column="PrintName" original="Domain Label">Rótulo Dominio</value>
+  <value column="Description" original="Label for the domain axis.">Rótulo para el eje de dominio.</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -37714,6 +37834,36 @@ Producto: usado para adicionar rápidamente productos a la venta</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
+ <row id="55222" trl="Y">
+  <value column="Name" original="Business Partner Price">Precio Tercero</value>
+  <value column="PrintName" original="Business Partner Price">Precio Tercero</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55223" trl="Y">
+  <value column="Name" original="Price Override Type">Tipo Sobreescritura Precio</value>
+  <value column="PrintName" original="Price Override Type">Tipo Sobreescritura Precio</value>
+  <value column="Description" original="Type of price override, fixed price or discount off list">Tipo Sobreescritura Precio, precio fijo o descuento en lista</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55224" trl="Y">
+  <value column="Name" original="Net Price">Precio Neto</value>
+  <value column="PrintName" original="Net Price">Precio Neto</value>
+  <value column="Description" original="Net Price including all discounts">Precio Neto incluyendo todos los descuentos</value>
+  <value column="Help" original="If price is set as &quot;Net Price&quot; no further discounts will be applied.">Si se fija el precio como "Precio Neto" no se aplicarán descuentos adicionales.</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
  <row id="55236" trl="Y">
   <value column="Name" original="Quantity Used">Cantidad Usada</value>
   <value column="PrintName" original="Quantity Used in production">Cantidad usada en producción</value>
@@ -37854,10 +38004,180 @@ Producto: usado para adicionar rápidamente productos a la venta</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
+ <row id="55281" trl="Y">
+  <value column="Name" original="Sales Lead">Cliente Potencial</value>
+  <value column="PrintName" original="Sales Lead">Cliente Potencial</value>
+  <value column="Description" original="This contact is a sales lead">Este contacto es un cliente potencial</value>
+  <value column="Help" original="Sales leads can be converted into full contacts with Business Partners.">Los clientes potenciales pueden convertirse en contactos completos con terceros.</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55282" trl="Y">
+  <value column="Name" original="Lead Source">Fuente Cliente Potencial</value>
+  <value column="PrintName" original="Lead Source">Fuente Cliente Potencial</value>
+  <value column="Description" original="The source of this lead/opportunity">La fuente de este cliente potencial/oportunidad</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55283" trl="Y">
+  <value column="Name" original="Lead Status">Estado Cliente Potencial</value>
+  <value column="PrintName" original="Lead Status">Estado Cliente Potencial</value>
+  <value column="Description" original="The status of this lead/opportunity in the sales cycle">El estado de este cliente potencial/oportunidad en el ciclo de ventas</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55284" trl="Y">
+  <value column="Name" original="Lead Source Description">Descripción Fuente Cliente Potencial</value>
+  <value column="PrintName" original="Lead Source Description">Descripción Fuente Cliente Potencial</value>
+  <value column="Description" original="Additional information on the source of this lead/opportunity">Información adicional de la fuente para este cliente potencial/oportunidad</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55285" trl="Y">
+  <value column="Name" original="Lead Status Description">Descripción Estado Cliente Potencial</value>
+  <value column="PrintName" original="Lead Status Description">Descripción Estado Cliente Potencial</value>
+  <value column="Description" original="Additional information on the status of this lead/opportunity">Información adicional del estado de este cliente potencial/oportunidad</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55286" trl="Y">
+  <value column="Name" original="Sales Opportunity">Oportunidad de Ventas</value>
+  <value column="PrintName" original="Sales Opportunity">Oportunidad de Ventas</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55287" trl="Y">
+  <value column="Name" original="Expected Close Date">Fecha Esperada Cierre</value>
+  <value column="PrintName" original="Expected Close Date">Fecha Esperada Cierre</value>
+  <value column="Description" original="Expected Close Date">Fecha Esperada Cierre</value>
+  <value column="Help" original="The Expected Close Date indicates the expected last or final date">La Fecha Esperada Cierre indica la fecha en la que se espera cerrar la venta</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55288" trl="Y">
+  <value column="Name" original="Opportunity Amount">Monto Oportunidad</value>
+  <value column="PrintName" original="Opportunity Amount">Monto Oportunidad</value>
+  <value column="Description" original="The estimated value of this opportunity.">El monto estimado de esta oportunidad.</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55289" trl="Y">
+  <value column="Name" original="Sales Stage">Etapa Ventas</value>
+  <value column="PrintName" original="Sales Stage">Etapa Ventas</value>
+  <value column="Description" original="Stages of the sales process">Etapa en el proceso de ventas</value>
+  <value column="Help" original="Define what stages your sales process will move through">Define las etapas por las que se mueve su proceso de ventas</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55290" trl="Y">
+  <value column="Name" original="Won">Ganada</value>
+  <value column="PrintName" original="Won">Ganada</value>
+  <value column="Description" original="The opportunity was won">La oportunidad fue ganada</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55292" trl="Y">
+  <value column="Name" original="Sales Pipeline">Embudo Ventas</value>
+  <value column="PrintName" original="Sales Pipeline">Embudo Ventas</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55293" trl="Y">
+  <value column="Name" original="Weighted Amount">Monto Ponderado</value>
+  <value column="PrintName" original="Weighted Amount">Monto Ponderado</value>
+  <value column="Description" original="The amount adjusted by the probability.">El monto ajustado por la probabilidad.</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55294" trl="Y">
+  <value column="Name" original="Opportunity by Campaign">Oportunidad por Campaña</value>
+  <value column="PrintName" original="Opportunity by Campaign">Oportunidad por Campaña</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
  <row id="55297" trl="Y">
   <value column="Name" original="Allow Copy">Permitir copia</value>
   <value column="PrintName" original="Allow Copy">Permitir copia</value>
   <value column="Description" original="Determine if a column must be copied when pushing the button to copy record">Determina si una columna debe ser copiada cuando se selecciona copiar registro</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55353" trl="Y">
+  <value column="Name" original="Contact Activity">Actividad Contacto</value>
+  <value column="PrintName" original="Contact Activity">Actividad Contacto</value>
+  <value column="Description" original="Events, tasks, communications related to a contact">Eventos, tareas, comunicaciones relacionadas con un contacto</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55354" trl="Y">
+  <value column="Name" original="Activity Type">Tipo Actividad</value>
+  <value column="PrintName" original="Activity Type">Tipo Actividad</value>
+  <value column="Description" original="Type of activity, e.g. task, email, phone call">Tipo Actividad, ej: tarea, correo, llamada</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55355" trl="Y">
+  <value column="Name" original="BP Address">Dirección Tercero</value>
+  <value column="PrintName" original="BP Address">Dirección Tercero</value>
+  <value column="Description" original="Address of the Business Partner">Dirección del tercero</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="55363" trl="Y">
+  <value column="Name" original="Open Requests">Solicitudes Abiertas</value>
+  <value column="PrintName" original="Open Requests">Solicitudes Abiertas</value>
+  <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -52844,6 +53164,26 @@ Producto: usado para adicionar rápidamente productos a la venta</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
+ <row id="202184" trl="Y">
+  <value column="Name" original="Date  Material Policy">Fecha Política Materiales</value>
+  <value column="PrintName" original="Date  Material Policy">Fecha Política Materiales</value>
+  <value column="Description" original="Time used for LIFO and FIFO Material Policy">Fecha usada para la política de materiales PEPS o UEPS</value>
+  <value column="Help" original="This field is used to record time used for LIFO and FIFO material policy">Este campo es usado para registrar la fecha utilizada para la política de materiales PEPS o UEPS</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202185" trl="Y">
+  <value column="Name" original="Use Guarantee Date for Material Policy">Usa Fecha Vencimiento para Política de Materiales</value>
+  <value column="PrintName" original="Use Guarantee Date for Material Policy">Usa Fecha Vencimiento para Política de Materiales</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
  <row id="202186" trl="Y">
   <value column="Name" original="Distinct">Unico</value>
   <value column="PrintName" original="Distinct">Unico</value>
@@ -53924,9 +54264,179 @@ Producto: usado para adicionar rápidamente productos a la venta</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
+ <row id="202542" trl="Y">
+  <value column="Name" original="Table Index">Índice Tabla</value>
+  <value column="PrintName" original="Table Index">Índice Tabla</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202543" trl="Y">
+  <value column="Name" original="AD_TableIndex_UU">AD_TableIndex_UU</value>
+  <value column="PrintName" original="AD_TableIndex_UU">AD_TableIndex_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202544" trl="Y">
+  <value column="Name" original="Create Constraint">Crear Restricción</value>
+  <value column="PrintName" original="Create Constraint">Crear Restricción</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202545" trl="Y">
+  <value column="Name" original="Unique">Único</value>
+  <value column="PrintName" original="Unique">Único</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202546" trl="Y">
+  <value column="Name" original="Table Index Column">Columna Índice Tabla</value>
+  <value column="PrintName" original="Table Index Column">Columna Índice Tabla</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202547" trl="Y">
+  <value column="Name" original="AD_IndexColumn_UU">AD_IndexColumn_UU</value>
+  <value column="PrintName" original="AD_IndexColumn_UU">AD_IndexColumn_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202548" trl="Y">
+  <value column="Name" original="Database View Component">Componente Vista BD</value>
+  <value column="PrintName" original="Database View Component">Componente Vista BD</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202549" trl="Y">
+  <value column="Name" original="AD_ViewComponent_UU">AD_ViewComponent_UU</value>
+  <value column="PrintName" original="AD_ViewComponent_UU">AD_ViewComponent_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202550" trl="Y">
+  <value column="Name" original="Referenced Table">Tabla Referenciada</value>
+  <value column="PrintName" original="Referenced Table">Tabla Referenciada</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202551" trl="Y">
+  <value column="Name" original="Database View Column">Columna Vista BD</value>
+  <value column="PrintName" original="Database View Column">Columna Vista BD</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202552" trl="Y">
+  <value column="Name" original="AD_ViewColumn_UU">AD_ViewColumn_UU</value>
+  <value column="PrintName" original="AD_ViewColumn_UU">AD_ViewColumn_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202553" trl="Y">
+  <value column="Name" original="Database Data Type">Tipo Dato BD</value>
+  <value column="PrintName" original="Database Data Type">Tipo Dato BD</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202566" trl="Y">
+  <value column="Name" original="Series Column">Columna Series</value>
+  <value column="PrintName" original="Series Column">Columna Series</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202567" trl="Y">
+  <value column="Name" original="AD_Chart_UU">AD_Chart_UU</value>
+  <value column="PrintName" original="AD_Chart_UU">AD_Chart_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202568" trl="Y">
+  <value column="Name" original="AD_ChartDatasource_UU">AD_ChartDatasource_UU</value>
+  <value column="PrintName" original="AD_ChartDatasource_UU">AD_ChartDatasource_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202569" trl="Y">
+  <value column="Name" original="IsShowinLogin">Mostrar en Login</value>
+  <value column="PrintName" original="Show Login">Mostrar en Login</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
  <row id="202570" trl="Y">
   <value column="Name" original="Fill UUID">Llenar UUID</value>
   <value column="PrintName" original="Fill UUID">Llenar UUID</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202572" trl="Y">
+  <value column="Name" original="Default Focus">Foco por Defecto</value>
+  <value column="PrintName" original="Default Focus">Foco por Defecto</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -53957,6 +54467,216 @@ Producto: usado para adicionar rápidamente productos a la venta</value>
  <row id="202578" trl="Y">
   <value column="Name" original="AD_ZoomCondition_UU">AD_ZoomCondition_UU</value>
   <value column="PrintName" original="AD_ZoomCondition_UU">AD_ZoomCondition_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202579" trl="Y">
+  <value column="Name" original="Tax Provider Configuration">Configuración Proveedor Impuestos</value>
+  <value column="PrintName" original="Tax Provider Configuration">Configuración Proveedor Impuestos</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202580" trl="Y">
+  <value column="Name" original="C_TaxProviderCfg_UU">C_TaxProviderCfg_UU</value>
+  <value column="PrintName" original="C_TaxProviderCfg_UU">C_TaxProviderCfg_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202581" trl="Y">
+  <value column="Name" original="Tax Provider Class">Clase Proveedor Impuestos</value>
+  <value column="PrintName" original="Tax Provider Class">Clase Proveedor Impuestos</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202582" trl="Y">
+  <value column="Name" original="Tax Provider">Proveedor Impuestos</value>
+  <value column="PrintName" original="Tax Provider">Proveedor Impuestos</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202583" trl="Y">
+  <value column="Name" original="C_TaxProvider_UU">C_TaxProvider_UU</value>
+  <value column="PrintName" original="C_TaxProvider_UU">C_TaxProvider_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202584" trl="Y">
+  <value column="Name" original="Company Code">Código Compañía</value>
+  <value column="PrintName" original="Company Code">Código Compañía</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202585" trl="Y">
+  <value column="Name" original="License">Licencia</value>
+  <value column="PrintName" original="License">Licencia</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202586" trl="Y">
+  <value column="Name" original="Validate Connection">Valida Conexión</value>
+  <value column="PrintName" original="Validate Connection">Valida Conexión</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202587" trl="Y">
+  <value column="Name" original="Landed Cost Clearing">Conciliación Costo Adicional</value>
+  <value column="PrintName" original="Landed Cost Clearing">Conciliación Costo Adicional</value>
+  <value column="Description" original="Product Landed Cost Clearing Account">Cuenta Conciliación Costo Adicional Producto</value>
+  <value column="Help" original="Account used for posting of estimated and actual landed cost amount.  The balance on the clearing account should be zero and accounts for the timing difference between material receipt and landed cost invoice.">Cuenta usada para contabilizar el monto actual y estimado de costo adicional.  El saldo en la cuenta de conciliación debe ser cero.</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202588" trl="Y">
+  <value column="Name" original="Address Validation Configuration">Configuración Validación Dirección</value>
+  <value column="PrintName" original="Address Validation Configuration">Configuración Validación Dirección</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202589" trl="Y">
+  <value column="Name" original="C_AddressValidationCfg_UU">C_AddressValidationCfg_UU</value>
+  <value column="PrintName" original="C_AddressValidationCfg_UU">C_AddressValidationCfg_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202590" trl="Y">
+  <value column="Name" original="Address Validation Class">Clase Validación Dirección</value>
+  <value column="PrintName" original="Address Validation Class">Clase Validación Dirección</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202591" trl="Y">
+  <value column="Name" original="Address Validation">Validación Dirección</value>
+  <value column="PrintName" original="Address Validation">Validación Dirección</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202592" trl="Y">
+  <value column="Name" original="C_AddressValidation_UU">C_AddressValidation_UU</value>
+  <value column="PrintName" original="C_AddressValidation_UU">C_AddressValidation_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202593" trl="Y">
+  <value column="Name" original="Address Transaction">Transacción Dirección</value>
+  <value column="PrintName" original="Address Transaction">Transacción Dirección</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202594" trl="Y">
+  <value column="Name" original="C_AddressTransaction_UU">C_AddressTransaction_UU</value>
+  <value column="PrintName" original="C_AddressTransaction_UU">C_AddressTransaction_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202595" trl="Y">
+  <value column="Name" original="Estimated Landed Cost">Costo Adicional Estimado</value>
+  <value column="PrintName" original="Estimated Landed Cost">Costo Adicional Estimado</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202596" trl="Y">
+  <value column="Name" original="C_OrderLandedCost_UU">C_OrderLandedCost_UU</value>
+  <value column="PrintName" original="C_OrderLandedCost_UU">C_OrderLandedCost_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202597" trl="Y">
+  <value column="Name" original="Estimated Landed Cost Allocation">Asignación Costo Adicional Estimado</value>
+  <value column="PrintName" original="Estimated Landed Cost Allocation">Asignación Costo Adicional Estimado</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202598" trl="Y">
+  <value column="Name" original="C_OrderLandedCostAllocation_UU">C_OrderLandedCostAllocation_UU</value>
+  <value column="PrintName" original="C_OrderLandedCostAllocation_UU">C_OrderLandedCostAllocation_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202599" trl="Y">
+  <value column="Name" original="Validate Address">Valida Dirección</value>
+  <value column="PrintName" original="Validate Address">Valida Dirección</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -54004,11 +54724,126 @@ Producto: usado para adicionar rápidamente productos a la venta</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
+ <row id="202604" trl="Y">
+  <value column="Name" original="C_Opportunity_UU">C_Opportunity_UU</value>
+  <value column="PrintName" original="C_Opportunity_UU">C_Opportunity_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202605" trl="Y">
+  <value column="Name" original="C_ContactActivity_UU">C_ContactActivity_UU</value>
+  <value column="PrintName" original="C_ContactActivity_UU">C_ContactActivity_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202606" trl="Y">
+  <value column="Name" original="M_BP_Price_UU">M_BP_Price_UU</value>
+  <value column="PrintName" original="M_BP_Price_UU">M_BP_Price_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202607" trl="Y">
+  <value column="Name" original="C_SalesStage_UU">C_SalesStage_UU</value>
+  <value column="PrintName" original="C_SalesStage_UU">C_SalesStage_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202608" trl="Y">
+  <value column="Name" original="PA_DashboardContent_Access_ID">Acceso Consola Contenido</value>
+  <value column="PrintName" original="PA_DashboardContent_Access_ID">Acceso Consola Contenido</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202609" trl="Y">
+  <value column="Name" original="PA_DashboardContent_Access_UU">PA_DashboardContent_Access_UU</value>
+  <value column="PrintName" original="PA_DashboardContent_Access_UU">PA_DashboardContent_Access_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202611" trl="Y">
+  <value column="Name" original="Title Logic">Lógica Título</value>
+  <value column="PrintName" original="Title Logic">Lógica Título</value>
+  <value column="Description" original="The result determines the title to be displayed for this window">El resultado determina el título a desplegar para esta ventana</value>
+  <value column="Help" original="The result determines the title to be displayed for this Window, used also as the label for Recent Items.&#13;&#10;Format is just one or several context variables surrounded by @, examples:&#13;&#10;@TaxID@&#13;&#10;@DocumentNo@&#13;&#10;@Value@ @Name@&#13;&#10;if this field is left empty a default title/label is created using the DocumentNo, Value and Name fields if they exist.">El resultado determina el título a desplegar para esta ventana, utilizado también como rótulo en los Registros Recientes.&#13;
+Formato es una o varias variables de contexto rodeadas por @, ejemplos:&#13;
+@TaxID@&#13;
+@DocumentNo@&#13;
+@Value@ @Name@&#13;
+si se deja en blanco el campo un título/rótulo por defecto se creará usando los campos Número de Documento, Código y Nombre, si existen.</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202612" trl="Y">
+  <value column="Name" original="Constraint Name">Nombre Restricción</value>
+  <value column="PrintName" original="Constraint Name">Nombre Restricción</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202613" trl="Y">
+  <value column="Name" original="Constraint Type">Tipo Restricción</value>
+  <value column="PrintName" original="Constraint Type">Tipo Restricción</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
  <row id="202618" trl="Y">
   <value column="Name" original="Export Dictionary Entity">Exportar Diccionario Oficial</value>
   <value column="PrintName" original="Export Dictionary Entity">Exportar Diccionario Oficial</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202620" trl="Y">
+  <value column="Name" original="Advanced Button">Botón Avanzado</value>
+  <value column="PrintName" original="Advanced Button">Botón Avanzado</value>
+  <value column="Description" original="This Button contains advanced Functionality">Este botón contiene funcionalidad avanzada</value>
+  <value column="Help" original="The button with advanced functionality is only displayed for role that can access advanced functionality">El botón con funcionalidad avanzada sólo se despliega a los roles con acceso a funcionalidad avanzada</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202621" trl="Y">
+  <value column="Name" original="Default To Parameter">Parametro Hasta por Defecto</value>
+  <value column="PrintName" original="Default To Parameter">Parametro Hasta por Defecto</value>
+  <value column="Description" original="Default value of the to parameter">Valor por defecto para el Parametro Hasta</value>
+  <value column="Help" original="The default value can be a variable like @#Date@ ">El valor por defecto para una variable como @#Date@</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>

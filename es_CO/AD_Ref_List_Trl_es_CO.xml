@@ -4618,6 +4618,82 @@
   <value column="Name" original="GL Reconciliation">Conciliación Contable</value>
   <value column="Description" original="SQL subquery used in GL Reconciliation (auto)">Subconsulta SQL usada para conciliación contable (auto)</value>
  </row>
+ <row id="53630" trl="Y">
+  <value column="Name" original="Horizontal">Horizontal</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53631" trl="Y">
+  <value column="Name" original="Vertical">Vertical</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53632" trl="Y">
+  <value column="Name" original="Day">Día</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53633" trl="Y">
+  <value column="Name" original="Week">Semana</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53634" trl="Y">
+  <value column="Name" original="Month">Mes</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53635" trl="Y">
+  <value column="Name" original="Quarter">Trimestre</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53636" trl="Y">
+  <value column="Name" original="Year">Año</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53637" trl="Y">
+  <value column="Name" original="Area Chart">Gráfico Área</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53638" trl="Y">
+  <value column="Name" original="Bar Chart">Gráfico Área 3D</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53639" trl="Y">
+  <value column="Name" original="Stacked Area Chart">Gráfico Área Apilada</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53640" trl="Y">
+  <value column="Name" original="3D Bar Chart">Gráfico Barra 3D</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53641" trl="Y">
+  <value column="Name" original="Stacked Bar Chart">Gráfico Barra Apilada</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53642" trl="Y">
+  <value column="Name" original="3D Stacked Bar Chart">Gráfico Barra Apilada 3D</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53643" trl="Y">
+  <value column="Name" original="Line Chart">Gráfico Línea</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53644" trl="Y">
+  <value column="Name" original="3D Line Chart">Gráfico Línea 3D</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53645" trl="Y">
+  <value column="Name" original="Waterfall Chart">Gráfico Cascada</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53646" trl="Y">
+  <value column="Name" original="Pie Chart">Gráfico Torta</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53647" trl="Y">
+  <value column="Name" original="3D Pie Chart">Gráfico Torta 3D</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53648" trl="Y">
+  <value column="Name" original="Ring Chart">Gráfico Anillo</value>
+  <value column="Description" original=""/>
+ </row>
  <row id="53660" trl="Y">
   <value column="Name" original="Both">Ambos</value>
   <value column="Description" original=""/>
@@ -4694,6 +4770,14 @@
   <value column="Name" original="4_Actual Debt (Invoices)">4_Deuda Actual (Facturas)</value>
   <value column="Description" original=""/>
  </row>
+ <row id="53703" trl="Y">
+  <value column="Name" original="Fixed Price">Precio Fijo</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53704" trl="Y">
+  <value column="Name" original="Discount">Descuento</value>
+  <value column="Description" original=""/>
+ </row>
  <row id="53708" trl="Y">
   <value column="Name" original="Distribution Order">Orden Distribución</value>
   <value column="Description" original=""/>
@@ -4712,6 +4796,78 @@
  </row>
  <row id="53712" trl="Y">
   <value column="Name" original="Production">Producción</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53716" trl="Y">
+  <value column="Name" original="Cold Call">Llamada en Frío</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53717" trl="Y">
+  <value column="Name" original="Existing Customer">Cliente Actual</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53718" trl="Y">
+  <value column="Name" original="Employee">Empleado</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53719" trl="Y">
+  <value column="Name" original="Partner">Socio</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53720" trl="Y">
+  <value column="Name" original="Conference">Conferencia</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53721" trl="Y">
+  <value column="Name" original="Trade Show">Feria</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53722" trl="Y">
+  <value column="Name" original="Web Site">Sitio Web</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53723" trl="Y">
+  <value column="Name" original="Word of Mouth">Boca a boca</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53725" trl="Y">
+  <value column="Name" original="Email">Correo Electrónico</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53726" trl="Y">
+  <value column="Name" original="New">Nuevo</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53727" trl="Y">
+  <value column="Name" original="Working">Trabajando</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53728" trl="Y">
+  <value column="Name" original="Expired">Expirado</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53729" trl="Y">
+  <value column="Name" original="Recycled">Reciclado</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53744" trl="Y">
+  <value column="Name" original="Email">Correo Electrónico</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53745" trl="Y">
+  <value column="Name" original="Phone call">Llamada Telefónica</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53746" trl="Y">
+  <value column="Name" original="Meeting">Reunión</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53747" trl="Y">
+  <value column="Name" original="Task">Tarea</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53748" trl="Y">
+  <value column="Name" original="Converted">Convertido</value>
   <value column="Description" original=""/>
  </row>
  <row id="200008" trl="Y">
@@ -5150,6 +5306,38 @@
   <value column="Name" original="Fixed Assets Depreciation">Depreciación Activos Fijos</value>
   <value column="Description" original=""/>
  </row>
+ <row id="200142" trl="Y">
+  <value column="Name" original="Binary LOB">Binary LOB</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200143" trl="Y">
+  <value column="Name" original="Character Fixed">Character Fixed</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200144" trl="Y">
+  <value column="Name" original="Decimal">Decimal</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200145" trl="Y">
+  <value column="Name" original="Integer">Integer</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200146" trl="Y">
+  <value column="Name" original="Character LOB">Character LOB</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200147" trl="Y">
+  <value column="Name" original="Number">Number</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200148" trl="Y">
+  <value column="Name" original="Timestamp">Timestamp</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200149" trl="Y">
+  <value column="Name" original="Character Variable">Character Variable</value>
+  <value column="Description" original=""/>
+ </row>
  <row id="200155" trl="Y">
   <value column="Name" original="Cost Adjustment">Ajuste Costo</value>
   <value column="Description" original="Inventory Cost Adjustment">Ajuste Costo Inventario</value>
@@ -5161,6 +5349,22 @@
  <row id="200157" trl="Y">
   <value column="Name" original="Until Expiration or Acknowledge">Hasta Expiración o Acuse Recibo</value>
   <value column="Description" original="Repeat it until the message expires or until it has been acknowledged, whatever happens first">Repetir el mensaje hasta que expire o se acuse recibo, lo que suceda primero</value>
+ </row>
+ <row id="200161" trl="Y">
+  <value column="Name" original="Do Not Create">No Crear</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200162" trl="Y">
+  <value column="Name" original="No Action">No Acción</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200163" trl="Y">
+  <value column="Name" original="Cascade">Cascada</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200164" trl="Y">
+  <value column="Name" original="Set Null">Fijar Nulo</value>
+  <value column="Description" original=""/>
  </row>
  <row trl="Y" uuid="5b51b2ba-cd8e-4958-a276-541c866ce01a">
   <value column="Name" original="Yes">Si</value>

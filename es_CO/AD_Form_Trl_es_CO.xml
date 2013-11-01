@@ -232,4 +232,9 @@ Seleccionando "dónde es usado" mostrará las LDM que usan este producto.</value
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="200008" trl="Y">
+  <value column="Name" original="Captured Process Parameter">Captura Parámetros Proceso</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
 </idempiereTrl>

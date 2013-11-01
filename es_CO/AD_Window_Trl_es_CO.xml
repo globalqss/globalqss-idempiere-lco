@@ -1344,7 +1344,7 @@ Segmentos Contables de la organización deseada, Cuentas, Productos pueden tener
   <value column="Help" original=""/>
  </row>
  <row id="50007" trl="Y">
-  <value column="Name" original="Dashboard Content Edit">Consola de editor de contenido</value>
+  <value column="Name" original="Dashboard Content">Contenido Consola</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
@@ -1834,6 +1834,11 @@ y otros</value>
   <value column="Description" original="This window allow import Inventory Move transaction"/>
   <value column="Help" original=""/>
  </row>
+ <row id="53124" trl="Y">
+  <value column="Name" original="Chart">Gráfico</value>
+  <value column="Description" original="Chart Definition">Definición Gráfico</value>
+  <value column="Help" original=""/>
+ </row>
  <row id="53125" trl="Y">
   <value column="Name" original="Fact Reconciliation">Conciliación Asientos</value>
   <value column="Description" original=""/>
@@ -1862,6 +1867,36 @@ y otros</value>
  <row id="53150" trl="Y">
   <value column="Name" original="Part Type">Tipo de Parte</value>
   <value column="Description" original="Manufacturing Part Types">Tipos de Parte Manufactura</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53152" trl="Y">
+  <value column="Name" original="Contact">Contacto</value>
+  <value column="Description" original="Maintain Contacts">Mantiene Contactos</value>
+  <value column="Help" original="The Contact Window allows you to maintain Contacts who are individuals you deal with.  Contacts may also be internal or external users who can log into the system and have access to functionality via one or more roles.  A contact can also be a business partner contact.">La ventana de contactos le permite mantener los contactos con los que negocia individualmente.  Los Contactos pueden también ser usuarios internos o externos que ingresan al sistema y tienen acceso a las funcionalidades a través de roles.  Un contacto puede también ser un tercero.</value>
+ </row>
+ <row id="53153" trl="Y">
+  <value column="Name" original="Lead">Cliente Potencial</value>
+  <value column="Description" original="Maintain Leads">Mantiene Clientes Potenciales</value>
+  <value column="Help" original="The Lead Window allows you to maintain Sales Leads.  These are unqualified contacts to who you wish to market to. ">Son contactos sin calificar con los que deseamos hacer negocios.</value>
+ </row>
+ <row id="53154" trl="Y">
+  <value column="Name" original="Sales Stage">Etapa de Ventas</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53155" trl="Y">
+  <value column="Name" original="Sales Opportunity">Oportunidad de Ventas</value>
+  <value column="Description" original="A potential sale">A potential sale</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53156" trl="Y">
+  <value column="Name" original="Sales Rep Dashboard">Consola Representante Ventas</value>
+  <value column="Description" original="The Sales Rep Dashboard provides a single location for managing sales opportunities">La Consola de Contenido provee una localización para administrar oportunidades de ventas</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53165" trl="Y">
+  <value column="Name" original="Customer">Cliente</value>
+  <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
  <row id="200000" trl="Y">
@@ -1993,6 +2028,31 @@ y otros</value>
   <value column="Name" original="Cost Adjustment">Ajuste Costo</value>
   <value column="Description" original="Enter Inventory Cost Adjustment">Ingrese Ajuste Costo Inventario</value>
   <value column="Help" original="The Cost Adjustment Window allow user to enter cost adjustment for products">La ventana Ajuste Costo permite al usuario ingresar ajustes de costos para productos</value>
+ </row>
+ <row id="200044" trl="Y">
+  <value column="Name" original="Tax Provider Configuration">Configuración Proveedor Impuestos</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200045" trl="Y">
+  <value column="Name" original="Tax Provider">Proveedor Impuestos</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200046" trl="Y">
+  <value column="Name" original="Address Validation Configuration">Configuración Validación Dirección</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200047" trl="Y">
+  <value column="Name" original="Address Validation">Validación Dirección</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200048" trl="Y">
+  <value column="Name" original="Address Transaction">Transacción Dirección</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
  </row>
  <row trl="Y" uuid="ecd46492-ebb1-410a-8627-44df151cdfbb">
   <value column="Name" original="TaxId Type">Tipo Identificación</value>

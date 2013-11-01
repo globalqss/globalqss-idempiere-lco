@@ -4165,7 +4165,7 @@ La medida debe soportar la información, sino es ignorada.</value>
   <value column="Help" original=""/>
  </row>
  <row id="50010" trl="Y">
-  <value column="Name" original="Edit">Editar</value>
+  <value column="Name" original="Dashboard Content">Contenido Consola</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
@@ -5508,6 +5508,18 @@ Imprimiendo:
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="53339" trl="Y">
+  <value column="Name" original="Chart">Gráfico</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53340" trl="Y">
+  <value column="Name" original="Datasource">Fuente Datos</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row id="53341" trl="Y">
   <value column="Name" original="Reconciliation">Conciliación</value>
   <value column="CommitWarning" original=""/>
@@ -5596,6 +5608,144 @@ Imprimiendo:
   <value column="Name" original="Type">Tipo</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53428" trl="Y">
+  <value column="Name" original="Contact">Contacto</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="The contact details">Los detalles del contacto</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53429" trl="Y">
+  <value column="Name" original="Lead">Cliente Potencial</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Any information about the contact">Cualquier información acerca del contacto</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53430" trl="Y">
+  <value column="Name" original="Sales Stage">Etapa Ventas</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53431" trl="Y">
+  <value column="Name" original="Opportunity">Oportunidad</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53432" trl="Y">
+  <value column="Name" original="Opportunity">Oportunidad</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53434" trl="Y">
+  <value column="Name" original="Dashboard">Consola</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Sales Rep dashboard">Consola Representante Ventas</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53435" trl="Y">
+  <value column="Name" original="Quote/Order">Cotización/Órden</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53436" trl="Y">
+  <value column="Name" original="Order Line">Línea Órden</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53437" trl="Y">
+  <value column="Name" original="Opportunities">Oportunidades</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Opportunities assigned to Sales Rep">Oportunidades asignadas al representante de ventas</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53438" trl="Y">
+  <value column="Name" original="Leads">Clientes Potenciales</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Leads assigned to Sales Rep">Clientes Potenciales asignados al representante de ventas</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53439" trl="Y">
+  <value column="Name" original="Opportunity">Oportunidad</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53452" trl="Y">
+  <value column="Name" original="Activity">Actividad</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53453" trl="Y">
+  <value column="Name" original="Activity">Actividad</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53454" trl="Y">
+  <value column="Name" original="Activity">Actividad</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Contact Activity">Actividad del Contacto</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53455" trl="Y">
+  <value column="Name" original="Activities">Actividades</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Sales Rep Activities">Actividades Representante de Ventas</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53456" trl="Y">
+  <value column="Name" original="Customer">Cliente</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Customer information">Información Cliente</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53457" trl="Y">
+  <value column="Name" original="Contacts">Contactos</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Customer Contacts">Contactos Cliente</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53458" trl="Y">
+  <value column="Name" original="Activities">Actividades</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Customer Contact Activities">Actividades Contacto Cliente</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53459" trl="Y">
+  <value column="Name" original="Locations">Direcciones</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Customer Locations">Direcciones Cliente</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53460" trl="Y">
+  <value column="Name" original="Contract Prices">Precios Contrato</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Customer specific prices">Precios específicos de cliente</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53461" trl="Y">
+  <value column="Name" original="Requests">Solicitudes</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Customer requests">Solicitudes de Cliente</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53462" trl="Y">
+  <value column="Name" original="Orders">Órdenes</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="53463" trl="Y">
+  <value column="Name" original="Opportunities">Oportunidades</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Opportunities">Oportunidades</value>
   <value column="Help" original=""/>
  </row>
  <row id="200000" trl="Y">
@@ -5970,6 +6120,30 @@ Imprimiendo:
   <value column="Description" original="Cities without Region">Ciudades sin Región</value>
   <value column="Help" original=""/>
  </row>
+ <row id="200096" trl="Y">
+  <value column="Name" original="Table Index">Índice Tabla</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200097" trl="Y">
+  <value column="Name" original="Index Column">Columna Índice</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200098" trl="Y">
+  <value column="Name" original="View Component">Componente Vista</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200099" trl="Y">
+  <value column="Name" original="View Column">Columna Vista</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row id="200102" trl="Y">
   <value column="Name" original="Cost Adjustment">Ajuste Costo</value>
   <value column="CommitWarning" original=""/>
@@ -5978,6 +6152,54 @@ Imprimiendo:
  </row>
  <row id="200103" trl="Y">
   <value column="Name" original="Cost Adjustment Line">Línea Ajuste Costo</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200105" trl="Y">
+  <value column="Name" original="Tax Provider Configuration">Configuración Proveedor Impuestos</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200106" trl="Y">
+  <value column="Name" original="Tax Provider">Proveedor Impuestos</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200107" trl="Y">
+  <value column="Name" original="Address Validation">Validación Dirección</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200108" trl="Y">
+  <value column="Name" original="Address Validation">Validación Dirección</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200109" trl="Y">
+  <value column="Name" original="Estimated Landed Cost">Costo Adicional Estimado</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200110" trl="Y">
+  <value column="Name" original="Estimated Landed Cost Allocation">Asignación Costo Adicional Estimado</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200111" trl="Y">
+  <value column="Name" original="Address Transaction">Transacción Dirección</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200112" trl="Y">
+  <value column="Name" original="Dashboard Content Access">Acceso Consola Contenido</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original=""/>
   <value column="Help" original=""/>

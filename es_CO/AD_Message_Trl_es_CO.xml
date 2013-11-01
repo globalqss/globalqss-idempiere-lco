@@ -6258,12 +6258,104 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgText" original="Save Column Width">Guardar Ancho Columnas</value>
   <value column="MsgTip" original=""/>
  </row>
+ <row id="200187" trl="Y">
+  <value column="MsgText" original="Neither index nor unique constraint with {0}">Ni índice ni restricción de unicidad con {0}</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200188" trl="Y">
+  <value column="MsgText" original="Not an active database view">No es una vista activa de base de datos</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200189" trl="Y">
+  <value column="MsgText" original="No view components specified">No hay componentes de vista especificados</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200190" trl="Y">
+  <value column="MsgText" original="No view columns specified">No hay columnas de vista especificadas</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200191" trl="Y">
+  <value column="MsgText" original="Failed to create or replace view">Falló la creación o reemplazo de la vista</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200192" trl="Y">
+  <value column="MsgText" original="Created or replaced view successfully">Vista creada o reemplazada exitosamente</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200194" trl="Y">
+  <value column="MsgText" original="No index columns specified">No hay columnas de índice especificadas</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200195" trl="Y">
+  <value column="MsgText" original="Failed to create index">Falló la creación del índice</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200196" trl="Y">
+  <value column="MsgText" original="Created index succesfully">Índice creado exitosamente</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200197" trl="Y">
+  <value column="MsgText" original="Failed to modify index">Falló la modificación del índice</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200198" trl="Y">
+  <value column="MsgText" original="Modified index successfully">Índice modificado exitosamente</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200199" trl="Y">
+  <value column="MsgText" original="No changes to the index">No hay cambios al índice</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200201" trl="Y">
+  <value column="MsgText" original="Processed table: {0}, Processed index: {1}, Error: {2}">Tabla procesada: {0}, índice procesado: {1}, Error: {2}</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200202" trl="Y">
+  <value column="MsgText" original="Process table: ">Procesa tabla: </value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200203" trl="Y">
+  <value column="MsgText" original="Create table index: ">Crea índice de tabla: </value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200204" trl="Y">
+  <value column="MsgText" original="Validate table index: ">Valida índice de tabla: </value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200205" trl="Y">
+  <value column="MsgText" original="Processed table: {0}, Processed foreign key: {1}, Error: {2}">Tabla procesada: {0}, llave foránea procesada: {1}, Error: {2}</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200206" trl="Y">
+  <value column="MsgText" original="Process table: ">Procesa tabla: </value>
+  <value column="MsgTip" original=""/>
+ </row>
  <row id="200207" trl="Y">
   <value column="MsgText" original="There are records that haven't been saved yet. ">Hay registros pendientes de guardar. </value>
   <value column="MsgTip" original="Do you still want to proceed?">¿Desea continuar?</value>
  </row>
  <row id="200208" trl="Y">
   <value column="MsgText" original="You're trying to close this tab.">Intenta cerrar esta pestaña.</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200209" trl="Y">
+  <value column="MsgText" original="Process column: ">Procesa columna: </value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200210" trl="Y">
+  <value column="MsgText" original="Foreign key already exists: ">Llave foránea ya existe: </value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200211" trl="Y">
+  <value column="MsgText" original="Manage Gadgets">Maneja artefactos</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200212" trl="Y">
+  <value column="MsgText" original="Dashboard Gadgets">Artefactos Consola</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200215" trl="Y">
+  <value column="MsgText" original="Show">Mostrar</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="200216" trl="Y">
@@ -6282,8 +6374,24 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgText" original="Only one @C_Tax_ID@ per @C_TaxCategory_ID@ can be marked as Default!">Sólo un @C_Tax_ID@ por @C_TaxCategory_ID@ puede marcarse como Predeterminado</value>
   <value column="MsgTip" original=""/>
  </row>
+ <row id="200221" trl="Y">
+  <value column="MsgText" original="No tax provider">No hay proveedor de impuestos</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200222" trl="Y">
+  <value column="MsgText" original="No address validation">No validación dirección</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200223" trl="Y">
+  <value column="MsgText" original="Address not processed">Dirección no procesada</value>
+  <value column="MsgTip" original=""/>
+ </row>
  <row id="200224" trl="Y">
   <value column="MsgText" original="Open in Grid Mode">Abrir en modo Grilla</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200226" trl="Y">
+  <value column="MsgText" original="Address validation call is not enabled for this country">Validación de dirección no está habilitada en este país</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="200230" trl="Y">
@@ -6300,6 +6408,10 @@ Por favor contacte al ADMINISTRADOR.</value>
  </row>
  <row id="200236" trl="Y">
   <value column="MsgText" original="(Drag and drop menu item here)">(Arrastre un elemento del menú aquí)</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200238" trl="Y">
+  <value column="MsgText" original="There are unsaved changes - are you sure to close?">Hay cambios sin guardar.  ¿Seguro desea cerrar?</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="520010" trl="Y">
