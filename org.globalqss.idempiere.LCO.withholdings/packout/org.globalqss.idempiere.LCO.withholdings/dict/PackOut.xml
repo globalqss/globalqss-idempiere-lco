@@ -63,141 +63,21 @@
     </AD_Val_Rule>
     <AD_Column type="table">
         <AD_Column_ID>2235</AD_Column_ID>
-        <IsSyncDatabase>Y</IsSyncDatabase>
-        <AD_Table_ID reference="id">260</AD_Table_ID>
-        <AD_Reference_Value_ID reference="id"/>
-        <AD_Client_ID>0</AD_Client_ID>
-        <AD_Org_ID>0</AD_Org_ID>
-        <SeqNoSelection/>
-        <Version>1</Version>
-        <ValueMax/>
-        <IsMandatory>true</IsMandatory>
-        <IsTranslated>false</IsTranslated>
-        <IsIdentifier>false</IsIdentifier>
-        <SeqNo/>
-        <ValueMin/>
-        <IsParent>false</IsParent>
-        <FieldLength>22</FieldLength>
-        <IsSelectionColumn>false</IsSelectionColumn>
-        <AD_Reference_ID reference="id">19</AD_Reference_ID>
-        <AD_Val_Rule_ID reference="uuid" reference-key="AD_Val_Rule">d0a1c40c-4540-4970-9816-1a821ea9a26c</AD_Val_Rule_ID>
-        <IsKey>false</IsKey>
-        <AD_Process_ID reference="id"/>
-        <ReadOnlyLogic/>
-        <IsAutocomplete>false</IsAutocomplete>
-        <IsAllowLogging>true</IsAllowLogging>
-        <MandatoryLogic/>
-        <FormatPattern/>
-        <AD_Column_UU>2552294c-1370-4e01-bc2d-2223e4a1fb9b</AD_Column_UU>
-        <IsUpdateable>true</IsUpdateable>
-        <Callout/>
         <ColumnName>C_Tax_ID</ColumnName>
-        <Description>Tax identifier</Description>
-        <ColumnSQL/>
-        <DefaultValue/>
-        <Help>The Tax indicates the type of tax used in document line.</Help>
-        <Name>Tax</Name>
-        <IsAllowCopy>true</IsAllowCopy>
-        <IsActive>true</IsActive>
-        <IsToolbarButton>false</IsToolbarButton>
-        <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
         <EntityType>QSS_LCO</EntityType>
-        <VFormat/>
-        <IsEncrypted>N</IsEncrypted>
-        <AD_Element_ID reference="id">213</AD_Element_ID>
-        <IsSecure>false</IsSecure>
+        <AD_Val_Rule_ID reference="uuid" reference-key="AD_Val_Rule">d0a1c40c-4540-4970-9816-1a821ea9a26c</AD_Val_Rule_ID>
     </AD_Column>
     <AD_Column type="table">
         <AD_Column_ID>3848</AD_Column_ID>
-        <IsSyncDatabase>Y</IsSyncDatabase>
-        <AD_Table_ID reference="id">333</AD_Table_ID>
-        <AD_Reference_Value_ID reference="id"/>
-        <AD_Client_ID>0</AD_Client_ID>
-        <AD_Org_ID>0</AD_Org_ID>
-        <SeqNoSelection/>
-        <Version>1</Version>
-        <ValueMax/>
-        <IsMandatory>true</IsMandatory>
-        <IsTranslated>false</IsTranslated>
-        <IsIdentifier>false</IsIdentifier>
-        <SeqNo/>
-        <ValueMin/>
-        <IsParent>false</IsParent>
-        <FieldLength>22</FieldLength>
-        <IsSelectionColumn>false</IsSelectionColumn>
-        <AD_Reference_ID reference="id">19</AD_Reference_ID>
-        <AD_Val_Rule_ID reference="uuid" reference-key="AD_Val_Rule">d0a1c40c-4540-4970-9816-1a821ea9a26c</AD_Val_Rule_ID>
-        <IsKey>false</IsKey>
-        <AD_Process_ID reference="id"/>
-        <ReadOnlyLogic/>
-        <IsAutocomplete>false</IsAutocomplete>
-        <IsAllowLogging>true</IsAllowLogging>
-        <MandatoryLogic/>
-        <FormatPattern/>
-        <AD_Column_UU>8c1c2ea6-353a-4b1d-829e-167d721ff3d2</AD_Column_UU>
-        <IsUpdateable>true</IsUpdateable>
-        <Callout>org.compiere.model.CalloutInvoice.amt</Callout>
         <ColumnName>C_Tax_ID</ColumnName>
-        <Description>Tax identifier</Description>
-        <ColumnSQL/>
-        <DefaultValue/>
-        <Help>The Tax indicates the type of tax used in document line.</Help>
-        <Name>Tax</Name>
-        <IsAllowCopy>true</IsAllowCopy>
-        <IsActive>true</IsActive>
-        <IsToolbarButton>false</IsToolbarButton>
-        <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
         <EntityType>QSS_LCO</EntityType>
-        <VFormat/>
-        <IsEncrypted>N</IsEncrypted>
-        <AD_Element_ID reference="id">213</AD_Element_ID>
-        <IsSecure>false</IsSecure>
+        <AD_Val_Rule_ID reference="uuid" reference-key="AD_Val_Rule">d0a1c40c-4540-4970-9816-1a821ea9a26c</AD_Val_Rule_ID>
     </AD_Column>
     <AD_Column type="table">
         <AD_Column_ID>13410</AD_Column_ID>
-        <IsSyncDatabase>Y</IsSyncDatabase>
-        <AD_Table_ID reference="id">768</AD_Table_ID>
-        <AD_Reference_Value_ID reference="id"/>
-        <AD_Client_ID>0</AD_Client_ID>
-        <AD_Org_ID>0</AD_Org_ID>
-        <SeqNoSelection/>
-        <Version>1</Version>
-        <ValueMax/>
-        <IsMandatory>true</IsMandatory>
-        <IsTranslated>false</IsTranslated>
-        <IsIdentifier>false</IsIdentifier>
-        <SeqNo>0</SeqNo>
-        <ValueMin/>
-        <IsParent>false</IsParent>
-        <FieldLength>22</FieldLength>
-        <IsSelectionColumn>false</IsSelectionColumn>
-        <AD_Reference_ID reference="id">19</AD_Reference_ID>
-        <AD_Val_Rule_ID reference="uuid" reference-key="AD_Val_Rule">d0a1c40c-4540-4970-9816-1a821ea9a26c</AD_Val_Rule_ID>
-        <IsKey>false</IsKey>
-        <AD_Process_ID reference="id"/>
-        <ReadOnlyLogic/>
-        <IsAutocomplete>false</IsAutocomplete>
-        <IsAllowLogging>true</IsAllowLogging>
-        <MandatoryLogic/>
-        <FormatPattern/>
-        <AD_Column_UU>4d5c29f5-a1d2-4d79-8d68-9b9782f33253</AD_Column_UU>
-        <IsUpdateable>true</IsUpdateable>
-        <Callout>org.compiere.model.CalloutInvoiceBatch.amt</Callout>
         <ColumnName>C_Tax_ID</ColumnName>
-        <Description>Tax identifier</Description>
-        <ColumnSQL/>
-        <DefaultValue/>
-        <Help>The Tax indicates the type of tax used in document line.</Help>
-        <Name>Tax</Name>
-        <IsAllowCopy>true</IsAllowCopy>
-        <IsActive>true</IsActive>
-        <IsToolbarButton>false</IsToolbarButton>
-        <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
         <EntityType>QSS_LCO</EntityType>
-        <VFormat/>
-        <IsEncrypted>N</IsEncrypted>
-        <AD_Element_ID reference="id">213</AD_Element_ID>
-        <IsSecure>false</IsSecure>
+        <AD_Val_Rule_ID reference="uuid" reference-key="AD_Val_Rule">d0a1c40c-4540-4970-9816-1a821ea9a26c</AD_Val_Rule_ID>
     </AD_Column>
     <AD_Element type="table">
         <AD_Client_ID>0</AD_Client_ID>
@@ -485,60 +365,6 @@
             <Help/>
             <Description/>
             <Name>CIIU</Name>
-            <AD_Language>es_CO</AD_Language>
-            <IsActive>true</IsActive>
-            <IsTranslated>true</IsTranslated>
-        </AD_Field_Trl>
-    </AD_Field>
-    <AD_Field type="table">
-        <AD_Field_ID>56981</AD_Field_ID>
-        <AD_Table_ID reference="id">155</AD_Table_ID>
-        <AD_Tab_ID reference="id">143</AD_Tab_ID>
-        <AD_Client_ID>0</AD_Client_ID>
-        <AD_Org_ID>0</AD_Org_ID>
-        <SortNo/>
-        <IsEncrypted>false</IsEncrypted>
-        <DisplayLength/>
-        <IsSameLine>false</IsSameLine>
-        <IsHeading>false</IsHeading>
-        <AD_Column_ID reference="id">57227</AD_Column_ID>
-        <SeqNo>70</SeqNo>
-        <IsCentrallyMaintained>true</IsCentrallyMaintained>
-        <IsReadOnly>false</IsReadOnly>
-        <Help>The Data Replication Strategy determines what and how tables are replicated </Help>
-        <AD_FieldGroup_ID reference="id"/>
-        <ObscureType/>
-        <DisplayLogic/>
-        <AD_Reference_ID reference="id"/>
-        <IsMandatory/>
-        <EntityType>EE05</EntityType>
-        <AD_Reference_Value_ID reference="id"/>
-        <AD_Val_Rule_ID reference="id"/>
-        <Included_Tab_ID reference="id"/>
-        <Description>Data Replication Strategy</Description>
-        <Name>Replication Strategy</Name>
-        <AD_Field_UU>d7c5affa-afd7-4a58-bc65-91357d64340b</AD_Field_UU>
-        <IsDisplayed>true</IsDisplayed>
-        <IsFieldOnly>false</IsFieldOnly>
-        <DefaultValue/>
-        <IsAllowCopy/>
-        <IsActive>true</IsActive>
-        <IsDisplayedGrid>true</IsDisplayedGrid>
-        <SeqNoGrid>70</SeqNoGrid>
-        <XPosition>1</XPosition>
-        <IsQuickEntry>false</IsQuickEntry>
-        <MandatoryLogic/>
-        <IsUpdateable/>
-        <IsAlwaysUpdateable/>
-        <ReadOnlyLogic/>
-        <IsToolbarButton/>
-        <ColumnSpan>2</ColumnSpan>
-        <NumLines>1</NumLines>
-        <IsAdvancedField>true</IsAdvancedField>
-        <AD_Field_Trl type="translation">
-            <Help>La estrategia de la réplica de los datos es determinada, lo que y cómo se repliegan las tablas.</Help>
-            <Description>Estrategia de replicación de los datos.</Description>
-            <Name>Estrategía de Replicación</Name>
             <AD_Language>es_CO</AD_Language>
             <IsActive>true</IsActive>
             <IsTranslated>true</IsTranslated>
