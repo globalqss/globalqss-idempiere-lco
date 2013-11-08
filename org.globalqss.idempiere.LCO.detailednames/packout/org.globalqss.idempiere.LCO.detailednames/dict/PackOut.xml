@@ -142,95 +142,9 @@
     </AD_Message>
     <AD_Column type="table">
         <AD_Column_ID>2902</AD_Column_ID>
-        <IsSyncDatabase>Y</IsSyncDatabase>
-        <AD_Table_ID reference="id">291</AD_Table_ID>
-        <AD_Reference_Value_ID reference="id"/>
-        <AD_Client_ID>0</AD_Client_ID>
-        <AD_Org_ID>0</AD_Org_ID>
-        <SeqNoSelection/>
-        <Version>0</Version>
-        <ValueMax/>
-        <IsMandatory>true</IsMandatory>
-        <IsTranslated>false</IsTranslated>
-        <IsIdentifier>true</IsIdentifier>
-        <SeqNo>1</SeqNo>
-        <ValueMin/>
-        <IsParent>false</IsParent>
-        <FieldLength>60</FieldLength>
-        <IsSelectionColumn>false</IsSelectionColumn>
-        <AD_Reference_ID reference="id">10</AD_Reference_ID>
-        <AD_Val_Rule_ID reference="id"/>
-        <IsKey>false</IsKey>
-        <AD_Process_ID reference="id"/>
-        <ReadOnlyLogic>@IsDetailedNames@=Y</ReadOnlyLogic>
-        <IsAutocomplete>false</IsAutocomplete>
-        <IsAllowLogging>true</IsAllowLogging>
-        <MandatoryLogic/>
-        <FormatPattern/>
-        <AD_Column_UU>f4ab1a70-8fd4-471e-a8da-0acd0b998c4b</AD_Column_UU>
-        <IsUpdateable>true</IsUpdateable>
-        <Callout/>
         <ColumnName>Name</ColumnName>
-        <Description>Alphanumeric identifier of the entity</Description>
-        <ColumnSQL/>
-        <DefaultValue/>
-        <Help>The name of an entity (record) is used as an default search option in addition to the search key. The name is up to 60 characters in length.</Help>
-        <Name>Name</Name>
-        <IsAllowCopy>true</IsAllowCopy>
-        <IsActive>true</IsActive>
-        <IsToolbarButton>false</IsToolbarButton>
-        <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
+        <ReadOnlyLogic>@IsDetailedNames@=Y</ReadOnlyLogic>
         <EntityType>QSS_LCO</EntityType>
-        <VFormat/>
-        <IsEncrypted>N</IsEncrypted>
-        <AD_Element_ID reference="id">469</AD_Element_ID>
-        <IsSecure>false</IsSecure>
-    </AD_Column>
-    <AD_Column type="table">
-        <AD_Column_ID>2909</AD_Column_ID>
-        <IsSyncDatabase>Y</IsSyncDatabase>
-        <AD_Table_ID reference="id">291</AD_Table_ID>
-        <AD_Reference_Value_ID reference="id"/>
-        <AD_Client_ID>0</AD_Client_ID>
-        <AD_Org_ID>0</AD_Org_ID>
-        <SeqNoSelection/>
-        <Version>0</Version>
-        <ValueMax/>
-        <IsMandatory>false</IsMandatory>
-        <IsTranslated>false</IsTranslated>
-        <IsIdentifier>false</IsIdentifier>
-        <SeqNo/>
-        <ValueMin/>
-        <IsParent>false</IsParent>
-        <FieldLength>20</FieldLength>
-        <IsSelectionColumn>false</IsSelectionColumn>
-        <AD_Reference_ID reference="id">10</AD_Reference_ID>
-        <AD_Val_Rule_ID reference="id"/>
-        <IsKey>false</IsKey>
-        <AD_Process_ID reference="id"/>
-        <ReadOnlyLogic/>
-        <IsAutocomplete>false</IsAutocomplete>
-        <IsAllowLogging>true</IsAllowLogging>
-        <MandatoryLogic/>
-        <FormatPattern/>
-        <AD_Column_UU>a6a780ca-bd1f-42e3-8efc-609881f15f47</AD_Column_UU>
-        <IsUpdateable>true</IsUpdateable>
-        <Callout/>
-        <ColumnName>TaxID</ColumnName>
-        <Description>Tax Identification</Description>
-        <ColumnSQL/>
-        <DefaultValue/>
-        <Help>The Tax ID field identifies the legal Identification number of this Entity.</Help>
-        <Name>Tax ID</Name>
-        <IsAllowCopy>true</IsAllowCopy>
-        <IsActive>true</IsActive>
-        <IsToolbarButton>false</IsToolbarButton>
-        <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
-        <EntityType>QSS_LCO</EntityType>
-        <VFormat/>
-        <IsEncrypted>N</IsEncrypted>
-        <AD_Element_ID reference="id">590</AD_Element_ID>
-        <IsSecure>false</IsSecure>
     </AD_Column>
     <AD_Element type="table">
         <AD_Client_ID>0</AD_Client_ID>
@@ -985,49 +899,9 @@
     </AD_Field>
     <AD_Field type="table">
         <AD_Field_ID>2155</AD_Field_ID>
-        <AD_Table_ID reference="id">291</AD_Table_ID>
-        <AD_Tab_ID reference="id">220</AD_Tab_ID>
-        <AD_Client_ID>0</AD_Client_ID>
-        <AD_Org_ID>0</AD_Org_ID>
-        <SortNo>0</SortNo>
-        <IsEncrypted>false</IsEncrypted>
-        <DisplayLength>20</DisplayLength>
-        <IsSameLine>false</IsSameLine>
-        <IsHeading>false</IsHeading>
-        <AD_Column_ID reference="id">2909</AD_Column_ID>
-        <SeqNo>36</SeqNo>
-        <IsCentrallyMaintained>true</IsCentrallyMaintained>
-        <IsReadOnly>false</IsReadOnly>
-        <Help>The Tax ID field identifies the legal Identification number of this Entity.</Help>
-        <AD_FieldGroup_ID reference="id"/>
-        <ObscureType/>
-        <DisplayLogic/>
-        <AD_Reference_ID reference="id"/>
-        <IsMandatory/>
         <EntityType>QSS_LCO</EntityType>
-        <AD_Reference_Value_ID reference="id"/>
-        <AD_Val_Rule_ID reference="id"/>
-        <Included_Tab_ID reference="id"/>
-        <Description>Tax Identification</Description>
-        <Name>Tax ID</Name>
-        <AD_Field_UU>b3e94cc7-8ef6-43e3-923d-980d2ef3bd3b</AD_Field_UU>
-        <IsDisplayed>true</IsDisplayed>
-        <IsFieldOnly>false</IsFieldOnly>
-        <DefaultValue/>
-        <IsAllowCopy/>
-        <IsActive>true</IsActive>
-        <IsDisplayedGrid>true</IsDisplayedGrid>
-        <SeqNoGrid>150</SeqNoGrid>
+        <SeqNo>36</SeqNo>
         <XPosition>4</XPosition>
-        <IsQuickEntry>false</IsQuickEntry>
-        <MandatoryLogic/>
-        <IsUpdateable/>
-        <IsAlwaysUpdateable/>
-        <ReadOnlyLogic/>
-        <IsToolbarButton/>
-        <ColumnSpan>2</ColumnSpan>
-        <NumLines>1</NumLines>
-        <IsAdvancedField>false</IsAdvancedField>
         <AD_Field_Trl type="translation">
             <Help>Número de Identificación Tributaria es el número de identificación gubernamental de esta entidad</Help>
             <Description>Número de Identificación Tributaria</Description>
