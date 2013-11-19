@@ -1,19 +1,28 @@
-/******************************************************************************
- * Product: iDempiere ERP & CRM Smart Business Solution                       *
- * Copyright (C) 1999-2006 ComPiere, Inc. All Rights Reserved.                *
- * This program is free software; you can redistribute it and/or modify it    *
- * under the terms version 2 of the GNU General Public License as published   *
- * by the Free Software Foundation. This program is distributed in the hope   *
- * that it will be useful, but WITHOUT ANY WARRANTY; without even the implied *
- * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.           *
- * See the GNU General Public License for more details.                       *
- * You should have received a copy of the GNU General Public License along    *
- * with this program; if not, write to the Free Software Foundation, Inc.,    *
- * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.                     *
- * For the text or an alternative of this public license, you may reach us    *
- * ComPiere, Inc., 2620 Augustine Dr. #245, Santa Clara, CA 95054, USA        *
- * or via info@compiere.org or http://www.compiere.org/license.html           *
- *****************************************************************************/
+/**********************************************************************
+* This file is part of iDempiere ERP Open Source                      *
+* http://www.idempiere.org                                            *
+*                                                                     *
+* Copyright (C) Contributors                                          *
+*                                                                     *
+* This program is free software; you can redistribute it and/or       *
+* modify it under the terms of the GNU General Public License         *
+* as published by the Free Software Foundation; either version 2      *
+* of the License, or (at your option) any later version.              *
+*                                                                     *
+* This program is distributed in the hope that it will be useful,     *
+* but WITHOUT ANY WARRANTY; without even the implied warranty of      *
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the        *
+* GNU General Public License for more details.                        *
+*                                                                     *
+* You should have received a copy of the GNU General Public License   *
+* along with this program; if not, write to the Free Software         *
+* Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,          *
+* MA 02110-1301, USA.                                                 *
+*                                                                     *
+* Contributors:                                                       *
+* - Carlos Ruiz - globalqss                                           *
+**********************************************************************/
+
 package org.globalqss.model;
 
 import java.math.BigDecimal;
@@ -24,7 +33,9 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 
 import org.adempiere.base.event.AbstractEventHandler;
+import org.adempiere.base.event.IEventManager;
 import org.adempiere.base.event.IEventTopics;
+import org.adempiere.base.event.LoginEventData;
 import org.compiere.acct.Doc;
 import org.compiere.acct.DocLine;
 import org.compiere.acct.DocTax;
@@ -40,6 +51,7 @@ import org.compiere.model.MInvoicePaySchedule;
 import org.compiere.model.MInvoiceTax;
 import org.compiere.model.MPayment;
 import org.compiere.model.MPaymentAllocate;
+import org.compiere.model.MSysConfig;
 import org.compiere.model.PO;
 import org.compiere.util.CLogger;
 import org.compiere.util.DB;
@@ -49,20 +61,21 @@ import org.osgi.service.event.Event;
 
 /**
  *	Validator or Localization Colombia (Withholdings)
- *	
- *  @author Carlos Ruiz - globalqss - Quality Systems & Solutions - http://globalqss.com 
- *	@version $Id: LCO_Validator.java,v 1.4 2007/05/13 06:53:26 cruiz Exp $
+ *
+ *  @author Carlos Ruiz - globalqss - Quality Systems & Solutions - http://globalqss.com
  */
 public class LCO_ValidatorWH extends AbstractEventHandler
 {
 	/**	Logger			*/
 	private static CLogger log = CLogger.getCLogger(LCO_ValidatorWH.class);
-	
+
 	/**
 	 *	Initialize Validation
 	 */
 	@Override
 	protected void initialize() {
+		log.warning("");
+
 		//	Tables to be monitored
 		registerTableEvent(IEventTopics.PO_BEFORE_CHANGE, MInvoice.Table_Name);
 		registerTableEvent(IEventTopics.PO_BEFORE_NEW, MInvoiceLine.Table_Name);
@@ -81,6 +94,8 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 		registerTableEvent(IEventTopics.DOC_AFTER_VOID, MAllocationHdr.Table_Name);
 		registerTableEvent(IEventTopics.DOC_AFTER_REVERSECORRECT, MAllocationHdr.Table_Name);
 		registerTableEvent(IEventTopics.DOC_AFTER_REVERSEACCRUAL, MAllocationHdr.Table_Name);
+
+		registerEvent(IEventTopics.AFTER_LOGIN);
 	}	//	initialize
 
     /**
@@ -90,8 +105,21 @@ public class LCO_ValidatorWH extends AbstractEventHandler
      */
 	@Override
 	protected void doHandleEvent(Event event) {
-		PO po = getPO(event);
 		String type = event.getTopic();
+
+		if (type.equals(IEventTopics.AFTER_LOGIN)) {
+			log.info("Type: " + type);
+			// on login set context variable #LCO_USE_WITHHOLDINGS
+			LoginEventData loginData = (LoginEventData) event.getProperty(IEventManager.EVENT_DATA);
+			boolean useWH = MSysConfig.getBooleanValue("LCO_USE_WITHHOLDINGS", true, loginData.getAD_Client_ID());
+			Env.setContext(Env.getCtx(), "#LCO_USE_WITHHOLDINGS", useWH);
+			return;
+		}
+
+		if (! MSysConfig.getBooleanValue("LCO_USE_WITHHOLDINGS", true, Env.getAD_Client_ID(Env.getCtx())))
+			return;
+
+		PO po = getPO(event);
 		log.info(po.get_TableName() + " Type: "+type);
 		String msg;
 
@@ -122,7 +150,7 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 			if (lwc.isCalcOnInvoice() && lwc.isCalcOnPayment())
 				lwc.setIsCalcOnPayment(false);
 		}
-		
+
 		// Document Events
 		// before preparing a reversal invoice add the invoice withholding taxes
 		if (po.get_TableName().equals(MInvoice.Table_Name)
@@ -130,10 +158,10 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 			MInvoice inv = (MInvoice) po;
 			if (inv.isReversal()) {
 				int invid = inv.getReversal_ID();
-				
+
 				if (invid > 0) {
 					MInvoice invreverted = new MInvoice(inv.getCtx(), invid, inv.get_TrxName());
-					String sql = 
+					String sql =
 						  "SELECT LCO_InvoiceWithholding_ID "
 						 + " FROM LCO_InvoiceWithholding "
 						+ " WHERE C_Invoice_ID = ? "
@@ -178,7 +206,7 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 				&& type.equals(IEventTopics.DOC_BEFORE_PREPARE)) {
 			MInvoice inv = (MInvoice) po;
 			/* @TODO: Change this to IsReversal & Reversal_ID on 3.5 */
-			if (inv.getDescription() != null 
+			if (inv.getDescription() != null
 					&& inv.getDescription().contains("{->")
 					&& inv.getDescription().endsWith(")")) {
 				// don't validate this for autogenerated reversal invoices
@@ -192,7 +220,7 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 							// document type configured to compel generation of withholdings
 							throw new RuntimeException(Msg.getMsg(inv.getCtx(), "LCO_WithholdingNotGenerated"));
 						}
-						
+
 						if (genwh.equals("A")) {
 							// document type configured to generate withholdings automatically
 							LCO_MInvoice lcoinv = new LCO_MInvoice(inv.getCtx(), inv.getC_Invoice_ID(), inv.get_TrxName());
@@ -217,46 +245,46 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 				throw new RuntimeException(msg);
 		}
 
-		// before completing the payment - validate that writeoff amount must be greater than sum of payment withholdings  
+		// before completing the payment - validate that writeoff amount must be greater than sum of payment withholdings
 		if (po.get_TableName().equals(MPayment.Table_Name) && type.equals(IEventTopics.DOC_BEFORE_COMPLETE)) {
 			msg = validateWriteOffVsPaymentWithholdings((MPayment) po);
 			if (msg != null)
 				throw new RuntimeException(msg);
 		}
 
-		// after completing the allocation - complete the payment withholdings  
+		// after completing the allocation - complete the payment withholdings
 		if (po.get_TableName().equals(MAllocationHdr.Table_Name) && type.equals(IEventTopics.DOC_AFTER_COMPLETE)) {
 			msg = completePaymentWithholdings((MAllocationHdr) po);
 			if (msg != null)
 				throw new RuntimeException(msg);
 		}
 
-		// before posting the allocation - post the payment withholdings vs writeoff amount  
+		// before posting the allocation - post the payment withholdings vs writeoff amount
 		if (po.get_TableName().equals(MAllocationHdr.Table_Name) && type.equals(IEventTopics.DOC_BEFORE_POST)) {
 			msg = accountingForInvoiceWithholdingOnPayment((MAllocationHdr) po);
 			if (msg != null)
 				throw new RuntimeException(msg);
 		}
 
-		// after completing the allocation - complete the payment withholdings  
+		// after completing the allocation - complete the payment withholdings
 		if (po.get_TableName().equals(MAllocationHdr.Table_Name)
-				&& (type.equals(IEventTopics.DOC_AFTER_VOID) || 
-					type.equals(IEventTopics.DOC_AFTER_REVERSECORRECT) || 
+				&& (type.equals(IEventTopics.DOC_AFTER_VOID) ||
+					type.equals(IEventTopics.DOC_AFTER_REVERSECORRECT) ||
 					type.equals(IEventTopics.DOC_AFTER_REVERSEACCRUAL))) {
 			msg = reversePaymentWithholdings((MAllocationHdr) po);
 			if (msg != null)
 				throw new RuntimeException(msg);
 		}
-		
+
 	}	//	doHandleEvent
-	
+
 	private String clearInvoiceWithholdingAmtFromInvoice(MInvoice inv) {
 		// Clear invoice withholding amount
-		
+
 		if (inv.is_ValueChanged("AD_Org_ID")
 				|| inv.is_ValueChanged(MInvoice.COLUMNNAME_C_BPartner_ID)
 				|| inv.is_ValueChanged(MInvoice.COLUMNNAME_C_DocTypeTarget_ID)) {
-			
+
 			boolean thereAreCalc;
 			try {
 				thereAreCalc = thereAreCalc(inv);
@@ -264,7 +292,7 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 				log.log(Level.SEVERE, "Error looking for calc on invoice rules", e);
 				return "Error looking for calc on invoice rules";
 			}
-			
+
 			BigDecimal curWithholdingAmt = (BigDecimal) inv.get_Value("WithholdingAmt");
 			if (thereAreCalc) {
 				if (curWithholdingAmt != null) {
@@ -277,23 +305,23 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 			}
 
 		}
-		
+
 		return null;
 	}
 
 	private String clearInvoiceWithholdingAmtFromInvoiceLine(MInvoiceLine invline, String type) {
-		
+
 		if (   type.equals(IEventTopics.PO_BEFORE_NEW)
 			|| type.equals(IEventTopics.PO_BEFORE_DELETE)
-			|| (   type.equals(IEventTopics.PO_BEFORE_CHANGE) 
+			|| (   type.equals(IEventTopics.PO_BEFORE_CHANGE)
 				&& (   invline.is_ValueChanged("LineNetAmt")
 					|| invline.is_ValueChanged("M_Product_ID")
 					|| invline.is_ValueChanged("C_Charge_ID")
-					|| invline.is_ValueChanged("IsActive") 
+					|| invline.is_ValueChanged("IsActive")
 					|| invline.is_ValueChanged("C_Tax_ID")
 					)
 				)
-			) 
+			)
 		{
 			// Clear invoice withholding amount
 			MInvoice inv = invline.getParent();
@@ -319,13 +347,13 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 				}
 			}
 		}
-		
+
 		return null;
 	}
 
 	private boolean thereAreCalc(MInvoice inv) throws SQLException {
 		boolean thereAreCalc = false;
-		String sqlwccoi = 
+		String sqlwccoi =
 			"SELECT 1 "
 			+ "  FROM LCO_WithholdingType wt, LCO_WithholdingCalc wc "
 			+ " WHERE wt.LCO_WithholdingType_ID = wc.LCO_WithholdingType_ID";
@@ -365,7 +393,7 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 				return Msg.getMsg(pay.getCtx(), "LCO_WriteOffLowerThanWithholdings");
 		} else {
 			// validate every C_PaymentAllocate
-			String sql = 
+			String sql =
 				"SELECT C_PaymentAllocate_ID " +
 				"FROM C_PaymentAllocate " +
 				"WHERE C_Payment_ID = ?";
@@ -411,7 +439,7 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 		for (int i = 0; i < als.length; i++) {
 			MAllocationLine al = als[i];
 			if (al.getC_Invoice_ID() > 0) {
-				String sql = 
+				String sql =
 					"SELECT LCO_InvoiceWithholding_ID " +
 					"FROM LCO_InvoiceWithholding " +
 					"WHERE C_Invoice_ID = ? AND " +
@@ -452,7 +480,7 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 		for (int i = 0; i < als.length; i++) {
 			MAllocationLine al = als[i];
 			if (al.getC_Invoice_ID() > 0) {
-				String sql = 
+				String sql =
 					"SELECT LCO_InvoiceWithholding_ID " +
 					"FROM LCO_InvoiceWithholding " +
 					"WHERE C_Invoice_ID = ? AND " +
@@ -492,23 +520,23 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 		// (Write off) vs (invoice withholding where iscalconpayment=Y)
 		// 20070807 - globalqss - instead of adding a new WriteOff post, find the
 		//  current WriteOff and subtract from the posting
-		
+
 		Doc doc = ah.getDoc();
-		
+
 		ArrayList<Fact> facts = doc.getFacts();
 		// one fact per acctschema
 		for (int i = 0; i < facts.size(); i++)
 		{
 			Fact fact = facts.get(i);
 			MAcctSchema as = fact.getAcctSchema();
-			
+
 			MAllocationLine[] alloc_lines = ah.getLines(false);
 			for (int j = 0; j < alloc_lines.length; j++) {
 				BigDecimal tottax = new BigDecimal(0);
-				
+
 				MAllocationLine alloc_line = alloc_lines[j];
 				doc.setC_BPartner_ID(alloc_line.getC_BPartner_ID());
-				
+
 				int inv_id = alloc_line.getC_Invoice_ID();
 				if (inv_id <= 0)
 					continue;
@@ -516,7 +544,7 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 				invoice = new MInvoice (ah.getCtx(), alloc_line.getC_Invoice_ID(), ah.get_TrxName());
 				if (invoice == null || invoice.getC_Invoice_ID() == 0)
 					continue;
-				String sql = 
+				String sql =
 					  "SELECT i.C_Tax_ID, NVL(SUM(i.TaxBaseAmt),0) AS TaxBaseAmt, NVL(SUM(i.TaxAmt),0) AS TaxAmt, t.Name, t.Rate, t.IsSalesTax "
 					 + " FROM LCO_InvoiceWithholding i, C_Tax t "
 					+ " WHERE i.C_Invoice_ID = ? AND " +
@@ -541,10 +569,10 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 						String name = rs.getString(4);
 						BigDecimal rate = rs.getBigDecimal(5);
 						boolean salesTax = rs.getString(6).equals("Y") ? true : false;
-						
-						DocTax taxLine = new DocTax(tax_ID, name, rate, 
+
+						DocTax taxLine = new DocTax(tax_ID, name, rate,
 								taxBaseAmt, amount, salesTax);
-						
+
 						if (amount != null && amount.signum() != 0)
 						{
 							FactLine tl = null;
@@ -567,7 +595,7 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 					DB.close(rs, pstmt);
 					rs = null; pstmt = null;
 				}
-				
+
 				//	Write off		DR
 				if (Env.ZERO.compareTo(tottax) != 0)
 				{
@@ -614,9 +642,9 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 						if (fl != null)
 							fl.setAD_Org_ID(ah.getAD_Org_ID());
 					}
-				
+
 				}
-				
+
 			}
 
 		}
@@ -625,7 +653,7 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 	}
 
 	private String completeInvoiceWithholding(MInvoice inv) {
-		
+
 		// Fill DateAcct and DateTrx with final dates from Invoice
 		String upd_dates =
 			"UPDATE LCO_InvoiceWithholding "
@@ -656,7 +684,7 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 
 	private String translateWithholdingToTaxes(MInvoice inv) {
 		BigDecimal sumit = new BigDecimal(0);
-		
+
 		MDocType dt = new MDocType(inv.getCtx(), inv.getC_DocTypeTarget_ID(), inv.get_TrxName());
 		String genwh = dt.get_ValueAsString("GenerateWithholding");
 		if (genwh == null || genwh.equals("N")) {
@@ -681,10 +709,10 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 				pstmtdel = null;
 			}
 			inv.set_CustomColumn("WithholdingAmt", Env.ZERO);
-			
+
 		} else {
 			// translate withholding to taxes
-			String sql = 
+			String sql =
 				  "SELECT C_Tax_ID, NVL(SUM(TaxBaseAmt),0) AS TaxBaseAmt, NVL(SUM(TaxAmt),0) AS TaxAmt "
 				 + " FROM LCO_InvoiceWithholding "
 				+ " WHERE C_Invoice_ID = ? AND IsCalcOnPayment = 'N' AND IsActive = 'Y' "
@@ -717,7 +745,7 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 					inv.setGrandTotal(gt.subtract(sumit));
 					inv.saveEx();  // need to save here in order to let apply get the right total
 				}
-				
+
 				if (sumit.signum() != 0) {
 					// GrandTotal changed!  If there are payment schedule records they need to be recalculated
 					// subtract withholdings from the first installment
@@ -749,4 +777,4 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 		return null;
 	}
 
-}	//	LCO_Validator
+}	//	LCO_ValidatorWH

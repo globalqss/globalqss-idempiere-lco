@@ -1,19 +1,28 @@
-/******************************************************************************
- * Product: Adempiere ERP & CRM Smart Business Solution                       *
- * Copyright (C) 1999-2006 ComPiere, Inc. All Rights Reserved.                *
- * This program is free software; you can redistribute it and/or modify it    *
- * under the terms version 2 of the GNU General Public License as published   *
- * by the Free Software Foundation. This program is distributed in the hope   *
- * that it will be useful, but WITHOUT ANY WARRANTY; without even the implied *
- * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.           *
- * See the GNU General Public License for more details.                       *
- * You should have received a copy of the GNU General Public License along    *
- * with this program; if not, write to the Free Software Foundation, Inc.,    *
- * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.                     *
- * For the text or an alternative of this public license, you may reach us    *
- * ComPiere, Inc., 2620 Augustine Dr. #245, Santa Clara, CA 95054, USA        *
- * or via info@compiere.org or http://www.compiere.org/license.html           *
- *****************************************************************************/
+/**********************************************************************
+* This file is part of iDempiere ERP Open Source                      *
+* http://www.idempiere.org                                            *
+*                                                                     *
+* Copyright (C) Contributors                                          *
+*                                                                     *
+* This program is free software; you can redistribute it and/or       *
+* modify it under the terms of the GNU General Public License         *
+* as published by the Free Software Foundation; either version 2      *
+* of the License, or (at your option) any later version.              *
+*                                                                     *
+* This program is distributed in the hope that it will be useful,     *
+* but WITHOUT ANY WARRANTY; without even the implied warranty of      *
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the        *
+* GNU General Public License for more details.                        *
+*                                                                     *
+* You should have received a copy of the GNU General Public License   *
+* along with this program; if not, write to the Free Software         *
+* Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,          *
+* MA 02110-1301, USA.                                                 *
+*                                                                     *
+* Contributors:                                                       *
+* - Carlos Ruiz - globalqss                                           *
+**********************************************************************/
+
 package org.globalqss.util;
 
 import java.math.BigDecimal;
@@ -37,8 +46,6 @@ import org.globalqss.model.X_LCO_DIAN_SendSchedule;
  *	LCO_MM - DB wrapper
  *
  *  @author Carlos Ruiz - globalqss - Quality Systems & Solutions - http://globalqss.com
- *  @version  $Id: LCO_MM
- *  
  */
 public class LCO_MM
 {
@@ -104,7 +111,7 @@ public class LCO_MM
 	public BigDecimal get1011sal(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, Integer bpID, Integer bpID2, X_LCO_DIAN_ConceptSource conceptSource, String trxName) throws Exception {
 		return get(getCurrentMethodName(), ctx, sendScheduleProcess, bpID, bpID2, conceptSource, trxName);
 	}
-	
+
 	private BigDecimal get(String function,
 			Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, Integer bpInt, Integer bpInt2, X_LCO_DIAN_ConceptSource conceptSource, String trxName) throws Exception {
 		BigDecimal retValue = null;
@@ -117,12 +124,12 @@ public class LCO_MM
 		int bpid2 = 0;
 		if (bpInt2 != null)
 			bpid2 = bpInt2.intValue();
-		
+
 		String sql = "{call " + function + "(?,?,?,?,?,?,?,?,?,?,?)}";
 
 		Trx trx = Trx.get(trxName, false);
 		Connection conn = trx.getConnection();
-		
+
 		MLCODIANFormat format = new MLCODIANFormat(ctx, sendScheduleProcess.getLCO_DIAN_Format_ID(), trxName);
 		MLCODIANConcept concept = new MLCODIANConcept(ctx, conceptSource.getLCO_DIAN_Concept_ID(), trxName);
 
@@ -158,42 +165,42 @@ public class LCO_MM
 	public BigDecimal consolidate1001(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, String trxName) throws Exception {
 		return consolidate(getCurrentMethodName(), ctx, sendScheduleProcess, trxName);
 	}
-	
+
 	public BigDecimal consolidate1002(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, String trxName) throws Exception {
 		return consolidate(getCurrentMethodName(), ctx, sendScheduleProcess, trxName);
 	}
-	
+
 	public BigDecimal consolidate1006(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, String trxName) throws Exception {
 		return consolidate(getCurrentMethodName(), ctx, sendScheduleProcess, trxName);
 	}
-	
+
 	public BigDecimal consolidate1007(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, String trxName) throws Exception {
 		return consolidate(getCurrentMethodName(), ctx, sendScheduleProcess, trxName);
 	}
-	
+
 	public BigDecimal consolidate1008(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, String trxName) throws Exception {
 		return consolidate(getCurrentMethodName(), ctx, sendScheduleProcess, trxName);
 	}
-	
+
 	public BigDecimal consolidate1009(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, String trxName) throws Exception {
 		return consolidate(getCurrentMethodName(), ctx, sendScheduleProcess, trxName);
 	}
-	
+
 	public BigDecimal consolidate1016(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, String trxName) throws Exception {
 		return consolidate(getCurrentMethodName(), ctx, sendScheduleProcess, trxName);
 	}
-	
+
 	public BigDecimal consolidate1053(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, String trxName) throws Exception {
 		return consolidate(getCurrentMethodName(), ctx, sendScheduleProcess, trxName);
 	}
-	
+
 	private BigDecimal consolidate(String function, Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, String trxName) throws SQLException {
 		BigDecimal retValue = null;
 		String sql = "{call " + function + "(?,?,?,?)}";
 
 		Trx trx = Trx.get(trxName, false);
 		Connection conn = trx.getConnection();
-		
+
 		MLCODIANFormat format = new MLCODIANFormat(ctx, sendScheduleProcess.getLCO_DIAN_Format_ID(), trxName);
 
 		CallableStatement cstmt = null;
@@ -221,5 +228,5 @@ public class LCO_MM
 	public String getCurrentMethodName() {
 		StackTraceElement stackTraceElements[] = (new Throwable()).getStackTrace();
 		return stackTraceElements[1].getMethodName().toString();
-	}	
+	}
 }	// LCO_MM

@@ -1,19 +1,28 @@
-/******************************************************************************
- * Product: Adempiere ERP & CRM Smart Business Solution                       *
- * Copyright (C) 1999-2006 ComPiere, Inc. All Rights Reserved.                *
- * This program is free software; you can redistribute it and/or modify it    *
- * under the terms version 2 of the GNU General Public License as published   *
- * by the Free Software Foundation. This program is distributed in the hope   *
- * that it will be useful, but WITHOUT ANY WARRANTY; without even the implied *
- * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.           *
- * See the GNU General Public License for more details.                       *
- * You should have received a copy of the GNU General Public License along    *
- * with this program; if not, write to the Free Software Foundation, Inc.,    *
- * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.                     *
- * For the text or an alternative of this public license, you may reach us    *
- * ComPiere, Inc., 2620 Augustine Dr. #245, Santa Clara, CA 95054, USA        *
- * or via info@compiere.org or http://www.compiere.org/license.html           *
- *****************************************************************************/
+/**********************************************************************
+* This file is part of iDempiere ERP Open Source                      *
+* http://www.idempiere.org                                            *
+*                                                                     *
+* Copyright (C) Contributors                                          *
+*                                                                     *
+* This program is free software; you can redistribute it and/or       *
+* modify it under the terms of the GNU General Public License         *
+* as published by the Free Software Foundation; either version 2      *
+* of the License, or (at your option) any later version.              *
+*                                                                     *
+* This program is distributed in the hope that it will be useful,     *
+* but WITHOUT ANY WARRANTY; without even the implied warranty of      *
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the        *
+* GNU General Public License for more details.                        *
+*                                                                     *
+* You should have received a copy of the GNU General Public License   *
+* along with this program; if not, write to the Free Software         *
+* Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,          *
+* MA 02110-1301, USA.                                                 *
+*                                                                     *
+* Contributors:                                                       *
+* - Carlos Ruiz - globalqss                                           *
+**********************************************************************/
+
 package org.globalqss.model;
 
 import java.lang.reflect.Method;
@@ -34,13 +43,13 @@ import org.compiere.util.Env;
 
 /**
  *	Model class for concept
- *	
+ *
  *  @author Carlos Ruiz - globalqss
  */
 public class MLCODIANConcept extends X_LCO_DIAN_Concept
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 8280094742826097467L;
 
@@ -72,7 +81,7 @@ public class MLCODIANConcept extends X_LCO_DIAN_Concept
 	 *	@param bpID - the BP
 	 *	@param bpID2 - the BP2
 	 *  @return count of lines inserted
-	 * @throws AdempiereUserError 
+	 * @throws AdempiereUserError
 	 */
 	public int calculateSources(X_LCO_DIAN_SendSchedule sendScheduleProcess, int bpID, int bpID2) throws Exception {
 		int cnt = 0;
@@ -163,7 +172,7 @@ public class MLCODIANConcept extends X_LCO_DIAN_Concept
 	 * 	Process the source calling the expression and returning the value
 	 *	@param sendScheduleProcess the process
 	 *	@param format the format
-	 * @throws Exception 
+	 * @throws Exception
 	 */
 	private BigDecimal processSource(X_LCO_DIAN_SendSchedule sendScheduleProcess, int bpID, int bpID2, X_LCO_DIAN_ConceptSource conceptSource) throws Exception {
 		BigDecimal retValue = null;
@@ -176,15 +185,15 @@ public class MLCODIANConcept extends X_LCO_DIAN_Concept
 			throw new AdempiereUserError(msg);
 		}
 		if (cmd.toLowerCase().startsWith(MRule.SCRIPT_PREFIX)) {
-			
+
 			MRule rule = MRule.get(getCtx(), cmd.substring(MRule.SCRIPT_PREFIX.length()));
 			if (rule == null) {
 				msg = "Callout " + cmd + " not found";
 				throw new AdempiereUserError(msg);
 			}
-			if ( !  (rule.getEventType().equals(MRule.EVENTTYPE_Callout) 
+			if ( !  (rule.getEventType().equals(MRule.EVENTTYPE_Callout)
 				  && rule.getRuleType().equals(MRule.RULETYPE_JSR223ScriptingAPIs))) {
-				msg = "Callout " + cmd + " must be of type JSR 223 and event Callout"; 
+				msg = "Callout " + cmd + " must be of type JSR 223 and event Callout";
 				throw new AdempiereUserError(msg);
 			}
 
@@ -193,7 +202,7 @@ public class MLCODIANConcept extends X_LCO_DIAN_Concept
 			// Window context are    W_
 			// Login context  are    G_
 			MRule.setContext(engine, getCtx(), 0);
-			// now add the callout parameters windowNo, tab, field, value, oldValue to the engine 
+			// now add the callout parameters windowNo, tab, field, value, oldValue to the engine
 			// Method arguments context are A_
 			engine.put(MRule.ARGUMENTS_PREFIX + "Ctx", getCtx());
 			engine.put(MRule.ARGUMENTS_PREFIX + "SendSchedule", sendScheduleProcess);
@@ -202,7 +211,7 @@ public class MLCODIANConcept extends X_LCO_DIAN_Concept
 			engine.put(MRule.ARGUMENTS_PREFIX + "ConceptSource", conceptSource);
 			engine.put(MRule.ARGUMENTS_PREFIX + "TrxName", get_TrxName());
 
-			try 
+			try
 			{
 				retValueStr = engine.eval(rule.getScript()).toString();
 				retValue = new BigDecimal(retValueStr);
@@ -213,7 +222,7 @@ public class MLCODIANConcept extends X_LCO_DIAN_Concept
 				log.log(Level.SEVERE, msg, e);
 				throw new AdempiereUserError("Error executing script " + cmd);
 			}
-			
+
 		} else {
 
 			Object call = null;
@@ -243,7 +252,7 @@ public class MLCODIANConcept extends X_LCO_DIAN_Concept
 			{
 				if (methodName == null || methodName.length() == 0)
 					throw new IllegalArgumentException ("No Method Name");
-				
+
 				Method method = call.getClass().getMethod(methodName, Properties.class, X_LCO_DIAN_SendSchedule.class, Integer.class, Integer.class, X_LCO_DIAN_ConceptSource.class, String.class);
 
 				//	Call Method
@@ -269,7 +278,7 @@ public class MLCODIANConcept extends X_LCO_DIAN_Concept
 				log.log(Level.SEVERE, msg, e);
 				throw new AdempiereUserError("Error with method callout " + cmd);
 			}
-		}			
+		}
 
 		return retValue;
 	}

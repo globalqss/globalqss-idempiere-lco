@@ -23,68 +23,57 @@
 * - Carlos Ruiz - globalqss                                           *
 **********************************************************************/
 
-package org.globalqss.process;
+package org.globalqss.model;
 
-
-import java.util.logging.Level;
-
+import org.adempiere.base.event.AbstractEventHandler;
+import org.adempiere.base.event.IEventManager;
+import org.adempiere.base.event.IEventTopics;
+import org.adempiere.base.event.LoginEventData;
 import org.compiere.model.MSysConfig;
-import org.compiere.process.ProcessInfoParameter;
-import org.compiere.process.SvrProcess;
-import org.compiere.util.AdempiereUserError;
+import org.compiere.util.CLogger;
 import org.compiere.util.Env;
-import org.globalqss.model.LCO_MInvoice;
+import org.osgi.service.event.Event;
 
 /**
- *	LCO_GenerateWithholding
+ *	Validator or Localization Colombia (Magnetic Media)
  *
  *  @author Carlos Ruiz - globalqss - Quality Systems & Solutions - http://globalqss.com
  */
-public class LCO_GenerateWithholding extends SvrProcess
+public class LCO_ValidatorMM extends AbstractEventHandler
 {
-
-	/** The Record						*/
-	private int		p_Record_ID = 0;
+	/**	Logger			*/
+	private static CLogger log = CLogger.getCLogger(LCO_ValidatorMM.class);
 
 	/**
-	 *  Prepare - e.g., get Parameters.
+	 *	Initialize Validation
 	 */
-	protected void prepare()
-	{
-		ProcessInfoParameter[] para = getParameter();
-		for (int i = 0; i < para.length; i++)
-		{
-			String name = para[i].getParameterName();
-			if (para[i].getParameter() == null)
-				;
-			else
-				log.log(Level.SEVERE, "Unknown Parameter: " + name);
+	@Override
+	protected void initialize() {
+		log.warning("");
+
+		registerEvent(IEventTopics.AFTER_LOGIN);
+	}	//	initialize
+
+    /**
+     *  @param event
+     *	@exception Exception if the recipient wishes the change to be not accept.
+     */
+	@Override
+	protected void doHandleEvent(Event event) {
+		String type = event.getTopic();
+
+		if (type.equals(IEventTopics.AFTER_LOGIN)) {
+			log.info("Type: " + type);
+			// on login set context variable #LCO_USE_MAGNETIC_MEDIA
+			LoginEventData loginData = (LoginEventData) event.getProperty(IEventManager.EVENT_DATA);
+			boolean useDN = MSysConfig.getBooleanValue("LCO_USE_MAGNETIC_MEDIA", true, loginData.getAD_Client_ID());
+			Env.setContext(Env.getCtx(), "#LCO_USE_MAGNETIC_MEDIA", useDN);
+			return;
 		}
-		p_Record_ID = getRecord_ID();
-	}	//	prepare
 
-	/**
-	 * 	Process
-	 *	@return message
-	 *	@throws Exception
-	 */
-	protected String doIt() throws Exception
-	{
-		if (! MSysConfig.getBooleanValue("LCO_USE_WITHHOLDINGS", true, Env.getAD_Client_ID(Env.getCtx())))
-			return "@invalid@";
+		// if (! MSysConfig.getBooleanValue("LCO_USE_MAGNETIC_MEDIA", true, Env.getAD_Client_ID(Env.getCtx())))
+			// return;
 
-		int cnt = 0;
+	}	//	doHandleEvent
 
-		LCO_MInvoice inv = new LCO_MInvoice(getCtx(), p_Record_ID, get_TrxName());
-		if (inv.getC_Invoice_ID() == 0)
-			throw new AdempiereUserError("@No@ @Invoice@");
-
-		cnt = inv.recalcWithholdings();
-
-		if (cnt == -1)
-			throw new AdempiereUserError("Error calculating withholding, please check log");
-
-		return "@Inserted@=" + cnt;
-	}	//	doIt
-
-}	//	LCO_GenerateWithholding
+}	//	LCO_ValidatorMM

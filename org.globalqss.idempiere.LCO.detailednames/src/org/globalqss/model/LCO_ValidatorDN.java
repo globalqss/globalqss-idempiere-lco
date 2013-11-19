@@ -1,35 +1,47 @@
-/******************************************************************************
- * Product: iDempiere ERP & CRM Smart Business Solution                       *
- * Copyright (C) 1999-2006 ComPiere, Inc. All Rights Reserved.                *
- * This program is free software; you can redistribute it and/or modify it    *
- * under the terms version 2 of the GNU General Public License as published   *
- * by the Free Software Foundation. This program is distributed in the hope   *
- * that it will be useful, but WITHOUT ANY WARRANTY; without even the implied *
- * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.           *
- * See the GNU General Public License for more details.                       *
- * You should have received a copy of the GNU General Public License along    *
- * with this program; if not, write to the Free Software Foundation, Inc.,    *
- * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.                     *
- * For the text or an alternative of this public license, you may reach us    *
- * ComPiere, Inc., 2620 Augustine Dr. #245, Santa Clara, CA 95054, USA        *
- * or via info@compiere.org or http://www.compiere.org/license.html           *
- *****************************************************************************/
+/**********************************************************************
+* This file is part of iDempiere ERP Open Source                      *
+* http://www.idempiere.org                                            *
+*                                                                     *
+* Copyright (C) Contributors                                          *
+*                                                                     *
+* This program is free software; you can redistribute it and/or       *
+* modify it under the terms of the GNU General Public License         *
+* as published by the Free Software Foundation; either version 2      *
+* of the License, or (at your option) any later version.              *
+*                                                                     *
+* This program is distributed in the hope that it will be useful,     *
+* but WITHOUT ANY WARRANTY; without even the implied warranty of      *
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the        *
+* GNU General Public License for more details.                        *
+*                                                                     *
+* You should have received a copy of the GNU General Public License   *
+* along with this program; if not, write to the Free Software         *
+* Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,          *
+* MA 02110-1301, USA.                                                 *
+*                                                                     *
+* Contributors:                                                       *
+* - Carlos Ruiz - globalqss                                           *
+**********************************************************************/
+
 package org.globalqss.model;
 
 import org.adempiere.base.event.AbstractEventHandler;
+import org.adempiere.base.event.IEventManager;
 import org.adempiere.base.event.IEventTopics;
+import org.adempiere.base.event.LoginEventData;
 import org.compiere.model.MBPartner;
+import org.compiere.model.MSysConfig;
 import org.compiere.model.PO;
 import org.compiere.util.CLogger;
+import org.compiere.util.Env;
 import org.compiere.util.Msg;
 import org.globalqss.util.LCO_Utils;
 import org.osgi.service.event.Event;
 
 /**
  *	Validator or Localization Colombia (Detailed Names)
- *	
- *  @author Carlos Ruiz - globalqss - Quality Systems & Solutions - http://globalqss.com 
- *	@version $Id: LCO_Validator.java,v 1.4 2007/05/13 06:53:26 cruiz Exp $
+ *
+ *  @author Carlos Ruiz - globalqss - Quality Systems & Solutions - http://globalqss.com
  */
 public class LCO_ValidatorDN extends AbstractEventHandler
 {
@@ -41,10 +53,14 @@ public class LCO_ValidatorDN extends AbstractEventHandler
 	 */
 	@Override
 	protected void initialize() {
+		log.warning("");
+
 		registerTableEvent(IEventTopics.PO_BEFORE_NEW, MBPartner.Table_Name);
 		registerTableEvent(IEventTopics.PO_BEFORE_CHANGE, MBPartner.Table_Name);
 		registerTableEvent(IEventTopics.PO_BEFORE_NEW, X_LCO_TaxIdType.Table_Name);
 		registerTableEvent(IEventTopics.PO_BEFORE_CHANGE, X_LCO_TaxIdType.Table_Name);
+
+		registerEvent(IEventTopics.AFTER_LOGIN);
 	}	//	initialize
 
     /**
@@ -56,8 +72,21 @@ public class LCO_ValidatorDN extends AbstractEventHandler
      */
 	@Override
 	protected void doHandleEvent(Event event) {
-		PO po = getPO(event);
 		String type = event.getTopic();
+
+		if (type.equals(IEventTopics.AFTER_LOGIN)) {
+			log.info("Type: " + type);
+			// on login set context variable #LCO_USE_DETAILED_NAMES
+			LoginEventData loginData = (LoginEventData) event.getProperty(IEventManager.EVENT_DATA);
+			boolean useDN = MSysConfig.getBooleanValue("LCO_USE_DETAILED_NAMES", true, loginData.getAD_Client_ID());
+			Env.setContext(Env.getCtx(), "#LCO_USE_DETAILED_NAMES", useDN);
+			return;
+		}
+
+		if (! MSysConfig.getBooleanValue("LCO_USE_DETAILED_NAMES", true, Env.getAD_Client_ID(Env.getCtx())))
+			return;
+
+		PO po = getPO(event);
 		log.info(po + " Type: " + type);
 		String msg;
 
@@ -73,7 +102,7 @@ public class LCO_ValidatorDN extends AbstractEventHandler
 			if (msg != null)
 				throw new RuntimeException(msg);
 		}
-		
+
 		if (po.get_TableName().equals(X_LCO_TaxIdType.Table_Name) && ( type.equals(IEventTopics.PO_BEFORE_NEW) || type.equals(IEventTopics.PO_BEFORE_CHANGE)))
 		{
 			X_LCO_TaxIdType taxidtype = (X_LCO_TaxIdType) po;
@@ -88,7 +117,7 @@ public class LCO_ValidatorDN extends AbstractEventHandler
 	private String mcheckTaxIdDigit (MBPartner bpartner)
 	{
 		Integer taxidtype_I = (Integer) bpartner.get_Value("LCO_TaxIdType_ID");
-		
+
 		if (taxidtype_I == null) {
 			// Returning error here has problems with Initial Client Setup and other processes
 			// that creates BPs
@@ -96,17 +125,17 @@ public class LCO_ValidatorDN extends AbstractEventHandler
 			// return Msg.getMsg(bpartner.getCtx(), "LCO_TaxIDTypeRequired");
 			return null;
 		}
-		
+
 		X_LCO_TaxIdType taxidtype = new X_LCO_TaxIdType(bpartner.getCtx(), taxidtype_I.intValue(), bpartner.get_TrxName());
-		
+
 		bpartner.set_ValueOfColumn("IsDetailedNames", taxidtype.isDetailedNames());
 		bpartner.set_ValueOfColumn("IsUseTaxIdDigit", taxidtype.isUseTaxIdDigit());
-		
+
 		if (!taxidtype.isUseTaxIdDigit()) {
 			bpartner.set_ValueOfColumn("TaxIdDigit", null);
 			return null;
 		}
-			
+
 		// Is Juridical
 		String taxid = bpartner.getTaxID();
 		if (taxid == null || taxid.trim().length() == 0)
@@ -131,7 +160,7 @@ public class LCO_ValidatorDN extends AbstractEventHandler
 		} else {
 			bpartner.set_ValueOfColumn("TaxIdDigit", String.valueOf(correctDigit));
 		}
-		
+
 		log.info(bpartner.toString());
 		return null;
 	}	//	mcheckTaxIdDigit
@@ -148,7 +177,7 @@ public class LCO_ValidatorDN extends AbstractEventHandler
 		Boolean boolIsDetailedNames = (Boolean)bpartner.get_Value("IsDetailedNames");
 		if (boolIsDetailedNames != null)
 			isDetailedNames = boolIsDetailedNames.booleanValue();
-		
+
 		if (! isDetailedNames) {
 			bpartner.set_ValueOfColumn("FirstName1", null);
 			bpartner.set_ValueOfColumn("FirstName2", null);
@@ -161,7 +190,7 @@ public class LCO_ValidatorDN extends AbstractEventHandler
 		String fn2 = bpartner.get_ValueAsString("FirstName2");
 		String ln1 = bpartner.get_ValueAsString("LastName1");
 		String ln2 = bpartner.get_ValueAsString("LastName2");
-		
+
 		if (fn1 == null || fn1.length() == 0)
 			 return Msg.getMsg(bpartner.getCtx(), "LCO_FirstName1Required");
 
@@ -172,5 +201,5 @@ public class LCO_ValidatorDN extends AbstractEventHandler
 		bpartner.setName(fullName);
 		return null;
 	}	//	mfillName
-	
+
 }	//	LCO_ValidatorDN
