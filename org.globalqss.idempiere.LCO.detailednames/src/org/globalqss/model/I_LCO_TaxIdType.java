@@ -23,7 +23,7 @@ import org.compiere.util.KeyNamePair;
 
 /** Generated Interface for LCO_TaxIdType
  *  @author iDempiere (generated) 
- *  @version Release 1.0c
+ *  @version Release 2.0
  */
 @SuppressWarnings("all")
 public interface I_LCO_TaxIdType 
@@ -32,7 +32,7 @@ public interface I_LCO_TaxIdType
     /** TableName=LCO_TaxIdType */
     public static final String Table_Name = "LCO_TaxIdType";
 
-    /** AD_Table_ID=1000010 */
+    /** AD_Table_ID=1000000 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -149,10 +149,10 @@ public interface I_LCO_TaxIdType
     /** Column name LCO_TaxCodeDian */
     public static final String COLUMNNAME_LCO_TaxCodeDian = "LCO_TaxCodeDian";
 
-	/** Set Tax Code DIAN	  */
+	/** Set Tax Code	  */
 	public void setLCO_TaxCodeDian (String LCO_TaxCodeDian);
 
-	/** Get Tax Code DIAN	  */
+	/** Get Tax Code	  */
 	public String getLCO_TaxCodeDian();
 
     /** Column name LCO_TaxIdType_ID */

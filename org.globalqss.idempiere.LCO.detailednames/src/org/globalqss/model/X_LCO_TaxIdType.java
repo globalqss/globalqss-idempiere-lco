@@ -24,14 +24,14 @@ import org.compiere.util.KeyNamePair;
 
 /** Generated Model for LCO_TaxIdType
  *  @author iDempiere (generated) 
- *  @version Release 1.0c - $Id$ */
+ *  @version Release 2.0 - $Id$ */
 public class X_LCO_TaxIdType extends PO implements I_LCO_TaxIdType, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20130807L;
+	private static final long serialVersionUID = 20131119L;
 
     /** Standard Constructor */
     public X_LCO_TaxIdType (Properties ctx, int LCO_TaxIdType_ID, String trxName)
@@ -182,15 +182,15 @@ public class X_LCO_TaxIdType extends PO implements I_LCO_TaxIdType, I_Persistent
 		return false;
 	}
 
-	/** Set Tax Code DIAN.
-		@param LCO_TaxCodeDian Tax Code DIAN	  */
+	/** Set Tax Code.
+		@param LCO_TaxCodeDian Tax Code	  */
 	public void setLCO_TaxCodeDian (String LCO_TaxCodeDian)
 	{
 		set_Value (COLUMNNAME_LCO_TaxCodeDian, LCO_TaxCodeDian);
 	}
 
-	/** Get Tax Code DIAN.
-		@return Tax Code DIAN	  */
+	/** Get Tax Code.
+		@return Tax Code	  */
 	public String getLCO_TaxCodeDian () 
 	{
 		return (String)get_Value(COLUMNNAME_LCO_TaxCodeDian);
