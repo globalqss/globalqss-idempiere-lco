@@ -24,14 +24,14 @@ import org.compiere.util.KeyNamePair;
 
 /** Generated Model for LCO_ISIC
  *  @author iDempiere (generated) 
- *  @version Release 1.0c - $Id$ */
+ *  @version Release 2.0 - $Id$ */
 public class X_LCO_ISIC extends PO implements I_LCO_ISIC, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20130807L;
+	private static final long serialVersionUID = 20131119L;
 
     /** Standard Constructor */
     public X_LCO_ISIC (Properties ctx, int LCO_ISIC_ID, String trxName)

@@ -26,14 +26,14 @@ import org.compiere.util.Env;
 
 /** Generated Model for LCO_InvoiceWithholding
  *  @author iDempiere (generated) 
- *  @version Release 1.0c - $Id$ */
+ *  @version Release 2.0 - $Id$ */
 public class X_LCO_InvoiceWithholding extends PO implements I_LCO_InvoiceWithholding, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20130807L;
+	private static final long serialVersionUID = 20131119L;
 
     /** Standard Constructor */
     public X_LCO_InvoiceWithholding (Properties ctx, int LCO_InvoiceWithholding_ID, String trxName)
