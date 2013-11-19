@@ -1,19 +1,28 @@
-/******************************************************************************
- * Product: Adempiere ERP & CRM Smart Business Solution                       *
- * Copyright (C) 1999-2006 ComPiere, Inc. All Rights Reserved.                *
- * This program is free software; you can redistribute it and/or modify it    *
- * under the terms version 2 of the GNU General Public License as published   *
- * by the Free Software Foundation. This program is distributed in the hope   *
- * that it will be useful, but WITHOUT ANY WARRANTY; without even the implied *
- * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.           *
- * See the GNU General Public License for more details.                       *
- * You should have received a copy of the GNU General Public License along    *
- * with this program; if not, write to the Free Software Foundation, Inc.,    *
- * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.                     *
- * For the text or an alternative of this public license, you may reach us    *
- * ComPiere, Inc., 2620 Augustine Dr. #245, Santa Clara, CA 95054, USA        *
- * or via info@compiere.org or http://www.compiere.org/license.html           *
- *****************************************************************************/
+/**********************************************************************
+* This file is part of iDempiere ERP Open Source                      *
+* http://www.idempiere.org                                            *
+*                                                                     *
+* Copyright (C) Contributors                                          *
+*                                                                     *
+* This program is free software; you can redistribute it and/or       *
+* modify it under the terms of the GNU General Public License         *
+* as published by the Free Software Foundation; either version 2      *
+* of the License, or (at your option) any later version.              *
+*                                                                     *
+* This program is distributed in the hope that it will be useful,     *
+* but WITHOUT ANY WARRANTY; without even the implied warranty of      *
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the        *
+* GNU General Public License for more details.                        *
+*                                                                     *
+* You should have received a copy of the GNU General Public License   *
+* along with this program; if not, write to the Free Software         *
+* Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,          *
+* MA 02110-1301, USA.                                                 *
+*                                                                     *
+* Contributors:                                                       *
+* - Carlos Ruiz - globalqss                                           *
+**********************************************************************/
+
 package org.globalqss.process;
 
 import java.io.File;
@@ -40,6 +49,7 @@ import org.compiere.model.MAttachmentEntry;
 import org.compiere.model.MBPartner;
 import org.compiere.model.MBPartnerLocation;
 import org.compiere.model.MLocation;
+import org.compiere.model.MSysConfig;
 import org.compiere.model.MTable;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
@@ -60,7 +70,6 @@ import org.xml.sax.helpers.AttributesImpl;
  *	LCO_DianExportXML
  *
  *  @author Carlos Ruiz - globalqss - Quality Systems & Solutions - http://globalqss.com
- *  @version  $Id: LCO_DianExportXML
  */
 public class LCO_DianExportXML  extends SvrProcess {
 
@@ -124,6 +133,9 @@ public class LCO_DianExportXML  extends SvrProcess {
 			un archivo previo generado para añadirle un sufijo _old_yyyymmdd
 			Fin XML Header
 		 **/
+		if (! MSysConfig.getBooleanValue("LCO_USE_MAGNETIC_MEDIA", true, Env.getAD_Client_ID(Env.getCtx())))
+			return "@invalid@";
+
 		OutputStream  mmDocStream = null;
 		X_LCO_DIAN_XML_Header xmlheader = new X_LCO_DIAN_XML_Header (getCtx(),p_LCO_DIAN_XML_Header_ID , get_TrxName());
 		X_LCO_DIAN_SendSchedule sendScheduleProcess = new X_LCO_DIAN_SendSchedule (getCtx(), xmlheader.getLCO_DIAN_SendSchedule_ID(), get_TrxName());
@@ -134,7 +146,7 @@ public class LCO_DianExportXML  extends SvrProcess {
 		if (sendScheduleProcess.getLCO_DIAN_Format_ID() <= 0)
 			throw new AdempiereUserError("@No@ @LCO_DIAN_Format@");
 		MLCODIANFormat format = new MLCODIANFormat (getCtx(), sendScheduleProcess.getLCO_DIAN_Format_ID(), get_TrxName());
-		
+
 		X_LCO_DIAN_XMLPrintLabel labelDet = new X_LCO_DIAN_XMLPrintLabel(getCtx(), format.getLCO_DIAN_XMLPrintLabel_ID(), get_TrxName());
 		String printLbDet = labelDet.getValue();
 
@@ -147,10 +159,10 @@ public class LCO_DianExportXML  extends SvrProcess {
 		 **/
 		String xmlFileName = "Dmuisca_"
 				+ String.format("%2s", sendScheduleProcess.getSendConceptCode()).replace(" ", "0")
-				+ String.format("%5s", format.getValue()).replace(" ", "0") 
+				+ String.format("%5s", format.getValue()).replace(" ", "0")
 				+ String.format("%2s", format.getVersionNo()).replace(" ", "0")
 				+ String.format("%tY", sendScheduleProcess.getSendDate())
-				+ String.format("%08d", xmlheader.getSequence()) 
+				+ String.format("%08d", xmlheader.getSequence())
 				+ ".xml";
 
 		if ( folder.equals(""))
@@ -159,18 +171,18 @@ public class LCO_DianExportXML  extends SvrProcess {
 		//crea los directorios para los archivos xml
 		(new File(folder+File.separator+ "XMLGenerated"+File.separator)).mkdirs();
 		//ruta completa del archivo xml
-		String file_name = folder+File.separator+ "XMLGenerated"+File.separator+xmlFileName;	
+		String file_name = folder+File.separator+ "XMLGenerated"+File.separator+xmlFileName;
 		//Stream para el documento xml
 		mmDocStream = new FileOutputStream (file_name, false);
 		StreamResult streamResult_menu = new StreamResult(new OutputStreamWriter(mmDocStream,"ISO-8859-1"));
-		SAXTransformerFactory tf_menu = (SAXTransformerFactory) SAXTransformerFactory.newInstance();					
+		SAXTransformerFactory tf_menu = (SAXTransformerFactory) SAXTransformerFactory.newInstance();
 		try {
 			tf_menu.setAttribute("indent-number", new Integer(0));
 		} catch (Exception e) {
 			// swallow
 		}
-		TransformerHandler mmDoc = tf_menu.newTransformerHandler();	
-		Transformer serializer_menu = mmDoc.getTransformer();	
+		TransformerHandler mmDoc = tf_menu.newTransformerHandler();
+		Transformer serializer_menu = mmDoc.getTransformer();
 		serializer_menu.setOutputProperty(OutputKeys.ENCODING,"ISO-8859-1");
 		try {
 			serializer_menu.setOutputProperty(OutputKeys.INDENT,"yes");
@@ -243,7 +255,7 @@ public class LCO_DianExportXML  extends SvrProcess {
 					bp = new MBPartner(getCtx(), dssl.getC_BPartner_ID(), get_TrxName());
 					bpl = bp.getLocation(dssl.getC_BPartner_Location_ID());
 					loc = bpl.getLocation(false);
-					isColombia = (loc.getC_Country_ID() == 156);  /* HARDCODED = Colombia C_Country_ID */ 
+					isColombia = (loc.getC_Country_ID() == 156);  /* HARDCODED = Colombia C_Country_ID */
 					isDetailedNames = (Boolean) bp.get_Value("IsDetailedNames");
 				}
 				MBPartner bp2 = null;
@@ -260,7 +272,7 @@ public class LCO_DianExportXML  extends SvrProcess {
 
 					// Condicion de error
 					if (bp == null
-							&& (   printLb.equals("tdoc") 
+							&& (   printLb.equals("tdoc")
 								|| printLb.equals("nid")
 								|| printLb.equals("dv")
 								|| printLb.equals("apl1")
@@ -270,15 +282,15 @@ public class LCO_DianExportXML  extends SvrProcess {
 								|| printLb.equals("raz")
 								|| printLb.equals("dir")
 								|| printLb.equals("dpto")
-								|| printLb.equals("mun") 
-								|| printLb.equals("mcpo") 
+								|| printLb.equals("mun")
+								|| printLb.equals("mcpo")
 								|| printLb.equals("pais"))) {
 						throw new AdempiereUserError(printLb + " cannot be used without BP detail");
-					}					
-					
+					}
+
 					// Condicion de error
 					if (bp2 == null
-							&& (   printLb.equals("tdocm") 
+							&& (   printLb.equals("tdocm")
 								|| printLb.equals("nitm")
 								|| printLb.equals("dvm")
 								|| printLb.equals("apl1m")
@@ -287,8 +299,8 @@ public class LCO_DianExportXML  extends SvrProcess {
 								|| printLb.equals("nom2m")
 								|| printLb.equals("razm"))) {
 						throw new AdempiereUserError(printLb + " cannot be used without BP 2 detail");
-					}					
-					
+					}
+
 					if (printLb.equals("cpt") || printLb.equals("ctp") || printLb.equals("top")) {
 						// Concepto ( Siempre debe diligenciarse )
 						add_Attribute(atts, printLb, concept.getValue(), line_id, true);
@@ -394,7 +406,7 @@ public class LCO_DianExportXML  extends SvrProcess {
 						// Label de una columna calculada
 						int col = fieldFormat.getCalcColumnPosition();
 						if (col < 1 || col > 10)
-							throw new AdempiereUserError(label + " col not valid (" + col + ") in line " + line_id); 
+							throw new AdempiereUserError(label + " col not valid (" + col + ") in line " + line_id);
 						BigDecimal amt = (BigDecimal) dssl.get_Value("FieldAmt"+col);
 						if (amt == null)
 							amt = Env.ZERO;
@@ -509,7 +521,7 @@ public class LCO_DianExportXML  extends SvrProcess {
 	public String getDpto(int C_Region_ID) {
 		return MLCOConversion.getConvertedCode(getCtx(), "C_Region","C_Region_ID", "DIAN_Region", "" + C_Region_ID, get_TrxName());
 	}
-	
+
 	/**
 	 * Get DIAN code from C_City_ID
 	 * @param C_Location_ID
@@ -518,7 +530,7 @@ public class LCO_DianExportXML  extends SvrProcess {
 	public String getMun(int C_City_ID) {
 		return MLCOConversion.getConvertedCode(getCtx(), "C_City","C_City_ID", "DIAN_City", "" + C_City_ID, get_TrxName());
 	}
-	
+
 	/**
 	 * Get DIAN code from C_Country_ID
 	 * @param C_Location_ID

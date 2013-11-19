@@ -1,19 +1,28 @@
-/******************************************************************************
- * Product: iDempiere ERP & CRM Smart Business Solution                       *
- * Copyright (C) 1999-2006 ComPiere, Inc. All Rights Reserved.                *
- * This program is free software; you can redistribute it and/or modify it    *
- * under the terms version 2 of the GNU General Public License as published   *
- * by the Free Software Foundation. This program is distributed in the hope   *
- * that it will be useful, but WITHOUT ANY WARRANTY; without even the implied *
- * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.           *
- * See the GNU General Public License for more details.                       *
- * You should have received a copy of the GNU General Public License along    *
- * with this program; if not, write to the Free Software Foundation, Inc.,    *
- * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.                     *
- * For the text or an alternative of this public license, you may reach us    *
- * ComPiere, Inc., 2620 Augustine Dr. #245, Santa Clara, CA 95054, USA        *
- * or via info@compiere.org or http://www.compiere.org/license.html           *
- *****************************************************************************/
+/**********************************************************************
+* This file is part of iDempiere ERP Open Source                      *
+* http://www.idempiere.org                                            *
+*                                                                     *
+* Copyright (C) Contributors                                          *
+*                                                                     *
+* This program is free software; you can redistribute it and/or       *
+* modify it under the terms of the GNU General Public License         *
+* as published by the Free Software Foundation; either version 2      *
+* of the License, or (at your option) any later version.              *
+*                                                                     *
+* This program is distributed in the hope that it will be useful,     *
+* but WITHOUT ANY WARRANTY; without even the implied warranty of      *
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the        *
+* GNU General Public License for more details.                        *
+*                                                                     *
+* You should have received a copy of the GNU General Public License   *
+* along with this program; if not, write to the Free Software         *
+* Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,          *
+* MA 02110-1301, USA.                                                 *
+*                                                                     *
+* Contributors:                                                       *
+* - Carlos Ruiz - globalqss                                           *
+**********************************************************************/
+
 package org.globalqss.model;
 
 import java.math.BigDecimal;
@@ -30,6 +39,7 @@ import org.compiere.model.GridTab;
 import org.compiere.model.I_C_Payment;
 import org.compiere.model.I_C_PaymentAllocate;
 import org.compiere.model.MPriceList;
+import org.compiere.model.MSysConfig;
 import org.compiere.model.MTax;
 import org.compiere.util.CLogger;
 import org.compiere.util.DB;
@@ -38,8 +48,7 @@ import org.compiere.util.Env;
 /**
  *	LCO_CalloutWithholding
  *
- *  @author Carlos Ruiz - globalqss - Quality Systems & Solutions - http://globalqss.com 
- *  @version  $Id: LCO_CalloutWithholding.java,v 1.3 2007/05/09 10:43:28 cruiz Exp $
+ *  @author Carlos Ruiz - globalqss - Quality Systems & Solutions - http://globalqss.com
  */
 public class LCO_CalloutWithholding implements IColumnCalloutFactory
 {
@@ -48,6 +57,9 @@ public class LCO_CalloutWithholding implements IColumnCalloutFactory
 
 	@Override
 	public IColumnCallout[] getColumnCallouts(String tableName, String columnName) {
+		if (! MSysConfig.getBooleanValue("LCO_USE_WITHHOLDINGS", true, Env.getAD_Client_ID(Env.getCtx())))
+			return null;
+
 		if (tableName.equalsIgnoreCase(I_LCO_WithholdingRule.Table_Name)) {
 			if (columnName.equalsIgnoreCase(I_LCO_WithholdingRule.COLUMNNAME_LCO_WithholdingType_ID))
 				return new IColumnCallout[]{new FillIsUse()};
@@ -77,7 +89,7 @@ public class LCO_CalloutWithholding implements IColumnCalloutFactory
 	{
 		log.info("");
 		int wht_id = ((Integer) mTab.getValue("LCO_WithholdingType_ID")).intValue();
-		
+
 		String sql = "SELECT IsUseBPISIC, IsUseBPTaxPayerType, IsUseBPCity, IsUseOrgISIC, IsUseOrgTaxPayerType, IsUseOrgCity, IsUseWithholdingCategory, IsUseProductTaxCategory "
 			           + "FROM LCO_WithholdingRuleConf WHERE LCO_WithholdingType_ID=?";		//	#1
 
@@ -156,7 +168,7 @@ public class LCO_CalloutWithholding implements IColumnCalloutFactory
 
 	private static String recalc_taxamt(Properties ctx, int WindowNo, GridTab mTab, GridField mField,
 			Object value, Object oldValue) {
-		// don't recalculate if callout called from field TaxBaseAmt and didn't change 
+		// don't recalculate if callout called from field TaxBaseAmt and didn't change
 		if (mField.getColumnName().equals("TaxBaseAmt") && value != null && oldValue != null) {
 			BigDecimal newtaxbaseamt = (BigDecimal) value;
 			BigDecimal oldtaxbaseamt = (BigDecimal) oldValue;
@@ -171,8 +183,8 @@ public class LCO_CalloutWithholding implements IColumnCalloutFactory
 
 		BigDecimal taxamt = null;
 		if (percent != null && taxbaseamt != null) {
-			int pricelist_id = DB.getSQLValue(null, 
-					"SELECT M_PriceList_ID FROM C_Invoice WHERE C_Invoice_ID=?", 
+			int pricelist_id = DB.getSQLValue(null,
+					"SELECT M_PriceList_ID FROM C_Invoice WHERE C_Invoice_ID=?",
 					((Integer) mTab.getValue(MLCOInvoiceWithholding.COLUMNNAME_C_Invoice_ID)).intValue());
 			taxamt = percent.multiply(taxbaseamt).divide(Env.ONEHUNDRED);
 			int stdPrecision = MPriceList.getStandardPrecision(ctx, pricelist_id);
@@ -194,8 +206,8 @@ public class LCO_CalloutWithholding implements IColumnCalloutFactory
 		int inv_id = 0;
 		if (value != null)
 			inv_id = invInt.intValue();
-		
-		String sql = 
+
+		String sql =
 				"SELECT NVL(SUM(TaxAmt),0) "
 				+ "  FROM LCO_InvoiceWithholding "
 				+ " WHERE C_Invoice_ID = ? "

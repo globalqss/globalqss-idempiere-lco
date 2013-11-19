@@ -1,19 +1,28 @@
-/******************************************************************************
- * Product: Adempiere ERP & CRM Smart Business Solution                       *
- * Copyright (C) 1999-2006 ComPiere, Inc. All Rights Reserved.                *
- * This program is free software; you can redistribute it and/or modify it    *
- * under the terms version 2 of the GNU General Public License as published   *
- * by the Free Software Foundation. This program is distributed in the hope   *
- * that it will be useful, but WITHOUT ANY WARRANTY; without even the implied *
- * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.           *
- * See the GNU General Public License for more details.                       *
- * You should have received a copy of the GNU General Public License along    *
- * with this program; if not, write to the Free Software Foundation, Inc.,    *
- * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.                     *
- * For the text or an alternative of this public license, you may reach us    *
- * ComPiere, Inc., 2620 Augustine Dr. #245, Santa Clara, CA 95054, USA        *
- * or via info@compiere.org or http://www.compiere.org/license.html           *
- *****************************************************************************/
+/**********************************************************************
+* This file is part of iDempiere ERP Open Source                      *
+* http://www.idempiere.org                                            *
+*                                                                     *
+* Copyright (C) Contributors                                          *
+*                                                                     *
+* This program is free software; you can redistribute it and/or       *
+* modify it under the terms of the GNU General Public License         *
+* as published by the Free Software Foundation; either version 2      *
+* of the License, or (at your option) any later version.              *
+*                                                                     *
+* This program is distributed in the hope that it will be useful,     *
+* but WITHOUT ANY WARRANTY; without even the implied warranty of      *
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the        *
+* GNU General Public License for more details.                        *
+*                                                                     *
+* You should have received a copy of the GNU General Public License   *
+* along with this program; if not, write to the Free Software         *
+* Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,          *
+* MA 02110-1301, USA.                                                 *
+*                                                                     *
+* Contributors:                                                       *
+* - Carlos Ruiz - globalqss                                           *
+**********************************************************************/
+
 package org.globalqss.process;
 
 import java.math.BigDecimal;
@@ -23,6 +32,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 
 import org.compiere.model.MSequence;
+import org.compiere.model.MSysConfig;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.compiere.util.AdempiereUserError;
@@ -37,7 +47,6 @@ import org.globalqss.model.X_LCO_DIAN_XML_Header;
  *	LCO_DianGenerateXML
  *
  *  @author Carlos Ruiz - globalqss - Quality Systems & Solutions - http://globalqss.com
- *  @version  $Id: LCO_DianGenerateXML
  */
 public class LCO_DianGenerateXML extends SvrProcess {
 
@@ -88,6 +97,8 @@ public class LCO_DianGenerateXML extends SvrProcess {
   	Fin Schedule
   LCO_SendSchedule.processed = Y --Content ReadOnly
 		 **/
+		if (! MSysConfig.getBooleanValue("LCO_USE_MAGNETIC_MEDIA", true, Env.getAD_Client_ID(Env.getCtx())))
+			return "@invalid@";
 
 		X_LCO_DIAN_SendSchedule sendScheduleProcess = new X_LCO_DIAN_SendSchedule (getCtx(), p_LCO_DIAN_SendSchedule_ID, get_TrxName());
 		if (!sendScheduleProcess.isGenerated()) {
@@ -98,9 +109,9 @@ public class LCO_DianGenerateXML extends SvrProcess {
 		}
 
 		MLCODIANFormat format = new MLCODIANFormat (getCtx(), sendScheduleProcess.getLCO_DIAN_Format_ID(), get_TrxName());
-	
+
 		MSequence seqxml = new MSequence(getCtx(), format.getAD_Sequence_ID(), get_TrxName());
-	
+
 		log.info("LCO_DIAN_SendSchedule_ID =  " + p_LCO_DIAN_SendSchedule_ID);
 
 		if (sendScheduleProcess.getLCO_DIAN_SendSchedule_ID() == 0)
@@ -166,7 +177,7 @@ public class LCO_DianGenerateXML extends SvrProcess {
 			xmlh.saveEx();
 			xmlh = null;
 		}
-	
+
 		// LCO_SendSchedule.processed = Y --Content ReadOnly
 		sendScheduleProcess.setProcessed(true);
 		sendScheduleProcess.saveEx();

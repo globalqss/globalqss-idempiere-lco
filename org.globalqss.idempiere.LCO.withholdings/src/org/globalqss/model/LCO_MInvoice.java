@@ -1,19 +1,28 @@
-/******************************************************************************
- * Product: Adempiere ERP & CRM Smart Business Solution                       *
- * Copyright (C) 1999-2006 ComPiere, Inc. All Rights Reserved.                *
- * This program is free software; you can redistribute it and/or modify it    *
- * under the terms version 2 of the GNU General Public License as published   *
- * by the Free Software Foundation. This program is distributed in the hope   *
- * that it will be useful, but WITHOUT ANY WARRANTY; without even the implied *
- * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.           *
- * See the GNU General Public License for more details.                       *
- * You should have received a copy of the GNU General Public License along    *
- * with this program; if not, write to the Free Software Foundation, Inc.,    *
- * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.                     *
- * For the text or an alternative of this public license, you may reach us    *
- * ComPiere, Inc., 2620 Augustine Dr. #245, Santa Clara, CA 95054, USA        *
- * or via info@compiere.org or http://www.compiere.org/license.html           *
- *****************************************************************************/
+/**********************************************************************
+* This file is part of iDempiere ERP Open Source                      *
+* http://www.idempiere.org                                            *
+*                                                                     *
+* Copyright (C) Contributors                                          *
+*                                                                     *
+* This program is free software; you can redistribute it and/or       *
+* modify it under the terms of the GNU General Public License         *
+* as published by the Free Software Foundation; either version 2      *
+* of the License, or (at your option) any later version.              *
+*                                                                     *
+* This program is distributed in the hope that it will be useful,     *
+* but WITHOUT ANY WARRANTY; without even the implied warranty of      *
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the        *
+* GNU General Public License for more details.                        *
+*                                                                     *
+* You should have received a copy of the GNU General Public License   *
+* along with this program; if not, write to the Free Software         *
+* Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,          *
+* MA 02110-1301, USA.                                                 *
+*                                                                     *
+* Contributors:                                                       *
+* - Carlos Ruiz - globalqss                                           *
+**********************************************************************/
+
 package org.globalqss.model;
 
 import java.math.BigDecimal;
@@ -28,6 +37,7 @@ import org.compiere.model.MInvoice;
 import org.compiere.model.MLocation;
 import org.compiere.model.MOrgInfo;
 import org.compiere.model.MPriceList;
+import org.compiere.model.MSysConfig;
 import org.compiere.model.MTax;
 import org.compiere.model.Query;
 import org.compiere.util.DB;
@@ -36,13 +46,12 @@ import org.compiere.util.Env;
 /**
  *	LCO_MInvoice
  *
- *  @author Carlos Ruiz - globalqss - Quality Systems & Solutions - http://globalqss.com 
- *  @version  $Id: LCO_MInvoice.java,v 1.5 2007/06/28 03:37:29 cruiz Exp $
+ *  @author Carlos Ruiz - globalqss - Quality Systems & Solutions - http://globalqss.com
  */
 public class LCO_MInvoice extends MInvoice
 {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = -924606040343895114L;
 
@@ -51,12 +60,14 @@ public class LCO_MInvoice extends MInvoice
 	}
 
 	public int recalcWithholdings() {
-		
+		if (! MSysConfig.getBooleanValue("LCO_USE_WITHHOLDINGS", true, Env.getAD_Client_ID(Env.getCtx())))
+			return 0;
+
 		MDocType dt = new MDocType(getCtx(), getC_DocTypeTarget_ID(), get_TrxName());
 		String genwh = dt.get_ValueAsString("GenerateWithholding");
 		if (genwh == null || genwh.equals("N"))
 			return 0;
-		
+
 		int noins = 0;
 		log.info("");
 		BigDecimal totwith = new BigDecimal("0");
@@ -95,7 +106,7 @@ public class LCO_MInvoice extends MInvoice
 
 			X_LCO_WithholdingRuleConf wrc = new Query(getCtx(),
 					X_LCO_WithholdingRuleConf.Table_Name,
-					"LCO_WithholdingType_ID=?", 
+					"LCO_WithholdingType_ID=?",
 					get_TrxName())
 					.setOnlyActiveRecords(true)
 					.setParameters(wt.getLCO_WithholdingType_ID())
@@ -160,7 +171,7 @@ public class LCO_MInvoice extends MInvoice
 							wherer.append(",");
 						}
 						wherer.append(wcid);
-					}	
+					}
 				}
 				if (addedlines)
 					wherer.append(") ");
@@ -187,7 +198,7 @@ public class LCO_MInvoice extends MInvoice
 							wherer.append(",");
 						}
 						wherer.append(wcid);
-					}	
+					}
 				}
 				if (addedlines)
 					wherer.append(") ");
@@ -227,10 +238,10 @@ public class LCO_MInvoice extends MInvoice
 				} else if (wc.getBaseType().equals(X_LCO_WithholdingCalc.BASETYPE_Line)) {
 					List<Object> paramslca = new ArrayList<Object>();
 					paramslca.add(getC_Invoice_ID());
-					String sqllca; 
+					String sqllca;
 					if (wrc.isUseWithholdingCategory() && wrc.isUseProductTaxCategory()) {
 						// base = lines of the withholding category and tax category
-						sqllca = 
+						sqllca =
 							"SELECT SUM (LineNetAmt) "
 							+ "  FROM C_InvoiceLine il "
 							+ " WHERE IsActive='Y' AND C_Invoice_ID = ? "
@@ -253,7 +264,7 @@ public class LCO_MInvoice extends MInvoice
 						paramslca.add(wr.getLCO_WithholdingCategory_ID());
 					} else if (wrc.isUseWithholdingCategory()) {
 						// base = lines of the withholding category
-						sqllca = 
+						sqllca =
 							"SELECT SUM (LineNetAmt) "
 							+ "  FROM C_InvoiceLine il "
 							+ " WHERE IsActive='Y' AND C_Invoice_ID = ? "
@@ -272,7 +283,7 @@ public class LCO_MInvoice extends MInvoice
 						paramslca.add(wr.getLCO_WithholdingCategory_ID());
 					} else if (wrc.isUseProductTaxCategory()) {
 						// base = lines of the product tax category
-						sqllca = 
+						sqllca =
 							"SELECT SUM (LineNetAmt) "
 							+ "  FROM C_InvoiceLine il "
 							+ " WHERE IsActive='Y' AND C_Invoice_ID = ? "
@@ -291,7 +302,7 @@ public class LCO_MInvoice extends MInvoice
 						paramslca.add(wr.getC_TaxCategory_ID());
 					} else {
 						// base = all lines
-						sqllca = 
+						sqllca =
 							"SELECT SUM (LineNetAmt) "
 							+ "  FROM C_InvoiceLine il "
 							+ " WHERE IsActive='Y' AND C_Invoice_ID = ? ";
@@ -319,8 +330,8 @@ public class LCO_MInvoice extends MInvoice
 
 				// if base between thresholdmin and thresholdmax inclusive
 				// if thresholdmax = 0 it is ignored
-				if (base != null && 
-						base.compareTo(Env.ZERO) != 0 && 
+				if (base != null &&
+						base.compareTo(Env.ZERO) != 0 &&
 						base.compareTo(wc.getThresholdmin()) >= 0 &&
 						(wc.getThresholdMax() == null || wc.getThresholdMax().compareTo(Env.ZERO) == 0 || base.compareTo(wc.getThresholdMax()) <= 0) &&
 						tax.getRate() != null &&
@@ -361,7 +372,7 @@ public class LCO_MInvoice extends MInvoice
 
 		return noins;
 	}
-	
+
 	/**
 	 *	Update Withholding in Header
 	 *	@return true if header updated with withholding
@@ -369,7 +380,7 @@ public class LCO_MInvoice extends MInvoice
 	public static boolean updateHeaderWithholding(int C_Invoice_ID, String trxName)
 	{
 		//	Update Invoice Header
-		String sql = 
+		String sql =
 			"UPDATE C_Invoice "
 			+ " SET WithholdingAmt="
 				+ "(SELECT COALESCE(SUM(TaxAmt),0) FROM LCO_InvoiceWithholding iw WHERE iw.IsActive = 'Y' " +
@@ -384,8 +395,8 @@ public class LCO_MInvoice extends MInvoice
 	 * Set Withholding Amount without Logging (via direct SQL UPDATE)
 	 */
 	public static boolean setWithholdingAmtWithoutLogging(MInvoice inv, BigDecimal wamt) {
-		DB.executeUpdateEx("UPDATE C_Invoice SET WithholdingAmt=? WHERE C_Invoice_ID=?", 
-				new Object[] {wamt, inv.getC_Invoice_ID()}, 
+		DB.executeUpdateEx("UPDATE C_Invoice SET WithholdingAmt=? WHERE C_Invoice_ID=?",
+				new Object[] {wamt, inv.getC_Invoice_ID()},
 				inv.get_TrxName());
 		return true;
 	}

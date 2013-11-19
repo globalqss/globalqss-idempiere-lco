@@ -2,16 +2,15 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Localization Colombia - Withholdings
 Bundle-SymbolicName: org.globalqss.idempiere.LCO.withholdings;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 2.0.0.qualifier
 Bundle-Activator: org.adempiere.plugin.utils.AdempiereActivator
 Bundle-Vendor: GlobalQSS
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Require-Bundle: org.adempiere.base;bundle-version="1.0.0",
  org.adempiere.plugin.utils;bundle-version="0.0.0"
-Bundle-ActivationPolicy: lazy
 Export-Package: org.globalqss.model,
  org.globalqss.process
-Service-Component: OSGI-INF/defaultmodelfactory.xml,
- OSGI-INF/lco_calloutswhfactory.xml,
- OSGI-INF/lcovalidatorwh.xml
+Service-Component: OSGI-INF/lco_modelfactorywh.xml,
+ OSGI-INF/lco_calloutfactorywh.xml,
+ OSGI-INF/lco_validatorwh.xml
 Import-Package: org.osgi.service.event

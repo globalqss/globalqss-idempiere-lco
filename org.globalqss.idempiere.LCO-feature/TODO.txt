@@ -1,4 +1,0 @@
-- create feature including three plugins
-org.globalqss.idempiere.LCO.detailednames
-org.globalqss.idempiere.LCO.magneticmedia
-org.globalqss.idempiere.LCO.withholdings
