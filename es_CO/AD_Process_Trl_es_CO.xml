@@ -483,7 +483,7 @@ Los parámetros son valores por defecto que se asignan a valores nulos que venga
  </row>
  <row id="205" trl="Y">
   <value column="Name" original="Cache Reset">Reinicia Cache</value>
-  <value column="Description" original="Reset Cache of the System ** Close all Windows before proceeding **">Reinicia el Cache del sitema ** Cerrar todas las ventanas antes de iniciar **</value>
+  <value column="Description" original="Reset Cache of the System ** Close all Windows before proceeding **">Reinicia el Cache del Sistema ** Cerrar todas las ventanas antes de iniciar **</value>
   <value column="Help" original="To increase performance, iDempiere caches repeatedly used data. This process clears the local cache.">Para aumentar el desempeño iDempiere mantiene en memoria algunos datos usados. Este proceso despeja el cache local.</value>
  </row>
  <row id="206" trl="Y">
