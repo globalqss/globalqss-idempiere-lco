@@ -6,8 +6,8 @@ Bundle-Version: 2.0.0.qualifier
 Bundle-Activator: org.adempiere.plugin.utils.AdempiereActivator
 Bundle-Vendor: GlobalQSS
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Require-Bundle: org.adempiere.base;bundle-version="1.0.0",
- org.adempiere.plugin.utils;bundle-version="0.0.0"
+Require-Bundle: org.adempiere.base;bundle-version="2.0.0",
+ org.adempiere.plugin.utils;bundle-version="2.0.0"
 Export-Package: org.globalqss.model,
  org.globalqss.process
 Service-Component: OSGI-INF/lco_modelfactorywh.xml,
