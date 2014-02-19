@@ -2054,6 +2054,11 @@ y otros</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="200049" trl="Y">
+  <value column="Name" original="Status Line">Línea de Estado</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row trl="Y" uuid="ecd46492-ebb1-410a-8627-44df151cdfbb">
   <value column="Name" original="TaxId Type">Tipo Identificación</value>
   <value column="Description" original=""/>

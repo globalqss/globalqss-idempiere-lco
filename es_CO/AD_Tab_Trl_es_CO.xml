@@ -6144,6 +6144,12 @@ Imprimiendo:
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="200100" trl="Y">
+  <value column="Name" original="Related Info Window">Ventana de Información Relacionada</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row id="200102" trl="Y">
   <value column="Name" original="Cost Adjustment">Ajuste Costo</value>
   <value column="CommitWarning" original=""/>
@@ -6200,6 +6206,24 @@ Imprimiendo:
  </row>
  <row id="200112" trl="Y">
   <value column="Name" original="Dashboard Content Access">Acceso Consola Contenido</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200113" trl="Y">
+  <value column="Name" original="Used in Info Column">Usado en Columna de Información</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200114" trl="Y">
+  <value column="Name" original="Status Line">Línea de Estado</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200115" trl="Y">
+  <value column="Name" original="Used In">Usado en</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original=""/>
   <value column="Help" original=""/>

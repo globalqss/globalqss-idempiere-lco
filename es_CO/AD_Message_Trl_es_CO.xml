@@ -2725,7 +2725,7 @@ Gracias por utilizar el Administrador de Activos de Cliente de iDempiere
   <value column="MsgTip" original=""/>
  </row>
  <row id="785" trl="Y">
-  <value column="MsgText" original="Log Out">Volver a Ingresar</value>
+  <value column="MsgText" original="Log Out">Salir</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="786" trl="Y">
@@ -6410,8 +6410,48 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgText" original="(Drag and drop menu item here)">(Arrastre un elemento del menú aquí)</value>
   <value column="MsgTip" original=""/>
  </row>
+ <row id="200237" trl="Y">
+  <value column="MsgText" original="Do you want to {0} this Document?">¿Está seguro de {0} este documento?</value>
+  <value column="MsgTip" original=""/>
+ </row>
  <row id="200238" trl="Y">
   <value column="MsgText" original="There are unsaved changes - are you sure to close?">Hay cambios sin guardar.  ¿Seguro desea cerrar?</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200239" trl="Y">
+  <value column="MsgText" original="more">más</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200243" trl="Y">
+  <value column="MsgText" original="Price list cannot be changed because the order contains product lines">La lista de precios no puede modificarse porque la orden contiene líneas de producto</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200244" trl="Y">
+  <value column="MsgText" original="Date Ordered cannot be changed because the order contains product lines and the change falls in a differente price list version">La fecha de la orden no se puede modificar porque la orden contiene líneas de productos y el cambio cae en una versión de lista de precios diferente</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200245" trl="Y">
+  <value column="MsgText" original="Price list cannot be changed because the invoice contains product lines">La lista de precios no puede modificarse porque la factura contiene líneas de producto</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200246" trl="Y">
+  <value column="MsgText" original="Date Invoiced cannot be changed because the invoice contains product lines and the change falls in a differente price list version">La fecha de la factura no se puede modificar porque la factura contiene líneas de productos y el cambio cae en una versión de lista de precios diferente</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200251" trl="Y">
+  <value column="MsgText" original="Quick Info">Información Rápida</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200252" trl="Y">
+  <value column="MsgText" original="Show detail">Mostrar Detalle</value>
+  <value column="MsgTip" original="Show detail locator info in &quot;Available to promise&quot; tab">Mostrar ubicación detallada en la pestaña "Disponible para Promesa"</value>
+ </row>
+ <row id="200253" trl="Y">
+  <value column="MsgText" original="Related Information">Información Relacionada</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200254" trl="Y">
+  <value column="MsgText" original="Document status has been changed by other session, please refresh the record and try again.">El estado del documento ha sido modificado en otra sesión, por favor refresque el registro e intente nuevamente.</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="520010" trl="Y">

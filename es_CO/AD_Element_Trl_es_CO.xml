@@ -2576,8 +2576,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="484" trl="Y">
-  <value column="Name" original="Process Date To">Fecha Para</value>
-  <value column="PrintName" original="P Date To">Fecha Para</value>
+  <value column="Name" original="Process Date To">Fecha Hasta</value>
+  <value column="PrintName" original="P Date To">Fecha Hasta</value>
   <value column="Description" original="Process Parameter"/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -5326,8 +5326,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1122" trl="Y">
-  <value column="Name" original="Process Number To">Número Para</value>
-  <value column="PrintName" original="P Number To">Número Para</value>
+  <value column="Name" original="Process Number To">Número Hasta</value>
+  <value column="PrintName" original="P Number To">Número Hasta</value>
   <value column="Description" original="Process Parameter"/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -54384,6 +54384,46 @@ Producto: usado para adicionar rápidamente productos a la venta</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
+ <row id="202556" trl="Y">
+  <value column="Name" original="InfoRelated">Información Relacionada</value>
+  <value column="PrintName" original="InfoRelated">Información Relacionada</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202557" trl="Y">
+  <value column="Name" original="Related Info Window">Ventana Información Relacionada</value>
+  <value column="PrintName" original="Related Info Window">Ventana Información Relacionada</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202558" trl="Y">
+  <value column="Name" original="Related Info Column">Columna Información Relacionada</value>
+  <value column="PrintName" original="Related Info Column">Related Info Column</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202559" trl="Y">
+  <value column="Name" original="AD_InfoRelated_UU">AD_InfoRelated_UU</value>
+  <value column="PrintName" original="AD_InfoRelated_UU">AD_InfoRelated_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
  <row id="202566" trl="Y">
   <value column="Name" original="Series Column">Columna Series</value>
   <value column="PrintName" original="Series Column">Columna Series</value>
@@ -54415,8 +54455,8 @@ Producto: usado para adicionar rápidamente productos a la venta</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="202569" trl="Y">
-  <value column="Name" original="IsShowinLogin">Mostrar en Login</value>
-  <value column="PrintName" original="Show Login">Mostrar en Login</value>
+  <value column="Name" original="Show on Login">Mostrar en Login</value>
+  <value column="PrintName" original="Show on Login">Mostrar en Login</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -54784,6 +54824,16 @@ Producto: usado para adicionar rápidamente productos a la venta</value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
+ <row id="202610" trl="Y">
+  <value column="Name" original="Tree displayed">Despliegue Arbol</value>
+  <value column="PrintName" original="Tree displayed">Despliegue Arbol</value>
+  <value column="Description" original="The tree can be displayed on master tab, detail tab or both">El árbol puede ser desplegado en el maestro, detalle o ambos</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
  <row id="202611" trl="Y">
   <value column="Name" original="Title Logic">Lógica Título</value>
   <value column="PrintName" original="Title Logic">Lógica Título</value>
@@ -54844,6 +54894,137 @@ si se deja en blanco el campo un título/rótulo por defecto se creará usando l
   <value column="PrintName" original="Default To Parameter">Parametro Hasta por Defecto</value>
   <value column="Description" original="Default value of the to parameter">Valor por defecto para el Parametro Hasta</value>
   <value column="Help" original="The default value can be a variable like @#Date@ ">El valor por defecto para una variable como @#Date@</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202625" trl="Y">
+  <value column="Name" original="Show Confirmation On Document Action Close">Show Confirmation On Document Action Close</value>
+  <value column="PrintName" original="Show Confirmation On Document Action Close">Show Confirmation On Document Action Close</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202626" trl="Y">
+  <value column="Name" original="Show Confirmation On Document Action Void">Pedir Confirmación al Anular Documento</value>
+  <value column="PrintName" original="Show Confirmation On Document Action Void">Pedir Confirmación al Anular Documento</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202627" trl="Y">
+  <value column="Name" original="Over Receipt">Sobre Recibo</value>
+  <value column="PrintName" original="Over Receipt">Sobre Recibo</value>
+  <value column="Description" original="Over Receipt Quantity">Cantidad Recibida por Encima</value>
+  <value column="Help" original="Calculated: Receipt - ordered quantity">Calculado: Cantidad Recibida - Ordenada</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202628" trl="Y">
+  <value column="Name" original="Drop table index">Borrar Indice Tabla</value>
+  <value column="PrintName" original="Drop table index">Borrar Indice Tabla</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202629" trl="Y">
+  <value column="Name" original="Zoom Logic">Lógica Acercar</value>
+  <value column="PrintName" original="Zoom Logic">Lógica Acercar</value>
+  <value column="Description" original="the result determines if the zoom condition is applied">El resultado determina si la lógica de acercar es aplicada</value>
+  <value column="Help" original="format := {expression} [{logic} {expression}]&lt;br&gt; &#10;expression := @{context}@{operand}{value} or @{context}@{operand}{value}&lt;br&gt; &#10;logic := {|}|{&amp;}&lt;br&gt;&#10;context := any global or window context &lt;br&gt;&#10;value := strings or numbers&lt;br&gt;&#10;logic operators&#9;:= AND or OR with the previous result from left to right &lt;br&gt;&#10;operand := eq{=}, gt{&amp;gt;}, le{&amp;lt;}, not{~^!} &lt;br&gt;&#10;Examples: &lt;br&gt;&#10;@AD_Table_ID@=14 | @Language@!GERGER &lt;br&gt;&#10;@PriceLimit@&gt;10 | @PriceList@&gt;@PriceActual@&lt;br&gt;&#10;@Name@&gt;J&lt;br&gt;&#10;Strings may be in single quotes (optional)"><![CDATA[formato := {expresión} [{lógica} {expresión}]<br> 
+expresión := @{contexto}@{operando}{valor} o @{contexto}@{operando}{valor}<br> 
+lógica := {|}|{&}<br>
+contexto := cualquier variable de contexto global o de ventana<br>
+valor := cadenas o números<br>
+operadores lógicos	:= AND u OR con el resultado anterior de izquierda a derecha<br>
+operando := igual{=}, mayor-que{&gt;}, menor-que{&lt;}, negación{~^!}<br>
+Ejemplos:<br>
+@AD_Table_ID@=14 | @Language@!GERGER<br>
+@PriceLimit@>10 | @PriceList@>@PriceActual@<br>
+@Name@>J<br>
+Las cadenas pueden estar (opcionalmente) entre comillas simples]]></value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202630" trl="Y">
+  <value column="Name" original="Drop view">Borrar Vista</value>
+  <value column="PrintName" original="Drop view">Borrar Vista</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202632" trl="Y">
+  <value column="Name" original="Add Separator">Añadir Separador</value>
+  <value column="PrintName" original="Add Separator">Añadir Separador</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202635" trl="Y">
+  <value column="Name" original="Status Line">Línea Estado</value>
+  <value column="PrintName" original="Status Line">Línea Estado</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202636" trl="Y">
+  <value column="Name" original="AD_StatusLine_UU">AD_StatusLine_UU</value>
+  <value column="PrintName" original="AD_StatusLine_UU">AD_StatusLine_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202637" trl="Y">
+  <value column="Name" original="AD_StatusLineUsedIn">Línea de Estado Usada En</value>
+  <value column="PrintName" original="AD_StatusLineUsedIn">Línea de Estado Usada En</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202638" trl="Y">
+  <value column="Name" original="AD_StatusLineUsedIn_UU">AD_StatusLineUsedIn_UU</value>
+  <value column="PrintName" original="AD_StatusLineUsedIn_UU">AD_StatusLineUsedIn_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202639" trl="Y">
+  <value column="Name" original="Status Line">Línea de Estado</value>
+  <value column="PrintName" original="Status Line">Línea de Estado</value>
+  <value column="Description" original="Defines if this record refers to a status line or to a help widget">Define si el registro se refiere a una línea de estado o a un artefacto de ayuda</value>
+  <value column="Help" original="If checked the definition corresponds to a status line, when unchecked it corresponds to a help widget">Si se chequea la definición corresponde a una línea de estado, si no está chequeado corresponde a un artefacto de ayuda</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>

@@ -294,6 +294,10 @@
   <value column="Name" original="Manufacturing">Manufactura</value>
   <value column="Description" original=""/>
  </row>
+ <row id="53363" trl="Y">
+  <value column="Name" original="Sales Management">Administración de Ventas</value>
+  <value column="Description" original=""/>
+ </row>
  <row trl="Y" uuid="a18acb98-2108-4004-b6ae-b5d794e14e96">
   <value column="Name" original="Colombia Localization">Localización Colombia</value>
   <value column="Description" original=""/>
