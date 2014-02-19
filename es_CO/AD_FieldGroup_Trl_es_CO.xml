@@ -159,7 +159,7 @@
   <value column="Name" original="Depreciation">Depreciación</value>
  </row>
  <row id="200000" trl="Y">
-  <value column="Name" original="Swing Position">Intercambiar Posición</value>
+  <value column="Name" original="Swing Position">Posición Swing</value>
  </row>
  <row id="200001" trl="Y">
   <value column="Name" original="Web Position">Posición Web</value>

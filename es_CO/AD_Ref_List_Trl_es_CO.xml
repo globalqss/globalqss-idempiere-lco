@@ -5350,6 +5350,18 @@
   <value column="Name" original="Until Expiration or Acknowledge">Hasta Expiración o Acuse Recibo</value>
   <value column="Description" original="Repeat it until the message expires or until it has been acknowledged, whatever happens first">Repetir el mensaje hasta que expire o se acuse recibo, lo que suceda primero</value>
  </row>
+ <row id="200158" trl="Y">
+  <value column="Name" original="Both">Ambos</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200159" trl="Y">
+  <value column="Name" original="Detail Tab">Pestaña Detalle</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200160" trl="Y">
+  <value column="Name" original="Master Tab">Pestaña Maestro</value>
+  <value column="Description" original=""/>
+ </row>
  <row id="200161" trl="Y">
   <value column="Name" original="Do Not Create">No Crear</value>
   <value column="Description" original=""/>

@@ -2502,6 +2502,21 @@
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="200071" trl="Y">
+  <value column="Name" original="AD_RelatedInfoWindow">AD_RelatedInfoWindow</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200072" trl="Y">
+  <value column="Name" original="AD_LinkInfowindow">AD_LinkInfowindow</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200074" trl="Y">
+  <value column="Name" original="TreeDisplayedOn">TreeDisplayedOn</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row id="200075" trl="Y">
   <value column="Name" original="Foreign Key Constraint Type">Foreign Key Constraint Type</value>
   <value column="Description" original=""/>

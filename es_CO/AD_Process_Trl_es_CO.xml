@@ -2158,6 +2158,21 @@ Si planea usar todos los lenguajes entonces cree un lenguaje xx_XX y úselo como
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="200065" trl="Y">
+  <value column="Name" original="Drop Table Index">Borrar Indice de Tabla</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200066" trl="Y">
+  <value column="Name" original="Drop view">Borrar Vista</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200067" trl="Y">
+  <value column="Name" original="Copy Info Window Columns">Copiar Columnas de Ventana de Información</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row trl="Y" uuid="0450d998-4a98-45d6-9487-d74051bfc47f">
   <value column="Name" original="Generate Withholding">Genera Retenciones</value>
   <value column="Description" original=""/>
