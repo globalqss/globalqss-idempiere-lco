@@ -84,7 +84,7 @@ public class LCO_Callouts implements IColumnCalloutFactory
 		String isDigitChecked = Env.getContext(ctx, WindowNo, "IsDigitChecked", true) ;
 
 		// if IsDigitChecked validate it and return error if different
-		if (!isDigitChecked.equals("Y"))
+		if (!X_LCO_TaxIdType.ISDIGITCHECKED_Check.equals(isDigitChecked))
 			return "";
 
 		String taxid = (String) mTab.getValue("TaxID");
@@ -99,7 +99,7 @@ public class LCO_Callouts implements IColumnCalloutFactory
 		} catch (NumberFormatException e) {
 			return "LCO_NotANumber";  // Error on the check digit
 		}
-		int correctDigit = LCO_Utils.calculateDigitDian(taxid.trim());
+		int correctDigit = LCO_Utils.calculateDigit(taxid.trim(), Env.getContextAsInt(ctx, WindowNo, "LCO_TaxIdType_ID"));
 		if (correctDigit == -1) // Error on the Tax ID - possibly invalid characters
 			mTab.setValue("TaxIdDigit", "");
 		if (correctDigit != taxIDDigit_int)
@@ -129,7 +129,7 @@ public class LCO_Callouts implements IColumnCalloutFactory
 		X_LCO_TaxIdType taxidtype = new X_LCO_TaxIdType(ctx, taxidtype_id, null);
 		mTab.setValue("IsUseTaxIdDigit", taxidtype.isUseTaxIdDigit());
 		mTab.setValue("IsDetailedNames", taxidtype.isDetailedNames());
-		Env.setContext(ctx, WindowNo, "IsDigitChecked", taxidtype.isDigitChecked()) ;
+		Env.setContext(ctx, WindowNo, "IsDigitChecked", taxidtype.getIsDigitChecked()) ;
 
 		return "";
 	}	//	taxIdType
@@ -169,6 +169,21 @@ public class LCO_Callouts implements IColumnCalloutFactory
 		int AD_Client_ID = Env.getAD_Client_ID(Env.getCtx());
 		if (MSysConfig.getBooleanValue("QSSLCO_FillValueWithTaxID", false, AD_Client_ID))
 			mTab.setValue(MBPartner.COLUMNNAME_Value, value);
+		
+		if (value != null && value.toString().trim().length() > 0) {
+			
+			// Generate and fill digit if IsDigitChecked = C
+			String isDigitChecked = Env.getContext(ctx, WindowNo, "IsDigitChecked", true) ;
+			if (isDigitChecked.equals(X_LCO_TaxIdType.ISDIGITCHECKED_Callout)) {
+				int correctDigit = LCO_Utils.calculateDigit(value.toString(), Env.getContextAsInt(ctx, WindowNo, "LCO_TaxIdType_ID"));
+				if (correctDigit == -1) // Error on the Tax ID - possibly invalid characters
+					mTab.setValue("TaxIdDigit", "");
+				else
+					mTab.setValue("TaxIdDigit", String.valueOf(correctDigit));
+
+			}
+			
+		}
 		return "";
 	}	//	fillValueWithTaxID
   }
