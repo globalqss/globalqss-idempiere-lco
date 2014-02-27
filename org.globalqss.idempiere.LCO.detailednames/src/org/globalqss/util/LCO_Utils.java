@@ -25,7 +25,14 @@
 
 package org.globalqss.util;
 
+import org.adempiere.exceptions.AdempiereException;
+import org.compiere.model.MCountry;
 import org.compiere.model.MSysConfig;
+import org.compiere.util.AdempiereUserError;
+import org.compiere.util.Env;
+import org.compiere.util.Msg;
+import org.compiere.util.Util;
+import org.globalqss.model.X_LCO_TaxIdType;
 
 /**
  *	Utils for Localization LCO
@@ -37,36 +44,35 @@ public class LCO_Utils
 {
 
 	/**
-	 *	Calculate DIAN Digit based on TaxID.
+	 * Calculate Check Digit based on TaxID
+	 * @param taxid
+	 * @param taxidtype_id
 	 */
-	public static int calculateDigitDian(String strNit) {
+	public static int calculateDigit(String taxID, int taxidtype_id) {
 
-		//Vector de numeros primos
-		int iNrosPrimos[] = { 3, 7, 13, 17, 19, 23, 29, 37,	41, 43, 47, 53, 59, 67, 71 };
-		//Variable para realizar las operaciones
-		int iOperacion = 0;
-		int posini = 0;
+		if (taxidtype_id <= 0)
+			return -1;
+		X_LCO_TaxIdType taxidtype = new X_LCO_TaxIdType(Env.getCtx(), taxidtype_id, null);
+		if (taxidtype.getC_Country_ID() <= 0)
+			throw new AdempiereException(Msg.getMsg(Env.getCtx(), "LCO_CountryRequired"));
+		MCountry country = MCountry.get(Env.getCtx(), taxidtype.getC_Country_ID());
+		String className = country.get_ValueAsString("LCO_TaxIDDigitClass");
+		if (Util.isEmpty(className))
+			throw new AdempiereException(Msg.getMsg(Env.getCtx(), "LCO_ValidationClassRequired"));
 
-		//Ciclo para multiplicar cada uno de los digitos del NIT con el vector
-		for (int i = 0; i < strNit.trim().length() ; i++) {
-			posini = strNit.trim().length() - (i + 1);
-			try {
-				iOperacion = iOperacion + Integer.parseInt(strNit.substring(posini, posini + 1)) * iNrosPrimos[i];
-			} catch (NumberFormatException e) {
-				return -1;
-			}
+		//	Get TaxIDDigit Class
+		ILCO_TaxIDDigit custom = null;
+		try
+		{
+			Class<?> clazz = Class.forName(className);
+			custom = (ILCO_TaxIDDigit)clazz.newInstance();
+		} catch (Exception e) {
+			throw new AdempiereUserError("No custom TaxID Digit class "
+					+ className + " - " + e.toString());
 		}
 
-		//Obtener el residuo de la operacion
-		iOperacion %= 11;
-
-		if (iOperacion == 0 || iOperacion == 1)	{
-		    return iOperacion;
-		}
-		else {
-		    return 11 - iOperacion;
-		}
-	}	// calculateDigitDian
+		return custom.calculateDigit(taxID, taxidtype_id);
+	}	// calculateDigit
 
 	public static final String SPACE = " ";
 	public static String getFullName(String fn1, String fn2, String ln1, String ln2, int AD_Client_ID) {

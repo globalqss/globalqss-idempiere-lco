@@ -64,6 +64,21 @@ public interface I_LCO_TaxIdType
 	  */
 	public int getAD_Org_ID();
 
+    /** Column name C_Country_ID */
+    public static final String COLUMNNAME_C_Country_ID = "C_Country_ID";
+
+	/** Set Country.
+	  * Country 
+	  */
+	public void setC_Country_ID (int C_Country_ID);
+
+	/** Get Country.
+	  * Country 
+	  */
+	public int getC_Country_ID();
+
+	public org.compiere.model.I_C_Country getC_Country() throws RuntimeException;
+
     /** Column name Created */
     public static final String COLUMNNAME_Created = "Created";
 
@@ -132,10 +147,10 @@ public interface I_LCO_TaxIdType
     public static final String COLUMNNAME_IsDigitChecked = "IsDigitChecked";
 
 	/** Set Is Digit Checked	  */
-	public void setIsDigitChecked (boolean IsDigitChecked);
+	public void setIsDigitChecked (String IsDigitChecked);
 
 	/** Get Is Digit Checked	  */
-	public boolean isDigitChecked();
+	public String getIsDigitChecked();
 
     /** Column name IsUseTaxIdDigit */
     public static final String COLUMNNAME_IsUseTaxIdDigit = "IsUseTaxIdDigit";

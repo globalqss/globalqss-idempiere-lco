@@ -106,8 +106,8 @@ public class LCO_ValidatorDN extends AbstractEventHandler
 		if (po.get_TableName().equals(X_LCO_TaxIdType.Table_Name) && ( type.equals(IEventTopics.PO_BEFORE_NEW) || type.equals(IEventTopics.PO_BEFORE_CHANGE)))
 		{
 			X_LCO_TaxIdType taxidtype = (X_LCO_TaxIdType) po;
-			if ((!taxidtype.isUseTaxIdDigit()) && taxidtype.isDigitChecked())
-				taxidtype.setIsDigitChecked(false);
+			if ((!taxidtype.isUseTaxIdDigit()) && X_LCO_TaxIdType.ISDIGITCHECKED_Check.equals(taxidtype.getIsDigitChecked()))
+				taxidtype.setIsDigitChecked(X_LCO_TaxIdType.ISDIGITCHECKED_Generate);
 		}
 	}	//	doHandleEvent
 
@@ -141,12 +141,12 @@ public class LCO_ValidatorDN extends AbstractEventHandler
 		if (taxid == null || taxid.trim().length() == 0)
 			return Msg.getMsg(bpartner.getCtx(), "LCO_NoTaxID");
 
-		int correctDigit = LCO_Utils.calculateDigitDian(taxid);
+		int correctDigit = LCO_Utils.calculateDigit(taxid, taxidtype_I.intValue());
 		if (correctDigit == -1) // Error on the Tax ID - possibly invalid characters
 			return Msg.getMsg(bpartner.getCtx(), "LCO_NotValidID");
 
 		String taxIDDigit = (String) bpartner.get_Value("TaxIdDigit");
-		if (taxidtype.isDigitChecked()) {
+		if (X_LCO_TaxIdType.ISDIGITCHECKED_Check.equals(taxidtype.getIsDigitChecked())) {
 			if (taxIDDigit == null || taxIDDigit.trim().length() == 0)
 				return Msg.getMsg(bpartner.getCtx(), "LCO_NoDigit"); // No Tax ID Digit
 			int taxIDDigit_int;

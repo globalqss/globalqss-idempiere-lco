@@ -31,7 +31,7 @@ public class X_LCO_TaxIdType extends PO implements I_LCO_TaxIdType, I_Persistent
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20131119L;
+	private static final long serialVersionUID = 20140225L;
 
     /** Standard Constructor */
     public X_LCO_TaxIdType (Properties ctx, int LCO_TaxIdType_ID, String trxName)
@@ -41,8 +41,8 @@ public class X_LCO_TaxIdType extends PO implements I_LCO_TaxIdType, I_Persistent
         {
 			setIsDetailedNames (false);
 // N
-			setIsDigitChecked (false);
-// N
+			setIsDigitChecked (null);
+// C
 			setIsUseTaxIdDigit (false);
 // N
 			setLCO_TaxIdType_ID (0);
@@ -77,6 +77,34 @@ public class X_LCO_TaxIdType extends PO implements I_LCO_TaxIdType, I_Persistent
         .append(get_ID()).append("]");
       return sb.toString();
     }
+
+	public org.compiere.model.I_C_Country getC_Country() throws RuntimeException
+    {
+		return (org.compiere.model.I_C_Country)MTable.get(getCtx(), org.compiere.model.I_C_Country.Table_Name)
+			.getPO(getC_Country_ID(), get_TrxName());	}
+
+	/** Set Country.
+		@param C_Country_ID 
+		Country 
+	  */
+	public void setC_Country_ID (int C_Country_ID)
+	{
+		if (C_Country_ID < 1) 
+			set_ValueNoCheck (COLUMNNAME_C_Country_ID, null);
+		else 
+			set_ValueNoCheck (COLUMNNAME_C_Country_ID, Integer.valueOf(C_Country_ID));
+	}
+
+	/** Get Country.
+		@return Country 
+	  */
+	public int getC_Country_ID () 
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_C_Country_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
 
 	/** Set Description.
 		@param Description 
@@ -140,25 +168,25 @@ public class X_LCO_TaxIdType extends PO implements I_LCO_TaxIdType, I_Persistent
 		return false;
 	}
 
+	/** Check = Y */
+	public static final String ISDIGITCHECKED_Check = "Y";
+	/** Generate = N */
+	public static final String ISDIGITCHECKED_Generate = "N";
+	/** Callout = C */
+	public static final String ISDIGITCHECKED_Callout = "C";
 	/** Set Is Digit Checked.
 		@param IsDigitChecked Is Digit Checked	  */
-	public void setIsDigitChecked (boolean IsDigitChecked)
+	public void setIsDigitChecked (String IsDigitChecked)
 	{
-		set_Value (COLUMNNAME_IsDigitChecked, Boolean.valueOf(IsDigitChecked));
+
+		set_Value (COLUMNNAME_IsDigitChecked, IsDigitChecked);
 	}
 
 	/** Get Is Digit Checked.
 		@return Is Digit Checked	  */
-	public boolean isDigitChecked () 
+	public String getIsDigitChecked () 
 	{
-		Object oo = get_Value(COLUMNNAME_IsDigitChecked);
-		if (oo != null) 
-		{
-			 if (oo instanceof Boolean) 
-				 return ((Boolean)oo).booleanValue(); 
-			return "Y".equals(oo);
-		}
-		return false;
+		return (String)get_Value(COLUMNNAME_IsDigitChecked);
 	}
 
 	/** Set Use Tax Id Digit.
