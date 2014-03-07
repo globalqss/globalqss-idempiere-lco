@@ -3260,7 +3260,7 @@ There are two reasons for de-activating and not deleting records:
         <AD_Client_ID>0</AD_Client_ID>
         <AD_Org_ID>0</AD_Org_ID>
         <AD_SysConfig_UU>48566215-6090-4aff-8662-32283b9b8d31</AD_SysConfig_UU>
-        <ConfigurationLevel>S</ConfigurationLevel>
+        <ConfigurationLevel>C</ConfigurationLevel>
         <Description>Validate tax code against third digit of taxID (must configure properly taxcode - see LEC_TaxIDDigit.java)</Description>
         <EntityType>QSS_LCO</EntityType>
         <IsActive>true</IsActive>

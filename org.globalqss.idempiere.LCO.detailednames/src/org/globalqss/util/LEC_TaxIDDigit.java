@@ -81,7 +81,7 @@ public class LEC_TaxIDDigit implements ILCO_TaxIDDigit {
 		default:
 			throw new AdempiereException(Msg.getMsg(Env.getCtx(), "LEC_WrongCode"));
 		}
-		if (MSysConfig.getBooleanValue("QSSLEC_ValidateWithTaxCode", true)) {
+		if (MSysConfig.getBooleanValue("QSSLEC_ValidateWithTaxCode", true, Env.getAD_Client_ID(Env.getCtx()))) {
 			X_LCO_TaxIdType taxidtype = new X_LCO_TaxIdType(Env.getCtx(), taxidtype_id, null);
 			if (! taxidtype.getLCO_TaxCodeDian().contains(taxID.substring(2, 3))) {
 				// Para habilitar esta validacion se debe llenar taxcode con 012345 para RUC Natural, 6 para RUC Publico, 9 para RUC Juridico
