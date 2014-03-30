@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<idempiere Name="LCO_InvoiceNumberControl" Version="1.0" idempiereVersion="" DataBaseVersion="" Description="" Author="" AuthorEmail="" CreatedDate="2014-03-06 20:20:40.657" UpdatedDate="2014-03-19 21:04:07.843" PackOutVersion="100" UpdateDictionary="false" Client="0-SYSTEM-System" AD_Client_UU="11237b53-9592-4af1-b3c5-afd216514b5d">
+<idempiere Name="org.globalqss.idempiere.LCO.invoicenumbercontrol" Version="2.1.0" idempiereVersion="" DataBaseVersion="" Description="Localization Colombia - Invoice Number Control" Author="" AuthorEmail="info@globalqss.com" CreatedDate="2014-03-06 20:20:40.657" UpdatedDate="2014-03-19 21:04:07.843" PackOutVersion="100" UpdateDictionary="false" Client="0-SYSTEM-System" AD_Client_UU="11237b53-9592-4af1-b3c5-afd216514b5d">
     <AD_EntityType type="table">
         <AD_Client_ID>0</AD_Client_ID>
         <AD_Org_ID>0</AD_Org_ID>
@@ -3008,5 +3008,106 @@ Hay dos razones para desactivar y no borrar los registros:
                 <IsActive>true</IsActive>
                 <IsTranslated>true</IsTranslated>
             </AD_Field_Trl>
+    </AD_Field>
+    <AD_Column type="table">
+	<IsSyncDatabase>Y</IsSyncDatabase>
+        <AD_Table_ID reference="uuid" reference-key="AD_Table">ee26ff25-19d0-44a6-ab6a-9587f1ff5c55</AD_Table_ID>
+	<AD_Reference_Value_ID reference="uuid" reference-key="AD_Reference">e0fba191-c2c2-4514-99c1-fedc614c6710</AD_Reference_Value_ID>
+	<AD_Client_ID>0</AD_Client_ID>
+	<AD_Org_ID>0</AD_Org_ID>
+	<SeqNoSelection>0</SeqNoSelection>
+	<Version>0</Version>
+	<ValueMax/>
+	<IsMandatory>false</IsMandatory>
+	<IsTranslated>false</IsTranslated>
+	<IsIdentifier>false</IsIdentifier>
+	<SeqNo>0</SeqNo>
+	<ValueMin/>
+	<IsParent>false</IsParent>
+	<FieldLength>10</FieldLength>
+	<IsSelectionColumn>false</IsSelectionColumn>
+	<IsKey>false</IsKey>
+	<AD_Process_ID reference="id"/>
+	<ReadOnlyLogic/>
+	<IsAutocomplete>false</IsAutocomplete>
+	<IsAllowLogging>true</IsAllowLogging>
+	<MandatoryLogic/>
+	<FormatPattern/>
+	<AD_Column_UU>c12316cf-9dcc-4cd9-a634-ef5672c99640</AD_Column_UU>
+	<IsUpdateable>true</IsUpdateable>
+	<Callout/>
+	<ColumnName>LCO_PrintedFormControl_ID</ColumnName>
+	<Description/>
+	<Help/>
+	<ColumnSQL/>
+	<DefaultValue/>
+	<Name>Printed Form Control</Name>
+	<IsAllowCopy>true</IsAllowCopy>
+	<IsActive>true</IsActive>
+	<IsToolbarButton>false</IsToolbarButton>
+	<IsAlwaysUpdateable>false</IsAlwaysUpdateable>
+	<EntityType>QSS_LCO</EntityType>
+	<VFormat/>
+	<IsEncrypted>N</IsEncrypted>
+	<IsSecure>false</IsSecure>
+	<AD_Chart_ID reference="id"/>
+	<FKConstraintType>N</FKConstraintType>
+	<FKConstraintName>LCOPrintedFormControl_LCOInvoi</FKConstraintName>
+	<AD_Element_ID reference="uuid" reference-key="AD_Element">14318417-8f74-42c7-9cad-dd3ff5a4f5a2</AD_Element_ID>
+	<AD_Reference_ID reference="id">18</AD_Reference_ID>
+	<AD_Val_Rule_ID reference="id"/>
+    </AD_Column>
+    <AD_Field type="table">
+	<AD_Client_ID>0</AD_Client_ID>
+	<AD_Org_ID>0</AD_Org_ID>
+	<SortNo>0</SortNo>
+	<IsEncrypted>false</IsEncrypted>
+	<AD_Tab_ID reference="uuid" reference-key="AD_Tab">a29a9723-4050-4802-907d-5d5353a9e96a</AD_Tab_ID>
+	<DisplayLength>0</DisplayLength>
+	<IsSameLine>false</IsSameLine>
+	<IsHeading>false</IsHeading>
+	<SeqNo>150</SeqNo>
+	<IsCentrallyMaintained>true</IsCentrallyMaintained>
+	<IsReadOnly>true</IsReadOnly>
+	<Help/>
+	<ObscureType/>
+	<DisplayLogic>@#LCO_USE_WITHHOLDINGS@=Y &amp; @#LEC_CPF_USE_ON_WITHHOLDIGS@=Y</DisplayLogic>
+	<IsMandatory/>
+	<AD_Val_Rule_ID reference="id"/>
+	<Included_Tab_ID reference="id"/>
+	<Description/>
+	<Name>Authorization No.</Name>
+	<AD_Field_UU>ff1c19d3-a3ed-4941-9b20-11db9b8b3e7a</AD_Field_UU>
+	<IsDisplayed>true</IsDisplayed>
+	<IsFieldOnly>false</IsFieldOnly>
+	<DefaultValue/>
+	<IsAllowCopy/>
+	<IsActive>true</IsActive>
+	<IsDisplayedGrid>true</IsDisplayedGrid>
+	<SeqNoGrid>10</SeqNoGrid>
+	<XPosition>1</XPosition>
+	<IsQuickEntry>false</IsQuickEntry>
+	<MandatoryLogic/>
+	<IsUpdateable/>
+	<IsAlwaysUpdateable/>
+	<ReadOnlyLogic/>
+	<IsToolbarButton/>
+	<ColumnSpan>1</ColumnSpan>
+	<NumLines>1</NumLines>
+	<IsAdvancedField>false</IsAdvancedField>
+	<IsDefaultFocus>false</IsDefaultFocus>
+	<AD_Column_ID reference="uuid" reference-key="AD_Column">c12316cf-9dcc-4cd9-a634-ef5672c99640</AD_Column_ID>
+	<AD_FieldGroup_ID reference="uuid" reference-key="AD_FieldGroup">3e05164b-db4f-4482-a17d-faf6dada8d68</AD_FieldGroup_ID>
+	<AD_Reference_ID reference="id"/>
+	<AD_Reference_Value_ID reference="id"/>
+	<EntityType>QSS_LCO</EntityType>
+	<AD_Field_Trl type="translation">
+	    <Help/>
+	    <Description/>
+	    <Name>Número de Autorización</Name>
+	    <AD_Language>es_CO</AD_Language>
+	    <IsActive>true</IsActive>
+	    <IsTranslated>true</IsTranslated>
+	</AD_Field_Trl>
     </AD_Field>
 </idempiere>
