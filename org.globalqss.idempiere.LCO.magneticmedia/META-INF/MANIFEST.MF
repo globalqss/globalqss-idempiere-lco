@@ -12,5 +12,6 @@ Export-Package: org.globalqss.model,
  org.globalqss.process,
  org.globalqss.util
 Service-Component: OSGI-INF/lco_modelfactorymm.xml,
+ OSGI-INF/lco_processfactorymm.xml,
  OSGI-INF/lco_validatormm.xml
 Import-Package: org.osgi.service.event
