@@ -200,12 +200,12 @@
         <AD_Message_UU>b3a9638b-3c54-4c8f-bfbd-79875f967ce9</AD_Message_UU>
         <EntityType>QSS_LCO</EntityType>
         <IsActive>true</IsActive>
-        <MsgText>Tax ID must have 13 characters</MsgText>
+        <MsgText>Wrong length on Tax ID</MsgText>
         <MsgTip/>
         <MsgType>E</MsgType>
-        <Value>LEC_TaxIDNotLength13</Value>
+        <Value>LEC_TaxIDWrongLength</Value>
         <AD_Message_Trl type="translation">
-            <MsgText>RUC debe tener 13 caracteres</MsgText>
+            <MsgText>Longitud incorrecta en el documento</MsgText>
             <MsgTip/>
             <AD_Language>es_CO</AD_Language>
             <IsActive>true</IsActive>
@@ -278,6 +278,24 @@
         <Value>LEC_WrongProvince</Value>
         <AD_Message_Trl type="translation">
             <MsgText>Provincia incorrecta en el RUC</MsgText>
+            <MsgTip/>
+            <AD_Language>es_CO</AD_Language>
+            <IsActive>true</IsActive>
+            <IsTranslated>true</IsTranslated>
+        </AD_Message_Trl>
+    </AD_Message>
+    <AD_Message type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <AD_Message_UU>5ecb24cb-8ec8-4c38-acb0-8b0e0a15ce62</AD_Message_UU>
+        <EntityType>QSS_LCO</EntityType>
+        <IsActive>true</IsActive>
+        <MsgText>Wrong tax code on tax ID</MsgText>
+        <MsgTip/>
+        <MsgType>E</MsgType>
+        <Value>LEC_WrongTaxCode</Value>
+        <AD_Message_Trl type="translation">
+            <MsgText>Código de tipo de persona incorrecto</MsgText>
             <MsgTip/>
             <AD_Language>es_CO</AD_Language>
             <IsActive>true</IsActive>
@@ -3265,6 +3283,17 @@ There are two reasons for de-activating and not deleting records:
         <EntityType>QSS_LCO</EntityType>
         <IsActive>true</IsActive>
         <Name>QSSLEC_ValidateWithTaxCode</Name>
+        <Value>Y</Value>
+    </AD_SysConfig>
+    <AD_SysConfig type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <AD_SysConfig_UU>6dc95921-a05d-47fa-9f80-b1bb6c8ac0f8</AD_SysConfig_UU>
+        <ConfigurationLevel>C</ConfigurationLevel>
+        <Description>Allow 10 digit documents for persons</Description>
+        <EntityType>QSS_LCO</EntityType>
+        <IsActive>true</IsActive>
+        <Name>QSSLEC_Allow10DigitDoc</Name>
         <Value>Y</Value>
     </AD_SysConfig>
     <AD_Element type="table">

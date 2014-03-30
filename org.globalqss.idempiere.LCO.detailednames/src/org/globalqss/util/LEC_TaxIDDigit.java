@@ -39,9 +39,10 @@ public class LEC_TaxIDDigit implements ILCO_TaxIDDigit {
 
 	@Override
 	public int calculateDigit(String taxID, int taxidtype_id) {
-		// valida longitud 13
-		if (taxID.length() != 13) {
-			throw new AdempiereException(Msg.getMsg(Env.getCtx(), "LEC_TaxIDNotLength13"));
+		// validacion inicial longitud (10 o 13) - validado por tipo mas adelante
+		int longdoc = taxID.length();
+		if (longdoc != 13 && longdoc != 10) {
+			throw new AdempiereException(Msg.getMsg(Env.getCtx(), "LEC_TaxIDWrongLength"));
 		}
 		try {
 			long taxIDnum = Long.parseLong(taxID);
@@ -79,7 +80,14 @@ public class LEC_TaxIDDigit implements ILCO_TaxIDDigit {
 			coeficientes = new Integer[] {4,3,2,7,6,5,4,3,2};
 			break;
 		default:
-			throw new AdempiereException(Msg.getMsg(Env.getCtx(), "LEC_WrongCode"));
+			throw new AdempiereException(Msg.getMsg(Env.getCtx(), "LEC_WrongTaxCode"));
+		}
+		// valida longitud por tipo de documento
+		if (longdoc == 10) {  // ya se sabe arriba que si no es 10 es 13 y 13 es correcto
+			if (   tipopersona != NATURAL
+				|| ! MSysConfig.getBooleanValue("QSSLEC_Allow10DigitDoc", true, Env.getAD_Client_ID(Env.getCtx()))) {
+				throw new AdempiereException(Msg.getMsg(Env.getCtx(), "LEC_TaxIDWrongLength"));
+			}
 		}
 		if (MSysConfig.getBooleanValue("QSSLEC_ValidateWithTaxCode", true, Env.getAD_Client_ID(Env.getCtx()))) {
 			X_LCO_TaxIdType taxidtype = new X_LCO_TaxIdType(Env.getCtx(), taxidtype_id, null);
@@ -90,9 +98,11 @@ public class LEC_TaxIDDigit implements ILCO_TaxIDDigit {
 		}
 		String valida = taxID.substring(0, 3+longconsec);
 		int digitoInterno = Integer.parseInt(taxID.substring(3+longconsec, 3+longconsec+1));
-		int suc = Integer.parseInt(taxID.substring(3+longconsec+1, 13));
-		if (tipopersona == NATURAL && suc != 1) {
-			throw new AdempiereException(Msg.getMsg(Env.getCtx(), "LEC_WrongBranch"));
+		if (longdoc > 10) {
+			int suc = Integer.parseInt(taxID.substring(3+longconsec+1, 13));
+			if (tipopersona == NATURAL && suc != 1) {
+				throw new AdempiereException(Msg.getMsg(Env.getCtx(), "LEC_WrongBranch"));
+			}
 		}
 		int digito = modulo(valida, coeficientes, mod);
 		if (digito != digitoInterno) {
