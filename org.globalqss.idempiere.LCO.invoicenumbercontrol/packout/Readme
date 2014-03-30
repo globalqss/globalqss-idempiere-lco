@@ -1,0 +1,2 @@
+LCO_InvoiceNumberControl: this twopack is mandatory and provide basic structure for document number control 
+LCO_InvoiceWithholdingINC: this twopack is optional. It provides basic structures for printed form control on withholdings
