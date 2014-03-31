@@ -88,7 +88,7 @@
         <Description>On withholding tab- defines if Printed Form Control is active or not</Description>
         <AD_SysConfig_UU>2d2d4e9d-c38a-4bd2-9cd5-b09aeaa45b63</AD_SysConfig_UU>
         <IsActive>true</IsActive>
-        <Name>QSSLEC_IsPrintedFormControlActiveWithHolding</Name>
+        <Name>QSSLEC_IsPrintedFormControlActiveWithholding</Name>
         <EntityType>QSS_LCO</EntityType>
     </AD_SysConfig>
     <AD_Message type="table">
