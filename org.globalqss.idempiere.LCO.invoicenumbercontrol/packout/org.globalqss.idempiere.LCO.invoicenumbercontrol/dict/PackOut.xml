@@ -77,7 +77,7 @@
         <Description>On Invoice window - defines if the second length should be taken into accout too.</Description>
         <AD_SysConfig_UU>0fb63456-171a-4266-873e-e2dbcf8bdad8</AD_SysConfig_UU>
         <IsActive>true</IsActive>
-        <Name>QSSLEC_DocNoLengthOptinalActive</Name>
+        <Name>QSSLEC_DocNoLengthOptionalActive</Name>
         <EntityType>QSS_LCO</EntityType>
     </AD_SysConfig>
     <AD_SysConfig type="table">
@@ -202,96 +202,6 @@
     <AD_Message type="table">
         <AD_Client_ID>0</AD_Client_ID>
         <AD_Org_ID>0</AD_Org_ID>
-        <MsgType>E</MsgType>
-        <MsgText>Error vallidating printed form creation:</MsgText>
-        <MsgTip/>
-        <EntityType>C</EntityType>
-        <AD_Message_UU>ec20ccb4-88a3-4988-ac40-b9669b76b49b</AD_Message_UU>
-        <Value>LCO_ValidatePrintedFormCreationError</Value>
-        <IsActive>true</IsActive>
-        <AD_Message_Trl type="translation">
-            <MsgText>Error validando forma impresa:</MsgText>
-            <MsgTip/>
-            <AD_Language>es_CO</AD_Language>
-            <IsActive>true</IsActive>
-            <IsTranslated>true</IsTranslated>
-        </AD_Message_Trl>
-    </AD_Message>
-    <AD_Message type="table">
-        <AD_Client_ID>0</AD_Client_ID>
-        <AD_Org_ID>0</AD_Org_ID>
-        <MsgType>E</MsgType>
-        <MsgText>Error validating printed form on invoice.</MsgText>
-        <MsgTip/>
-        <EntityType>QSS_LCO</EntityType>
-        <AD_Message_UU>bdabb1b9-45de-44ee-b9e5-2f13702b68e9</AD_Message_UU>
-        <Value>LCO_ValidatePrintedFormOnInvoiceError</Value>
-        <IsActive>true</IsActive>
-        <AD_Message_Trl type="translation">
-            <MsgText>Error validando forma impresa en factura</MsgText>
-            <MsgTip/>
-            <AD_Language>es_CO</AD_Language>
-            <IsActive>true</IsActive>
-            <IsTranslated>true</IsTranslated>
-        </AD_Message_Trl>
-    </AD_Message>
-    <AD_Message type="table">
-        <AD_Client_ID>0</AD_Client_ID>
-        <AD_Org_ID>0</AD_Org_ID>
-        <MsgType>E</MsgType>
-        <MsgText>Error validating printed form on withholding</MsgText>
-        <MsgTip/>
-        <EntityType>QSS_LCO</EntityType>
-        <AD_Message_UU>df39563a-941b-4363-96d5-f5cfc753ad34</AD_Message_UU>
-        <Value>LCO_ValidatePrintedFormOnWithholdingError</Value>
-        <IsActive>true</IsActive>
-        <AD_Message_Trl type="translation">
-            <MsgText>Error validando forma impresa en retención</MsgText>
-            <MsgTip/>
-            <AD_Language>es_CO</AD_Language>
-            <IsActive>true</IsActive>
-            <IsTranslated>true</IsTranslated>
-        </AD_Message_Trl>
-    </AD_Message>
-    <AD_Message type="table">
-        <AD_Client_ID>0</AD_Client_ID>
-        <AD_Org_ID>0</AD_Org_ID>
-        <MsgType>E</MsgType>
-        <MsgText>Error updating printed form control reference on Invoice</MsgText>
-        <MsgTip/>
-        <EntityType>QSS_LCO</EntityType>
-        <AD_Message_UU>49a7f658-1ca3-446c-9506-c963bfcf2c81</AD_Message_UU>
-        <Value>LCO_ErrorUpdatingPrintedFormControlOnInvoice</Value>
-        <IsActive>true</IsActive>
-        <AD_Message_Trl type="translation">
-            <MsgText>Error actualizando referencia de forma impresa en factura</MsgText>
-            <MsgTip/>
-            <AD_Language>es_CO</AD_Language>
-            <IsActive>true</IsActive>
-            <IsTranslated>true</IsTranslated>
-        </AD_Message_Trl>
-    </AD_Message>
-    <AD_Message type="table">
-        <AD_Client_ID>0</AD_Client_ID>
-        <AD_Org_ID>0</AD_Org_ID>
-        <MsgType>E</MsgType>
-        <MsgText>Error updating printed form control reference on withholding</MsgText>
-        <MsgTip/>
-        <EntityType>QSS_LCO</EntityType>
-        <AD_Message_UU>91faeec1-e861-4822-9771-92a7137c2b8a</AD_Message_UU>
-        <Value>LCO_ErrorUpdatingPrintedFormControlOnWithholding</Value>
-        <IsActive>true</IsActive>
-        <AD_Message_Trl type="translation">
-            <MsgText>Error actualizando referencia de forma impresa en retención</MsgText>
-            <MsgTip/>
-            <AD_Language>es_CO</AD_Language>
-            <IsActive>true</IsActive>
-            <IsTranslated>true</IsTranslated>
-        </AD_Message_Trl>
-    </AD_Message>
-    <AD_Message type="table">
-        <AD_Client_ID>0</AD_Client_ID>
-        <AD_Org_ID>0</AD_Org_ID>
         <MsgType>I</MsgType>
         <MsgText>No printed form matches document information</MsgText>
         <MsgTip/>
@@ -377,7 +287,7 @@
                 <PO_PrintName/>
                 <Name>Printed Form Control</Name>
                 <Description/>
-                <PrintName trim="false">Printed Form Control</PrintName>
+                <PrintName trim="false">Control Forma Impresa</PrintName>
                 <PO_Name/>
                 <AD_Language>es_CO</AD_Language>
                 <IsActive>true</IsActive>
@@ -887,13 +797,13 @@ There are two reasons for de-activating and not deleting records:
                 <PO_Description/>
                 <PO_Help/>
                 <PO_PrintName/>
-                <Name>Initial Sequence</Name>
+                <Name>Secuencia Inicial</Name>
                 <Description/>
-                <PrintName trim="false">Initial Sequence</PrintName>
+                <PrintName trim="false">Secuencia Inicial</PrintName>
                 <PO_Name/>
                 <AD_Language>es_CO</AD_Language>
                 <IsActive>true</IsActive>
-                <IsTranslated>false</IsTranslated>
+                <IsTranslated>true</IsTranslated>
             </AD_Element_Trl>
         </AD_Element>
         <AD_Column type="table">
@@ -964,13 +874,13 @@ There are two reasons for de-activating and not deleting records:
                 <PO_Description/>
                 <PO_Help/>
                 <PO_PrintName/>
-                <Name>Final Sequence</Name>
+                <Name>Secuencia Final</Name>
                 <Description/>
-                <PrintName trim="false">Final Sequence</PrintName>
+                <PrintName trim="false">Secuencia Final</PrintName>
                 <PO_Name/>
                 <AD_Language>es_CO</AD_Language>
                 <IsActive>true</IsActive>
-                <IsTranslated>false</IsTranslated>
+                <IsTranslated>true</IsTranslated>
             </AD_Element_Trl>
         </AD_Element>
         <AD_Column type="table">
@@ -1043,7 +953,7 @@ There are two reasons for de-activating and not deleting records:
                 <PO_PrintName/>
                 <Name>Authorization No</Name>
                 <Description/>
-                <PrintName trim="false">Authorization No</PrintName>
+                <PrintName trim="false">No. Resolución</PrintName>
                 <PO_Name/>
                 <AD_Language>es_CO</AD_Language>
                 <IsActive>true</IsActive>
@@ -1143,7 +1053,7 @@ There are two reasons for de-activating and not deleting records:
             <FKConstraintType>N</FKConstraintType>
             <FKConstraintName/>
             <AD_Element_ID reference="id">617</AD_Element_ID>
-            <AD_Reference_ID reference="id">16</AD_Reference_ID>
+            <AD_Reference_ID reference="id">15</AD_Reference_ID>
             <AD_Val_Rule_ID reference="id"/>
         </AD_Column>
         <AD_Element type="table">
@@ -1168,7 +1078,7 @@ There are two reasons for de-activating and not deleting records:
                 <PO_PrintName/>
                 <Name>Valid until</Name>
                 <Description/>
-                <PrintName trim="false">Valid until</PrintName>
+                <PrintName trim="false">Válida Hasta</PrintName>
                 <PO_Name/>
                 <AD_Language>es_CO</AD_Language>
                 <IsActive>true</IsActive>
@@ -1220,7 +1130,7 @@ There are two reasons for de-activating and not deleting records:
             <FKConstraintType>N</FKConstraintType>
             <FKConstraintName/>
             <AD_Element_ID reference="uuid" reference-key="AD_Element">989efe10-f102-43c7-8ef8-302a76fd19f9</AD_Element_ID>
-            <AD_Reference_ID reference="id">16</AD_Reference_ID>
+            <AD_Reference_ID reference="id">15</AD_Reference_ID>
             <AD_Val_Rule_ID reference="id"/>
         </AD_Column>
         <AD_Element type="table">
@@ -1817,7 +1727,7 @@ There are two reasons for de-activating and not deleting records:
             <IsActive>true</IsActive>
             <IsDisplayedGrid>true</IsDisplayedGrid>
             <SeqNoGrid/>
-            <XPosition>1</XPosition>
+            <XPosition>4</XPosition>
             <IsQuickEntry>false</IsQuickEntry>
             <MandatoryLogic/>
             <IsUpdateable/>
@@ -1923,7 +1833,7 @@ There are two reasons for de-activating and not deleting records:
             <IsActive>true</IsActive>
             <IsDisplayedGrid>true</IsDisplayedGrid>
             <SeqNoGrid/>
-            <XPosition>1</XPosition>
+            <XPosition>4</XPosition>
             <IsQuickEntry>false</IsQuickEntry>
             <MandatoryLogic/>
             <IsUpdateable/>
@@ -2558,7 +2468,7 @@ Hay dos razones para desactivar y no borrar los registros:
             <IsActive>true</IsActive>
             <IsDisplayedGrid>true</IsDisplayedGrid>
             <SeqNoGrid/>
-            <XPosition>1</XPosition>
+            <XPosition>4</XPosition>
             <IsQuickEntry>false</IsQuickEntry>
             <MandatoryLogic/>
             <IsUpdateable/>
@@ -2664,7 +2574,7 @@ Hay dos razones para desactivar y no borrar los registros:
             <IsActive>true</IsActive>
             <IsDisplayedGrid>true</IsDisplayedGrid>
             <SeqNoGrid/>
-            <XPosition>1</XPosition>
+            <XPosition>4</XPosition>
             <IsQuickEntry>false</IsQuickEntry>
             <MandatoryLogic/>
             <IsUpdateable/>
@@ -2970,7 +2880,7 @@ Hay dos razones para desactivar y no borrar los registros:
         <IsReadOnly>true</IsReadOnly>
         <Help/>
         <ObscureType/>
-        <DisplayLogic>@#LCO_CPF_USE_ON_INVOICE@ = Y</DisplayLogic>
+        <DisplayLogic>@#LCO_CPF_USE_ON_INVOICE@=Y</DisplayLogic>
         <IsMandatory/>
         <AD_Val_Rule_ID reference="id"/>
         <Included_Tab_ID reference="id"/>
@@ -3009,105 +2919,113 @@ Hay dos razones para desactivar y no borrar los registros:
                 <IsTranslated>true</IsTranslated>
             </AD_Field_Trl>
     </AD_Field>
-    <AD_Column type="table">
-	<IsSyncDatabase>Y</IsSyncDatabase>
-        <AD_Table_ID reference="uuid" reference-key="AD_Table">ee26ff25-19d0-44a6-ab6a-9587f1ff5c55</AD_Table_ID>
-	<AD_Reference_Value_ID reference="uuid" reference-key="AD_Reference">e0fba191-c2c2-4514-99c1-fedc614c6710</AD_Reference_Value_ID>
-	<AD_Client_ID>0</AD_Client_ID>
-	<AD_Org_ID>0</AD_Org_ID>
-	<SeqNoSelection>0</SeqNoSelection>
-	<Version>0</Version>
-	<ValueMax/>
-	<IsMandatory>false</IsMandatory>
-	<IsTranslated>false</IsTranslated>
-	<IsIdentifier>false</IsIdentifier>
-	<SeqNo>0</SeqNo>
-	<ValueMin/>
-	<IsParent>false</IsParent>
-	<FieldLength>10</FieldLength>
-	<IsSelectionColumn>false</IsSelectionColumn>
-	<IsKey>false</IsKey>
-	<AD_Process_ID reference="id"/>
-	<ReadOnlyLogic/>
-	<IsAutocomplete>false</IsAutocomplete>
-	<IsAllowLogging>true</IsAllowLogging>
-	<MandatoryLogic/>
-	<FormatPattern/>
-	<AD_Column_UU>c12316cf-9dcc-4cd9-a634-ef5672c99640</AD_Column_UU>
-	<IsUpdateable>true</IsUpdateable>
-	<Callout/>
-	<ColumnName>LCO_PrintedFormControl_ID</ColumnName>
-	<Description/>
-	<Help/>
-	<ColumnSQL/>
-	<DefaultValue/>
-	<Name>Printed Form Control</Name>
-	<IsAllowCopy>true</IsAllowCopy>
-	<IsActive>true</IsActive>
-	<IsToolbarButton>false</IsToolbarButton>
-	<IsAlwaysUpdateable>false</IsAlwaysUpdateable>
-	<EntityType>QSS_LCO</EntityType>
-	<VFormat/>
-	<IsEncrypted>N</IsEncrypted>
-	<IsSecure>false</IsSecure>
-	<AD_Chart_ID reference="id"/>
-	<FKConstraintType>N</FKConstraintType>
-	<FKConstraintName>LCOPrintedFormControl_LCOInvoi</FKConstraintName>
-	<AD_Element_ID reference="uuid" reference-key="AD_Element">14318417-8f74-42c7-9cad-dd3ff5a4f5a2</AD_Element_ID>
-	<AD_Reference_ID reference="id">18</AD_Reference_ID>
-	<AD_Val_Rule_ID reference="id"/>
-    </AD_Column>
-    <AD_Field type="table">
-	<AD_Client_ID>0</AD_Client_ID>
-	<AD_Org_ID>0</AD_Org_ID>
-	<SortNo>0</SortNo>
-	<IsEncrypted>false</IsEncrypted>
-	<AD_Tab_ID reference="uuid" reference-key="AD_Tab">a29a9723-4050-4802-907d-5d5353a9e96a</AD_Tab_ID>
-	<DisplayLength>0</DisplayLength>
-	<IsSameLine>false</IsSameLine>
-	<IsHeading>false</IsHeading>
-	<SeqNo>150</SeqNo>
-	<IsCentrallyMaintained>true</IsCentrallyMaintained>
-	<IsReadOnly>true</IsReadOnly>
-	<Help/>
-	<ObscureType/>
-	<DisplayLogic>@#LCO_USE_WITHHOLDINGS@=Y &amp; @#LEC_CPF_USE_ON_WITHHOLDIGS@=Y</DisplayLogic>
-	<IsMandatory/>
-	<AD_Val_Rule_ID reference="id"/>
-	<Included_Tab_ID reference="id"/>
-	<Description/>
-	<Name>Authorization No.</Name>
-	<AD_Field_UU>ff1c19d3-a3ed-4941-9b20-11db9b8b3e7a</AD_Field_UU>
-	<IsDisplayed>true</IsDisplayed>
-	<IsFieldOnly>false</IsFieldOnly>
-	<DefaultValue/>
-	<IsAllowCopy/>
-	<IsActive>true</IsActive>
-	<IsDisplayedGrid>true</IsDisplayedGrid>
-	<SeqNoGrid>10</SeqNoGrid>
-	<XPosition>1</XPosition>
-	<IsQuickEntry>false</IsQuickEntry>
-	<MandatoryLogic/>
-	<IsUpdateable/>
-	<IsAlwaysUpdateable/>
-	<ReadOnlyLogic/>
-	<IsToolbarButton/>
-	<ColumnSpan>1</ColumnSpan>
-	<NumLines>1</NumLines>
-	<IsAdvancedField>false</IsAdvancedField>
-	<IsDefaultFocus>false</IsDefaultFocus>
-	<AD_Column_ID reference="uuid" reference-key="AD_Column">c12316cf-9dcc-4cd9-a634-ef5672c99640</AD_Column_ID>
-	<AD_FieldGroup_ID reference="uuid" reference-key="AD_FieldGroup">3e05164b-db4f-4482-a17d-faf6dada8d68</AD_FieldGroup_ID>
-	<AD_Reference_ID reference="id"/>
-	<AD_Reference_Value_ID reference="id"/>
-	<EntityType>QSS_LCO</EntityType>
-	<AD_Field_Trl type="translation">
-	    <Help/>
-	    <Description/>
-	    <Name>Número de Autorización</Name>
-	    <AD_Language>es_CO</AD_Language>
-	    <IsActive>true</IsActive>
-	    <IsTranslated>true</IsTranslated>
-	</AD_Field_Trl>
-    </AD_Field>
+	<AD_Column type="table">
+		<IsSyncDatabase>Y</IsSyncDatabase>
+		<AD_Table_ID reference="uuid" reference-key="AD_Table">ee26ff25-19d0-44a6-ab6a-9587f1ff5c55
+		</AD_Table_ID>
+		<AD_Reference_Value_ID reference="uuid"
+			reference-key="AD_Reference">e0fba191-c2c2-4514-99c1-fedc614c6710
+		</AD_Reference_Value_ID>
+		<AD_Client_ID>0</AD_Client_ID>
+		<AD_Org_ID>0</AD_Org_ID>
+		<SeqNoSelection>0</SeqNoSelection>
+		<Version>0</Version>
+		<ValueMax />
+		<IsMandatory>false</IsMandatory>
+		<IsTranslated>false</IsTranslated>
+		<IsIdentifier>false</IsIdentifier>
+		<SeqNo>0</SeqNo>
+		<ValueMin />
+		<IsParent>false</IsParent>
+		<FieldLength>10</FieldLength>
+		<IsSelectionColumn>false</IsSelectionColumn>
+		<IsKey>false</IsKey>
+		<AD_Process_ID reference="id" />
+		<ReadOnlyLogic />
+		<IsAutocomplete>false</IsAutocomplete>
+		<IsAllowLogging>true</IsAllowLogging>
+		<MandatoryLogic />
+		<FormatPattern />
+		<AD_Column_UU>c12316cf-9dcc-4cd9-a634-ef5672c99640</AD_Column_UU>
+		<IsUpdateable>true</IsUpdateable>
+		<Callout />
+		<ColumnName>LCO_PrintedFormControl_ID</ColumnName>
+		<Description />
+		<Help />
+		<ColumnSQL />
+		<DefaultValue />
+		<Name>Printed Form Control</Name>
+		<IsAllowCopy>false</IsAllowCopy>
+		<IsActive>true</IsActive>
+		<IsToolbarButton>false</IsToolbarButton>
+		<IsAlwaysUpdateable>false</IsAlwaysUpdateable>
+		<EntityType>QSS_LCO</EntityType>
+		<VFormat />
+		<IsEncrypted>N</IsEncrypted>
+		<IsSecure>false</IsSecure>
+		<AD_Chart_ID reference="id" />
+		<FKConstraintType>N</FKConstraintType>
+		<FKConstraintName>LCOPrintedFormControl_LCOInvoi</FKConstraintName>
+		<AD_Element_ID reference="uuid" reference-key="AD_Element">14318417-8f74-42c7-9cad-dd3ff5a4f5a2
+		</AD_Element_ID>
+		<AD_Reference_ID reference="id">30</AD_Reference_ID>
+		<AD_Val_Rule_ID reference="id" />
+	</AD_Column>
+	<AD_Field type="table">
+		<AD_Client_ID>0</AD_Client_ID>
+		<AD_Org_ID>0</AD_Org_ID>
+		<SortNo>0</SortNo>
+		<IsEncrypted>false</IsEncrypted>
+		<AD_Tab_ID reference="uuid" reference-key="AD_Tab">a29a9723-4050-4802-907d-5d5353a9e96a
+		</AD_Tab_ID>
+		<DisplayLength>0</DisplayLength>
+		<IsSameLine>false</IsSameLine>
+		<IsHeading>false</IsHeading>
+		<SeqNo>190</SeqNo>
+		<IsCentrallyMaintained>true</IsCentrallyMaintained>
+		<IsReadOnly>true</IsReadOnly>
+		<Help />
+		<ObscureType />
+		<DisplayLogic>@#LCO_USE_WITHHOLDINGS@=Y &amp;
+			@#LEC_CPF_USE_ON_WITHHOLDINGS@=Y</DisplayLogic>
+		<IsMandatory />
+		<AD_Val_Rule_ID reference="id" />
+		<Included_Tab_ID reference="id" />
+		<Description />
+		<Name>Authorization No.</Name>
+		<AD_Field_UU>ff1c19d3-a3ed-4941-9b20-11db9b8b3e7a</AD_Field_UU>
+		<IsDisplayed>true</IsDisplayed>
+		<IsFieldOnly>false</IsFieldOnly>
+		<DefaultValue />
+		<IsAllowCopy />
+		<IsActive>true</IsActive>
+		<IsDisplayedGrid>true</IsDisplayedGrid>
+		<SeqNoGrid>190</SeqNoGrid>
+		<XPosition>1</XPosition>
+		<IsQuickEntry>false</IsQuickEntry>
+		<MandatoryLogic />
+		<IsUpdateable />
+		<IsAlwaysUpdateable />
+		<ReadOnlyLogic />
+		<IsToolbarButton />
+		<ColumnSpan>2</ColumnSpan>
+		<NumLines>1</NumLines>
+		<IsAdvancedField>false</IsAdvancedField>
+		<IsDefaultFocus>false</IsDefaultFocus>
+		<AD_Column_ID reference="uuid" reference-key="AD_Column">c12316cf-9dcc-4cd9-a634-ef5672c99640
+		</AD_Column_ID>
+		<AD_FieldGroup_ID reference="uuid" reference-key="AD_FieldGroup">3e05164b-db4f-4482-a17d-faf6dada8d68
+		</AD_FieldGroup_ID>
+		<AD_Reference_ID reference="id" />
+		<AD_Reference_Value_ID reference="id" />
+		<EntityType>QSS_LCO</EntityType>
+		<AD_Field_Trl type="translation">
+			<Help />
+			<Description />
+			<Name>Número de Autorización</Name>
+			<AD_Language>es_CO</AD_Language>
+			<IsActive>true</IsActive>
+			<IsTranslated>true</IsTranslated>
+		</AD_Field_Trl>
+	</AD_Field>
 </idempiere>

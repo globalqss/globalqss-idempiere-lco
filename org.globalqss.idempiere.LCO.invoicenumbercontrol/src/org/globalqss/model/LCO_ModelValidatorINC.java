@@ -1,9 +1,33 @@
+/**********************************************************************
+* This file is part of iDempiere ERP Open Source                      *
+* http://www.idempiere.org                                            *
+*                                                                     *
+* Copyright (C) Contributors                                          *
+*                                                                     *
+* This program is free software; you can redistribute it and/or       *
+* modify it under the terms of the GNU General Public License         *
+* as published by the Free Software Foundation; either version 2      *
+* of the License, or (at your option) any later version.              *
+*                                                                     *
+* This program is distributed in the hope that it will be useful,     *
+* but WITHOUT ANY WARRANTY; without even the implied warranty of      *
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the        *
+* GNU General Public License for more details.                        *
+*                                                                     *
+* You should have received a copy of the GNU General Public License   *
+* along with this program; if not, write to the Free Software         *
+* Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,          *
+* MA 02110-1301, USA.                                                 *
+*                                                                     *
+* Contributors:                                                       *
+* - Carlos Augusto Sanchez - globalqss                                *
+* - Carlos Ruiz - globalqss                                           *
+**********************************************************************/
+
 package org.globalqss.model;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.logging.Level;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.adempiere.base.event.AbstractEventHandler;
 import org.adempiere.base.event.IEventManager;
@@ -11,7 +35,6 @@ import org.adempiere.base.event.IEventTopics;
 import org.adempiere.base.event.LoginEventData;
 import org.compiere.model.MDocType;
 import org.compiere.model.MInvoice;
-import org.compiere.model.MRole;
 import org.compiere.model.MSysConfig;
 import org.compiere.model.PO;
 import org.compiere.util.CLogger;
@@ -22,38 +45,34 @@ import org.osgi.service.event.Event;
 
 /**
  *	Validator or Localization Colombia (Invoice Number Control)
- *	
- *  @author Carlos Augusto Sanchez - globalqss - Quality Systems & Solutions - http://globalqss.com 
- */
-/**
- * @author Carlos Augusto Sanchez
  *
+ *  @author Carlos Augusto Sanchez - globalqss - Quality Systems & Solutions - http://globalqss.com
  */
 public class LCO_ModelValidatorINC extends AbstractEventHandler
 {
 
 	/**	Logger			*/
 	private static CLogger log = CLogger.getCLogger(LCO_ModelValidatorINC.class);
-	
+
 	/**
 	 *	Initialize Validation
 	 */
 	@Override
 	protected void initialize() {
-		
+
 		//	Documents to be monitored
 		registerTableEvent(IEventTopics.DOC_BEFORE_COMPLETE, MInvoice.Table_Name);
 
 		// Tables to be monitored
 		registerTableEvent(IEventTopics.PO_BEFORE_CHANGE, X_LCO_PrintedFormControl.Table_Name);
 		registerTableEvent(IEventTopics.PO_BEFORE_NEW, X_LCO_PrintedFormControl.Table_Name);
-		registerTableEvent(IEventTopics.PO_BEFORE_CHANGE, X_LCO_InvoiceWithholding.Table_Name);
-		registerTableEvent(IEventTopics.PO_BEFORE_NEW, X_LCO_InvoiceWithholding.Table_Name);
-		
+		registerTableEvent(IEventTopics.PO_BEFORE_CHANGE, MLCOInvoiceWithholding.Table_Name);
+		registerTableEvent(IEventTopics.PO_BEFORE_NEW, MLCOInvoiceWithholding.Table_Name);
+
 		registerEvent(IEventTopics.AFTER_LOGIN);
-		
+
 	}//	initialize
-	
+
     /**
      *	Model Change of a monitored Table or Document
      *  @param event
@@ -61,469 +80,314 @@ public class LCO_ModelValidatorINC extends AbstractEventHandler
      */
 	@Override
 	protected void doHandleEvent(Event event) {
-		
+
 		String type = event.getTopic();
-		
+
 		if (type.equals(IEventTopics.AFTER_LOGIN)) {
 			log.info("Type: " + type);
 			// on login set context variable ##LCO_CPF_USE_ON_WITHHOLDING
 			LoginEventData loginData = (LoginEventData) event.getProperty(IEventManager.EVENT_DATA);
-		    boolean isPrintedFormControlActive = MSysConfig.getBooleanValue("QSSLCO_IsPrintedFormControlActiveInvoice", true,loginData.getAD_Client_ID());
+		    boolean isPrintedFormControlActive = MSysConfig.getBooleanValue("QSSLCO_IsPrintedFormControlActiveInvoice", true, loginData.getAD_Client_ID());
 			Env.setContext(Env.getCtx(), "#LCO_CPF_USE_ON_INVOICE", isPrintedFormControlActive);
-			
-			isPrintedFormControlActive = MSysConfig.getBooleanValue("QSSLEC_IsPrintedFormControlActiveWithholding", true,loginData.getAD_Client_ID());
-			Env.setContext(Env.getCtx(), "#LEC_CPF_USE_ON_WITHHOLDIGS", isPrintedFormControlActive);
+
+			isPrintedFormControlActive = MSysConfig.getBooleanValue("QSSLEC_IsPrintedFormControlActiveWithholding", true, loginData.getAD_Client_ID());
+			Env.setContext(Env.getCtx(), "#LEC_CPF_USE_ON_WITHHOLDINGS", isPrintedFormControlActive);
 			return;
 		}
-		
+
 		PO po = getPO(event);
 		log.info(po.get_TableName() + " Type: "+type);
 		String msg;
-			
-		if (po.get_TableName().equals(X_LCO_PrintedFormControl.Table_Name) 
-				&& ( type.equals(IEventTopics.PO_BEFORE_CHANGE) 
-						|| type.equals(IEventTopics.PO_BEFORE_NEW)))
-		{
-			
+
+		if (   po.get_TableName().equals(X_LCO_PrintedFormControl.Table_Name)
+			&& (   type.equals(IEventTopics.PO_BEFORE_CHANGE)
+				|| type.equals(IEventTopics.PO_BEFORE_NEW))) {
 			X_LCO_PrintedFormControl cpf = (X_LCO_PrintedFormControl) po;
-		    
 			msg = validatePrintedFormCreation(cpf);
 			if (msg != null)
 				throw new RuntimeException(msg);
 		}
-		
+
 		if (po.get_TableName().equals(MInvoice.Table_Name) && type.equals(IEventTopics.DOC_BEFORE_COMPLETE)) {
-			
 			msg = validatePrintedFormOnInvoice((MInvoice) po);
 			if (msg != null)
 				throw new RuntimeException(msg);
 		}
-		
 
 		if (! MSysConfig.getBooleanValue("LCO_USE_WITHHOLDINGS", true, Env.getAD_Client_ID(Env.getCtx())))
 			return;
-		
-		if (po.get_TableName().equals(X_LCO_InvoiceWithholding.Table_Name) 
-				&& ( type.equals(IEventTopics.PO_BEFORE_CHANGE) 
-						|| type.equals(IEventTopics.PO_BEFORE_NEW))){
-			
-			X_LCO_InvoiceWithholding invwhi = (X_LCO_InvoiceWithholding) po;
+
+		if (   po.get_TableName().equals(MLCOInvoiceWithholding.Table_Name)
+			&& (   type.equals(IEventTopics.PO_BEFORE_CHANGE)
+				|| type.equals(IEventTopics.PO_BEFORE_NEW))) {
+			MLCOInvoiceWithholding invwhi = (MLCOInvoiceWithholding) po;
 			msg = validatePrintedFormOnWithholding(invwhi);
 			if (msg != null)
 				throw new RuntimeException(msg);
 		}
-	}//	doHandleEvent
-	
+	} //	doHandleEvent
+
 	/**
 	 * It validates printed form on withholding when saving or changing it
 	 * @param invoiceWithholding
 	 * @return
 	 */
-    private String validatePrintedFormOnWithholding(X_LCO_InvoiceWithholding invoiceWithholding){
-    	
-    	String msg = null;
-		
-    	final boolean isPrintedFormControlActive = MSysConfig.getBooleanValue("QSSLEC_IsPrintedFormControlActiveWithholding", true, MRole.getDefault().getAD_Client_ID());
+	private String validatePrintedFormOnWithholding(MLCOInvoiceWithholding invoiceWithholding) {
+
+		String msg = null;
+
+		final boolean isPrintedFormControlActive = MSysConfig.getBooleanValue("QSSLEC_IsPrintedFormControlActiveWithholding", true, Env.getAD_Client_ID(Env.getCtx()));
 		boolean isActive = invoiceWithholding.isActive();
 		if(!isPrintedFormControlActive || !isActive)
 			return msg;
-    	
-		final boolean isPrefixMandatory = MSysConfig.getBooleanValue("QSSLCO_IsPrefixMandatory", true, MRole.getDefault().getAD_Client_ID());
-		final int prefixLengthExpected = Integer.valueOf(MSysConfig.getValue("QSSLCO_PrefixLength", null, MRole.getDefault().getAD_Client_ID()));
-		
-	    final int docNoLengthExpected = Integer.valueOf(MSysConfig.getValue("QSSLCO_DocNoLength", null, MRole.getDefault().getAD_Client_ID()));
-		final int docNoLengthOptionalExpected = Integer.valueOf(MSysConfig.getValue("QSSLEC_DocNoLengthOptional", null, MRole.getDefault().getAD_Client_ID()));
-		final int docNoLengthEntered = invoiceWithholding.getDoc().getDocumentNo().length();
-		
-		boolean docNoLengthOptinalActive = MSysConfig.getBooleanValue("QSSLEC_DocNoLengthOptinalActive", true, MRole.getDefault().getAD_Client_ID());
-		
+
+		final boolean isPrefixMandatory = MSysConfig.getBooleanValue("QSSLCO_IsPrefixMandatory", true, Env.getAD_Client_ID(Env.getCtx()));
+		final int prefixLengthExpected = Integer.valueOf(MSysConfig.getValue("QSSLCO_PrefixLength", null, Env.getAD_Client_ID(Env.getCtx())));
+
+		final int docNoLengthExpected = Integer.valueOf(MSysConfig.getValue("QSSLCO_DocNoLength", null, Env.getAD_Client_ID(Env.getCtx())));
+		final int docNoLengthOptionalExpected = Integer.valueOf(MSysConfig.getValue("QSSLEC_DocNoLengthOptional", null, Env.getAD_Client_ID(Env.getCtx())));
+		final int docNoLengthEntered = invoiceWithholding.getDocumentNo().length();
+
+		boolean docNoLengthOptionalActive = MSysConfig.getBooleanValue("QSSLEC_DocNoLengthOptionalActive", true, Env.getAD_Client_ID(Env.getCtx()));
+
 		MInvoice m_invoice = new MInvoice (invoiceWithholding.getCtx(), invoiceWithholding.getC_Invoice_ID(), invoiceWithholding.get_TrxName());
-		if (docNoLengthEntered == docNoLengthExpected || (docNoLengthEntered == docNoLengthOptionalExpected && docNoLengthOptinalActive)){
-			
+		if (docNoLengthEntered == docNoLengthExpected || (docNoLengthEntered == docNoLengthOptionalExpected && docNoLengthOptionalActive)) {
+
 			boolean isSOTrx = m_invoice.isSOTrx();
-			String sqlCount = "";
-			String sqlInfo = "";
+			String sqlCount;
+			String sqlInfo;
 			boolean isWithholding = true;
-			
-			if (isSOTrx){
+
+			if (isSOTrx) {
+				sqlCount = getSqlToValidatePrintedForm(isSOTrx, isWithholding, true, true, isPrefixMandatory).toString();
+				sqlInfo =  getSqlToValidatePrintedForm(isSOTrx, isWithholding, true, false, isPrefixMandatory).toString();
+			} else {
 				sqlCount = getSqlToValidatePrintedForm(isSOTrx, isWithholding, true, true, isPrefixMandatory).toString();
 				sqlInfo =  getSqlToValidatePrintedForm(isSOTrx, isWithholding, true, false, isPrefixMandatory).toString();
 			}
-			else{
-				sqlCount = getSqlToValidatePrintedForm(isSOTrx, isWithholding, true, true, isPrefixMandatory).toString();
-				sqlInfo =  getSqlToValidatePrintedForm(isSOTrx, isWithholding, true, false, isPrefixMandatory).toString();
-		    }
-				PreparedStatement pstmt = DB.prepareStatement(sqlCount,invoiceWithholding.get_TrxName());
-				ResultSet rs = null;
-				try {
-					int index=1;
-					if(!isWithholding)
-						pstmt.setInt(index++, m_invoice.getC_DocTypeTarget_ID());
-					
-					if (isSOTrx)
-						pstmt.setInt(index++, invoiceWithholding.getAD_Org_ID());
-		            else
-		            	pstmt.setInt(index++, m_invoice.getC_BPartner_ID());
-	
-					if(isPrefixMandatory) 
-						pstmt.setString(index++, invoiceWithholding.getDoc().getDocumentNo().toString().substring(0, prefixLengthExpected));
-					
-					pstmt.setInt(index++, Integer.valueOf(invoiceWithholding.getDoc().getDocumentNo().toString().substring(prefixLengthExpected, docNoLengthEntered)));
-					pstmt.setTimestamp(index++, invoiceWithholding.getDateAcct());
-			
-					log.fine(sqlCount);
-					rs = pstmt.executeQuery();
-					rs.next();
-					if (rs.getInt(1) != 1)
-						return Msg.getMsg(invoiceWithholding.getCtx(), "LCO_NoMatchWithPrintedForms");
-					else{
-						pstmt = DB.prepareStatement(sqlInfo,invoiceWithholding.get_TrxName());
-						
-						index=1;
-						if (!isWithholding)
-							pstmt.setInt(index++, m_invoice.getC_DocTypeTarget_ID());
-						
-						if (isSOTrx)
-							pstmt.setInt(index++, invoiceWithholding.getAD_Org_ID());
-			            else
-			            	pstmt.setInt(index++, m_invoice.getC_BPartner_ID());
 
-						if(isPrefixMandatory) 
-							pstmt.setString(index++, invoiceWithholding.getDoc().getDocumentNo().substring(0, prefixLengthExpected)); //serial
-						
-						pstmt.setInt(index++, Integer.valueOf(invoiceWithholding.getDoc().getDocumentNo().substring(prefixLengthExpected, docNoLengthEntered)));//sequence
-						pstmt.setTimestamp(index++,  invoiceWithholding.getDateAcct());//date
-						
-						rs = null;
-						log.fine(sqlInfo);
-						rs = pstmt.executeQuery();
-					    rs.next();
+			List<Object> params = new ArrayList<Object>();
+			if (!isWithholding)
+				params.add(m_invoice.getC_DocTypeTarget_ID());
+			if (isSOTrx)
+				params.add(invoiceWithholding.getAD_Org_ID());
+			else
+				params.add(m_invoice.getC_BPartner_ID());
+			if (isPrefixMandatory)
+				params.add(invoiceWithholding.getDocumentNo().toString().substring(0, prefixLengthExpected));
+			params.add(Integer.valueOf(invoiceWithholding.getDocumentNo().toString().substring(prefixLengthExpected, docNoLengthEntered)));
+			params.add(invoiceWithholding.getDateAcct());
 
-					    String sqlUpdateLCO_PrintedFormControlID = getSqlToUpdateWithholdingWithPrintedFormInfo(1).toString();
-						pstmt = DB.prepareStatement(sqlUpdateLCO_PrintedFormControlID,invoiceWithholding.get_TrxName());
-						
-						index=1;
-						pstmt.setInt(index++, rs.getInt(1));
-						pstmt.setInt(index++, invoiceWithholding.getC_Invoice_ID());
-						pstmt.setInt(index++, invoiceWithholding.getLCO_InvoiceWithholding_ID());
-						
-						log.fine(sqlUpdateLCO_PrintedFormControlID);
-						
-						int update = pstmt.executeUpdate();
-						if (update == -1)
-							return Msg.getMsg(invoiceWithholding.getCtx(), "LCO_ErrorUpdatingPrintedFormControlOnWithholding" +"-"+ invoiceWithholding.getDoc().getDocumentNo());
-						
-						String sqlUpdateDocNo =	getSqlToUpdateWithholdingWithPrintedFormInfo(2).toString();
-						pstmt = DB.prepareStatement(sqlUpdateDocNo,invoiceWithholding.get_TrxName());
-						
-						index=1;
-						pstmt.setInt(index++, rs.getInt(1));
-						pstmt.setInt(index++, invoiceWithholding.getC_Invoice_ID());
-						pstmt.setInt(index++, invoiceWithholding.getLCO_InvoiceWithholding_ID());
-						
-						log.fine(sqlUpdateDocNo);
-						
-						update = pstmt.executeUpdate();
-						if (update == -1)
-							return Msg.getMsg(invoiceWithholding.getCtx(), "LCO_ErrorUpdatingPrintedFormControlOnWithholding" +"-"+ invoiceWithholding.getDoc().getDocumentNo());
-						
-					}
-				 }catch (SQLException e) {
-				    log.log(Level.SEVERE, Msg.getMsg(invoiceWithholding.getCtx(), "LCO_ValidatePrintedFormOnWithholdingError"), e);
-					msg = e.getMessage() + Msg.getMsg(invoiceWithholding.getCtx(), "LCO_ValidatePrintedFormOnWithholdingError") + invoiceWithholding.get_ID();
-				 }finally {
-					DB.close(rs, pstmt);
-					rs = null;
-					pstmt = null;
-			 }
-		}
-		else return Msg.getMsg(invoiceWithholding.getCtx(), "LCO_DocumentLengthInvalid");
-    	
-    	return msg;
-    }
-    
-    /**
-     * It validates printed form on invoices when it is being completed
-     * @param m_invoice
-     * @return
-     */
-	private String validatePrintedFormOnInvoice(MInvoice m_invoice) {
-		
-		String msg = null;
-		final boolean isPrintedFormControlActive = MSysConfig.getBooleanValue("QSSLCO_IsPrintedFormControlActiveInvoice", true, MRole.getDefault().getAD_Client_ID());
-		if (!isPrintedFormControlActive)
-			return msg;
-		
-		if (m_invoice.getC_Invoice_ID() == 0)
-			return null;
-		
-		if(!m_invoice.getDocStatus().equals("IP"))
-			return null;
-		
-		if(!m_invoice.getDocAction().equals("CO"))
-			return null;
-	    
-		final boolean isPrefixMandatory = MSysConfig.getBooleanValue("QSSLCO_IsPrefixMandatory", true, MRole.getDefault().getAD_Client_ID());
-		final int prefixLengthExpected = Integer.valueOf(MSysConfig.getValue("QSSLCO_PrefixLength", null, MRole.getDefault().getAD_Client_ID()));
-		
-	    final int docNoLengthExpected = Integer.valueOf(MSysConfig.getValue("QSSLCO_DocNoLength", null, MRole.getDefault().getAD_Client_ID()));
-		final int docNoLengthOptionalExpected = Integer.valueOf(MSysConfig.getValue("QSSLEC_DocNoLengthOptional", null, MRole.getDefault().getAD_Client_ID()));
-		final int docNoLengthEntered = m_invoice.getDocumentNo().length();
-		
-		boolean docNoLengthOptinalActive = MSysConfig.getBooleanValue("QSSLEC_DocNoLengthOptinalActive", true, MRole.getDefault().getAD_Client_ID());
-			
-		if (docNoLengthEntered == docNoLengthExpected || (docNoLengthEntered == docNoLengthOptionalExpected && docNoLengthOptinalActive)){
-		
-			MDocType dt = new MDocType(m_invoice.getCtx(), m_invoice.getC_DocTypeTarget_ID(), m_invoice.get_TrxName());
-			boolean isSOTrx = dt.get_ValueAsBoolean("issotrx");
-			
-			String sqlCount = "";
-			String sqlInfo = "";
-			boolean isWithholding = false;
-			if (isSOTrx){
-				sqlCount = getSqlToValidatePrintedForm(isSOTrx, isWithholding, true, true, isPrefixMandatory).toString();
-				sqlInfo =  getSqlToValidatePrintedForm(isSOTrx, isWithholding, true, false, isPrefixMandatory).toString();
+			log.fine(sqlCount);
+			int cnt = DB.getSQLValueEx(invoiceWithholding.get_TrxName(), sqlCount, params);
+			if (cnt != 1) {
+				return Msg.getMsg(invoiceWithholding.getCtx(), "LCO_NoMatchWithPrintedForms");
 			}
-			else{
-				
-				sqlCount = getSqlToValidatePrintedForm(isSOTrx, isWithholding, true, true, isPrefixMandatory).toString();
-				sqlInfo =  getSqlToValidatePrintedForm(isSOTrx, isWithholding, true, false, isPrefixMandatory).toString();
-		    }
-				PreparedStatement pstmt = DB.prepareStatement(sqlCount,m_invoice.get_TrxName());
-				ResultSet rs = null;
-				try {
-					int index=1;
-					if(!isWithholding)
-						pstmt.setInt(index++, m_invoice.getC_DocTypeTarget_ID());
 
-					
-					if (isSOTrx)
-						pstmt.setInt(index++, m_invoice.getAD_Org_ID());
-		            else
-		            	pstmt.setInt(index++, m_invoice.getC_BPartner_ID());
+			log.fine(sqlInfo);
+			int pfcid = DB.getSQLValueEx(invoiceWithholding.get_TrxName(), sqlInfo, params);
 
-					if(isPrefixMandatory) 
-						pstmt.setString(index++, m_invoice.getDocumentNo().toString().substring(0, prefixLengthExpected));
-					
-					pstmt.setInt(index++, Integer.valueOf(m_invoice.getDocumentNo().toString().substring(prefixLengthExpected, docNoLengthEntered)));
-					pstmt.setTimestamp(index++, m_invoice.getDateInvoiced());
-			
-					log.fine(sqlCount);
-					rs = pstmt.executeQuery();
-					rs.next();
-					if (rs.getInt(1) != 1)
-						return Msg.getMsg(m_invoice.getCtx(), "LCO_NoMatchWithPrintedForms");
-					else{
-						pstmt = DB.prepareStatement(sqlInfo,m_invoice.get_TrxName());
-						
-						index=1;
-						if(!isWithholding)
-							pstmt.setInt(index++, m_invoice.getC_DocTypeTarget_ID());
-						
-						if (isSOTrx)
-							pstmt.setInt(index++, m_invoice.getAD_Org_ID());
-			            else
-			            	pstmt.setInt(index++, m_invoice.getC_BPartner_ID());
+			// assign the printed form control ID discovered
+			invoiceWithholding.set_ValueOfColumn("LCO_PrintedFormControl_ID", pfcid);			
 
-						if(isPrefixMandatory) 
-							pstmt.setString(index++, m_invoice.getDocumentNo().toString().substring(0, prefixLengthExpected)); //serial
-						
-						pstmt.setInt(index++, Integer.valueOf(m_invoice.getDocumentNo().toString().substring(prefixLengthExpected, docNoLengthEntered)));//sequence
-						pstmt.setTimestamp(index++, m_invoice.getDateInvoiced());//date
-						
-						rs = null;
-						log.fine(sqlInfo);
-						rs = pstmt.executeQuery();
-					    rs.next();
-					   
-						String sqlUpdate = getSqlToUpdateInvoiceWithPrintedFormInfo().toString();
-						pstmt = DB.prepareStatement(sqlUpdate,m_invoice.get_TrxName());
-						
-						index=1;
-						pstmt.setInt(index++, rs.getInt(1));
-						pstmt.setInt(index++, m_invoice.getC_Invoice_ID());
-						
-						log.fine(sqlUpdate);
-						
-						int update = pstmt.executeUpdate();
-						if (update == -1)
-							return Msg.getMsg(m_invoice.getCtx(), "LCO_ErrorUpdatingPrintedFormControlOnInvoice" +"-"+ m_invoice.getDocumentNo());
-						
-					}
-				 }catch (SQLException e) {
-				    log.log(Level.SEVERE, Msg.getMsg(m_invoice.getCtx(), "LCO_ValidatePrintedFormOnInvoiceError"), e);
-					msg = e.getMessage() + Msg.getMsg(m_invoice.getCtx(), "LCO_ValidatePrintedFormOnInvoiceError") + m_invoice.get_ID();
-				 }finally {
-					DB.close(rs, pstmt);
-					rs = null;
-					pstmt = null;
-			 }
-		}
-		else return Msg.getMsg(m_invoice.getCtx(), "LCO_DocumentLengthInvalid");
+		} else
+			return Msg.getMsg(invoiceWithholding.getCtx(), "LCO_DocumentLengthInvalid");
+
 		return msg;
 	}
-	
-	/**
-	 * Returns sql for updating invoice
-	 * @return
-	 */
-	
-	private StringBuffer getSqlToUpdateInvoiceWithPrintedFormInfo(){
-		
-		StringBuffer sql = new StringBuffer("UPDATE C_Invoice ");
-					 sql.append("SET LCO_PrintedFormControl_ID = ? ");
-					 sql.append("WHERE C_Invoice_ID = ? ");
-				
-		return sql;
+
+    /**
+     * It validates printed form on invoices when it is being completed
+     * @param invoice
+     * @return
+     */
+	private String validatePrintedFormOnInvoice(MInvoice invoice) {
+
+		String msg = null;
+		final boolean isPrintedFormControlActive = MSysConfig.getBooleanValue("QSSLCO_IsPrintedFormControlActiveInvoice", true, Env.getAD_Client_ID(Env.getCtx()));
+		if (!isPrintedFormControlActive)
+			return msg;
+
+		if (invoice.getC_Invoice_ID() == 0)
+			return null;
+
+		if (!invoice.getDocStatus().equals("IP"))
+			return null;
+
+		if (!invoice.getDocAction().equals("CO"))
+			return null;
+
+		final boolean isPrefixMandatory = MSysConfig.getBooleanValue("QSSLCO_IsPrefixMandatory", true, Env.getAD_Client_ID(Env.getCtx()));
+		final int prefixLengthExpected = Integer.valueOf(MSysConfig.getValue("QSSLCO_PrefixLength", null, Env.getAD_Client_ID(Env.getCtx())));
+
+		final int docNoLengthExpected = Integer.valueOf(MSysConfig.getValue("QSSLCO_DocNoLength", null, Env.getAD_Client_ID(Env.getCtx())));
+		final int docNoLengthOptionalExpected = Integer.valueOf(MSysConfig.getValue("QSSLEC_DocNoLengthOptional", null, Env.getAD_Client_ID(Env.getCtx())));
+		final int docNoLengthEntered = invoice.getDocumentNo().length();
+
+		boolean docNoLengthOptionalActive = MSysConfig.getBooleanValue("QSSLEC_DocNoLengthOptionalActive", true, Env.getAD_Client_ID(Env.getCtx()));
+
+		if (docNoLengthEntered == docNoLengthExpected || (docNoLengthEntered == docNoLengthOptionalExpected && docNoLengthOptionalActive)) {
+
+			MDocType dt = new MDocType(invoice.getCtx(), invoice.getC_DocTypeTarget_ID(), invoice.get_TrxName());
+			boolean isSOTrx = dt.isSOTrx();
+
+			String sqlCount;
+			String sqlInfo;
+			boolean isWithholding = false;
+			if (isSOTrx) {
+				sqlCount = getSqlToValidatePrintedForm(isSOTrx, isWithholding, true, true, isPrefixMandatory).toString();
+				sqlInfo =  getSqlToValidatePrintedForm(isSOTrx, isWithholding, true, false, isPrefixMandatory).toString();
+			} else {
+				sqlCount = getSqlToValidatePrintedForm(isSOTrx, isWithholding, true, true, isPrefixMandatory).toString();
+				sqlInfo =  getSqlToValidatePrintedForm(isSOTrx, isWithholding, true, false, isPrefixMandatory).toString();
+			}
+
+			List<Object> params = new ArrayList<Object>();
+			if (!isWithholding)
+				params.add(invoice.getC_DocTypeTarget_ID());
+			if (isSOTrx)
+				params.add(invoice.getAD_Org_ID());
+			else
+				params.add(invoice.getC_BPartner_ID());
+			if (isPrefixMandatory)
+				params.add(invoice.getDocumentNo().toString().substring(0, prefixLengthExpected));
+			params.add(Integer.valueOf(invoice.getDocumentNo().toString().substring(prefixLengthExpected, docNoLengthEntered)));
+			params.add(invoice.getDateInvoiced());
+
+			log.fine(sqlCount);
+			int cnt = DB.getSQLValueEx(invoice.get_TrxName(), sqlCount, params);
+			if (cnt != 1) {
+				return Msg.getMsg(invoice.getCtx(), "LCO_NoMatchWithPrintedForms");
+			}
+
+			log.fine(sqlInfo);
+			int pfcid = DB.getSQLValueEx(invoice.get_TrxName(), sqlInfo, params);
+
+			// assign the printed form control ID discovered
+			invoice.set_ValueOfColumn("LCO_PrintedFormControl_ID", pfcid);
+
+		} else
+			return Msg.getMsg(invoice.getCtx(), "LCO_DocumentLengthInvalid");
+		return msg;
 	}
-	
-	/**
-	 * Returns sql for updating withholding 
-	 * @param query
-	 * @return
-	 */
-	private StringBuffer getSqlToUpdateWithholdingWithPrintedFormInfo(int query){
-		
-		StringBuffer sql = new StringBuffer("UPDATE LCO_InvoiceWithholding ");
-		
-				if(query == 1)
-					 sql.append("SET LCO_PrintedFormControl_ID = ? ");
-				else sql.append("SET DocumentNo = ? ");
-		
-		             sql.append("WHERE C_Invoice_ID = ? ");
-		             sql.append("WHERE AND LCO_InvoiceWithholding_ID = ? ");
-			 
-		return sql;
-	}
-		
+
     /**
      * This method validates creation of printed forms on the organization windows
      * @param cpf
      * @return
      */
 	private String validatePrintedFormCreation(X_LCO_PrintedFormControl cpf) {
-		
+
 		String msg = null;
-		final boolean isPrefixMandatory = MSysConfig.getBooleanValue("QSSLCO_IsPrefixMandatory", true, MRole.getDefault().getAD_Client_ID());
-		
-		final int prefixLengthExpected = Integer.valueOf(MSysConfig.getValue("QSSLCO_PrefixLength", null, MRole.getDefault().getAD_Client_ID()));
+		final boolean isPrefixMandatory = MSysConfig.getBooleanValue("QSSLCO_IsPrefixMandatory", true, Env.getAD_Client_ID(Env.getCtx()));
+
+		final int prefixLengthExpected = Integer.valueOf(MSysConfig.getValue("QSSLCO_PrefixLength", null, Env.getAD_Client_ID(Env.getCtx())));
 		int prefixLengthEntered = 0;
-		if (cpf.getPrefix() !=  null)  
+		if (cpf.getPrefix() !=  null)
 			prefixLengthEntered = cpf.getPrefix().toString().length();
-		
-		if (cpf.getC_DocTypeTarget_ID() <= 0 && !cpf.isWithholding()) 
-			return Msg.getMsg(cpf.getCtx(), "LCO_TypeOfPrintedFormControlRequired");;
-		
+
+		if (cpf.getC_DocTypeTarget_ID() <= 0 && !cpf.isWithholding())
+			return Msg.getMsg(cpf.getCtx(), "LCO_TypeOfPrintedFormControlRequired");
+
 		if (prefixLengthEntered != prefixLengthExpected && isPrefixMandatory)
 			return Msg.getMsg(cpf.getCtx(), "LCO_PrefixLengthInadequate");
-		
-		if (cpf.is_ValueChanged("InitialSequence") || cpf.is_ValueChanged("FinalSequence") || (cpf.is_ValueChanged("IsActive") && cpf.isActive())){
-			
+
+		if (cpf.is_ValueChanged("InitialSequence") || cpf.is_ValueChanged("FinalSequence") || (cpf.is_ValueChanged("IsActive") && cpf.isActive())) {
+
 			int initialSequence = Integer.parseInt(cpf.getInitialSequence());
 			int finalSequence = Integer.parseInt(cpf.getFinalSequence());
 			if (finalSequence <= initialSequence)
 				return Msg.getMsg(cpf.getCtx(), "LCO_InvalidSequences");
-			
+
 			int comparisonDates = cpf.getValidFrom().compareTo(cpf.getValidUntil());
 			if (comparisonDates >= 0)
 				return Msg.getMsg(cpf.getCtx(), "LCO_InvalidDates");
-			
+
 			MDocType dt = new MDocType(cpf.getCtx(), cpf.getC_DocTypeTarget_ID(), cpf.get_TrxName());
+
+			boolean isSOTrx = dt.isSOTrx();
+			String sql = getSqlToValidatePrintedForm(isSOTrx, cpf.isWithholding(), false, true, isPrefixMandatory).toString();
+
+			List<Object> params = new ArrayList<Object>();
+			if (!cpf.isWithholding())
+				params.add(cpf.getC_DocTypeTarget_ID());
+
+			if (isSOTrx)
+				params.add(cpf.getAD_Org_ID());
+			else
+				params.add(cpf.getC_BPartner_ID());
+
+			if (isPrefixMandatory)
+				params.add(cpf.getPrefix());
+
+			params.add(Integer.valueOf(cpf.getInitialSequence()));
+			params.add(Integer.valueOf(cpf.getFinalSequence()));
+
+			int cnt = DB.getSQLValueEx(cpf.get_TrxName(), sql, params);
 			
-			boolean isSOTrx = dt.get_ValueAsBoolean("IsSOTrx");
-			String sql =getSqlToValidatePrintedForm(isSOTrx, cpf.isWithholding(), false, true, isPrefixMandatory).toString();
-			
-			PreparedStatement pstmt = DB.prepareStatement(sql,cpf.get_TrxName());
-			ResultSet rs = null;
-			try {
-				int index=1;
-				if(!cpf.isWithholding())
-					pstmt.setInt(index++,cpf.getC_DocTypeTarget_ID());
-				
-				if (isSOTrx)
-					pstmt.setInt(index++, cpf.getAD_Org_ID());
-	             else
-	            	pstmt.setInt(index++, cpf.getC_BPartner_ID());
-				
-				if(isPrefixMandatory) 
-					pstmt.setString(index++, cpf.getPrefix());
-				
-				pstmt.setInt(index++, Integer.valueOf(cpf.getInitialSequence()));
-				pstmt.setInt(index++, Integer.valueOf(cpf.getFinalSequence()));
-				
-				log.fine(sql);
-				rs = pstmt.executeQuery();
-				rs.next();
-				if (rs.getInt(1) > 0) {
-					msg = Msg.getMsg(cpf.getCtx(), "LCO_SequenceAlreadyExists");
+			if (cnt > 0) {
+				msg = Msg.getMsg(cpf.getCtx(), "LCO_SequenceAlreadyExists");
 				return msg;
-				}
-			 }catch (SQLException e) {
-				log.log(Level.SEVERE, Msg.getMsg(cpf.getCtx(), "LCO_ValidatePrintedFormCreationError"), e);
-				msg = e.getMessage() + Msg.getMsg(cpf.getCtx(), "LCO_ValidatePrintedFormCreationError") + cpf.get_ID();
-			 }finally {
-				DB.close(rs, pstmt);
-				rs = null;
-				pstmt = null;
-		 }
-	   }
+			}
+		}
 		return msg;
 	}
-	
+
 	/**
 	 * This method creates the sql sentence for checking printed forms on invoices and withholdings
-	 * @param isSOTrx 
+	 * @param isSOTrx
 	 * @param isWithholding
 	 * @param fromInvoiceOrWithholding
 	 * @param isHeaderCount
 	 * @param isPrefixMandatory
 	 * @return
 	 */
-	private StringBuffer getSqlToValidatePrintedForm(boolean isSOTrx, boolean isWithholding, boolean fromInvoiceOrWithholding, boolean isHeaderCount, boolean isPrefixMandatory){
-		StringBuffer sql = null;
-		if(!isHeaderCount){
-			sql = new StringBuffer("SELECT LCO_PrintedFormControl_ID ");
-		 }
-		else{
-			sql = new StringBuffer("SELECT count(LCO_PrintedFormControl_ID) as count ");
-  		}
-		             sql.append("FROM LCO_PrintedFormControl x ");
-		             if (!isWithholding)
-		            	 sql.append(", c_doctype dt ");
-		             sql.append("WHERE x.isactive='Y' ");
-		             
-		             if (!isWithholding){
-		            	 sql.append("AND dt.c_doctype_id = x.c_doctypetarget_id ");
-		            	 sql.append("AND x.c_doctypetarget_id = ? "); //parameter
-		            	 if (isSOTrx)
-		            		 sql.append("AND dt.issotrx = 'Y' ");
-		            	 else
-		            		 sql.append("AND dt.issotrx = 'N' ");
-		                 sql.append("AND x.isWithholding = 'N' ");
-		             }else{
-		            	 sql.append("AND x.isWithholding = 'Y' ");
-		             }
-		             
-		             if (isSOTrx)
-		            	 sql.append(" AND x.c_bpartner_id IS NULL AND x.ad_org_id=? ");
-		             else
-		            	 sql.append(" AND x.c_bpartner_id=? ");
-		             
-		             if (isPrefixMandatory) 
-		            	 sql.append("AND x.prefix = ? "); //parameter
-		             
-		             if (!fromInvoiceOrWithholding){
-			             sql.append("AND ((? "); //parameter: Initial Sequence
-						 sql.append("BETWEEN x.initialsequence::int and x.finalsequence::int) ");
-						 sql.append("OR (? ");    //parameter: Final Sequence
-						 sql.append("BETWEEN x.initialsequence::int and x.finalsequence::int)) ");
-		             }else{
-		            	 sql.append("AND (? "); //parameter: Initial Sequence
-						 sql.append("BETWEEN x.initialsequence::int and x.finalsequence::int) ");
-		             }
-					 if (fromInvoiceOrWithholding){
-			             sql.append("AND ? BETWEEN x.validfrom AND x.validuntil ");
-					 }
+	private StringBuffer getSqlToValidatePrintedForm(boolean isSOTrx,
+			boolean isWithholding, boolean fromInvoiceOrWithholding,
+			boolean isHeaderCount, boolean isPrefixMandatory) {
+		StringBuffer sql = new StringBuffer("SELECT ");
+		if (!isHeaderCount) {
+			sql.append("LCO_PrintedFormControl_ID ");
+		} else {
+			sql.append("COUNT(LCO_PrintedFormControl_ID) AS cnt ");
+		}
+		sql.append("FROM LCO_PrintedFormControl x ");
+		if (!isWithholding)
+			sql.append(", C_DocType dt ");
+		sql.append("WHERE x.IsActive='Y' ");
+
+		if (!isWithholding) {
+			sql.append("AND dt.C_DocType_ID=x.C_DocTypeTarget_ID ");
+			sql.append("AND x.C_DocTypeTarget_ID=? "); //parameter
+			if (isSOTrx)
+				sql.append("AND dt.IsSOTrx='Y' ");
+			else
+				sql.append("AND dt.IsSOTrx='N' ");
+			sql.append("AND x.IsWithholding = 'N' ");
+		} else {
+			sql.append("AND x.IsWithholding = 'Y' ");
+		}
+
+		if (isSOTrx)
+			sql.append(" AND x.C_BPartner_ID IS NULL AND x.AD_Org_ID=? ");
+		else
+			sql.append(" AND x.C_BPartner_ID=? ");
+
+		if (isPrefixMandatory)
+			sql.append("AND x.Prefix = ? "); //parameter
+
+		if (!fromInvoiceOrWithholding) {
+			sql.append("AND ((? "); //parameter: Initial Sequence
+			sql.append("BETWEEN x.InitialSequence AND x.FinalSequence) ");
+			sql.append("OR (? ");    //parameter: Final Sequence
+			sql.append("BETWEEN x.InitialSequence AND x.FinalSequence)) ");
+		} else {
+			sql.append("AND (? "); //parameter: Initial Sequence
+			sql.append("BETWEEN x.InitialSequence AND x.FinalSequence) ");
+		}
+		if (fromInvoiceOrWithholding) {
+			sql.append("AND ? BETWEEN x.ValidFrom AND x.ValidUntil ");
+		}
 
 		return sql;
 	}
