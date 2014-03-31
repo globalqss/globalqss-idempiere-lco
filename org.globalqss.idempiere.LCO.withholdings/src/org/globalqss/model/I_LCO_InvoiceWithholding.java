@@ -32,7 +32,7 @@ public interface I_LCO_InvoiceWithholding
     /** TableName=LCO_InvoiceWithholding */
     public static final String Table_Name = "LCO_InvoiceWithholding";
 
-    /** AD_Table_ID=1000002 */
+    /** AD_Table_ID=1000000 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -151,6 +151,32 @@ public interface I_LCO_InvoiceWithholding
 	  */
 	public Timestamp getDateTrx();
 
+    /** Column name Description */
+    public static final String COLUMNNAME_Description = "Description";
+
+	/** Set Description.
+	  * Optional short description of the record
+	  */
+	public void setDescription (String Description);
+
+	/** Get Description.
+	  * Optional short description of the record
+	  */
+	public String getDescription();
+
+    /** Column name DocumentNo */
+    public static final String COLUMNNAME_DocumentNo = "DocumentNo";
+
+	/** Set Document No.
+	  * Document sequence number of the document
+	  */
+	public void setDocumentNo (String DocumentNo);
+
+	/** Get Document No.
+	  * Document sequence number of the document
+	  */
+	public String getDocumentNo();
+
     /** Column name IsActive */
     public static final String COLUMNNAME_IsActive = "IsActive";
 
@@ -185,6 +211,15 @@ public interface I_LCO_InvoiceWithholding
 	  * Tax is included in the price 
 	  */
 	public boolean isTaxIncluded();
+
+    /** Column name LCO_CreateWithholdingReversal */
+    public static final String COLUMNNAME_LCO_CreateWithholdingReversal = "LCO_CreateWithholdingReversal";
+
+	/** Set Create Withholding Reversal	  */
+	public void setLCO_CreateWithholdingReversal (String LCO_CreateWithholdingReversal);
+
+	/** Get Create Withholding Reversal	  */
+	public String getLCO_CreateWithholdingReversal();
 
     /** Column name LCO_InvoiceWithholding_ID */
     public static final String COLUMNNAME_LCO_InvoiceWithholding_ID = "LCO_InvoiceWithholding_ID";

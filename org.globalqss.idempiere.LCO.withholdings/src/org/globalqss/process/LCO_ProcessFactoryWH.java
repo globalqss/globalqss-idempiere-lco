@@ -37,6 +37,10 @@ public class LCO_ProcessFactoryWH implements IProcessFactory {
 			try {
 				process =  LCO_GenerateWithholding.class.newInstance();
 			} catch (Exception e) {}
+		} else if ("org.globalqss.process.LCO_CreateWithholdingReversal".equals(className)) {
+			try {
+				process =  LCO_CreateWithholdingReversal.class.newInstance();
+			} catch (Exception e) {}
 		}
 
 		return process;

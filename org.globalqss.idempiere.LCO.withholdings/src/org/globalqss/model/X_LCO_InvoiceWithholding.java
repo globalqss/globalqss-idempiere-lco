@@ -33,7 +33,7 @@ public class X_LCO_InvoiceWithholding extends PO implements I_LCO_InvoiceWithhol
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20131119L;
+	private static final long serialVersionUID = 20140330L;
 
     /** Standard Constructor */
     public X_LCO_InvoiceWithholding (Properties ctx, int LCO_InvoiceWithholding_ID, String trxName)
@@ -199,6 +199,40 @@ public class X_LCO_InvoiceWithholding extends PO implements I_LCO_InvoiceWithhol
 		return (Timestamp)get_Value(COLUMNNAME_DateTrx);
 	}
 
+	/** Set Description.
+		@param Description 
+		Optional short description of the record
+	  */
+	public void setDescription (String Description)
+	{
+		set_Value (COLUMNNAME_Description, Description);
+	}
+
+	/** Get Description.
+		@return Optional short description of the record
+	  */
+	public String getDescription () 
+	{
+		return (String)get_Value(COLUMNNAME_Description);
+	}
+
+	/** Set Document No.
+		@param DocumentNo 
+		Document sequence number of the document
+	  */
+	public void setDocumentNo (String DocumentNo)
+	{
+		set_Value (COLUMNNAME_DocumentNo, DocumentNo);
+	}
+
+	/** Get Document No.
+		@return Document sequence number of the document
+	  */
+	public String getDocumentNo () 
+	{
+		return (String)get_Value(COLUMNNAME_DocumentNo);
+	}
+
 	/** Set Is Calc On Payment.
 		@param IsCalcOnPayment Is Calc On Payment	  */
 	public void setIsCalcOnPayment (boolean IsCalcOnPayment)
@@ -242,6 +276,20 @@ public class X_LCO_InvoiceWithholding extends PO implements I_LCO_InvoiceWithhol
 			return "Y".equals(oo);
 		}
 		return false;
+	}
+
+	/** Set Create Withholding Reversal.
+		@param LCO_CreateWithholdingReversal Create Withholding Reversal	  */
+	public void setLCO_CreateWithholdingReversal (String LCO_CreateWithholdingReversal)
+	{
+		set_Value (COLUMNNAME_LCO_CreateWithholdingReversal, LCO_CreateWithholdingReversal);
+	}
+
+	/** Get Create Withholding Reversal.
+		@return Create Withholding Reversal	  */
+	public String getLCO_CreateWithholdingReversal () 
+	{
+		return (String)get_Value(COLUMNNAME_LCO_CreateWithholdingReversal);
 	}
 
 	/** Set Invoice Withholding.

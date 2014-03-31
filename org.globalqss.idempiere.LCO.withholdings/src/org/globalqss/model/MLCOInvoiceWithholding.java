@@ -87,11 +87,10 @@ public class MLCOInvoiceWithholding extends X_LCO_InvoiceWithholding
 				setIsCalcOnPayment( ! wc.isCalcOnInvoice() );
 
 			} else {
-
-				// Fill isCalcOnPayment according to isSOTrx on type
-				X_LCO_WithholdingType wt = new X_LCO_WithholdingType (getCtx(), getLCO_WithholdingType_ID(), get_TrxName());
-				// set on payment for sales, and on invoice for purchases
-				setIsCalcOnPayment(wt.isSOTrx());
+				
+				if (inv.isProcessed()) {
+					setIsCalcOnPayment(true);
+				}
 
 			}
 

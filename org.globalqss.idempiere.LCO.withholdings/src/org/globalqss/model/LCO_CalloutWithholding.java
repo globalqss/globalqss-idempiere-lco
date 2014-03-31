@@ -36,8 +36,6 @@ import org.adempiere.base.IColumnCallout;
 import org.adempiere.base.IColumnCalloutFactory;
 import org.compiere.model.GridField;
 import org.compiere.model.GridTab;
-import org.compiere.model.I_C_Payment;
-import org.compiere.model.I_C_PaymentAllocate;
 import org.compiere.model.MPriceList;
 import org.compiere.model.MSysConfig;
 import org.compiere.model.MTax;
@@ -68,15 +66,6 @@ public class LCO_CalloutWithholding implements IColumnCalloutFactory
 				return new IColumnCallout[]{new FillPercentFromTax()};
 			if (columnName.equalsIgnoreCase(I_LCO_InvoiceWithholding.COLUMNNAME_TaxBaseAmt))
 				return new IColumnCallout[]{new Recalc_TaxAmt()};
-		} else if (tableName.equalsIgnoreCase(I_C_Payment.Table_Name)) {
-			if (columnName.equalsIgnoreCase(I_C_Payment.COLUMNNAME_C_Invoice_ID))
-				return new IColumnCallout[]{new FillWriteOff()};
-		} else if (tableName.equalsIgnoreCase(I_C_PaymentAllocate.Table_Name)) {
-			if (columnName.equalsIgnoreCase(I_C_PaymentAllocate.COLUMNNAME_C_Invoice_ID))
-				return new IColumnCallout[]{new FillWriteOff()};
-		// } else if (tableName.equalsIgnoreCase(I_C_CashLine.Table_Name)) {
-		// 	if (columnName.equalsIgnoreCase(I_C_CashLine.COLUMNNAME_C_Invoice_ID))
-		//		return new IColumnCallout[]{new FillWriteOff()};
 		}
 
 		return null;
@@ -93,11 +82,13 @@ public class LCO_CalloutWithholding implements IColumnCalloutFactory
 		String sql = "SELECT IsUseBPISIC, IsUseBPTaxPayerType, IsUseBPCity, IsUseOrgISIC, IsUseOrgTaxPayerType, IsUseOrgCity, IsUseWithholdingCategory, IsUseProductTaxCategory "
 			           + "FROM LCO_WithholdingRuleConf WHERE LCO_WithholdingType_ID=?";		//	#1
 
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
 		try
 		{
-			PreparedStatement pstmt = DB.prepareStatement(sql, null);
+			pstmt = DB.prepareStatement(sql, null);
 			pstmt.setInt(1, wht_id);
-			ResultSet rs = pstmt.executeQuery();
+			rs = pstmt.executeQuery();
 			//
 			if (rs.next()) {
 				mTab.setValue("IsUseBPISIC", rs.getString("IsUseBPISIC"));
@@ -119,13 +110,15 @@ public class LCO_CalloutWithholding implements IColumnCalloutFactory
 				mTab.setValue("IsUseProductTaxCategory", "N");
 				log.warning("Rule not configured for withholding type");
 			}
-			rs.close();
-			pstmt.close();
 		}
 		catch (SQLException e)
 		{
 			log.log(Level.SEVERE, sql, e);
 			return e.getLocalizedMessage();
+		}
+		finally
+		{
+			DB.close(rs, pstmt);
 		}
 
 		return "";
@@ -194,50 +187,5 @@ public class LCO_CalloutWithholding implements IColumnCalloutFactory
 
 		return "";
 	}
-
-  private static class FillWriteOff implements IColumnCallout {
-    // Called from C_Payment.C_Invoice_ID
-	@Override
-	public String start (Properties ctx, int WindowNo,
-			GridTab mTab, GridField mField, Object value, Object oldValue)
-	{
-		log.info("");
-		Integer invInt = (Integer) value;
-		int inv_id = 0;
-		if (value != null)
-			inv_id = invInt.intValue();
-
-		String sql =
-				"SELECT NVL(SUM(TaxAmt),0) "
-				+ "  FROM LCO_InvoiceWithholding "
-				+ " WHERE C_Invoice_ID = ? "
-				+ "   AND IsCalcOnPayment = 'Y'"
-				+ "   AND Processed = 'N'"
-				+ "   AND C_AllocationLine_ID IS NULL"
-				+ "   AND IsActive = 'Y'";
-
-		try
-		{
-			PreparedStatement pstmt = DB.prepareStatement(sql, null);
-			pstmt.setInt(1, inv_id);
-			ResultSet rs = pstmt.executeQuery();
-			//
-			if (rs.next()) {
-				mTab.setValue("WriteOffAmt", rs.getBigDecimal(1));
-			} else {
-				mTab.setValue("WriteOffAmt", Env.ZERO);
-			}
-			rs.close();
-			pstmt.close();
-		}
-		catch (SQLException e)
-		{
-			log.log(Level.SEVERE, sql, e);
-			return e.getLocalizedMessage();
-		}
-
-		return "";
-	}	//	fillWriteOff
-  }
 
 }	//	LCO_CalloutWithholding
