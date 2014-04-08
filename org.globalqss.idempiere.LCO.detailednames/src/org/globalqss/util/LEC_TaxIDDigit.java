@@ -136,23 +136,25 @@ public class LEC_TaxIDDigit implements ILCO_TaxIDDigit {
 			}
 		}
 
-		//Obtener el residuo de la operacion
+		// Obtener el residuo de la operacion
 		iOperacion %= mod;
-
-		if (iOperacion == 0 || iOperacion == 1)	{
-			return iOperacion;
-		} else {
-			return mod - iOperacion;
+		iOperacion = mod - iOperacion;
+		if (iOperacion >= 10) {
+			iOperacion = mod - iOperacion;
 		}
+
+		return iOperacion;
 	}
 
 	/*
 	public static void main(String[] args) {
 		LEC_TaxIDDigit test = new LEC_TaxIDDigit();
-		test.testDigit("1790011674001", 4);
-		test.testDigit("1760001550001", 5);
-		test.testDigit("1710034065001", 5);
-		test.testDigit("0801895186001", 6);
+		test.testDigit("1790011674001", 4); // juridico
+		test.testDigit("1760001550001", 5); // publico
+		test.testDigit("1710034065001", 5); // natural
+		test.testDigit("0801895186001", 6); // natural
+		test.testDigit("0919171819"   , 9); // natural
+		test.testDigit("1716742687"   , 7); // natural
 	}
 
 	private void testDigit(String taxID, int digitExpected) {
@@ -160,5 +162,5 @@ public class LEC_TaxIDDigit implements ILCO_TaxIDDigit {
 		System.out.println(taxID + (digit == digitExpected ? " right " : " wrong ") + " " + digit + " expected " + digitExpected);
 	}
 	*/
-	
+
 }
