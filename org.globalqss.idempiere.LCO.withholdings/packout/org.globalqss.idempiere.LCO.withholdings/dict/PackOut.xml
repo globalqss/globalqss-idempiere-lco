@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<idempiere Name="org.globalqss.idempiere.LCO.withholdings" Version="2.1.0" idempiereVersion="" DataBaseVersion="" Description="Localization Colombia - Withholdings" Author="" AuthorEmail="info@globalqss.com" CreatedDate="2013-11-18 22:49:18.799" UpdatedDate="2014-03-30 18:38:57.794" PackOutVersion="100" UpdateDictionary="false" Client="0-SYSTEM-System" AD_Client_UU="11237b53-9592-4af1-b3c5-afd216514b5d">
+<idempiere Name="org.globalqss.idempiere.LCO.withholdings" Version="2.1.1" idempiereVersion="" DataBaseVersion="" Description="Localization Colombia - Withholdings" Author="" AuthorEmail="info@globalqss.com" CreatedDate="2013-11-18 22:49:18.799" UpdatedDate="2014-03-30 18:38:57.794" PackOutVersion="100" UpdateDictionary="false" Client="0-SYSTEM-System" AD_Client_UU="11237b53-9592-4af1-b3c5-afd216514b5d">
     <AD_EntityType type="table">
         <AD_Client_ID>0</AD_Client_ID>
         <AD_Org_ID>0</AD_Org_ID>
@@ -6692,7 +6692,7 @@ If the document type of your document has no automatic document sequence defined
             <AD_Tab_ID reference="uuid" reference-key="AD_Tab">7f2e17fb-df1e-48e1-a260-2a02f59d09ef</AD_Tab_ID>
             <AD_Val_Rule_ID reference="id"/>
             <ColumnSpan>2</ColumnSpan>
-            <DefaultValue/>
+            <DefaultValue>@2|C_Invoice_ID@</DefaultValue>
             <Description>Invoice Identifier</Description>
             <DisplayLength>20</DisplayLength>
             <DisplayLogic>@#LCO_USE_WITHHOLDINGS@=Y</DisplayLogic>
