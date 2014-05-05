@@ -14,23 +14,25 @@
  * ComPiere, Inc., 2620 Augustine Dr. #245, Santa Clara, CA 95054, USA        *
  * or via info@compiere.org or http://www.compiere.org/license.html           *
  *****************************************************************************/
-package org.compiere.model;
+package org.globalqss.model;
 
 import java.math.BigDecimal;
 import java.sql.Timestamp;
+
+import org.compiere.model.MTable;
 import org.compiere.util.KeyNamePair;
 
-/** Generated Interface for SRI_AccessCode
+/** Generated Interface for I_SRI_AccessCode
  *  @author Adempiere (generated) 
  *  @version 3.6.1LTS.Final
  */
-public interface I_SRI_AccessCode 
+public interface I_I_SRI_AccessCode 
 {
 
-    /** TableName=SRI_AccessCode */
-    public static final String Table_Name = "SRI_AccessCode";
+    /** TableName=I_SRI_AccessCode */
+    public static final String Table_Name = "I_SRI_AccessCode";
 
-    /** AD_Table_ID=1000135 */
+    /** AD_Table_ID=1000134 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -62,15 +64,6 @@ public interface I_SRI_AccessCode
 	  */
 	public int getAD_Org_ID();
 
-    /** Column name CodeAccessType */
-    public static final String COLUMNNAME_CodeAccessType = "CodeAccessType";
-
-	/** Set CodeAccessType	  */
-	public void setCodeAccessType (String CodeAccessType);
-
-	/** Get CodeAccessType	  */
-	public String getCodeAccessType();
-
     /** Column name Created */
     public static final String COLUMNNAME_Created = "Created";
 
@@ -87,14 +80,40 @@ public interface I_SRI_AccessCode
 	  */
 	public int getCreatedBy();
 
-    /** Column name EnvType */
-    public static final String COLUMNNAME_EnvType = "EnvType";
+    /** Column name I_ErrorMsg */
+    public static final String COLUMNNAME_I_ErrorMsg = "I_ErrorMsg";
 
-	/** Set EnvType	  */
-	public void setEnvType (String EnvType);
+	/** Set Import Error Message.
+	  * Messages generated from import process
+	  */
+	public void setI_ErrorMsg (String I_ErrorMsg);
 
-	/** Get EnvType	  */
-	public String getEnvType();
+	/** Get Import Error Message.
+	  * Messages generated from import process
+	  */
+	public String getI_ErrorMsg();
+
+    /** Column name I_IsImported */
+    public static final String COLUMNNAME_I_IsImported = "I_IsImported";
+
+	/** Set Imported.
+	  * Has this import been processed
+	  */
+	public void setI_IsImported (boolean I_IsImported);
+
+	/** Get Imported.
+	  * Has this import been processed
+	  */
+	public boolean isI_IsImported();
+
+    /** Column name I_SRI_AccessCode_ID */
+    public static final String COLUMNNAME_I_SRI_AccessCode_ID = "I_SRI_AccessCode_ID";
+
+	/** Set I_SRI_AccessCode	  */
+	public void setI_SRI_AccessCode_ID (int I_SRI_AccessCode_ID);
+
+	/** Get I_SRI_AccessCode	  */
+	public int getI_SRI_AccessCode_ID();
 
     /** Column name IsActive */
     public static final String COLUMNNAME_IsActive = "IsActive";
@@ -109,45 +128,27 @@ public interface I_SRI_AccessCode
 	  */
 	public boolean isActive();
 
-    /** Column name IsUsed */
-    public static final String COLUMNNAME_IsUsed = "IsUsed";
+    /** Column name Processed */
+    public static final String COLUMNNAME_Processed = "Processed";
 
-	/** Set IsUsed	  */
-	public void setIsUsed (boolean IsUsed);
-
-	/** Get IsUsed	  */
-	public boolean isUsed();
-
-    /** Column name OldValue */
-    public static final String COLUMNNAME_OldValue = "OldValue";
-
-	/** Set Old Value.
-	  * The old file data
+	/** Set Processed.
+	  * The document has been processed
 	  */
-	public void setOldValue (String OldValue);
+	public void setProcessed (boolean Processed);
 
-	/** Get Old Value.
-	  * The old file data
+	/** Get Processed.
+	  * The document has been processed
 	  */
-	public String getOldValue();
+	public boolean isProcessed();
 
-    /** Column name SRI_AccessCode_ID */
-    public static final String COLUMNNAME_SRI_AccessCode_ID = "SRI_AccessCode_ID";
+    /** Column name Processing */
+    public static final String COLUMNNAME_Processing = "Processing";
 
-	/** Set SRI_AccessCode	  */
-	public void setSRI_AccessCode_ID (int SRI_AccessCode_ID);
+	/** Set Process Now	  */
+	public void setProcessing (boolean Processing);
 
-	/** Get SRI_AccessCode	  */
-	public int getSRI_AccessCode_ID();
-
-    /** Column name SRI_ShortDocType */
-    public static final String COLUMNNAME_SRI_ShortDocType = "SRI_ShortDocType";
-
-	/** Set SRI_ShortDocType	  */
-	public void setSRI_ShortDocType (String SRI_ShortDocType);
-
-	/** Get SRI_ShortDocType	  */
-	public String getSRI_ShortDocType();
+	/** Get Process Now	  */
+	public boolean isProcessing();
 
     /** Column name Updated */
     public static final String COLUMNNAME_Updated = "Updated";
