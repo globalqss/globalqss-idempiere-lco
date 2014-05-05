@@ -31,11 +31,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 
-import org.compiere.model.X_I_SRI_AccessCode;
-import org.compiere.model.X_SRI_AccessCode;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.compiere.util.DB;
+import org.globalqss.model.X_I_SRI_AccessCode;
+import org.globalqss.model.X_SRI_AccessCode;
 
 /**
  *	Import SRI Access Codes from I_SRI_AccessCode
