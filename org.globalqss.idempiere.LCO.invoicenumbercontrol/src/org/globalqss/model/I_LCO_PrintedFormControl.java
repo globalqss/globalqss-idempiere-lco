@@ -32,7 +32,7 @@ public interface I_LCO_PrintedFormControl
     /** TableName=LCO_PrintedFormControl */
     public static final String Table_Name = "LCO_PrintedFormControl";
 
-    /** AD_Table_ID=1000009 */
+    /** AD_Table_ID=1000050 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -123,19 +123,19 @@ public interface I_LCO_PrintedFormControl
     public static final String COLUMNNAME_FinalSequence = "FinalSequence";
 
 	/** Set Final Sequence	  */
-	public void setFinalSequence (String FinalSequence);
+	public void setFinalSequence (int FinalSequence);
 
 	/** Get Final Sequence	  */
-	public String getFinalSequence();
+	public int getFinalSequence();
 
     /** Column name InitialSequence */
     public static final String COLUMNNAME_InitialSequence = "InitialSequence";
 
 	/** Set Initial Sequence	  */
-	public void setInitialSequence (String InitialSequence);
+	public void setInitialSequence (int InitialSequence);
 
 	/** Get Initial Sequence	  */
-	public String getInitialSequence();
+	public int getInitialSequence();
 
     /** Column name IsActive */
     public static final String COLUMNNAME_IsActive = "IsActive";
