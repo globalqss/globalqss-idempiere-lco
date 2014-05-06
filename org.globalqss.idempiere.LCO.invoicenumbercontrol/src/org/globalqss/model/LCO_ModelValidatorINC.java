@@ -142,13 +142,20 @@ public class LCO_ModelValidatorINC extends AbstractEventHandler
 			return msg;
 
 		final boolean isPrefixMandatory = MSysConfig.getBooleanValue("QSSLCO_IsPrefixMandatory", true, Env.getAD_Client_ID(Env.getCtx()));
-		final int prefixLengthExpected = Integer.valueOf(MSysConfig.getValue("QSSLCO_PrefixLength", null, Env.getAD_Client_ID(Env.getCtx())));
+		final int prefixLengthExpected;
+		if(isPrefixMandatory)
+			 prefixLengthExpected = Integer.valueOf(MSysConfig.getValue("QSSLCO_PrefixLength", null, Env.getAD_Client_ID(Env.getCtx())));	
+		else
+			prefixLengthExpected = 0;
 
 		final int docNoLengthExpected = Integer.valueOf(MSysConfig.getValue("QSSLCO_DocNoLength", null, Env.getAD_Client_ID(Env.getCtx())));
 		final int docNoLengthOptionalExpected = Integer.valueOf(MSysConfig.getValue("QSSLEC_DocNoLengthOptional", null, Env.getAD_Client_ID(Env.getCtx())));
 		final int docNoLengthEntered = invoiceWithholding.getDocumentNo().length();
 
 		boolean docNoLengthOptionalActive = MSysConfig.getBooleanValue("QSSLEC_DocNoLengthOptionalActive", true, Env.getAD_Client_ID(Env.getCtx()));
+		
+		if ( (isPrefixMandatory && docNoLengthEntered == docNoLengthExpected) && (prefixLengthExpected >= docNoLengthEntered ))
+			return Msg.getMsg(invoiceWithholding.getCtx(), "LCO_PrefixLengthInadequate");
 
 		MInvoice m_invoice = new MInvoice (invoiceWithholding.getCtx(), invoiceWithholding.getC_Invoice_ID(), invoiceWithholding.get_TrxName());
 		if (docNoLengthEntered == docNoLengthExpected || (docNoLengthEntered == docNoLengthOptionalExpected && docNoLengthOptionalActive)) {
@@ -174,8 +181,8 @@ public class LCO_ModelValidatorINC extends AbstractEventHandler
 			else
 				params.add(m_invoice.getC_BPartner_ID());
 			if (isPrefixMandatory)
-				params.add(invoiceWithholding.getDocumentNo().toString().substring(0, prefixLengthExpected));
-			params.add(Integer.valueOf(invoiceWithholding.getDocumentNo().toString().substring(prefixLengthExpected, docNoLengthEntered)));
+				params.add(invoiceWithholding.getDocumentNo().substring(0, prefixLengthExpected));
+			params.add(Integer.valueOf(invoiceWithholding.getDocumentNo().substring(prefixLengthExpected, docNoLengthEntered)));
 			params.add(invoiceWithholding.getDateAcct());
 
 			log.fine(sqlCount);
@@ -218,13 +225,20 @@ public class LCO_ModelValidatorINC extends AbstractEventHandler
 			return null;
 
 		final boolean isPrefixMandatory = MSysConfig.getBooleanValue("QSSLCO_IsPrefixMandatory", true, Env.getAD_Client_ID(Env.getCtx()));
-		final int prefixLengthExpected = Integer.valueOf(MSysConfig.getValue("QSSLCO_PrefixLength", null, Env.getAD_Client_ID(Env.getCtx())));
-
+		final int prefixLengthExpected;
+		if(isPrefixMandatory)
+			 prefixLengthExpected = Integer.valueOf(MSysConfig.getValue("QSSLCO_PrefixLength", null, Env.getAD_Client_ID(Env.getCtx())));	
+		else
+			prefixLengthExpected = 0;
+		
 		final int docNoLengthExpected = Integer.valueOf(MSysConfig.getValue("QSSLCO_DocNoLength", null, Env.getAD_Client_ID(Env.getCtx())));
 		final int docNoLengthOptionalExpected = Integer.valueOf(MSysConfig.getValue("QSSLEC_DocNoLengthOptional", null, Env.getAD_Client_ID(Env.getCtx())));
 		final int docNoLengthEntered = invoice.getDocumentNo().length();
-
+		
 		boolean docNoLengthOptionalActive = MSysConfig.getBooleanValue("QSSLEC_DocNoLengthOptionalActive", true, Env.getAD_Client_ID(Env.getCtx()));
+		
+		if ( (isPrefixMandatory && docNoLengthEntered == docNoLengthExpected) && (prefixLengthExpected >= docNoLengthEntered ))
+			return Msg.getMsg(invoice.getCtx(), "LCO_PrefixLengthInadequate");
 
 		if (docNoLengthEntered == docNoLengthExpected || (docNoLengthEntered == docNoLengthOptionalExpected && docNoLengthOptionalActive)) {
 
@@ -250,8 +264,9 @@ public class LCO_ModelValidatorINC extends AbstractEventHandler
 			else
 				params.add(invoice.getC_BPartner_ID());
 			if (isPrefixMandatory)
-				params.add(invoice.getDocumentNo().toString().substring(0, prefixLengthExpected));
-			params.add(Integer.valueOf(invoice.getDocumentNo().toString().substring(prefixLengthExpected, docNoLengthEntered)));
+				params.add(invoice.getDocumentNo().substring(0, prefixLengthExpected));
+			params.add(Integer.valueOf(invoice.getDocumentNo().substring(prefixLengthExpected, docNoLengthEntered)));
+			
 			params.add(invoice.getDateInvoiced());
 
 			log.fine(sqlCount);
@@ -284,7 +299,7 @@ public class LCO_ModelValidatorINC extends AbstractEventHandler
 		final int prefixLengthExpected = Integer.valueOf(MSysConfig.getValue("QSSLCO_PrefixLength", null, Env.getAD_Client_ID(Env.getCtx())));
 		int prefixLengthEntered = 0;
 		if (cpf.getPrefix() !=  null)
-			prefixLengthEntered = cpf.getPrefix().toString().length();
+			prefixLengthEntered = cpf.getPrefix().length();
 
 		if (cpf.getC_DocTypeTarget_ID() <= 0 && !cpf.isWithholding())
 			return Msg.getMsg(cpf.getCtx(), "LCO_TypeOfPrintedFormControlRequired");
@@ -294,8 +309,8 @@ public class LCO_ModelValidatorINC extends AbstractEventHandler
 
 		if (cpf.is_ValueChanged("InitialSequence") || cpf.is_ValueChanged("FinalSequence") || (cpf.is_ValueChanged("IsActive") && cpf.isActive())) {
 
-			int initialSequence = Integer.parseInt(cpf.getInitialSequence());
-			int finalSequence = Integer.parseInt(cpf.getFinalSequence());
+			int initialSequence = cpf.getInitialSequence();
+			int finalSequence = cpf.getFinalSequence();
 			if (finalSequence <= initialSequence)
 				return Msg.getMsg(cpf.getCtx(), "LCO_InvalidSequences");
 
@@ -304,6 +319,7 @@ public class LCO_ModelValidatorINC extends AbstractEventHandler
 				return Msg.getMsg(cpf.getCtx(), "LCO_InvalidDates");
 
 			MDocType dt = new MDocType(cpf.getCtx(), cpf.getC_DocTypeTarget_ID(), cpf.get_TrxName());
+			
 
 			boolean isSOTrx = dt.isSOTrx();
 			String sql = getSqlToValidatePrintedForm(isSOTrx, cpf.isWithholding(), false, true, isPrefixMandatory).toString();
@@ -320,8 +336,8 @@ public class LCO_ModelValidatorINC extends AbstractEventHandler
 			if (isPrefixMandatory)
 				params.add(cpf.getPrefix());
 
-			params.add(Integer.valueOf(cpf.getInitialSequence()));
-			params.add(Integer.valueOf(cpf.getFinalSequence()));
+			params.add(cpf.getInitialSequence());
+			params.add(cpf.getFinalSequence());
 
 			int cnt = DB.getSQLValueEx(cpf.get_TrxName(), sql, params);
 			

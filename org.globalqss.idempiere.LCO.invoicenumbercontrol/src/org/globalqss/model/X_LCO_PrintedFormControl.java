@@ -31,7 +31,7 @@ public class X_LCO_PrintedFormControl extends PO implements I_LCO_PrintedFormCon
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20140318L;
+	private static final long serialVersionUID = 20140505L;
 
     /** Standard Constructor */
     public X_LCO_PrintedFormControl (Properties ctx, int LCO_PrintedFormControl_ID, String trxName)
@@ -40,8 +40,8 @@ public class X_LCO_PrintedFormControl extends PO implements I_LCO_PrintedFormCon
       /** if (LCO_PrintedFormControl_ID == 0)
         {
 			setAuthorizationNo (null);
-			setFinalSequence (null);
-			setInitialSequence (null);
+			setFinalSequence (0);
+			setInitialSequence (0);
 			setLCO_PrintedFormControl_ID (0);
 			setValidFrom (new Timestamp( System.currentTimeMillis() ));
 			setValidUntil (new Timestamp( System.currentTimeMillis() ));
@@ -148,30 +148,36 @@ public class X_LCO_PrintedFormControl extends PO implements I_LCO_PrintedFormCon
 
 	/** Set Final Sequence.
 		@param FinalSequence Final Sequence	  */
-	public void setFinalSequence (String FinalSequence)
+	public void setFinalSequence (int FinalSequence)
 	{
-		set_Value (COLUMNNAME_FinalSequence, FinalSequence);
+		set_Value (COLUMNNAME_FinalSequence, Integer.valueOf(FinalSequence));
 	}
 
 	/** Get Final Sequence.
 		@return Final Sequence	  */
-	public String getFinalSequence () 
+	public int getFinalSequence () 
 	{
-		return (String)get_Value(COLUMNNAME_FinalSequence);
+		Integer ii = (Integer)get_Value(COLUMNNAME_FinalSequence);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 
 	/** Set Initial Sequence.
 		@param InitialSequence Initial Sequence	  */
-	public void setInitialSequence (String InitialSequence)
+	public void setInitialSequence (int InitialSequence)
 	{
-		set_Value (COLUMNNAME_InitialSequence, InitialSequence);
+		set_Value (COLUMNNAME_InitialSequence, Integer.valueOf(InitialSequence));
 	}
 
 	/** Get Initial Sequence.
 		@return Initial Sequence	  */
-	public String getInitialSequence () 
+	public int getInitialSequence () 
 	{
-		return (String)get_Value(COLUMNNAME_InitialSequence);
+		Integer ii = (Integer)get_Value(COLUMNNAME_InitialSequence);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 
 	/** Set Is Withholding.
