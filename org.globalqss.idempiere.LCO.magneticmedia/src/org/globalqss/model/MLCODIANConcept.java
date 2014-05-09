@@ -94,7 +94,7 @@ public class MLCODIANConcept extends X_LCO_DIAN_Concept
 		// for each position in sources
 		String sql = "SELECT DISTINCT dcs.CalcColumnPosition "
 			+ "FROM LCO_DIAN_ConceptSource dcs "
-			+ "WHERE dcs.LCO_DIAN_Concept_ID=? AND dcs.IsActive='Y' AND dcs.CalcColumnPosition>0"
+			+ "WHERE dcs.LCO_DIAN_Concept_ID=? AND dcs.IsActive='Y' AND dcs.CalcColumnPosition>0 "
 			+ "ORDER BY dcs.CalcColumnPosition";
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;

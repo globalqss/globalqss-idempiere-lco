@@ -140,7 +140,8 @@ public class LCO_DianGenerateXML extends SvrProcess {
 					xmlh = new X_LCO_DIAN_XML_Header(getCtx(), 0, get_TrxName());
 					cntmedia++;
 					xmlh.setLCO_DIAN_SendSchedule_ID(sendScheduleProcess.getLCO_DIAN_SendSchedule_ID());
-					int p_seqEnvio = seqxml.getNextID();
+					String s_seqEnvio = MSequence.getDocumentNoFromSeq(seqxml, get_TrxName(), sendScheduleProcess);
+					int p_seqEnvio = Integer.valueOf(s_seqEnvio);
 					seqxml.saveEx();
 					xmlh.setSequence(p_seqEnvio);
 					xmlh.saveEx();
