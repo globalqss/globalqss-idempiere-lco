@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<idempiere Name="org.globalqss.idempiere.LCO.magneticmedia" Version="2.0.0" idempiereVersion="" DataBaseVersion="" Description="Localization Colombia - medios magneticos DIAN" Author="" AuthorEmail="info@globalqss.com" CreatedDate="2013-11-19 00:15:20.562" UpdatedDate="2013-11-19 00:15:20.562" PackOutVersion="100" UpdateDictionary="false" Client="0-SYSTEM-System" AD_Client_UU="11237b53-9592-4af1-b3c5-afd216514b5d">
+<idempiere Name="org.globalqss.idempiere.LCO.magneticmedia" Version="2.1.0" idempiereVersion="" DataBaseVersion="" Description="Localization Colombia - medios magneticos DIAN" Author="" AuthorEmail="info@globalqss.com" CreatedDate="2013-11-19 00:15:20.562" UpdatedDate="2013-11-19 00:15:20.562" PackOutVersion="100" UpdateDictionary="false" Client="0-SYSTEM-System" AD_Client_UU="11237b53-9592-4af1-b3c5-afd216514b5d">
     <AD_EntityType type="table">
         <AD_Client_ID>0</AD_Client_ID>
         <AD_Org_ID>0</AD_Org_ID>
@@ -1472,7 +1472,7 @@ Accounting Segments like Organization, Account, Product may have several hierarc
                             <AD_Table_ID reference="uuid" reference-key="AD_Table">b1b6c5f8-fbbe-42ba-8045-e68f8aebb78d</AD_Table_ID>
                             <AD_TableIndex_UU>94ee3080-d0c8-4fc3-8c8c-0fd86ebfbb6e</AD_TableIndex_UU>
                             <Description/>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <Help/>
                             <IsActive>true</IsActive>
                             <IsCreateConstraint>false</IsCreateConstraint>
@@ -1486,7 +1486,7 @@ Accounting Segments like Organization, Account, Product may have several hierarc
                                 <AD_IndexColumn_UU>068d1e9c-9b79-42ce-8f10-24b26e1e7776</AD_IndexColumn_UU>
                                 <AD_TableIndex_ID reference="uuid" reference-key="AD_TableIndex">94ee3080-d0c8-4fc3-8c8c-0fd86ebfbb6e</AD_TableIndex_ID>
                                 <ColumnSQL/>
-                                <EntityType>U</EntityType>
+                                <EntityType>QSS_LCO</EntityType>
                                 <IsActive>true</IsActive>
                                 <SeqNo>1</SeqNo>
                             </AD_IndexColumn>
@@ -3170,7 +3170,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Table_ID reference="uuid" reference-key="AD_Table">b018791e-002c-485f-bbff-8ddc12e8cb57</AD_Table_ID>
                             <AD_TableIndex_UU>2c4de0d3-7b04-433b-b4d6-0ad34f93f418</AD_TableIndex_UU>
                             <Description/>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <Help/>
                             <IsActive>true</IsActive>
                             <IsCreateConstraint>false</IsCreateConstraint>
@@ -3184,7 +3184,7 @@ There are two reasons for de-activating and not deleting records:
                                 <AD_IndexColumn_UU>3ba1e082-676a-4622-a941-068e069f369a</AD_IndexColumn_UU>
                                 <AD_TableIndex_ID reference="uuid" reference-key="AD_TableIndex">2c4de0d3-7b04-433b-b4d6-0ad34f93f418</AD_TableIndex_ID>
                                 <ColumnSQL/>
-                                <EntityType>U</EntityType>
+                                <EntityType>QSS_LCO</EntityType>
                                 <IsActive>true</IsActive>
                                 <SeqNo>1</SeqNo>
                             </AD_IndexColumn>
@@ -3659,6 +3659,54 @@ There are two reasons for de-activating and not deleting records:
                             <Version>1</Version>
                             <VFormat/>
                         </AD_Column>
+			<AD_Column type="table">
+			    <IsSyncDatabase>Y</IsSyncDatabase>
+			    <AD_Table_ID reference="uuid" reference-key="AD_Table">39bc144a-f0fa-46f7-b9b5-d00ca4c49d2d</AD_Table_ID>
+			    <AD_Reference_Value_ID reference="id"/>
+			    <AD_Client_ID>0</AD_Client_ID>
+			    <AD_Org_ID>0</AD_Org_ID>
+			    <AD_Chart_ID reference="id"/>
+			    <AD_Column_UU>9d57eb9f-f116-46a3-a3ac-b7ddca0f1e95</AD_Column_UU>
+			    <AD_Element_ID reference="id">399</AD_Element_ID>
+			    <AD_Process_ID reference="id"/>
+			    <AD_Reference_ID reference="id">20</AD_Reference_ID>
+			    <AD_Val_Rule_ID reference="id"/>
+			    <Callout/>
+			    <ColumnName>IsPrinted</ColumnName>
+			    <ColumnSQL/>
+			    <DefaultValue>Y</DefaultValue>
+			    <Description>Indicates if this document / line is printed</Description>
+			    <EntityType>QSS_LCO</EntityType>
+			    <FieldLength>1</FieldLength>
+			    <FKConstraintName/>
+			    <FKConstraintType>N</FKConstraintType>
+			    <FormatPattern/>
+			    <Help>The Printed checkbox indicates if this document or line will included when printing.</Help>
+			    <IsActive>true</IsActive>
+			    <IsAllowCopy>true</IsAllowCopy>
+			    <IsAllowLogging>true</IsAllowLogging>
+			    <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
+			    <IsAutocomplete>false</IsAutocomplete>
+			    <IsEncrypted>N</IsEncrypted>
+			    <IsIdentifier>false</IsIdentifier>
+			    <IsKey>false</IsKey>
+			    <IsMandatory>true</IsMandatory>
+			    <IsParent>false</IsParent>
+			    <IsSecure>false</IsSecure>
+			    <IsSelectionColumn>false</IsSelectionColumn>
+			    <IsToolbarButton>false</IsToolbarButton>
+			    <IsTranslated>false</IsTranslated>
+			    <IsUpdateable>true</IsUpdateable>
+			    <MandatoryLogic/>
+			    <Name>Printed</Name>
+			    <ReadOnlyLogic/>
+			    <SeqNo>0</SeqNo>
+			    <SeqNoSelection>0</SeqNoSelection>
+			    <ValueMax/>
+			    <ValueMin/>
+			    <Version>0</Version>
+			    <VFormat/>
+			</AD_Column>
                         <AD_Column type="table">
                             <IsSyncDatabase>Y</IsSyncDatabase>
                             <AD_Table_ID reference="uuid" reference-key="AD_Table">39bc144a-f0fa-46f7-b9b5-d00ca4c49d2d</AD_Table_ID>
@@ -4428,7 +4476,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Table_ID reference="uuid" reference-key="AD_Table">39bc144a-f0fa-46f7-b9b5-d00ca4c49d2d</AD_Table_ID>
                             <AD_TableIndex_UU>6d2abb86-26c6-4915-9e0e-8976b35c3fba</AD_TableIndex_UU>
                             <Description/>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <Help/>
                             <IsActive>true</IsActive>
                             <IsCreateConstraint>false</IsCreateConstraint>
@@ -4442,7 +4490,7 @@ There are two reasons for de-activating and not deleting records:
                                 <AD_IndexColumn_UU>e2b6e841-b3f9-40c1-adf5-e4e37c303189</AD_IndexColumn_UU>
                                 <AD_TableIndex_ID reference="uuid" reference-key="AD_TableIndex">6d2abb86-26c6-4915-9e0e-8976b35c3fba</AD_TableIndex_ID>
                                 <ColumnSQL/>
-                                <EntityType>U</EntityType>
+                                <EntityType>QSS_LCO</EntityType>
                                 <IsActive>true</IsActive>
                                 <SeqNo>1</SeqNo>
                             </AD_IndexColumn>
@@ -4917,62 +4965,62 @@ There are two reasons for de-activating and not deleting records:
                                 <IsTranslated>true</IsTranslated>
                             </AD_Field_Trl>
                         </AD_Field>
-                        <AD_Field type="table">
-                            <AD_Client_ID>0</AD_Client_ID>
-                            <AD_Org_ID>0</AD_Org_ID>
-                            <AD_Column_ID reference="uuid" reference-key="AD_Column">e679e639-ba96-4722-8e69-e1fef05eac9d</AD_Column_ID>
-                            <AD_FieldGroup_ID reference="id"/>
-                            <AD_Field_UU>c8ad06fd-de69-4b6c-b38e-b92c1bd4cd25</AD_Field_UU>
-                            <AD_Reference_ID reference="id"/>
-                            <AD_Reference_Value_ID reference="id"/>
-                            <AD_Tab_ID reference="uuid" reference-key="AD_Tab">d6646dee-f0ad-4da5-8966-ae281b1126b4</AD_Tab_ID>
-                            <AD_Val_Rule_ID reference="id"/>
-                            <ColumnSpan>2</ColumnSpan>
-                            <DefaultValue/>
-                            <Description>The record is active in the system</Description>
-                            <DisplayLength>1</DisplayLength>
-                            <DisplayLogic>@#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
-                            <EntityType>QSS_LCO</EntityType>
-                            <Help>There are two methods of making records unavailable in the system: One is to delete the record, the other is to de-activate the record. A de-activated record is not available for selection, but available for reports.
+			<AD_Field type="table">
+			    <AD_Client_ID>0</AD_Client_ID>
+			    <AD_Org_ID>0</AD_Org_ID>
+			    <AD_Column_ID reference="uuid" reference-key="AD_Column">e679e639-ba96-4722-8e69-e1fef05eac9d</AD_Column_ID>
+			    <AD_FieldGroup_ID reference="id"/>
+			    <AD_Field_UU>c8ad06fd-de69-4b6c-b38e-b92c1bd4cd25</AD_Field_UU>
+			    <AD_Reference_ID reference="id"/>
+			    <AD_Reference_Value_ID reference="id"/>
+			    <AD_Tab_ID reference="uuid" reference-key="AD_Tab">d6646dee-f0ad-4da5-8966-ae281b1126b4</AD_Tab_ID>
+			    <AD_Val_Rule_ID reference="id"/>
+			    <ColumnSpan>2</ColumnSpan>
+			    <DefaultValue/>
+			    <Description>The record is active in the system</Description>
+			    <DisplayLength>1</DisplayLength>
+			    <DisplayLogic>@#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
+			    <EntityType>QSS_LCO</EntityType>
+			    <Help>There are two methods of making records unavailable in the system: One is to delete the record, the other is to de-activate the record. A de-activated record is not available for selection, but available for reports.
 There are two reasons for de-activating and not deleting records:
 (1) The system requires the record for audit purposes.
 (2) The record is referenced by other records. E.g., you cannot delete a Business Partner, if there are invoices for this partner record existing. You de-activate the Business Partner and prevent that this record is used for future entries.</Help>
-                            <Included_Tab_ID reference="id"/>
-                            <IsActive>true</IsActive>
-                            <IsAdvancedField>false</IsAdvancedField>
-                            <IsAllowCopy/>
-                            <IsAlwaysUpdateable/>
-                            <IsCentrallyMaintained>true</IsCentrallyMaintained>
-                            <IsDefaultFocus>false</IsDefaultFocus>
-                            <IsDisplayed>true</IsDisplayed>
-                            <IsDisplayedGrid>true</IsDisplayedGrid>
-                            <IsEncrypted>false</IsEncrypted>
-                            <IsFieldOnly>false</IsFieldOnly>
-                            <IsHeading>false</IsHeading>
-                            <IsMandatory/>
-                            <IsQuickEntry>false</IsQuickEntry>
-                            <IsReadOnly>false</IsReadOnly>
-                            <IsSameLine>false</IsSameLine>
-                            <IsToolbarButton/>
-                            <IsUpdateable/>
-                            <MandatoryLogic/>
-                            <Name>Active</Name>
-                            <NumLines>1</NumLines>
-                            <ObscureType/>
-                            <ReadOnlyLogic/>
-                            <SeqNo>90</SeqNo>
-                            <SeqNoGrid>70</SeqNoGrid>
-                            <SortNo>0</SortNo>
-                            <XPosition>5</XPosition>
-                            <AD_Field_Trl type="translation">
-                                <Description>El registro está activo en el sistema</Description>
-                                <Help>Hay dos métodos para que los registros no estén disponibles en el sistema: Uno es eliminar el registro; el otro es desactivarlo. Un registro desactivado no está disponible para selección; pero está disponible para Informes</Help>
-                                <Name>Activo</Name>
-                                <AD_Language>es_CO</AD_Language>
-                                <IsActive>true</IsActive>
-                                <IsTranslated>true</IsTranslated>
-                            </AD_Field_Trl>
-                        </AD_Field>
+			    <Included_Tab_ID reference="id"/>
+			    <IsActive>true</IsActive>
+			    <IsAdvancedField>false</IsAdvancedField>
+			    <IsAllowCopy/>
+			    <IsAlwaysUpdateable/>
+			    <IsCentrallyMaintained>true</IsCentrallyMaintained>
+			    <IsDefaultFocus>false</IsDefaultFocus>
+			    <IsDisplayed>true</IsDisplayed>
+			    <IsDisplayedGrid>true</IsDisplayedGrid>
+			    <IsEncrypted>false</IsEncrypted>
+			    <IsFieldOnly>false</IsFieldOnly>
+			    <IsHeading>false</IsHeading>
+			    <IsMandatory/>
+			    <IsQuickEntry>false</IsQuickEntry>
+			    <IsReadOnly>false</IsReadOnly>
+			    <IsSameLine>false</IsSameLine>
+			    <IsToolbarButton/>
+			    <IsUpdateable/>
+			    <MandatoryLogic/>
+			    <Name>Active</Name>
+			    <NumLines>1</NumLines>
+			    <ObscureType/>
+			    <ReadOnlyLogic/>
+			    <SeqNo>100</SeqNo>
+			    <SeqNoGrid>70</SeqNoGrid>
+			    <SortNo>0</SortNo>
+			    <XPosition>2</XPosition>
+			    <AD_Field_Trl type="translation">
+				<Description>El registro está activo en el sistema</Description>
+				<Help>Hay dos métodos para que los registros no estén disponibles en el sistema: Uno es eliminar el registro; el otro es desactivarlo. Un registro desactivado no está disponible para selección; pero está disponible para Informes</Help>
+				<Name>Activo</Name>
+				<AD_Language>es_CO</AD_Language>
+				<IsActive>true</IsActive>
+				<IsTranslated>true</IsTranslated>
+			    </AD_Field_Trl>
+			</AD_Field>
                         <AD_Field type="table">
                             <AD_Client_ID>0</AD_Client_ID>
                             <AD_Org_ID>0</AD_Org_ID>
@@ -5026,6 +5074,165 @@ There are two reasons for de-activating and not deleting records:
                                 <IsTranslated>true</IsTranslated>
                             </AD_Field_Trl>
                         </AD_Field>
+			<AD_Field type="table">
+			    <AD_Client_ID>0</AD_Client_ID>
+			    <AD_Org_ID>0</AD_Org_ID>
+			    <AD_Column_ID reference="uuid" reference-key="AD_Column">6a8dc923-1c1c-42d2-a095-5be09af921ee</AD_Column_ID>
+			    <AD_FieldGroup_ID reference="id"/>
+			    <AD_Field_UU>47b11b61-1b70-4244-9936-d30d86635a78</AD_Field_UU>
+			    <AD_Reference_ID reference="id"/>
+			    <AD_Reference_Value_ID reference="id"/>
+			    <AD_Tab_ID reference="uuid" reference-key="AD_Tab">d6646dee-f0ad-4da5-8966-ae281b1126b4</AD_Tab_ID>
+			    <AD_Val_Rule_ID reference="id"/>
+			    <ColumnSpan>2</ColumnSpan>
+			    <DefaultValue/>
+			    <Description/>
+			    <DisplayLength>10</DisplayLength>
+			    <DisplayLogic>@#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
+			    <EntityType>QSS_LCO</EntityType>
+			    <Help/>
+			    <Included_Tab_ID reference="id"/>
+			    <IsActive>true</IsActive>
+			    <IsAdvancedField>false</IsAdvancedField>
+			    <IsAllowCopy/>
+			    <IsAlwaysUpdateable/>
+			    <IsCentrallyMaintained>true</IsCentrallyMaintained>
+			    <IsDefaultFocus>false</IsDefaultFocus>
+			    <IsDisplayed>true</IsDisplayed>
+			    <IsDisplayedGrid>true</IsDisplayedGrid>
+			    <IsEncrypted>false</IsEncrypted>
+			    <IsFieldOnly>false</IsFieldOnly>
+			    <IsHeading>false</IsHeading>
+			    <IsMandatory/>
+			    <IsQuickEntry>false</IsQuickEntry>
+			    <IsReadOnly>false</IsReadOnly>
+			    <IsSameLine>false</IsSameLine>
+			    <IsToolbarButton/>
+			    <IsUpdateable/>
+			    <MandatoryLogic/>
+			    <Name>CalcColumnPosition</Name>
+			    <NumLines>1</NumLines>
+			    <ObscureType/>
+			    <ReadOnlyLogic/>
+			    <SeqNo>70</SeqNo>
+			    <SeqNoGrid>50</SeqNoGrid>
+			    <SortNo>0</SortNo>
+			    <XPosition>4</XPosition>
+			    <AD_Field_Trl type="translation">
+				<Description/>
+				<Help/>
+				<Name>Posición Columna Cálculo</Name>
+				<AD_Language>es_CO</AD_Language>
+				<IsActive>true</IsActive>
+				<IsTranslated>true</IsTranslated>
+			    </AD_Field_Trl>
+			</AD_Field>
+			<AD_Field type="table">
+			    <AD_Client_ID>0</AD_Client_ID>
+			    <AD_Org_ID>0</AD_Org_ID>
+			    <AD_Column_ID reference="uuid" reference-key="AD_Column">9d57eb9f-f116-46a3-a3ac-b7ddca0f1e95</AD_Column_ID>
+			    <AD_FieldGroup_ID reference="id"/>
+			    <AD_Field_UU>c2c1127a-191c-44ef-8667-437018b00e4a</AD_Field_UU>
+			    <AD_Reference_ID reference="id"/>
+			    <AD_Reference_Value_ID reference="id"/>
+			    <AD_Tab_ID reference="uuid" reference-key="AD_Tab">d6646dee-f0ad-4da5-8966-ae281b1126b4</AD_Tab_ID>
+			    <AD_Val_Rule_ID reference="id"/>
+			    <ColumnSpan>2</ColumnSpan>
+			    <DefaultValue/>
+			    <Description>Indicates if this document / line is printed</Description>
+			    <DisplayLength>1</DisplayLength>
+			    <DisplayLogic/>
+			    <EntityType>QSS_LCO</EntityType>
+			    <Help>The Printed checkbox indicates if this document or line will included when printing.</Help>
+			    <Included_Tab_ID reference="id"/>
+			    <IsActive>true</IsActive>
+			    <IsAdvancedField>false</IsAdvancedField>
+			    <IsAllowCopy/>
+			    <IsAlwaysUpdateable/>
+			    <IsCentrallyMaintained>true</IsCentrallyMaintained>
+			    <IsDefaultFocus>false</IsDefaultFocus>
+			    <IsDisplayed>true</IsDisplayed>
+			    <IsDisplayedGrid>true</IsDisplayedGrid>
+			    <IsEncrypted>false</IsEncrypted>
+			    <IsFieldOnly>false</IsFieldOnly>
+			    <IsHeading>false</IsHeading>
+			    <IsMandatory/>
+			    <IsQuickEntry>false</IsQuickEntry>
+			    <IsReadOnly>false</IsReadOnly>
+			    <IsSameLine>false</IsSameLine>
+			    <IsToolbarButton/>
+			    <IsUpdateable/>
+			    <MandatoryLogic/>
+			    <Name>Printed</Name>
+			    <NumLines>1</NumLines>
+			    <ObscureType/>
+			    <ReadOnlyLogic/>
+			    <SeqNo>90</SeqNo>
+			    <SeqNoGrid>80</SeqNoGrid>
+			    <SortNo/>
+			    <XPosition>5</XPosition>
+			    <AD_Field_Trl type="translation">
+				<Description>Indicates if this document / line is printed</Description>
+				<Help>The Printed checkbox indicates if this document or line will included when printing.</Help>
+				<Name>Printed</Name>
+				<AD_Language>es_CO</AD_Language>
+				<IsActive>true</IsActive>
+				<IsTranslated>false</IsTranslated>
+			    </AD_Field_Trl>
+			</AD_Field>
+			<AD_Field type="table">
+			    <AD_Client_ID>0</AD_Client_ID>
+			    <AD_Org_ID>0</AD_Org_ID>
+			    <AD_Column_ID reference="uuid" reference-key="AD_Column">b54441f2-c4f1-4992-8410-f9546731e1a2</AD_Column_ID>
+			    <AD_FieldGroup_ID reference="id"/>
+			    <AD_Field_UU>4202fd72-057b-4814-a4da-c1a150086fdf</AD_Field_UU>
+			    <AD_Reference_ID reference="id"/>
+			    <AD_Reference_Value_ID reference="id"/>
+			    <AD_Tab_ID reference="uuid" reference-key="AD_Tab">d6646dee-f0ad-4da5-8966-ae281b1126b4</AD_Tab_ID>
+			    <AD_Val_Rule_ID reference="id"/>
+			    <ColumnSpan>2</ColumnSpan>
+			    <DefaultValue/>
+			    <Description/>
+			    <DisplayLength>36</DisplayLength>
+			    <DisplayLogic/>
+			    <EntityType>QSS_LCO</EntityType>
+			    <Help/>
+			    <Included_Tab_ID reference="id"/>
+			    <IsActive>true</IsActive>
+			    <IsAdvancedField>false</IsAdvancedField>
+			    <IsAllowCopy/>
+			    <IsAlwaysUpdateable/>
+			    <IsCentrallyMaintained>true</IsCentrallyMaintained>
+			    <IsDefaultFocus>false</IsDefaultFocus>
+			    <IsDisplayed>false</IsDisplayed>
+			    <IsDisplayedGrid>false</IsDisplayedGrid>
+			    <IsEncrypted>false</IsEncrypted>
+			    <IsFieldOnly>false</IsFieldOnly>
+			    <IsHeading>false</IsHeading>
+			    <IsMandatory/>
+			    <IsQuickEntry>false</IsQuickEntry>
+			    <IsReadOnly>false</IsReadOnly>
+			    <IsSameLine>false</IsSameLine>
+			    <IsToolbarButton/>
+			    <IsUpdateable/>
+			    <MandatoryLogic/>
+			    <Name>LCO_DIAN_FieldFormat_UU</Name>
+			    <NumLines>1</NumLines>
+			    <ObscureType/>
+			    <ReadOnlyLogic/>
+			    <SeqNo>0</SeqNo>
+			    <SeqNoGrid/>
+			    <SortNo/>
+			    <XPosition>1</XPosition>
+			    <AD_Field_Trl type="translation">
+				<Description/>
+				<Help/>
+				<Name>LCO_DIAN_FieldFormat_UU</Name>
+				<AD_Language>es_CO</AD_Language>
+				<IsActive>true</IsActive>
+				<IsTranslated>false</IsTranslated>
+			    </AD_Field_Trl>
+			</AD_Field>
                     </AD_Tab>
                 </AD_Window>
             </AD_Menu>
@@ -5795,7 +6002,7 @@ If you leave the search key empty, the system automatically creates a numeric nu
                             <AD_Table_ID reference="uuid" reference-key="AD_Table">22b99835-c380-4f68-bc37-c77ee05df18b</AD_Table_ID>
                             <AD_TableIndex_UU>7a0fbe3d-3b2c-463e-b8bd-b64e24328924</AD_TableIndex_UU>
                             <Description/>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <Help/>
                             <IsActive>true</IsActive>
                             <IsCreateConstraint>false</IsCreateConstraint>
@@ -5809,7 +6016,7 @@ If you leave the search key empty, the system automatically creates a numeric nu
                                 <AD_IndexColumn_UU>9ea2992d-3158-4b37-8040-5fd25dc2fe16</AD_IndexColumn_UU>
                                 <AD_TableIndex_ID reference="uuid" reference-key="AD_TableIndex">7a0fbe3d-3b2c-463e-b8bd-b64e24328924</AD_TableIndex_ID>
                                 <ColumnSQL/>
-                                <EntityType>U</EntityType>
+                                <EntityType>QSS_LCO</EntityType>
                                 <IsActive>true</IsActive>
                                 <SeqNo>1</SeqNo>
                             </AD_IndexColumn>
@@ -7016,7 +7223,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Table_ID reference="uuid" reference-key="AD_Table">ed2c9612-d5a1-4241-9f19-f7b2b497eb97</AD_Table_ID>
                             <AD_TableIndex_UU>23b870bc-b48b-4308-81c7-4163e8bb8013</AD_TableIndex_UU>
                             <Description/>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <Help/>
                             <IsActive>true</IsActive>
                             <IsCreateConstraint>false</IsCreateConstraint>
@@ -7030,7 +7237,7 @@ There are two reasons for de-activating and not deleting records:
                                 <AD_IndexColumn_UU>192c05ff-8fed-45c8-8524-5b70a91a01da</AD_IndexColumn_UU>
                                 <AD_TableIndex_ID reference="uuid" reference-key="AD_TableIndex">23b870bc-b48b-4308-81c7-4163e8bb8013</AD_TableIndex_ID>
                                 <ColumnSQL/>
-                                <EntityType>U</EntityType>
+                                <EntityType>QSS_LCO</EntityType>
                                 <IsActive>true</IsActive>
                                 <SeqNo>1</SeqNo>
                             </AD_IndexColumn>
@@ -7081,327 +7288,327 @@ There are two reasons for de-activating and not deleting records:
                             <IsActive>true</IsActive>
                             <IsTranslated>true</IsTranslated>
                         </AD_Tab_Trl>
-                        <AD_Field type="table">
-                            <AD_Client_ID>0</AD_Client_ID>
-                            <AD_Org_ID>0</AD_Org_ID>
-                            <AD_Column_ID reference="uuid" reference-key="AD_Column">d666291d-e343-4c4f-83ae-aea702aff607</AD_Column_ID>
-                            <AD_FieldGroup_ID reference="id"/>
-                            <AD_Field_UU>4840feda-5962-4dbd-b826-89e23fa5bb6f</AD_Field_UU>
-                            <AD_Reference_ID reference="id"/>
-                            <AD_Reference_Value_ID reference="id"/>
-                            <AD_Tab_ID reference="uuid" reference-key="AD_Tab">89b90e65-21a1-4923-8355-a0157f16a03f</AD_Tab_ID>
-                            <AD_Val_Rule_ID reference="id"/>
-                            <ColumnSpan>1</ColumnSpan>
-                            <DefaultValue/>
-                            <Description>Client/Tenant for this installation.</Description>
-                            <DisplayLength>10</DisplayLength>
-                            <DisplayLogic>@#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
-                            <EntityType>QSS_LCO</EntityType>
-                            <Help>A Client is a company or a legal entity. You cannot share data between Clients. Tenant is a synonym for Client.</Help>
-                            <Included_Tab_ID reference="id"/>
-                            <IsActive>true</IsActive>
-                            <IsAdvancedField>false</IsAdvancedField>
-                            <IsAllowCopy/>
-                            <IsAlwaysUpdateable/>
-                            <IsCentrallyMaintained>true</IsCentrallyMaintained>
-                            <IsDefaultFocus>false</IsDefaultFocus>
-                            <IsDisplayed>true</IsDisplayed>
-                            <IsDisplayedGrid>true</IsDisplayedGrid>
-                            <IsEncrypted>false</IsEncrypted>
-                            <IsFieldOnly>false</IsFieldOnly>
-                            <IsHeading>false</IsHeading>
-                            <IsMandatory/>
-                            <IsQuickEntry>false</IsQuickEntry>
-                            <IsReadOnly>true</IsReadOnly>
-                            <IsSameLine>false</IsSameLine>
-                            <IsToolbarButton/>
-                            <IsUpdateable/>
-                            <MandatoryLogic/>
-                            <Name>Client</Name>
-                            <NumLines>1</NumLines>
-                            <ObscureType/>
-                            <ReadOnlyLogic/>
-                            <SeqNo>10</SeqNo>
-                            <SeqNoGrid/>
-                            <SortNo>0</SortNo>
-                            <XPosition>1</XPosition>
-                            <AD_Field_Trl type="translation">
-                                <Description>Grupo Empresarial para esta instalación</Description>
-                                <Help>Grupo Empresarial. No se pueden compartir datos entre diferentes grupos empresariales.</Help>
-                                <Name>Grupo Empresarial</Name>
-                                <AD_Language>es_CO</AD_Language>
-                                <IsActive>true</IsActive>
-                                <IsTranslated>true</IsTranslated>
-                            </AD_Field_Trl>
-                        </AD_Field>
-                        <AD_Field type="table">
-                            <AD_Client_ID>0</AD_Client_ID>
-                            <AD_Org_ID>0</AD_Org_ID>
-                            <AD_Column_ID reference="uuid" reference-key="AD_Column">1594f7f3-db64-4ad6-a8d1-449b5153df9c</AD_Column_ID>
-                            <AD_FieldGroup_ID reference="id"/>
-                            <AD_Field_UU>bf7befe3-47fd-408a-a75c-6aad0f41d042</AD_Field_UU>
-                            <AD_Reference_ID reference="id"/>
-                            <AD_Reference_Value_ID reference="id"/>
-                            <AD_Tab_ID reference="uuid" reference-key="AD_Tab">89b90e65-21a1-4923-8355-a0157f16a03f</AD_Tab_ID>
-                            <AD_Val_Rule_ID reference="id"/>
-                            <ColumnSpan>1</ColumnSpan>
-                            <DefaultValue/>
-                            <Description>Organizational entity within client</Description>
-                            <DisplayLength>10</DisplayLength>
-                            <DisplayLogic>@#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
-                            <EntityType>QSS_LCO</EntityType>
-                            <Help>An organization is a unit of your client or legal entity - examples are store, department. You can share data between organizations.</Help>
-                            <Included_Tab_ID reference="id"/>
-                            <IsActive>true</IsActive>
-                            <IsAdvancedField>false</IsAdvancedField>
-                            <IsAllowCopy>Y</IsAllowCopy>
-                            <IsAlwaysUpdateable/>
-                            <IsCentrallyMaintained>true</IsCentrallyMaintained>
-                            <IsDefaultFocus>false</IsDefaultFocus>
-                            <IsDisplayed>true</IsDisplayed>
-                            <IsDisplayedGrid>true</IsDisplayedGrid>
-                            <IsEncrypted>false</IsEncrypted>
-                            <IsFieldOnly>false</IsFieldOnly>
-                            <IsHeading>false</IsHeading>
-                            <IsMandatory/>
-                            <IsQuickEntry>false</IsQuickEntry>
-                            <IsReadOnly>false</IsReadOnly>
-                            <IsSameLine>true</IsSameLine>
-                            <IsToolbarButton/>
-                            <IsUpdateable/>
-                            <MandatoryLogic/>
-                            <Name>Organization</Name>
-                            <NumLines>1</NumLines>
-                            <ObscureType/>
-                            <ReadOnlyLogic/>
-                            <SeqNo>20</SeqNo>
-                            <SeqNoGrid/>
-                            <SortNo>0</SortNo>
-                            <XPosition>1</XPosition>
-                            <AD_Field_Trl type="translation">
-                                <Description>Entidad organizacional dentro del grupo empresarial</Description>
-                                <Help>Una organización es una unidad del grupo empresarial o entidad legal - Ej. Tiendas y departamentos. Es posible compartir datos entre organizaciones.</Help>
-                                <Name>Organización</Name>
-                                <AD_Language>es_CO</AD_Language>
-                                <IsActive>true</IsActive>
-                                <IsTranslated>true</IsTranslated>
-                            </AD_Field_Trl>
-                        </AD_Field>
-                        <AD_Field type="table">
-                            <AD_Client_ID>0</AD_Client_ID>
-                            <AD_Org_ID>0</AD_Org_ID>
-                            <AD_Column_ID reference="uuid" reference-key="AD_Column">cc47a499-b4e5-41e5-8cd1-26cc58760204</AD_Column_ID>
-                            <AD_FieldGroup_ID reference="id"/>
-                            <AD_Field_UU>0b25f0ba-0103-4b71-816b-239eef7520af</AD_Field_UU>
-                            <AD_Reference_ID reference="id"/>
-                            <AD_Reference_Value_ID reference="id"/>
-                            <AD_Tab_ID reference="uuid" reference-key="AD_Tab">89b90e65-21a1-4923-8355-a0157f16a03f</AD_Tab_ID>
-                            <AD_Val_Rule_ID reference="id"/>
-                            <ColumnSpan>1</ColumnSpan>
-                            <DefaultValue/>
-                            <Description/>
-                            <DisplayLength>10</DisplayLength>
-                            <DisplayLogic>@#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
-                            <EntityType>QSS_LCO</EntityType>
-                            <Help/>
-                            <Included_Tab_ID reference="id"/>
-                            <IsActive>true</IsActive>
-                            <IsAdvancedField>false</IsAdvancedField>
-                            <IsAllowCopy/>
-                            <IsAlwaysUpdateable/>
-                            <IsCentrallyMaintained>true</IsCentrallyMaintained>
-                            <IsDefaultFocus>false</IsDefaultFocus>
-                            <IsDisplayed>true</IsDisplayed>
-                            <IsDisplayedGrid>true</IsDisplayedGrid>
-                            <IsEncrypted>false</IsEncrypted>
-                            <IsFieldOnly>false</IsFieldOnly>
-                            <IsHeading>false</IsHeading>
-                            <IsMandatory/>
-                            <IsQuickEntry>false</IsQuickEntry>
-                            <IsReadOnly>false</IsReadOnly>
-                            <IsSameLine>false</IsSameLine>
-                            <IsToolbarButton/>
-                            <IsUpdateable/>
-                            <MandatoryLogic/>
-                            <Name>LCO_Conversion</Name>
-                            <NumLines>1</NumLines>
-                            <ObscureType/>
-                            <ReadOnlyLogic/>
-                            <SeqNo>30</SeqNo>
-                            <SeqNoGrid/>
-                            <SortNo>0</SortNo>
-                            <XPosition>1</XPosition>
-                            <AD_Field_Trl type="translation">
-                                <Description/>
-                                <Help/>
-                                <Name>Tabla Conversión</Name>
-                                <AD_Language>es_CO</AD_Language>
-                                <IsActive>true</IsActive>
-                                <IsTranslated>true</IsTranslated>
-                            </AD_Field_Trl>
-                        </AD_Field>
-                        <AD_Field type="table">
-                            <AD_Client_ID>0</AD_Client_ID>
-                            <AD_Org_ID>0</AD_Org_ID>
-                            <AD_Column_ID reference="uuid" reference-key="AD_Column">9cc99b5c-ad77-412c-8bef-f17e76f4a241</AD_Column_ID>
-                            <AD_FieldGroup_ID reference="id"/>
-                            <AD_Field_UU>c8753451-9d07-4df8-b0d5-7a704869c30b</AD_Field_UU>
-                            <AD_Reference_ID reference="id"/>
-                            <AD_Reference_Value_ID reference="id"/>
-                            <AD_Tab_ID reference="uuid" reference-key="AD_Tab">89b90e65-21a1-4923-8355-a0157f16a03f</AD_Tab_ID>
-                            <AD_Val_Rule_ID reference="id"/>
-                            <ColumnSpan>1</ColumnSpan>
-                            <DefaultValue/>
-                            <Description/>
-                            <DisplayLength>40</DisplayLength>
-                            <DisplayLogic>@#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
-                            <EntityType>QSS_LCO</EntityType>
-                            <Help/>
-                            <Included_Tab_ID reference="id"/>
-                            <IsActive>true</IsActive>
-                            <IsAdvancedField>false</IsAdvancedField>
-                            <IsAllowCopy/>
-                            <IsAlwaysUpdateable/>
-                            <IsCentrallyMaintained>true</IsCentrallyMaintained>
-                            <IsDefaultFocus>false</IsDefaultFocus>
-                            <IsDisplayed>true</IsDisplayed>
-                            <IsDisplayedGrid>true</IsDisplayedGrid>
-                            <IsEncrypted>false</IsEncrypted>
-                            <IsFieldOnly>false</IsFieldOnly>
-                            <IsHeading>false</IsHeading>
-                            <IsMandatory/>
-                            <IsQuickEntry>false</IsQuickEntry>
-                            <IsReadOnly>false</IsReadOnly>
-                            <IsSameLine>false</IsSameLine>
-                            <IsToolbarButton/>
-                            <IsUpdateable/>
-                            <MandatoryLogic/>
-                            <Name>Internal Code</Name>
-                            <NumLines>1</NumLines>
-                            <ObscureType/>
-                            <ReadOnlyLogic/>
-                            <SeqNo>40</SeqNo>
-                            <SeqNoGrid/>
-                            <SortNo>0</SortNo>
-                            <XPosition>1</XPosition>
-                            <AD_Field_Trl type="translation">
-                                <Description/>
-                                <Help/>
-                                <Name>Código Interno</Name>
-                                <AD_Language>es_CO</AD_Language>
-                                <IsActive>true</IsActive>
-                                <IsTranslated>true</IsTranslated>
-                            </AD_Field_Trl>
-                        </AD_Field>
-                        <AD_Field type="table">
-                            <AD_Client_ID>0</AD_Client_ID>
-                            <AD_Org_ID>0</AD_Org_ID>
-                            <AD_Column_ID reference="uuid" reference-key="AD_Column">b4c16a7d-db7f-40e9-a000-5bb113514d4c</AD_Column_ID>
-                            <AD_FieldGroup_ID reference="id"/>
-                            <AD_Field_UU>8c64a7db-5513-4108-ac57-f0dff436ba53</AD_Field_UU>
-                            <AD_Reference_ID reference="id"/>
-                            <AD_Reference_Value_ID reference="id"/>
-                            <AD_Tab_ID reference="uuid" reference-key="AD_Tab">89b90e65-21a1-4923-8355-a0157f16a03f</AD_Tab_ID>
-                            <AD_Val_Rule_ID reference="id"/>
-                            <ColumnSpan>1</ColumnSpan>
-                            <DefaultValue/>
-                            <Description/>
-                            <DisplayLength>40</DisplayLength>
-                            <DisplayLogic>@#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
-                            <EntityType>QSS_LCO</EntityType>
-                            <Help/>
-                            <Included_Tab_ID reference="id"/>
-                            <IsActive>true</IsActive>
-                            <IsAdvancedField>false</IsAdvancedField>
-                            <IsAllowCopy/>
-                            <IsAlwaysUpdateable/>
-                            <IsCentrallyMaintained>true</IsCentrallyMaintained>
-                            <IsDefaultFocus>false</IsDefaultFocus>
-                            <IsDisplayed>true</IsDisplayed>
-                            <IsDisplayedGrid>true</IsDisplayedGrid>
-                            <IsEncrypted>false</IsEncrypted>
-                            <IsFieldOnly>false</IsFieldOnly>
-                            <IsHeading>false</IsHeading>
-                            <IsMandatory/>
-                            <IsQuickEntry>false</IsQuickEntry>
-                            <IsReadOnly>false</IsReadOnly>
-                            <IsSameLine>false</IsSameLine>
-                            <IsToolbarButton/>
-                            <IsUpdateable/>
-                            <MandatoryLogic/>
-                            <Name>External Code</Name>
-                            <NumLines>1</NumLines>
-                            <ObscureType/>
-                            <ReadOnlyLogic/>
-                            <SeqNo>50</SeqNo>
-                            <SeqNoGrid/>
-                            <SortNo>0</SortNo>
-                            <XPosition>1</XPosition>
-                            <AD_Field_Trl type="translation">
-                                <Description/>
-                                <Help/>
-                                <Name>Código Externo</Name>
-                                <AD_Language>es_CO</AD_Language>
-                                <IsActive>true</IsActive>
-                                <IsTranslated>true</IsTranslated>
-                            </AD_Field_Trl>
-                        </AD_Field>
-                        <AD_Field type="table">
-                            <AD_Client_ID>0</AD_Client_ID>
-                            <AD_Org_ID>0</AD_Org_ID>
-                            <AD_Column_ID reference="uuid" reference-key="AD_Column">bd64cfcb-7216-4963-b61a-42694abbc830</AD_Column_ID>
-                            <AD_FieldGroup_ID reference="id"/>
-                            <AD_Field_UU>4ecfc773-07af-460a-a8de-a2306cc8dd5a</AD_Field_UU>
-                            <AD_Reference_ID reference="id"/>
-                            <AD_Reference_Value_ID reference="id"/>
-                            <AD_Tab_ID reference="uuid" reference-key="AD_Tab">89b90e65-21a1-4923-8355-a0157f16a03f</AD_Tab_ID>
-                            <AD_Val_Rule_ID reference="id"/>
-                            <ColumnSpan>1</ColumnSpan>
-                            <DefaultValue/>
-                            <Description>The record is active in the system</Description>
-                            <DisplayLength>1</DisplayLength>
-                            <DisplayLogic>@#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
-                            <EntityType>QSS_LCO</EntityType>
-                            <Help>There are two methods of making records unavailable in the system: One is to delete the record, the other is to de-activate the record. A de-activated record is not available for selection, but available for reports.
+			<AD_Field type="table">
+			    <AD_Client_ID>0</AD_Client_ID>
+			    <AD_Org_ID>0</AD_Org_ID>
+			    <AD_Column_ID reference="uuid" reference-key="AD_Column">d666291d-e343-4c4f-83ae-aea702aff607</AD_Column_ID>
+			    <AD_FieldGroup_ID reference="id"/>
+			    <AD_Field_UU>4840feda-5962-4dbd-b826-89e23fa5bb6f</AD_Field_UU>
+			    <AD_Reference_ID reference="id"/>
+			    <AD_Reference_Value_ID reference="id"/>
+			    <AD_Tab_ID reference="uuid" reference-key="AD_Tab">89b90e65-21a1-4923-8355-a0157f16a03f</AD_Tab_ID>
+			    <AD_Val_Rule_ID reference="id"/>
+			    <ColumnSpan>2</ColumnSpan>
+			    <DefaultValue/>
+			    <Description>Client/Tenant for this installation.</Description>
+			    <DisplayLength>10</DisplayLength>
+			    <DisplayLogic>@#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
+			    <EntityType>QSS_LCO</EntityType>
+			    <Help>A Client is a company or a legal entity. You cannot share data between Clients. Tenant is a synonym for Client.</Help>
+			    <Included_Tab_ID reference="id"/>
+			    <IsActive>true</IsActive>
+			    <IsAdvancedField>false</IsAdvancedField>
+			    <IsAllowCopy/>
+			    <IsAlwaysUpdateable/>
+			    <IsCentrallyMaintained>true</IsCentrallyMaintained>
+			    <IsDefaultFocus>false</IsDefaultFocus>
+			    <IsDisplayed>true</IsDisplayed>
+			    <IsDisplayedGrid>false</IsDisplayedGrid>
+			    <IsEncrypted>false</IsEncrypted>
+			    <IsFieldOnly>false</IsFieldOnly>
+			    <IsHeading>false</IsHeading>
+			    <IsMandatory/>
+			    <IsQuickEntry>false</IsQuickEntry>
+			    <IsReadOnly>true</IsReadOnly>
+			    <IsSameLine>false</IsSameLine>
+			    <IsToolbarButton/>
+			    <IsUpdateable/>
+			    <MandatoryLogic/>
+			    <Name>Client</Name>
+			    <NumLines>1</NumLines>
+			    <ObscureType/>
+			    <ReadOnlyLogic/>
+			    <SeqNo>10</SeqNo>
+			    <SeqNoGrid/>
+			    <SortNo>0</SortNo>
+			    <XPosition>1</XPosition>
+			    <AD_Field_Trl type="translation">
+				<Description>Grupo Empresarial para esta instalación</Description>
+				<Help>Grupo Empresarial. No se pueden compartir datos entre diferentes grupos empresariales.</Help>
+				<Name>Grupo Empresarial</Name>
+				<AD_Language>es_CO</AD_Language>
+				<IsActive>true</IsActive>
+				<IsTranslated>true</IsTranslated>
+			    </AD_Field_Trl>
+			</AD_Field>
+			<AD_Field type="table">
+			    <AD_Client_ID>0</AD_Client_ID>
+			    <AD_Org_ID>0</AD_Org_ID>
+			    <AD_Column_ID reference="uuid" reference-key="AD_Column">1594f7f3-db64-4ad6-a8d1-449b5153df9c</AD_Column_ID>
+			    <AD_FieldGroup_ID reference="id"/>
+			    <AD_Field_UU>bf7befe3-47fd-408a-a75c-6aad0f41d042</AD_Field_UU>
+			    <AD_Reference_ID reference="id"/>
+			    <AD_Reference_Value_ID reference="id"/>
+			    <AD_Tab_ID reference="uuid" reference-key="AD_Tab">89b90e65-21a1-4923-8355-a0157f16a03f</AD_Tab_ID>
+			    <AD_Val_Rule_ID reference="id"/>
+			    <ColumnSpan>2</ColumnSpan>
+			    <DefaultValue/>
+			    <Description>Organizational entity within client</Description>
+			    <DisplayLength>10</DisplayLength>
+			    <DisplayLogic>@#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
+			    <EntityType>QSS_LCO</EntityType>
+			    <Help>An organization is a unit of your client or legal entity - examples are store, department. You can share data between organizations.</Help>
+			    <Included_Tab_ID reference="id"/>
+			    <IsActive>true</IsActive>
+			    <IsAdvancedField>false</IsAdvancedField>
+			    <IsAllowCopy>Y</IsAllowCopy>
+			    <IsAlwaysUpdateable/>
+			    <IsCentrallyMaintained>true</IsCentrallyMaintained>
+			    <IsDefaultFocus>false</IsDefaultFocus>
+			    <IsDisplayed>true</IsDisplayed>
+			    <IsDisplayedGrid>false</IsDisplayedGrid>
+			    <IsEncrypted>false</IsEncrypted>
+			    <IsFieldOnly>false</IsFieldOnly>
+			    <IsHeading>false</IsHeading>
+			    <IsMandatory/>
+			    <IsQuickEntry>false</IsQuickEntry>
+			    <IsReadOnly>false</IsReadOnly>
+			    <IsSameLine>true</IsSameLine>
+			    <IsToolbarButton/>
+			    <IsUpdateable/>
+			    <MandatoryLogic/>
+			    <Name>Organization</Name>
+			    <NumLines>1</NumLines>
+			    <ObscureType/>
+			    <ReadOnlyLogic/>
+			    <SeqNo>20</SeqNo>
+			    <SeqNoGrid/>
+			    <SortNo>0</SortNo>
+			    <XPosition>4</XPosition>
+			    <AD_Field_Trl type="translation">
+				<Description>Entidad organizacional dentro del grupo empresarial</Description>
+				<Help>Una organización es una unidad del grupo empresarial o entidad legal - Ej. Tiendas y departamentos. Es posible compartir datos entre organizaciones.</Help>
+				<Name>Organización</Name>
+				<AD_Language>es_CO</AD_Language>
+				<IsActive>true</IsActive>
+				<IsTranslated>true</IsTranslated>
+			    </AD_Field_Trl>
+			</AD_Field>
+			<AD_Field type="table">
+			    <AD_Client_ID>0</AD_Client_ID>
+			    <AD_Org_ID>0</AD_Org_ID>
+			    <AD_Column_ID reference="uuid" reference-key="AD_Column">cc47a499-b4e5-41e5-8cd1-26cc58760204</AD_Column_ID>
+			    <AD_FieldGroup_ID reference="id"/>
+			    <AD_Field_UU>0b25f0ba-0103-4b71-816b-239eef7520af</AD_Field_UU>
+			    <AD_Reference_ID reference="id"/>
+			    <AD_Reference_Value_ID reference="id"/>
+			    <AD_Tab_ID reference="uuid" reference-key="AD_Tab">89b90e65-21a1-4923-8355-a0157f16a03f</AD_Tab_ID>
+			    <AD_Val_Rule_ID reference="id"/>
+			    <ColumnSpan>2</ColumnSpan>
+			    <DefaultValue/>
+			    <Description/>
+			    <DisplayLength>10</DisplayLength>
+			    <DisplayLogic>@#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
+			    <EntityType>QSS_LCO</EntityType>
+			    <Help/>
+			    <Included_Tab_ID reference="id"/>
+			    <IsActive>true</IsActive>
+			    <IsAdvancedField>false</IsAdvancedField>
+			    <IsAllowCopy/>
+			    <IsAlwaysUpdateable/>
+			    <IsCentrallyMaintained>true</IsCentrallyMaintained>
+			    <IsDefaultFocus>false</IsDefaultFocus>
+			    <IsDisplayed>true</IsDisplayed>
+			    <IsDisplayedGrid>true</IsDisplayedGrid>
+			    <IsEncrypted>false</IsEncrypted>
+			    <IsFieldOnly>false</IsFieldOnly>
+			    <IsHeading>false</IsHeading>
+			    <IsMandatory/>
+			    <IsQuickEntry>false</IsQuickEntry>
+			    <IsReadOnly>false</IsReadOnly>
+			    <IsSameLine>false</IsSameLine>
+			    <IsToolbarButton/>
+			    <IsUpdateable/>
+			    <MandatoryLogic/>
+			    <Name>LCO_Conversion</Name>
+			    <NumLines>1</NumLines>
+			    <ObscureType/>
+			    <ReadOnlyLogic/>
+			    <SeqNo>30</SeqNo>
+			    <SeqNoGrid>10</SeqNoGrid>
+			    <SortNo>0</SortNo>
+			    <XPosition>1</XPosition>
+			    <AD_Field_Trl type="translation">
+				<Description/>
+				<Help/>
+				<Name>Tabla Conversión</Name>
+				<AD_Language>es_CO</AD_Language>
+				<IsActive>true</IsActive>
+				<IsTranslated>true</IsTranslated>
+			    </AD_Field_Trl>
+			</AD_Field>
+			<AD_Field type="table">
+			    <AD_Client_ID>0</AD_Client_ID>
+			    <AD_Org_ID>0</AD_Org_ID>
+			    <AD_Column_ID reference="uuid" reference-key="AD_Column">9cc99b5c-ad77-412c-8bef-f17e76f4a241</AD_Column_ID>
+			    <AD_FieldGroup_ID reference="id"/>
+			    <AD_Field_UU>c8753451-9d07-4df8-b0d5-7a704869c30b</AD_Field_UU>
+			    <AD_Reference_ID reference="id"/>
+			    <AD_Reference_Value_ID reference="id"/>
+			    <AD_Tab_ID reference="uuid" reference-key="AD_Tab">89b90e65-21a1-4923-8355-a0157f16a03f</AD_Tab_ID>
+			    <AD_Val_Rule_ID reference="id"/>
+			    <ColumnSpan>2</ColumnSpan>
+			    <DefaultValue/>
+			    <Description/>
+			    <DisplayLength>40</DisplayLength>
+			    <DisplayLogic>@#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
+			    <EntityType>QSS_LCO</EntityType>
+			    <Help/>
+			    <Included_Tab_ID reference="id"/>
+			    <IsActive>true</IsActive>
+			    <IsAdvancedField>false</IsAdvancedField>
+			    <IsAllowCopy/>
+			    <IsAlwaysUpdateable/>
+			    <IsCentrallyMaintained>true</IsCentrallyMaintained>
+			    <IsDefaultFocus>false</IsDefaultFocus>
+			    <IsDisplayed>true</IsDisplayed>
+			    <IsDisplayedGrid>true</IsDisplayedGrid>
+			    <IsEncrypted>false</IsEncrypted>
+			    <IsFieldOnly>false</IsFieldOnly>
+			    <IsHeading>false</IsHeading>
+			    <IsMandatory/>
+			    <IsQuickEntry>false</IsQuickEntry>
+			    <IsReadOnly>false</IsReadOnly>
+			    <IsSameLine>false</IsSameLine>
+			    <IsToolbarButton/>
+			    <IsUpdateable/>
+			    <MandatoryLogic/>
+			    <Name>Internal Code</Name>
+			    <NumLines>1</NumLines>
+			    <ObscureType/>
+			    <ReadOnlyLogic/>
+			    <SeqNo>40</SeqNo>
+			    <SeqNoGrid>20</SeqNoGrid>
+			    <SortNo>0</SortNo>
+			    <XPosition>1</XPosition>
+			    <AD_Field_Trl type="translation">
+				<Description/>
+				<Help/>
+				<Name>Código Interno</Name>
+				<AD_Language>es_CO</AD_Language>
+				<IsActive>true</IsActive>
+				<IsTranslated>true</IsTranslated>
+			    </AD_Field_Trl>
+			</AD_Field>
+			<AD_Field type="table">
+			    <AD_Client_ID>0</AD_Client_ID>
+			    <AD_Org_ID>0</AD_Org_ID>
+			    <AD_Column_ID reference="uuid" reference-key="AD_Column">b4c16a7d-db7f-40e9-a000-5bb113514d4c</AD_Column_ID>
+			    <AD_FieldGroup_ID reference="id"/>
+			    <AD_Field_UU>8c64a7db-5513-4108-ac57-f0dff436ba53</AD_Field_UU>
+			    <AD_Reference_ID reference="id"/>
+			    <AD_Reference_Value_ID reference="id"/>
+			    <AD_Tab_ID reference="uuid" reference-key="AD_Tab">89b90e65-21a1-4923-8355-a0157f16a03f</AD_Tab_ID>
+			    <AD_Val_Rule_ID reference="id"/>
+			    <ColumnSpan>2</ColumnSpan>
+			    <DefaultValue/>
+			    <Description/>
+			    <DisplayLength>40</DisplayLength>
+			    <DisplayLogic>@#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
+			    <EntityType>QSS_LCO</EntityType>
+			    <Help/>
+			    <Included_Tab_ID reference="id"/>
+			    <IsActive>true</IsActive>
+			    <IsAdvancedField>false</IsAdvancedField>
+			    <IsAllowCopy/>
+			    <IsAlwaysUpdateable/>
+			    <IsCentrallyMaintained>true</IsCentrallyMaintained>
+			    <IsDefaultFocus>false</IsDefaultFocus>
+			    <IsDisplayed>true</IsDisplayed>
+			    <IsDisplayedGrid>true</IsDisplayedGrid>
+			    <IsEncrypted>false</IsEncrypted>
+			    <IsFieldOnly>false</IsFieldOnly>
+			    <IsHeading>false</IsHeading>
+			    <IsMandatory/>
+			    <IsQuickEntry>false</IsQuickEntry>
+			    <IsReadOnly>false</IsReadOnly>
+			    <IsSameLine>false</IsSameLine>
+			    <IsToolbarButton/>
+			    <IsUpdateable/>
+			    <MandatoryLogic/>
+			    <Name>External Code</Name>
+			    <NumLines>1</NumLines>
+			    <ObscureType/>
+			    <ReadOnlyLogic/>
+			    <SeqNo>50</SeqNo>
+			    <SeqNoGrid>30</SeqNoGrid>
+			    <SortNo>0</SortNo>
+			    <XPosition>4</XPosition>
+			    <AD_Field_Trl type="translation">
+				<Description/>
+				<Help/>
+				<Name>Código Externo</Name>
+				<AD_Language>es_CO</AD_Language>
+				<IsActive>true</IsActive>
+				<IsTranslated>true</IsTranslated>
+			    </AD_Field_Trl>
+			</AD_Field>
+			<AD_Field type="table">
+			    <AD_Client_ID>0</AD_Client_ID>
+			    <AD_Org_ID>0</AD_Org_ID>
+			    <AD_Column_ID reference="uuid" reference-key="AD_Column">bd64cfcb-7216-4963-b61a-42694abbc830</AD_Column_ID>
+			    <AD_FieldGroup_ID reference="id"/>
+			    <AD_Field_UU>4ecfc773-07af-460a-a8de-a2306cc8dd5a</AD_Field_UU>
+			    <AD_Reference_ID reference="id"/>
+			    <AD_Reference_Value_ID reference="id"/>
+			    <AD_Tab_ID reference="uuid" reference-key="AD_Tab">89b90e65-21a1-4923-8355-a0157f16a03f</AD_Tab_ID>
+			    <AD_Val_Rule_ID reference="id"/>
+			    <ColumnSpan>2</ColumnSpan>
+			    <DefaultValue/>
+			    <Description>The record is active in the system</Description>
+			    <DisplayLength>1</DisplayLength>
+			    <DisplayLogic>@#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
+			    <EntityType>QSS_LCO</EntityType>
+			    <Help>There are two methods of making records unavailable in the system: One is to delete the record, the other is to de-activate the record. A de-activated record is not available for selection, but available for reports.
 There are two reasons for de-activating and not deleting records:
 (1) The system requires the record for audit purposes.
 (2) The record is referenced by other records. E.g., you cannot delete a Business Partner, if there are invoices for this partner record existing. You de-activate the Business Partner and prevent that this record is used for future entries.</Help>
-                            <Included_Tab_ID reference="id"/>
-                            <IsActive>true</IsActive>
-                            <IsAdvancedField>false</IsAdvancedField>
-                            <IsAllowCopy/>
-                            <IsAlwaysUpdateable/>
-                            <IsCentrallyMaintained>true</IsCentrallyMaintained>
-                            <IsDefaultFocus>false</IsDefaultFocus>
-                            <IsDisplayed>true</IsDisplayed>
-                            <IsDisplayedGrid>true</IsDisplayedGrid>
-                            <IsEncrypted>false</IsEncrypted>
-                            <IsFieldOnly>false</IsFieldOnly>
-                            <IsHeading>false</IsHeading>
-                            <IsMandatory/>
-                            <IsQuickEntry>false</IsQuickEntry>
-                            <IsReadOnly>false</IsReadOnly>
-                            <IsSameLine>false</IsSameLine>
-                            <IsToolbarButton/>
-                            <IsUpdateable/>
-                            <MandatoryLogic/>
-                            <Name>Active</Name>
-                            <NumLines>1</NumLines>
-                            <ObscureType/>
-                            <ReadOnlyLogic/>
-                            <SeqNo>60</SeqNo>
-                            <SeqNoGrid/>
-                            <SortNo>0</SortNo>
-                            <XPosition>1</XPosition>
-                            <AD_Field_Trl type="translation">
-                                <Description>El registro está activo en el sistema</Description>
-                                <Help>Hay dos métodos para que los registros no estén disponibles en el sistema: Uno es eliminar el registro; el otro es desactivarlo. Un registro desactivado no está disponible para selección; pero está disponible para Informes</Help>
-                                <Name>Activo</Name>
-                                <AD_Language>es_CO</AD_Language>
-                                <IsActive>true</IsActive>
-                                <IsTranslated>true</IsTranslated>
-                            </AD_Field_Trl>
-                        </AD_Field>
+			    <Included_Tab_ID reference="id"/>
+			    <IsActive>true</IsActive>
+			    <IsAdvancedField>false</IsAdvancedField>
+			    <IsAllowCopy/>
+			    <IsAlwaysUpdateable/>
+			    <IsCentrallyMaintained>true</IsCentrallyMaintained>
+			    <IsDefaultFocus>false</IsDefaultFocus>
+			    <IsDisplayed>true</IsDisplayed>
+			    <IsDisplayedGrid>true</IsDisplayedGrid>
+			    <IsEncrypted>false</IsEncrypted>
+			    <IsFieldOnly>false</IsFieldOnly>
+			    <IsHeading>false</IsHeading>
+			    <IsMandatory/>
+			    <IsQuickEntry>false</IsQuickEntry>
+			    <IsReadOnly>false</IsReadOnly>
+			    <IsSameLine>false</IsSameLine>
+			    <IsToolbarButton/>
+			    <IsUpdateable/>
+			    <MandatoryLogic/>
+			    <Name>Active</Name>
+			    <NumLines>1</NumLines>
+			    <ObscureType/>
+			    <ReadOnlyLogic/>
+			    <SeqNo>60</SeqNo>
+			    <SeqNoGrid>40</SeqNoGrid>
+			    <SortNo>0</SortNo>
+			    <XPosition>2</XPosition>
+			    <AD_Field_Trl type="translation">
+				<Description>El registro está activo en el sistema</Description>
+				<Help>Hay dos métodos para que los registros no estén disponibles en el sistema: Uno es eliminar el registro; el otro es desactivarlo. Un registro desactivado no está disponible para selección; pero está disponible para Informes</Help>
+				<Name>Activo</Name>
+				<AD_Language>es_CO</AD_Language>
+				<IsActive>true</IsActive>
+				<IsTranslated>true</IsTranslated>
+			    </AD_Field_Trl>
+			</AD_Field>
                         <AD_Field type="table">
                             <AD_Client_ID>0</AD_Client_ID>
                             <AD_Org_ID>0</AD_Org_ID>
@@ -8498,7 +8705,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Table_ID reference="uuid" reference-key="AD_Table">2182cf09-eb28-4395-bd35-619c16a4dc14</AD_Table_ID>
                             <AD_TableIndex_UU>1b269179-7f63-4a22-bd9c-046ebf65a21e</AD_TableIndex_UU>
                             <Description/>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <Help/>
                             <IsActive>true</IsActive>
                             <IsCreateConstraint>false</IsCreateConstraint>
@@ -8512,7 +8719,7 @@ There are two reasons for de-activating and not deleting records:
                                 <AD_IndexColumn_UU>a706f2ba-4409-4fd2-9344-a878d06d7bc4</AD_IndexColumn_UU>
                                 <AD_TableIndex_ID reference="uuid" reference-key="AD_TableIndex">1b269179-7f63-4a22-bd9c-046ebf65a21e</AD_TableIndex_ID>
                                 <ColumnSQL/>
-                                <EntityType>U</EntityType>
+                                <EntityType>QSS_LCO</EntityType>
                                 <IsActive>true</IsActive>
                                 <SeqNo>1</SeqNo>
                             </AD_IndexColumn>
@@ -11397,7 +11604,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Table_ID reference="uuid" reference-key="AD_Table">90791928-78ad-4863-b752-2616fdeedc49</AD_Table_ID>
                             <AD_TableIndex_UU>ce666870-b80e-4638-92bb-80ca3ba236fa</AD_TableIndex_UU>
                             <Description/>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <Help/>
                             <IsActive>true</IsActive>
                             <IsCreateConstraint>false</IsCreateConstraint>
@@ -11411,7 +11618,7 @@ There are two reasons for de-activating and not deleting records:
                                 <AD_IndexColumn_UU>4c541891-594c-4ccd-98d6-a7db041feaea</AD_IndexColumn_UU>
                                 <AD_TableIndex_ID reference="uuid" reference-key="AD_TableIndex">ce666870-b80e-4638-92bb-80ca3ba236fa</AD_TableIndex_ID>
                                 <ColumnSQL/>
-                                <EntityType>U</EntityType>
+                                <EntityType>QSS_LCO</EntityType>
                                 <IsActive>true</IsActive>
                                 <SeqNo>1</SeqNo>
                             </AD_IndexColumn>
@@ -13699,7 +13906,7 @@ If you leave the search key empty, the system automatically creates a numeric nu
                             <AD_Table_ID reference="uuid" reference-key="AD_Table">09f6f844-3cc6-4340-9061-83696f34580a</AD_Table_ID>
                             <AD_TableIndex_UU>4ee82471-e3bf-4368-b078-5e15f852bb7e</AD_TableIndex_UU>
                             <Description/>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <Help/>
                             <IsActive>true</IsActive>
                             <IsCreateConstraint>false</IsCreateConstraint>
@@ -13713,7 +13920,7 @@ If you leave the search key empty, the system automatically creates a numeric nu
                                 <AD_IndexColumn_UU>1281a3c3-fec7-4a00-b685-1e3b86146925</AD_IndexColumn_UU>
                                 <AD_TableIndex_ID reference="uuid" reference-key="AD_TableIndex">4ee82471-e3bf-4368-b078-5e15f852bb7e</AD_TableIndex_ID>
                                 <ColumnSQL/>
-                                <EntityType>U</EntityType>
+                                <EntityType>QSS_LCO</EntityType>
                                 <IsActive>true</IsActive>
                                 <SeqNo>1</SeqNo>
                             </AD_IndexColumn>
@@ -14826,7 +15033,7 @@ If you leave the search key empty, the system automatically creates a numeric nu
                             <AD_Table_ID reference="uuid" reference-key="AD_Table">f4fd7add-7193-438d-867d-01888afd7514</AD_Table_ID>
                             <AD_TableIndex_UU>015f15f3-3461-4fb1-83ec-ecb6eb865c0c</AD_TableIndex_UU>
                             <Description/>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <Help/>
                             <IsActive>true</IsActive>
                             <IsCreateConstraint>false</IsCreateConstraint>
@@ -14840,7 +15047,7 @@ If you leave the search key empty, the system automatically creates a numeric nu
                                 <AD_IndexColumn_UU>3b20190a-4894-45cf-afa4-3cbc275e9fa2</AD_IndexColumn_UU>
                                 <AD_TableIndex_ID reference="uuid" reference-key="AD_TableIndex">015f15f3-3461-4fb1-83ec-ecb6eb865c0c</AD_TableIndex_ID>
                                 <ColumnSQL/>
-                                <EntityType>U</EntityType>
+                                <EntityType>QSS_LCO</EntityType>
                                 <IsActive>true</IsActive>
                                 <SeqNo>1</SeqNo>
                             </AD_IndexColumn>
@@ -16114,7 +16321,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Table_ID reference="uuid" reference-key="AD_Table">7a05d58e-be9e-40de-b617-7c9745fc41af</AD_Table_ID>
                             <AD_TableIndex_UU>0136b029-78d7-414d-8713-67ba560e076e</AD_TableIndex_UU>
                             <Description/>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <Help/>
                             <IsActive>true</IsActive>
                             <IsCreateConstraint>false</IsCreateConstraint>
@@ -16128,7 +16335,7 @@ There are two reasons for de-activating and not deleting records:
                                 <AD_IndexColumn_UU>bbe12b31-b758-416a-a12d-bdd0efd9528e</AD_IndexColumn_UU>
                                 <AD_TableIndex_ID reference="uuid" reference-key="AD_TableIndex">0136b029-78d7-414d-8713-67ba560e076e</AD_TableIndex_ID>
                                 <ColumnSQL/>
-                                <EntityType>U</EntityType>
+                                <EntityType>QSS_LCO</EntityType>
                                 <IsActive>true</IsActive>
                                 <SeqNo>1</SeqNo>
                             </AD_IndexColumn>
@@ -17308,54 +17515,54 @@ There are two reasons for de-activating and not deleting records:
                             <Version>0</Version>
                             <VFormat/>
                         </AD_Column>
-                        <AD_Column type="table">
-                            <IsSyncDatabase>Y</IsSyncDatabase>
-                            <AD_Table_ID reference="uuid" reference-key="AD_Table">a9783bc8-ce6f-49ea-bf9b-0d66bd1d6090</AD_Table_ID>
-                            <AD_Reference_Value_ID reference="id"/>
-                            <AD_Client_ID>0</AD_Client_ID>
-                            <AD_Org_ID>0</AD_Org_ID>
-                            <AD_Chart_ID reference="id"/>
-                            <AD_Column_UU>44d578f0-2350-45bf-a88b-5a0d6255cb6c</AD_Column_UU>
-                            <AD_Element_ID reference="id">1047</AD_Element_ID>
-                            <AD_Process_ID reference="id"/>
-                            <AD_Reference_ID reference="id">20</AD_Reference_ID>
-                            <AD_Val_Rule_ID reference="id"/>
-                            <Callout/>
-                            <ColumnName>Processed</ColumnName>
-                            <ColumnSQL/>
-                            <DefaultValue/>
-                            <Description>The document has been processed</Description>
-                            <EntityType>QSS_LCO</EntityType>
-                            <FieldLength>1</FieldLength>
-                            <FKConstraintName/>
-                            <FKConstraintType>N</FKConstraintType>
-                            <FormatPattern/>
-                            <Help>The Processed checkbox indicates that a document has been processed.</Help>
-                            <IsActive>true</IsActive>
-                            <IsAllowCopy>true</IsAllowCopy>
-                            <IsAllowLogging>true</IsAllowLogging>
-                            <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
-                            <IsAutocomplete>false</IsAutocomplete>
-                            <IsEncrypted>N</IsEncrypted>
-                            <IsIdentifier>false</IsIdentifier>
-                            <IsKey>false</IsKey>
-                            <IsMandatory>true</IsMandatory>
-                            <IsParent>false</IsParent>
-                            <IsSecure>false</IsSecure>
-                            <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
-                            <IsTranslated>false</IsTranslated>
-                            <IsUpdateable>false</IsUpdateable>
-                            <MandatoryLogic/>
-                            <Name>Processed</Name>
-                            <ReadOnlyLogic/>
-                            <SeqNo/>
-                            <SeqNoSelection/>
-                            <ValueMax/>
-                            <ValueMin/>
-                            <Version>0</Version>
-                            <VFormat/>
-                        </AD_Column>
+			<AD_Column type="table">
+			    <IsSyncDatabase>Y</IsSyncDatabase>
+			    <AD_Table_ID reference="uuid" reference-key="AD_Table">a9783bc8-ce6f-49ea-bf9b-0d66bd1d6090</AD_Table_ID>
+			    <AD_Reference_Value_ID reference="id"/>
+			    <AD_Client_ID>0</AD_Client_ID>
+			    <AD_Org_ID>0</AD_Org_ID>
+			    <AD_Chart_ID reference="id"/>
+			    <AD_Column_UU>44d578f0-2350-45bf-a88b-5a0d6255cb6c</AD_Column_UU>
+			    <AD_Element_ID reference="id">1047</AD_Element_ID>
+			    <AD_Process_ID reference="id"/>
+			    <AD_Reference_ID reference="id">20</AD_Reference_ID>
+			    <AD_Val_Rule_ID reference="id"/>
+			    <Callout/>
+			    <ColumnName>Processed</ColumnName>
+			    <ColumnSQL/>
+			    <DefaultValue/>
+			    <Description>The document has been processed</Description>
+			    <EntityType>QSS_LCO</EntityType>
+			    <FieldLength>1</FieldLength>
+			    <FKConstraintName/>
+			    <FKConstraintType>N</FKConstraintType>
+			    <FormatPattern/>
+			    <Help>The Processed checkbox indicates that a document has been processed.</Help>
+			    <IsActive>true</IsActive>
+			    <IsAllowCopy>false</IsAllowCopy>
+			    <IsAllowLogging>true</IsAllowLogging>
+			    <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
+			    <IsAutocomplete>false</IsAutocomplete>
+			    <IsEncrypted>N</IsEncrypted>
+			    <IsIdentifier>false</IsIdentifier>
+			    <IsKey>false</IsKey>
+			    <IsMandatory>true</IsMandatory>
+			    <IsParent>false</IsParent>
+			    <IsSecure>false</IsSecure>
+			    <IsSelectionColumn>false</IsSelectionColumn>
+			    <IsToolbarButton>false</IsToolbarButton>
+			    <IsTranslated>false</IsTranslated>
+			    <IsUpdateable>false</IsUpdateable>
+			    <MandatoryLogic/>
+			    <Name>Processed</Name>
+			    <ReadOnlyLogic/>
+			    <SeqNo/>
+			    <SeqNoSelection/>
+			    <ValueMax/>
+			    <ValueMin/>
+			    <Version>0</Version>
+			    <VFormat/>
+			</AD_Column>
                         <AD_Column type="table">
                             <IsSyncDatabase>Y</IsSyncDatabase>
                             <AD_Table_ID reference="uuid" reference-key="AD_Table">a9783bc8-ce6f-49ea-bf9b-0d66bd1d6090</AD_Table_ID>
@@ -17433,54 +17640,54 @@ There are two reasons for de-activating and not deleting records:
                                 <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
-                        <AD_Column type="table">
-                            <IsSyncDatabase>Y</IsSyncDatabase>
-                            <AD_Table_ID reference="uuid" reference-key="AD_Table">a9783bc8-ce6f-49ea-bf9b-0d66bd1d6090</AD_Table_ID>
-                            <AD_Reference_Value_ID reference="id"/>
-                            <AD_Client_ID>0</AD_Client_ID>
-                            <AD_Org_ID>0</AD_Org_ID>
-                            <AD_Chart_ID reference="id"/>
-                            <AD_Column_UU>29e5c62f-f1f9-4c9c-a265-b0b784e060b9</AD_Column_UU>
-                            <AD_Element_ID reference="uuid" reference-key="AD_Element">724726e8-a770-4d1d-ae73-f4f457d8848b</AD_Element_ID>
-                            <AD_Process_ID reference="id"/>
-                            <AD_Reference_ID reference="id">16</AD_Reference_ID>
-                            <AD_Val_Rule_ID reference="id"/>
-                            <Callout/>
-                            <ColumnName>SendDate</ColumnName>
-                            <ColumnSQL/>
-                            <DefaultValue>@SQL=SELECT SYSDATE FROM DUAL</DefaultValue>
-                            <Description/>
-                            <EntityType>QSS_LCO</EntityType>
-                            <FieldLength>10</FieldLength>
-                            <FKConstraintName/>
-                            <FKConstraintType>N</FKConstraintType>
-                            <FormatPattern/>
-                            <Help/>
-                            <IsActive>true</IsActive>
-                            <IsAllowCopy>true</IsAllowCopy>
-                            <IsAllowLogging>true</IsAllowLogging>
-                            <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
-                            <IsAutocomplete>false</IsAutocomplete>
-                            <IsEncrypted>N</IsEncrypted>
-                            <IsIdentifier>true</IsIdentifier>
-                            <IsKey>false</IsKey>
-                            <IsMandatory>false</IsMandatory>
-                            <IsParent>false</IsParent>
-                            <IsSecure>false</IsSecure>
-                            <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
-                            <IsTranslated>false</IsTranslated>
-                            <IsUpdateable>true</IsUpdateable>
-                            <MandatoryLogic/>
-                            <Name>Send Date</Name>
-                            <ReadOnlyLogic/>
-                            <SeqNo>2</SeqNo>
-                            <SeqNoSelection/>
-                            <ValueMax/>
-                            <ValueMin/>
-                            <Version>0</Version>
-                            <VFormat/>
-                        </AD_Column>
+			<AD_Column type="table">
+			    <IsSyncDatabase>Y</IsSyncDatabase>
+			    <AD_Table_ID reference="uuid" reference-key="AD_Table">a9783bc8-ce6f-49ea-bf9b-0d66bd1d6090</AD_Table_ID>
+			    <AD_Reference_Value_ID reference="id"/>
+			    <AD_Client_ID>0</AD_Client_ID>
+			    <AD_Org_ID>0</AD_Org_ID>
+			    <AD_Chart_ID reference="id"/>
+			    <AD_Column_UU>29e5c62f-f1f9-4c9c-a265-b0b784e060b9</AD_Column_UU>
+			    <AD_Element_ID reference="uuid" reference-key="AD_Element">724726e8-a770-4d1d-ae73-f4f457d8848b</AD_Element_ID>
+			    <AD_Process_ID reference="id"/>
+			    <AD_Reference_ID reference="id">16</AD_Reference_ID>
+			    <AD_Val_Rule_ID reference="id"/>
+			    <Callout/>
+			    <ColumnName>SendDate</ColumnName>
+			    <ColumnSQL/>
+			    <DefaultValue>@SQL=SELECT SYSDATE FROM DUAL</DefaultValue>
+			    <Description/>
+			    <EntityType>QSS_LCO</EntityType>
+			    <FieldLength>10</FieldLength>
+			    <FKConstraintName/>
+			    <FKConstraintType>N</FKConstraintType>
+			    <FormatPattern/>
+			    <Help/>
+			    <IsActive>true</IsActive>
+			    <IsAllowCopy>false</IsAllowCopy>
+			    <IsAllowLogging>true</IsAllowLogging>
+			    <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
+			    <IsAutocomplete>false</IsAutocomplete>
+			    <IsEncrypted>N</IsEncrypted>
+			    <IsIdentifier>true</IsIdentifier>
+			    <IsKey>false</IsKey>
+			    <IsMandatory>false</IsMandatory>
+			    <IsParent>false</IsParent>
+			    <IsSecure>false</IsSecure>
+			    <IsSelectionColumn>false</IsSelectionColumn>
+			    <IsToolbarButton>false</IsToolbarButton>
+			    <IsTranslated>false</IsTranslated>
+			    <IsUpdateable>true</IsUpdateable>
+			    <MandatoryLogic/>
+			    <Name>Send Date</Name>
+			    <ReadOnlyLogic/>
+			    <SeqNo>2</SeqNo>
+			    <SeqNoSelection/>
+			    <ValueMax/>
+			    <ValueMin/>
+			    <Version>0</Version>
+			    <VFormat/>
+			</AD_Column>
                         <AD_Column type="table">
                             <IsSyncDatabase>Y</IsSyncDatabase>
                             <AD_Table_ID reference="uuid" reference-key="AD_Table">a9783bc8-ce6f-49ea-bf9b-0d66bd1d6090</AD_Table_ID>
@@ -17577,54 +17784,54 @@ There are two reasons for de-activating and not deleting records:
                             <Version>0</Version>
                             <VFormat/>
                         </AD_Column>
-                        <AD_Column type="table">
-                            <IsSyncDatabase>Y</IsSyncDatabase>
-                            <AD_Table_ID reference="uuid" reference-key="AD_Table">a9783bc8-ce6f-49ea-bf9b-0d66bd1d6090</AD_Table_ID>
-                            <AD_Reference_Value_ID reference="id"/>
-                            <AD_Client_ID>0</AD_Client_ID>
-                            <AD_Org_ID>0</AD_Org_ID>
-                            <AD_Chart_ID reference="id"/>
-                            <AD_Column_UU>213616e4-d094-4593-af2b-9c1c70fdbc2d</AD_Column_UU>
-                            <AD_Element_ID reference="id">380</AD_Element_ID>
-                            <AD_Process_ID reference="id"/>
-                            <AD_Reference_ID reference="id">20</AD_Reference_ID>
-                            <AD_Val_Rule_ID reference="id"/>
-                            <Callout/>
-                            <ColumnName>IsGenerated</ColumnName>
-                            <ColumnSQL/>
-                            <DefaultValue>N</DefaultValue>
-                            <Description>This Line is generated</Description>
-                            <EntityType>QSS_LCO</EntityType>
-                            <FieldLength>1</FieldLength>
-                            <FKConstraintName/>
-                            <FKConstraintType>N</FKConstraintType>
-                            <FormatPattern/>
-                            <Help>The Generated checkbox identifies a journal line that was generated from a source document.  Lines could also be entered manually or imported.</Help>
-                            <IsActive>true</IsActive>
-                            <IsAllowCopy>true</IsAllowCopy>
-                            <IsAllowLogging>true</IsAllowLogging>
-                            <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
-                            <IsAutocomplete>false</IsAutocomplete>
-                            <IsEncrypted>N</IsEncrypted>
-                            <IsIdentifier>false</IsIdentifier>
-                            <IsKey>false</IsKey>
-                            <IsMandatory>true</IsMandatory>
-                            <IsParent>false</IsParent>
-                            <IsSecure>false</IsSecure>
-                            <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
-                            <IsTranslated>false</IsTranslated>
-                            <IsUpdateable>false</IsUpdateable>
-                            <MandatoryLogic/>
-                            <Name>Generated</Name>
-                            <ReadOnlyLogic/>
-                            <SeqNo/>
-                            <SeqNoSelection/>
-                            <ValueMax/>
-                            <ValueMin/>
-                            <Version>0</Version>
-                            <VFormat/>
-                        </AD_Column>
+			<AD_Column type="table">
+			    <IsSyncDatabase>Y</IsSyncDatabase>
+			    <AD_Table_ID reference="uuid" reference-key="AD_Table">a9783bc8-ce6f-49ea-bf9b-0d66bd1d6090</AD_Table_ID>
+			    <AD_Reference_Value_ID reference="id"/>
+			    <AD_Client_ID>0</AD_Client_ID>
+			    <AD_Org_ID>0</AD_Org_ID>
+			    <AD_Chart_ID reference="id"/>
+			    <AD_Column_UU>213616e4-d094-4593-af2b-9c1c70fdbc2d</AD_Column_UU>
+			    <AD_Element_ID reference="id">380</AD_Element_ID>
+			    <AD_Process_ID reference="id"/>
+			    <AD_Reference_ID reference="id">20</AD_Reference_ID>
+			    <AD_Val_Rule_ID reference="id"/>
+			    <Callout/>
+			    <ColumnName>IsGenerated</ColumnName>
+			    <ColumnSQL/>
+			    <DefaultValue>N</DefaultValue>
+			    <Description>This Line is generated</Description>
+			    <EntityType>QSS_LCO</EntityType>
+			    <FieldLength>1</FieldLength>
+			    <FKConstraintName/>
+			    <FKConstraintType>N</FKConstraintType>
+			    <FormatPattern/>
+			    <Help>The Generated checkbox identifies a journal line that was generated from a source document.  Lines could also be entered manually or imported.</Help>
+			    <IsActive>true</IsActive>
+			    <IsAllowCopy>false</IsAllowCopy>
+			    <IsAllowLogging>true</IsAllowLogging>
+			    <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
+			    <IsAutocomplete>false</IsAutocomplete>
+			    <IsEncrypted>N</IsEncrypted>
+			    <IsIdentifier>false</IsIdentifier>
+			    <IsKey>false</IsKey>
+			    <IsMandatory>true</IsMandatory>
+			    <IsParent>false</IsParent>
+			    <IsSecure>false</IsSecure>
+			    <IsSelectionColumn>false</IsSelectionColumn>
+			    <IsToolbarButton>false</IsToolbarButton>
+			    <IsTranslated>false</IsTranslated>
+			    <IsUpdateable>false</IsUpdateable>
+			    <MandatoryLogic/>
+			    <Name>Generated</Name>
+			    <ReadOnlyLogic/>
+			    <SeqNo/>
+			    <SeqNoSelection/>
+			    <ValueMax/>
+			    <ValueMin/>
+			    <Version>0</Version>
+			    <VFormat/>
+			</AD_Column>
                         <AD_Element type="table">
                             <AD_Client_ID>0</AD_Client_ID>
                             <AD_Org_ID>0</AD_Org_ID>
@@ -17930,6 +18137,120 @@ There are two reasons for de-activating and not deleting records:
                             <Version>1.0</Version>
                             <VFormat/>
                         </AD_Column>
+			<AD_Element type="table">
+			    <AD_Client_ID>0</AD_Client_ID>
+			    <AD_Org_ID>0</AD_Org_ID>
+			    <AD_Element_UU>4f419da1-af1e-4b8b-95c6-e6b670c68d60</AD_Element_UU>
+			    <ColumnName>LCO_DeleteLinesToReprocess</ColumnName>
+			    <Description/>
+			    <EntityType>QSS_LCO</EntityType>
+			    <Help/>
+			    <IsActive>true</IsActive>
+			    <Name>Delete Lines to Reprocess</Name>
+			    <PO_Description/>
+			    <PO_Help/>
+			    <PO_Name/>
+			    <PO_PrintName/>
+			    <PrintName>Delete Lines to Reprocess</PrintName>
+			    <AD_Element_Trl type="translation">
+				<Description>Borrar Líneas de Envío para Reprocesar</Description>
+				<Help/>
+				<Name>Borrar Líneas para Reprocesar</Name>
+				<PO_Description/>
+				<PO_Help/>
+				<PO_Name/>
+				<PO_PrintName/>
+				<PrintName>Borrar Líneas para Reprocesar</PrintName>
+				<AD_Language>es_CO</AD_Language>
+				<IsActive>true</IsActive>
+				<IsTranslated>true</IsTranslated>
+			    </AD_Element_Trl>
+			</AD_Element>
+			<AD_Process type="table">
+			    <AD_Client_ID>0</AD_Client_ID>
+			    <AD_Org_ID>0</AD_Org_ID>
+			    <AccessLevel>2</AccessLevel>
+			    <AD_CtxHelp_ID reference="id"/>
+			    <AD_Form_ID reference="id"/>
+			    <AD_PrintFormat_ID reference="id"/>
+			    <AD_Process_UU>1c381973-b875-49d2-9741-d63b5056bc0f</AD_Process_UU>
+			    <AD_ReportView_ID reference="id"/>
+			    <AD_Workflow_ID reference="id"/>
+			    <Classname>org.globalqss.process.LCO_DeleteLinesToReprocess</Classname>
+			    <CopyFromProcess>N</CopyFromProcess>
+			    <Description>Delete Schedule Lines to Reprocess</Description>
+			    <EntityType>QSS_LCO</EntityType>
+			    <Help>This process deletes all the generated lines and reopen the schedule for reprocessing.  WARNING!  The deleted lines cannot be restored, change log is not preserved.</Help>
+			    <IsActive>true</IsActive>
+			    <IsBetaFunctionality>false</IsBetaFunctionality>
+			    <IsDirectPrint>false</IsDirectPrint>
+			    <IsReport>false</IsReport>
+			    <IsServerProcess>false</IsServerProcess>
+			    <JasperReport/>
+			    <Name>Delete Lines to Reprocess</Name>
+			    <ProcedureName/>
+			    <ShowHelp>Y</ShowHelp>
+			    <Statistic_Count>3</Statistic_Count>
+			    <Statistic_Seconds>3</Statistic_Seconds>
+			    <Value>LCO_DeleteLinesToReprocess</Value>
+			    <WorkflowValue/>
+			    <AD_Process_Trl type="translation">
+				<Description>Borrar Líneas de Envío para Reproceso</Description>
+				<Help>Este proceso borra todas las líneas generadas y reabre el envío para reproceso.  ¡ADVERTENCIA!  Las líneas borradas no pueden recuperarse, no se preserva auditoría.</Help>
+				<Name>Borrar Líneas para Reproceso</Name>
+				<AD_Language>es_CO</AD_Language>
+				<IsActive>true</IsActive>
+				<IsTranslated>true</IsTranslated>
+			    </AD_Process_Trl>
+			</AD_Process>
+			<AD_Column type="table">
+			    <IsSyncDatabase>Y</IsSyncDatabase>
+			    <AD_Table_ID reference="uuid" reference-key="AD_Table">a9783bc8-ce6f-49ea-bf9b-0d66bd1d6090</AD_Table_ID>
+			    <AD_Reference_Value_ID reference="id"/>
+			    <AD_Client_ID>0</AD_Client_ID>
+			    <AD_Org_ID>0</AD_Org_ID>
+			    <AD_Chart_ID reference="id"/>
+			    <AD_Column_UU>6a376276-0fd8-45a3-b4b5-3a33d57fdd13</AD_Column_UU>
+			    <AD_Element_ID reference="uuid" reference-key="AD_Element">4f419da1-af1e-4b8b-95c6-e6b670c68d60</AD_Element_ID>
+			    <AD_Process_ID reference="uuid" reference-key="AD_Process">1c381973-b875-49d2-9741-d63b5056bc0f</AD_Process_ID>
+			    <AD_Reference_ID reference="id">28</AD_Reference_ID>
+			    <AD_Val_Rule_ID reference="id"/>
+			    <Callout/>
+			    <ColumnName>LCO_DeleteLinesToReprocess</ColumnName>
+			    <ColumnSQL/>
+			    <DefaultValue/>
+			    <Description/>
+			    <EntityType>QSS_LCO</EntityType>
+			    <FieldLength>1</FieldLength>
+			    <FKConstraintName/>
+			    <FKConstraintType>N</FKConstraintType>
+			    <FormatPattern/>
+			    <Help/>
+			    <IsActive>true</IsActive>
+			    <IsAllowCopy>true</IsAllowCopy>
+			    <IsAllowLogging>true</IsAllowLogging>
+			    <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
+			    <IsAutocomplete>false</IsAutocomplete>
+			    <IsEncrypted>N</IsEncrypted>
+			    <IsIdentifier>false</IsIdentifier>
+			    <IsKey>false</IsKey>
+			    <IsMandatory>false</IsMandatory>
+			    <IsParent>false</IsParent>
+			    <IsSecure>false</IsSecure>
+			    <IsSelectionColumn>false</IsSelectionColumn>
+			    <IsToolbarButton>true</IsToolbarButton>
+			    <IsTranslated>false</IsTranslated>
+			    <IsUpdateable>true</IsUpdateable>
+			    <MandatoryLogic/>
+			    <Name>Delete Lines to Reprocess</Name>
+			    <ReadOnlyLogic/>
+			    <SeqNo>0</SeqNo>
+			    <SeqNoSelection>0</SeqNoSelection>
+			    <ValueMax/>
+			    <ValueMin/>
+			    <Version>0</Version>
+			    <VFormat/>
+			</AD_Column>
                         <AD_TableIndex type="table">
                             <AD_Client_ID>0</AD_Client_ID>
                             <AD_Org_ID>0</AD_Org_ID>
@@ -17937,7 +18258,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Table_ID reference="uuid" reference-key="AD_Table">a9783bc8-ce6f-49ea-bf9b-0d66bd1d6090</AD_Table_ID>
                             <AD_TableIndex_UU>26a64a4a-19ca-471f-a34b-c52d46857dee</AD_TableIndex_UU>
                             <Description/>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <Help/>
                             <IsActive>true</IsActive>
                             <IsCreateConstraint>false</IsCreateConstraint>
@@ -17951,7 +18272,7 @@ There are two reasons for de-activating and not deleting records:
                                 <AD_IndexColumn_UU>fb992fb4-8a6e-452e-8379-8550c63cd4f1</AD_IndexColumn_UU>
                                 <AD_TableIndex_ID reference="uuid" reference-key="AD_TableIndex">26a64a4a-19ca-471f-a34b-c52d46857dee</AD_TableIndex_ID>
                                 <ColumnSQL/>
-                                <EntityType>U</EntityType>
+                                <EntityType>QSS_LCO</EntityType>
                                 <IsActive>true</IsActive>
                                 <SeqNo>1</SeqNo>
                             </AD_IndexColumn>
@@ -18747,6 +19068,112 @@ There are two reasons for de-activating and not deleting records:
                                 <IsTranslated>true</IsTranslated>
                             </AD_Field_Trl>
                         </AD_Field>
+			<AD_Field type="table">
+			    <AD_Client_ID>0</AD_Client_ID>
+			    <AD_Org_ID>0</AD_Org_ID>
+			    <AD_Column_ID reference="uuid" reference-key="AD_Column">6a376276-0fd8-45a3-b4b5-3a33d57fdd13</AD_Column_ID>
+			    <AD_FieldGroup_ID reference="id"/>
+			    <AD_Field_UU>61871f5e-a751-4af8-9c16-6f46f8700f6d</AD_Field_UU>
+			    <AD_Reference_ID reference="id"/>
+			    <AD_Reference_Value_ID reference="id"/>
+			    <AD_Tab_ID reference="uuid" reference-key="AD_Tab">a43e641a-5eb9-40e7-8a3c-173d93a91a76</AD_Tab_ID>
+			    <AD_Val_Rule_ID reference="id"/>
+			    <ColumnSpan>2</ColumnSpan>
+			    <DefaultValue/>
+			    <Description/>
+			    <DisplayLength>1</DisplayLength>
+			    <DisplayLogic>@IsGenerated@ = 'Y' &amp; @Processed@ = 'N' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
+			    <EntityType>QSS_LCO</EntityType>
+			    <Help/>
+			    <Included_Tab_ID reference="id"/>
+			    <IsActive>true</IsActive>
+			    <IsAdvancedField>false</IsAdvancedField>
+			    <IsAllowCopy/>
+			    <IsAlwaysUpdateable/>
+			    <IsCentrallyMaintained>true</IsCentrallyMaintained>
+			    <IsDefaultFocus>false</IsDefaultFocus>
+			    <IsDisplayed>true</IsDisplayed>
+			    <IsDisplayedGrid>false</IsDisplayedGrid>
+			    <IsEncrypted>false</IsEncrypted>
+			    <IsFieldOnly>false</IsFieldOnly>
+			    <IsHeading>false</IsHeading>
+			    <IsMandatory/>
+			    <IsQuickEntry>false</IsQuickEntry>
+			    <IsReadOnly>false</IsReadOnly>
+			    <IsSameLine>false</IsSameLine>
+			    <IsToolbarButton/>
+			    <IsUpdateable/>
+			    <MandatoryLogic/>
+			    <Name>Delete Lines to Reprocess</Name>
+			    <NumLines>1</NumLines>
+			    <ObscureType/>
+			    <ReadOnlyLogic/>
+			    <SeqNo>140</SeqNo>
+			    <SeqNoGrid/>
+			    <SortNo/>
+			    <XPosition>2</XPosition>
+			    <AD_Field_Trl type="translation">
+				<Description/>
+				<Help/>
+				<Name>Delete Lines to Reprocess</Name>
+				<AD_Language>es_CO</AD_Language>
+				<IsActive>true</IsActive>
+				<IsTranslated>false</IsTranslated>
+			    </AD_Field_Trl>
+			</AD_Field>
+			<AD_Field type="table">
+			    <AD_Client_ID>0</AD_Client_ID>
+			    <AD_Org_ID>0</AD_Org_ID>
+			    <AD_Column_ID reference="uuid" reference-key="AD_Column">0e0f3e08-3fe2-4fab-bc60-d26d2ad14443</AD_Column_ID>
+			    <AD_FieldGroup_ID reference="id"/>
+			    <AD_Field_UU>03c73f13-85bb-42a4-bb98-bee455183a24</AD_Field_UU>
+			    <AD_Reference_ID reference="id"/>
+			    <AD_Reference_Value_ID reference="id"/>
+			    <AD_Tab_ID reference="uuid" reference-key="AD_Tab">a43e641a-5eb9-40e7-8a3c-173d93a91a76</AD_Tab_ID>
+			    <AD_Val_Rule_ID reference="id"/>
+			    <ColumnSpan>2</ColumnSpan>
+			    <DefaultValue/>
+			    <Description/>
+			    <DisplayLength>36</DisplayLength>
+			    <DisplayLogic/>
+			    <EntityType>QSS_LCO</EntityType>
+			    <Help/>
+			    <Included_Tab_ID reference="id"/>
+			    <IsActive>true</IsActive>
+			    <IsAdvancedField>false</IsAdvancedField>
+			    <IsAllowCopy/>
+			    <IsAlwaysUpdateable/>
+			    <IsCentrallyMaintained>true</IsCentrallyMaintained>
+			    <IsDefaultFocus>false</IsDefaultFocus>
+			    <IsDisplayed>false</IsDisplayed>
+			    <IsDisplayedGrid>false</IsDisplayedGrid>
+			    <IsEncrypted>false</IsEncrypted>
+			    <IsFieldOnly>false</IsFieldOnly>
+			    <IsHeading>false</IsHeading>
+			    <IsMandatory/>
+			    <IsQuickEntry>false</IsQuickEntry>
+			    <IsReadOnly>false</IsReadOnly>
+			    <IsSameLine>false</IsSameLine>
+			    <IsToolbarButton/>
+			    <IsUpdateable/>
+			    <MandatoryLogic/>
+			    <Name>LCO_DIAN_SendSchedule_UU</Name>
+			    <NumLines>1</NumLines>
+			    <ObscureType/>
+			    <ReadOnlyLogic/>
+			    <SeqNo/>
+			    <SeqNoGrid/>
+			    <SortNo/>
+			    <XPosition>1</XPosition>
+			    <AD_Field_Trl type="translation">
+				<Description/>
+				<Help/>
+				<Name>LCO_DIAN_SendSchedule_UU</Name>
+				<AD_Language>es_CO</AD_Language>
+				<IsActive>true</IsActive>
+				<IsTranslated>false</IsTranslated>
+			    </AD_Field_Trl>
+			</AD_Field>
                     </AD_Tab>
                     <AD_Tab type="table">
                         <AD_Client_ID>0</AD_Client_ID>

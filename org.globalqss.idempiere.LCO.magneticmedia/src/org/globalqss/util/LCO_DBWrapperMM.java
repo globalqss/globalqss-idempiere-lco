@@ -23,35 +23,24 @@
 * - Carlos Ruiz - globalqss                                           *
 **********************************************************************/
 
-package org.globalqss.process;
+package org.globalqss.util;
 
-import org.adempiere.base.IProcessFactory;
-import org.compiere.process.ProcessCall;
+import java.math.BigDecimal;
+import java.sql.SQLException;
+import java.util.Properties;
 
-public class LCO_ProcessFactoryMM implements IProcessFactory {
+import org.globalqss.model.X_LCO_DIAN_ConceptSource;
+import org.globalqss.model.X_LCO_DIAN_SendSchedule;
 
-	@Override
-	public ProcessCall newProcessInstance(String className) {
-		ProcessCall process = null;
-		if ("org.globalqss.process.LCO_DianExportXML".equals(className)) {
-			try {
-				process =  LCO_DianExportXML.class.newInstance();
-			} catch (Exception e) {}
-		} else if ("org.globalqss.process.LCO_DianGenerateXML".equals(className)) {
-			try {
-				process =  LCO_DianGenerateXML.class.newInstance();
-			} catch (Exception e) {}
-		} else if ("org.globalqss.process.LCO_DianProcessContent".equals(className)) {
-			try {
-				process =  LCO_DianProcessContent.class.newInstance();
-			} catch (Exception e) {}
-		} else if ("org.globalqss.process.LCO_DeleteLinesToReprocess".equals(className)) {
-			try {
-				process =  LCO_DeleteLinesToReprocess.class.newInstance();
-			} catch (Exception e) {}
-		}
+public interface LCO_DBWrapperMM {
 
-		return process;
-	}
+	public BigDecimal get(String function, Properties ctx,
+			X_LCO_DIAN_SendSchedule sendScheduleProcess, Integer bpInt,
+			Integer bpInt2, X_LCO_DIAN_ConceptSource conceptSource,
+			String trxName) throws Exception;
+
+	public BigDecimal consolidate(String function, Properties ctx,
+			X_LCO_DIAN_SendSchedule sendScheduleProcess, String trxName)
+			throws SQLException;
 
 }

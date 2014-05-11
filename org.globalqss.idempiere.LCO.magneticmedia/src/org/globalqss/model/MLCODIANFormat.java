@@ -39,6 +39,7 @@ import javax.script.ScriptEngine;
 import org.compiere.model.MRule;
 import org.compiere.util.AdempiereUserError;
 import org.compiere.util.DB;
+import org.globalqss.util.LCO_DBWrapperMM;
 
 /**
  *	Model class for format
@@ -217,22 +218,28 @@ public class MLCODIANFormat extends X_LCO_DIAN_Format
 				if (methodName == null || methodName.length() == 0)
 					throw new IllegalArgumentException ("No Method Name");
 
-				Method method = call.getClass().getMethod(methodName, Properties.class, X_LCO_DIAN_SendSchedule.class, String.class);
-
-				//	Call Method
-				try
-				{
-					retValue = (BigDecimal) method.invoke(call, getCtx(), sendScheduleProcess, get_TrxName());
-				}
-				catch (Exception e)
-				{
-					Throwable ex = e.getCause();	//	InvocationTargetException
-					if (ex == null)
-						ex = e;
-					log.log(Level.SEVERE, "start: " + methodName, ex);
-					ex.printStackTrace(System.err);
-					retValueStr = ex.getLocalizedMessage();
-					throw new AdempiereUserError("Error invoking callout " + cmd + " " + retValueStr);
+				if (call instanceof LCO_DBWrapperMM) {
+					if (methodName.startsWith("consolidate"))
+						retValue = ((LCO_DBWrapperMM) call).consolidate(methodName, getCtx(), sendScheduleProcess, get_TrxName());
+					else
+						throw new AdempiereUserError("Error invoking callout " + cmd + " - just method consolidate* is supported");
+				} else {
+					Method method = call.getClass().getMethod(methodName, Properties.class, X_LCO_DIAN_SendSchedule.class, String.class);
+					//	Call Method
+					try
+					{
+						retValue = (BigDecimal) method.invoke(call, getCtx(), sendScheduleProcess, get_TrxName());
+					}
+					catch (Exception e)
+					{
+						Throwable ex = e.getCause();	//	InvocationTargetException
+						if (ex == null)
+							ex = e;
+						log.log(Level.SEVERE, "start: " + methodName, ex);
+						ex.printStackTrace(System.err);
+						retValueStr = ex.getLocalizedMessage();
+						throw new AdempiereUserError("Error invoking callout " + cmd + " " + retValueStr);
+					}
 				}
 				return retValue;
 			}
