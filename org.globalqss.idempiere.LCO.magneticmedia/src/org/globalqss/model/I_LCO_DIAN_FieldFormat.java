@@ -32,7 +32,7 @@ public interface I_LCO_DIAN_FieldFormat
     /** TableName=LCO_DIAN_FieldFormat */
     public static final String Table_Name = "LCO_DIAN_FieldFormat";
 
-    /** AD_Table_ID=1000004 */
+    /** AD_Table_ID=1000017 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -110,6 +110,19 @@ public interface I_LCO_DIAN_FieldFormat
 	  * The record is active in the system
 	  */
 	public boolean isActive();
+
+    /** Column name IsPrinted */
+    public static final String COLUMNNAME_IsPrinted = "IsPrinted";
+
+	/** Set Printed.
+	  * Indicates if this document / line is printed
+	  */
+	public void setIsPrinted (boolean IsPrinted);
+
+	/** Get Printed.
+	  * Indicates if this document / line is printed
+	  */
+	public boolean isPrinted();
 
     /** Column name LCO_DIAN_FieldFormat_ID */
     public static final String COLUMNNAME_LCO_DIAN_FieldFormat_ID = "LCO_DIAN_FieldFormat_ID";

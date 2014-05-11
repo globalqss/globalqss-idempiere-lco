@@ -267,6 +267,8 @@ public class LCO_DianExportXML  extends SvrProcess {
 
 				//Para Campo
 				for (X_LCO_DIAN_FieldFormat fieldFormat : fieldFormats) {
+					if (!fieldFormat.isPrinted())
+						continue;
 					X_LCO_DIAN_XMLPrintLabel label = new X_LCO_DIAN_XMLPrintLabel(getCtx(), fieldFormat.getLCO_DIAN_XMLPrintLabel_ID(), get_TrxName());
 					String printLb = label.getValue();
 

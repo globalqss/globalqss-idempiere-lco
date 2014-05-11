@@ -40,6 +40,7 @@ import org.compiere.model.MRule;
 import org.compiere.util.AdempiereUserError;
 import org.compiere.util.DB;
 import org.compiere.util.Env;
+import org.globalqss.util.LCO_DBWrapperMM;
 
 /**
  *	Model class for concept
@@ -151,6 +152,9 @@ public class MLCODIANConcept extends X_LCO_DIAN_Concept
 					}
 					//    insert into position
 					dssl.set_ValueOfColumn("FieldAmt" + position, amtTotal);
+				} else if (amtTotal != null && dssl != null) {
+					// set column to zero if the line already exists
+					dssl.set_ValueOfColumn("FieldAmt" + position, amtTotal);
 				}
 			}
 			if (dssl != null) {
@@ -253,22 +257,28 @@ public class MLCODIANConcept extends X_LCO_DIAN_Concept
 				if (methodName == null || methodName.length() == 0)
 					throw new IllegalArgumentException ("No Method Name");
 
-				Method method = call.getClass().getMethod(methodName, Properties.class, X_LCO_DIAN_SendSchedule.class, Integer.class, Integer.class, X_LCO_DIAN_ConceptSource.class, String.class);
-
-				//	Call Method
-				try
-				{
-					retValue = (BigDecimal) method.invoke(call, getCtx(), sendScheduleProcess, new Integer(bpID), new Integer(bpID2), conceptSource, get_TrxName());
-				}
-				catch (Exception e)
-				{
-					Throwable ex = e.getCause();	//	InvocationTargetException
-					if (ex == null)
-						ex = e;
-					log.log(Level.SEVERE, "start: " + methodName, ex);
-					ex.printStackTrace(System.err);
-					retValueStr = ex.getLocalizedMessage();
-					throw new AdempiereUserError("Error invoking callout " + cmd + " " + retValueStr);
+				if (call instanceof LCO_DBWrapperMM) {
+					if (methodName.startsWith("get"))
+						retValue = ((LCO_DBWrapperMM) call).get(methodName, getCtx(), sendScheduleProcess, new Integer(bpID), new Integer(bpID2), conceptSource, get_TrxName());
+					else
+						throw new AdempiereUserError("Error invoking callout " + cmd + " - just method get* is supported");
+				} else {
+					Method method = call.getClass().getMethod(methodName, Properties.class, X_LCO_DIAN_SendSchedule.class, Integer.class, Integer.class, X_LCO_DIAN_ConceptSource.class, String.class);
+					//	Call Method
+					try
+					{
+						retValue = (BigDecimal) method.invoke(call, getCtx(), sendScheduleProcess, new Integer(bpID), new Integer(bpID2), conceptSource, get_TrxName());
+					}
+					catch (Exception e)
+					{
+						Throwable ex = e.getCause();	//	InvocationTargetException
+						if (ex == null)
+							ex = e;
+						log.log(Level.SEVERE, "start: " + methodName, ex);
+						ex.printStackTrace(System.err);
+						retValueStr = ex.getLocalizedMessage();
+						throw new AdempiereUserError("Error invoking callout " + cmd + " " + retValueStr);
+					}
 				}
 				return retValue;
 			}

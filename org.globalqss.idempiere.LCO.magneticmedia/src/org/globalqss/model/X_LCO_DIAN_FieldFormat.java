@@ -30,7 +30,7 @@ public class X_LCO_DIAN_FieldFormat extends PO implements I_LCO_DIAN_FieldFormat
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20131119L;
+	private static final long serialVersionUID = 20140510L;
 
     /** Standard Constructor */
     public X_LCO_DIAN_FieldFormat (Properties ctx, int LCO_DIAN_FieldFormat_ID, String trxName)
@@ -39,6 +39,8 @@ public class X_LCO_DIAN_FieldFormat extends PO implements I_LCO_DIAN_FieldFormat
       /** if (LCO_DIAN_FieldFormat_ID == 0)
         {
 			setCalcColumnPosition (0);
+			setIsPrinted (true);
+// Y
 			setLCO_DIAN_FieldFormat_ID (0);
 			setLCO_DIAN_XMLPrintLabel_ID (0);
 			setLine (0);
@@ -103,6 +105,30 @@ public class X_LCO_DIAN_FieldFormat extends PO implements I_LCO_DIAN_FieldFormat
 	public String getFieldPrintFormat () 
 	{
 		return (String)get_Value(COLUMNNAME_FieldPrintFormat);
+	}
+
+	/** Set Printed.
+		@param IsPrinted 
+		Indicates if this document / line is printed
+	  */
+	public void setIsPrinted (boolean IsPrinted)
+	{
+		set_ValueNoCheck (COLUMNNAME_IsPrinted, Boolean.valueOf(IsPrinted));
+	}
+
+	/** Get Printed.
+		@return Indicates if this document / line is printed
+	  */
+	public boolean isPrinted () 
+	{
+		Object oo = get_Value(COLUMNNAME_IsPrinted);
+		if (oo != null) 
+		{
+			 if (oo instanceof Boolean) 
+				 return ((Boolean)oo).booleanValue(); 
+			return "Y".equals(oo);
+		}
+		return false;
 	}
 
 	/** Set DIAN Field Format.

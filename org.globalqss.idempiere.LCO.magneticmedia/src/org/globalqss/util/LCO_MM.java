@@ -47,73 +47,16 @@ import org.globalqss.model.X_LCO_DIAN_SendSchedule;
  *
  *  @author Carlos Ruiz - globalqss - Quality Systems & Solutions - http://globalqss.com
  */
-public class LCO_MM
+public class LCO_MM implements LCO_DBWrapperMM
 {
 	/**	Logger							*/
 	protected transient CLogger	log = CLogger.getCLogger (getClass());
 
-	public BigDecimal get1001vded(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, Integer bpID, Integer bpID2, X_LCO_DIAN_ConceptSource conceptSource, String trxName) throws Exception {
-		return get(getCurrentMethodName(), ctx, sendScheduleProcess, bpID, bpID2, conceptSource, trxName);
-	}
-
-	public BigDecimal get1001vpag(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, Integer bpID, Integer bpID2, X_LCO_DIAN_ConceptSource conceptSource, String trxName) throws Exception {
-		return get(getCurrentMethodName(), ctx, sendScheduleProcess, bpID, bpID2, conceptSource, trxName);
-	}
-
-	public BigDecimal get1002vabo(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, Integer bpID, Integer bpID2, X_LCO_DIAN_ConceptSource conceptSource, String trxName) throws Exception {
-		return get(getCurrentMethodName(), ctx, sendScheduleProcess, bpID, bpID2, conceptSource, trxName);
-	}
-
-	public BigDecimal get1002vret(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, Integer bpID, Integer bpID2, X_LCO_DIAN_ConceptSource conceptSource, String trxName) throws Exception {
-		return get(getCurrentMethodName(), ctx, sendScheduleProcess, bpID, bpID2, conceptSource, trxName);
-	}
-
-	public BigDecimal get1003ret(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, Integer bpID, Integer bpID2, X_LCO_DIAN_ConceptSource conceptSource, String trxName) throws Exception {
-		return get(getCurrentMethodName(), ctx, sendScheduleProcess, bpID, bpID2, conceptSource, trxName);
-	}
-
-	public BigDecimal get1003valor(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, Integer bpID, Integer bpID2, X_LCO_DIAN_ConceptSource conceptSource, String trxName) throws Exception {
-		return get(getCurrentMethodName(), ctx, sendScheduleProcess, bpID, bpID2, conceptSource, trxName);
-	}
-
-	public BigDecimal get1004vdes(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, Integer bpID, Integer bpID2, X_LCO_DIAN_ConceptSource conceptSource, String trxName) throws Exception {
-		return get(getCurrentMethodName(), ctx, sendScheduleProcess, bpID, bpID2, conceptSource, trxName);
-	}
-
-	public BigDecimal get1004vpag(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, Integer bpID, Integer bpID2, X_LCO_DIAN_ConceptSource conceptSource, String trxName) throws Exception {
-		return get(getCurrentMethodName(), ctx, sendScheduleProcess, bpID, bpID2, conceptSource, trxName);
-	}
-
-	public BigDecimal get1005vimp(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, Integer bpID, Integer bpID2, X_LCO_DIAN_ConceptSource conceptSource, String trxName) throws Exception {
-		return get(getCurrentMethodName(), ctx, sendScheduleProcess, bpID, bpID2, conceptSource, trxName);
-	}
-
-	public BigDecimal get1006vimp(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, Integer bpID, Integer bpID2, X_LCO_DIAN_ConceptSource conceptSource, String trxName) throws Exception {
-		return get(getCurrentMethodName(), ctx, sendScheduleProcess, bpID, bpID2, conceptSource, trxName);
-	}
-
-	public BigDecimal get1007dev(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, Integer bpID, Integer bpID2, X_LCO_DIAN_ConceptSource conceptSource, String trxName) throws Exception {
-		return get(getCurrentMethodName(), ctx, sendScheduleProcess, bpID, bpID2, conceptSource, trxName);
-	}
-
-	public BigDecimal get1007ing(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, Integer bpID, Integer bpID2, X_LCO_DIAN_ConceptSource conceptSource, String trxName) throws Exception {
-		return get(getCurrentMethodName(), ctx, sendScheduleProcess, bpID, bpID2, conceptSource, trxName);
-	}
-
-	public BigDecimal get1008sal(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, Integer bpID, Integer bpID2, X_LCO_DIAN_ConceptSource conceptSource, String trxName) throws Exception {
-		return get(getCurrentMethodName(), ctx, sendScheduleProcess, bpID, bpID2, conceptSource, trxName);
-	}
-
-	public BigDecimal get1009sal(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, Integer bpID, Integer bpID2, X_LCO_DIAN_ConceptSource conceptSource, String trxName) throws Exception {
-		return get(getCurrentMethodName(), ctx, sendScheduleProcess, bpID, bpID2, conceptSource, trxName);
-	}
-
-	public BigDecimal get1011sal(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, Integer bpID, Integer bpID2, X_LCO_DIAN_ConceptSource conceptSource, String trxName) throws Exception {
-		return get(getCurrentMethodName(), ctx, sendScheduleProcess, bpID, bpID2, conceptSource, trxName);
-	}
-
-	private BigDecimal get(String function,
-			Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, Integer bpInt, Integer bpInt2, X_LCO_DIAN_ConceptSource conceptSource, String trxName) throws Exception {
+	@Override
+	public BigDecimal get(String function, Properties ctx,
+			X_LCO_DIAN_SendSchedule sendScheduleProcess, Integer bpInt,
+			Integer bpInt2, X_LCO_DIAN_ConceptSource conceptSource,
+			String trxName) throws Exception {
 		BigDecimal retValue = null;
 		String accountValue = null;
 		if (conceptSource.getC_ElementValue_ID() > 0)
@@ -162,39 +105,10 @@ public class LCO_MM
 		return retValue;
 	}
 
-	public BigDecimal consolidate1001(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, String trxName) throws Exception {
-		return consolidate(getCurrentMethodName(), ctx, sendScheduleProcess, trxName);
-	}
-
-	public BigDecimal consolidate1002(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, String trxName) throws Exception {
-		return consolidate(getCurrentMethodName(), ctx, sendScheduleProcess, trxName);
-	}
-
-	public BigDecimal consolidate1006(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, String trxName) throws Exception {
-		return consolidate(getCurrentMethodName(), ctx, sendScheduleProcess, trxName);
-	}
-
-	public BigDecimal consolidate1007(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, String trxName) throws Exception {
-		return consolidate(getCurrentMethodName(), ctx, sendScheduleProcess, trxName);
-	}
-
-	public BigDecimal consolidate1008(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, String trxName) throws Exception {
-		return consolidate(getCurrentMethodName(), ctx, sendScheduleProcess, trxName);
-	}
-
-	public BigDecimal consolidate1009(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, String trxName) throws Exception {
-		return consolidate(getCurrentMethodName(), ctx, sendScheduleProcess, trxName);
-	}
-
-	public BigDecimal consolidate1016(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, String trxName) throws Exception {
-		return consolidate(getCurrentMethodName(), ctx, sendScheduleProcess, trxName);
-	}
-
-	public BigDecimal consolidate1053(Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, String trxName) throws Exception {
-		return consolidate(getCurrentMethodName(), ctx, sendScheduleProcess, trxName);
-	}
-
-	private BigDecimal consolidate(String function, Properties ctx, X_LCO_DIAN_SendSchedule sendScheduleProcess, String trxName) throws SQLException {
+	@Override
+	public BigDecimal consolidate(String function, Properties ctx,
+			X_LCO_DIAN_SendSchedule sendScheduleProcess, String trxName)
+			throws SQLException {
 		BigDecimal retValue = null;
 		String sql = "{call " + function + "(?,?,?,?)}";
 
@@ -225,8 +139,4 @@ public class LCO_MM
 		return retValue;
 	}
 
-	public String getCurrentMethodName() {
-		StackTraceElement stackTraceElements[] = (new Throwable()).getStackTrace();
-		return stackTraceElements[1].getMethodName().toString();
-	}
 }	// LCO_MM
