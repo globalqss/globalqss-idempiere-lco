@@ -2775,7 +2775,7 @@ If the document type of your document has no automatic document sequence defined
             <AD_Table_ID reference="uuid" reference-key="AD_Table">ee26ff25-19d0-44a6-ab6a-9587f1ff5c55</AD_Table_ID>
             <AD_TableIndex_UU>4143b64b-a393-485d-9b4c-145b07b2a4e8</AD_TableIndex_UU>
             <Description/>
-            <EntityType>U</EntityType>
+            <EntityType>QSS_LCO</EntityType>
             <Help/>
             <IsActive>true</IsActive>
             <IsCreateConstraint>false</IsCreateConstraint>
@@ -2790,7 +2790,7 @@ If the document type of your document has no automatic document sequence defined
                 <AD_IndexColumn_UU>6dea3e67-2d72-420b-96e4-5f9a04b35762</AD_IndexColumn_UU>
                 <AD_TableIndex_ID reference="uuid" reference-key="AD_TableIndex">4143b64b-a393-485d-9b4c-145b07b2a4e8</AD_TableIndex_ID>
                 <ColumnSQL/>
-                <EntityType>U</EntityType>
+                <EntityType>QSS_LCO</EntityType>
                 <IsActive>true</IsActive>
                 <SeqNo>1</SeqNo>
             </AD_IndexColumn>
@@ -8481,7 +8481,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Table_ID reference="uuid" reference-key="AD_Table">67180e35-e23d-4a74-8ac4-4298a4c7dfee</AD_Table_ID>
                             <AD_TableIndex_UU>53900397-23af-4727-8c36-173bf0b4fe18</AD_TableIndex_UU>
                             <Description/>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <Help/>
                             <IsActive>true</IsActive>
                             <IsCreateConstraint>false</IsCreateConstraint>
@@ -8496,7 +8496,7 @@ There are two reasons for de-activating and not deleting records:
                                 <AD_IndexColumn_UU>5ceeaa8d-9783-4cc6-b7d9-2b082741297b</AD_IndexColumn_UU>
                                 <AD_TableIndex_ID reference="uuid" reference-key="AD_TableIndex">53900397-23af-4727-8c36-173bf0b4fe18</AD_TableIndex_ID>
                                 <ColumnSQL/>
-                                <EntityType>U</EntityType>
+                                <EntityType>QSS_LCO</EntityType>
                                 <IsActive>true</IsActive>
                                 <SeqNo>1</SeqNo>
                             </AD_IndexColumn>
@@ -10088,7 +10088,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Table_ID reference="uuid" reference-key="AD_Table">bbd12e5c-6c61-4552-bdd2-a2abf88144e0</AD_Table_ID>
                             <AD_TableIndex_UU>50fd090a-77c2-402e-8a9c-11b69959c102</AD_TableIndex_UU>
                             <Description/>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <Help/>
                             <IsActive>true</IsActive>
                             <IsCreateConstraint>false</IsCreateConstraint>
@@ -10103,7 +10103,7 @@ There are two reasons for de-activating and not deleting records:
                                 <AD_IndexColumn_UU>4a7b090d-79ec-4199-bd0c-1a49da93b3ab</AD_IndexColumn_UU>
                                 <AD_TableIndex_ID reference="uuid" reference-key="AD_TableIndex">50fd090a-77c2-402e-8a9c-11b69959c102</AD_TableIndex_ID>
                                 <ColumnSQL/>
-                                <EntityType>U</EntityType>
+                                <EntityType>QSS_LCO</EntityType>
                                 <IsActive>true</IsActive>
                                 <SeqNo>1</SeqNo>
                             </AD_IndexColumn>
@@ -12688,7 +12688,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Table_ID reference="uuid" reference-key="AD_Table">028cffa3-8758-462e-ad52-2937a6aa2d9a</AD_Table_ID>
                             <AD_TableIndex_UU>cc33e111-da57-4cbb-90cc-9a74d8b4e6a6</AD_TableIndex_UU>
                             <Description/>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <Help/>
                             <IsActive>true</IsActive>
                             <IsCreateConstraint>false</IsCreateConstraint>
@@ -12703,7 +12703,7 @@ There are two reasons for de-activating and not deleting records:
                                 <AD_IndexColumn_UU>0e7b5499-074a-4ae2-a1b6-cd2cd0dc1807</AD_IndexColumn_UU>
                                 <AD_TableIndex_ID reference="uuid" reference-key="AD_TableIndex">cc33e111-da57-4cbb-90cc-9a74d8b4e6a6</AD_TableIndex_ID>
                                 <ColumnSQL/>
-                                <EntityType>U</EntityType>
+                                <EntityType>QSS_LCO</EntityType>
                                 <IsActive>true</IsActive>
                                 <SeqNo>1</SeqNo>
                             </AD_IndexColumn>
@@ -15417,7 +15417,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Table_ID reference="uuid" reference-key="AD_Table">6e4b6c6a-528b-49f8-a663-733dc58b87f7</AD_Table_ID>
                             <AD_TableIndex_UU>f3859293-a75e-4bb3-bb62-677dd8739285</AD_TableIndex_UU>
                             <Description/>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <Help/>
                             <IsActive>true</IsActive>
                             <IsCreateConstraint>false</IsCreateConstraint>
@@ -15432,7 +15432,7 @@ There are two reasons for de-activating and not deleting records:
                                 <AD_IndexColumn_UU>9c2803b9-2939-47a6-a873-f40a234cf64d</AD_IndexColumn_UU>
                                 <AD_TableIndex_ID reference="uuid" reference-key="AD_TableIndex">f3859293-a75e-4bb3-bb62-677dd8739285</AD_TableIndex_ID>
                                 <ColumnSQL/>
-                                <EntityType>U</EntityType>
+                                <EntityType>QSS_LCO</EntityType>
                                 <IsActive>true</IsActive>
                                 <SeqNo>1</SeqNo>
                             </AD_IndexColumn>
@@ -18189,7 +18189,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Table_ID reference="uuid" reference-key="AD_Table">87623c99-f1b2-400c-975c-ca813a3390d5</AD_Table_ID>
                             <AD_TableIndex_UU>2731ec73-3f47-4846-aee5-05afb2a94f57</AD_TableIndex_UU>
                             <Description/>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <Help/>
                             <IsActive>true</IsActive>
                             <IsCreateConstraint>false</IsCreateConstraint>
@@ -18204,7 +18204,7 @@ There are two reasons for de-activating and not deleting records:
                                 <AD_IndexColumn_UU>870be852-d6fc-4de1-bf34-3c7c9555dd6b</AD_IndexColumn_UU>
                                 <AD_TableIndex_ID reference="uuid" reference-key="AD_TableIndex">2731ec73-3f47-4846-aee5-05afb2a94f57</AD_TableIndex_ID>
                                 <ColumnSQL/>
-                                <EntityType>U</EntityType>
+                                <EntityType>QSS_LCO</EntityType>
                                 <IsActive>true</IsActive>
                                 <SeqNo>1</SeqNo>
                             </AD_IndexColumn>
@@ -19418,7 +19418,7 @@ If you leave the search key empty, the system automatically creates a numeric nu
                             <AD_Table_ID reference="uuid" reference-key="AD_Table">17e5527a-f7d1-4182-a7e2-e566c215d66e</AD_Table_ID>
                             <AD_TableIndex_UU>b0f03b4e-9459-460e-8039-fb2940b00321</AD_TableIndex_UU>
                             <Description/>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <Help/>
                             <IsActive>true</IsActive>
                             <IsCreateConstraint>false</IsCreateConstraint>
@@ -19433,7 +19433,7 @@ If you leave the search key empty, the system automatically creates a numeric nu
                                 <AD_IndexColumn_UU>33085c39-d255-487a-ba66-feafb01fb7a7</AD_IndexColumn_UU>
                                 <AD_TableIndex_ID reference="uuid" reference-key="AD_TableIndex">b0f03b4e-9459-460e-8039-fb2940b00321</AD_TableIndex_ID>
                                 <ColumnSQL/>
-                                <EntityType>U</EntityType>
+                                <EntityType>QSS_LCO</EntityType>
                                 <IsActive>true</IsActive>
                                 <SeqNo>1</SeqNo>
                             </AD_IndexColumn>
@@ -20657,7 +20657,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Table_ID reference="uuid" reference-key="AD_Table">d2a512a4-1295-4bb1-920e-9897e5f2adbe</AD_Table_ID>
                             <AD_TableIndex_UU>5e98bbb8-af2a-4e5f-929d-d1705617c687</AD_TableIndex_UU>
                             <Description/>
-                            <EntityType>U</EntityType>
+                            <EntityType>QSS_LCO</EntityType>
                             <Help/>
                             <IsActive>true</IsActive>
                             <IsCreateConstraint>false</IsCreateConstraint>
@@ -20672,7 +20672,7 @@ There are two reasons for de-activating and not deleting records:
                                 <AD_IndexColumn_UU>d74e51c0-a611-44ef-aef7-d513d1d8dda1</AD_IndexColumn_UU>
                                 <AD_TableIndex_ID reference="uuid" reference-key="AD_TableIndex">5e98bbb8-af2a-4e5f-929d-d1705617c687</AD_TableIndex_ID>
                                 <ColumnSQL/>
-                                <EntityType>U</EntityType>
+                                <EntityType>QSS_LCO</EntityType>
                                 <IsActive>true</IsActive>
                                 <SeqNo>1</SeqNo>
                             </AD_IndexColumn>
