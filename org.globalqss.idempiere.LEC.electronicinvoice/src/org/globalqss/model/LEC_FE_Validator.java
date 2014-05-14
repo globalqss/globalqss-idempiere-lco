@@ -20,6 +20,7 @@ package org.globalqss.model;
 import org.compiere.apps.ADialog;
 import org.compiere.model.MClient;
 import org.compiere.model.MInvoice;
+import org.globalqss.model.LEC_FE_MInvoice;
 import org.compiere.model.ModelValidationEngine;
 import org.compiere.model.ModelValidator;
 import org.compiere.model.PO;
@@ -184,6 +185,11 @@ public class LEC_FE_Validator implements ModelValidator
 		if (!ADialog.ask(0, null, msg)) {
 			return "Canceled...";
 		}
+		
+		LEC_FE_MInvoice lecfeinv = new LEC_FE_MInvoice(inv.getCtx(), inv.getC_Invoice_ID(), inv.get_TrxName());
+		msg = lecfeinv.lecfeinv_SriExportInvoiceXML100();
+		if (msg != null)
+			return msg;
 
 		return null;
 	}
@@ -208,7 +214,8 @@ public class LEC_FE_Validator implements ModelValidator
 		}
 		
 
-		return "Processing..."; //null;
+		//return "Simulando...";	// Rollback
+		return null; //	Ok
 	}
 	
 	
