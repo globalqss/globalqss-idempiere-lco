@@ -407,7 +407,7 @@ public class LCO_DianExportXML  extends SvrProcess {
 						// Fin de las 13 columnas hardcoded
 						// Label de una columna calculada
 						int col = fieldFormat.getCalcColumnPosition();
-						if (col < 1 || col > 10)
+						if (col < 1 || col > 20)
 							throw new AdempiereUserError(label + " col not valid (" + col + ") in line " + line_id);
 						BigDecimal amt = (BigDecimal) dssl.get_Value("FieldAmt"+col);
 						if (amt == null)
