@@ -32,7 +32,7 @@ public class X_LCO_DIAN_SendScheduleLine extends PO implements I_LCO_DIAN_SendSc
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20131119L;
+	private static final long serialVersionUID = 20140513L;
 
     /** Standard Constructor */
     public X_LCO_DIAN_SendScheduleLine (Properties ctx, int LCO_DIAN_SendScheduleLine_ID, String trxName)
@@ -105,6 +105,150 @@ public class X_LCO_DIAN_SendScheduleLine extends PO implements I_LCO_DIAN_SendSc
 		return (String)get_Value(COLUMNNAME_AttributeNm10);
 	}
 
+	/** Set Attribute Name 11.
+		@param AttributeNm11 
+		Name of the Attribute 11
+	  */
+	public void setAttributeNm11 (String AttributeNm11)
+	{
+		throw new IllegalArgumentException ("AttributeNm11 is virtual column");	}
+
+	/** Get Attribute Name 11.
+		@return Name of the Attribute 11
+	  */
+	public String getAttributeNm11 () 
+	{
+		return (String)get_Value(COLUMNNAME_AttributeNm11);
+	}
+
+	/** Set Attribute Name 12.
+		@param AttributeNm12 
+		Name of the Attribute 12
+	  */
+	public void setAttributeNm12 (String AttributeNm12)
+	{
+		throw new IllegalArgumentException ("AttributeNm12 is virtual column");	}
+
+	/** Get Attribute Name 12.
+		@return Name of the Attribute 12
+	  */
+	public String getAttributeNm12 () 
+	{
+		return (String)get_Value(COLUMNNAME_AttributeNm12);
+	}
+
+	/** Set Attribute Name 13.
+		@param AttributeNm13 
+		Name of the Attribute 13
+	  */
+	public void setAttributeNm13 (String AttributeNm13)
+	{
+		throw new IllegalArgumentException ("AttributeNm13 is virtual column");	}
+
+	/** Get Attribute Name 13.
+		@return Name of the Attribute 13
+	  */
+	public String getAttributeNm13 () 
+	{
+		return (String)get_Value(COLUMNNAME_AttributeNm13);
+	}
+
+	/** Set Attribute Name 14.
+		@param AttributeNm14 
+		Name of the Attribute 14
+	  */
+	public void setAttributeNm14 (String AttributeNm14)
+	{
+		throw new IllegalArgumentException ("AttributeNm14 is virtual column");	}
+
+	/** Get Attribute Name 14.
+		@return Name of the Attribute 14
+	  */
+	public String getAttributeNm14 () 
+	{
+		return (String)get_Value(COLUMNNAME_AttributeNm14);
+	}
+
+	/** Set Attribute Name 15.
+		@param AttributeNm15 
+		Name of the Attribute 15
+	  */
+	public void setAttributeNm15 (String AttributeNm15)
+	{
+		throw new IllegalArgumentException ("AttributeNm15 is virtual column");	}
+
+	/** Get Attribute Name 15.
+		@return Name of the Attribute 15
+	  */
+	public String getAttributeNm15 () 
+	{
+		return (String)get_Value(COLUMNNAME_AttributeNm15);
+	}
+
+	/** Set Attribute Name 16.
+		@param AttributeNm16 
+		Name of the Attribute 16
+	  */
+	public void setAttributeNm16 (String AttributeNm16)
+	{
+		throw new IllegalArgumentException ("AttributeNm16 is virtual column");	}
+
+	/** Get Attribute Name 16.
+		@return Name of the Attribute 16
+	  */
+	public String getAttributeNm16 () 
+	{
+		return (String)get_Value(COLUMNNAME_AttributeNm16);
+	}
+
+	/** Set Attribute Name 17.
+		@param AttributeNm17 
+		Name of the Attribute 17
+	  */
+	public void setAttributeNm17 (String AttributeNm17)
+	{
+		throw new IllegalArgumentException ("AttributeNm17 is virtual column");	}
+
+	/** Get Attribute Name 17.
+		@return Name of the Attribute 17
+	  */
+	public String getAttributeNm17 () 
+	{
+		return (String)get_Value(COLUMNNAME_AttributeNm17);
+	}
+
+	/** Set Attribute Name 18.
+		@param AttributeNm18 
+		Name of the Attribute 18
+	  */
+	public void setAttributeNm18 (String AttributeNm18)
+	{
+		throw new IllegalArgumentException ("AttributeNm18 is virtual column");	}
+
+	/** Get Attribute Name 18.
+		@return Name of the Attribute 18
+	  */
+	public String getAttributeNm18 () 
+	{
+		return (String)get_Value(COLUMNNAME_AttributeNm18);
+	}
+
+	/** Set Attribute Name 19.
+		@param AttributeNm19 
+		Name of the Attribute 19
+	  */
+	public void setAttributeNm19 (String AttributeNm19)
+	{
+		throw new IllegalArgumentException ("AttributeNm19 is virtual column");	}
+
+	/** Get Attribute Name 19.
+		@return Name of the Attribute 19
+	  */
+	public String getAttributeNm19 () 
+	{
+		return (String)get_Value(COLUMNNAME_AttributeNm19);
+	}
+
 	/** Set Attribute Name 2.
 		@param AttributeNm2 
 		Name of the Attribute 2
@@ -119,6 +263,22 @@ public class X_LCO_DIAN_SendScheduleLine extends PO implements I_LCO_DIAN_SendSc
 	public String getAttributeNm2 () 
 	{
 		return (String)get_Value(COLUMNNAME_AttributeNm2);
+	}
+
+	/** Set Attribute Name 20.
+		@param AttributeNm20 
+		Name of the Attribute 20
+	  */
+	public void setAttributeNm20 (String AttributeNm20)
+	{
+		throw new IllegalArgumentException ("AttributeNm20 is virtual column");	}
+
+	/** Get Attribute Name 20.
+		@return Name of the Attribute 20
+	  */
+	public String getAttributeNm20 () 
+	{
+		return (String)get_Value(COLUMNNAME_AttributeNm20);
 	}
 
 	/** Set Attribute Name 3.
@@ -351,6 +511,159 @@ public class X_LCO_DIAN_SendScheduleLine extends PO implements I_LCO_DIAN_SendSc
 		return bd;
 	}
 
+	/** Set Field Amt 11.
+		@param FieldAmt11 Field Amt 11	  */
+	public void setFieldAmt11 (BigDecimal FieldAmt11)
+	{
+		set_Value (COLUMNNAME_FieldAmt11, FieldAmt11);
+	}
+
+	/** Get Field Amt 11.
+		@return Field Amt 11	  */
+	public BigDecimal getFieldAmt11 () 
+	{
+		BigDecimal bd = (BigDecimal)get_Value(COLUMNNAME_FieldAmt11);
+		if (bd == null)
+			 return Env.ZERO;
+		return bd;
+	}
+
+	/** Set Field Amt 12.
+		@param FieldAmt12 Field Amt 12	  */
+	public void setFieldAmt12 (BigDecimal FieldAmt12)
+	{
+		set_Value (COLUMNNAME_FieldAmt12, FieldAmt12);
+	}
+
+	/** Get Field Amt 12.
+		@return Field Amt 12	  */
+	public BigDecimal getFieldAmt12 () 
+	{
+		BigDecimal bd = (BigDecimal)get_Value(COLUMNNAME_FieldAmt12);
+		if (bd == null)
+			 return Env.ZERO;
+		return bd;
+	}
+
+	/** Set Field Amt 13.
+		@param FieldAmt13 Field Amt 13	  */
+	public void setFieldAmt13 (BigDecimal FieldAmt13)
+	{
+		set_Value (COLUMNNAME_FieldAmt13, FieldAmt13);
+	}
+
+	/** Get Field Amt 13.
+		@return Field Amt 13	  */
+	public BigDecimal getFieldAmt13 () 
+	{
+		BigDecimal bd = (BigDecimal)get_Value(COLUMNNAME_FieldAmt13);
+		if (bd == null)
+			 return Env.ZERO;
+		return bd;
+	}
+
+	/** Set Field Amt 14.
+		@param FieldAmt14 Field Amt 14	  */
+	public void setFieldAmt14 (BigDecimal FieldAmt14)
+	{
+		set_Value (COLUMNNAME_FieldAmt14, FieldAmt14);
+	}
+
+	/** Get Field Amt 14.
+		@return Field Amt 14	  */
+	public BigDecimal getFieldAmt14 () 
+	{
+		BigDecimal bd = (BigDecimal)get_Value(COLUMNNAME_FieldAmt14);
+		if (bd == null)
+			 return Env.ZERO;
+		return bd;
+	}
+
+	/** Set Field Amt 15.
+		@param FieldAmt15 Field Amt 15	  */
+	public void setFieldAmt15 (BigDecimal FieldAmt15)
+	{
+		set_Value (COLUMNNAME_FieldAmt15, FieldAmt15);
+	}
+
+	/** Get Field Amt 15.
+		@return Field Amt 15	  */
+	public BigDecimal getFieldAmt15 () 
+	{
+		BigDecimal bd = (BigDecimal)get_Value(COLUMNNAME_FieldAmt15);
+		if (bd == null)
+			 return Env.ZERO;
+		return bd;
+	}
+
+	/** Set Field Amt 16.
+		@param FieldAmt16 Field Amt 16	  */
+	public void setFieldAmt16 (BigDecimal FieldAmt16)
+	{
+		set_Value (COLUMNNAME_FieldAmt16, FieldAmt16);
+	}
+
+	/** Get Field Amt 16.
+		@return Field Amt 16	  */
+	public BigDecimal getFieldAmt16 () 
+	{
+		BigDecimal bd = (BigDecimal)get_Value(COLUMNNAME_FieldAmt16);
+		if (bd == null)
+			 return Env.ZERO;
+		return bd;
+	}
+
+	/** Set Field Amt 17.
+		@param FieldAmt17 Field Amt 17	  */
+	public void setFieldAmt17 (BigDecimal FieldAmt17)
+	{
+		set_Value (COLUMNNAME_FieldAmt17, FieldAmt17);
+	}
+
+	/** Get Field Amt 17.
+		@return Field Amt 17	  */
+	public BigDecimal getFieldAmt17 () 
+	{
+		BigDecimal bd = (BigDecimal)get_Value(COLUMNNAME_FieldAmt17);
+		if (bd == null)
+			 return Env.ZERO;
+		return bd;
+	}
+
+	/** Set Field Amt 18.
+		@param FieldAmt18 Field Amt 18	  */
+	public void setFieldAmt18 (BigDecimal FieldAmt18)
+	{
+		set_Value (COLUMNNAME_FieldAmt18, FieldAmt18);
+	}
+
+	/** Get Field Amt 18.
+		@return Field Amt 18	  */
+	public BigDecimal getFieldAmt18 () 
+	{
+		BigDecimal bd = (BigDecimal)get_Value(COLUMNNAME_FieldAmt18);
+		if (bd == null)
+			 return Env.ZERO;
+		return bd;
+	}
+
+	/** Set Field Amt 19.
+		@param FieldAmt19 Field Amt 19	  */
+	public void setFieldAmt19 (BigDecimal FieldAmt19)
+	{
+		set_Value (COLUMNNAME_FieldAmt19, FieldAmt19);
+	}
+
+	/** Get Field Amt 19.
+		@return Field Amt 19	  */
+	public BigDecimal getFieldAmt19 () 
+	{
+		BigDecimal bd = (BigDecimal)get_Value(COLUMNNAME_FieldAmt19);
+		if (bd == null)
+			 return Env.ZERO;
+		return bd;
+	}
+
 	/** Set Field Amt 2.
 		@param FieldAmt2 Field Amt 2	  */
 	public void setFieldAmt2 (BigDecimal FieldAmt2)
@@ -363,6 +676,23 @@ public class X_LCO_DIAN_SendScheduleLine extends PO implements I_LCO_DIAN_SendSc
 	public BigDecimal getFieldAmt2 () 
 	{
 		BigDecimal bd = (BigDecimal)get_Value(COLUMNNAME_FieldAmt2);
+		if (bd == null)
+			 return Env.ZERO;
+		return bd;
+	}
+
+	/** Set Field Amt 20.
+		@param FieldAmt20 Field Amt 20	  */
+	public void setFieldAmt20 (BigDecimal FieldAmt20)
+	{
+		set_Value (COLUMNNAME_FieldAmt20, FieldAmt20);
+	}
+
+	/** Get Field Amt 20.
+		@return Field Amt 20	  */
+	public BigDecimal getFieldAmt20 () 
+	{
+		BigDecimal bd = (BigDecimal)get_Value(COLUMNNAME_FieldAmt20);
 		if (bd == null)
 			 return Env.ZERO;
 		return bd;

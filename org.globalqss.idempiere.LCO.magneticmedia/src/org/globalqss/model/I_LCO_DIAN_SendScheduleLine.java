@@ -32,7 +32,7 @@ public interface I_LCO_DIAN_SendScheduleLine
     /** TableName=LCO_DIAN_SendScheduleLine */
     public static final String Table_Name = "LCO_DIAN_SendScheduleLine";
 
-    /** AD_Table_ID=1000011 */
+    /** AD_Table_ID=1000006 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -90,6 +90,123 @@ public interface I_LCO_DIAN_SendScheduleLine
 	  */
 	public String getAttributeNm10();
 
+    /** Column name AttributeNm11 */
+    public static final String COLUMNNAME_AttributeNm11 = "AttributeNm11";
+
+	/** Set Attribute Name 11.
+	  * Name of the Attribute 11
+	  */
+	public void setAttributeNm11 (String AttributeNm11);
+
+	/** Get Attribute Name 11.
+	  * Name of the Attribute 11
+	  */
+	public String getAttributeNm11();
+
+    /** Column name AttributeNm12 */
+    public static final String COLUMNNAME_AttributeNm12 = "AttributeNm12";
+
+	/** Set Attribute Name 12.
+	  * Name of the Attribute 12
+	  */
+	public void setAttributeNm12 (String AttributeNm12);
+
+	/** Get Attribute Name 12.
+	  * Name of the Attribute 12
+	  */
+	public String getAttributeNm12();
+
+    /** Column name AttributeNm13 */
+    public static final String COLUMNNAME_AttributeNm13 = "AttributeNm13";
+
+	/** Set Attribute Name 13.
+	  * Name of the Attribute 13
+	  */
+	public void setAttributeNm13 (String AttributeNm13);
+
+	/** Get Attribute Name 13.
+	  * Name of the Attribute 13
+	  */
+	public String getAttributeNm13();
+
+    /** Column name AttributeNm14 */
+    public static final String COLUMNNAME_AttributeNm14 = "AttributeNm14";
+
+	/** Set Attribute Name 14.
+	  * Name of the Attribute 14
+	  */
+	public void setAttributeNm14 (String AttributeNm14);
+
+	/** Get Attribute Name 14.
+	  * Name of the Attribute 14
+	  */
+	public String getAttributeNm14();
+
+    /** Column name AttributeNm15 */
+    public static final String COLUMNNAME_AttributeNm15 = "AttributeNm15";
+
+	/** Set Attribute Name 15.
+	  * Name of the Attribute 15
+	  */
+	public void setAttributeNm15 (String AttributeNm15);
+
+	/** Get Attribute Name 15.
+	  * Name of the Attribute 15
+	  */
+	public String getAttributeNm15();
+
+    /** Column name AttributeNm16 */
+    public static final String COLUMNNAME_AttributeNm16 = "AttributeNm16";
+
+	/** Set Attribute Name 16.
+	  * Name of the Attribute 16
+	  */
+	public void setAttributeNm16 (String AttributeNm16);
+
+	/** Get Attribute Name 16.
+	  * Name of the Attribute 16
+	  */
+	public String getAttributeNm16();
+
+    /** Column name AttributeNm17 */
+    public static final String COLUMNNAME_AttributeNm17 = "AttributeNm17";
+
+	/** Set Attribute Name 17.
+	  * Name of the Attribute 17
+	  */
+	public void setAttributeNm17 (String AttributeNm17);
+
+	/** Get Attribute Name 17.
+	  * Name of the Attribute 17
+	  */
+	public String getAttributeNm17();
+
+    /** Column name AttributeNm18 */
+    public static final String COLUMNNAME_AttributeNm18 = "AttributeNm18";
+
+	/** Set Attribute Name 18.
+	  * Name of the Attribute 18
+	  */
+	public void setAttributeNm18 (String AttributeNm18);
+
+	/** Get Attribute Name 18.
+	  * Name of the Attribute 18
+	  */
+	public String getAttributeNm18();
+
+    /** Column name AttributeNm19 */
+    public static final String COLUMNNAME_AttributeNm19 = "AttributeNm19";
+
+	/** Set Attribute Name 19.
+	  * Name of the Attribute 19
+	  */
+	public void setAttributeNm19 (String AttributeNm19);
+
+	/** Get Attribute Name 19.
+	  * Name of the Attribute 19
+	  */
+	public String getAttributeNm19();
+
     /** Column name AttributeNm2 */
     public static final String COLUMNNAME_AttributeNm2 = "AttributeNm2";
 
@@ -102,6 +219,19 @@ public interface I_LCO_DIAN_SendScheduleLine
 	  * Name of the Attribute 2
 	  */
 	public String getAttributeNm2();
+
+    /** Column name AttributeNm20 */
+    public static final String COLUMNNAME_AttributeNm20 = "AttributeNm20";
+
+	/** Set Attribute Name 20.
+	  * Name of the Attribute 20
+	  */
+	public void setAttributeNm20 (String AttributeNm20);
+
+	/** Get Attribute Name 20.
+	  * Name of the Attribute 20
+	  */
+	public String getAttributeNm20();
 
     /** Column name AttributeNm3 */
     public static final String COLUMNNAME_AttributeNm3 = "AttributeNm3";
@@ -273,6 +403,87 @@ public interface I_LCO_DIAN_SendScheduleLine
 	/** Get Field Amt 10	  */
 	public BigDecimal getFieldAmt10();
 
+    /** Column name FieldAmt11 */
+    public static final String COLUMNNAME_FieldAmt11 = "FieldAmt11";
+
+	/** Set Field Amt 11	  */
+	public void setFieldAmt11 (BigDecimal FieldAmt11);
+
+	/** Get Field Amt 11	  */
+	public BigDecimal getFieldAmt11();
+
+    /** Column name FieldAmt12 */
+    public static final String COLUMNNAME_FieldAmt12 = "FieldAmt12";
+
+	/** Set Field Amt 12	  */
+	public void setFieldAmt12 (BigDecimal FieldAmt12);
+
+	/** Get Field Amt 12	  */
+	public BigDecimal getFieldAmt12();
+
+    /** Column name FieldAmt13 */
+    public static final String COLUMNNAME_FieldAmt13 = "FieldAmt13";
+
+	/** Set Field Amt 13	  */
+	public void setFieldAmt13 (BigDecimal FieldAmt13);
+
+	/** Get Field Amt 13	  */
+	public BigDecimal getFieldAmt13();
+
+    /** Column name FieldAmt14 */
+    public static final String COLUMNNAME_FieldAmt14 = "FieldAmt14";
+
+	/** Set Field Amt 14	  */
+	public void setFieldAmt14 (BigDecimal FieldAmt14);
+
+	/** Get Field Amt 14	  */
+	public BigDecimal getFieldAmt14();
+
+    /** Column name FieldAmt15 */
+    public static final String COLUMNNAME_FieldAmt15 = "FieldAmt15";
+
+	/** Set Field Amt 15	  */
+	public void setFieldAmt15 (BigDecimal FieldAmt15);
+
+	/** Get Field Amt 15	  */
+	public BigDecimal getFieldAmt15();
+
+    /** Column name FieldAmt16 */
+    public static final String COLUMNNAME_FieldAmt16 = "FieldAmt16";
+
+	/** Set Field Amt 16	  */
+	public void setFieldAmt16 (BigDecimal FieldAmt16);
+
+	/** Get Field Amt 16	  */
+	public BigDecimal getFieldAmt16();
+
+    /** Column name FieldAmt17 */
+    public static final String COLUMNNAME_FieldAmt17 = "FieldAmt17";
+
+	/** Set Field Amt 17	  */
+	public void setFieldAmt17 (BigDecimal FieldAmt17);
+
+	/** Get Field Amt 17	  */
+	public BigDecimal getFieldAmt17();
+
+    /** Column name FieldAmt18 */
+    public static final String COLUMNNAME_FieldAmt18 = "FieldAmt18";
+
+	/** Set Field Amt 18	  */
+	public void setFieldAmt18 (BigDecimal FieldAmt18);
+
+	/** Get Field Amt 18	  */
+	public BigDecimal getFieldAmt18();
+
+    /** Column name FieldAmt19 */
+    public static final String COLUMNNAME_FieldAmt19 = "FieldAmt19";
+
+	/** Set Field Amt 19	  */
+	public void setFieldAmt19 (BigDecimal FieldAmt19);
+
+	/** Get Field Amt 19	  */
+	public BigDecimal getFieldAmt19();
+
     /** Column name FieldAmt2 */
     public static final String COLUMNNAME_FieldAmt2 = "FieldAmt2";
 
@@ -281,6 +492,15 @@ public interface I_LCO_DIAN_SendScheduleLine
 
 	/** Get Field Amt 2	  */
 	public BigDecimal getFieldAmt2();
+
+    /** Column name FieldAmt20 */
+    public static final String COLUMNNAME_FieldAmt20 = "FieldAmt20";
+
+	/** Set Field Amt 20	  */
+	public void setFieldAmt20 (BigDecimal FieldAmt20);
+
+	/** Get Field Amt 20	  */
+	public BigDecimal getFieldAmt20();
 
     /** Column name FieldAmt3 */
     public static final String COLUMNNAME_FieldAmt3 = "FieldAmt3";
