@@ -46,10 +46,12 @@ public class ImportSriAccessCode extends SvrProcess
 {
 	/**	Client to be imported to		*/
 	private int				m_AD_Client_ID = 0;
+	/**	Org to be imported to		*/
+	private int				m_AD_Org_ID = 0;
 	
 	/**	Delete old Imported				*/
 	private boolean			m_deleteOldImported = false;
-	/**	Environment to be imported to		*/
+	/**	Short Doc Type to be imported to		*/
 	private String			m_SRI_ShortDocType = null;
 	/**
 	 *  Prepare - e.g., get Parameters.
@@ -60,7 +62,9 @@ public class ImportSriAccessCode extends SvrProcess
 		for (int i = 0; i < para.length; i++)
 		{
 			String name = para[i].getParameterName();
-			if (name.equals("SRI_ShortDocType"))
+			if (name.equals("AD_Org_ID"))
+				m_AD_Org_ID = para[i].getParameterAsInt();
+			else if (name.equals("SRI_ShortDocType"))
 				m_SRI_ShortDocType = para[i].getParameter().toString();
 			else if (name.equals("DeleteOldImported"))
 				m_deleteOldImported = "Y".equals(para[i].getParameter());
@@ -96,7 +100,7 @@ public class ImportSriAccessCode extends SvrProcess
 		//	Set Client, Org, IsActive, Created/Updated
 		sql = new StringBuffer ("UPDATE I_SRI_AccessCode "
 			+ "SET AD_Client_ID = COALESCE (AD_Client_ID, ").append(m_AD_Client_ID).append("),"
-			+ " AD_Org_ID = COALESCE (AD_Org_ID, 0),"	// TODO Reviewme
+			+ " AD_Org_ID = COALESCE (AD_Org_ID, ").append(m_AD_Org_ID).append("),"
 			+ " IsActive = COALESCE (IsActive, 'Y'),"
 			+ " Created = COALESCE (Created, SysDate),"
 			+ " CreatedBy = COALESCE (CreatedBy, 0),"
