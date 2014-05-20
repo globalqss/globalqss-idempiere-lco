@@ -5,7 +5,7 @@
  <row id="100" trl="Y">
   <value column="Name" original="Generate Invoices (manual)">Generar Facturas por Selección</value>
   <value column="Description" original="Select and generate invoices">Seleccionar y Generar Facturas</value>
-  <value column="Help" original="Generate Invoices from Orders.  &#10;Select the orders to generate the invoice for.">Generar Facturas a partir de Ordenes</value>
+  <value column="Help" original="Generate Invoices from Orders.  &#10;Select the orders to generate the invoice for.">Generar Facturas a partir de Órdenes</value>
  </row>
  <row id="101" trl="Y">
   <value column="Name" original="Import File Loader">Cargador de Archivos</value>
@@ -44,7 +44,7 @@
  </row>
  <row id="108" trl="Y">
   <value column="Name" original="Matching PO-Receipt-Invoice">Asignar OC-Recibo-Factura</value>
-  <value column="Description" original="Match Purchase Orders, Receipts, Vendor Invoices">Asignar Ordenes de Compra, Recibos de Producto, Facturas de Proveedores</value>
+  <value column="Description" original="Match Purchase Orders, Receipts, Vendor Invoices">Asignar Órdenes de Compra, Recibos de Producto, Facturas de Proveedores</value>
   <value column="Help" original="Make sure that the Receipts and Invoices are processed. If you want to match partial shipment, make sure that &quot;Same Quantity&quot; is not selected.">Asegúrese que los recibos y facturas estén procesados. Si quiere un asignamiento parcial, asegúrese que "Misma Cantidad" no esté seleccionado.</value>
  </row>
  <row id="109" trl="Y">
@@ -55,7 +55,7 @@
  <row id="110" trl="Y">
   <value column="Name" original="Generate Shipments (manual)">Generar Entregas por Selección</value>
   <value column="Description" original="Select and generate shipments">Seleccionar y Generar Entregas</value>
-  <value column="Help" original="Generate Shipments from Orders.  &#10;Select the orders to generate the shipments for.">Generar Entregas a partir de Ordenes</value>
+  <value column="Help" original="Generate Shipments from Orders.  &#10;Select the orders to generate the shipments for.">Generar Entregas a partir de Órdenes</value>
  </row>
  <row id="111" trl="Y">
   <value column="Name" original="SQL Process">Proceso SQL</value>
@@ -182,8 +182,8 @@ Finalmente una caja de mensaje le preguntará si desea cerrar el documento de OM
  <row id="53010" trl="Y">
   <value column="Name" original="Generate Shipments &amp; Invoices (manual)">Generar Entregas y Facturas por Selección</value>
   <value column="Description" original="Select and generate shipments &amp; Invoices">Seleccionar y generar entregas y facturas</value>
-  <value column="Help" original="Generate Shipments &amp; Invoices from Orders.  &#10;Select the orders to generate the shipments &amp; Invoices for.">Generar Entregas y Facturas a partir de ordenes.
-Seleccione las ordenes con las cuales desea generar entregas y facturas</value>
+  <value column="Help" original="Generate Shipments &amp; Invoices from Orders.  &#10;Select the orders to generate the shipments &amp; Invoices for.">Generar Entregas y Facturas a partir de órdenes.
+Seleccione las órdenes con las cuales desea generar entregas y facturas</value>
  </row>
  <row id="53012" trl="Y">
   <value column="Name" original="Material Receipt Distribution Order">Orden Distribución Recibo Materiales</value>

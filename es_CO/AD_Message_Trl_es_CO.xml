@@ -2293,7 +2293,7 @@ Por favor deténgase y migre la base de datos inmediatamente.</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="670" trl="Y">
-  <value column="MsgText" original="Select orders to generate shipments">Selecciona Ordenes para Generar Entregas</value>
+  <value column="MsgText" original="Select orders to generate shipments">Selecciona Órdenes para Generar Entregas</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="671" trl="Y">
@@ -3989,7 +3989,7 @@ Compruebe el registro de errores y el formato del archivo Accounting*.cvs - Ning
   <value column="MsgTip" original=" "/>
  </row>
  <row id="52195" trl="Y">
-  <value column="MsgText" original="Invoke Partial POS Order">Invocar Ordenes parciales de PDV</value>
+  <value column="MsgText" original="Invoke Partial POS Order">Invocar Órdenes parciales de PDV</value>
   <value column="MsgTip" original=" "/>
  </row>
  <row id="52196" trl="Y">
@@ -5292,7 +5292,7 @@ Por favor contacte al ADMINISTRADOR.</value>
  </row>
  <row id="53027" trl="Y">
   <value column="MsgText" original="Only from same warehouse">Sólo del mismo almacén</value>
-  <value column="MsgTip" original="Show only orders with the same warehouse as selected in the material receipt">Muestra sólo las ordenes del mismo almacén que el seleccionado en el recibo de material</value>
+  <value column="MsgTip" original="Show only orders with the same warehouse as selected in the material receipt">Muestra sólo las órdenes del mismo almacén que el seleccionado en el recibo de material</value>
  </row>
  <row id="53029" trl="Y">
   <value column="MsgText" original="Choose the date of the most recent payment that you plan to allocate, but it must be in an open accounting period or it will not post.">Elija la fecha del pago más reciente que planea asignar, debe estar un un período contable abierto o no contabilizará.</value>
@@ -5364,7 +5364,7 @@ Por favor contacte al ADMINISTRADOR.</value>
  </row>
  <row id="53052" trl="Y">
   <value column="MsgText" original="Shipment Past Due">Entrega Vencida</value>
-  <value column="MsgTip" original="Indicates that a shipment for a Order Distribution is past due. You should either delay the orders created the requirement for the product or expedite them when the product does arrive.">Indica que una entrega de una orden de distribución está vencido.  Debe retrasar las ordenes creadas por el requerimiento del producto, o acelerarlas cuando el producto llegue.</value>
+  <value column="MsgTip" original="Indicates that a shipment for a Order Distribution is past due. You should either delay the orders created the requirement for the product or expedite them when the product does arrive.">Indica que una entrega de una orden de distribución está vencido.  Debe retrasar las órdenes creadas por el requerimiento del producto, o acelerarlas cuando el producto llegue.</value>
  </row>
  <row id="53053" trl="Y">
   <value column="MsgText" original="No source of supply">No hay fuente de suministro</value>
@@ -5795,7 +5795,7 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="200057" trl="Y">
-  <value column="MsgText" original="Role">Perfil</value>
+  <value column="MsgText" original="Role">Rol</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="200058" trl="Y">
@@ -6454,6 +6454,50 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgText" original="Document status has been changed by other session, please refresh the record and try again.">El estado del documento ha sido modificado en otra sesión, por favor refresque el registro e intente nuevamente.</value>
   <value column="MsgTip" original=""/>
  </row>
+ <row id="200255" trl="Y">
+  <value column="MsgText" original="Add to Tree">Añadir al árbol</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200256" trl="Y">
+  <value column="MsgText" original="Add ALL to Tree">Añadir TODOS al árbol</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200257" trl="Y">
+  <value column="MsgText" original="Delete from Tree">Borrar del árbol</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200258" trl="Y">
+  <value column="MsgText" original="Delete ALL from Tree">Borrar TODOS del árbol</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200260" trl="Y">
+  <value column="MsgText" original="DR">DB</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200261" trl="Y">
+  <value column="MsgText" original="CR">CR</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200262" trl="Y">
+  <value column="MsgText" original="DR/CR">DB/CR</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200268" trl="Y">
+  <value column="MsgText" original="System is in maintenance mode, please wait until the access is restored.">El sistema se encuentra en mantenimiento, por favor esperar hasta que se restablezca el acceso.</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200269" trl="Y">
+  <value column="MsgText" original="You cannot access process {0} with your role : {1}">No puede ejecutar el proceso {0} con su rol: {1}</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200271" trl="Y">
+  <value column="MsgText" original="Tabs">Pestañas</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200272" trl="Y">
+  <value column="MsgText" original="Fields">Campos</value>
+  <value column="MsgTip" original=""/>
+ </row>
  <row id="520010" trl="Y">
   <value column="MsgText" original="1 Rupee">1 Rupia</value>
   <value column="MsgTip" original=" "/>
@@ -6514,12 +6558,76 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgText" original="Verify check digit">Verifique el dígito de chequeo</value>
   <value column="MsgTip" original=""/>
  </row>
+ <row trl="Y" uuid="a545ff6d-a3b2-42ab-91d3-d1195fdb2288">
+  <value column="MsgText" original="Country required to use check digit">Se requiere país para usar dígito de chequeo</value>
+  <value column="MsgTip" original="Define a country for the taxID type">Defina un país para el tipo de identificación</value>
+ </row>
+ <row trl="Y" uuid="7ea4917b-8098-4043-be8d-09174233f26d">
+  <value column="MsgText" original="Validation class required to use check digit">Clase validación requerida para usar dígito de chequeo</value>
+  <value column="MsgTip" original="Define a validation class for the country of taxID type">Defina una clase de validación para el país del tipo de identificación</value>
+ </row>
+ <row trl="Y" uuid="9901fc05-b993-4c48-b291-4406d8a8ac42">
+  <value column="MsgText" original="Wrong Length on Tax ID">Longitud incorrecta del NIT</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row trl="Y" uuid="b3a9638b-3c54-4c8f-bfbd-79875f967ce9">
+  <value column="MsgText" original="Wrong length on Tax ID">Longitud incorrecta en el documento</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row trl="Y" uuid="3105a8bc-ad6e-48d4-a219-c4ee0b0314cc">
+  <value column="MsgText" original="Wrong branch on tax ID">Sucursal incorrecta en RUC</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row trl="Y" uuid="f5398316-8038-42c3-94ee-63faa73bba43">
+  <value column="MsgText" original="Wrong tax code on tax ID">Código (tercer dígito) incorrecto en RUC</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row trl="Y" uuid="a9e96870-df02-48fb-ba3f-bb585c70d6f0">
+  <value column="MsgText" original="Wrong digit on tax ID">Dígito incorrecto en el RUC</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row trl="Y" uuid="1573c83e-2b12-4444-98b7-29b4e78f2671">
+  <value column="MsgText" original="Wrong province on tax ID">Provincia incorrecta en el RUC</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row trl="Y" uuid="5ecb24cb-8ec8-4c38-acb0-8b0e0a15ce62">
+  <value column="MsgText" original="Wrong tax code on tax ID">Código de tipo de persona incorrecto</value>
+  <value column="MsgTip" original=""/>
+ </row>
  <row trl="Y" uuid="53e4eb38-18de-4820-aa53-7ecbace1d44b">
   <value column="MsgText" original="Withholding Not Generated">No se han generado retenciones</value>
   <value column="MsgTip" original=""/>
  </row>
  <row trl="Y" uuid="2ce82e64-4425-4be1-9637-b798eedb46ca">
   <value column="MsgText" original="Write-Off Amount must be equal or greater than Withholdings">El valor del ajuste debe ser mayor o igual que las retenciones</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row trl="Y" uuid="7f59a409-d601-431b-b186-8aca1a959a14">
+  <value column="MsgText" original="Choose Document Type or Withholding.">Escoja tipo de documento o retención.</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row trl="Y" uuid="ffd332e7-f70e-4321-a959-f20597f1b2b7">
+  <value column="MsgText" original="Prefix length is inadequate.">La longitud del prefijo es inadecuada.</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row trl="Y" uuid="e4ddaed8-1c22-4c28-930f-43c57c89d032">
+  <value column="MsgText" original="Final sequence hast to be greater than Initial Sequence">Secuencia final debe ser mayor a  secuencia inicial</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row trl="Y" uuid="37fcb52f-17d0-4846-ba84-125f9a5a3ac7">
+  <value column="MsgText" original="Final Date hast to be greater than Initial Date.">Fecha final debe ser mayor que fecha inicial.</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row trl="Y" uuid="b32a2db2-89c9-428a-aff4-25d659f34bd9">
+  <value column="MsgText" original="The sequence already exists">La secuencia ya existe.</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row trl="Y" uuid="e506cab1-c59b-4e70-9705-71b933e567e9">
+  <value column="MsgText" original="Document No Length is inadequate">La longitud del número del número de documento no es adecuada</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row trl="Y" uuid="d575bd70-83c7-47cb-bba5-1364bd9a5001">
+  <value column="MsgText" original="No printed form matches document information">Ningúna forma impresa coincide con la información del documento</value>
   <value column="MsgTip" original=""/>
  </row>
 </idempiereTrl>

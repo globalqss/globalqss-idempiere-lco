@@ -667,12 +667,12 @@
   <value column="Description" original="Marketing Campaign">Campaña de Mercadotecnia</value>
  </row>
  <row id="282" trl="Y">
-  <value column="Name" original="User List 1">Lista Usuario 1</value>
-  <value column="Description" original="User 1">Usuario 1</value>
+  <value column="Name" original="User Element List 1">Lista Elemento 1</value>
+  <value column="Description" original="User Element List 1">Lista Elemento 1</value>
  </row>
  <row id="283" trl="Y">
-  <value column="Name" original="User List 2">Lista Usuario 2</value>
-  <value column="Description" original="User 2">Usuario 2</value>
+  <value column="Name" original="User Element List 2">Lista Elemento 2</value>
+  <value column="Description" original="User Element List 2">Lista Elemento 2</value>
  </row>
  <row id="284" trl="Y">
   <value column="Name" original="Organization">Organización</value>
@@ -2583,12 +2583,12 @@
   <value column="Description" original="Sub Account for Element Value">Sub Cuenta para Valor del Elemento</value>
  </row>
  <row id="796" trl="Y">
-  <value column="Name" original="User Element 1">Elemento de Usuario 1</value>
-  <value column="Description" original=""/>
+  <value column="Name" original="User Column 1">Columna 1</value>
+  <value column="Description" original="User Column 1">Columna 1</value>
  </row>
  <row id="797" trl="Y">
-  <value column="Name" original="User Element 2">Elemento de Usuario 2</value>
-  <value column="Description" original=""/>
+  <value column="Name" original="User Column 2">Columna 2</value>
+  <value column="Description" original="User Column 2">Columna 2</value>
  </row>
  <row id="798" trl="Y">
   <value column="Name" original="EMail">EMail</value>
@@ -4123,20 +4123,20 @@
   <value column="Description" original="Sales Region">Región de Ventas</value>
  </row>
  <row id="53430" trl="Y">
-  <value column="Name" original="User List 1">Lista Usuario 1</value>
-  <value column="Description" original="User 1">Usuario 1</value>
+  <value column="Name" original="User Element List 1">Lista Elemento 1</value>
+  <value column="Description" original="User Element List 1">Lista Elemento 1</value>
  </row>
  <row id="53431" trl="Y">
-  <value column="Name" original="User List 2">Lista Usuario 2</value>
-  <value column="Description" original="User 2">Usuario 2</value>
+  <value column="Name" original="User Element List 2">Lista Elemento 2</value>
+  <value column="Description" original="User 2">Lista Elemento 2</value>
  </row>
  <row id="53432" trl="Y">
-  <value column="Name" original="User Element 1">Elemento de Usuario 1</value>
-  <value column="Description" original=""/>
+  <value column="Name" original="User Column 1">Columna 1</value>
+  <value column="Description" original="User Column 1">Columna 1</value>
  </row>
  <row id="53433" trl="Y">
-  <value column="Name" original="User Element 2">Elemento de Usuario 2</value>
-  <value column="Description" original=""/>
+  <value column="Name" original="User Column 2">Columna 2</value>
+  <value column="Description" original="User Column 2">Columna 2</value>
  </row>
  <row id="53434" trl="Y">
   <value column="Name" original="Combination">Combinación</value>
@@ -4431,7 +4431,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="53545" trl="Y">
-  <value column="Name" original="Balance (accounted sign)">Balance (signo contabilizado))</value>
+  <value column="Name" original="Balance (accounted sign)">Balance (signo contabilizado)</value>
   <value column="Description" original="DR - CR">DB - CR</value>
  </row>
  <row id="53546" trl="Y">
@@ -4763,7 +4763,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="53677" trl="Y">
-  <value column="Name" original="3_Commitments (Orders)">3_Compromisos (Ordenes)</value>
+  <value column="Name" original="3_Commitments (Orders)">3_Compromisos (Órdenes)</value>
   <value column="Description" original=""/>
  </row>
  <row id="53678" trl="Y">
@@ -5377,6 +5377,18 @@
  <row id="200164" trl="Y">
   <value column="Name" original="Set Null">Fijar Nulo</value>
   <value column="Description" original=""/>
+ </row>
+ <row trl="Y" uuid="dbc98c55-3b9e-4f9b-9d50-f29596ba706d">
+  <value column="Name" original="Check">Validar</value>
+  <value column="Description" original="Check against typed digit">Validar contra el dígito ingresado</value>
+ </row>
+ <row trl="Y" uuid="1df681c9-5585-4266-941a-70bcb243372b">
+  <value column="Name" original="Generate">Generar</value>
+  <value column="Description" original="Generate on save">Generar al guardar</value>
+ </row>
+ <row trl="Y" uuid="ae6f58dc-010a-4b70-9c94-c92a3d2d8ac2">
+  <value column="Name" original="Callout">Callout</value>
+  <value column="Description" original="Generate immediately on callout and again on save">Generar inmediatamente con callout y nuevamente al guardar</value>
  </row>
  <row trl="Y" uuid="5b51b2ba-cd8e-4958-a276-541c866ce01a">
   <value column="Name" original="Yes">Si</value>

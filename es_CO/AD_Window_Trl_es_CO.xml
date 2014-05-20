@@ -105,7 +105,7 @@
  <row id="121" trl="Y">
   <value column="Name" original="Location">Localización</value>
   <value column="Description" original="Maintain Location Address">Mantener dirección de localización</value>
-  <value column="Help" original="The Location Window defines the address data within the system.  This window is for System Admin only.  Users would access location entries using the location button or tab on the appropriate window (i.e Order Entry or Business Partner)">Esta ventana permite definir información sobre direcciones dentro del sistema. Esta ventana es para uso del administrador del sistema solamente. Los usuarios acceden a esta información desde otras ventanas y pestañas (ej. Entrada de ordenes o tercero)</value>
+  <value column="Help" original="The Location Window defines the address data within the system.  This window is for System Admin only.  Users would access location entries using the location button or tab on the appropriate window (i.e Order Entry or Business Partner)">Esta ventana permite definir información sobre direcciones dentro del sistema. Esta ventana es para uso del administrador del sistema solamente. Los usuarios acceden a esta información desde otras ventanas y pestañas (ej. Entrada de órdenes o tercero)</value>
  </row>
  <row id="122" trl="Y">
   <value column="Name" original="Country Region and City">País, Región y Ciudad</value>
@@ -193,9 +193,9 @@
   <value column="Help" original="The Shipper Window defines the different shipping provides used by an Organization.  When a delivery method of Shipper is used on an Order a predefined Shipper must be selected.">La ventana define los diferentes transportadores que usa una organización. Cuando un método de envío es usado en una orden, un transportador debe ser seleccionado</value>
  </row>
  <row id="143" trl="Y">
-  <value column="Name" original="Sales Order">Ordenes de Venta</value>
-  <value column="Description" original="Enter and change sales orders">Entrar y cambiar ordenes de ventas</value>
-  <value column="Help" original="The Order Window allows you to enter and modify Sales Orders.  ">La ventana permite entrar y modificar ordenes de venta</value>
+  <value column="Name" original="Sales Order">Órdenes de Venta</value>
+  <value column="Description" original="Enter and change sales orders">Entrar y cambiar órdenes de ventas</value>
+  <value column="Help" original="The Order Window allows you to enter and modify Sales Orders.  ">La ventana permite entrar y modificar órdenes de venta</value>
  </row>
  <row id="144" trl="Y">
   <value column="Name" original="Product Category">Categoría de Producto</value>
@@ -328,8 +328,8 @@
   <value column="Help" original="The Report View Window defines the views used when generating reports.  This window is for System Admin use only.">Define las vistas usadas cuando se generan Informes. Esta venta es solamente para uso del administrador del sistema.</value>
  </row>
  <row id="181" trl="Y">
-  <value column="Name" original="Purchase Order">Ordenes de Compra</value>
-  <value column="Description" original="Manage Purchase Orders">Administrar Ordenes de Compra</value>
+  <value column="Name" original="Purchase Order">Órdenes de Compra</value>
+  <value column="Description" original="Manage Purchase Orders">Administrar Órdenes de Compra</value>
   <value column="Help" original="The Purchase Order Window defines a purchase order for an organization.  When a Purchase Order has been entered you can generate a Shipment Document or Invoice from this Purchase Order">La ventana define una orden de compra para una organización. Cuando una orden de compra ya ha sido entrada, es posible generar un documento de entrega o factura desde esta orden.</value>
  </row>
  <row id="183" trl="Y">
@@ -518,8 +518,8 @@
   <value column="Help" original=""/>
  </row>
  <row id="228" trl="Y">
-  <value column="Name" original="Matched Purchase Orders">Ordenes de Compra Asignadas a Recibos y Facturas</value>
-  <value column="Description" original="View Matched Purchase Orders">Ver ordenes de compra asignadas a recibos y facturas</value>
+  <value column="Name" original="Matched Purchase Orders">Órdenes de Compra Asignadas a Recibos y Facturas</value>
+  <value column="Description" original="View Matched Purchase Orders">Ver órdenes de compra asignadas a recibos y facturas</value>
   <value column="Help" original="View detals of matched purchase order lines to invoice lines and material receipt lines"/>
  </row>
  <row id="229" trl="Y">
@@ -779,8 +779,8 @@ Tenga en cuenta que el acceso a la información está en caché y requiere volve
   <value column="Help" original=""/>
  </row>
  <row id="281" trl="Y">
-  <value column="Name" original="Import Order">Importar Ordenes</value>
-  <value column="Description" original="Import Orders">Importar Ordenes</value>
+  <value column="Name" original="Import Order">Importar Órdenes</value>
+  <value column="Description" original="Import Orders">Importar Órdenes</value>
   <value column="Help" original="Please set Y/N selections in the import loader format explicitly (e.g. as constants) and no not leave them NULL. A NULL value stands for &quot;don't know&quot;.&#10;In general, selection boxes are not selected if the value is not &quot;Y&quot; (i.e. could be null or any other value). All tests are made on &quot;Y&quot; or &quot;not Y&quot; - i.e. NULL values are not &quot;not Y&quot;, but NULL (don't know) - see SQL Language introductions.">Las selecciones Y/N en el cargador de la importación ajustando al formato explícitamente (ej. como constantes) y ningún para no dejarlas NULAS. Un valor NULO estándar "Saber o no Saber". En general, las cajas de la selección no se seleccionan si el valor no es "Y" (es decir podría estar la falta de información o cualquier otro valor). Todas las pruebas se hacen en "Y" o "No" - es decir los valores NULOS no son "No", pero anula (no saber) - ven las introducciones de la lengua del SQL.</value>
  </row>
  <row id="282" trl="Y">
@@ -1179,7 +1179,7 @@ Segmentos Contables de la organización deseada, Cuentas, Productos pueden tener
  <row id="361" trl="Y">
   <value column="Name" original="Budget Control">Control de Presupuesto</value>
   <value column="Description" original="Maintain Budget Controls">Mantener Control de Presupuesto</value>
-  <value column="Help" original="Budget Control allows you to restrict the use of expenditures, commitments (Purchase Orders) and reservations (Requisitions). If defined, you mey not be able to approve Requisitions, Purchse Orders, or AP Invoices.">Control de Presupuesto le permite restringir Gastos, Compromisos (Ordenes de Compra) y reservados (Requisiciónes). Si definió no podrá aprobar Requisiciones, Ordenes de Compra, o CxP Facturas.
+  <value column="Help" original="Budget Control allows you to restrict the use of expenditures, commitments (Purchase Orders) and reservations (Requisitions). If defined, you mey not be able to approve Requisitions, Purchse Orders, or AP Invoices.">Control de Presupuesto le permite restringir Gastos, Compromisos (Órdenes de Compra) y reservados (Requisiciónes). Si definió no podrá aprobar Requisiciones, Órdenes de Compra, o CxP Facturas.
 </value>
  </row>
  <row id="362" trl="Y">

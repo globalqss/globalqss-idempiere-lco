@@ -127,7 +127,7 @@
   <value column="Description" original="iDempiere Server Maintenance">Mantenimiento del Servidor iDempiere</value>
  </row>
  <row id="457" trl="Y">
-  <value column="Name" original="Sales Orders">Ordenes de Venta</value>
+  <value column="Name" original="Sales Orders">Órdenes de Venta</value>
   <value column="Description" original=""/>
  </row>
  <row id="458" trl="Y">
