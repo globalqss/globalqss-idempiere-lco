@@ -98,12 +98,12 @@
   <value column="Help" original="Invoices for open Orders are created based on the invoice rule of the Order.&#10;If several Orders of a business partner have the same bill location, the orders can be consolidated into one Invoice."/>
  </row>
  <row id="120" trl="Y">
-  <value column="Name" original="Order Transactions">Transacciones de Ordenes</value>
+  <value column="Name" original="Order Transactions">Transacciones de Órdenes</value>
   <value column="Description" original="Order Transactions">Reporte de transacciones de Orden de ventas</value>
   <value column="Help" original="With this report we can verify the detail of every Manufacturing Order transaction executed with a Manufacturing Order including information like document number, quantities, products and the date in which the transactions were made, etc."/>
  </row>
  <row id="121" trl="Y">
-  <value column="Name" original="Open Orders">Ordenes Abiertas</value>
+  <value column="Name" original="Open Orders">Órdenes Abiertas</value>
   <value column="Description" original="Open Order Report"/>
   <value column="Help" original="Orders with quantities to deliver (Backordered) or quantities to invoice"/>
  </row>
@@ -421,7 +421,7 @@ Nótese que Añadir traducciones faltantes las crea a partir del lenguaje del si
  <row id="193" trl="Y">
   <value column="Name" original="Generate PO from Sales Order">Generar OC desde Orden de Venta</value>
   <value column="Description" original="Create Purchase Order from Sales Orders">Crear Orden de compra desde orden de ventas</value>
-  <value column="Help" original="After completing sales orders, you can create one or more purchase orders for each sales order. A purchase order references always only one sales order (i.e. no consolidation of sales orders). &#10;The Organization of the Sales Order is used to create the Purchase Order. If a (default) PO document type is defined on Organization level, that is used instead of the document types defined on Client level.&#10;&#10;POs are created for all sales order lines where the product has a current vendor, the vendor has a Vendor Price List with all Products on the most current Price List Version. The Unit of Measure is copied; PO and SO can have different currencies.&#10;&#10;Once the process is run, you need to synchronize the SO/PO manually (e.g. in case of additional lines and changed lines (product &amp; quantity).">Después de completar ordenes de ventas, el usuario puede crear una o más ordenes de compra por cada orden de venta. Una orden de compra solo esta relacionada a una orden de venta. Ordenes de compra son creadas para todas las líneas de la orden de ventas donde el producto tiene un proveedor actual, el proveedor tiene una lista de precios con todos los productos en la última versión del precio de lista. La unidad de medida es copiada, la orden de compra y de venta pueden tener monedas diferentes. Una vez este proceso es corrido, es necesario sincronizar las Ordenes manualmente (e.g. En caso de líneas adicionales)</value>
+  <value column="Help" original="After completing sales orders, you can create one or more purchase orders for each sales order. A purchase order references always only one sales order (i.e. no consolidation of sales orders). &#10;The Organization of the Sales Order is used to create the Purchase Order. If a (default) PO document type is defined on Organization level, that is used instead of the document types defined on Client level.&#10;&#10;POs are created for all sales order lines where the product has a current vendor, the vendor has a Vendor Price List with all Products on the most current Price List Version. The Unit of Measure is copied; PO and SO can have different currencies.&#10;&#10;Once the process is run, you need to synchronize the SO/PO manually (e.g. in case of additional lines and changed lines (product &amp; quantity).">Después de completar órdenes de ventas, el usuario puede crear una o más órdenes de compra por cada orden de venta. Una orden de compra solo esta relacionada a una orden de venta. Órdenes de compra son creadas para todas las líneas de la orden de ventas donde el producto tiene un proveedor actual, el proveedor tiene una lista de precios con todos los productos en la última versión del precio de lista. La unidad de medida es copiada, la orden de compra y de venta pueden tener monedas diferentes. Una vez este proceso es corrido, es necesario sincronizar las Órdenes manualmente (e.g. En caso de líneas adicionales)</value>
  </row>
  <row id="194" trl="Y">
   <value column="Name" original="Import Business Partners">Importar Terceros</value>
@@ -487,8 +487,8 @@ Los parámetros son valores por defecto que se asignan a valores nulos que venga
   <value column="Help" original="To increase performance, iDempiere caches repeatedly used data. This process clears the local cache.">Para aumentar el desempeño iDempiere mantiene en memoria algunos datos usados. Este proceso despeja el cache local.</value>
  </row>
  <row id="206" trl="Y">
-  <value column="Name" original="Import Orders">Importa Ordenes</value>
-  <value column="Description" original="Import Orders">Importa Ordenes</value>
+  <value column="Name" original="Import Orders">Importa Órdenes</value>
+  <value column="Description" original="Import Orders">Importa Órdenes</value>
   <value column="Help" original="The Parameters are default values for null import record values, they do not overwrite any data.&#10;Note that only Prepare and Complete are valid document actions.">Los parámetros son valores prefijados para los valores nulos del expediente de la importación, ellos no sobreescriben ningunos datos.</value>
  </row>
  <row id="207" trl="Y">
@@ -611,7 +611,7 @@ The default Movement Date is today's date.]]></value>
  </row>
  <row id="229" trl="Y">
   <value column="Name" original="Project POs not Issued">Posición del Proyecto no Publicada</value>
-  <value column="Description" original="Lists Project Lines with generated Purchase Orders of a Work Order or Asset Project, which are not issued to the Project">Proyecte las líneas con las ordenes de compra generadas de una orden de trabajo o de un proyecto del activo, que no se publican al proyecto.</value>
+  <value column="Description" original="Lists Project Lines with generated Purchase Orders of a Work Order or Asset Project, which are not issued to the Project">Proyecte las líneas con las órdenes de compra generadas de una orden de trabajo o de un proyecto del activo, que no se publican al proyecto.</value>
   <value column="Help" original=""/>
  </row>
  <row id="230" trl="Y">
@@ -638,7 +638,7 @@ Crea los controles de período que falten por tipo de documento (usted debe abri
  <row id="234" trl="Y">
   <value column="Name" original="Project Margin (Work Order)">Margen del Proyecto (Orden de Trabajo)</value>
   <value column="Description" original="Work Order Project Lines (planned revenue) vs. Project Issues (costs)">El proyecto de la orden de trabajo alinea (rédito previsto) contra las ediciones del proyecto (costos)</value>
-  <value column="Help" original="The Project Margin Report for Work Orders compares the Project lines (planned revenue) against the Project issues (actual effort and costs). The margin amount is calculated by subtracting the costs (issue) from the revenue (line).&#10;The costs are in the currency of the Accounting Schema - the lines are in the currency of the price list of the project.">El informe del margen del proyecto para las ordenes de trabajo compara las líneas de proyecto (rédito previsto) contra las ediciones del proyecto (esfuerzo y los costos reales). La cantidad del margen es calculada restando los costos (edición) del redito (línea). 
+  <value column="Help" original="The Project Margin Report for Work Orders compares the Project lines (planned revenue) against the Project issues (actual effort and costs). The margin amount is calculated by subtracting the costs (issue) from the revenue (line).&#10;The costs are in the currency of the Accounting Schema - the lines are in the currency of the price list of the project.">El informe del margen del proyecto para las órdenes de trabajo compara las líneas de proyecto (rédito previsto) contra las ediciones del proyecto (esfuerzo y los costos reales). La cantidad del margen es calculada restando los costos (edición) del redito (línea). 
 Los costos estan en el actual esquema contable - Las líneas estan en la actual lista de precios del proyecto.</value>
  </row>
  <row id="235" trl="Y">
@@ -765,7 +765,7 @@ Nos ayudará, si usted permitirá publicar su uso en iDempiere. Nos pondremos en
   <value column="Help" original="Check that System and Document sequences are correct.  Run this process, if you get Duplicate Key error messages.">Compruebe que la secuencia del documento y del sistema estén correctas. Arranque este proceso, si usted consigue mensajes de error del artículo con valores identicos de validación.</value>
  </row>
  <row id="259" trl="Y">
-  <value column="Name" original="Create Orders">Crea Ordenes</value>
+  <value column="Name" original="Create Orders">Crea Órdenes</value>
   <value column="Description" original="Create orders based on Distribution List line items">Cree las órdenes basadas en la línea de artículos de la lista de distribución</value>
   <value column="Help" original="Please note that due to rounding, the total quantity of the order(s) is likely to be higher then the quantity entered.">Observe al hacer el redondeo, la cantidad total de orden(es) es probable ser más alto a la cantidad incorporada.
 </value>
@@ -824,11 +824,11 @@ Entonces las valuaciones de todas las respuestas de cantidad se adicionan a la v
  </row>
  <row id="270" trl="Y">
   <value column="Name" original="Open Requisitions">Requisiciones Abiertas</value>
-  <value column="Description" original="Detail Open Requisition Information">Detalle de la información de Ordenes Abiertas.</value>
+  <value column="Description" original="Detail Open Requisition Information">Detalle de la información de Órdenes Abiertas.</value>
   <value column="Help" original=""/>
  </row>
  <row id="271" trl="Y">
-  <value column="Name" original="Create Orders">Crea Ordenes</value>
+  <value column="Name" original="Create Orders">Crea Órdenes</value>
   <value column="Description" original="Create orders based on Distribution List line items">Crea Oden Basada en las líneas de la lista de distribución de los productos.</value>
   <value column="Help" original="Please note that due to rounding, the total quantity of the order(s) is likely to be higher then the quantity entered.">Observe al hacer el redondeo, la cantidad total de orden(es) es probable ser más alto a la cantidad incorporada.
 </value>
@@ -981,7 +981,7 @@ Si lo ejecuta para System, todos los roles de todas los grupo empresariales son 
  </row>
  <row id="301" trl="Y">
   <value column="Name" original="Delete">Borra</value>
-  <value column="Description" original="Delete PO Matching Record">Deshacer correspondencia de registros de Ordenes de Compra.</value>
+  <value column="Description" original="Delete PO Matching Record">Deshacer correspondencia de registros de Órdenes de Compra.</value>
   <value column="Help" original=""/>
  </row>
  <row id="302" trl="Y">
@@ -1053,8 +1053,8 @@ Si se selecciona una cuenta, el balance es calculado en base al  tipo de cuenta 
   <value column="Help" original="Check the payments and invoices of a business partner and checks the balances.">Verifica los pagos y las facturas del Tercero y verifica el balance</value>
  </row>
  <row id="315" trl="Y">
-  <value column="Name" original="Order Batch Process">Proceso de Ordenes en Lote</value>
-  <value column="Description" original="Process Orders in Batch">Proceso de Ordenes en Lote</value>
+  <value column="Name" original="Order Batch Process">Proceso de Órdenes en Lote</value>
+  <value column="Description" original="Process Orders in Batch">Proceso de Órdenes en Lote</value>
   <value column="Help" original="Based on the selection criteria, the orders are processed using the document action selected.  Make sure that the document action is valid for the documents.">Basado en el criterio de selección, Las órdenes son procesadas usando la acción del documento seleccionado. Asegúrese que la acción del documento sea valida en los documentos.</value>
  </row>
  <row id="316" trl="Y">
@@ -1267,7 +1267,7 @@ y Recibi/Línea o directamente para el producto.</value>
  <row id="50010" trl="Y">
   <value column="Name" original="Copy Role">Copiar Rol</value>
   <value column="Description" original="Copy Role">Copiar Rol</value>
-  <value column="Help" original="Copy role access records from one role to another.  The existing access records for the destination role will be deleted."/>
+  <value column="Help" original="Copy role access records from one role to another.  The existing access records for the destination role will be deleted.  This process can be executed just by advanced roles.">Copia los permisos de acceso de un rol a otro.  Los permisos de acceso existentes en el rol destino serán borrados y sobreescritos.  Este proceso sólo puede ser ejecutado por un rol avanzado.</value>
  </row>
  <row id="50011" trl="Y">
   <value column="Name" original="Copy Columns from Table">Copiar Columnas desde Tabla</value>
@@ -1448,8 +1448,8 @@ Este reporte contiene el lugar donde el producto debe ser hecho, los tiempos est
  <row id="53046" trl="Y">
   <value column="Name" original="Generate Movement">Generar Movimiento</value>
   <value column="Description" original="Generate and print Movement from open Distribution Orders">Generar e imprimir movimientos de la orden de distribución</value>
-  <value column="Help" original="Movement for open Distribution Orders are created based on the delivery rule of the Distribution Order and the relative order priority.  If a Promise Date is selected only orders up to (including) the date are selected.&lt;br&gt;&#10;If several Distribution Orders of a business partner have the same location, the Distribution orders can be consolidated into one Movement.&lt;br&gt;&#10;You can also include Distibution orders who have outstanding confirmations (e.g. ordered=10 - not confirmed movements=4 - would create a new movement of 6 if available)."><![CDATA[El movimiento para Ordenes de Distribución Movement es creado basado en las reglas de despacho de la Orden de Distribución y el orden de la prioridad relativa.  Si una fecha prometida es seleccionada solo se incluirán las ordenes hasta (inclusive) la fecha seleccionada.<br>
-Si varias Ordenes de Distribución de un tercero tiene la misma dirección, las órdenes de distribución pueden ser consolidadas en un movimiento.<br>
+  <value column="Help" original="Movement for open Distribution Orders are created based on the delivery rule of the Distribution Order and the relative order priority.  If a Promise Date is selected only orders up to (including) the date are selected.&lt;br&gt;&#10;If several Distribution Orders of a business partner have the same location, the Distribution orders can be consolidated into one Movement.&lt;br&gt;&#10;You can also include Distibution orders who have outstanding confirmations (e.g. ordered=10 - not confirmed movements=4 - would create a new movement of 6 if available)."><![CDATA[El movimiento para Órdenes de Distribución Movement es creado basado en las reglas de despacho de la Orden de Distribución y el orden de la prioridad relativa.  Si una fecha prometida es seleccionada solo se incluirán las órdenes hasta (inclusive) la fecha seleccionada.<br>
+Si varias Órdenes de Distribución de un tercero tiene la misma dirección, las órdenes de distribución pueden ser consolidadas en un movimiento.<br>
 Puede también incluir órdenes de distribución que tienen confirmaciones pendientes (ej: ordenado=10 - movimientos no confirmados=4 - creará un nuevo movimiento de 6 si está disponible).]]></value>
  </row>
  <row id="53048" trl="Y">
@@ -1706,11 +1706,11 @@ Costo Total LDM = Suma de cada Elemento de Costo]]></value>
   <value column="Help" original="Calculate Forecast">Calcular Pronóstico</value>
  </row>
  <row id="53150" trl="Y">
-  <value column="Name" original="Distribution Run Orders">Ordenes de Distribución de Ejecución</value>
+  <value column="Name" original="Distribution Run Orders">Órdenes de Distribución de Ejecución</value>
   <value column="Description" original="Create Distribution Run Orders based on Distribution List or The Quantity Demand the Distribution Order and redistribute the quantity into Distribution Plan line items">Crea órdenes de distribución de ejecución basadas en las listas de distribución y redistribuye la cantidad en las líneas de plan de distribución</value>
   <value column="Help" original="Based in DRP Demand is selected then the  redistribute the quantity is based in % of Demand&#10;&#10;Please note that due to rounding, the total quantity of the order(s) is likely to be higher then the quantity entered.&#10;&#10;Consolidate to one Document let the distribution in current Documents with ranges dates promised, if do not is selected then a new Order is generate.">Basado en la demanda DRP es seleccionado, luego la cantidad de redistribución es basada en % de Demanda
 
-Por favor note que debido al redondeo, la cantidad total de la(s) órden(es) es ligeramente mayor que la cantidad ingresada.
+Por favor note que debido al redondeo, la cantidad total de la(s) orden(es) es ligeramente mayor que la cantidad ingresada.
 
 Consolidar a un documento permite la distribución en documentos actuales con rango de fechas comprometida, si no es seleccionado entonces una nueva orden se genera.</value>
  </row>
@@ -2178,19 +2178,29 @@ Si planea usar todos los lenguajes entonces cree un lenguaje xx_XX y úselo como
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row trl="Y" uuid="396546ac-40f2-40e2-a84c-6b7e785de4cf">
+  <value column="Name" original="Create Withholding Reversal">Crear Reversión Retención</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row trl="Y" uuid="00e48c19-6679-413a-9c19-5b462595a529">
-  <value column="Name" original="Dian Export XML">Exportar a XML</value>
+  <value column="Name" original="Export XML">Exportar a XML</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
  <row trl="Y" uuid="374ae3a7-d7e5-4c30-9e6a-29e7fa46fa39">
-  <value column="Name" original="Dian Generate XML">Generar Medio XML</value>
+  <value column="Name" original="Generate XML">Generar Medio XML</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
  <row trl="Y" uuid="4fc2ddfd-ef58-40d2-94f6-69bfd27cdd05">
-  <value column="Name" original="Dian Process Content">Procesar Contenido</value>
+  <value column="Name" original="Process Content">Procesar Contenido</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="1c381973-b875-49d2-9741-d63b5056bc0f">
+  <value column="Name" original="Delete Lines to Reprocess">Borrar Líneas para Reproceso</value>
+  <value column="Description" original="Delete Schedule Lines to Reprocess">Borrar Líneas de Envío para Reproceso</value>
+  <value column="Help" original="This process deletes all the generated lines and reopen the schedule for reprocessing.  WARNING!  The deleted lines cannot be restored, change log is not preserved.">Este proceso borra todas las líneas generadas y reabre el envío para reproceso.  ¡ADVERTENCIA!  Las líneas borradas no pueden recuperarse, no se preserva auditoría.</value>
  </row>
 </idempiereTrl>

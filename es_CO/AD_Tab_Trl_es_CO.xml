@@ -385,7 +385,7 @@ Debe reiniciar su servidor de aplicaciones para que la mayoría de los cambios h
   <value column="Name" original="Product">Producto</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original="Define Product">Definir producto</value>
-  <value column="Help" original="The Product Tab defines each product and identifies it for use in price lists and orders. The Location is the default location when receiving the stored product.">La pestaña de producto define cada producto y lo identifica para su uso en lista de precios y ordenes.</value>
+  <value column="Help" original="The Product Tab defines each product and identifies it for use in price lists and orders. The Location is the default location when receiving the stored product.">La pestaña de producto define cada producto y lo identifica para su uso en lista de precios y órdenes.</value>
  </row>
  <row id="181" trl="Y">
   <value column="Name" original="Substitute">Sustituto</value>
@@ -531,7 +531,7 @@ Los registros contables son generados para un esquema contable, si el esquema es
   <value column="Name" original="Accounting">Contabilidad</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original="Define Accounting Parameters">Definir Parámetros Contables</value>
-  <value column="Help" original="The Accounting Tab defines the defaults to use when generating accounting transactions for orders and invoices which contain this product.">La pestaña de Contabilidad define los valores predeterminados que se usan cuando se generan transacciones contables para ordenes y facturas que contengan este producto.</value>
+  <value column="Help" original="The Accounting Tab defines the defaults to use when generating accounting transactions for orders and invoices which contain this product.">La pestaña de Contabilidad define los valores predeterminados que se usan cuando se generan transacciones contables para órdenes y facturas que contengan este producto.</value>
  </row>
  <row id="211" trl="Y">
   <value column="Name" original="Accounting">Contabilidad</value>
@@ -1516,7 +1516,7 @@ Nuevo precio de lista: Base =Lista, Recargo=0, Descuento=0, Redondeo]]></value>
  <row id="409" trl="Y">
   <value column="Name" original="Match PO">Asignar OC</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="View matched Purchase Orders">Ver ordenes de compra asignadas</value>
+  <value column="Description" original="View matched Purchase Orders">Ver órdenes de compra asignadas</value>
   <value column="Help" original="View detals of matched purchase order lines to invoice lines and material receipt lines"/>
  </row>
  <row id="410" trl="Y">
@@ -1577,7 +1577,7 @@ Nuevo precio de lista: Base =Lista, Recargo=0, Descuento=0, Redondeo]]></value>
   <value column="Name" original="Accounting">Contabilidad</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original="Define Accounting Parameters">Definir Parámetros Contables</value>
-  <value column="Help" original="The Accounting Tab defines the defaults to use when generating accounting transactions for orders and invoices which contain this Expense Type. Not all accounts apply.">La pestaña Contabilidad define los valores predeterminado que usa cuando se generan transacciones contables para ordenes y facturas las cuales contienen este tipo de gasto. No todas las cuentas aplican.</value>
+  <value column="Help" original="The Accounting Tab defines the defaults to use when generating accounting transactions for orders and invoices which contain this Expense Type. Not all accounts apply.">La pestaña Contabilidad define los valores predeterminado que usa cuando se generan transacciones contables para órdenes y facturas las cuales contienen este tipo de gasto. No todas las cuentas aplican.</value>
  </row>
  <row id="420" trl="Y">
   <value column="Name" original="Price">Precio</value>
@@ -1595,7 +1595,7 @@ Nuevo precio de lista: Base =Lista, Recargo=0, Descuento=0, Redondeo]]></value>
   <value column="Name" original="Accounting">Contabilidad</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original="Define Accounting Parameters">Definir Parámetros Contables</value>
-  <value column="Help" original="The Accounting Tab defines the defaults to use when generating accounting transactions for orders and invoices which contain this resource.  Not all accounts apply to resources.">La pestaña Contabilidad define los valores predeterminado que usa cuando se generan transacciones contables para ordenes y facturas las cuales contienen este recurso. No todas las cuentas aplican a recursos.</value>
+  <value column="Help" original="The Accounting Tab defines the defaults to use when generating accounting transactions for orders and invoices which contain this resource.  Not all accounts apply to resources.">La pestaña Contabilidad define los valores predeterminado que usa cuando se generan transacciones contables para órdenes y facturas las cuales contienen este recurso. No todas las cuentas aplican a recursos.</value>
  </row>
  <row id="423" trl="Y">
   <value column="Name" original="Print Color">Color de Impresión</value>
@@ -2113,7 +2113,7 @@ Observe por favor que hay tres campos de la organización: La organización del 
  <row id="512" trl="Y">
   <value column="Name" original="Order">Orden</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Import Orders">Importar Ordenes</value>
+  <value column="Description" original="Import Orders">Importar Órdenes</value>
   <value column="Help" original="You should supply the Document Type Name (or ID). The Document Type is on purpose not fully derived as it has too many consequences if it's wrong.  The best way is to set the Document Type Name as a Constant in your Import File Format or as an imported field in the file.">Usted debe proveer el nombre del tipo de documento (ó la identificación). El tipo de documento está en el propósito derivado no completamente pues tiene también muchas consecuencias si es incorrecto. La mejor manera es fijar el nombre del tipo de documento pues una constante en su formato del archivo de la importación o como campo importado en el archivo.</value>
  </row>
  <row id="513" trl="Y">
@@ -2345,9 +2345,9 @@ Observe por favor que hay tres campos de la organización: La organización del 
   <value column="Help" original=""/>
  </row>
  <row id="551" trl="Y">
-  <value column="Name" original="Partner Orders">Ordenes Terceros</value>
+  <value column="Name" original="Partner Orders">Órdenes Terceros</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Business Partner Orders">Ordenes de terceros</value>
+  <value column="Description" original="Business Partner Orders">Órdenes de terceros</value>
   <value column="Help" original=""/>
  </row>
  <row id="552" trl="Y">
@@ -2423,7 +2423,7 @@ Observe por favor que hay tres campos de la organización: La organización del 
   <value column="Help" original=""/>
  </row>
  <row id="564" trl="Y">
-  <value column="Name" original="Orders">Ordenes</value>
+  <value column="Name" original="Orders">Órdenes</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original="All Orders where the Agent &quot;owns&quot; the Order, the Business Partner or the Product">Toda la línea de orden donde el agente "Posee" la orden, el tercero o el producto</value>
   <value column="Help" original=""/>
@@ -3491,7 +3491,7 @@ Indirecto: Usuarios con rol, suscriptores de las actualizaciones para la categor
   <value column="Name" original="Replenish">Reabastecimiento</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original="Define Product Replenishment">Define Reabastecimiento de Producto</value>
-  <value column="Help" original="The Replenishment Tab defines the type of replenishment quantities.  This is used for automated ordering.  If you select a custom replenishment type, you need to create a class implementing org.compiere.util.ReplenishInterface and set that on warehouse level.">La pestaña Reabastecimiento define el tipo de cantidad reabastecimiento. Esto es empleado para ordenes automatizadas. Si seleccionó tipo reabastecimiento personalizado, debe realizar una implementación de clase org.compiere.util.ReplenishInterface y fijarla al nivel de almacén.</value>
+  <value column="Help" original="The Replenishment Tab defines the type of replenishment quantities.  This is used for automated ordering.  If you select a custom replenishment type, you need to create a class implementing org.compiere.util.ReplenishInterface and set that on warehouse level.">La pestaña Reabastecimiento define el tipo de cantidad reabastecimiento. Esto es empleado para órdenes automatizadas. Si seleccionó tipo reabastecimiento personalizado, debe realizar una implementación de clase org.compiere.util.ReplenishInterface y fijarla al nivel de almacén.</value>
  </row>
  <row id="748" trl="Y">
   <value column="Name" original="Cost Details">Detalle de Costo</value>
@@ -3617,9 +3617,9 @@ Usted puede crear manualmente Líneas de Ajuste.</value>
 Segmentos deseados de cuenta, Organización, Cuentas, Productos pueden tener alguna jerarquía para acomodar diferentes vistas sobre el negocio.</value>
  </row>
  <row id="767" trl="Y">
-  <value column="Name" original="Purchase Orders">Ordenes de Compra</value>
+  <value column="Name" original="Purchase Orders">Órdenes de Compra</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Related Purchase Orders">Ordenes de Compra Relacionadas</value>
+  <value column="Description" original="Related Purchase Orders">Órdenes de Compra Relacionadas</value>
   <value column="Help" original=""/>
  </row>
  <row id="768" trl="Y">
@@ -3632,7 +3632,7 @@ Segmentos deseados de cuenta, Organización, Cuentas, Productos pueden tener alg
   <value column="Name" original="Budget Control">Control de Presupuesto</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original="Maintain Budget Controls">Mantener Control de Presupuesto</value>
-  <value column="Help" original="Budget Control allows you to restrict the use of expenditures, commitments (Purchase Orders) and reservations (Requisitions). If defined, you mey not be able to approve Requisitions, Purchse Orders, or AP Invoices.">Control de Presupuesto le èr,ite restringir el empleo de gastos, Compromisos (Ordenes de Compra) y reservados (Requisiciones). Si definió, no podrá aprobar Requisiciones, Ordenes de Comprao Facturas CxP.</value>
+  <value column="Help" original="Budget Control allows you to restrict the use of expenditures, commitments (Purchase Orders) and reservations (Requisitions). If defined, you mey not be able to approve Requisitions, Purchse Orders, or AP Invoices.">Control de Presupuesto le èr,ite restringir el empleo de gastos, Compromisos (Órdenes de Compra) y reservados (Requisiciones). Si definió, no podrá aprobar Requisiciones, Órdenes de Comprao Facturas CxP.</value>
  </row>
  <row id="770" trl="Y">
   <value column="Name" original="Fund">Fondo</value>
@@ -4000,7 +4000,7 @@ La medida debe soportar la información, sino es ignorada.</value>
   <value column="Name" original="List Role">Lista de roles</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original="Web Access for Role">Acceso Web para Rol</value>
-  <value column="Help" original="Maintain the list of Roles with Access to this profile.">Mantener la lista de roles con acceso a este perfil.</value>
+  <value column="Help" original="Maintain the list of Roles with Access to this profile.">Mantener la lista de roles con acceso a este rol.</value>
  </row>
  <row id="835" trl="Y">
   <value column="Name" original="List BPartner Group">Lista de grupo de terceros.</value>
@@ -4270,7 +4270,7 @@ La medida debe soportar la información, sino es ignorada.</value>
   <value column="Name" original="Transition">Transición</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original="Workflow Node Transition">Transición Nodo Flujo Trabajo</value>
-  <value column="Help" original="The Next Nodes Tab defines the order or Nodes or Steps in a Workflow.">La pestaña siguiente nodo define el órden o nodos o pasos en un flujo de trabajo.</value>
+  <value column="Help" original="The Next Nodes Tab defines the order or Nodes or Steps in a Workflow.">La pestaña siguiente nodo define el orden o nodos o pasos en un flujo de trabajo.</value>
  </row>
  <row id="53027" trl="Y">
   <value column="Name" original="Manufacturing Workflows">Flujos Trabajo Manufactura</value>
@@ -4443,8 +4443,8 @@ La medida debe soportar la información, sino es ignorada.</value>
  <row id="53055" trl="Y">
   <value column="Name" original="Distribution Order">Orden</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Distribution Order allow create Order inter warehouse to supply a demand ">Orden de Distribución permite crear ordenes entre almacenes para suplir la demanda</value>
-  <value column="Help" original="Distribution Order allow create Order inter warehouse to supply a demand ">Orden de Distribución permite crear ordenes entre almacenes para suplir la demanda</value>
+  <value column="Description" original="Distribution Order allow create Order inter warehouse to supply a demand ">Orden de Distribución permite crear órdenes entre almacenes para suplir la demanda</value>
+  <value column="Help" original="Distribution Order allow create Order inter warehouse to supply a demand ">Orden de Distribución permite crear órdenes entre almacenes para suplir la demanda</value>
  </row>
  <row id="53056" trl="Y">
   <value column="Name" original="Window">Ventana</value>
@@ -5565,13 +5565,13 @@ Imprimiendo:
  <row id="53374" trl="Y">
   <value column="Name" original="Payment Schedule">Programa de Pagos</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Order Payment Schedule">Programa de Pagos de Ordenes</value>
+  <value column="Description" original="Order Payment Schedule">Programa de Pagos de Órdenes</value>
   <value column="Help" original=""/>
  </row>
  <row id="53375" trl="Y">
   <value column="Name" original="Payment Schedule">Programa de Pagos</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Order Payment Schedule">Programa de Pagos de Ordenes Schedule</value>
+  <value column="Description" original="Order Payment Schedule">Programa de Pagos de Órdenes</value>
   <value column="Help" original=""/>
  </row>
  <row id="53376" trl="Y">
@@ -5647,13 +5647,13 @@ Imprimiendo:
   <value column="Help" original=""/>
  </row>
  <row id="53435" trl="Y">
-  <value column="Name" original="Quote/Order">Cotización/Órden</value>
+  <value column="Name" original="Quote/Order">Cotización/Orden</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
  <row id="53436" trl="Y">
-  <value column="Name" original="Order Line">Línea Órden</value>
+  <value column="Name" original="Order Line">Línea Orden</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
@@ -6306,32 +6306,20 @@ Imprimiendo:
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row trl="Y" uuid="132e77a4-df8e-41ad-92ec-3be55dce1eb9">
-  <value column="Name" original="Conversion">Tabla Conversión</value>
+ <row trl="Y" uuid="2cf7a3e2-e8bf-4e7e-a36e-2d021fbaccc0">
+  <value column="Name" original="Tax Payer Type">Tipo Contribuyente</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row trl="Y" uuid="89b90e65-21a1-4923-8355-a0157f16a03f">
-  <value column="Name" original="Code">Código</value>
+ <row trl="Y" uuid="76163303-fcae-43fb-9725-34f87f24930b">
+  <value column="Name" original="ISIC">CIIU</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row trl="Y" uuid="9defbd8f-5ca5-4f70-b4d9-5e9ff499e231">
-  <value column="Name" original="XML Header">Encabezado XML</value>
-  <value column="CommitWarning" original=""/>
-  <value column="Description" original=""/>
-  <value column="Help" original=""/>
- </row>
- <row trl="Y" uuid="6c07dadb-2819-4885-9940-f787e605837c">
-  <value column="Name" original="XML Content">Contenido XML</value>
-  <value column="CommitWarning" original=""/>
-  <value column="Description" original=""/>
-  <value column="Help" original=""/>
- </row>
- <row trl="Y" uuid="bf52e47e-78de-49c6-b30c-ff870946e4f5">
-  <value column="Name" original="XML Print Label">Rótulo XML</value>
+ <row trl="Y" uuid="82114add-9cff-4495-ae9f-39e78f896693">
+  <value column="Name" original="Withholding Category">Categoría Retención</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
@@ -6366,6 +6354,36 @@ Imprimiendo:
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row trl="Y" uuid="132e77a4-df8e-41ad-92ec-3be55dce1eb9">
+  <value column="Name" original="Conversion">Tabla Conversión</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="89b90e65-21a1-4923-8355-a0157f16a03f">
+  <value column="Name" original="Code">Código</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="9defbd8f-5ca5-4f70-b4d9-5e9ff499e231">
+  <value column="Name" original="XML Header">Encabezado XML</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="6c07dadb-2819-4885-9940-f787e605837c">
+  <value column="Name" original="XML Content">Contenido XML</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="bf52e47e-78de-49c6-b30c-ff870946e4f5">
+  <value column="Name" original="XML Print Label">Rótulo XML</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row trl="Y" uuid="a43e641a-5eb9-40e7-8a3c-173d93a91a76">
   <value column="Name" original="Send Schedule">Programación Envío</value>
   <value column="CommitWarning" original=""/>
@@ -6376,6 +6394,18 @@ Imprimiendo:
   <value column="Name" original="Send Schedule Line">Línea Envío</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="3b64da71-8018-43c1-9887-f0ab31e10c8f">
+  <value column="Name" original="Printed Form Control">Control de forma impresa</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Printed Form Control">Control de forma impresa</value>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="92bbb6eb-855e-4652-a2f6-dc1ca1e59ca2">
+  <value column="Name" original="Printed Form Control">Control de forma impresa</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Printed Form Control">Contro de forma impresa</value>
   <value column="Help" original=""/>
  </row>
 </idempiereTrl>

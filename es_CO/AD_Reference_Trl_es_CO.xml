@@ -394,7 +394,7 @@
  </row>
  <row id="148" trl="Y">
   <value column="Name" original="C_DocType SubTypeSO">C_DocType SubTypeSO</value>
-  <value column="Description" original="Order Types list">Lista de Tipos de Ordenes</value>
+  <value column="Description" original="Order Types list">Lista de Tipos de Órdenes</value>
   <value column="Help" original=""/>
  </row>
  <row id="149" trl="Y">
@@ -2522,6 +2522,11 @@
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row trl="Y" uuid="9b146c1c-bf20-4f00-b0f0-ca7df61d037c">
+  <value column="Name" original="LCO_TaxIdType.IsDigitChecked">LCO_TaxIdType.IsDigitChecked</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row trl="Y" uuid="4d3708dd-50f2-485b-8bda-934768e94d43">
   <value column="Name" original="LCO_ISIC_ID">LCO_ISIC_ID</value>
   <value column="Description" original=""/>
@@ -2547,11 +2552,6 @@
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row trl="Y" uuid="56c2901e-a29b-43a8-a47e-dcce88af7cf9">
-  <value column="Name" original="LCO_DIAN_Concept">LCO_DIAN_Concept</value>
-  <value column="Description" original="DIAN Concept">DIAN Concept</value>
-  <value column="Help" original=""/>
- </row>
  <row trl="Y" uuid="7e6fb2b1-e0b1-42f7-8962-449ff31e63e2">
   <value column="Name" original="LCO_XMLPrintLabel">LCO_XMLPrintLabel</value>
   <value column="Description" original="XML Print Label">XML Print Label</value>
@@ -2562,9 +2562,19 @@
   <value column="Description" original="DIAN Format">DIAN Format</value>
   <value column="Help" original=""/>
  </row>
+ <row trl="Y" uuid="56c2901e-a29b-43a8-a47e-dcce88af7cf9">
+  <value column="Name" original="LCO_DIAN_Concept">LCO_DIAN_Concept</value>
+  <value column="Description" original="DIAN Concept">DIAN Concept</value>
+  <value column="Help" original=""/>
+ </row>
  <row trl="Y" uuid="9cef3a71-20b7-4be5-b61b-62ea286932e9">
   <value column="Name" original="LCO_SendConceptCode">LCO_SendConceptCode</value>
   <value column="Description" original="Send Concept Code">Send Concept Code</value>
+  <value column="Help" original=""/>
+ </row>
+ <row trl="Y" uuid="e0fba191-c2c2-4514-99c1-fedc614c6710">
+  <value column="Name" original="LCO_PrintedFormControl_ID">LCO_PrintedFormControl_ID</value>
+  <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
 </idempiereTrl>

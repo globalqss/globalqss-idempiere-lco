@@ -67,6 +67,11 @@
   <value column="Description" original="Condition Value">Valor de la Condición</value>
   <value column="Help" original=""/>
  </row>
+ <row id="10769" trl="Y">
+  <value column="Name" original="Schema Type">Tipo de Descuento</value>
+  <value column="Description" original="Type of trade schema calculation">Tipo de cálculo del descuento comercial</value>
+  <value column="Help" original="Type of procedure used to calculate the trade schema percentage">Tipo de procedimiento a ser usado para calcular el porcentaje de descuento comercial</value>
+ </row>
  <row id="10886" trl="Y">
   <value column="Name" original="Overwrite Project">Sobreescribe Proyecto</value>
   <value column="Description" original="Overwrite the account segment Project with the value specified">Sobreescribe la porción de proyecto en la cuenta con el valor especificado</value>
@@ -727,8 +732,8 @@ Las fechas Válido desde y Válido hasta indican el período de tiempo a utiliza
   <value column="Help" original="The Inventory Cost Adjustment document allows user to enter cost adjustment for products">El ajuste costo inventario le permite ingresar ajustes de costos a productos.</value>
  </row>
  <row id="202443" trl="Y">
-  <value column="Name" original="Purchase Order Line">Línea Órden Compra</value>
-  <value column="Description" original="Purchase Order Line">Línea Órden Compra</value>
-  <value column="Help" original="The Purchase Order Line is a unique identifier for a line in an order."></value>
+  <value column="Name" original="Purchase Order Line">Línea Orden Compra</value>
+  <value column="Description" original="Purchase Order Line">Línea Orden Compra</value>
+  <value column="Help" original="The Purchase Order Line is a unique identifier for a line in an order.">La línea de orden de compra es un identificador único para una línea en una orden</value>
  </row>
 </idempiereTrl>

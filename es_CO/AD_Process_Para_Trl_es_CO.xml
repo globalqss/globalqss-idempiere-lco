@@ -247,6 +247,11 @@
   <value column="Description" original="Overwrite existing production lines">Sobreescribe las líneas de producción existentes</value>
   <value column="Help" original=""/>
  </row>
+ <row id="53517" trl="Y">
+  <value column="Name" original="Production Quantity">Cantidad a Producir</value>
+  <value column="Description" original="Quantity of products to produce">Cantidad del producto a producir</value>
+  <value column="Help" original="The Production Quantity identifies the number of products to produce">La Cantidad de Producción identifica el número de productos a producir</value>
+ </row>
  <row id="53526" trl="Y">
   <value column="Name" original="Is Kanban">Es Kanban</value>
   <value column="Description" original=""/>
@@ -285,6 +290,16 @@
  <row id="200071" trl="Y">
   <value column="Name" original="Document Type">Tipo Documento</value>
   <value column="Description" original="Inventory Cost Adjustment Document Type">Tipo Documento Ajuste Costo Inventario</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200074" trl="Y">
+  <value column="Name" original="Administrative User Email">Correo Usuario Administrador</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200075" trl="Y">
+  <value column="Name" original="Normal User Email">Correo Usuario Normal</value>
+  <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
 </idempiereTrl>

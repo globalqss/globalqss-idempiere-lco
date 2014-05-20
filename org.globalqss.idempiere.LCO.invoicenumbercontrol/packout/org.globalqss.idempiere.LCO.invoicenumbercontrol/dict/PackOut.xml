@@ -285,13 +285,13 @@
                 <PO_Description/>
                 <PO_Help/>
                 <PO_PrintName/>
-                <Name>Printed Form Control</Name>
+                <Name>Control Forma Impresa</Name>
                 <Description/>
                 <PrintName trim="false">Control Forma Impresa</PrintName>
                 <PO_Name/>
                 <AD_Language>es_CO</AD_Language>
                 <IsActive>true</IsActive>
-                <IsTranslated>false</IsTranslated>
+                <IsTranslated>true</IsTranslated>
             </AD_Element_Trl>
         </AD_Element>
         <AD_Column type="table">
@@ -951,13 +951,13 @@ There are two reasons for de-activating and not deleting records:
                 <PO_Description/>
                 <PO_Help/>
                 <PO_PrintName/>
-                <Name>Authorization No</Name>
+                <Name>No. Resolución</Name>
                 <Description/>
                 <PrintName trim="false">No. Resolución</PrintName>
                 <PO_Name/>
                 <AD_Language>es_CO</AD_Language>
                 <IsActive>true</IsActive>
-                <IsTranslated>false</IsTranslated>
+                <IsTranslated>true</IsTranslated>
             </AD_Element_Trl>
         </AD_Element>
         <AD_Column type="table">
@@ -1076,13 +1076,13 @@ There are two reasons for de-activating and not deleting records:
                 <PO_Description/>
                 <PO_Help/>
                 <PO_PrintName/>
-                <Name>Valid until</Name>
+                <Name>Válida Hasta</Name>
                 <Description/>
                 <PrintName trim="false">Válida Hasta</PrintName>
                 <PO_Name/>
                 <AD_Language>es_CO</AD_Language>
                 <IsActive>true</IsActive>
-                <IsTranslated>false</IsTranslated>
+                <IsTranslated>true</IsTranslated>
             </AD_Element_Trl>
         </AD_Element>
         <AD_Column type="table">
