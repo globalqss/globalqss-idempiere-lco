@@ -19,10 +19,7 @@ package org.globalqss.model;
 
 import java.sql.ResultSet;
 import java.util.Properties;
-
-import org.compiere.model.I_Persistent;
-import org.compiere.model.PO;
-import org.compiere.model.POInfo;
+import org.compiere.model.*;
 
 /** Generated Model for SRI_AccessCode
  *  @author Adempiere (generated) 
@@ -33,7 +30,7 @@ public class X_SRI_AccessCode extends PO implements I_SRI_AccessCode, I_Persiste
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20140429L;
+	private static final long serialVersionUID = 20140519L;
 
     /** Standard Constructor */
     public X_SRI_AccessCode (Properties ctx, int SRI_AccessCode_ID, String trxName)
@@ -44,7 +41,6 @@ public class X_SRI_AccessCode extends PO implements I_SRI_AccessCode, I_Persiste
 			setCodeAccessType (null);
 			setEnvType (null);
 			setIsUsed (false);
-			setOldValue (null);
 			setSRI_AccessCode_ID (0);
 			setSRI_ShortDocType (null);
 			setValue (null);
@@ -212,7 +208,7 @@ public class X_SRI_AccessCode extends PO implements I_SRI_AccessCode, I_Persiste
 	  */
 	public void setValue (String Value)
 	{
-		set_Value (COLUMNNAME_Value, Value);
+		set_ValueNoCheck (COLUMNNAME_Value, Value);
 	}
 
 	/** Get Search Key.

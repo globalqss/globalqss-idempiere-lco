@@ -112,7 +112,7 @@ public class LEC_FE_Validator implements ModelValidator
 		log.info(po.get_TableName() + " Timing: "+timing);
 		String msg;
 
-		// after completing invoice process electronic invoice
+		// after completing SO invoice process electronic invoice
 		if (po.get_TableName().equals(MInvoice.Table_Name) && timing == TIMING_AFTER_COMPLETE) {
 			MInvoice invoice = (MInvoice)po;
 			if (invoice.isSOTrx()) {
