@@ -19,10 +19,7 @@ package org.globalqss.model;
 
 import java.sql.ResultSet;
 import java.util.Properties;
-
-import org.compiere.model.I_Persistent;
-import org.compiere.model.PO;
-import org.compiere.model.POInfo;
+import org.compiere.model.*;
 
 /** Generated Model for I_SRI_AccessCode
  *  @author Adempiere (generated) 
@@ -33,7 +30,7 @@ public class X_I_SRI_AccessCode extends PO implements I_I_SRI_AccessCode, I_Pers
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20140429L;
+	private static final long serialVersionUID = 20140519L;
 
     /** Standard Constructor */
     public X_I_SRI_AccessCode (Properties ctx, int I_SRI_AccessCode_ID, String trxName)
