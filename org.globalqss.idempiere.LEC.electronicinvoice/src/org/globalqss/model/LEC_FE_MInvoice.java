@@ -32,6 +32,7 @@ import org.compiere.model.MTable;
 import org.compiere.util.AdempiereUserError;
 import org.compiere.util.DB;
 import org.compiere.util.Env;
+import org.compiere.util.Msg;
 import org.xml.sax.helpers.AttributesImpl;
 
 import org.globalqss.util.LEC_FE_Utils;
@@ -99,6 +100,8 @@ public class LEC_FE_MInvoice extends MInvoice
 		
 		if (oi.get_ValueAsString("TaxID").equals(""))
 			throw new AdempiereUserError("No existe definicion OrgInfo.Documento: " + oi.toString());
+		if (oi.get_ValueAsString("SRI_DocumentCode").equals(""))
+			throw new AdempiereUserError("No existe definicion OrgInfo.DocumentCode: " + oi.toString());
 		int c_bpartner_id = DB.getSQLValue(get_TrxName(), "SELECT C_BPartner_ID FROM C_BPartner WHERE AD_Client_ID = ? AND TaxId = ? ", getAD_Client_ID(), oi.get_ValueAsString("TaxID"));
 		if (c_bpartner_id == -1)
 			throw new AdempiereUserError("No existe BP relacioando a OrgInfo.Documento: " + oi.get_ValueAsString("TaxID"));
@@ -128,18 +131,22 @@ public class LEC_FE_MInvoice extends MInvoice
 			throw new AdempiereUserError("No existe definicion SRI_ShortDocType: " + dt.toString());
 		
 		m_accesscode = ""
-			+ String.format("%8s", LEC_FE_Utils.getDate(getDateInvoiced(),8))// fechaEmision
+			+ String.format("%8s", LEC_FE_Utils.getDate(getDateInvoiced(),8))	// fechaEmision
 			+ String.format("%2s", dt.get_ValueAsString("SRI_ShortDocType"))	// codDoc
-			+ String.format("%13s", bpe.getTaxID())						// ruc
-			+ String.format("%1s", m_tipoambiente)						// ambiente
-			+ String.format("%3s", oi.get_ValueAsString("SRI_OrgCode"))	// serie / estab
-			+ String.format("%3s", oi.get_ValueAsString("SRI_StoreCode"))	// serie / ptoEmi
-			+ String.format("%9s", "00" + getDocumentNo().substring(8))	// numero / secuencial
+			+ String.format("%13s", (LEC_FE_Utils.fillString(13 - (LEC_FE_Utils.cutString(bpe.getTaxID(), 13)).length(), '0'))
+				+ LEC_FE_Utils.cutString(bpe.getTaxID(),13))					// ruc
+			+ String.format("%1s", m_tipoambiente)								// ambiente
+			+ String.format("%3s", oi.get_ValueAsString("SRI_OrgCode"))			// serie / estab
+			+ String.format("%3s", oi.get_ValueAsString("SRI_StoreCode"))		// serie / ptoEmi
+			+ String.format("%9s", (LEC_FE_Utils.fillString(9 - (LEC_FE_Utils.cutString(getDocumentNo().substring(8), 9)).length(), '0'))
+				+ LEC_FE_Utils.cutString(getDocumentNo().substring(8),9))		// numero / secuencial
 			+ String.format("%8s", oi.get_ValueAsString("SRI_DocumentCode"))							// codigo
-			+ String.format("%1s", m_tipoemision);						// tipoEmision
-		// TODO LEC_TaxIDDigit.modulo String valida, Integer[] coeficientes, int mod
+			+ String.format("%1s", m_tipoemision);								// tipoEmision
+
+		//m_accesscode = "030520140117681525600012001777002193394030520141"; // "03052014" =1 // Sample
 		m_accesscode = m_accesscode
-			+ String.format("%1s", LEC_FE_Utils.calculateDigitSri(m_accesscode));	// digito
+			//+ String.format("%1s", LEC_FE_Utils.calculateDigitSri(m_accesscode, "03052014"));	// digito
+			+ String.format("%1s", LEC_FE_Utils.calculateDigitSri(m_accesscode, oi.get_ValueAsString("SRI_DocumentCode")));	// digito
 		
 		// TODO IsUseContingency
 		// if (IsUseContingency) m_tipoclaveacceso = "2";
@@ -224,7 +231,8 @@ public class LEC_FE_MInvoice extends MInvoice
 			// nombreComercial ,Alfanumerico Max 300
 			addHeaderElement(mmDoc, "nombreComercial", bpe.getName2(), atts);
 			// ruc ,Numerico13
-			addHeaderElement(mmDoc, "ruc", bpe.getTaxID(), atts);
+			addHeaderElement(mmDoc, "ruc", (LEC_FE_Utils.fillString(13 - (LEC_FE_Utils.cutString(bpe.getTaxID(), 13)).length(), '0'))
+				+ LEC_FE_Utils.cutString(bpe.getTaxID(),13), atts);
 			// claveAcceso ,Numérico49
 			addHeaderElement(mmDoc, "claveAcceso", a.getValue(), atts);
 			// codDoc ,Numerico2
@@ -234,7 +242,8 @@ public class LEC_FE_MInvoice extends MInvoice
 			// ptoEmi ,Numerico3
 			addHeaderElement(mmDoc, "ptoEmi", oi.get_ValueAsString("SRI_StoreCode"), atts);
 			//secuencial ,Numerico9
-			addHeaderElement(mmDoc, "secuencial", "00" + getDocumentNo().substring(8), atts);
+			addHeaderElement(mmDoc, "secuencial", (LEC_FE_Utils.fillString(9 - (LEC_FE_Utils.cutString(getDocumentNo().substring(8), 9)).length(), '0'))
+				+ LEC_FE_Utils.cutString(getDocumentNo().substring(8),9), atts);
 			// dirMatriz ,Alfanumerico Max 300
 			addHeaderElement(mmDoc, "dirMatriz", "TODO", atts);
 		mmDoc.endElement("","","infoTributaria");
@@ -255,7 +264,8 @@ public class LEC_FE_MInvoice extends MInvoice
 			// Alfanumerico Max 300
 			addHeaderElement(mmDoc, "razonSocialComprador", m_razonsocial, atts);
 			// Numerico13
-			addHeaderElement(mmDoc, "identificacionComprador", bp.getTaxID(), atts);
+			addHeaderElement(mmDoc, "identificacionComprador", (LEC_FE_Utils.fillString(13 - (LEC_FE_Utils.cutString(bp.getTaxID(), 13)).length(), '0'))
+					+ LEC_FE_Utils.cutString(bp.getTaxID(),13), atts);
 			// Numerico Max 14
 			addHeaderElement(mmDoc, "totalSinImpuestos", this.getTotalLines().toString(), atts);
 			// Numerico MAx 14
@@ -319,6 +329,8 @@ public class LEC_FE_MInvoice extends MInvoice
 		catch (SQLException e)
 		{
 			log.log(Level.SEVERE, sql.toString(), e);
+			msg = "Error SQL: " + sql.toString();
+			throw new AdempiereException(msg);
 		}
 		
 		mmDoc.endElement("","","detalles");
@@ -381,6 +393,8 @@ public class LEC_FE_MInvoice extends MInvoice
 		catch (Exception e)
 		{
 			log.severe("No se pudo craer XML - " + e.getMessage());
+			msg = "No se pudo craer XML - " + e.getMessage();
+			throw new AdempiereException(msg);
 		}
 		
 		log.warning("@SRI_FileGenerated@ -> " + file_name);
