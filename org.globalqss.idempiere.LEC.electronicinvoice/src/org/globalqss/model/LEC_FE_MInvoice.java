@@ -78,6 +78,7 @@ public class LEC_FE_MInvoice extends MInvoice
 		{
 			
 		isOnTesting=MSysConfig.getBooleanValue("QSSLEC_FE_EnPruebas", false, getAD_Client_ID());
+		
 		if (isOnTesting) m_tipoambiente = "1";
 				
 		isAttachXML=MSysConfig.getBooleanValue("QSSLEC_FE_DebugEnvioRecepcion", false, getAD_Client_ID());
@@ -105,12 +106,6 @@ public class LEC_FE_MInvoice extends MInvoice
 		int c_bpartner_id = DB.getSQLValue(get_TrxName(), "SELECT C_BPartner_ID FROM C_BPartner WHERE AD_Client_ID = ? AND TaxId = ? ", getAD_Client_ID(), oi.get_ValueAsString("TaxID"));
 		if (c_bpartner_id == -1)
 			throw new AdempiereUserError("No existe BP relacioando a OrgInfo.Documento: " + oi.get_ValueAsString("TaxID"));
-		if (oi.get_ValueAsString("SRI_IsTaxPayer").equals(""))
-			throw new AdempiereUserError("No existe definicion  OrgInfo.SRI_IsTaxPayer: " + oi.toString());
-		if (oi.get_ValueAsString("SRI_TaxPayerCode").equals(""))
-			throw new AdempiereUserError("No existe definicion  OrgInfo.SRI_TaxPayerCode: " + oi.toString());
-		if (oi.get_ValueAsString("SRI_IsKeepAccounting").equals(""))
-			throw new AdempiereUserError("No existe definicion  OrgInfo.SRI_IsKeepAccounting: " + oi.toString());
 		if (oi.get_ValueAsString("SRI_OrgCode").equals(""))
 			throw new AdempiereUserError("No existe definicion  OrgInfo.SRI_OrgCode: " + oi.toString());
 		if (oi.get_ValueAsString("SRI_StoreCode").equals(""))
@@ -118,14 +113,19 @@ public class LEC_FE_MInvoice extends MInvoice
 		if (oi.get_ValueAsString("SRI_DocumentCode").equals(""))
 			throw new AdempiereUserError("No existe definicion  OrgInfo.SRI_DocumentCode: " + oi.toString());
 		
-		if ( (Boolean) oi.get_Value("SRI_IsKeepAccounting"))
-			m_obligadocontabilidad = "SI";
-	
 		MBPartner bpe = new MBPartner(getCtx(), c_bpartner_id, get_TrxName());
 		
 		// Comprador
 		MBPartner bp = new MBPartner(getCtx(), getC_BPartner_ID(), get_TrxName());
 		if (!isOnTesting) m_razonsocial = bp.getName();
+		
+		if ( (Boolean) bp.get_Value("SRI_IsKeepAccounting"))
+			m_obligadocontabilidad = "SI";
+		
+		if (bp.get_ValueAsString("SRI_IsKeepAccounting").equals(""))
+			throw new AdempiereUserError("No existe definicion  Customer.SRI_IsKeepAccounting: " + bp.toString());
+		//if (bp.get_ValueAsString("SRI_TaxPayerCode").equals(""))
+		//	throw new AdempiereUserError("No existe definicion  Customer.SRI_TaxPayerCode: " + bp.toString());
 		
 		if (dt.get_ValueAsString("SRI_ShortDocType") == null)
 			throw new AdempiereUserError("No existe definicion SRI_ShortDocType: " + dt.toString());
@@ -139,14 +139,12 @@ public class LEC_FE_MInvoice extends MInvoice
 			+ String.format("%3s", oi.get_ValueAsString("SRI_OrgCode"))			// serie / estab
 			+ String.format("%3s", oi.get_ValueAsString("SRI_StoreCode"))		// serie / ptoEmi
 			+ String.format("%9s", (LEC_FE_Utils.fillString(9 - (LEC_FE_Utils.cutString(getDocumentNo().substring(8), 9)).length(), '0'))
-				+ LEC_FE_Utils.cutString(getDocumentNo().substring(8),9))		// numero / secuencial
+				+ LEC_FE_Utils.cutString(getDocumentNo().substring(getDocumentNo().lastIndexOf('-')+1),9))// numero / secuencial
 			+ String.format("%8s", oi.get_ValueAsString("SRI_DocumentCode"))							// codigo
 			+ String.format("%1s", m_tipoemision);								// tipoEmision
 
-		//m_accesscode = "030520140117681525600012001777002193394030520141"; // "03052014" =1 // Sample
-		m_accesscode = m_accesscode
-			//+ String.format("%1s", LEC_FE_Utils.calculateDigitSri(m_accesscode, "03052014"));	// digito
-			+ String.format("%1s", LEC_FE_Utils.calculateDigitSri(m_accesscode, oi.get_ValueAsString("SRI_DocumentCode")));	// digito
+			m_accesscode = m_accesscode
+				+ String.format("%1s", LEC_FE_Utils.calculateDigitSri(m_accesscode, oi.get_ValueAsString("SRI_DocumentCode")));	// digito
 		
 		// TODO IsUseContingency
 		// if (IsUseContingency) m_tipoclaveacceso = "2";
@@ -182,8 +180,8 @@ public class LEC_FE_MInvoice extends MInvoice
 			throw new AdempiereException(msg);
 		}
 		
-		// set_Value("SRI_Authorisation_ID", a.get_ID());
-		// this.saveEx();	// TODO Revieme
+		set_Value("SRI_Authorisation_ID", a.get_ID());
+		this.saveEx();	// TODO Revieme
 					
 		String xmlFileName = "SRI_" + m_accesscode + ".xml";
 	
@@ -242,19 +240,20 @@ public class LEC_FE_MInvoice extends MInvoice
 			// ptoEmi ,Numerico3
 			addHeaderElement(mmDoc, "ptoEmi", oi.get_ValueAsString("SRI_StoreCode"), atts);
 			//secuencial ,Numerico9
-			addHeaderElement(mmDoc, "secuencial", (LEC_FE_Utils.fillString(9 - (LEC_FE_Utils.cutString(getDocumentNo().substring(8), 9)).length(), '0'))
+			addHeaderElement(mmDoc, "secuencial", (LEC_FE_Utils.fillString(9 - (LEC_FE_Utils.cutString(getDocumentNo().substring(getDocumentNo().lastIndexOf('-')+1), 9)).length(), '0'))
 				+ LEC_FE_Utils.cutString(getDocumentNo().substring(8),9), atts);
 			// dirMatriz ,Alfanumerico Max 300
 			addHeaderElement(mmDoc, "dirMatriz", "TODO", atts);
 		mmDoc.endElement("","","infoTributaria");
 		
+		// Comprador
 		mmDoc.startElement("","","infoFactura",atts);
 			// Fecha8 ddmmaaaa
 			addHeaderElement(mmDoc, "fechaEmision", LEC_FE_Utils.getDate(getDateInvoiced(),10), atts);
 			// Alfanumerico Max 300
 			addHeaderElement(mmDoc, "dirEstablecimiento", "TODO", atts);
 			// Numerico3-5
-			addHeaderElement(mmDoc, "contribuyenteEspecial", "TODO", atts);
+			addHeaderElement(mmDoc, "contribuyenteEspecial", bp.get_ValueAsString("SRI_TaxPayerCode"), atts);
 			// Texto2
 			addHeaderElement(mmDoc, "obligadoContabilidad", m_obligadocontabilidad, atts);
 			// Numerico2
@@ -392,8 +391,8 @@ public class LEC_FE_MInvoice extends MInvoice
 		}
 		catch (Exception e)
 		{
-			log.severe("No se pudo craer XML - " + e.getMessage());
 			msg = "No se pudo craer XML - " + e.getMessage();
+			log.severe(msg);
 			throw new AdempiereException(msg);
 		}
 		
