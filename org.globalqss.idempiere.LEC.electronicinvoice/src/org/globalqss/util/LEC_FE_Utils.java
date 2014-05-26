@@ -26,34 +26,23 @@ public class LEC_FE_Utils
 	 *	Calculate SRI Digit based on AccesCode 48
 	 *  Metodo Modulo 11 con factor de chequeo ponderado (2)
 	 */
-	public static int calculateDigitSri(String strAccessCode, String srtDocumentCode) {
+	public static int calculateDigitSri(String strAccessCode) {
 
+		String strSriFactor = "765432";
+		
 		if (strAccessCode.length() != 48)
 			throw new AdempiereException(Msg.getMsg(Env.getCtx(), "LCO_WrongLength"));
-		//if (Long.parseLong(strAccessCode) < 0)
-		//	throw new AdempiereException(Msg.getMsg(Env.getCtx(), "LCO_NotANumber"));
-		if (srtDocumentCode.length() != 8)
-			throw new AdempiereException(Msg.getMsg(Env.getCtx(), "LCO_WrongLength"));
-		if (Long.parseLong(srtDocumentCode) < 0)
-			throw new AdempiereException(Msg.getMsg(Env.getCtx(), "LCO_NotANumber"));
 		
-		//Vector de cadena validacion Sismode	// Sysconfig ?
-		Integer iNros[] = {
-				//3, 2, 7, 6, 5, 4, 3, 2,
-				0, 0, 0, 0, 0, 0, 0, 0,
-				0, 0, 0, 0, 0, 0, 0, 0,
-				0, 0, 0, 0, 0, 0, 0, 0,
-				0, 0, 0, 0, 0, 0, 0, 0,
-				0, 0, 0, 0, 0, 0, 0, 0,
-				0, 0, 0, 0, 0, 0, 0, 0
-				};
-		//Variable para realizar las operaciones
+		// Vector de cadena validacion Sismode
+		Integer iNros[];
+		iNros = new Integer[48];
 	
-		//Ciclo para asignar cada uno de los digitos del vector
+		// Ciclo para asignar cada uno de los digitos del vector
+		// La cadena de 6 se repite 8 veces
 		try {
-			for (int i = 0; i < 6 ; i++) {
-				for (int j = 0; j < 8 ; j++) {
-					iNros[(i * 8) + j] = Integer.parseInt(srtDocumentCode.substring(j, j + 1));
+			for (int i = 0; i < 8 ; i++) {
+				for (int j = 0; j < 6 ; j++) {
+					iNros[(i * 6) + j] = Integer.parseInt(strSriFactor.substring(j, j + 1));
 				}
 			}
 		} catch (NumberFormatException e) {

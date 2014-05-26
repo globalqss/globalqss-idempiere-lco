@@ -60,6 +60,7 @@ public class LEC_FE_MInvoice extends MInvoice
 	private String m_obligadocontabilidad = "NO";
 	private String m_accesscode;
 	private String m_identificacionconsumidor = "";
+	private String m_identificacioncomprador = "";
 	private String m_razonsocial = "";
 
 	private boolean isOnTesting = false;
@@ -99,6 +100,9 @@ public class LEC_FE_MInvoice extends MInvoice
 		// Emisor
 		MOrgInfo oi = MOrgInfo.get(getCtx(), getAD_Org_ID(), get_TrxName());
 		
+		if ( (Boolean) oi.get_Value("SRI_IsKeepAccounting"))
+			m_obligadocontabilidad = "SI";
+		
 		if (oi.get_ValueAsString("TaxID").equals(""))
 			throw new AdempiereUserError("No existe definicion OrgInfo.Documento: " + oi.toString());
 		if (oi.get_ValueAsString("SRI_DocumentCode").equals(""))
@@ -112,20 +116,25 @@ public class LEC_FE_MInvoice extends MInvoice
 			throw new AdempiereUserError("No existe definicion  OrgInfo.SRI_StoreCode: " + oi.toString());
 		if (oi.get_ValueAsString("SRI_DocumentCode").equals(""))
 			throw new AdempiereUserError("No existe definicion  OrgInfo.SRI_DocumentCode: " + oi.toString());
+		if (oi.get_ValueAsString("SRI_IsKeepAccounting").equals(""))
+			throw new AdempiereUserError("No existe definicion  OrgInfo.SRI_IsKeepAccounting: " + oi.toString());
+		if (oi.get_ValueAsString("SRI_TaxPayerCode").equals(""))
+			throw new AdempiereUserError("No existe definicion  OrgInfo.SRI_TaxPayerCode: " + oi.toString());
+
 		
 		MBPartner bpe = new MBPartner(getCtx(), c_bpartner_id, get_TrxName());
+		if ( (Integer) bpe.get_Value("LCO_TaxPayerType_ID") == 1000027)	// Hardcoded
+			m_identificacionconsumidor = "999999999999";
 		
 		// Comprador
 		MBPartner bp = new MBPartner(getCtx(), getC_BPartner_ID(), get_TrxName());
 		if (!isOnTesting) m_razonsocial = bp.getName();
 		
-		if ( (Boolean) bp.get_Value("SRI_IsKeepAccounting"))
-			m_obligadocontabilidad = "SI";
+		m_identificacioncomprador = bp.getTaxID();
 		
-		if (bp.get_ValueAsString("SRI_IsKeepAccounting").equals(""))
-			throw new AdempiereUserError("No existe definicion  Customer.SRI_IsKeepAccounting: " + bp.toString());
-		//if (bp.get_ValueAsString("SRI_TaxPayerCode").equals(""))
-		//	throw new AdempiereUserError("No existe definicion  Customer.SRI_TaxPayerCode: " + bp.toString());
+		X_LCO_TaxIdType tt = new X_LCO_TaxIdType(getCtx(), (Integer) bp.get_Value("LCO_TaxIdType_ID"), get_TrxName());
+		if (tt.getLCO_TaxIdType_ID() == 1000011)	// Hardcoded F Final
+			m_identificacioncomprador = m_identificacionconsumidor;
 		
 		if (dt.get_ValueAsString("SRI_ShortDocType") == null)
 			throw new AdempiereUserError("No existe definicion SRI_ShortDocType: " + dt.toString());
@@ -144,7 +153,7 @@ public class LEC_FE_MInvoice extends MInvoice
 			+ String.format("%1s", m_tipoemision);								// tipoEmision
 
 			m_accesscode = m_accesscode
-				+ String.format("%1s", LEC_FE_Utils.calculateDigitSri(m_accesscode, oi.get_ValueAsString("SRI_DocumentCode")));	// digito
+				+ String.format("%1s", LEC_FE_Utils.calculateDigitSri(m_accesscode));	// digito
 		
 		// TODO IsUseContingency
 		// if (IsUseContingency) m_tipoclaveacceso = "2";
@@ -253,11 +262,12 @@ public class LEC_FE_MInvoice extends MInvoice
 			// Alfanumerico Max 300
 			addHeaderElement(mmDoc, "dirEstablecimiento", "TODO", atts);
 			// Numerico3-5
-			addHeaderElement(mmDoc, "contribuyenteEspecial", bp.get_ValueAsString("SRI_TaxPayerCode"), atts);
+			addHeaderElement(mmDoc, "contribuyenteEspecial", oi.get_ValueAsString("SRI_TaxPayerCode"), atts);
 			// Texto2
 			addHeaderElement(mmDoc, "obligadoContabilidad", m_obligadocontabilidad, atts);
 			// Numerico2
-			addHeaderElement(mmDoc, "tipoIdentificacionComprador", "XX", atts); // LCO_TaxCodeDIAN ?
+			addHeaderElement(mmDoc, "tipoIdentificacionComprador", (LEC_FE_Utils.fillString(2 - (LEC_FE_Utils.cutString(tt.getLCO_TaxCodeDian(), 2)).length(), '0'))
+					+ LEC_FE_Utils.cutString(tt.getLCO_TaxCodeDian(),2), atts);	// LCO_TaxCodeDIAN ?
 			// Numerico15 -- Incluye guiones
 			addHeaderElement(mmDoc, "guiaRemision", "TODO", atts);
 			// Alfanumerico Max 300
@@ -353,6 +363,7 @@ public class LEC_FE_MInvoice extends MInvoice
 			} catch (Exception e2) {}
 		}
 	
+		// TODO Atach XML Autorizado
 		if (isAttachXML) {
 			int  AD_Table_ID = MTable.getTable_ID(X_SRI_Authorisation.Table_Name);
 			//if one attach is found , it means that a xml file was attached before
