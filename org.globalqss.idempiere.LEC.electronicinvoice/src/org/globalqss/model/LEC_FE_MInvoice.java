@@ -31,6 +31,7 @@ import org.compiere.util.Env;
 import org.xml.sax.helpers.AttributesImpl;
 
 import org.globalqss.util.LEC_FE_Utils;
+import org.globalqss.util.LEC_FE_UtilsXml;
 
 
 /**
@@ -49,6 +50,13 @@ public class LEC_FE_MInvoice extends MInvoice
 	private int		m_SRI_Authorisation_ID = 0;
 	/** Dir				*/
 	private String folder = "";
+	private static String folderComprobantesGenerados = "ComprobantesGenerados";
+	private static String folderComprobantesFirmados = "ComprobantesFirmados";
+	private static String folderComprobantesTransmitidos = "ComprobantesTransmitidos";
+	private static String folderComprobantesRechazados = "ComprobantesRechazados";
+	private static String folderComprobantesAutorizados = "ComprobantesAutorizados";
+	private static String folderComprobantesNoAutorizados = "ComprobantesNoAutorizados";
+	private static String XmlEncoding = "UTF-8";
 	private String file_name = "";
 	private String m_tipoclaveacceso = "1";	// 1-Automatica, 2-Contingencia
 	private String m_tipoambiente = "2";	// 1-Pruebas, 2-Produccion
@@ -128,7 +136,7 @@ public class LEC_FE_MInvoice extends MInvoice
 		m_identificacioncomprador = bp.getTaxID();
 		
 		X_LCO_TaxIdType tt = new X_LCO_TaxIdType(getCtx(), (Integer) bp.get_Value("LCO_TaxIdType_ID"), get_TrxName());
-		if (tt.getLCO_TaxIdType_ID() == 1000011)	// Hardcoded F Final
+		if (tt.getLCO_TaxIdType_ID() == 1000011)	// Hardcoded F Final	// TODO Deprecated
 			m_identificacioncomprador = m_identificacionconsumidor;
 		
 		if (dt.get_ValueAsString("SRI_ShortDocType") == null)
@@ -190,12 +198,13 @@ public class LEC_FE_MInvoice extends MInvoice
 		String xmlFileName = "SRI_" + m_accesscode + ".xml";
 	
 		//crea los directorios para los archivos xml
-		(new File(folder+File.separator+ "ComprobantesGenerados"+File.separator)).mkdirs();
+		(new File(folder + File.separator + folderComprobantesGenerados + File.separator)).mkdirs();
+		(new File(folder + File.separator + folderComprobantesFirmados + File.separator)).mkdirs();
 		//ruta completa del archivo xml
-		file_name = folder+File.separator+ "ComprobantesGenerados"+File.separator+xmlFileName;	
+		file_name = folder + File.separator + folderComprobantesGenerados + File.separator+xmlFileName;	
 		//Stream para el documento xml
 		mmDocStream = new FileOutputStream (file_name, false);
-		StreamResult streamResult_menu = new StreamResult(new OutputStreamWriter(mmDocStream,"UTF-8"));
+		StreamResult streamResult_menu = new StreamResult(new OutputStreamWriter(mmDocStream,XmlEncoding));
 		SAXTransformerFactory tf_menu = (SAXTransformerFactory) SAXTransformerFactory.newInstance();					
 		try {
 			tf_menu.setAttribute("indent-number", new Integer(0));
@@ -204,7 +213,7 @@ public class LEC_FE_MInvoice extends MInvoice
 		}
 		TransformerHandler mmDoc = tf_menu.newTransformerHandler();	
 		Transformer serializer_menu = mmDoc.getTransformer();	
-		serializer_menu.setOutputProperty(OutputKeys.ENCODING,"UTF-8");
+		serializer_menu.setOutputProperty(OutputKeys.ENCODING,XmlEncoding);
 		try {
 			serializer_menu.setOutputProperty(OutputKeys.INDENT,"yes");
 		} catch (Exception e) {
@@ -245,7 +254,7 @@ public class LEC_FE_MInvoice extends MInvoice
 			addHeaderElement(mmDoc, "ptoEmi", oi.get_ValueAsString("SRI_StoreCode"), atts);
 			//secuencial ,Numerico9
 			addHeaderElement(mmDoc, "secuencial", (LEC_FE_Utils.fillString(9 - (LEC_FE_Utils.cutString(getDocumentNo().substring(getDocumentNo().lastIndexOf('-')+1), 9)).length(), '0'))
-				+ LEC_FE_Utils.cutString(getDocumentNo().substring(8),9), atts);
+				+ LEC_FE_Utils.cutString(getDocumentNo().substring(getDocumentNo().lastIndexOf('-')+1),9), atts);
 			// dirMatriz ,Alfanumerico Max 300
 			addHeaderElement(mmDoc, "dirMatriz", "TODO", atts);
 		mmDoc.endElement("","","infoTributaria");
@@ -359,6 +368,11 @@ public class LEC_FE_MInvoice extends MInvoice
 		}
 	
 		// TODO Firmar Comprobante XML
+		LEC_FE_UtilsXml signature = new LEC_FE_UtilsXml();
+		signature.setXmlEncoding(XmlEncoding);
+		signature.setPKCS12_Resource(file_name);
+		signature.setOutput_Directory(folderComprobantesFirmados);
+        //signature.execute();
 		// TODO Enviar a Recepcion Comprobante SRI
 		// TODO Procesar Solicitud Autorizacion SRI
 		// TODO Procesar Respuesta SRI

@@ -1,8 +1,6 @@
 package org.globalqss.util;
 
 import org.adempiere.exceptions.AdempiereException;
-import org.apache.tomcat.util.log.Log;
-import org.compiere.util.DB;
 import org.compiere.util.Env;
 import org.compiere.util.Msg;
 
@@ -21,14 +19,15 @@ import java.util.Date;
 
 public class LEC_FE_Utils
 {
-	
+
+
 	/**
 	 *	Calculate SRI Digit based on AccesCode 48
 	 *  Metodo Modulo 11 con factor de chequeo ponderado (2)
 	 */
 	public static int calculateDigitSri(String strAccessCode) {
 
-		String strSriFactor = "765432";
+		String strSriFactor = "765432";	// SRI Hardcoded
 		
 		if (strAccessCode.length() != 48)
 			throw new AdempiereException(Msg.getMsg(Env.getCtx(), "LCO_WrongLength"));
@@ -53,7 +52,6 @@ public class LEC_FE_Utils
 	
 	}	// calculateDigitSri
 
-	
 	/**
 	 * Implementa algoritmos modulo 10 y 11 con coeficientes
 	 * @param valida - cadena de numeros a generar el digito de verificacion
@@ -89,7 +87,6 @@ public class LEC_FE_Utils
 		return iOperacion;
 	}
 
-	
 	/**
 	 * Get Doc or Current date in format - default yyyy/MM/dd
 	 * @return Date
