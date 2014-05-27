@@ -7,9 +7,6 @@ import java.io.OutputStreamWriter;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Properties;
 import java.util.logging.Level;
 
@@ -25,17 +22,16 @@ import org.compiere.model.MAttachmentEntry;
 import org.compiere.model.MBPartner;
 import org.compiere.model.MDocType;
 import org.compiere.model.MInvoice;
-import org.compiere.model.MOrg;
 import org.compiere.model.MOrgInfo;
 import org.compiere.model.MSysConfig;
 import org.compiere.model.MTable;
 import org.compiere.util.AdempiereUserError;
 import org.compiere.util.DB;
 import org.compiere.util.Env;
-import org.compiere.util.Msg;
 import org.xml.sax.helpers.AttributesImpl;
 
 import org.globalqss.util.LEC_FE_Utils;
+
 
 /**
  *	LEC_FE_MInvoice
@@ -118,13 +114,12 @@ public class LEC_FE_MInvoice extends MInvoice
 			throw new AdempiereUserError("No existe definicion  OrgInfo.SRI_DocumentCode: " + oi.toString());
 		if (oi.get_ValueAsString("SRI_IsKeepAccounting").equals(""))
 			throw new AdempiereUserError("No existe definicion  OrgInfo.SRI_IsKeepAccounting: " + oi.toString());
-		if (oi.get_ValueAsString("SRI_TaxPayerCode").equals(""))
-			throw new AdempiereUserError("No existe definicion  OrgInfo.SRI_TaxPayerCode: " + oi.toString());
-
-		
+				
 		MBPartner bpe = new MBPartner(getCtx(), c_bpartner_id, get_TrxName());
 		if ( (Integer) bpe.get_Value("LCO_TaxPayerType_ID") == 1000027)	// Hardcoded
-			m_identificacionconsumidor = "999999999999";
+			if (oi.get_ValueAsString("SRI_TaxPayerCode").equals(""))
+				throw new AdempiereUserError("No existe definicion  OrgInfo.SRI_TaxPayerCode: " + oi.toString());
+			;
 		
 		// Comprador
 		MBPartner bp = new MBPartner(getCtx(), getC_BPartner_ID(), get_TrxName());
@@ -273,8 +268,8 @@ public class LEC_FE_MInvoice extends MInvoice
 			// Alfanumerico Max 300
 			addHeaderElement(mmDoc, "razonSocialComprador", m_razonsocial, atts);
 			// Numerico13
-			addHeaderElement(mmDoc, "identificacionComprador", (LEC_FE_Utils.fillString(13 - (LEC_FE_Utils.cutString(bp.getTaxID(), 13)).length(), '0'))
-					+ LEC_FE_Utils.cutString(bp.getTaxID(),13), atts);
+			addHeaderElement(mmDoc, "identificacionComprador", (LEC_FE_Utils.fillString(13 - (LEC_FE_Utils.cutString(m_identificacioncomprador, 13)).length(), '0'))
+					+ LEC_FE_Utils.cutString(m_identificacioncomprador,13), atts);
 			// Numerico Max 14
 			addHeaderElement(mmDoc, "totalSinImpuestos", this.getTotalLines().toString(), atts);
 			// Numerico MAx 14
@@ -363,6 +358,12 @@ public class LEC_FE_MInvoice extends MInvoice
 			} catch (Exception e2) {}
 		}
 	
+		// TODO Firmar Comprobante XML
+		// TODO Enviar a Recepcion Comprobante SRI
+		// TODO Procesar Solicitud Autorizacion SRI
+		// TODO Procesar Respuesta SRI
+		// TODO Enviar Email Cliente
+		
 		// TODO Atach XML Autorizado
 		if (isAttachXML) {
 			int  AD_Table_ID = MTable.getTable_ID(X_SRI_Authorisation.Table_Name);
@@ -408,10 +409,6 @@ public class LEC_FE_MInvoice extends MInvoice
 		}
 		
 		log.warning("@SRI_FileGenerated@ -> " + file_name);
-		
-		// TODO Enviar Solicitud Autorizacion SRI
-		// TODO Procesar Respuesta SRI
-		// TODO Enviar Email Cliente
 		
 		//return null;
 		return msg;
