@@ -63,10 +63,13 @@ public class LEC_FE_MInvoice extends MInvoice
 	private String m_tipoambiente = "2";	// 1-Pruebas, 2-Produccion
 	private String m_tipoemision = "1";		// 1-Normal, 2-Contingencia
 	private String m_obligadocontabilidad = "NO";
+	private String m_coddoc = "";
 	private String m_accesscode;
 	private String m_identificacionconsumidor = "";
+	private String m_tipoidentificacioncomprador = "";
 	private String m_identificacioncomprador = "";
 	private String m_razonsocial = "";
+	private String m_guiaremision = "";
 
 	private boolean isOnTesting = false;
 	private boolean isAttachXML = false;
@@ -102,6 +105,8 @@ public class LEC_FE_MInvoice extends MInvoice
 			
 		MDocType dt = new MDocType(getCtx(), getC_DocTypeTarget_ID(), get_TrxName());
 		
+		m_coddoc = dt.get_ValueAsString("SRI_ShortDocType");
+		
 		// Emisor
 		MOrgInfo oi = MOrgInfo.get(getCtx(), getAD_Org_ID(), get_TrxName());
 		
@@ -136,6 +141,14 @@ public class LEC_FE_MInvoice extends MInvoice
 		MBPartner bp = new MBPartner(getCtx(), getC_BPartner_ID(), get_TrxName());
 		if (!isOnTesting) m_razonsocial = bp.getName();
 		
+		if (oi.get_ValueAsString("SRI_TaxPayerCode").equals("1"))
+			m_tipoidentificacioncomprador = "04"; 	// VENTA CON RUC
+		else if (oi.get_ValueAsString("SRI_TaxPayerCode").equals("2"))
+			m_tipoidentificacioncomprador = "05"; 	// VENTA CON CEDULA
+		else if (oi.get_ValueAsString("SRI_TaxPayerCode").equals("3"))
+			m_tipoidentificacioncomprador = "06";	// VENTA CON PASAPORTE
+		else m_tipoidentificacioncomprador = "07"; 	// VENTA A CONSUMIDOR FINAL	// TODO Deprecated
+		
 		m_identificacioncomprador = bp.getTaxID();
 		
 		X_LCO_TaxIdType tt = new X_LCO_TaxIdType(getCtx(), (Integer) bp.get_Value("LCO_TaxIdType_ID"), get_TrxName());
@@ -145,16 +158,18 @@ public class LEC_FE_MInvoice extends MInvoice
 		if (dt.get_ValueAsString("SRI_ShortDocType") == null)
 			throw new AdempiereUserError("No existe definicion SRI_ShortDocType: " + dt.toString());
 		
+		m_guiaremision = DB.getSQLValueString(get_TrxName(), "SELECT M_InOut_AllGuias FROM C_Invoice_Header_VT WHERE C_Invoice_ID = ? ", getC_Invoice_ID());
+		
 		m_accesscode = ""
 			+ String.format("%8s", LEC_FE_Utils.getDate(getDateInvoiced(),8))	// fechaEmision
-			+ String.format("%2s", dt.get_ValueAsString("SRI_ShortDocType"))	// codDoc
+			+ String.format("%2s", m_coddoc)									// codDoc
 			+ String.format("%13s", (LEC_FE_Utils.fillString(13 - (LEC_FE_Utils.cutString(bpe.getTaxID(), 13)).length(), '0'))
 				+ LEC_FE_Utils.cutString(bpe.getTaxID(),13))					// ruc
 			+ String.format("%1s", m_tipoambiente)								// ambiente
 			+ String.format("%3s", oi.get_ValueAsString("SRI_OrgCode"))			// serie / estab
 			+ String.format("%3s", oi.get_ValueAsString("SRI_StoreCode"))		// serie / ptoEmi
-			+ String.format("%9s", (LEC_FE_Utils.fillString(9 - (LEC_FE_Utils.cutString(getDocumentNo().substring(8), 9)).length(), '0'))
-				+ LEC_FE_Utils.cutString(getDocumentNo().substring(getDocumentNo().lastIndexOf('-')+1),9))// numero / secuencial
+			+ String.format("%9s", (LEC_FE_Utils.fillString(9 - (LEC_FE_Utils.cutString(LEC_FE_Utils.getSecuencial(getDocumentNo(), m_coddoc), 9)).length(), '0'))
+				+ LEC_FE_Utils.cutString(LEC_FE_Utils.getSecuencial(getDocumentNo(), m_coddoc), 9))// numero / secuencial
 			+ String.format("%8s", oi.get_ValueAsString("SRI_DocumentCode"))							// codigo
 			+ String.format("%1s", m_tipoemision);								// tipoEmision
 
@@ -254,16 +269,16 @@ public class LEC_FE_MInvoice extends MInvoice
 			// claveAcceso ,Numérico49
 			addHeaderElement(mmDoc, "claveAcceso", a.getValue(), atts);
 			// codDoc ,Numerico2
-			addHeaderElement(mmDoc, "codDoc", dt.get_ValueAsString("SRI_ShortDocType"), atts);
+			addHeaderElement(mmDoc, "codDoc", m_coddoc, atts);
 			// estab ,Numerico3
 			addHeaderElement(mmDoc, "estab", oi.get_ValueAsString("SRI_OrgCode"), atts);
 			// ptoEmi ,Numerico3
 			addHeaderElement(mmDoc, "ptoEmi", oi.get_ValueAsString("SRI_StoreCode"), atts);
 			//secuencial ,Numerico9
-			addHeaderElement(mmDoc, "secuencial", (LEC_FE_Utils.fillString(9 - (LEC_FE_Utils.cutString(getDocumentNo().substring(getDocumentNo().lastIndexOf('-')+1), 9)).length(), '0'))
-				+ LEC_FE_Utils.cutString(getDocumentNo().substring(getDocumentNo().lastIndexOf('-')+1),9), atts);
+			addHeaderElement(mmDoc, "secuencial", (LEC_FE_Utils.fillString(9 - (LEC_FE_Utils.cutString(LEC_FE_Utils.getSecuencial(getDocumentNo(), m_coddoc), 9)).length(), '0'))
+					+ LEC_FE_Utils.cutString(LEC_FE_Utils.getSecuencial(getDocumentNo(), m_coddoc), 9), atts);
 			// dirMatriz ,Alfanumerico Max 300
-			addHeaderElement(mmDoc, "dirMatriz", "TODO", atts);
+			addHeaderElement(mmDoc, "dirMatriz", le.getAddress1(), atts);
 		mmDoc.endElement("","","infoTributaria");
 		
 		mmDoc.startElement("","","infoFactura",atts);
@@ -278,10 +293,9 @@ public class LEC_FE_MInvoice extends MInvoice
 			addHeaderElement(mmDoc, "obligadoContabilidad", m_obligadocontabilidad, atts);
 		// Comprador
 			// Numerico2
-			addHeaderElement(mmDoc, "tipoIdentificacionComprador", (LEC_FE_Utils.fillString(2 - (LEC_FE_Utils.cutString(tt.getLCO_TaxCodeDian(), 2)).length(), '0'))
-					+ LEC_FE_Utils.cutString(tt.getLCO_TaxCodeDian(),2), atts);	// LCO_TaxCodeDIAN ?
+			addHeaderElement(mmDoc, "tipoIdentificacionComprador", m_tipoidentificacioncomprador, atts);
 			// Numerico15 -- Incluye guiones
-			addHeaderElement(mmDoc, "guiaRemision", "TODO", atts);
+			addHeaderElement(mmDoc, "guiaRemision", m_guiaremision, atts);
 			// Alfanumerico Max 300
 			addHeaderElement(mmDoc, "razonSocialComprador", m_razonsocial, atts);
 			// Numerico13
@@ -297,15 +311,15 @@ public class LEC_FE_MInvoice extends MInvoice
 		mmDoc.startElement("","","totalConImpuestos",atts);
 		
 		sql = new StringBuffer(
-	             "SELECT SUBSTR(t.TaxIndicator,1,1) AS codigo "
+	             "SELECT t.LEC_TaxTypeSRI AS codigo "
 				 + ", CASE "
-				 + "    WHEN SUBSTR(t.TaxIndicator,1,1) = '2' THEN "
+				 + "    WHEN t.LEC_TaxTypeSRI = '2' THEN "
 				 + "      CASE "
 				 + "        WHEN t.rate = 0::numeric THEN '0' "
 				 + "        WHEN t.rate = 12::numeric THEN '2' "
 				 + "        ELSE '6' "
 				 + "      END "
-				 + "    WHEN SUBSTR(t.TaxIndicator,1,1) = '3' THEN '0000' "
+				 + "    WHEN t.LEC_TaxTypeSRI = '3' THEN '0000' "
 				 + "    ELSE '0' END AS codigoPorcentaje "
 				 + ", it.TaxBaseAmt AS Imponible "
 				 + ", it.TaxAmt AS valor "
