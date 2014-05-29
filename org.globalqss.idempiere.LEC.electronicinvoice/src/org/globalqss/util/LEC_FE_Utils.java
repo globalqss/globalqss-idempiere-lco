@@ -130,5 +130,16 @@ public class LEC_FE_Utils
 		return new String(str.trim());
 	}
 	
+	/**
+	 * 	String getSecuencial from DocumentNo
+	 * 	@return string
+	 */
+	public static String getSecuencial(String docno, String shortdoctype) {
+		if (shortdoctype.equals("01"))	// FACTURA
+			return new String(docno.substring(docno.lastIndexOf('-') + 1));
+
+		return new String(docno.trim());
+	}
+	
 	
 }	// LEC_FE_Utils
