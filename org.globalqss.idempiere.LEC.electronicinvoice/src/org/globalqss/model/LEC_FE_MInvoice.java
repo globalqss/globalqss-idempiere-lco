@@ -49,6 +49,7 @@ public class LEC_FE_MInvoice extends MInvoice
 	private static final long serialVersionUID = -924606040343895114L;
 	
 	private int		m_SRI_Authorisation_ID = 0;
+	private int		m_lec_sri_format_id = 0;
 	/** Dir				*/
 	private String folder = "";
 	private static String folderComprobantesGenerados = "ComprobantesGenerados";
@@ -62,6 +63,8 @@ public class LEC_FE_MInvoice extends MInvoice
 	private String m_tipoclaveacceso = "1";	// 1-Automatica, 2-Contingencia
 	private String m_tipoambiente = "2";	// 1-Pruebas, 2-Produccion
 	private String m_tipoemision = "1";		// 1-Normal, 2-Contingencia
+	private String m_comprobante = "";
+	private String m_version = "";
 	private String m_obligadocontabilidad = "NO";
 	private String m_coddoc = "";
 	private String m_accesscode;
@@ -101,11 +104,20 @@ public class LEC_FE_MInvoice extends MInvoice
 		if ( folder.equals(""))
 			throw new AdempiereUserError("No existe parametro para Ruta Generacion Xml");
 		
-		OutputStream  mmDocStream = null;
-			
 		MDocType dt = new MDocType(getCtx(), getC_DocTypeTarget_ID(), get_TrxName());
 		
 		m_coddoc = dt.get_ValueAsString("SRI_ShortDocType");
+		
+		if ( m_coddoc.equals(""))
+			throw new AdempiereUserError("No existe definicion SRI_ShortDocType: " + dt.toString());
+		
+		// Formato
+		m_lec_sri_format_id = DB.getSQLValue(get_TrxName(), "SELECT MAX(LEC_SRI_Format_ID) FROM LEC_SRI_Format WHERE AD_Client_ID = ? AND IsActive = 'Y' AND SRI_DeliveredType = ? AND SRI_ShortDocType = ? AND ? >= ValidFrom AND ( ? <= ValidTo OR ValidTo IS NULL)", getAD_Client_ID(), m_tipoemision, m_coddoc, getDateInvoiced(), getDateInvoiced());
+		
+		if ( m_lec_sri_format_id < 1)
+			throw new AdempiereUserError("No existe formato para el comprobante");
+		
+		X_LEC_SRI_Format f = new X_LEC_SRI_Format (getCtx(), m_lec_sri_format_id, get_TrxName());
 		
 		// Emisor
 		MOrgInfo oi = MOrgInfo.get(getCtx(), getAD_Org_ID(), get_TrxName());
@@ -120,7 +132,7 @@ public class LEC_FE_MInvoice extends MInvoice
 		if (oi.get_ValueAsString("SRI_DocumentCode").equals(""))
 			throw new AdempiereUserError("No existe definicion OrgInfo.DocumentCode: " + oi.toString());
 		int c_bpartner_id = DB.getSQLValue(get_TrxName(), "SELECT C_BPartner_ID FROM C_BPartner WHERE AD_Client_ID = ? AND TaxId = ? ", getAD_Client_ID(), oi.get_ValueAsString("TaxID"));
-		if (c_bpartner_id == -1)
+		if (c_bpartner_id < 1)
 			throw new AdempiereUserError("No existe BP relacioando a OrgInfo.Documento: " + oi.get_ValueAsString("TaxID"));
 		if (oi.get_ValueAsString("SRI_OrgCode").equals(""))
 			throw new AdempiereUserError("No existe definicion  OrgInfo.SRI_OrgCode: " + oi.toString());
@@ -130,6 +142,8 @@ public class LEC_FE_MInvoice extends MInvoice
 			throw new AdempiereUserError("No existe definicion  OrgInfo.SRI_DocumentCode: " + oi.toString());
 		if (oi.get_ValueAsString("SRI_IsKeepAccounting").equals(""))
 			throw new AdempiereUserError("No existe definicion  OrgInfo.SRI_IsKeepAccounting: " + oi.toString());
+		if (oi.getC_Location_ID() == 0)
+			throw new AdempiereUserError("No existe definicion  OrgInfo.Address1: " + oi.toString());
 				
 		MBPartner bpe = new MBPartner(getCtx(), c_bpartner_id, get_TrxName());
 		if ( (Integer) bpe.get_Value("LCO_TaxPayerType_ID") == 1000027)	// Hardcoded
@@ -154,9 +168,6 @@ public class LEC_FE_MInvoice extends MInvoice
 		X_LCO_TaxIdType tt = new X_LCO_TaxIdType(getCtx(), (Integer) bp.get_Value("LCO_TaxIdType_ID"), get_TrxName());
 		if (tt.getLCO_TaxIdType_ID() == 1000011)	// Hardcoded F Final	// TODO Deprecated
 			m_identificacioncomprador = m_identificacionconsumidor;
-		
-		if (dt.get_ValueAsString("SRI_ShortDocType") == null)
-			throw new AdempiereUserError("No existe definicion SRI_ShortDocType: " + dt.toString());
 		
 		m_guiaremision = DB.getSQLValueString(get_TrxName(), "SELECT M_InOut_AllGuias FROM C_Invoice_Header_VT WHERE C_Invoice_ID = ? ", getC_Invoice_ID());
 		
@@ -186,7 +197,7 @@ public class LEC_FE_MInvoice extends MInvoice
 		ac.setOldValue(null);
 		ac.setEnvType(m_tipoambiente);	// Before Save ?
 		ac.setCodeAccessType(m_tipoclaveacceso); // Auto Before Save ?
-		ac.setSRI_ShortDocType(dt.get_ValueAsString("SRI_ShortDocType"));
+		ac.setSRI_ShortDocType(m_coddoc);
 		ac.setIsUsed(true);
 		
 		if (!ac.save()) {
@@ -197,7 +208,7 @@ public class LEC_FE_MInvoice extends MInvoice
 		// New Authorisation
 		X_SRI_Authorisation a = new X_SRI_Authorisation (getCtx(), 0, get_TrxName());
 		a.setAD_Org_ID(getAD_Org_ID());
-		a.setSRI_ShortDocType(dt.get_ValueAsString("SRI_ShortDocType"));
+		a.setSRI_ShortDocType(m_coddoc);
 		a.setValue(m_accesscode);
 		a.setNewValue(null);
 		a.setSRI_AccessCode_ID(ac.get_ID());
@@ -213,6 +224,8 @@ public class LEC_FE_MInvoice extends MInvoice
 		set_Value("SRI_Authorisation_ID", a.get_ID());
 		this.saveEx();	// TODO Revieme
 					
+		OutputStream  mmDocStream = null;
+		
 		String xmlFileName = "SRI_" + m_accesscode + ".xml";
 	
 		//crea los directorios para los archivos xml
@@ -248,8 +261,8 @@ public class LEC_FE_MInvoice extends MInvoice
 		// Encabezado
 		atts.clear();
 		atts.addAttribute("", "", "id", "CDATA", "comprobante");
-		atts.addAttribute("", "", "version", "CDATA", "1.0.0");
-		mmDoc.startElement("", "", "factura", atts);
+		atts.addAttribute("", "", "version", "CDATA", f.get_ValueAsString("VersionNo"));
+		mmDoc.startElement("", "", f.get_ValueAsString("XmlPrintLabel"), atts);
 		
 		atts.clear();
 		
@@ -440,7 +453,7 @@ public class LEC_FE_MInvoice extends MInvoice
 			addHeaderElement(mmDoc, "Signature", "TODO", atts);
 		mmDoc.endElement("","","!-- FIN DE LA FIRMA DIGITAL --");
 		
-		mmDoc.endElement("","","factura");
+		mmDoc.endElement("","",f.get_ValueAsString("XmlPrintLabel"));
 		
 		mmDoc.endDocument();
 	
@@ -502,7 +515,7 @@ public class LEC_FE_MInvoice extends MInvoice
 		}
 		catch (Exception e)
 		{
-			msg = "No se pudo craer XML - " + e.getMessage();
+			msg = "No se pudo crear XML - " + e.getMessage();
 			log.severe(msg);
 			throw new AdempiereException(msg);
 		}

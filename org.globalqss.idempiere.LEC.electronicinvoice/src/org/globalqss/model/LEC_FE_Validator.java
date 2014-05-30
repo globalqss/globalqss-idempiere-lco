@@ -21,9 +21,12 @@ import org.compiere.apps.ADialog;
 import org.compiere.model.MClient;
 import org.compiere.model.MInvoice;
 import org.globalqss.model.LEC_FE_MInvoice;
+import org.compiere.model.MDocType;
+import org.compiere.model.MInOut;
 import org.compiere.model.ModelValidationEngine;
 import org.compiere.model.ModelValidator;
 import org.compiere.model.PO;
+import org.compiere.util.AdempiereUserError;
 import org.compiere.util.CLogger;
 import org.compiere.util.Env;
 
@@ -71,6 +74,7 @@ public class LEC_FE_Validator implements ModelValidator
 
 		//	Documents to be monitored
 		engine.addDocValidate(MInvoice.Table_Name, this);
+		engine.addDocValidate(MInOut.Table_Name, this);
 
 	}	//	initialize
 
@@ -115,20 +119,29 @@ public class LEC_FE_Validator implements ModelValidator
 		// after completing SO invoice process electronic invoice
 		if (po.get_TableName().equals(MInvoice.Table_Name) && timing == TIMING_AFTER_COMPLETE) {
 			MInvoice invoice = (MInvoice)po;
-			if (invoice.isSOTrx()) {
+			//
+			msg = invoiceGenerateXml(invoice);
+			if (msg != null)
+				return msg;
+			//
+			msg = invoiceSignXml(invoice);
+			if (msg != null)
+				return msg;
+			//
+			msg = invoiceAuthoriseXml(invoice);
+			if (msg != null)
+				return msg;
+
+		}
+		
+		// after completing SO inout process electronic inout
+		if (po.get_TableName().equals(MInOut.Table_Name) && timing == TIMING_AFTER_COMPLETE) {
+			MInOut inout = (MInOut)po;
 				//
-				msg = invoiceGenerateXml(invoice);
+				msg = inoutGenerateXml(inout);
 				if (msg != null)
 					return msg;
-				//
-				msg = invoiceSignXml(invoice);
-				if (msg != null)
-					return msg;
-				//
-				msg = invoiceAuthoriseXml(invoice);
-				if (msg != null)
-					return msg;
-			}
+		
 		}
 
 
@@ -186,13 +199,71 @@ public class LEC_FE_Validator implements ModelValidator
 			return "Canceled...";
 		}
 		
+		MDocType dt = new MDocType(inv.getCtx(), inv.getC_DocTypeTarget_ID(), inv.get_TrxName());
+		
+		String shortdoctype = dt.get_ValueAsString("SRI_ShortDocType");
+		
+		if ( shortdoctype.equals("")) {
+			msg = "No existe definicion SRI_ShortDocType: " + dt.toString();
+			log.info("Invoice: " + inv);
+			if (!ADialog.ask(0, null, msg)) {
+				return "Canceled...";	// TODO Reviewme
+			}
+		}
+		
 		LEC_FE_MInvoice lecfeinv = new LEC_FE_MInvoice(inv.getCtx(), inv.getC_Invoice_ID(), inv.get_TrxName());
-		msg = lecfeinv.lecfeinv_SriExportInvoiceXML100();
+		// isSOTrx()
+		if (shortdoctype.equals("01"))	// FACTURA
+			msg = lecfeinv.lecfeinv_SriExportInvoiceXML100();
+		else if (shortdoctype.equals("04"))	// NOTA DE CRÉDITO	// TODO
+			msg = lecfeinv.lecfeinv_SriExportInvoiceXML100();
+		else if (shortdoctype.equals("05"))	// NOTA DE DÉBITO	// TODO
+			msg = lecfeinv.lecfeinv_SriExportInvoiceXML100();
+		// !isSOTrx()
+		else if (shortdoctype.equals("07"))	// COMPROBANTE DE RETENCIÓN	// TODO
+			msg = lecfeinv.lecfeinv_SriExportInvoiceXML100();
+		else
+			return null;	// "Formato no soportado: " + shortdoctype;
+			
 		if (msg != null)
 			return msg;
 
 		return null;
 	}
+	
+	private String inoutGenerateXml (MInOut inout) {
+		
+		String msg = "Generando XML";
+		log.info("InOut: " + inout);
+		if (!ADialog.ask(0, null, msg)) {
+			return "Canceled...";
+		}
+		
+		MDocType dt = new MDocType(inout.getCtx(), inout.getC_DocType_ID(), inout.get_TrxName());
+		
+		String shortdoctype = dt.get_ValueAsString("SRI_ShortDocType");
+		
+		if ( shortdoctype.equals("")) {
+			msg = "No existe definicion SRI_ShortDocType: " + dt.toString();
+			log.info("InOut: " + inout);
+			if (!ADialog.ask(0, null, msg)) {
+				return "Canceled...";	// TODO Reviewme
+			}
+		}
+		
+		//LEC_FE_MInOut lecfeinv = new LEC_FE_MInOut(inout.getCtx(), inout.getC_Invoice_ID(), inout.get_TrxName());
+		// isSOTrx()
+		if (shortdoctype.equals("06"))	// GUÍA DE REMISIÓN 
+			msg = "TODO";	//lecfeinout.lecfeinout_SriExportInOutXML100();
+		else
+			return null;	// "Formato no soportado: " + shortdoctype;
+			
+		if (msg != null)
+			return msg;
+
+		return null;
+	}
+
 	
 	private String invoiceSignXml (MInvoice inv) {
 		
