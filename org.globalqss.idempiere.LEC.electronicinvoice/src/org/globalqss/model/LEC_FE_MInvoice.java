@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
+import java.math.BigDecimal;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -76,6 +77,11 @@ public class LEC_FE_MInvoice extends MInvoice
 
 	private boolean isOnTesting = false;
 	private boolean isAttachXML = false;
+	
+	private BigDecimal m_totalbaseimponible = Env.ZERO;
+	private BigDecimal m_totalvalorimpuesto = Env.ZERO;
+	private BigDecimal m_baseimponible = Env.ZERO;
+	private BigDecimal m_valorimpuesto = Env.ZERO;
 	
 	public LEC_FE_MInvoice(Properties ctx, int C_Invoice_ID, String trxName) {
 		super(ctx, C_Invoice_ID, trxName);
@@ -334,7 +340,7 @@ public class LEC_FE_MInvoice extends MInvoice
 				 + "      END "
 				 + "    WHEN t.LEC_TaxTypeSRI = '3' THEN '0000' "
 				 + "    ELSE '0' END AS codigoPorcentaje "
-				 + ", it.TaxBaseAmt AS Imponible "
+				 + ", it.TaxBaseAmt AS baseImponible "
 				 + ", it.TaxAmt AS valor "
 				 + "FROM C_Invoice i "
 				 + "JOIN C_InvoiceTax it ON it.C_Invoice_ID = i.C_Invoice_ID "
@@ -364,6 +370,9 @@ public class LEC_FE_MInvoice extends MInvoice
 				
 				mmDoc.endElement("","","totalImpuesto");
 				
+				m_totalbaseimponible = m_totalbaseimponible.add(rs.getBigDecimal(3));
+				m_totalvalorimpuesto = m_totalvalorimpuesto.add(rs.getBigDecimal(4));
+				
 			}
 			rs.close();
 			pstmt.close();
@@ -381,14 +390,28 @@ public class LEC_FE_MInvoice extends MInvoice
 		mmDoc.startElement("","","detalles",atts);
 		
 		sql = new StringBuffer(
-	            "SELECT i.C_Invoice_ID, p.value, 0::text, ilt.name, ilt.qtyinvoiced, ilt.priceactual, 0.0::numeric, ilt.linenetamt "
+	            "SELECT i.C_Invoice_ID, COALESCE(p.value, '0'), 0::text, ilt.name, ilt.qtyinvoiced, ilt.priceactual, COALESCE(ilt.discount, 0), ilt.linenetamt "
+				+ ", t.LEC_TaxTypeSRI AS codigo "
+				+ ", CASE "
+				+ "    WHEN t.LEC_TaxTypeSRI = '2' THEN "
+				+ "      CASE "
+				+ "        WHEN t.rate = 0::numeric THEN '0' "
+				+ "        WHEN t.rate = 12::numeric THEN '2' "
+				+ "        ELSE '6' "
+				+ "      END "
+				+ "    WHEN t.LEC_TaxTypeSRI = '3' THEN '0000' "
+				+ "    ELSE '0' END AS codigoPorcentaje "
+				+ ", t.rate AS tarifa "
+				+ ", ilt.linenetamt AS baseImponible "
+				+ ", ROUND(ilt.linenetamt * t.rate / 100, 2) AS valor "
 	            + "FROM C_Invoice i "
 	            + "JOIN C_InvoiceLine il ON il.C_Invoice_ID = i.C_Invoice_ID "
 	            + "JOIN C_Invoice_LineTax_VT ilt ON ilt.C_InvoiceLine_ID = il.C_InvoiceLine_ID "
-	            + "JOIN M_Product p ON p.M_Product_ID = il.M_Product_ID AND il.M_Product_ID > 0 "
+	            + "JOIN C_Tax t ON t.C_Tax_ID = ilt.C_Tax_ID "
+	            + "LEFT JOIN M_Product p ON p.M_Product_ID = il.M_Product_ID "
 	            + "LEFT JOIN M_Product_Category pc ON pc.M_Product_Category_ID = p.M_Product_Category_ID "
-	            + "LEFT JOIN C_Charge_Trl c ON il.C_Charge_ID = c.C_Charge_ID "
-	            + "WHERE i.C_Invoice_ID=? "
+	            + "LEFT JOIN C_Charge c ON il.C_Charge_ID = c.C_Charge_ID "
+	            + "WHERE il.IsDescription = 'N' AND i.C_Invoice_ID=? "
 	            + "ORDER BY il.line");
 		
 		try
@@ -425,11 +448,23 @@ public class LEC_FE_MInvoice extends MInvoice
 				mmDoc.startElement("","","impuestos",atts);
 					// TODO El mismo cursor de totalConImpuestos para Producto SIN GROUP BY ?
 					mmDoc.startElement("","","impuesto",atts);
-						addHeaderElement(mmDoc, "codigo", "X", atts);
+						// Numerico 1
+						addHeaderElement(mmDoc, "codigo", rs.getString(9), atts);
+						// Numerico 1 to 4
+						addHeaderElement(mmDoc, "codigoPorcentaje", rs.getString(10), atts);
+						// Numerico 1 to 4
+						addHeaderElement(mmDoc, "tarifa", rs.getBigDecimal(11).toString(), atts);
+						// Numerico Max 14
+						addHeaderElement(mmDoc, "baseImponible", rs.getBigDecimal(12).toString(), atts);
+						// Numerico Max 14
+						addHeaderElement(mmDoc, "valor", rs.getBigDecimal(13).toString(), atts);
 					mmDoc.endElement("","","impuesto");
 				mmDoc.endElement("","","impuestos");
 				
 				mmDoc.endElement("","","detalle");
+				
+				m_baseimponible = m_baseimponible.add(rs.getBigDecimal(12));
+				m_valorimpuesto = m_valorimpuesto.add(rs.getBigDecimal(13));
 				
 			}
 			rs.close();
@@ -444,6 +479,16 @@ public class LEC_FE_MInvoice extends MInvoice
 		
 		mmDoc.endElement("","","detalles");
 		
+		if (m_baseimponible.compareTo(m_totalbaseimponible) != 0 ) {
+			msg = "Error Diferencia Base Impuesto Total: " + m_totalbaseimponible.toString() + " Detalles: " + m_baseimponible.toString();
+			throw new AdempiereException(msg);
+		}
+		
+		if (m_valorimpuesto.compareTo(m_totalvalorimpuesto) != 0 ) {
+			msg = "Error Diferencia Impuesto Total: " + m_totalvalorimpuesto.toString() + " Detalles: " + m_valorimpuesto.toString();
+			throw new AdempiereException(msg);
+		}
+	
 		mmDoc.startElement("","","infoAdicional",atts);
 			addHeaderElement(mmDoc, "infoAdicional", "TODO", atts);
 		mmDoc.endElement("","","infoAdicional");
