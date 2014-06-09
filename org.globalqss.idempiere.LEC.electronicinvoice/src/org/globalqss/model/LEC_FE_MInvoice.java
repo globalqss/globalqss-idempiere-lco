@@ -30,12 +30,9 @@ import org.compiere.model.MTable;
 import org.compiere.util.AdempiereUserError;
 import org.compiere.util.DB;
 import org.compiere.util.Env;
-import org.xml.sax.helpers.AttributesImpl;
-
 import org.globalqss.util.LEC_FE_Utils;
 import org.globalqss.util.LEC_FE_UtilsXml;
-
-import es.mityc.javasign.xades.examples.validations.BasicValidation;
+import org.xml.sax.helpers.AttributesImpl;
 
 
 /**
@@ -495,10 +492,6 @@ public class LEC_FE_MInvoice extends MInvoice
 			addHeaderElement(mmDoc, "infoAdicional", "TODO", atts);
 		mmDoc.endElement("","","infoAdicional");
 	
-		mmDoc.startElement("", "", "!-- INICIO DE LA FIRMA DIGITAL --", atts);
-			// TODO Firmar XML con Certificado
-			addHeaderElement(mmDoc, "Signature", "TODO", atts);
-		mmDoc.endElement("","","!-- FIN DE LA FIRMA DIGITAL --");
 		
 		mmDoc.endElement("","",f.get_ValueAsString("XmlPrintLabel"));
 		
@@ -517,7 +510,7 @@ public class LEC_FE_MInvoice extends MInvoice
 		signature.setPKCS12_Resource(folder + "/certs/my_pkcs12.p12");
 		signature.setPKCS12_Password("tlmqvtlcdme");
 		signature.setOutput_Directory(folder + File.separator + folderComprobantesFirmados);
-        signature.executeSign();
+        signature.execute();
         signature.getSignatureFileName();
         //file_name = folder + File.separator + folderComprobantesFirmados + File.separator+xmlFileName;
 		// TODO Enviar a Recepcion Comprobante SRI

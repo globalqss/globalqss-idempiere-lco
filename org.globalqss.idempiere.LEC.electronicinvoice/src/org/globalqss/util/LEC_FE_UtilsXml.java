@@ -21,8 +21,6 @@ import es.mityc.javasign.xml.refs.ObjectToSign;
 public class LEC_FE_UtilsXml extends GenericXMLSignature
 {
 	
-	String SIGN_FILE_NAME = PKCS12_Resource;
-	
 	public void main(String[] args) {
 		LEC_FE_UtilsXml signature = new LEC_FE_UtilsXml();
         signature.execute();
@@ -36,16 +34,10 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
         dataToSign.setEsquema(XAdESSchemas.XAdES_132);
         dataToSign.setXMLEncoding(XmlEncoding);
         dataToSign.setEnveloped(true);
-        Document docToSign = getDocument(PKCS12_Resource);
+        Document docToSign = getDocument(getResource_To_Sign());
         dataToSign.setDocument(docToSign);
         dataToSign.addObject(new ObjectToSign(new AllXMLToSign(), "Documento de ejemplo", null, "text/xml", null));
         return dataToSign;
     }
     
-    @Override
-    public String getSignatureFileName() {
-        return SIGN_FILE_NAME;
-    }
-
-	
 }	// LEC_FE_UtilsXml
