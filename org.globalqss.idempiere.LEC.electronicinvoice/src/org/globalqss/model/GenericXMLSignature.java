@@ -17,9 +17,12 @@
 package org.globalqss.model;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.io.StringWriter;
 import java.security.KeyStore;
 import java.security.KeyStoreException;
@@ -27,17 +30,21 @@ import java.security.NoSuchAlgorithmException;
 import java.security.PrivateKey;
 import java.security.Provider;
 import java.security.cert.CertificateException;
+import java.security.cert.CertificateFactory;
 import java.security.cert.X509Certificate;
 import java.util.List;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
+import org.adempiere.exceptions.AdempiereException;
+import org.globalqss.util.LEC_FE_UtilsXml;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
@@ -48,6 +55,7 @@ import es.mityc.javasign.issues.PassStoreKS;
 import es.mityc.javasign.pkstore.CertStoreException;
 import es.mityc.javasign.pkstore.IPKStoreManager;
 import es.mityc.javasign.pkstore.keystore.KSStore;
+import es.mityc.javasign.xades.examples.validations.BasicValidation;
 
 /**
  * <p>
@@ -59,13 +67,23 @@ import es.mityc.javasign.pkstore.keystore.KSStore;
 public abstract class GenericXMLSignature {
 
 	public String XmlEncoding = "";
-	
+
 	public String getXmlEncoding() {
 		return XmlEncoding;
 	}
 
 	public void setXmlEncoding(String xmlEncoding) {
-		this.XmlEncoding = xmlEncoding;
+		XmlEncoding = xmlEncoding;
+	}
+
+	public String Resource_To_Sign = "";
+	
+	public String getResource_To_Sign() {
+		return Resource_To_Sign;
+	}
+
+	public void setResource_To_Sign(String resource_To_Sign) {
+		Resource_To_Sign = resource_To_Sign;
 	}
 
 	/**
@@ -75,7 +93,7 @@ public abstract class GenericXMLSignature {
      */
     public String PKCS12_Resource = "";
 
-    public String getPKCS12_Resource() {
+	public String getPKCS12_Resource() {
 		return PKCS12_Resource;
 	}
 
@@ -88,9 +106,9 @@ public abstract class GenericXMLSignature {
      * Constraseña de acceso a la clave privada del usuario
      * </p>
      */
-    String PKCS12_Password = "usr0061";
+    String PKCS12_Password = "";
 
-    public String getPKCS12_Password() {
+	public String getPKCS12_Password() {
 		return PKCS12_Password;
 	}
 
@@ -103,7 +121,7 @@ public abstract class GenericXMLSignature {
      * Directorio donde se almacenará el resultado de la firma
      * </p>
      */
-    String Output_Directory = ".";
+    String Output_Directory = "/tmp";
 
     public String getOutput_Directory() {
 		return Output_Directory;
@@ -179,6 +197,62 @@ public abstract class GenericXMLSignature {
         String filePath = Output_Directory + File.separatorChar + getSignatureFileName();
         System.out.println("Firma salvada en en: " + filePath);
         saveDocumentToFile(docSigned, getSignatureFileName());
+    }
+    
+	/**
+     * <p>
+     * Ejecución del ejemplo. La ejecución consistirá en la firma de los datos
+     * creados por el método abstracto <code>createDataToSign</code> mediante el
+     * certificado declarado en la constante <code>PKCS12_Resource</code>. El
+     * resultado del proceso de firma será almacenado en un fichero XML en el
+     * directorio correspondiente a la constante <code>OUTPUT_DIRECTORY</code>
+     * del usuario bajo el nombre devuelto por el método abstracto
+     * <code>getSignFileName</code>
+     * </p>
+     */
+    public void executeSign() {
+    	
+        // Obtencion del certificado para firmar. Utilizando un arcchivo.
+    	X509Certificate certificate = null;
+    	
+    	try {
+	        InputStream inStream = new FileInputStream(PKCS12_Resource);
+	        CertificateFactory cf = CertificateFactory.getInstance("X.509");
+	        certificate = (X509Certificate) cf.generateCertificate(inStream);
+        } catch (Exception e) {
+        	throw new AdempiereException(e.getMessage());
+		}
+    	
+        // Obtención de la clave privada asociada al certificado
+        PrivateKey privateKey = null; //certificate.getPublicKey();
+        
+        // Obtención del provider encargado de las labores criptográficas
+        Provider provider = null; //certificate.getProvider();
+     	
+    	/*
+         * Creación del objeto que contiene tanto los datos a firmar como la
+         * configuración del tipo de firma
+         */
+        DataToSign dataToSign = createDataToSign();
+
+        /*
+         * Creación del objeto encargado de realizar la firma
+         */
+        FirmaXML firma = new FirmaXML();
+
+        // Firmamos el documento
+        Document docSigned = null;
+        try {
+            Object[] res = firma.signFile(certificate, dataToSign, privateKey, provider);
+            docSigned = (Document) res[0];
+        } catch (Exception ex) {
+        	throw new AdempiereException("Error realizando la firma");
+        }
+    	// Guardamos la firma a un fichero en el home del usuario
+        String filePath = Output_Directory + File.separatorChar + getSignatureFileName();
+        System.out.println("Firma salvada en en: " + filePath);
+        saveDocumentToFile(docSigned, getSignatureFileName());
+    	
     }
 
     /**
