@@ -35,6 +35,8 @@ import org.xml.sax.helpers.AttributesImpl;
 import org.globalqss.util.LEC_FE_Utils;
 import org.globalqss.util.LEC_FE_UtilsXml;
 
+import es.mityc.javasign.xades.examples.validations.BasicValidation;
+
 
 /**
  *	LEC_FE_MInvoice
@@ -323,7 +325,7 @@ public class LEC_FE_MInvoice extends MInvoice
 			// Numerico Max 14
 			addHeaderElement(mmDoc, "totalSinImpuestos", this.getTotalLines().toString(), atts);
 			// Numerico MAx 14
-			addHeaderElement(mmDoc, "totalDescuento", Env.ZERO.toString(), atts);
+			addHeaderElement(mmDoc, "totalDescuento", Env.ZERO.toString(), atts);	// TODO
 		mmDoc.endElement("","","infoFactura");
 		
 		// Impuestos
@@ -511,9 +513,11 @@ public class LEC_FE_MInvoice extends MInvoice
 		// TODO Firmar Comprobante XML
 		LEC_FE_UtilsXml signature = new LEC_FE_UtilsXml();
 		signature.setXmlEncoding(XmlEncoding);
-		signature.setPKCS12_Resource(file_name);
-		signature.setOutput_Directory(folderComprobantesFirmados);
-        //signature.execute();
+		signature.setResource_To_Sign(file_name);
+		signature.setPKCS12_Resource(folder + "/certs/my_pkcs12.p12");
+		signature.setPKCS12_Password("tlmqvtlcdme");
+		signature.setOutput_Directory(folder + File.separator + folderComprobantesFirmados);
+        signature.executeSign();
         signature.getSignatureFileName();
         //file_name = folder + File.separator + folderComprobantesFirmados + File.separator+xmlFileName;
 		// TODO Enviar a Recepcion Comprobante SRI
