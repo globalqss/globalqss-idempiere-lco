@@ -22,7 +22,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.io.StringWriter;
 import java.security.KeyStore;
 import java.security.KeyStoreException;
@@ -36,7 +35,6 @@ import java.util.List;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
@@ -44,7 +42,6 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
 import org.adempiere.exceptions.AdempiereException;
-import org.globalqss.util.LEC_FE_UtilsXml;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
@@ -55,7 +52,6 @@ import es.mityc.javasign.issues.PassStoreKS;
 import es.mityc.javasign.pkstore.CertStoreException;
 import es.mityc.javasign.pkstore.IPKStoreManager;
 import es.mityc.javasign.pkstore.keystore.KSStore;
-import es.mityc.javasign.xades.examples.validations.BasicValidation;
 
 /**
  * <p>
@@ -194,8 +190,7 @@ public abstract class GenericXMLSignature {
         }
 
         // Guardamos la firma a un fichero en el home del usuario
-        String filePath = Output_Directory + File.separatorChar + getSignatureFileName();
-        System.out.println("Firma salvada en en: " + filePath);
+        System.out.println("Firma salvada en: " + getSignatureFileName());
         saveDocumentToFile(docSigned, getSignatureFileName());
     }
     
@@ -279,7 +274,7 @@ public abstract class GenericXMLSignature {
      * @return El nombre donde se desea guardar la firma generada
      */
     public String getSignatureFileName() {
-    	return getSignatureFileName();
+    	return getResource_To_Sign() + "_sig.xml";
     }
 
     /**
@@ -299,7 +294,7 @@ public abstract class GenericXMLSignature {
         } catch (FileNotFoundException e) {
             System.err.println("Error al salvar el documento");
             e.printStackTrace();
-            System.exit(-1);
+            throw new AdempiereException(e);
         }
     }
 
@@ -316,7 +311,6 @@ public abstract class GenericXMLSignature {
      * @param pathfile
      *            El path del fichero donde se quiere escribir.
      */
-    @SuppressWarnings("unused")
     public void saveDocumentToFileUnsafeMode(Document document, String pathfile) {
         TransformerFactory tfactory = TransformerFactory.newInstance();
         Transformer serializer;
@@ -327,7 +321,7 @@ public abstract class GenericXMLSignature {
         } catch (TransformerException e) {
             System.err.println("Error al salvar el documento");
             e.printStackTrace();
-            System.exit(-1);
+            throw new AdempiereException(e);
         }
     }
 
@@ -346,23 +340,23 @@ public abstract class GenericXMLSignature {
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
         dbf.setNamespaceAware(true);
         try {
-            doc = dbf.newDocumentBuilder().parse(this.getClass().getResourceAsStream(resource));
+            doc = dbf.newDocumentBuilder().parse(new FileInputStream(resource));
         } catch (ParserConfigurationException ex) {
             System.err.println("Error al parsear el documento");
             ex.printStackTrace();
-            System.exit(-1);
+            throw new AdempiereException(ex);
         } catch (SAXException ex) {
             System.err.println("Error al parsear el documento");
             ex.printStackTrace();
-            System.exit(-1);
+            throw new AdempiereException(ex);
         } catch (IOException ex) {
             System.err.println("Error al parsear el documento");
             ex.printStackTrace();
-            System.exit(-1);
+            throw new AdempiereException(ex);
         } catch (IllegalArgumentException ex) {
             System.err.println("Error al parsear el documento");
             ex.printStackTrace();
-            System.exit(-1);
+            throw new AdempiereException(ex);
         }
         return doc;
     }
@@ -388,7 +382,7 @@ public abstract class GenericXMLSignature {
         } catch (TransformerException e) {
             System.err.println("Error al imprimir el documento");
             e.printStackTrace();
-            System.exit(-1);
+            throw new AdempiereException(e);
         }
 
         return stringWriter.toString();
@@ -405,24 +399,24 @@ public abstract class GenericXMLSignature {
         IPKStoreManager storeManager = null;
         try {
             KeyStore ks = KeyStore.getInstance("PKCS12");
-            ks.load(this.getClass().getResourceAsStream(PKCS12_Resource), PKCS12_Password.toCharArray());
+            ks.load(new FileInputStream(PKCS12_Resource), PKCS12_Password.toCharArray());
             storeManager = new KSStore(ks, new PassStoreKS(PKCS12_Password));
         } catch (KeyStoreException ex) {
             System.err.println("No se puede generar KeyStore PKCS12");
             ex.printStackTrace();
-            System.exit(-1);
+            throw new AdempiereException(ex);
         } catch (NoSuchAlgorithmException ex) {
             System.err.println("No se puede generar KeyStore PKCS12");
             ex.printStackTrace();
-            System.exit(-1);
+            throw new AdempiereException(ex);
         } catch (CertificateException ex) {
             System.err.println("No se puede generar KeyStore PKCS12");
             ex.printStackTrace();
-            System.exit(-1);
+            throw new AdempiereException(ex);
         } catch (IOException ex) {
             System.err.println("No se puede generar KeyStore PKCS12");
             ex.printStackTrace();
-            System.exit(-1);
+            throw new AdempiereException(ex);
         }
         return storeManager;
     }
@@ -443,11 +437,11 @@ public abstract class GenericXMLSignature {
             certs = storeManager.getSignCertificates();
         } catch (CertStoreException ex) {
             System.err.println("Fallo obteniendo listado de certificados");
-            System.exit(-1);
+            throw new AdempiereException(ex);
         }
         if ((certs == null) || (certs.size() == 0)) {
             System.err.println("Lista de certificados vacía");
-            System.exit(-1);
+            throw new AdempiereException("Lista de certificados vacía");
         }
 
         X509Certificate certificate = certs.get(0);
