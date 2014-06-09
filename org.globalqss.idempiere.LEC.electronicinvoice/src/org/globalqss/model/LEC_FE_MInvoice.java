@@ -511,8 +511,8 @@ public class LEC_FE_MInvoice extends MInvoice
 		signature.setPKCS12_Password("tlmqvtlcdme");
 		signature.setOutput_Directory(folder + File.separator + folderComprobantesFirmados);
         signature.execute();
-        signature.getSignatureFileName();
-        //file_name = folder + File.separator + folderComprobantesFirmados + File.separator+xmlFileName;
+        file_name = folder + File.separator + folderComprobantesFirmados + File.separator
+        		+ signature.getSignatureFileName().substring(signature.getSignatureFileName().lastIndexOf(File.separator) + 1);
 		// TODO Enviar a Recepcion Comprobante SRI
 		// TODO Procesar Solicitud Autorizacion SRI
 		// TODO Procesar Respuesta SRI

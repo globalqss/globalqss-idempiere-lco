@@ -29,7 +29,6 @@ import java.security.NoSuchAlgorithmException;
 import java.security.PrivateKey;
 import java.security.Provider;
 import java.security.cert.CertificateException;
-import java.security.cert.CertificateFactory;
 import java.security.cert.X509Certificate;
 import java.util.List;
 
@@ -180,6 +179,8 @@ public abstract class GenericXMLSignature {
 
         // Firmamos el documento
         Document docSigned = null;
+        String fileSigned = "";
+        
         try {
             Object[] res = firma.signFile(certificate, dataToSign, privateKey, provider);
             docSigned = (Document) res[0];
@@ -189,67 +190,12 @@ public abstract class GenericXMLSignature {
             return;
         }
 
-        // Guardamos la firma a un fichero en el home del usuario
-        System.out.println("Firma salvada en: " + getSignatureFileName());
-        saveDocumentToFile(docSigned, getSignatureFileName());
+        // Guardamos la firma a un fichero en el path indicado
+        fileSigned = getOutput_Directory() + File.separator + getSignatureFileName().substring(getSignatureFileName().lastIndexOf(File.separator) + 1);
+        System.out.println("Firma salvada en: " + fileSigned);
+        saveDocumentToFile(docSigned, fileSigned);
     }
     
-	/**
-     * <p>
-     * Ejecución del ejemplo. La ejecución consistirá en la firma de los datos
-     * creados por el método abstracto <code>createDataToSign</code> mediante el
-     * certificado declarado en la constante <code>PKCS12_Resource</code>. El
-     * resultado del proceso de firma será almacenado en un fichero XML en el
-     * directorio correspondiente a la constante <code>OUTPUT_DIRECTORY</code>
-     * del usuario bajo el nombre devuelto por el método abstracto
-     * <code>getSignFileName</code>
-     * </p>
-     */
-    public void executeSign() {
-    	
-        // Obtencion del certificado para firmar. Utilizando un arcchivo.
-    	X509Certificate certificate = null;
-    	
-    	try {
-	        InputStream inStream = new FileInputStream(PKCS12_Resource);
-	        CertificateFactory cf = CertificateFactory.getInstance("X.509");
-	        certificate = (X509Certificate) cf.generateCertificate(inStream);
-        } catch (Exception e) {
-        	throw new AdempiereException(e.getMessage());
-		}
-    	
-        // Obtención de la clave privada asociada al certificado
-        PrivateKey privateKey = null; //certificate.getPublicKey();
-        
-        // Obtención del provider encargado de las labores criptográficas
-        Provider provider = null; //certificate.getProvider();
-     	
-    	/*
-         * Creación del objeto que contiene tanto los datos a firmar como la
-         * configuración del tipo de firma
-         */
-        DataToSign dataToSign = createDataToSign();
-
-        /*
-         * Creación del objeto encargado de realizar la firma
-         */
-        FirmaXML firma = new FirmaXML();
-
-        // Firmamos el documento
-        Document docSigned = null;
-        try {
-            Object[] res = firma.signFile(certificate, dataToSign, privateKey, provider);
-            docSigned = (Document) res[0];
-        } catch (Exception ex) {
-        	throw new AdempiereException("Error realizando la firma");
-        }
-    	// Guardamos la firma a un fichero en el home del usuario
-        String filePath = Output_Directory + File.separatorChar + getSignatureFileName();
-        System.out.println("Firma salvada en en: " + filePath);
-        saveDocumentToFile(docSigned, getSignatureFileName());
-    	
-    }
-
     /**
      * <p>
      * Crea el objeto DataToSign que contiene toda la información de la firma
@@ -397,9 +343,12 @@ public abstract class GenericXMLSignature {
      */
     public IPKStoreManager getPKStoreManager() {
         IPKStoreManager storeManager = null;
+        InputStream inStream = null;
         try {
-            KeyStore ks = KeyStore.getInstance("PKCS12");
-            ks.load(new FileInputStream(PKCS12_Resource), PKCS12_Password.toCharArray());
+        	KeyStore ks = KeyStore.getInstance("PKCS12");
+        	// Obtencion del certificado para firmar. Utilizando un archivo
+        	inStream = new FileInputStream(PKCS12_Resource);
+            ks.load(inStream, PKCS12_Password.toCharArray());
             storeManager = new KSStore(ks, new PassStoreKS(PKCS12_Password));
         } catch (KeyStoreException ex) {
             System.err.println("No se puede generar KeyStore PKCS12");
@@ -418,6 +367,13 @@ public abstract class GenericXMLSignature {
             ex.printStackTrace();
             throw new AdempiereException(ex);
         }
+        
+        try {
+        	 inStream.close();
+        } catch (Exception e) {
+        	throw new AdempiereException(e.getMessage());
+		}
+       
         return storeManager;
     }
 
