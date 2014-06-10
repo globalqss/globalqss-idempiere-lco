@@ -133,10 +133,14 @@ public class LEC_FE_Validator implements ModelValidator
 		// after completing SO inout process electronic inout
 		if (po.get_TableName().equals(MInOut.Table_Name) && timing == TIMING_AFTER_COMPLETE) {
 			MInOut inout = (MInOut)po;
-				//
-				msg = inoutGenerateXml(inout);
-				if (msg != null)
-					return msg;
+			//
+			msg = inoutGenerateXml(inout);
+			if (msg != null)
+				return msg;
+			//
+			msg = inoutAuthoriseXml(inout);
+			if (msg != null)
+				return msg;
 		
 		}
 
@@ -247,10 +251,10 @@ public class LEC_FE_Validator implements ModelValidator
 			}
 		}
 		
-		//LEC_FE_MInOut lecfeinv = new LEC_FE_MInOut(inout.getCtx(), inout.getC_Invoice_ID(), inout.get_TrxName());
+		LEC_FE_MInOut lecfeinout = new LEC_FE_MInOut(inout.getCtx(), inout.getM_InOut_ID(), inout.get_TrxName());
 		// isSOTrx()
 		if (shortdoctype.equals("06"))	// GUÍA DE REMISIÓN 
-			msg = "TODO";	//lecfeinout.lecfeinout_SriExportInOutXML100();
+			msg = lecfeinout.lecfeinv_SriExportInOutXML100();
 		else
 			return null;	// "Formato no soportado: " + shortdoctype;
 			
@@ -261,21 +265,23 @@ public class LEC_FE_Validator implements ModelValidator
 	}
 
 	
-	private String invoiceSignXml (MInvoice inv) {
+	private String invoiceAuthoriseXml (MInvoice inv) {
 		
-		String msg = "Firmando XML";
+		String msg = "Autorizando XML";
 		log.info("Invoice: " + inv);
 		if (!ADialog.ask(0, null, msg)) {
 			return "Canceled...";
 		}
 		
-		return null;
+
+		//return "Simulando...";	// Rollback
+		return null; //	Ok
 	}
 	
-	private String invoiceAuthoriseXml (MInvoice inv) {
+	private String inoutAuthoriseXml (MInOut inout) {
 		
 		String msg = "Autorizando XML";
-		log.info("Invoice: " + inv);
+		log.info("InOut: " + inout);
 		if (!ADialog.ask(0, null, msg)) {
 			return "Canceled...";
 		}
