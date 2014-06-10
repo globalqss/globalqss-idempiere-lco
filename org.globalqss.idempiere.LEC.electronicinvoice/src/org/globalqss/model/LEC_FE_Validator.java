@@ -124,10 +124,6 @@ public class LEC_FE_Validator implements ModelValidator
 			if (msg != null)
 				return msg;
 			//
-			msg = invoiceSignXml(invoice);
-			if (msg != null)
-				return msg;
-			//
 			msg = invoiceAuthoriseXml(invoice);
 			if (msg != null)
 				return msg;

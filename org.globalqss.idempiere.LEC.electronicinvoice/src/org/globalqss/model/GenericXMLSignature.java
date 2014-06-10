@@ -368,10 +368,10 @@ public abstract class GenericXMLSignature {
             throw new AdempiereException(ex);
         }
         
-        try {
-        	 inStream.close();
-        } catch (Exception e) {
-        	throw new AdempiereException(e.getMessage());
+        if (inStream != null) {
+			try {
+				inStream.close();
+			} catch (Exception e2) {}
 		}
        
         return storeManager;

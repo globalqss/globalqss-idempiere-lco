@@ -59,6 +59,7 @@ public class LEC_FE_MInvoice extends MInvoice
 	private static String folderComprobantesAutorizados = "ComprobantesAutorizados";
 	private static String folderComprobantesNoAutorizados = "ComprobantesNoAutorizados";
 	private static String XmlEncoding = "UTF-8";
+	private String m_pkcs12_resource = "";
 	private String file_name = "";
 	private String m_tipoclaveacceso = "1";	// 1-Automatica, 2-Contingencia
 	private String m_tipoambiente = "2";	// 1-Pruebas, 2-Produccion
@@ -77,10 +78,12 @@ public class LEC_FE_MInvoice extends MInvoice
 	private boolean isOnTesting = false;
 	private boolean isAttachXML = false;
 	
+	private BigDecimal m_totaldescuento = Env.ZERO;
 	private BigDecimal m_totalbaseimponible = Env.ZERO;
 	private BigDecimal m_totalvalorimpuesto = Env.ZERO;
-	private BigDecimal m_baseimponible = Env.ZERO;
-	private BigDecimal m_valorimpuesto = Env.ZERO;
+	private BigDecimal m_sumadescuento = Env.ZERO;
+	private BigDecimal m_sumabaseimponible = Env.ZERO;
+	private BigDecimal m_sumavalorimpuesto = Env.ZERO;
 	
 	public LEC_FE_MInvoice(Properties ctx, int C_Invoice_ID, String trxName) {
 		super(ctx, C_Invoice_ID, trxName);
@@ -103,6 +106,11 @@ public class LEC_FE_MInvoice extends MInvoice
 		m_identificacionconsumidor=MSysConfig.getValue("QSSLEC_FE_IdentificacionConsumidorFinal", null, getAD_Client_ID());
 		
 		m_razonsocial=MSysConfig.getValue("QSSLEC_FE_RazonSocialPruebas", null, getAD_Client_ID());
+		
+		m_pkcs12_resource=MSysConfig.getValue("QSSLEC_FE_RutaCertificadoDigital", null, getAD_Client_ID(), getAD_Org_ID());
+		
+		if ( m_pkcs12_resource.equals(""))
+			throw new AdempiereUserError("No existe parametro para RutaCertificadoDigital");
 		
 		folder=MSysConfig.getValue("QSSLEC_FE_RutaGeneracionXml", null, getAD_Client_ID());	// Segun SysConfig + Formato
 		
@@ -175,6 +183,8 @@ public class LEC_FE_MInvoice extends MInvoice
 			m_identificacioncomprador = m_identificacionconsumidor;
 		
 		m_guiaremision = DB.getSQLValueString(get_TrxName(), "SELECT M_InOut_AllGuias FROM C_Invoice_Header_VT WHERE C_Invoice_ID = ? ", getC_Invoice_ID());
+		
+		m_totaldescuento = DB.getSQLValueBD(get_TrxName(), "SELECT COALESCE(SUM(ilt.discount), 0) FROM c_invoice_linetax_vt ilt WHERE ilt.C_Invoice_ID = ? ", getC_Invoice_ID());
 		
 		m_accesscode = ""
 			+ String.format("%8s", LEC_FE_Utils.getDate(getDateInvoiced(),8))	// fechaEmision
@@ -320,10 +330,9 @@ public class LEC_FE_MInvoice extends MInvoice
 			addHeaderElement(mmDoc, "identificacionComprador", (LEC_FE_Utils.fillString(13 - (LEC_FE_Utils.cutString(m_identificacioncomprador, 13)).length(), '0'))
 					+ LEC_FE_Utils.cutString(m_identificacioncomprador,13), atts);
 			// Numerico Max 14
-			addHeaderElement(mmDoc, "totalSinImpuestos", this.getTotalLines().toString(), atts);
+			addHeaderElement(mmDoc, "totalSinImpuestos", getTotalLines().toString(), atts);
 			// Numerico MAx 14
-			addHeaderElement(mmDoc, "totalDescuento", Env.ZERO.toString(), atts);	// TODO
-		mmDoc.endElement("","","infoFactura");
+			addHeaderElement(mmDoc, "totalDescuento", m_totaldescuento.toString(), atts);
 		
 		// Impuestos
 		mmDoc.startElement("","","totalConImpuestos",atts);
@@ -384,6 +393,15 @@ public class LEC_FE_MInvoice extends MInvoice
 		}
 		
 		mmDoc.endElement("","","totalConImpuestos");
+		
+		// Numerico Max 14
+		addHeaderElement(mmDoc, "propina", Env.ZERO.toString(), atts);
+		// Numerico Max 14
+		addHeaderElement(mmDoc, "importeTotal", m_totalvalorimpuesto.toString(), atts);
+		// Alfanumerico MAx 25
+		addHeaderElement(mmDoc, "moneda", getCurrencyISO(), atts);
+		
+		mmDoc.endElement("","","infoFactura");
 				
 		// Detalles
 		mmDoc.startElement("","","detalles",atts);
@@ -403,6 +421,7 @@ public class LEC_FE_MInvoice extends MInvoice
 				+ ", t.rate AS tarifa "
 				+ ", ilt.linenetamt AS baseImponible "
 				+ ", ROUND(ilt.linenetamt * t.rate / 100, 2) AS valor "
+				+ ", il.description AS description1 "
 	            + "FROM C_Invoice i "
 	            + "JOIN C_InvoiceLine il ON il.C_Invoice_ID = i.C_Invoice_ID "
 	            + "JOIN C_Invoice_LineTax_VT ilt ON ilt.C_InvoiceLine_ID = il.C_InvoiceLine_ID "
@@ -425,11 +444,11 @@ public class LEC_FE_MInvoice extends MInvoice
 				mmDoc.startElement("","","detalle",atts);
 				
 				// Alfanumerico MAx 25
-				addHeaderElement(mmDoc, "codigoPrincipal", rs.getString(2), atts);
+				addHeaderElement(mmDoc, "codigoPrincipal",  LEC_FE_Utils.cutString(rs.getString(2),25), atts);
 				// Alfanumerico MAx 25
-				addHeaderElement(mmDoc, "codigoAuxiliar", rs.getString(3), atts);
+				addHeaderElement(mmDoc, "codigoAuxiliar", LEC_FE_Utils.cutString(rs.getString(3),25), atts);
 				// Alfanumerico Max 300
-				addHeaderElement(mmDoc, "descripcion", rs.getString(4), atts);
+				addHeaderElement(mmDoc, "descripcion", LEC_FE_Utils.cutString(rs.getString(4),300), atts);
 				// Numerico Max 14
 				addHeaderElement(mmDoc, "cantidad", rs.getBigDecimal(5).toString(), atts);
 				// Numerico Max 14
@@ -439,10 +458,18 @@ public class LEC_FE_MInvoice extends MInvoice
 				// Numerico Max 14
 				addHeaderElement(mmDoc, "precioTotalSinImpuesto", rs.getBigDecimal(8).toString(), atts);
 				
-				mmDoc.startElement("","","detallesAdicionales",atts);
-					addHeaderElement(mmDoc, "detAdicional", "TODO", atts);
-				mmDoc.endElement("","","detallesAdicionales");
+				if (rs.getString(14) != null)  {	// TODO Reviewme
+					mmDoc.startElement("","","detallesAdicionales",atts);
+					
+						atts.clear();
+						atts.addAttribute("", "", "descripcion1", "CDATA", LEC_FE_Utils.cutString(rs.getString(14),300));
+						mmDoc.startElement("", "", "detAdicional", atts);
+						mmDoc.endElement("","","detAdicional");
+						
+					mmDoc.endElement("","","detallesAdicionales");
+				}
 				
+				atts.clear();
 				//
 				mmDoc.startElement("","","impuestos",atts);
 					// TODO El mismo cursor de totalConImpuestos para Producto SIN GROUP BY ?
@@ -462,8 +489,9 @@ public class LEC_FE_MInvoice extends MInvoice
 				
 				mmDoc.endElement("","","detalle");
 				
-				m_baseimponible = m_baseimponible.add(rs.getBigDecimal(12));
-				m_valorimpuesto = m_valorimpuesto.add(rs.getBigDecimal(13));
+				m_sumadescuento = m_sumadescuento.add(rs.getBigDecimal(7));
+				m_sumabaseimponible = m_sumabaseimponible.add(rs.getBigDecimal(12));
+				m_sumavalorimpuesto = m_sumavalorimpuesto.add(rs.getBigDecimal(13));
 				
 			}
 			rs.close();
@@ -478,21 +506,17 @@ public class LEC_FE_MInvoice extends MInvoice
 		
 		mmDoc.endElement("","","detalles");
 		
-		if (m_baseimponible.compareTo(m_totalbaseimponible) != 0 ) {
-			msg = "Error Diferencia Base Impuesto Total: " + m_totalbaseimponible.toString() + " Detalles: " + m_baseimponible.toString();
-			throw new AdempiereException(msg);
-		}
-		
-		if (m_valorimpuesto.compareTo(m_totalvalorimpuesto) != 0 ) {
-			msg = "Error Diferencia Impuesto Total: " + m_totalvalorimpuesto.toString() + " Detalles: " + m_valorimpuesto.toString();
-			throw new AdempiereException(msg);
+		if (getDescription() != null)  {	// TODO Reviewme
+			mmDoc.startElement("","","infoAdicional",atts);
+			
+				atts.clear();
+				atts.addAttribute("", "", "descripcion2", "CDATA", LEC_FE_Utils.cutString(getDescription(),300));
+				mmDoc.startElement("", "", "campoAdicional", atts);
+				mmDoc.endElement("","","campoAdicional");
+			
+			mmDoc.endElement("","","infoAdicional");
 		}
 	
-		mmDoc.startElement("","","infoAdicional",atts);
-			addHeaderElement(mmDoc, "infoAdicional", "TODO", atts);
-		mmDoc.endElement("","","infoAdicional");
-	
-		
 		mmDoc.endElement("","",f.get_ValueAsString("XmlPrintLabel"));
 		
 		mmDoc.endDocument();
@@ -502,18 +526,34 @@ public class LEC_FE_MInvoice extends MInvoice
 				mmDocStream.close();
 			} catch (Exception e2) {}
 		}
+		
+		if (m_sumadescuento.compareTo(m_totaldescuento) != 0 ) {
+			msg = "Error Diferencia Descuento Total: " + m_totaldescuento.toString() + " Detalles: " + m_sumadescuento.toString();
+			throw new AdempiereException(msg);
+		}
+		if (m_sumabaseimponible.compareTo(m_totalbaseimponible) != 0 ) {
+			msg = "Error Diferencia Base Impuesto Total: " + m_totalbaseimponible.toString() + " Detalles: " + m_sumabaseimponible.toString();
+			throw new AdempiereException(msg);
+		}
+		
+		if (m_sumavalorimpuesto.compareTo(m_totalvalorimpuesto) != 0 ) {
+			msg = "Error Diferencia Impuesto Total: " + m_totalvalorimpuesto.toString() + " Detalles: " + m_sumavalorimpuesto.toString();
+			throw new AdempiereException(msg);
+		}
 	
-		// TODO Firmar Comprobante XML
+		log.warning("@Signing Xml@ -> " + file_name);
 		LEC_FE_UtilsXml signature = new LEC_FE_UtilsXml();
 		signature.setXmlEncoding(XmlEncoding);
 		signature.setResource_To_Sign(file_name);
-		signature.setPKCS12_Resource(folder + "/certs/my_pkcs12.p12");
+		signature.setPKCS12_Resource(m_pkcs12_resource);
 		signature.setPKCS12_Password("tlmqvtlcdme");
 		signature.setOutput_Directory(folder + File.separator + folderComprobantesFirmados);
         signature.execute();
         file_name = folder + File.separator + folderComprobantesFirmados + File.separator
         		+ signature.getSignatureFileName().substring(signature.getSignatureFileName().lastIndexOf(File.separator) + 1);
-		// TODO Enviar a Recepcion Comprobante SRI
+        
+        log.warning("@Sending Xml@ -> " + file_name);
+        // TODO Enviar a Recepcion Comprobante SRI
 		// TODO Procesar Solicitud Autorizacion SRI
 		// TODO Procesar Respuesta SRI
 		// TODO Enviar Email Cliente
