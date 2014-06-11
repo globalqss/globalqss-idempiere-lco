@@ -61,13 +61,52 @@ import es.mityc.javasign.pkstore.keystore.KSStore;
  */
 public abstract class GenericXMLSignature {
 
-	public String XmlEncoding = "";
+	/** Dir				*/
+	public String folderRaiz = "";
+	
+	public String getFolderRaiz() {
+		return folderRaiz;
+	}
 
-	public String getXmlEncoding() {
+	public void setFolderRaiz(String folderRaiz) {
+		this.folderRaiz = folderRaiz;
+	}
+
+	public static String folderComprobantesGenerados = "ComprobantesGenerados";
+	
+	public static String getFolderComprobantesGenerados() {
+		return folderComprobantesGenerados;
+	}
+
+	public static void setFolderComprobantesGenerados(
+			String folderComprobantesGenerados) {
+		GenericXMLSignature.folderComprobantesGenerados = folderComprobantesGenerados;
+	}
+
+	public static String folderComprobantesFirmados = "ComprobantesFirmados";
+	
+	
+	public static String getFolderComprobantesFirmados() {
+		return folderComprobantesFirmados;
+	}
+
+	public static void setFolderComprobantesFirmados(
+			String folderComprobantesFirmados) {
+		GenericXMLSignature.folderComprobantesFirmados = folderComprobantesFirmados;
+	}
+
+	public static String folderComprobantesTransmitidos = "ComprobantesTransmitidos";
+	public static String folderComprobantesRechazados = "ComprobantesRechazados";
+	public static String folderComprobantesAutorizados = "ComprobantesAutorizados";
+	public static String folderComprobantesNoAutorizados = "ComprobantesNoAutorizados";
+	
+	public static String XmlEncoding = "UTF-8";
+
+	public static String getXmlEncoding() {
 		return XmlEncoding;
 	}
 
-	public void setXmlEncoding(String xmlEncoding) {
+	public static void setXmlEncoding(String xmlEncoding) {
 		XmlEncoding = xmlEncoding;
 	}
 
@@ -101,7 +140,7 @@ public abstract class GenericXMLSignature {
      * Constraseña de acceso a la clave privada del usuario
      * </p>
      */
-    String PKCS12_Password = "";
+    public String PKCS12_Password = "tlmqvtlcdme";
 
 	public String getPKCS12_Password() {
 		return PKCS12_Password;
