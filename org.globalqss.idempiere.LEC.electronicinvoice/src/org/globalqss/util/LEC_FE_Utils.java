@@ -1,14 +1,20 @@
 package org.globalqss.util;
 
 import org.adempiere.exceptions.AdempiereException;
+import org.compiere.model.MAttachment;
+import org.compiere.model.MAttachmentEntry;
+import org.compiere.model.MTable;
 import org.compiere.util.DB;
 import org.compiere.util.Env;
 import org.compiere.util.Msg;
+import org.globalqss.model.X_SRI_Authorisation;
 
+import java.io.File;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Properties;
 
 
 /**
@@ -100,6 +106,8 @@ public class LEC_FE_Utils
 		
 		if (format == 8)
 			dateFormat = new SimpleDateFormat("ddMMyyyy");
+		if (format == 9)
+			dateFormat = new SimpleDateFormat("yyyyMMdd");
 		else if (format == 10)
 			dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 		else if (format == 19)
@@ -224,7 +232,56 @@ public class LEC_FE_Utils
 		}
 			
 		return accesscode;
-	
+		
 	}
+		
+	/**
+	 * 	String atachXmlFile
+	 * 	@return void
+	 */
+	public static void attachXmlFile(Properties ctx, String trxName, int sri_authorisation_id, String file_name) {
+		
+		LEC_FE_UtilsXml signature = new LEC_FE_UtilsXml();
+		
+		try {
+		int  AD_Table_ID = MTable.getTable_ID(X_SRI_Authorisation.Table_Name);
+		//if one attach is found , it means that a xml file was attached before
+		MAttachment attach =  MAttachment.get(ctx, AD_Table_ID, sri_authorisation_id);
+		//no se encontro archivo previo
+		if (attach == null ) {
+			attach = new  MAttachment(ctx, AD_Table_ID , sri_authorisation_id, trxName);
+			attach.addEntry(new File (file_name));
+			attach.saveEx();
+
+		} else {
+			// se encontro un archivo adjunto previamente
+			//toma el index  del penultimo archivo y lo renombra
+			//REVIEWME
+			int index = (attach.getEntryCount()-1);
+			MAttachmentEntry entry = attach.getEntry(index) ;
+			String renamed = signature.getFolderRaiz()+File.separator+entry.getName().substring(0,entry.getName().length()-4 )+"_old_"+ LEC_FE_Utils.getDate(null, 19) + ".xml";
+			entry.setName(renamed);
+			attach.saveEx();
+			//agrega el nuevo archivo ya q el anterior ha sido renombrado
+			attach.addEntry(new File (file_name));
+			attach.saveEx();
+		}
+		//DB.getSQLValue(get_TrxName(),"SELECT AD_Attachment_ID FROM AD_Attachment WHERE AD_Table_ID=? AND Record_ID=?",AD_Table_ID)
+	
+		// MAttachment
+		/*
+		  Si IsAttachXML
+	      Anexar el archivo XML al XML Header (probar con Archivador
+		  a ver si funciona, si no con Attachment)
+	      NOTA: ¿Que hacer si ya hay un archivo previo generado?
+		  Verificar si el archivador es read-only, y si podria renombrar
+		  un archivo previo generado para añadirle un sufijo _old_yyyymmdd
+		 */
+		
+		} catch (Exception e) {
+			throw new AdempiereException(Msg.getMsg(Env.getCtx(), "AttachmentNull"));
+		}
+	}
+	
 	
 }	// LEC_FE_Utils
