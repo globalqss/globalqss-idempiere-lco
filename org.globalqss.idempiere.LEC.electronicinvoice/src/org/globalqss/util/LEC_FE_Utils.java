@@ -1,6 +1,7 @@
 package org.globalqss.util;
 
 import org.adempiere.exceptions.AdempiereException;
+import org.compiere.util.DB;
 import org.compiere.util.Env;
 import org.compiere.util.Msg;
 
@@ -166,6 +167,63 @@ public class LEC_FE_Utils
 		else tipoidentificacionsri = "07"; 	// VENTA A CONSUMIDOR FINAL	// TODO Deprecated
 		
 		return tipoidentificacionsri;
+	
+	}
+	
+	/**
+	 * 	String getLecSriFormat
+	 * 	@return int
+	 */
+	public static int getLecSriFormat(int ad_client_id, String tipoemision, String coddoc, Date startdate, Date enddate) {
+	
+		int lec_sri_format_id = DB.getSQLValue(null, "SELECT MAX(LEC_SRI_Format_ID) FROM LEC_SRI_Format WHERE AD_Client_ID = ? AND IsActive = 'Y' AND SRI_DeliveredType = ? AND SRI_ShortDocType = ? AND ? >= ValidFrom AND ( ? <= ValidTo OR ValidTo IS NULL)", ad_client_id, tipoemision, coddoc, startdate, enddate);
+		
+		return lec_sri_format_id;
+
+	}
+	
+	/**
+	 * 	String getOrgBPartner
+	 * 	@return int
+	 */
+	public static int getOrgBPartner(int ad_client_id, String taxid) {
+	
+		int c_bpartner_id = DB.getSQLValue(null, "SELECT C_BPartner_ID FROM C_BPartner WHERE AD_Client_ID = ? AND TaxId = ? ", ad_client_id, taxid);
+		
+		return c_bpartner_id;
+
+	}
+	
+	/**
+	 * 	String getAccessCode
+	 * 	@return String
+	 */
+	public static String getAccessCode(Date docdate, String coddoc, String taxid, String tipoambiente, String orgcode, String storecode, String documentno, String documentcode, String tipoemision) {
+	
+		String accesscode;
+				
+		try {
+		accesscode = ""
+			+ String.format("%8s", getDate(docdate,8))		// fechaEmision
+			+ String.format("%2s", coddoc)								// codDoc
+			+ String.format("%13s", (fillString(13 - (cutString(taxid, 13)).length(), '0'))
+				+ cutString(taxid,13))						// ruc
+			+ String.format("%1s", tipoambiente)						// ambiente
+			+ String.format("%3s", orgcode)								// serie / estab
+			+ String.format("%3s", storecode)							// serie / ptoEmi
+			+ String.format("%9s", (fillString(9 - (cutString(getSecuencial(documentno, coddoc), 9)).length(), '0'))
+				+ cutString(getSecuencial(documentno, coddoc), 9))	// numero / secuencial
+			+ String.format("%8s", documentcode)						// codigo
+			+ String.format("%1s", tipoemision);						// tipoEmision
+
+			accesscode = accesscode
+				+ String.format("%1s", calculateDigitSri(accesscode));	// digito
+		
+		} catch (Exception e) {
+			throw new AdempiereException(Msg.getMsg(Env.getCtx(), "LCO_NotANumber"));
+		}
+			
+		return accesscode;
 	
 	}
 	
