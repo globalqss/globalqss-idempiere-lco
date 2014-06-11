@@ -192,7 +192,7 @@ public class LEC_FE_MInOut extends MInOut
 		ac.setIsUsed(true);
 		
 		if (!ac.save()) {
-			msg = "No se pudo grabar SRI Access Code";
+			msg = "@SaveError@ No se pudo grabar SRI Access Code";
 			throw new AdempiereException(msg);
 		}
 		
@@ -208,7 +208,7 @@ public class LEC_FE_MInOut extends MInOut
 		//a.setProcessed(true);
 		
 		if (!a.save()) {
-			msg = "No se pudo grabar SRI Autorizacion";
+			msg = "@SaveError@ No se pudo grabar SRI Autorizacion";
 			throw new AdempiereException(msg);
 		}
 		
@@ -217,7 +217,7 @@ public class LEC_FE_MInOut extends MInOut
 					
 		OutputStream  mmDocStream = null;
 				
-		String xmlFileName = "SRI_" + m_accesscode + ".xml";
+		String xmlFileName = "SRI_" + m_coddoc + "-" + LEC_FE_Utils.getDate(getMovementDate(),9) + "-" + m_accesscode + ".xml";
 	
 		//crea los directorios para los archivos xml
 		(new File(signature.getFolderRaiz() + File.separator + signature.getFolderComprobantesGenerados() + File.separator)).mkdirs();
@@ -446,42 +446,10 @@ public class LEC_FE_MInOut extends MInOut
 		// TODO Procesar Respuesta SRI
 		// TODO Enviar Email Cliente
 		
-		// TODO Atach XML Autorizado
-		if (isAttachXML) {
-			int  AD_Table_ID = MTable.getTable_ID(X_SRI_Authorisation.Table_Name);
-			//if one attach is found , it means that a xml file was attached before
-			MAttachment attach =  MAttachment.get(getCtx(),AD_Table_ID, a.getSRI_Authorisation_ID());
-			//no se encontro archivo previo
-			if (attach == null ) {
-				attach = new  MAttachment(getCtx(),AD_Table_ID , a.getSRI_Authorisation_ID(),get_TrxName());
-				attach.addEntry(new File (file_name));
-				attach.saveEx();
-	
-			} else {
-				// se encontro un archivo adjunto previamente
-				//toma el index  del penultimo archivo y lo renombra
-				//REVIEWME
-				int index = (attach.getEntryCount()-1);
-				MAttachmentEntry entry = attach.getEntry(index) ;
-				String renamed = signature.getFolderRaiz()+File.separator+entry.getName().substring(0,entry.getName().length()-4 )+"_old_"+ LEC_FE_Utils.getDate(null, 19) + ".xml";
-				entry.setName(renamed);
-				attach.saveEx();
-				//agrega el nuevo archivo ya q el anterior ha sido renombrado
-				attach.addEntry(new File (file_name));
-				attach.saveEx();
-			}
-			//DB.getSQLValue(get_TrxName(),"SELECT AD_Attachment_ID FROM AD_Attachment WHERE AD_Table_ID=? AND Record_ID=?",AD_Table_ID)
-		}
-		// MAttachment
-		/*
-		  Si IsAttachXML
-	      Anexar el archivo XML al XML Header (probar con Archivador
-		  a ver si funciona, si no con Attachment)
-	      NOTA: ¿Que hacer si ya hay un archivo previo generado?
-		  Verificar si el archivador es read-only, y si podria renombrar
-		  un archivo previo generado para añadirle un sufijo _old_yyyymmdd
-		 */
-	
+		// TODO Attach XML Autorizado
+		if (isAttachXML)
+			LEC_FE_Utils.attachXmlFile(getCtx(), get_TrxName(), a.getSRI_Authorisation_ID(), file_name);
+
 		}
 		catch (Exception e)
 		{
