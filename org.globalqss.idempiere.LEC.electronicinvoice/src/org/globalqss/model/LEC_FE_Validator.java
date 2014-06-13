@@ -217,11 +217,12 @@ public class LEC_FE_Validator implements ModelValidator
 		}
 		
 		LEC_FE_MInvoice lecfeinv = new LEC_FE_MInvoice(inv.getCtx(), inv.getC_Invoice_ID(), inv.get_TrxName());
+		LEC_FE_MNotaCredito lecfeinvnc = new LEC_FE_MNotaCredito(inv.getCtx(), inv.getC_Invoice_ID(), inv.get_TrxName());
 		// isSOTrx()
 		if (shortdoctype.equals("01"))	// FACTURA
 			msg = lecfeinv.lecfeinv_SriExportInvoiceXML100();
 		else if (shortdoctype.equals("04"))	// NOTA DE CRÉDITO	// TODO
-			msg = lecfeinv.lecfeinv_SriExportInvoiceXML100();
+			msg = lecfeinvnc.lecfeinvnc_SriExportNotaCreditoXML100();
 		else if (shortdoctype.equals("05"))	// NOTA DE DÉBITO	// TODO
 			msg = lecfeinv.lecfeinv_SriExportInvoiceXML100();
 		// !isSOTrx()
@@ -259,7 +260,7 @@ public class LEC_FE_Validator implements ModelValidator
 		LEC_FE_MInOut lecfeinout = new LEC_FE_MInOut(inout.getCtx(), inout.getM_InOut_ID(), inout.get_TrxName());
 		// isSOTrx()
 		if (shortdoctype.equals("06"))	// GUÍA DE REMISIÓN 
-			msg = lecfeinout.lecfeinv_SriExportInOutXML100();
+			msg = lecfeinout.lecfeinout_SriExportInOutXML100();
 		else
 			return null;	// "Formato no soportado: " + shortdoctype;
 			

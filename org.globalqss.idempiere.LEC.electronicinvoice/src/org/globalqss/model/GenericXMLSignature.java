@@ -54,7 +54,7 @@ import es.mityc.javasign.pkstore.keystore.KSStore;
 
 /**
  * <p>
- * Clase base que deberían extender los diferentes ejemplos para realizar firmas
+ * Clase base que instancian los diferentes comprobantes para realizar firmas
  * XML.
  * </p>
  * 
