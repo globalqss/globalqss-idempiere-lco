@@ -21,14 +21,19 @@ import org.compiere.apps.ADialog;
 import org.compiere.model.MClient;
 import org.compiere.model.MInvoice;
 import org.globalqss.model.LEC_FE_MInvoice;
+import org.globalqss.util.LCO_Utils;
+import org.globalqss.util.LEC_FE_Utils;
+import org.compiere.model.MBPartner;
 import org.compiere.model.MDocType;
 import org.compiere.model.MInOut;
+import org.compiere.model.MOrgInfo;
 import org.compiere.model.ModelValidationEngine;
 import org.compiere.model.ModelValidator;
 import org.compiere.model.PO;
 import org.compiere.util.AdempiereUserError;
 import org.compiere.util.CLogger;
 import org.compiere.util.Env;
+import org.compiere.util.Msg;
 
 
 /**
@@ -290,6 +295,46 @@ public class LEC_FE_Validator implements ModelValidator
 		//return "Simulando...";	// Rollback
 		return null; //	Ok
 	}
+	
+	/**
+	 * 	valideOrgInfoSri
+	 *	@param MOrgInfo orginfo
+	 *	@return error message or null
+	 */
+	public static String valideOrgInfoSri (MOrgInfo orginfo)
+	{
+		
+		String msg = null;
+		
+		int c_bpartner_id = LEC_FE_Utils.getOrgBPartner(orginfo.getAD_Client_ID(), orginfo.get_ValueAsString("TaxID"));
+		
+		if (c_bpartner_id < 1)
+			msg = "No existe BP relacionado a OrgInfo.Documento: " + orginfo.get_ValueAsString("TaxID");
+		else if (orginfo.get_ValueAsString("TaxID").equals(""))
+			msg = "No existe definicion OrgInfo.Documento: " + orginfo.toString();
+		else if (orginfo.get_ValueAsString("SRI_DocumentCode").equals(""))
+			msg = "No existe definicion OrgInfo.DocumentCode: " + orginfo.toString();
+		else if (orginfo.get_ValueAsString("SRI_OrgCode").equals(""))
+			msg = "No existe definicion OrgInfo.SRI_OrgCode: " + orginfo.toString();
+		else if (orginfo.get_ValueAsString("SRI_StoreCode").equals(""))
+			msg = "No existe definicion OrgInfo.SRI_StoreCode: " + orginfo.toString();
+		else if (orginfo.get_ValueAsString("SRI_DocumentCode").equals(""))
+			msg = "No existe definicion OrgInfo.SRI_DocumentCode: " + orginfo.toString();
+		else if (orginfo.get_ValueAsString("SRI_IsKeepAccounting").equals(""))
+			msg = "No existe definicion OrgInfo.SRI_IsKeepAccounting: " + orginfo.toString();
+		else if (orginfo.getC_Location_ID() == 0)
+			msg = "No existe definicion OrgInfo.Address1: " + orginfo.toString();
+		else {
+			MBPartner bpe = new MBPartner(orginfo.getCtx(), c_bpartner_id, orginfo.get_TrxName());
+			if ( (Integer) bpe.get_Value("LCO_TaxPayerType_ID") == 1000027)	// Hardcoded
+				if (orginfo.get_ValueAsString("SRI_TaxPayerCode").equals(""))
+					msg = "No existe definicion OrgInfo.SRI_TaxPayerCode: " + orginfo.toString();
+				;
+		}
+
+		return msg;
+		
+	}	//	valideOrgInfoSri
 	
 	
 }	//	LEC_FE_Validator

@@ -65,9 +65,7 @@ public class LEC_FE_MInOut extends MInOut
 	private String m_identificacioncomprador = "";
 	private String m_razonsocial = "";
 
-	private boolean isOnTesting = false;
-	private boolean isAttachXML = false;
-	
+
 	public LEC_FE_MInOut(Properties ctx, int M_InOut_ID, String trxName) {
 		super(ctx, M_InOut_ID, trxName);
 	}
@@ -82,11 +80,11 @@ public class LEC_FE_MInOut extends MInOut
 		try
 		{
 			
-		isOnTesting=MSysConfig.getBooleanValue("QSSLEC_FE_EnPruebas", false, getAD_Client_ID());
-		
-		if (isOnTesting) m_tipoambiente = "1";
-				
-		isAttachXML=MSysConfig.getBooleanValue("QSSLEC_FE_DebugEnvioRecepcion", false, getAD_Client_ID());
+		signature.setOnTesting(MSysConfig.getBooleanValue("QSSLEC_FE_EnPruebas", false, getAD_Client_ID()));
+			
+		if (signature.isOnTesting()) m_tipoambiente = "1";
+					
+		signature.setAttachXml(MSysConfig.getBooleanValue("QSSLEC_FE_DebugEnvioRecepcion", false, getAD_Client_ID()));
 		
 		m_identificacionconsumidor=MSysConfig.getValue("QSSLEC_FE_IdentificacionConsumidorFinal", null, getAD_Client_ID());
 		
@@ -120,40 +118,24 @@ public class LEC_FE_MInOut extends MInOut
 		// Emisor
 		MOrgInfo oi = MOrgInfo.get(getCtx(), getAD_Org_ID(), get_TrxName());
 		
-		MLocation lo = new MLocation(getCtx(), oi.getC_Location_ID(), get_TrxName());
+		msg = LEC_FE_Validator.valideOrgInfoSri (oi);
+		
+		if (msg != null)
+			throw new AdempiereUserError(msg);
 		
 		if ( (Boolean) oi.get_Value("SRI_IsKeepAccounting"))
 			m_obligadocontabilidad = "SI";
 		
-		if (oi.get_ValueAsString("TaxID").equals(""))
-			throw new AdempiereUserError("No existe definicion OrgInfo.Documento: " + oi.toString());
-		if (oi.get_ValueAsString("SRI_DocumentCode").equals(""))
-			throw new AdempiereUserError("No existe definicion OrgInfo.DocumentCode: " + oi.toString());
 		int c_bpartner_id = LEC_FE_Utils.getOrgBPartner(getAD_Client_ID(), oi.get_ValueAsString("TaxID"));
-		if (c_bpartner_id < 1)
-			throw new AdempiereUserError("No existe BP relacioando a OrgInfo.Documento: " + oi.get_ValueAsString("TaxID"));
-		if (oi.get_ValueAsString("SRI_OrgCode").equals(""))
-			throw new AdempiereUserError("No existe definicion  OrgInfo.SRI_OrgCode: " + oi.toString());
-		if (oi.get_ValueAsString("SRI_StoreCode").equals(""))
-			throw new AdempiereUserError("No existe definicion  OrgInfo.SRI_StoreCode: " + oi.toString());
-		if (oi.get_ValueAsString("SRI_DocumentCode").equals(""))
-			throw new AdempiereUserError("No existe definicion  OrgInfo.SRI_DocumentCode: " + oi.toString());
-		if (oi.get_ValueAsString("SRI_IsKeepAccounting").equals(""))
-			throw new AdempiereUserError("No existe definicion  OrgInfo.SRI_IsKeepAccounting: " + oi.toString());
-		if (oi.getC_Location_ID() == 0)
-			throw new AdempiereUserError("No existe definicion  OrgInfo.Address1: " + oi.toString());
-				
 		MBPartner bpe = new MBPartner(getCtx(), c_bpartner_id, get_TrxName());
-		if ( (Integer) bpe.get_Value("LCO_TaxPayerType_ID") == 1000027)	// Hardcoded
-			if (oi.get_ValueAsString("SRI_TaxPayerCode").equals(""))
-				throw new AdempiereUserError("No existe definicion  OrgInfo.SRI_TaxPayerCode: " + oi.toString());
-			;
-			
+		
+		MLocation lo = new MLocation(getCtx(), oi.getC_Location_ID(), get_TrxName());
+		
 		MLocation lw = new MLocation(getCtx(), getM_Warehouse().getC_Location_ID(), get_TrxName());
 		
 		// Comprador
 		MBPartner bp = new MBPartner(getCtx(), getC_BPartner_ID(), get_TrxName());
-		if (!isOnTesting) m_razonsocial = bp.getName();
+		if (!signature.isOnTesting()) m_razonsocial = bp.getName();
 		
 		MLocation bpl = new MLocation(getCtx(), getC_BPartner_Location().getC_Location_ID(), get_TrxName());	// TODO Reviewme
 		
@@ -447,7 +429,7 @@ public class LEC_FE_MInOut extends MInOut
 		// TODO Enviar Email Cliente
 		
 		// TODO Attach XML Autorizado
-		if (isAttachXML)
+		if (signature.isAttachXml())
 			LEC_FE_Utils.attachXmlFile(getCtx(), get_TrxName(), a.getSRI_Authorisation_ID(), file_name);
 
 		}
