@@ -4,11 +4,10 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
-import java.sql.Date;
+import java.math.BigDecimal;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Timestamp;
 import java.util.Properties;
 import java.util.logging.Level;
 
@@ -21,12 +20,13 @@ import javax.xml.transform.stream.StreamResult;
 import org.adempiere.exceptions.AdempiereException;
 import org.compiere.model.MBPartner;
 import org.compiere.model.MDocType;
-import org.compiere.model.MInOut;
+import org.compiere.model.MInvoice;
 import org.compiere.model.MLocation;
 import org.compiere.model.MOrgInfo;
 import org.compiere.model.MSysConfig;
 import org.compiere.util.AdempiereUserError;
 import org.compiere.util.DB;
+import org.compiere.util.Env;
 import org.globalqss.util.LEC_FE_Utils;
 import org.globalqss.util.LEC_FE_UtilsXml;
 import org.xml.sax.helpers.AttributesImpl;
@@ -36,9 +36,9 @@ import org.xml.sax.helpers.AttributesImpl;
  *	LEC_FE_MInvoice
  *
  *  @author Carlos Ruiz - globalqss - Quality Systems & Solutions - http://globalqss.com 
- *  @version  $Id: LEC_FE_MInOut.java,v 1.0 2014/05/06 03:37:29 cruiz Exp $
+ *  @version  $Id: LEC_FE_MNotaCredito.java,v 1.0 2014/05/06 03:37:29 cruiz Exp $
  */
-public class LEC_FE_MInOut extends MInOut
+public class LEC_FE_MNotaDebito extends MInvoice
 {
 	/**
 	 * 
@@ -57,16 +57,22 @@ public class LEC_FE_MInOut extends MInOut
 	private String m_accesscode;
 	private String m_identificacionconsumidor = "";
 	private String m_tipoidentificacioncomprador = "";
-	private String m_tipoidentificaciontransportista = "";
 	private String m_identificacioncomprador = "";
 	private String m_razonsocial = "";
+	private String m_guiaremision = "";
 
-
-	public LEC_FE_MInOut(Properties ctx, int M_InOut_ID, String trxName) {
-		super(ctx, M_InOut_ID, trxName);
+	private BigDecimal m_totaldescuento = Env.ZERO;
+	private BigDecimal m_totalbaseimponible = Env.ZERO;
+	private BigDecimal m_totalvalorimpuesto = Env.ZERO;
+	private BigDecimal m_sumadescuento = Env.ZERO;
+	private BigDecimal m_sumabaseimponible = Env.ZERO;
+	private BigDecimal m_sumavalorimpuesto = Env.ZERO;
+	
+	public LEC_FE_MNotaDebito(Properties ctx, int C_Invoice_ID, String trxName) {
+		super(ctx, C_Invoice_ID, trxName);
 	}
 	
-	public String lecfeinout_SriExportInOutXML100 ()
+	public String lecfeinvnd_SriExportNotaDebitoXML100 ()
 	{
 		
 		String msg = null;	// TODO Reviewe No completar if error
@@ -77,9 +83,9 @@ public class LEC_FE_MInOut extends MInOut
 		{
 			
 		signature.setOnTesting(MSysConfig.getBooleanValue("QSSLEC_FE_EnPruebas", false, getAD_Client_ID()));
-			
+		
 		if (signature.isOnTesting()) m_tipoambiente = "1";
-					
+				
 		signature.setAttachXml(MSysConfig.getBooleanValue("QSSLEC_FE_DebugEnvioRecepcion", false, getAD_Client_ID()));
 		
 		m_identificacionconsumidor=MSysConfig.getValue("QSSLEC_FE_IdentificacionConsumidorFinal", null, getAD_Client_ID());
@@ -96,7 +102,7 @@ public class LEC_FE_MInOut extends MInOut
 		if (signature.getFolderRaiz() == null)
 			throw new AdempiereUserError("No existe parametro para Ruta Generacion Xml");
 		
-		MDocType dt = new MDocType(getCtx(), getC_DocType_ID(), get_TrxName());
+		MDocType dt = new MDocType(getCtx(), getC_DocTypeTarget_ID(), get_TrxName());
 		
 		m_coddoc = dt.get_ValueAsString("SRI_ShortDocType");
 		
@@ -104,8 +110,8 @@ public class LEC_FE_MInOut extends MInOut
 			throw new AdempiereUserError("No existe definicion SRI_ShortDocType: " + dt.toString());
 		
 		// Formato
-		m_lec_sri_format_id = LEC_FE_Utils.getLecSriFormat(getAD_Client_ID(), m_tipoemision, m_coddoc, getMovementDate(), getMovementDate());
-		
+		m_lec_sri_format_id = LEC_FE_Utils.getLecSriFormat(getAD_Client_ID(), m_tipoemision, m_coddoc, getDateInvoiced(), getDateInvoiced());
+				
 		if ( m_lec_sri_format_id < 1)
 			throw new AdempiereUserError("No existe formato para el comprobante");
 		
@@ -127,13 +133,9 @@ public class LEC_FE_MInOut extends MInOut
 		
 		MLocation lo = new MLocation(getCtx(), oi.getC_Location_ID(), get_TrxName());
 		
-		MLocation lw = new MLocation(getCtx(), getM_Warehouse().getC_Location_ID(), get_TrxName());
-		
 		// Comprador
 		MBPartner bp = new MBPartner(getCtx(), getC_BPartner_ID(), get_TrxName());
 		if (!signature.isOnTesting()) m_razonsocial = bp.getName();
-		
-		MLocation bpl = new MLocation(getCtx(), getC_BPartner_Location().getC_Location_ID(), get_TrxName());	// TODO Reviewme
 		
 		X_LCO_TaxIdType ttc = new X_LCO_TaxIdType(getCtx(), (Integer) bp.get_Value("LCO_TaxIdType_ID"), get_TrxName());
 		
@@ -145,18 +147,15 @@ public class LEC_FE_MInOut extends MInOut
 		if (tt.getLCO_TaxIdType_ID() == 1000011)	// Hardcoded F Final	// TODO Deprecated
 			m_identificacioncomprador = m_identificacionconsumidor;
 		
-		// Transportista
-		MBPartner bpt = new MBPartner(getCtx(), getM_Shipper().getC_BPartner_ID(), get_TrxName());
+		X_LCO_TaxPayerType tp = new X_LCO_TaxPayerType(getCtx(), (Integer) bp.get_Value("LCO_TaxPayerType_ID"), get_TrxName());
 		
-		X_LCO_TaxIdType ttt = new X_LCO_TaxIdType(getCtx(), (Integer) bpt.get_Value("LCO_TaxIdType_ID"), get_TrxName());
+		m_guiaremision = DB.getSQLValueString(get_TrxName(), "SELECT M_InOut_AllGuias FROM C_Invoice_Header_VT WHERE C_Invoice_ID = ? ", getC_Invoice_ID());
 		
-		X_LCO_TaxPayerType tpt = new X_LCO_TaxPayerType(getCtx(), (Integer) bpt.get_Value("LCO_TaxPayerType_ID"), get_TrxName());
-		
-		m_tipoidentificaciontransportista = LEC_FE_Utils.getTipoIdentificacionSri(ttt.get_Value("LEC_TaxCodeSRI").toString());
+		m_totaldescuento = DB.getSQLValueBD(get_TrxName(), "SELECT COALESCE(SUM(ilt.discount), 0) FROM c_invoice_linetax_vt ilt WHERE ilt.C_Invoice_ID = ? ", getC_Invoice_ID());
 
-		m_accesscode = LEC_FE_Utils.getAccessCode(getMovementDate(), m_coddoc, bpe.getTaxID(), m_tipoambiente, oi.get_ValueAsString("SRI_OrgCode"), oi.get_ValueAsString("SRI_StoreCode"), getDocumentNo(), oi.get_ValueAsString("SRI_DocumentCode"), m_tipoemision);
-		
-		// TODO IsUseContingency
+		m_accesscode = LEC_FE_Utils.getAccessCode(getDateInvoiced(), m_coddoc, bpe.getTaxID(), m_tipoambiente, oi.get_ValueAsString("SRI_OrgCode"), oi.get_ValueAsString("SRI_StoreCode"), getDocumentNo(), oi.get_ValueAsString("SRI_DocumentCode"), m_tipoemision);
+			
+			// TODO IsUseContingency
 		// if (IsUseContingency) m_tipoclaveacceso = "2";
 		
 		// New Auto Access Code
@@ -194,8 +193,8 @@ public class LEC_FE_MInOut extends MInOut
 		this.saveEx();	// TODO Revieme
 					
 		OutputStream  mmDocStream = null;
-				
-		String xmlFileName = "SRI_" + m_coddoc + "-" + LEC_FE_Utils.getDate(getMovementDate(),9) + "-" + m_accesscode + ".xml";
+		
+		String xmlFileName = "SRI_" + m_coddoc + "-" + LEC_FE_Utils.getDate(getDateInvoiced(),9) + "-" + m_accesscode + ".xml";
 	
 		//crea los directorios para los archivos xml
 		(new File(signature.getFolderRaiz() + File.separator + signature.getFolderComprobantesGenerados() + File.separator)).mkdirs();
@@ -259,120 +258,124 @@ public class LEC_FE_MInOut extends MInOut
 			// Numerico9
 			addHeaderElement(mmDoc, "secuencial", (LEC_FE_Utils.fillString(9 - (LEC_FE_Utils.cutString(LEC_FE_Utils.getSecuencial(getDocumentNo(), m_coddoc), 9)).length(), '0'))
 					+ LEC_FE_Utils.cutString(LEC_FE_Utils.getSecuencial(getDocumentNo(), m_coddoc), 9), atts);
-			// Alfanumerico Max 300
+			// dirMatriz ,Alfanumerico Max 300
 			addHeaderElement(mmDoc, "dirMatriz", lo.getAddress1(), atts);
 		mmDoc.endElement("","","infoTributaria");
 		
-		mmDoc.startElement("","","infoGuiaRemision",atts);
+		mmDoc.startElement("","","infoNotaDebito",atts);
 		// Emisor
+			// Fecha8 ddmmaaaa
+			addHeaderElement(mmDoc, "fechaEmision", LEC_FE_Utils.getDate(getDateInvoiced(),10), atts);
 			// Alfanumerico Max 300
 			addHeaderElement(mmDoc, "dirEstablecimiento", lo.getAddress1(), atts);
-			// Alfanumerico Max 300
-			addHeaderElement(mmDoc, "dirPartida", lw.getAddress1(), atts);	// TODO Reviewme
-		// Transportista
-			// Alfanumerico Max 300
-			addHeaderElement(mmDoc, "razonSocialTransportista", bpt.getName(), atts);
+		// Comprador
 			// Numerico2
-			addHeaderElement(mmDoc, "tipoIdentificacionTransportista", m_tipoidentificaciontransportista, atts);
+			addHeaderElement(mmDoc, "tipoIdentificacionComprador", m_tipoidentificacioncomprador, atts);
+			// Alfanumerico Max 300
+			addHeaderElement(mmDoc, "razonSocialComprador", m_razonsocial, atts);
 			// Numerico13
-			addHeaderElement(mmDoc, "rucTransportista", (LEC_FE_Utils.fillString(13 - (LEC_FE_Utils.cutString(bpt.getTaxID(), 13)).length(), '0'))
-					+ LEC_FE_Utils.cutString(m_identificacioncomprador,13), atts);			
-			// Alfanumerico Max 40
-			addHeaderElement(mmDoc, "rise", LEC_FE_Utils.cutString(tpt.getName(), 40), atts);
-			// Texto2
-			addHeaderElement(mmDoc, "obligadoContabilidad", m_obligadocontabilidad, atts);
+			addHeaderElement(mmDoc, "identificacionComprador", (LEC_FE_Utils.fillString(13 - (LEC_FE_Utils.cutString(m_identificacioncomprador, 13)).length(), '0'))
+					+ LEC_FE_Utils.cutString(m_identificacioncomprador,13), atts);
 			// Numerico3-5
 			addHeaderElement(mmDoc, "contribuyenteEspecial", oi.get_ValueAsString("SRI_TaxPayerCode"), atts);
-			// Fecha8 ddmmaaaa
-			addHeaderElement(mmDoc, "fechaIniTransporte", LEC_FE_Utils.getDate(getShipDate(),10), atts);
-			Timestamp datets = (Timestamp) get_Value("ShipDateE");
-			Date dates = new Date(datets.getTime()); 
-			// Fecha8 ddmmaaaa
-			addHeaderElement(mmDoc, "fechaFinTransporte", LEC_FE_Utils.getDate(dates,10), atts);
-			// Alfanumerico Max 20
-			addHeaderElement(mmDoc, "placa", LEC_FE_Utils.cutString(getM_Shipper().getName(), 40), atts);
-			
-		mmDoc.endElement("","","infoGuiaRemision");	
-		
-		// Destinatarios
-		mmDoc.startElement("","","destinatarios",atts);
-		
-			mmDoc.startElement("","","destinatario",atts);
-			
-			// Numerico13
-			addHeaderElement(mmDoc, "identificacionDestinatario", (LEC_FE_Utils.fillString(13 - (LEC_FE_Utils.cutString(bp.getTaxID(), 13)).length(), '0'))
-					+ LEC_FE_Utils.cutString(bp.getTaxID(),13), atts);
-			// Alfanumerico Max 300
-			addHeaderElement(mmDoc, "razonSocialDestinatario", bp.getName(), atts);
-			// Alfanumerico Max 300
-			addHeaderElement(mmDoc, "dirDestinatario", bpl.getAddress1(), atts);
-			// Alfanumerico Max 300
-			addHeaderElement(mmDoc, "motivoTraslado", "TODO", atts);
-			// Alfanumerico Max 20
-			addHeaderElement(mmDoc, "docAduaneroUnico", "TODO", atts);
-			// Numerico3
-			addHeaderElement(mmDoc, "codEstabDestino", "TODO", atts);
-			// Alfanumerico Max 300
-			addHeaderElement(mmDoc, "ruta", lw.getCityRegionPostal() + " - " + bpl.getCityRegionPostal(), atts);
+			// Texto2
+			addHeaderElement(mmDoc, "obligadoContabilidad", m_obligadocontabilidad, atts);
+			// Alfanumerico Max 40
+			addHeaderElement(mmDoc, "rise", LEC_FE_Utils.cutString(tp.getName(), 40), atts);
 			// Numerico2
-			addHeaderElement(mmDoc, "codDocSustento", "TODO", atts);
+			addHeaderElement(mmDoc, "codDocModificado", "TODO", atts);
 			// Numerico15 -- Incluye guiones
-			addHeaderElement(mmDoc, "numDocSustento",  "TODO", atts);
+			addHeaderElement(mmDoc, "numDocModificado",  "TODO", atts);
 			// Numerico10-37
 			addHeaderElement(mmDoc, "numAutDocSustento",  "TODO", atts);
 			// Fecha8 ddmmaaaa
 			addHeaderElement(mmDoc, "fechaEmisionDocSustento","TODO", atts);
-						
-		// Detalles
-		mmDoc.startElement("","","detalles",atts);
+			// Numerico Max 14
+			addHeaderElement(mmDoc, "totalSinImpuestos", getTotalLines().toString(), atts);
 		
+		mmDoc.endElement("","","infoNotaDebito");
+		
+		m_totalbaseimponible = getTotalLines();
+		m_totalvalorimpuesto = getGrandTotal().subtract(getTotalLines());	// TODO Reviewme
+				
+		// Impuestos
 		sql = new StringBuffer(
-	            "SELECT io.M_InOut_ID, COALESCE(p.value, '0'), 0::text, ilt.name, ilt.qtyentered "
-				+ ", ilt.description AS description1 "
-	            + "FROM M_InOut io "
-	            + "JOIN M_InOutLine iol ON iol.M_InOut_ID = io.M_InOut_ID "
-	            + "JOIN M_InOut_Line_VT ilt ON ilt.M_InOutLine_ID = iol.M_InOutLine_ID "
-	            + "LEFT JOIN M_Product p ON p.M_Product_ID = iol.M_Product_ID "
+	            "SELECT i.C_Invoice_ID, COALESCE(p.value, '0'), 0::text, ilt.name, ilt.qtyinvoiced, ilt.priceactual, COALESCE(ilt.discount, 0), ilt.linenetamt "
+				+ ", t.LEC_TaxTypeSRI AS codigo "
+				+ ", CASE "
+				+ "    WHEN t.LEC_TaxTypeSRI = '2' THEN "
+				+ "      CASE "
+				+ "        WHEN t.rate = 0::numeric THEN '0' "
+				+ "        WHEN t.rate = 12::numeric THEN '2' "
+				+ "        ELSE '6' "
+				+ "      END "
+				+ "    WHEN t.LEC_TaxTypeSRI = '3' THEN '0000' "
+				+ "    ELSE '0' END AS codigoPorcentaje "
+				+ ", t.rate AS tarifa "
+				+ ", ilt.linenetamt AS baseImponible "
+				+ ", ROUND(ilt.linenetamt * t.rate / 100, 2) AS valor "
+				+ ", il.description AS description1 "
+				+ ", t.name AS razon "
+	            + "FROM C_Invoice i "
+	            + "JOIN C_InvoiceLine il ON il.C_Invoice_ID = i.C_Invoice_ID "
+	            + "JOIN C_Invoice_LineTax_VT ilt ON ilt.C_InvoiceLine_ID = il.C_InvoiceLine_ID "
+	            + "JOIN C_Tax t ON t.C_Tax_ID = ilt.C_Tax_ID "
+	            + "LEFT JOIN M_Product p ON p.M_Product_ID = il.M_Product_ID "
 	            + "LEFT JOIN M_Product_Category pc ON pc.M_Product_Category_ID = p.M_Product_Category_ID "
-	            + "WHERE iol.IsDescription = 'N' AND io.M_InOut_ID=? "
-	            + "ORDER BY iol.line");
+	            + "LEFT JOIN C_Charge c ON il.C_Charge_ID = c.C_Charge_ID "
+	            + "WHERE il.IsDescription = 'N' AND i.C_Invoice_ID=? "
+	            + "ORDER BY il.line");
 		
 		try
 		{
-			PreparedStatement pstmt = DB.prepareStatement(sql.toString(), null);
-			pstmt.setInt(1, getM_InOut_ID());
+			PreparedStatement pstmt = DB.prepareStatement(sql.toString(), ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY, null);
+			pstmt.setInt(1, getC_Invoice_ID());
 			ResultSet rs = pstmt.executeQuery();
 			//
 			
+			mmDoc.startElement("","","impuestos",atts);
+			
 			while (rs.next())
 			{
-				mmDoc.startElement("","","detalle",atts);
+					// TODO El mismo cursor de totalConImpuestos para Producto SIN GROUP BY ?
+					mmDoc.startElement("","","impuesto",atts);
+						// Numerico 1
+						addHeaderElement(mmDoc, "codigo", rs.getString(9), atts);
+						// Numerico 1 to 4
+						addHeaderElement(mmDoc, "codigoPorcentaje", rs.getString(10), atts);
+						// Numerico 1 to 4
+						addHeaderElement(mmDoc, "tarifa", rs.getBigDecimal(11).toString(), atts);
+						// Numerico Max 14
+						addHeaderElement(mmDoc, "baseImponible", rs.getBigDecimal(12).toString(), atts);
+						// Numerico Max 14
+						addHeaderElement(mmDoc, "valor", rs.getBigDecimal(13).toString(), atts);
+					mmDoc.endElement("","","impuesto");
 				
-				// Alfanumerico MAx 25
-				addHeaderElement(mmDoc, "codigoInterno",  LEC_FE_Utils.cutString(rs.getString(2),25), atts);
-				// Alfanumerico MAx 25
-				addHeaderElement(mmDoc, "codigoAdicional", LEC_FE_Utils.cutString(rs.getString(3),25), atts);
-				// Alfanumerico Max 300
-				addHeaderElement(mmDoc, "descripcion", LEC_FE_Utils.cutString(rs.getString(4),300), atts);
-				// Numerico Max 14
-				addHeaderElement(mmDoc, "cantidad", rs.getBigDecimal(5).toString(), atts);
-				
-				if (rs.getString(6) != null)  {	// TODO Reviewme
-					mmDoc.startElement("","","detallesAdicionales",atts);
-					
-						atts.clear();
-						atts.addAttribute("", "", "descripcion1", "CDATA", LEC_FE_Utils.cutString(rs.getString(6),300));
-						mmDoc.startElement("", "", "detAdicional", atts);
-						mmDoc.endElement("","","detAdicional");
-						
-					mmDoc.endElement("","","detallesAdicionales");
-				}
-				
-				atts.clear();
-				//
-				mmDoc.endElement("","","detalle");
+				m_sumabaseimponible = m_sumabaseimponible.add(rs.getBigDecimal(12));
+				m_sumavalorimpuesto = m_sumavalorimpuesto.add(rs.getBigDecimal(13));
 				
 			}
+			
+			mmDoc.endElement("","","impuestos");
+			
+			// Numerico Max 14
+			addHeaderElement(mmDoc, "valorTotal", getGrandTotal().toString(), atts);
+			
+			rs.beforeFirst();
+			
+			mmDoc.startElement("","","motivos",atts);
+			
+			while (rs.next())
+			{
+				// Alfanumerico MAx 300
+				addHeaderElement(mmDoc, "razon", rs.getString(14), atts);
+				// Numerico Max 14
+				addHeaderElement(mmDoc, "valor", rs.getBigDecimal(12).toString(), atts);
+			
+			}
+			
+			mmDoc.endElement("","","motivos");
+			
 			rs.close();
 			pstmt.close();
 		}
@@ -382,12 +385,6 @@ public class LEC_FE_MInOut extends MInOut
 			msg = "Error SQL: " + sql.toString();
 			throw new AdempiereException(msg);
 		}
-		
-		mmDoc.endElement("","","detalles");
-		
-		mmDoc.endElement("","","destinatario");
-		
-		mmDoc.endElement("","","destinatarios");
 		
 		if (getDescription() != null)  {	// TODO Reviewme
 			mmDoc.startElement("","","infoAdicional",atts);
@@ -409,6 +406,16 @@ public class LEC_FE_MInOut extends MInOut
 				mmDocStream.close();
 			} catch (Exception e2) {}
 		}
+		
+		if (m_sumabaseimponible.compareTo(m_totalbaseimponible) != 0 ) {
+			msg = "Error Diferencia Base Impuesto Total: " + m_totalbaseimponible.toString() + " Detalles: " + m_sumabaseimponible.toString();
+			throw new AdempiereException(msg);
+		}
+		
+		if (m_sumavalorimpuesto.compareTo(m_totalvalorimpuesto) != 0 ) {
+			msg = "Error Diferencia Impuesto Total: " + m_totalvalorimpuesto.toString() + " Detalles: " + m_sumavalorimpuesto.toString();
+			throw new AdempiereException(msg);
+		}
 	
 		log.warning("@Signing Xml@ -> " + file_name);
 		signature.setResource_To_Sign(file_name);
@@ -424,7 +431,7 @@ public class LEC_FE_MInOut extends MInOut
 		// TODO Procesar Respuesta SRI
 		// TODO Enviar Email Cliente
 		
-		// TODO Attach XML Autorizado
+		// TODO Atach XML Autorizado
 		if (signature.isAttachXml())
 			LEC_FE_Utils.attachXmlFile(getCtx(), get_TrxName(), a.getSRI_Authorisation_ID(), file_name);
 
@@ -441,7 +448,7 @@ public class LEC_FE_MInOut extends MInOut
 		//return null;
 		return msg;
 	
-	} // lecfeinout_SriExportInOutXML100
+	} // lecfeinvnc_SriExportNotaCreditoXML100
 	
 	public void addHeaderElement(TransformerHandler mmDoc, String att, String value, AttributesImpl atts) throws Exception {
 		if (att != null) {
@@ -454,4 +461,4 @@ public class LEC_FE_MInOut extends MInOut
 	}
 	
 
-}	// LEC_FE_MInOut
+}	// LEC_FE_MNotaDebito
