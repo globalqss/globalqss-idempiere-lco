@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
-import java.math.BigDecimal;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -20,15 +19,12 @@ import javax.xml.transform.sax.TransformerHandler;
 import javax.xml.transform.stream.StreamResult;
 
 import org.adempiere.exceptions.AdempiereException;
-import org.compiere.model.MAttachment;
-import org.compiere.model.MAttachmentEntry;
 import org.compiere.model.MBPartner;
 import org.compiere.model.MDocType;
 import org.compiere.model.MInOut;
 import org.compiere.model.MLocation;
 import org.compiere.model.MOrgInfo;
 import org.compiere.model.MSysConfig;
-import org.compiere.model.MTable;
 import org.compiere.util.AdempiereUserError;
 import org.compiere.util.DB;
 import org.globalqss.util.LEC_FE_Utils;
@@ -70,7 +66,7 @@ public class LEC_FE_MInOut extends MInOut
 		super(ctx, M_InOut_ID, trxName);
 	}
 	
-	public String lecfeinv_SriExportInOutXML100 ()
+	public String lecfeinout_SriExportInOutXML100 ()
 	{
 		
 		String msg = null;	// TODO Reviewe No completar if error

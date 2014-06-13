@@ -36,9 +36,9 @@ import org.xml.sax.helpers.AttributesImpl;
  *	LEC_FE_MInvoice
  *
  *  @author Carlos Ruiz - globalqss - Quality Systems & Solutions - http://globalqss.com 
- *  @version  $Id: LEC_FE_MInvoice.java,v 1.0 2014/05/06 03:37:29 cruiz Exp $
+ *  @version  $Id: LEC_FE_MNotaCredito.java,v 1.0 2014/05/06 03:37:29 cruiz Exp $
  */
-public class LEC_FE_MInvoice extends MInvoice
+public class LEC_FE_MNotaCredito extends MInvoice
 {
 	/**
 	 * 
@@ -68,11 +68,11 @@ public class LEC_FE_MInvoice extends MInvoice
 	private BigDecimal m_sumabaseimponible = Env.ZERO;
 	private BigDecimal m_sumavalorimpuesto = Env.ZERO;
 	
-	public LEC_FE_MInvoice(Properties ctx, int C_Invoice_ID, String trxName) {
+	public LEC_FE_MNotaCredito(Properties ctx, int C_Invoice_ID, String trxName) {
 		super(ctx, C_Invoice_ID, trxName);
 	}
 	
-	public String lecfeinv_SriExportInvoiceXML100 ()
+	public String lecfeinvnc_SriExportNotaCreditoXML100 ()
 	{
 		
 		String msg = null;	// TODO Reviewe No completar if error
@@ -146,6 +146,8 @@ public class LEC_FE_MInvoice extends MInvoice
 		X_LCO_TaxIdType tt = new X_LCO_TaxIdType(getCtx(), (Integer) bp.get_Value("LCO_TaxIdType_ID"), get_TrxName());
 		if (tt.getLCO_TaxIdType_ID() == 1000011)	// Hardcoded F Final	// TODO Deprecated
 			m_identificacioncomprador = m_identificacionconsumidor;
+		
+		X_LCO_TaxPayerType tp = new X_LCO_TaxPayerType(getCtx(), (Integer) bp.get_Value("LCO_TaxPayerType_ID"), get_TrxName());
 		
 		m_guiaremision = DB.getSQLValueString(get_TrxName(), "SELECT M_InOut_AllGuias FROM C_Invoice_Header_VT WHERE C_Invoice_ID = ? ", getC_Invoice_ID());
 		
@@ -260,30 +262,40 @@ public class LEC_FE_MInvoice extends MInvoice
 			addHeaderElement(mmDoc, "dirMatriz", lo.getAddress1(), atts);
 		mmDoc.endElement("","","infoTributaria");
 		
-		mmDoc.startElement("","","infoFactura",atts);
+		mmDoc.startElement("","","infoNotaCredito",atts);
 		// Emisor
 			// Fecha8 ddmmaaaa
 			addHeaderElement(mmDoc, "fechaEmision", LEC_FE_Utils.getDate(getDateInvoiced(),10), atts);
 			// Alfanumerico Max 300
 			addHeaderElement(mmDoc, "dirEstablecimiento", lo.getAddress1(), atts);
-			// Numerico3-5
-			addHeaderElement(mmDoc, "contribuyenteEspecial", oi.get_ValueAsString("SRI_TaxPayerCode"), atts);
-			// Texto2
-			addHeaderElement(mmDoc, "obligadoContabilidad", m_obligadocontabilidad, atts);
 		// Comprador
 			// Numerico2
 			addHeaderElement(mmDoc, "tipoIdentificacionComprador", m_tipoidentificacioncomprador, atts);
-			// Numerico15 -- Incluye guiones
-			addHeaderElement(mmDoc, "guiaRemision", m_guiaremision, atts);
 			// Alfanumerico Max 300
 			addHeaderElement(mmDoc, "razonSocialComprador", m_razonsocial, atts);
 			// Numerico13
 			addHeaderElement(mmDoc, "identificacionComprador", (LEC_FE_Utils.fillString(13 - (LEC_FE_Utils.cutString(m_identificacioncomprador, 13)).length(), '0'))
 					+ LEC_FE_Utils.cutString(m_identificacioncomprador,13), atts);
+			// Numerico3-5
+			addHeaderElement(mmDoc, "contribuyenteEspecial", oi.get_ValueAsString("SRI_TaxPayerCode"), atts);
+			// Texto2
+			addHeaderElement(mmDoc, "obligadoContabilidad", m_obligadocontabilidad, atts);
+			// Alfanumerico Max 40
+			addHeaderElement(mmDoc, "rise", LEC_FE_Utils.cutString(tp.getName(), 40), atts);
+			// Numerico2
+			addHeaderElement(mmDoc, "codDocModificado", "TODO", atts);
+			// Numerico15 -- Incluye guiones
+			addHeaderElement(mmDoc, "numDocModificado",  "TODO", atts);
+			// Numerico10-37
+			addHeaderElement(mmDoc, "numAutDocSustento",  "TODO", atts);
+			// Fecha8 ddmmaaaa
+			addHeaderElement(mmDoc, "fechaEmisionDocSustento","TODO", atts);
 			// Numerico Max 14
 			addHeaderElement(mmDoc, "totalSinImpuestos", getTotalLines().toString(), atts);
 			// Numerico MAx 14
-			addHeaderElement(mmDoc, "totalDescuento", m_totaldescuento.toString(), atts);
+			addHeaderElement(mmDoc, "valorModificacion", getGrandTotal().toString(), atts);
+			// Alfanumerico MAx 25
+			addHeaderElement(mmDoc, "moneda", getCurrencyISO(), atts);
 		
 		// Impuestos
 		mmDoc.startElement("","","totalConImpuestos",atts);
@@ -345,14 +357,10 @@ public class LEC_FE_MInvoice extends MInvoice
 		
 		mmDoc.endElement("","","totalConImpuestos");
 		
-		// Numerico Max 14
-		addHeaderElement(mmDoc, "propina", Env.ZERO.toString(), atts);
-		// Numerico Max 14
-		addHeaderElement(mmDoc, "importeTotal", m_totalvalorimpuesto.toString(), atts);
-		// Alfanumerico MAx 25
-		addHeaderElement(mmDoc, "moneda", getCurrencyISO(), atts);
+		// Alfanumerico MAx 300
+		addHeaderElement(mmDoc, "motivo", LEC_FE_Utils.cutString(getDescription(),300), atts);
 		
-		mmDoc.endElement("","","infoFactura");
+		mmDoc.endElement("","","infoNotaCredito");
 				
 		// Detalles
 		mmDoc.startElement("","","detalles",atts);
@@ -395,9 +403,9 @@ public class LEC_FE_MInvoice extends MInvoice
 				mmDoc.startElement("","","detalle",atts);
 				
 				// Alfanumerico MAx 25
-				addHeaderElement(mmDoc, "codigoPrincipal",  LEC_FE_Utils.cutString(rs.getString(2),25), atts);
+				addHeaderElement(mmDoc, "codigoInterno",  LEC_FE_Utils.cutString(rs.getString(2),25), atts);
 				// Alfanumerico MAx 25
-				addHeaderElement(mmDoc, "codigoAuxiliar", LEC_FE_Utils.cutString(rs.getString(3),25), atts);
+				addHeaderElement(mmDoc, "codigoAdicional", LEC_FE_Utils.cutString(rs.getString(3),25), atts);
 				// Alfanumerico Max 300
 				addHeaderElement(mmDoc, "descripcion", LEC_FE_Utils.cutString(rs.getString(4),300), atts);
 				// Numerico Max 14
@@ -523,7 +531,7 @@ public class LEC_FE_MInvoice extends MInvoice
 		//return null;
 		return msg;
 	
-	} // lecfeinv_SriExportInvoiceXML100
+	} // lecfeinvnc_SriExportNotaCreditoXML100
 	
 	public void addHeaderElement(TransformerHandler mmDoc, String att, String value, AttributesImpl atts) throws Exception {
 		if (att != null) {
@@ -536,4 +544,4 @@ public class LEC_FE_MInvoice extends MInvoice
 	}
 	
 
-}	// LEC_FE_MInvoice
+}	// LEC_FE_MNotaCredito
