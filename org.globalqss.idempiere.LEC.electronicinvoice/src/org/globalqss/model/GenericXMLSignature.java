@@ -61,6 +61,27 @@ import es.mityc.javasign.pkstore.keystore.KSStore;
  */
 public abstract class GenericXMLSignature {
 
+	
+	public boolean isOnTesting;
+
+	public boolean isOnTesting() {
+		return isOnTesting;
+	}
+
+	public void setOnTesting(boolean isOnTesting) {
+		this.isOnTesting = isOnTesting;
+	}
+	
+	public boolean isAttachXml;
+
+	public boolean isAttachXml() {
+		return isAttachXml;
+	}
+
+	public void setAttachXml(boolean isAttachXml) {
+		this.isAttachXml = isAttachXml;
+	}
+
 	/** Dir				*/
 	public String folderRaiz = "";
 	
