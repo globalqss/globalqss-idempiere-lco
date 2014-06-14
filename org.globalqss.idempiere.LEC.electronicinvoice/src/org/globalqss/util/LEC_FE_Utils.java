@@ -104,9 +104,11 @@ public class LEC_FE_Utils
 		
 		if (docDate == null) docDate = new Date();
 		
-		if (format == 8)
+		if (format == 7)
+			dateFormat = new SimpleDateFormat("MM/yyyy");
+		else if (format == 8)
 			dateFormat = new SimpleDateFormat("ddMMyyyy");
-		if (format == 9)
+		else if (format == 9)
 			dateFormat = new SimpleDateFormat("yyyyMMdd");
 		else if (format == 10)
 			dateFormat = new SimpleDateFormat("dd/MM/yyyy");

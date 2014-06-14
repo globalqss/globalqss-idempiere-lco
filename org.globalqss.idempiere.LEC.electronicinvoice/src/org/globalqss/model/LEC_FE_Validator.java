@@ -219,16 +219,17 @@ public class LEC_FE_Validator implements ModelValidator
 		LEC_FE_MInvoice lecfeinv = new LEC_FE_MInvoice(inv.getCtx(), inv.getC_Invoice_ID(), inv.get_TrxName());
 		LEC_FE_MNotaCredito lecfeinvnc = new LEC_FE_MNotaCredito(inv.getCtx(), inv.getC_Invoice_ID(), inv.get_TrxName());
 		LEC_FE_MNotaDebito lecfeinvnd = new LEC_FE_MNotaDebito(inv.getCtx(), inv.getC_Invoice_ID(), inv.get_TrxName());
+		LEC_FE_MRetencion lecfeinvret = new LEC_FE_MRetencion(inv.getCtx(), inv.getC_Invoice_ID(), inv.get_TrxName());
 		// isSOTrx()
 		if (shortdoctype.equals("01"))	// FACTURA
 			msg = lecfeinv.lecfeinv_SriExportInvoiceXML100();
-		else if (shortdoctype.equals("04"))	// NOTA DE CRÉDITO	// TODO
+		else if (shortdoctype.equals("04"))	// NOTA DE CRÉDITO
 			msg = lecfeinvnc.lecfeinvnc_SriExportNotaCreditoXML100();
-		else if (shortdoctype.equals("05"))	// NOTA DE DÉBITO	// TODO
+		else if (shortdoctype.equals("05"))	// NOTA DE DÉBITO
 			msg = lecfeinvnd.lecfeinvnd_SriExportNotaDebitoXML100();
 		// !isSOTrx()
-		else if (shortdoctype.equals("07"))	// COMPROBANTE DE RETENCIÓN	// TODO
-			msg = lecfeinv.lecfeinv_SriExportInvoiceXML100();
+		else if (shortdoctype.equals("07"))	// COMPROBANTE DE RETENCIÓN
+			msg = lecfeinvret.lecfeinvret_SriExportRetencionXML100();
 		else
 			return null;	// "Formato no soportado: " + shortdoctype;
 			
