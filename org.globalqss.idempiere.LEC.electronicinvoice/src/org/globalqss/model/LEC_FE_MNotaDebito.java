@@ -47,6 +47,7 @@ public class LEC_FE_MNotaDebito extends MInvoice
 	
 	private int		m_SRI_Authorisation_ID = 0;
 	private int		m_lec_sri_format_id = 0;
+	private int		m_c_invoice_sus_id = 0;
 
 	private String file_name = "";
 	private String m_tipoclaveacceso = "1";	// 1-Automatica, 2-Contingencia
@@ -146,8 +147,13 @@ public class LEC_FE_MNotaDebito extends MInvoice
 		
 		X_LCO_TaxPayerType tp = new X_LCO_TaxPayerType(getCtx(), (Integer) bp.get_Value("LCO_TaxPayerType_ID"), get_TrxName());
 		
-		m_guiaremision = DB.getSQLValueString(get_TrxName(), "SELECT M_InOut_AllGuias FROM C_Invoice_Header_VT WHERE C_Invoice_ID = ? ", getC_Invoice_ID());
+		m_c_invoice_sus_id = LEC_FE_Utils.getInvDocSustento(getC_Invoice_ID());
 		
+		if ( m_c_invoice_sus_id < 1)
+			throw new AdempiereUserError("No existe documento sustento para el comprobante");
+		
+		MInvoice invsus = new MInvoice(getCtx(), m_c_invoice_sus_id, get_TrxName());
+	
 		m_totaldescuento = DB.getSQLValueBD(get_TrxName(), "SELECT COALESCE(SUM(ilt.discount), 0) FROM c_invoice_linetax_vt ilt WHERE ilt.C_Invoice_ID = ? ", getC_Invoice_ID());
 
 		m_accesscode = LEC_FE_Utils.getAccessCode(getDateInvoiced(), m_coddoc, bpe.getTaxID(), m_tipoambiente, oi.get_ValueAsString("SRI_OrgCode"), oi.get_ValueAsString("SRI_StoreCode"), getDocumentNo(), oi.get_ValueAsString("SRI_DocumentCode"), m_tipoemision);
@@ -280,13 +286,14 @@ public class LEC_FE_MNotaDebito extends MInvoice
 			// Alfanumerico Max 40
 			addHeaderElement(mmDoc, "rise", LEC_FE_Utils.cutString(tp.getName(), 40), atts);
 			// Numerico2
-			addHeaderElement(mmDoc, "codDocModificado", "TODO", atts);
+			if (m_coddoc.equals("05"))
+				addHeaderElement(mmDoc, "codDocModificado", "01", atts);	// Hardcoded
 			// Numerico15 -- Incluye guiones
-			addHeaderElement(mmDoc, "numDocModificado",  "TODO", atts);
+			addHeaderElement(mmDoc, "numDocModificado",  invsus.getDocumentNo(), atts);
 			// Numerico10-37
 			addHeaderElement(mmDoc, "numAutDocSustento",  "TODO", atts);
 			// Fecha8 ddmmaaaa
-			addHeaderElement(mmDoc, "fechaEmisionDocSustento","TODO", atts);
+			addHeaderElement(mmDoc, "fechaEmisionDocSustento", LEC_FE_Utils.getDate(invsus.getDateInvoiced(),10), atts);
 			// Numerico Max 14
 			addHeaderElement(mmDoc, "totalSinImpuestos", getTotalLines().toString(), atts);
 		

@@ -205,6 +205,18 @@ public class LEC_FE_Utils
 	}
 	
 	/**
+	 * 	String getInvDocSustento
+	 * 	@return int
+	 */
+	public static int getInvDocSustento(int c_invoice_id) {
+	
+		int c_invoice_sus_id = DB.getSQLValue(null, "SELECT al.C_Invoice_ID FROM C_AllocationHdr ah JOIN C_AllocationLine al ON al.C_AllocationHdr_ID = ah.C_AllocationHdr_ID WHERE ah.C_AllocationHdr_ID IN (SELECT al.C_AllocationHdr_ID FROM C_AllocationLine al WHERE al.C_Invoice_ID = ?) AND ah.Processed = 'Y' AND al.C_Invoice_ID != ? ", c_invoice_id, c_invoice_id);
+		
+		return c_invoice_sus_id;
+
+	}
+	
+	/**
 	 * 	String getAccessCode
 	 * 	@return String
 	 */
