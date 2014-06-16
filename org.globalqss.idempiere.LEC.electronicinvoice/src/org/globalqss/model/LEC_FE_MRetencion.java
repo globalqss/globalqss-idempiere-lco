@@ -59,6 +59,7 @@ public class LEC_FE_MRetencion extends MInvoice
 	private String m_tipoidentificacioncomprador = "";
 	private String m_identificacioncomprador = "";
 	private String m_razonsocial = "";
+	private String m_retencionno = "";
 
 	private BigDecimal m_totalbaseimponible = Env.ZERO;
 	private BigDecimal m_totalvalorimpuesto = Env.ZERO;
@@ -143,7 +144,9 @@ public class LEC_FE_MRetencion extends MInvoice
 		
 		X_LCO_TaxPayerType tp = new X_LCO_TaxPayerType(getCtx(), (Integer) bp.get_Value("LCO_TaxPayerType_ID"), get_TrxName());
 		
-		m_accesscode = LEC_FE_Utils.getAccessCode(getDateInvoiced(), m_coddoc, bpe.getTaxID(), m_tipoambiente, oi.get_ValueAsString("SRI_OrgCode"), oi.get_ValueAsString("SRI_StoreCode"), getDocumentNo(), oi.get_ValueAsString("SRI_DocumentCode"), m_tipoemision);
+		m_retencionno = DB.getSQLValueString(get_TrxName(), "SELECT DISTINCT(DocumentNo) FROM LCO_InvoiceWithholding WHERE C_Invoice_ID = ? ", getC_Invoice_ID());
+		
+		m_accesscode = LEC_FE_Utils.getAccessCode(getDateInvoiced(), m_coddoc, bpe.getTaxID(), m_tipoambiente, oi.get_ValueAsString("SRI_OrgCode"), oi.get_ValueAsString("SRI_StoreCode"), m_retencionno, oi.get_ValueAsString("SRI_DocumentCode"), m_tipoemision);
 			
 			// TODO IsUseContingency
 		// if (IsUseContingency) m_tipoclaveacceso = "2";
@@ -246,8 +249,8 @@ public class LEC_FE_MRetencion extends MInvoice
 			// Numerico3
 			addHeaderElement(mmDoc, "ptoEmi", oi.get_ValueAsString("SRI_StoreCode"), atts);
 			// Numerico9
-			addHeaderElement(mmDoc, "secuencial", (LEC_FE_Utils.fillString(9 - (LEC_FE_Utils.cutString(LEC_FE_Utils.getSecuencial(getDocumentNo(), m_coddoc), 9)).length(), '0'))
-					+ LEC_FE_Utils.cutString(LEC_FE_Utils.getSecuencial(getDocumentNo(), m_coddoc), 9), atts);
+			addHeaderElement(mmDoc, "secuencial", (LEC_FE_Utils.fillString(9 - (LEC_FE_Utils.cutString(LEC_FE_Utils.getSecuencial(m_retencionno, m_coddoc), 9)).length(), '0'))
+					+ LEC_FE_Utils.cutString(LEC_FE_Utils.getSecuencial(m_retencionno, m_coddoc), 9), atts);
 			// dirMatriz ,Alfanumerico Max 300
 			addHeaderElement(mmDoc, "dirMatriz", lo.getAddress1(), atts);
 		mmDoc.endElement("","","infoTributaria");
@@ -331,11 +334,12 @@ public class LEC_FE_MRetencion extends MInvoice
 						// Numerico Max 14
 						addHeaderElement(mmDoc, "valorRetenido", rs.getBigDecimal(9).toString(), atts);
 						// Numerico2
-						addHeaderElement(mmDoc, "codDocSustento", "TODO", atts);
+						if (rs.getString(2).equals("07"))
+							addHeaderElement(mmDoc, "codDocSustento", "01", atts);	// Hardcoded
 						// Numerico15 -- Incluye guiones
-						addHeaderElement(mmDoc, "numDocSustento", getDocumentNo(), atts);
+						addHeaderElement(mmDoc, "numDocSustento", rs.getString(3), atts);
 						// Fecha8 ddmmaaaa
-						addHeaderElement(mmDoc, "fechaEmisionDocSustento", LEC_FE_Utils.getDate(getDateInvoiced(),10), atts);
+						addHeaderElement(mmDoc, "fechaEmisionDocSustento", LEC_FE_Utils.getDate(rs.getDate(4),10), atts);
 					mmDoc.endElement("","","impuesto");
 				
 				m_sumabaseimponible = m_sumabaseimponible.add(rs.getBigDecimal(7));
