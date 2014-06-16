@@ -17,16 +17,20 @@
 package org.globalqss.model;
 
 
+import java.io.File;
+
 import org.compiere.apps.ADialog;
 import org.compiere.model.MClient;
 import org.compiere.model.MInvoice;
 import org.globalqss.model.LEC_FE_MInvoice;
 import org.globalqss.util.LCO_Utils;
 import org.globalqss.util.LEC_FE_Utils;
+import org.globalqss.util.LEC_FE_UtilsXml;
 import org.compiere.model.MBPartner;
 import org.compiere.model.MDocType;
 import org.compiere.model.MInOut;
 import org.compiere.model.MOrgInfo;
+import org.compiere.model.MSysConfig;
 import org.compiere.model.ModelValidationEngine;
 import org.compiere.model.ModelValidator;
 import org.compiere.model.PO;
@@ -308,6 +312,18 @@ public class LEC_FE_Validator implements ModelValidator
 	{
 		
 		String msg = null;
+		
+		LEC_FE_UtilsXml signature = new LEC_FE_UtilsXml();
+		
+		signature.setPKCS12_Resource(MSysConfig.getValue("QSSLEC_FE_RutaCertificadoDigital", null, orginfo.getAD_Client_ID(), orginfo.getAD_Org_ID()));
+		
+		if (signature.getPKCS12_Resource() == null)
+			msg = "No existe parametro para RutaCertificadoDigital";
+		
+		File folder = new File(signature.getPKCS12_Resource());
+		
+		if (!folder.exists())
+			msg = "No existe el archivo de Certificado Digital";
 		
 		int c_bpartner_id = LEC_FE_Utils.getOrgBPartner(orginfo.getAD_Client_ID(), orginfo.get_ValueAsString("TaxID"));
 		

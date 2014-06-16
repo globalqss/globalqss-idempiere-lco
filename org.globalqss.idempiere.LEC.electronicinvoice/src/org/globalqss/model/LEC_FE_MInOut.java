@@ -88,9 +88,6 @@ public class LEC_FE_MInOut extends MInOut
 		
 		signature.setPKCS12_Resource(MSysConfig.getValue("QSSLEC_FE_RutaCertificadoDigital", null, getAD_Client_ID(), getAD_Org_ID()));
 		
-		if (signature.getPKCS12_Resource() == null)
-			throw new AdempiereUserError("No existe parametro para RutaCertificadoDigital");
-		
 		signature.setFolderRaiz(MSysConfig.getValue("QSSLEC_FE_RutaGeneracionXml", null, getAD_Client_ID()));	// Segun SysConfig + Formato
 		
 		if (signature.getFolderRaiz() == null)
@@ -146,6 +143,9 @@ public class LEC_FE_MInOut extends MInOut
 			m_identificacioncomprador = m_identificacionconsumidor;
 		
 		// Transportista
+		if (getM_Shipper_ID() == 0)
+			throw new AdempiereUserError("No existe definicion Transportista");
+			
 		MBPartner bpt = new MBPartner(getCtx(), getM_Shipper().getC_BPartner_ID(), get_TrxName());
 		
 		X_LCO_TaxIdType ttt = new X_LCO_TaxIdType(getCtx(), (Integer) bpt.get_Value("LCO_TaxIdType_ID"), get_TrxName());
@@ -153,7 +153,8 @@ public class LEC_FE_MInOut extends MInOut
 		X_LCO_TaxPayerType tpt = new X_LCO_TaxPayerType(getCtx(), (Integer) bpt.get_Value("LCO_TaxPayerType_ID"), get_TrxName());
 		
 		m_tipoidentificaciontransportista = LEC_FE_Utils.getTipoIdentificacionSri(ttt.get_Value("LEC_TaxCodeSRI").toString());
-
+		
+		// Access Code
 		m_accesscode = LEC_FE_Utils.getAccessCode(getMovementDate(), m_coddoc, bpe.getTaxID(), m_tipoambiente, oi.get_ValueAsString("SRI_OrgCode"), oi.get_ValueAsString("SRI_StoreCode"), getDocumentNo(), oi.get_ValueAsString("SRI_DocumentCode"), m_tipoemision);
 		
 		// TODO IsUseContingency
