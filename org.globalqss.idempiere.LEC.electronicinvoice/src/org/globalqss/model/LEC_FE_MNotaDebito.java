@@ -94,9 +94,6 @@ public class LEC_FE_MNotaDebito extends MInvoice
 		
 		signature.setPKCS12_Resource(MSysConfig.getValue("QSSLEC_FE_RutaCertificadoDigital", null, getAD_Client_ID(), getAD_Org_ID()));
 		
-		if (signature.getPKCS12_Resource() == null)
-			throw new AdempiereUserError("No existe parametro para RutaCertificadoDigital");
-		
 		signature.setFolderRaiz(MSysConfig.getValue("QSSLEC_FE_RutaGeneracionXml", null, getAD_Client_ID()));	// Segun SysConfig + Formato
 		
 		if (signature.getFolderRaiz() == null)
