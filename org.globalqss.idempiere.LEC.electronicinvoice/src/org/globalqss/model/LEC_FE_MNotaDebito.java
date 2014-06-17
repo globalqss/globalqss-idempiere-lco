@@ -156,6 +156,7 @@ public class LEC_FE_MNotaDebito extends MInvoice
 	
 		m_totaldescuento = DB.getSQLValueBD(get_TrxName(), "SELECT COALESCE(SUM(ilt.discount), 0) FROM c_invoice_linetax_vt ilt WHERE ilt.C_Invoice_ID = ? ", getC_Invoice_ID());
 
+		// Access Code
 		m_accesscode = LEC_FE_Utils.getAccessCode(getDateInvoiced(), m_coddoc, bpe.getTaxID(), m_tipoambiente, oi.get_ValueAsString("SRI_OrgCode"), oi.get_ValueAsString("SRI_StoreCode"), getDocumentNo(), oi.get_ValueAsString("SRI_DocumentCode"), m_tipoemision);
 			
 			// TODO IsUseContingency
@@ -288,8 +289,8 @@ public class LEC_FE_MNotaDebito extends MInvoice
 			// Numerico2
 			if (m_coddoc.equals("05"))
 				addHeaderElement(mmDoc, "codDocModificado", "01", atts);	// Hardcoded
-			// Numerico15 -- Incluye guiones
-			addHeaderElement(mmDoc, "numDocModificado",  invsus.getDocumentNo(), atts);
+			// Numerico15 -- Sin guiones
+			addHeaderElement(mmDoc, "numDocModificado", LEC_FE_Utils.replaceGuion(invsus.getDocumentNo()), atts);
 			// Numerico10-37
 			addHeaderElement(mmDoc, "numAutDocSustento",  "TODO", atts);
 			// Fecha8 ddmmaaaa
@@ -394,7 +395,7 @@ public class LEC_FE_MNotaDebito extends MInvoice
 			mmDoc.startElement("","","infoAdicional",atts);
 			
 				atts.clear();
-				atts.addAttribute("", "", "descripcion2", "CDATA", LEC_FE_Utils.cutString(getDescription(),300));
+				atts.addAttribute("", "", "nombre", "CDATA", LEC_FE_Utils.cutString(getDescription(),300));
 				mmDoc.startElement("", "", "campoAdicional", atts);
 				mmDoc.endElement("","","campoAdicional");
 			

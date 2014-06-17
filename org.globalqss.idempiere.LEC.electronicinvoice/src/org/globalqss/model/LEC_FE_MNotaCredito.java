@@ -156,6 +156,7 @@ public class LEC_FE_MNotaCredito extends MInvoice
 		
 		m_totaldescuento = DB.getSQLValueBD(get_TrxName(), "SELECT COALESCE(SUM(ilt.discount), 0) FROM c_invoice_linetax_vt ilt WHERE ilt.C_Invoice_ID = ? ", getC_Invoice_ID());
 
+		// Access Code
 		m_accesscode = LEC_FE_Utils.getAccessCode(getDateInvoiced(), m_coddoc, bpe.getTaxID(), m_tipoambiente, oi.get_ValueAsString("SRI_OrgCode"), oi.get_ValueAsString("SRI_StoreCode"), getDocumentNo(), oi.get_ValueAsString("SRI_DocumentCode"), m_tipoemision);
 			
 			// TODO IsUseContingency
@@ -288,10 +289,10 @@ public class LEC_FE_MNotaCredito extends MInvoice
 			// Numerico2
 			if (m_coddoc.equals("04"))
 				addHeaderElement(mmDoc, "codDocModificado", "01", atts);	// Hardcoded
-			// Numerico15 -- Incluye guiones
-			addHeaderElement(mmDoc, "numDocModificado",  invsus.getDocumentNo(), atts);
+			// Numerico15 -- Sin guiones
+			addHeaderElement(mmDoc, "numDocModificado", LEC_FE_Utils.replaceGuion(invsus.getDocumentNo()), atts);
 			// Numerico10-37
-			addHeaderElement(mmDoc, "numAutDocSustento",  "TODO", atts);
+			addHeaderElement(mmDoc, "numAutDocSustento", "TODO", atts);
 			// Fecha8 ddmmaaaa
 			addHeaderElement(mmDoc, "fechaEmisionDocSustento", LEC_FE_Utils.getDate(invsus.getDateInvoiced(),10), atts);
 			// Numerico Max 14
@@ -424,10 +425,11 @@ public class LEC_FE_MNotaCredito extends MInvoice
 				if (rs.getString(14) != null)  {	// TODO Reviewme
 					mmDoc.startElement("","","detallesAdicionales",atts);
 					
-						atts.clear();
-						atts.addAttribute("", "", "descripcion1", "CDATA", LEC_FE_Utils.cutString(rs.getString(14),300));
-						mmDoc.startElement("", "", "detAdicional", atts);
-						mmDoc.endElement("","","detAdicional");
+					atts.clear();
+					atts.addAttribute("", "", "nombre", "CDATA", "descripcion1");
+					atts.addAttribute("", "", "valor", "CDATA", LEC_FE_Utils.cutString(rs.getString(14),300));
+					mmDoc.startElement("", "", "detAdicional", atts);
+					mmDoc.endElement("","","detAdicional");
 						
 					mmDoc.endElement("","","detallesAdicionales");
 				}
@@ -473,7 +475,7 @@ public class LEC_FE_MNotaCredito extends MInvoice
 			mmDoc.startElement("","","infoAdicional",atts);
 			
 				atts.clear();
-				atts.addAttribute("", "", "descripcion2", "CDATA", LEC_FE_Utils.cutString(getDescription(),300));
+				atts.addAttribute("", "", "nombre", "CDATA", LEC_FE_Utils.cutString(getDescription(),300));
 				mmDoc.startElement("", "", "campoAdicional", atts);
 				mmDoc.endElement("","","campoAdicional");
 			

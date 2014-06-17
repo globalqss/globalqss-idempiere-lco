@@ -146,6 +146,7 @@ public class LEC_FE_MRetencion extends MInvoice
 		
 		m_retencionno = DB.getSQLValueString(get_TrxName(), "SELECT DISTINCT(DocumentNo) FROM LCO_InvoiceWithholding WHERE C_Invoice_ID = ? ", getC_Invoice_ID());
 		
+		// Access Code
 		m_accesscode = LEC_FE_Utils.getAccessCode(getDateInvoiced(), m_coddoc, bpe.getTaxID(), m_tipoambiente, oi.get_ValueAsString("SRI_OrgCode"), oi.get_ValueAsString("SRI_StoreCode"), m_retencionno, oi.get_ValueAsString("SRI_DocumentCode"), m_tipoemision);
 			
 			// TODO IsUseContingency
@@ -336,8 +337,8 @@ public class LEC_FE_MRetencion extends MInvoice
 						// Numerico2
 						if (rs.getString(2).equals("07"))
 							addHeaderElement(mmDoc, "codDocSustento", "01", atts);	// Hardcoded
-						// Numerico15 -- Incluye guiones
-						addHeaderElement(mmDoc, "numDocSustento", rs.getString(3), atts);
+						// Numerico15 -- Sin guiones
+						addHeaderElement(mmDoc, "numDocSustento", LEC_FE_Utils.replaceGuion(rs.getString(3)), atts);
 						// Fecha8 ddmmaaaa
 						addHeaderElement(mmDoc, "fechaEmisionDocSustento", LEC_FE_Utils.getDate(rs.getDate(4),10), atts);
 					mmDoc.endElement("","","impuesto");
@@ -363,7 +364,7 @@ public class LEC_FE_MRetencion extends MInvoice
 			mmDoc.startElement("","","infoAdicional",atts);
 			
 				atts.clear();
-				atts.addAttribute("", "", "descripcion2", "CDATA", LEC_FE_Utils.cutString(getDescription(),300));
+				atts.addAttribute("", "", "nombre", "CDATA", LEC_FE_Utils.cutString(getDescription(),300));
 				mmDoc.startElement("", "", "campoAdicional", atts);
 				mmDoc.endElement("","","campoAdicional");
 			

@@ -22,6 +22,7 @@ import org.adempiere.exceptions.AdempiereException;
 import org.compiere.model.MBPartner;
 import org.compiere.model.MDocType;
 import org.compiere.model.MInOut;
+import org.compiere.model.MInvoice;
 import org.compiere.model.MLocation;
 import org.compiere.model.MOrgInfo;
 import org.compiere.model.MSysConfig;
@@ -47,6 +48,7 @@ public class LEC_FE_MInOut extends MInOut
 	
 	private int		m_SRI_Authorisation_ID = 0;
 	private int		m_lec_sri_format_id = 0;
+	private int		m_c_invoice_sus_id = 0;
 
 	private String file_name = "";
 	private String m_tipoclaveacceso = "1";	// 1-Automatica, 2-Contingencia
@@ -153,6 +155,13 @@ public class LEC_FE_MInOut extends MInOut
 		X_LCO_TaxPayerType tpt = new X_LCO_TaxPayerType(getCtx(), (Integer) bpt.get_Value("LCO_TaxPayerType_ID"), get_TrxName());
 		
 		m_tipoidentificaciontransportista = LEC_FE_Utils.getTipoIdentificacionSri(ttt.get_Value("LEC_TaxCodeSRI").toString());
+		
+		m_c_invoice_sus_id = LEC_FE_Utils.getInOutDocSustento(getM_InOut_ID());
+		
+		if ( m_c_invoice_sus_id < 1)
+			throw new AdempiereUserError("No existe documento sustento para el comprobante");
+		
+		MInvoice invsus = new MInvoice(getCtx(), m_c_invoice_sus_id, get_TrxName());
 		
 		// Access Code
 		m_accesscode = LEC_FE_Utils.getAccessCode(getMovementDate(), m_coddoc, bpe.getTaxID(), m_tipoambiente, oi.get_ValueAsString("SRI_OrgCode"), oi.get_ValueAsString("SRI_StoreCode"), getDocumentNo(), oi.get_ValueAsString("SRI_DocumentCode"), m_tipoemision);
@@ -277,7 +286,7 @@ public class LEC_FE_MInOut extends MInOut
 			addHeaderElement(mmDoc, "tipoIdentificacionTransportista", m_tipoidentificaciontransportista, atts);
 			// Numerico13
 			addHeaderElement(mmDoc, "rucTransportista", (LEC_FE_Utils.fillString(13 - (LEC_FE_Utils.cutString(bpt.getTaxID(), 13)).length(), '0'))
-					+ LEC_FE_Utils.cutString(m_identificacioncomprador,13), atts);			
+					+ LEC_FE_Utils.cutString(bpt.getTaxID(),13), atts);			
 			// Alfanumerico Max 40
 			addHeaderElement(mmDoc, "rise", LEC_FE_Utils.cutString(tpt.getName(), 40), atts);
 			// Texto2
@@ -318,11 +327,11 @@ public class LEC_FE_MInOut extends MInOut
 			// Numerico2
 			addHeaderElement(mmDoc, "codDocSustento", "TODO", atts);
 			// Numerico15 -- Incluye guiones
-			addHeaderElement(mmDoc, "numDocSustento",  "TODO", atts);
+			addHeaderElement(mmDoc, "numDocSustento", LEC_FE_Utils.replaceGuion(invsus.getDocumentNo()), atts);
 			// Numerico10-37
-			addHeaderElement(mmDoc, "numAutDocSustento",  "TODO", atts);
+			addHeaderElement(mmDoc, "numAutDocSustento", "TODO", atts);
 			// Fecha8 ddmmaaaa
-			addHeaderElement(mmDoc, "fechaEmisionDocSustento","TODO", atts);
+			addHeaderElement(mmDoc, "fechaEmisionDocSustento", LEC_FE_Utils.getDate(invsus.getDateInvoiced(),10), atts);
 						
 		// Detalles
 		mmDoc.startElement("","","detalles",atts);
@@ -361,10 +370,11 @@ public class LEC_FE_MInOut extends MInOut
 				if (rs.getString(6) != null)  {	// TODO Reviewme
 					mmDoc.startElement("","","detallesAdicionales",atts);
 					
-						atts.clear();
-						atts.addAttribute("", "", "descripcion1", "CDATA", LEC_FE_Utils.cutString(rs.getString(6),300));
-						mmDoc.startElement("", "", "detAdicional", atts);
-						mmDoc.endElement("","","detAdicional");
+					atts.clear();
+					atts.addAttribute("", "", "nombre", "CDATA", "descripcion1");
+					atts.addAttribute("", "", "valor", "CDATA", LEC_FE_Utils.cutString(rs.getString(14),300));
+					mmDoc.startElement("", "", "detAdicional", atts);
+					mmDoc.endElement("","","detAdicional");
 						
 					mmDoc.endElement("","","detallesAdicionales");
 				}
@@ -394,7 +404,7 @@ public class LEC_FE_MInOut extends MInOut
 			mmDoc.startElement("","","infoAdicional",atts);
 			
 				atts.clear();
-				atts.addAttribute("", "", "descripcion2", "CDATA", LEC_FE_Utils.cutString(getDescription(),300));
+				atts.addAttribute("", "", "nombre", "CDATA", LEC_FE_Utils.cutString(getDescription(),300));
 				mmDoc.startElement("", "", "campoAdicional", atts);
 				mmDoc.endElement("","","campoAdicional");
 			
