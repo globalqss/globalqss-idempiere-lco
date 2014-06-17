@@ -159,6 +159,16 @@ public class LEC_FE_Utils
 
 		return new String(docno.trim());
 	}
+	
+	/**
+	 * 	String replaceGuion from DocumentNo
+	 * 	@return string
+	 */
+	public static String replaceGuion(String docno) {
+
+		return new String(docno.replaceAll("-", ""));
+	
+	}
 
 	/**
 	 * 	String getTipoIdentificacionSri segun TaxCodeSRI
@@ -205,12 +215,24 @@ public class LEC_FE_Utils
 	}
 	
 	/**
+	 * 	String getInOutDocSustento
+	 * 	@return int
+	 */
+	public static int getInOutDocSustento(int m_inout_id) {
+	
+		int c_invoice_sus_id = DB.getSQLValue(null, "SELECT i.C_Invoice_ID FROM M_InOut io JOIN M_InOutLine iol ON iol.M_InOut_ID = io.M_InOut_ID JOIN C_InvoiceLine il ON il.M_InOutLine_ID = iol.M_InOutLine_ID JOIN C_Invoice i ON i.C_Invoice_ID = il.C_Invoice_ID WHERE i.DocStatus IN ('CO','CL') AND io.M_InOut_ID = ? ", m_inout_id);
+		
+		return c_invoice_sus_id;
+
+	}
+	
+	/**
 	 * 	String getInvDocSustento
 	 * 	@return int
 	 */
 	public static int getInvDocSustento(int c_invoice_id) {
 	
-		int c_invoice_sus_id = DB.getSQLValue(null, "SELECT al.C_Invoice_ID FROM C_AllocationHdr ah JOIN C_AllocationLine al ON al.C_AllocationHdr_ID = ah.C_AllocationHdr_ID WHERE ah.C_AllocationHdr_ID IN (SELECT al.C_AllocationHdr_ID FROM C_AllocationLine al WHERE al.C_Invoice_ID = ?) AND ah.Processed = 'Y' AND al.C_Invoice_ID != ? ", c_invoice_id, c_invoice_id);
+		int c_invoice_sus_id = DB.getSQLValue(null, "SELECT al.C_Invoice_ID FROM C_AllocationHdr ah JOIN C_AllocationLine al ON al.C_AllocationHdr_ID = ah.C_AllocationHdr_ID WHERE ah.C_AllocationHdr_ID IN (SELECT al.C_AllocationHdr_ID FROM C_AllocationLine al WHERE al.C_Invoice_ID = ?) AND ah.DocStatus IN ('CO','CL') AND al.C_Invoice_ID != ? ", c_invoice_id, c_invoice_id);
 		
 		return c_invoice_sus_id;
 
