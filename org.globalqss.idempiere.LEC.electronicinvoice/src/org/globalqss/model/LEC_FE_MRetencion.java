@@ -338,7 +338,7 @@ public class LEC_FE_MRetencion extends MInvoice
 						if (rs.getString(2).equals("07"))
 							addHeaderElement(mmDoc, "codDocSustento", "01", atts);	// Hardcoded
 						// Numerico15 -- Sin guiones
-						addHeaderElement(mmDoc, "numDocSustento", LEC_FE_Utils.replaceGuion(rs.getString(3)), atts);
+						addHeaderElement(mmDoc, "numDocSustento", LEC_FE_Utils.replaceGuion(LEC_FE_Utils.formatDocNo(rs.getString(3),"01")), atts);
 						// Fecha8 ddmmaaaa
 						addHeaderElement(mmDoc, "fechaEmisionDocSustento", LEC_FE_Utils.getDate(rs.getDate(4),10), atts);
 					mmDoc.endElement("","","impuesto");

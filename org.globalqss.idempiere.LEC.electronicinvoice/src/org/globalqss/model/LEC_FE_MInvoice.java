@@ -271,8 +271,8 @@ public class LEC_FE_MInvoice extends MInvoice
 		// Comprador
 			// Numerico2
 			addHeaderElement(mmDoc, "tipoIdentificacionComprador", m_tipoidentificacioncomprador, atts);
-			// Numerico15 -- Sin guiones
-			addHeaderElement(mmDoc, "guiaRemision", LEC_FE_Utils.replaceGuion(m_guiaremision), atts);
+			// Numerico15 -- Incluye guiones
+			addHeaderElement(mmDoc, "guiaRemision", LEC_FE_Utils.formatDocNo(m_guiaremision, "06"), atts);
 			// Alfanumerico Max 300
 			addHeaderElement(mmDoc, "razonSocialComprador", m_razonsocial, atts);
 			// Numerico13
