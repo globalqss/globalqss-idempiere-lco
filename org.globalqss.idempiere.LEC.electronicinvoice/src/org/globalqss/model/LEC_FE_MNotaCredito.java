@@ -147,7 +147,7 @@ public class LEC_FE_MNotaCredito extends MInvoice
 		
 		X_LCO_TaxPayerType tp = new X_LCO_TaxPayerType(getCtx(), (Integer) bp.get_Value("LCO_TaxPayerType_ID"), get_TrxName());
 		
-		m_c_invoice_sus_id = LEC_FE_Utils.getInvDocSustento(getC_Invoice_ID());
+		m_c_invoice_sus_id = LEC_FE_Utils.getInvAllDocSustento(getC_Invoice_ID());
 		
 		if ( m_c_invoice_sus_id < 1)
 			throw new AdempiereUserError("No existe documento sustento para el comprobante");
@@ -234,6 +234,9 @@ public class LEC_FE_MNotaCredito extends MInvoice
 		atts.clear();
 		atts.addAttribute("", "", "id", "CDATA", "comprobante");
 		atts.addAttribute("", "", "version", "CDATA", f.get_ValueAsString("VersionNo"));
+		atts.addAttribute("", "", "xmlns:ds", "CDATA", "http://www.w3.org/2000/09/xmldsig#");
+		atts.addAttribute("", "", "xmlns:xsi", "CDATA", "http://www.w3.org/2001/XMLSchema-instance");
+		atts.addAttribute("", "", "xsi:noNamespaceSchemaLocation", "CDATA", f.get_ValueAsString("Url_Xsd"));
 		mmDoc.startElement("", "", f.get_ValueAsString("XmlPrintLabel"), atts);
 		
 		atts.clear();
@@ -291,8 +294,6 @@ public class LEC_FE_MNotaCredito extends MInvoice
 				addHeaderElement(mmDoc, "codDocModificado", "01", atts);	// Hardcoded
 			// Numerico15 -- Incluye guiones
 			addHeaderElement(mmDoc, "numDocModificado", LEC_FE_Utils.formatDocNo(invsus.getDocumentNo(), "01"), atts);
-			// Numerico10-37
-			addHeaderElement(mmDoc, "numAutDocSustento", "TODO", atts);
 			// Fecha8 ddmmaaaa
 			addHeaderElement(mmDoc, "fechaEmisionDocSustento", LEC_FE_Utils.getDate(invsus.getDateInvoiced(),10), atts);
 			// Numerico Max 14
@@ -422,7 +423,7 @@ public class LEC_FE_MNotaCredito extends MInvoice
 				// Numerico Max 14
 				addHeaderElement(mmDoc, "precioTotalSinImpuesto", rs.getBigDecimal(8).toString(), atts);
 				
-				if (rs.getString(14) != null)  {	// TODO Reviewme
+				if (rs.getString(14) != null)  {
 					mmDoc.startElement("","","detallesAdicionales",atts);
 					
 					atts.clear();
@@ -471,12 +472,14 @@ public class LEC_FE_MNotaCredito extends MInvoice
 		
 		mmDoc.endElement("","","detalles");
 		
-		if (getDescription() != null)  {	// TODO Reviewme
+		if (getDescription() != null)  {
 			mmDoc.startElement("","","infoAdicional",atts);
 			
 				atts.clear();
-				atts.addAttribute("", "", "nombre", "CDATA", LEC_FE_Utils.cutString(getDescription(),300));
+				atts.addAttribute("", "", "nombre", "CDATA", "descripcion2");
 				mmDoc.startElement("", "", "campoAdicional", atts);
+				String valor = LEC_FE_Utils.cutString(getDescription(),300);
+				mmDoc.characters(valor.toCharArray(), 0, valor.length());
 				mmDoc.endElement("","","campoAdicional");
 			
 			mmDoc.endElement("","","infoAdicional");

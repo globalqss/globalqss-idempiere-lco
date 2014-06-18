@@ -224,6 +224,9 @@ public class LEC_FE_MRetencion extends MInvoice
 		atts.clear();
 		atts.addAttribute("", "", "id", "CDATA", "comprobante");
 		atts.addAttribute("", "", "version", "CDATA", f.get_ValueAsString("VersionNo"));
+		atts.addAttribute("", "", "xmlns:ds", "CDATA", "http://www.w3.org/2000/09/xmldsig#");
+		atts.addAttribute("", "", "xmlns:xsi", "CDATA", "http://www.w3.org/2001/XMLSchema-instance");
+		atts.addAttribute("", "", "xsi:noNamespaceSchemaLocation", "CDATA", f.get_ValueAsString("Url_Xsd"));
 		mmDoc.startElement("", "", f.get_ValueAsString("XmlPrintLabel"), atts);
 		
 		atts.clear();
@@ -338,7 +341,7 @@ public class LEC_FE_MRetencion extends MInvoice
 						if (rs.getString(2).equals("07"))
 							addHeaderElement(mmDoc, "codDocSustento", "01", atts);	// Hardcoded
 						// Numerico15 -- Sin guiones
-						addHeaderElement(mmDoc, "numDocSustento", LEC_FE_Utils.replaceGuion(LEC_FE_Utils.formatDocNo(rs.getString(3),"01")), atts);
+						addHeaderElement(mmDoc, "numDocSustento", LEC_FE_Utils.replaceGuion(LEC_FE_Utils.formatDocNo(rs.getString(3), "01")), atts);
 						// Fecha8 ddmmaaaa
 						addHeaderElement(mmDoc, "fechaEmisionDocSustento", LEC_FE_Utils.getDate(rs.getDate(4),10), atts);
 					mmDoc.endElement("","","impuesto");
@@ -360,12 +363,14 @@ public class LEC_FE_MRetencion extends MInvoice
 			throw new AdempiereException(msg);
 		}
 		
-		if (getDescription() != null)  {	// TODO Reviewme
+		if (getDescription() != null)  {
 			mmDoc.startElement("","","infoAdicional",atts);
 			
 				atts.clear();
-				atts.addAttribute("", "", "nombre", "CDATA", LEC_FE_Utils.cutString(getDescription(),300));
+				atts.addAttribute("", "", "nombre", "CDATA", "descripcion2");
 				mmDoc.startElement("", "", "campoAdicional", atts);
+				String valor = LEC_FE_Utils.cutString(getDescription(),300);
+				mmDoc.characters(valor.toCharArray(), 0, valor.length());
 				mmDoc.endElement("","","campoAdicional");
 			
 			mmDoc.endElement("","","infoAdicional");

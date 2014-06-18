@@ -20,6 +20,7 @@ import javax.xml.transform.stream.StreamResult;
 import org.adempiere.exceptions.AdempiereException;
 import org.compiere.model.MBPartner;
 import org.compiere.model.MDocType;
+import org.compiere.model.MInOut;
 import org.compiere.model.MInvoice;
 import org.compiere.model.MLocation;
 import org.compiere.model.MOrgInfo;
@@ -47,6 +48,7 @@ public class LEC_FE_MInvoice extends MInvoice
 	
 	private int		m_SRI_Authorisation_ID = 0;
 	private int		m_lec_sri_format_id = 0;
+	private int		m_inout_sus_id = 0;
 
 	private String file_name = "";
 	private String m_tipoclaveacceso = "1";	// 1-Automatica, 2-Contingencia
@@ -59,7 +61,6 @@ public class LEC_FE_MInvoice extends MInvoice
 	private String m_tipoidentificacioncomprador = "";
 	private String m_identificacioncomprador = "";
 	private String m_razonsocial = "";
-	private String m_guiaremision = "";
 
 	private BigDecimal m_totaldescuento = Env.ZERO;
 	private BigDecimal m_totalbaseimponible = Env.ZERO;
@@ -144,14 +145,19 @@ public class LEC_FE_MInvoice extends MInvoice
 		if (tt.getLCO_TaxIdType_ID() == 1000011)	// Hardcoded F Final	// TODO Deprecated
 			m_identificacioncomprador = m_identificacionconsumidor;
 		
-		m_guiaremision = DB.getSQLValueString(get_TrxName(), "SELECT M_InOut_AllGuias FROM C_Invoice_Header_VT WHERE C_Invoice_ID = ? ", getC_Invoice_ID());
+		m_inout_sus_id = LEC_FE_Utils.getInvoiceDocSustento(getC_Invoice_ID());
+		
+		if ( m_inout_sus_id < 1)
+			throw new AdempiereUserError("No existe documento sustento para el comprobante");
+		
+		MInOut inoutsus = new MInOut(getCtx(), m_inout_sus_id, get_TrxName());
 		
 		m_totaldescuento = DB.getSQLValueBD(get_TrxName(), "SELECT COALESCE(SUM(ilt.discount), 0) FROM c_invoice_linetax_vt ilt WHERE ilt.C_Invoice_ID = ? ", getC_Invoice_ID());
 
 		// Access Code
 		m_accesscode = LEC_FE_Utils.getAccessCode(getDateInvoiced(), m_coddoc, bpe.getTaxID(), m_tipoambiente, oi.get_ValueAsString("SRI_OrgCode"), oi.get_ValueAsString("SRI_StoreCode"), getDocumentNo(), oi.get_ValueAsString("SRI_DocumentCode"), m_tipoemision);
 			
-			// TODO IsUseContingency
+		// TODO IsUseContingency
 		// if (IsUseContingency) m_tipoclaveacceso = "2";
 		
 		// New Auto Access Code
@@ -226,6 +232,9 @@ public class LEC_FE_MInvoice extends MInvoice
 		atts.clear();
 		atts.addAttribute("", "", "id", "CDATA", "comprobante");
 		atts.addAttribute("", "", "version", "CDATA", f.get_ValueAsString("VersionNo"));
+		atts.addAttribute("", "", "xmlns:ds", "CDATA", "http://www.w3.org/2000/09/xmldsig#");
+		atts.addAttribute("", "", "xmlns:xsi", "CDATA", "http://www.w3.org/2001/XMLSchema-instance");
+		atts.addAttribute("", "", "xsi:noNamespaceSchemaLocation", "CDATA", f.get_ValueAsString("Url_Xsd"));
 		mmDoc.startElement("", "", f.get_ValueAsString("XmlPrintLabel"), atts);
 		
 		atts.clear();
@@ -271,8 +280,9 @@ public class LEC_FE_MInvoice extends MInvoice
 		// Comprador
 			// Numerico2
 			addHeaderElement(mmDoc, "tipoIdentificacionComprador", m_tipoidentificacioncomprador, atts);
-			// Numerico15 -- Incluye guiones
-			addHeaderElement(mmDoc, "guiaRemision", LEC_FE_Utils.formatDocNo(m_guiaremision, "06"), atts);
+			if (inoutsus != null)
+				// Numerico15 -- Incluye guiones
+				addHeaderElement(mmDoc, "guiaRemision", LEC_FE_Utils.formatDocNo(inoutsus.getDocumentNo(), "06"), atts);
 			// Alfanumerico Max 300
 			addHeaderElement(mmDoc, "razonSocialComprador", m_razonsocial, atts);
 			// Numerico13
@@ -407,7 +417,7 @@ public class LEC_FE_MInvoice extends MInvoice
 				// Numerico Max 14
 				addHeaderElement(mmDoc, "precioTotalSinImpuesto", rs.getBigDecimal(8).toString(), atts);
 				
-				if (rs.getString(14) != null)  {	// TODO Reviewme
+				if (rs.getString(14) != null)  {
 					mmDoc.startElement("","","detallesAdicionales",atts);
 					
 						atts.clear();
@@ -456,12 +466,14 @@ public class LEC_FE_MInvoice extends MInvoice
 		
 		mmDoc.endElement("","","detalles");
 		
-		if (getDescription() != null)  {	// TODO Reviewme
+		if (getDescription() != null)  {
 			mmDoc.startElement("","","infoAdicional",atts);
 			
 				atts.clear();
-				atts.addAttribute("", "", "nombre", "CDATA", LEC_FE_Utils.cutString(getDescription(),300));
+				atts.addAttribute("", "", "nombre", "CDATA", "descripcion2");
 				mmDoc.startElement("", "", "campoAdicional", atts);
+				String valor = LEC_FE_Utils.cutString(getDescription(),300);
+				mmDoc.characters(valor.toCharArray(), 0, valor.length());
 				mmDoc.endElement("","","campoAdicional");
 			
 			mmDoc.endElement("","","infoAdicional");

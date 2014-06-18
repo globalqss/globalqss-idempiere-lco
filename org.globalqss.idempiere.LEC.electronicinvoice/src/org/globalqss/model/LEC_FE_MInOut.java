@@ -241,6 +241,9 @@ public class LEC_FE_MInOut extends MInOut
 		atts.clear();
 		atts.addAttribute("", "", "id", "CDATA", "comprobante");
 		atts.addAttribute("", "", "version", "CDATA", f.get_ValueAsString("VersionNo"));
+		atts.addAttribute("", "", "xmlns:ds", "CDATA", "http://www.w3.org/2000/09/xmldsig#");
+		atts.addAttribute("", "", "xmlns:xsi", "CDATA", "http://www.w3.org/2001/XMLSchema-instance");
+		atts.addAttribute("", "", "xsi:noNamespaceSchemaLocation", "CDATA", f.get_ValueAsString("Url_Xsd"));
 		mmDoc.startElement("", "", f.get_ValueAsString("XmlPrintLabel"), atts);
 		
 		atts.clear();
@@ -324,16 +327,18 @@ public class LEC_FE_MInOut extends MInOut
 			addHeaderElement(mmDoc, "codEstabDestino", "TODO", atts);
 			// Alfanumerico Max 300
 			addHeaderElement(mmDoc, "ruta", lw.getCityRegionPostal() + " - " + bpl.getCityRegionPostal(), atts);
-			// Numerico2
-			if (m_coddoc.equals("05"))
-				addHeaderElement(mmDoc, "codDocSustento", "01", atts);	// Hardcoded
-			// Numerico15 -- Incluye guiones
-			addHeaderElement(mmDoc, "numDocSustento", LEC_FE_Utils.formatDocNo(invsus.getDocumentNo(), "01"), atts);
-			// Numerico10-37
-			addHeaderElement(mmDoc, "numAutDocSustento", "TODO", atts);
-			// Fecha8 ddmmaaaa
-			addHeaderElement(mmDoc, "fechaEmisionDocSustento", LEC_FE_Utils.getDate(invsus.getDateInvoiced(),10), atts);
-						
+			if (invsus != null) {
+				// Numerico2
+				if (m_coddoc.equals("06"))
+					addHeaderElement(mmDoc, "codDocSustento", "01", atts);	// Hardcoded
+				// Numerico15 -- Incluye guiones
+				addHeaderElement(mmDoc, "numDocSustento", LEC_FE_Utils.formatDocNo(invsus.getDocumentNo(), "01"), atts);
+				// Numerico10-37
+				addHeaderElement(mmDoc, "numAutDocSustento", "TODO", atts);
+				// Fecha8 ddmmaaaa
+				addHeaderElement(mmDoc, "fechaEmisionDocSustento", LEC_FE_Utils.getDate(invsus.getDateInvoiced(),10), atts);
+			}
+			
 		// Detalles
 		mmDoc.startElement("","","detalles",atts);
 		
@@ -368,7 +373,7 @@ public class LEC_FE_MInOut extends MInOut
 				// Numerico Max 14
 				addHeaderElement(mmDoc, "cantidad", rs.getBigDecimal(5).toString(), atts);
 				
-				if (rs.getString(6) != null)  {	// TODO Reviewme
+				if (rs.getString(6) != null)  {
 					mmDoc.startElement("","","detallesAdicionales",atts);
 					
 					atts.clear();
@@ -401,13 +406,14 @@ public class LEC_FE_MInOut extends MInOut
 		
 		mmDoc.endElement("","","destinatarios");
 		
-		if (getDescription() != null)  {	// TODO Reviewme
+		if (getDescription() != null)  {
 			mmDoc.startElement("","","infoAdicional",atts);
 			
 				atts.clear();
-				atts.addAttribute("", "", "nombre", "CDATA", LEC_FE_Utils.cutString(getDescription(),300));
+				atts.addAttribute("", "", "nombre", "CDATA", "descripcion2");
 				mmDoc.startElement("", "", "campoAdicional", atts);
-				mmDoc.endElement("","","campoAdicional");
+				String valor = LEC_FE_Utils.cutString(getDescription(),300);
+				mmDoc.characters(valor.toCharArray(), 0, valor.length());
 			
 			mmDoc.endElement("","","infoAdicional");
 		}
