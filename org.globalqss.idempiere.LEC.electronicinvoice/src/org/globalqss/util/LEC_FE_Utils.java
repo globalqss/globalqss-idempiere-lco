@@ -175,7 +175,7 @@ public class LEC_FE_Utils
 				doc17Sri = docno.substring(0, 3);
 				if (docno.lastIndexOf('-') == 3)		// 1 Guion
 					doc17Sri = doc17Sri + docno.substring(3, 7) + "-";
-				else if (docno.lastIndexOf('-') == 6)		// 1 Guion
+				else if (docno.lastIndexOf('-') == 6)	// 1 Guion
 					doc17Sri = doc17Sri + "-" + docno.substring(3, 5);
 				else if (docno.lastIndexOf('-') == 7)	// 2 Guiones
 					doc17Sri = doc17Sri + docno.substring(3, 8);
@@ -258,6 +258,18 @@ public class LEC_FE_Utils
 	}
 	
 	/**
+	 * 	String getInvoiceDocSustento
+	 * 	@return int
+	 */
+	public static int getInvoiceDocSustento(int c_invoice_id) {
+	
+		int m_inout_sus_id = DB.getSQLValue(null, "SELECT io.M_InOut_ID FROM M_InOut io JOIN M_InOutLine iol ON iol.M_InOut_ID = io.M_InOut_ID JOIN C_InvoiceLine il ON il.M_InOutLine_ID = iol.M_InOutLine_ID WHERE io.DocStatus IN ('CO','CL') AND il.C_Invoice_ID = ? ", c_invoice_id);
+		
+		return m_inout_sus_id;
+
+	}
+	
+	/**
 	 * 	String getInOutDocSustento
 	 * 	@return int
 	 */
@@ -270,10 +282,10 @@ public class LEC_FE_Utils
 	}
 	
 	/**
-	 * 	String getInvDocSustento
+	 * 	String getInvAllDocSustento
 	 * 	@return int
 	 */
-	public static int getInvDocSustento(int c_invoice_id) {
+	public static int getInvAllDocSustento(int c_invoice_id) {
 	
 		int c_invoice_sus_id = DB.getSQLValue(null, "SELECT al.C_Invoice_ID FROM C_AllocationHdr ah JOIN C_AllocationLine al ON al.C_AllocationHdr_ID = ah.C_AllocationHdr_ID WHERE ah.C_AllocationHdr_ID IN (SELECT al.C_AllocationHdr_ID FROM C_AllocationLine al WHERE al.C_Invoice_ID = ?) AND ah.DocStatus IN ('CO','CL') AND al.C_Invoice_ID != ? ", c_invoice_id, c_invoice_id);
 		

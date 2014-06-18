@@ -313,18 +313,16 @@ public class LEC_FE_Validator implements ModelValidator
 		
 		String msg = null;
 		
-		LEC_FE_UtilsXml signature = new LEC_FE_UtilsXml();
+		String rutacert = MSysConfig.getValue("QSSLEC_FE_RutaCertificadoDigital", null, orginfo.getAD_Client_ID(), orginfo.getAD_Org_ID());
 		
-		signature.setPKCS12_Resource(MSysConfig.getValue("QSSLEC_FE_RutaCertificadoDigital", null, orginfo.getAD_Client_ID(), orginfo.getAD_Org_ID()));
-		
-		if (signature.getPKCS12_Resource() == null)
+		if (rutacert == null)
 			msg = "No existe parametro para RutaCertificadoDigital";
 		
-		File folder = new File(signature.getPKCS12_Resource());
+		File folder = new File(rutacert);
 		
-		if (!folder.exists())
-			msg = "No existe el archivo de Certificado Digital";
-		
+		if (!folder.exists() || !folder.isFile() || !folder.canRead())
+			msg = "No existe o no se puede leer el archivo de Certificado Digital";
+
 		int c_bpartner_id = LEC_FE_Utils.getOrgBPartner(orginfo.getAD_Client_ID(), orginfo.get_ValueAsString("TaxID"));
 		
 		if (c_bpartner_id < 1)
