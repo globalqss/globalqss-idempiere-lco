@@ -325,9 +325,10 @@ public class LEC_FE_MInOut extends MInOut
 			// Alfanumerico Max 300
 			addHeaderElement(mmDoc, "ruta", lw.getCityRegionPostal() + " - " + bpl.getCityRegionPostal(), atts);
 			// Numerico2
-			addHeaderElement(mmDoc, "codDocSustento", "TODO", atts);
+			if (m_coddoc.equals("05"))
+				addHeaderElement(mmDoc, "codDocSustento", "01", atts);	// Hardcoded
 			// Numerico15 -- Incluye guiones
-			addHeaderElement(mmDoc, "numDocSustento", LEC_FE_Utils.replaceGuion(invsus.getDocumentNo()), atts);
+			addHeaderElement(mmDoc, "numDocSustento", LEC_FE_Utils.formatDocNo(invsus.getDocumentNo(), "01"), atts);
 			// Numerico10-37
 			addHeaderElement(mmDoc, "numAutDocSustento", "TODO", atts);
 			// Fecha8 ddmmaaaa

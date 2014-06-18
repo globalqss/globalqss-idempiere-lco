@@ -161,13 +161,56 @@ public class LEC_FE_Utils
 	}
 	
 	/**
+	 * 	String getSecuencial from DocumentNo
+	 * 	@return string
+	 */
+	public static String formatDocNo(String docno, String shortdoctype) {
+		
+		// SRI Longitud valida 15 Digits, 17 con guiones
+		String doc17Sri = "";
+		
+		try {
+			
+			if (docno.trim().length() < 17) {
+				doc17Sri = docno.substring(0, 3);
+				if (docno.lastIndexOf('-') == 3)		// 1 Guion
+					doc17Sri = doc17Sri + docno.substring(3, 7) + "-";
+				else if (docno.lastIndexOf('-') == 6)		// 1 Guion
+					doc17Sri = doc17Sri + "-" + docno.substring(3, 5);
+				else if (docno.lastIndexOf('-') == 7)	// 2 Guiones
+					doc17Sri = doc17Sri + docno.substring(3, 8);
+				else doc17Sri = docno.substring(0, 7);
+				
+				doc17Sri = doc17Sri + LEC_FE_Utils.fillString(9 - (LEC_FE_Utils.cutString(LEC_FE_Utils.getSecuencial(docno, shortdoctype), 9)).length(), '0')
+									+ LEC_FE_Utils.cutString(LEC_FE_Utils.getSecuencial(docno, shortdoctype), 9);
+			}
+			else doc17Sri = docno;
+			
+		} catch (Exception e) {
+			throw new AdempiereException(Msg.getMsg(Env.getCtx(), "LCO_NotANumber"));
+		}
+
+		doc17Sri = doc17Sri.trim();
+		
+		if (doc17Sri.length() != 17)
+			throw new AdempiereException(Msg.getMsg(Env.getCtx(), "LCO_NotANumber"));
+		
+		return doc17Sri;
+	}
+	
+	/**
 	 * 	String replaceGuion from DocumentNo
 	 * 	@return string
 	 */
 	public static String replaceGuion(String docno) {
 
-		return new String(docno.replaceAll("-", ""));
-	
+		// SRI Longitud valida 15 Digits
+		String doc15Sri = docno.replaceAll("-", "").trim();
+		
+		if (doc15Sri.length() != 15)
+			throw new AdempiereException(Msg.getMsg(Env.getCtx(), "LCO_NotANumber"));
+		
+		return doc15Sri;
 	}
 
 	/**

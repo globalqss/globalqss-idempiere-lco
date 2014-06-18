@@ -289,16 +289,14 @@ public class LEC_FE_MNotaDebito extends MInvoice
 			// Numerico2
 			if (m_coddoc.equals("05"))
 				addHeaderElement(mmDoc, "codDocModificado", "01", atts);	// Hardcoded
-			// Numerico15 -- Sin guiones
-			addHeaderElement(mmDoc, "numDocModificado", LEC_FE_Utils.replaceGuion(invsus.getDocumentNo()), atts);
+			// Numerico15 -- Incluye guiones
+			addHeaderElement(mmDoc, "numDocModificado", LEC_FE_Utils.formatDocNo(invsus.getDocumentNo(), "01"), atts);
 			// Numerico10-37
 			addHeaderElement(mmDoc, "numAutDocSustento",  "TODO", atts);
 			// Fecha8 ddmmaaaa
 			addHeaderElement(mmDoc, "fechaEmisionDocSustento", LEC_FE_Utils.getDate(invsus.getDateInvoiced(),10), atts);
 			// Numerico Max 14
 			addHeaderElement(mmDoc, "totalSinImpuestos", getTotalLines().toString(), atts);
-		
-		mmDoc.endElement("","","infoNotaDebito");
 		
 		m_totalbaseimponible = getTotalLines();
 		m_totalvalorimpuesto = getGrandTotal().subtract(getTotalLines());	// TODO Reviewme
@@ -366,16 +364,21 @@ public class LEC_FE_MNotaDebito extends MInvoice
 			// Numerico Max 14
 			addHeaderElement(mmDoc, "valorTotal", getGrandTotal().toString(), atts);
 			
+			mmDoc.endElement("","","infoNotaDebito");
+			
 			rs.beforeFirst();
 			
 			mmDoc.startElement("","","motivos",atts);
 			
 			while (rs.next())
 			{
-				// Alfanumerico MAx 300
-				addHeaderElement(mmDoc, "razon", rs.getString(14), atts);
-				// Numerico Max 14
-				addHeaderElement(mmDoc, "valor", rs.getBigDecimal(12).toString(), atts);
+				
+				mmDoc.startElement("","","motivo",atts);
+					// Alfanumerico MAx 300
+					addHeaderElement(mmDoc, "razon", rs.getString(14), atts);
+					// Numerico Max 14
+					addHeaderElement(mmDoc, "valor", rs.getBigDecimal(12).toString(), atts);
+				mmDoc.endElement("","","motivo");
 			
 			}
 			
