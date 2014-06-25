@@ -148,9 +148,12 @@ public class LEC_FE_MInvoice extends MInvoice
 		m_inout_sus_id = LEC_FE_Utils.getInvoiceDocSustento(getC_Invoice_ID());
 		
 		if ( m_inout_sus_id < 1)
-			throw new AdempiereUserError("No existe documento sustento para el comprobante");
+			log.warning("No existe documento sustento para el comprobante");	// TODO Reviewme
+			// throw new AdempiereUserError("No existe documento sustento para el comprobante");
 		
-		MInOut inoutsus = new MInOut(getCtx(), m_inout_sus_id, get_TrxName());
+		MInOut inoutsus = null;
+		if ( m_inout_sus_id > 0)
+			inoutsus = new MInOut(getCtx(), m_inout_sus_id, get_TrxName());
 		
 		m_totaldescuento = DB.getSQLValueBD(get_TrxName(), "SELECT COALESCE(SUM(ilt.discount), 0) FROM c_invoice_linetax_vt ilt WHERE ilt.C_Invoice_ID = ? ", getC_Invoice_ID());
 
@@ -259,7 +262,7 @@ public class LEC_FE_MInvoice extends MInvoice
 			// Numerico3
 			addHeaderElement(mmDoc, "estab", oi.get_ValueAsString("SRI_OrgCode"), atts);
 			// Numerico3
-			addHeaderElement(mmDoc, "ptoEmi", oi.get_ValueAsString("SRI_StoreCode"), atts);
+			addHeaderElement(mmDoc, "ptoEmi", LEC_FE_Utils.getStoreCode(LEC_FE_Utils.formatDocNo(getDocumentNo(), m_coddoc)), atts);
 			// Numerico9
 			addHeaderElement(mmDoc, "secuencial", (LEC_FE_Utils.fillString(9 - (LEC_FE_Utils.cutString(LEC_FE_Utils.getSecuencial(getDocumentNo(), m_coddoc), 9)).length(), '0'))
 					+ LEC_FE_Utils.cutString(LEC_FE_Utils.getSecuencial(getDocumentNo(), m_coddoc), 9), atts);
@@ -280,7 +283,7 @@ public class LEC_FE_MInvoice extends MInvoice
 		// Comprador
 			// Numerico2
 			addHeaderElement(mmDoc, "tipoIdentificacionComprador", m_tipoidentificacioncomprador, atts);
-			if (inoutsus != null)
+			if ( m_inout_sus_id > 0)
 				// Numerico15 -- Incluye guiones
 				addHeaderElement(mmDoc, "guiaRemision", LEC_FE_Utils.formatDocNo(inoutsus.getDocumentNo(), "06"), atts);
 			// Alfanumerico Max 300

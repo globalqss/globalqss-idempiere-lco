@@ -159,9 +159,12 @@ public class LEC_FE_MInOut extends MInOut
 		m_c_invoice_sus_id = LEC_FE_Utils.getInOutDocSustento(getM_InOut_ID());
 		
 		if ( m_c_invoice_sus_id < 1)
-			throw new AdempiereUserError("No existe documento sustento para el comprobante");
+			log.warning("No existe documento sustento para el comprobante");	// TODO Reviewme
+			//throw new AdempiereUserError("No existe documento sustento para el comprobante");
 		
-		MInvoice invsus = new MInvoice(getCtx(), m_c_invoice_sus_id, get_TrxName());
+		MInvoice invsus = null;
+		if ( m_c_invoice_sus_id > 0)
+			invsus = new MInvoice(getCtx(), m_c_invoice_sus_id, get_TrxName());
 		
 		// Access Code
 		m_accesscode = LEC_FE_Utils.getAccessCode(getMovementDate(), m_coddoc, bpe.getTaxID(), m_tipoambiente, oi.get_ValueAsString("SRI_OrgCode"), oi.get_ValueAsString("SRI_StoreCode"), getDocumentNo(), oi.get_ValueAsString("SRI_DocumentCode"), m_tipoemision);
@@ -268,7 +271,7 @@ public class LEC_FE_MInOut extends MInOut
 			// Numerico3
 			addHeaderElement(mmDoc, "estab", oi.get_ValueAsString("SRI_OrgCode"), atts);
 			// Numerico3
-			addHeaderElement(mmDoc, "ptoEmi", oi.get_ValueAsString("SRI_StoreCode"), atts);
+			addHeaderElement(mmDoc, "ptoEmi", LEC_FE_Utils.getStoreCode(LEC_FE_Utils.formatDocNo(getDocumentNo(), m_coddoc)), atts);
 			// Numerico9
 			addHeaderElement(mmDoc, "secuencial", (LEC_FE_Utils.fillString(9 - (LEC_FE_Utils.cutString(LEC_FE_Utils.getSecuencial(getDocumentNo(), m_coddoc), 9)).length(), '0'))
 					+ LEC_FE_Utils.cutString(LEC_FE_Utils.getSecuencial(getDocumentNo(), m_coddoc), 9), atts);
@@ -327,7 +330,7 @@ public class LEC_FE_MInOut extends MInOut
 			addHeaderElement(mmDoc, "codEstabDestino", "TODO", atts);
 			// Alfanumerico Max 300
 			addHeaderElement(mmDoc, "ruta", lw.getCityRegionPostal() + " - " + bpl.getCityRegionPostal(), atts);
-			if (invsus != null) {
+			if  ( m_c_invoice_sus_id > 0) {
 				// Numerico2
 				if (m_coddoc.equals("06"))
 					addHeaderElement(mmDoc, "codDocSustento", "01", atts);	// Hardcoded

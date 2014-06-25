@@ -333,8 +333,8 @@ public class LEC_FE_Validator implements ModelValidator
 			msg = "No existe definicion OrgInfo.DocumentCode: " + orginfo.toString();
 		else if (orginfo.get_ValueAsString("SRI_OrgCode").equals(""))
 			msg = "No existe definicion OrgInfo.SRI_OrgCode: " + orginfo.toString();
-		else if (orginfo.get_ValueAsString("SRI_StoreCode").equals(""))
-			msg = "No existe definicion OrgInfo.SRI_StoreCode: " + orginfo.toString();
+		//else if (orginfo.get_ValueAsString("SRI_StoreCode").equals(""))
+		//	msg = "No existe definicion OrgInfo.SRI_StoreCode: " + orginfo.toString();
 		else if (orginfo.get_ValueAsString("SRI_DocumentCode").equals(""))
 			msg = "No existe definicion OrgInfo.SRI_DocumentCode: " + orginfo.toString();
 		else if (orginfo.get_ValueAsString("SRI_IsKeepAccounting").equals(""))

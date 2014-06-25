@@ -142,6 +142,15 @@ public class LEC_FE_Utils
 	}
 	
 	/**
+	 * 	String getStoreCode from standard DocumentNo
+	 * 	@return string
+	 */
+	public static String getStoreCode(String docno) {
+		
+		return new String(docno.substring(4, 7));
+	}
+	
+	/**
 	 * 	String getSecuencial from DocumentNo
 	 * 	@return string
 	 */
@@ -173,13 +182,15 @@ public class LEC_FE_Utils
 			
 			if (docno.trim().length() < 17) {
 				doc17Sri = docno.substring(0, 3);
-				if (docno.lastIndexOf('-') == 3)		// 1 Guion
+				if (docno.lastIndexOf('-') == -1)		// 0 Guion
+					doc17Sri = doc17Sri + docno.substring(0, 6) + "-";
+				else if (docno.lastIndexOf('-') == 3)	// 1 Guion
 					doc17Sri = doc17Sri + docno.substring(3, 7) + "-";
 				else if (docno.lastIndexOf('-') == 6)	// 1 Guion
 					doc17Sri = doc17Sri + "-" + docno.substring(3, 5);
 				else if (docno.lastIndexOf('-') == 7)	// 2 Guiones
 					doc17Sri = doc17Sri + docno.substring(3, 8);
-				else doc17Sri = docno.substring(0, 7);
+				else doc17Sri = docno.substring(0, 6);
 				
 				doc17Sri = doc17Sri + LEC_FE_Utils.fillString(9 - (LEC_FE_Utils.cutString(LEC_FE_Utils.getSecuencial(docno, shortdoctype), 9)).length(), '0')
 									+ LEC_FE_Utils.cutString(LEC_FE_Utils.getSecuencial(docno, shortdoctype), 9);
@@ -193,7 +204,7 @@ public class LEC_FE_Utils
 		doc17Sri = doc17Sri.trim();
 		
 		if (doc17Sri.length() != 17)
-			throw new AdempiereException(Msg.getMsg(Env.getCtx(), "LCO_NotANumber"));
+			throw new AdempiereException(Msg.getMsg(Env.getCtx(), "LCO_WrongLength"));
 		
 		return doc17Sri;
 	}
@@ -208,7 +219,7 @@ public class LEC_FE_Utils
 		String doc15Sri = docno.replaceAll("-", "").trim();
 		
 		if (doc15Sri.length() != 15)
-			throw new AdempiereException(Msg.getMsg(Env.getCtx(), "LCO_NotANumber"));
+			throw new AdempiereException(Msg.getMsg(Env.getCtx(), "LCO_WrongLength"));
 		
 		return doc15Sri;
 	}
@@ -285,7 +296,7 @@ public class LEC_FE_Utils
 	 * 	String getInvAllDocSustento
 	 * 	@return int
 	 */
-	public static int getInvAllDocSustento(int c_invoice_id) {
+	public static int getInvAllDocSustento(int c_invoice_id) {	// Deprecated
 	
 		int c_invoice_sus_id = DB.getSQLValue(null, "SELECT al.C_Invoice_ID FROM C_AllocationHdr ah JOIN C_AllocationLine al ON al.C_AllocationHdr_ID = ah.C_AllocationHdr_ID WHERE ah.C_AllocationHdr_ID IN (SELECT al.C_AllocationHdr_ID FROM C_AllocationLine al WHERE al.C_Invoice_ID = ?) AND ah.DocStatus IN ('CO','CL') AND al.C_Invoice_ID != ? ", c_invoice_id, c_invoice_id);
 		
