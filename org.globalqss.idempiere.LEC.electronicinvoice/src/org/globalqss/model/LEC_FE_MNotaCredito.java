@@ -60,7 +60,6 @@ public class LEC_FE_MNotaCredito extends MInvoice
 	private String m_tipoidentificacioncomprador = "";
 	private String m_identificacioncomprador = "";
 	private String m_razonsocial = "";
-	private String m_guiaremision = "";
 
 	private BigDecimal m_totaldescuento = Env.ZERO;
 	private BigDecimal m_totalbaseimponible = Env.ZERO;
@@ -147,10 +146,10 @@ public class LEC_FE_MNotaCredito extends MInvoice
 		
 		X_LCO_TaxPayerType tp = new X_LCO_TaxPayerType(getCtx(), (Integer) bp.get_Value("LCO_TaxPayerType_ID"), get_TrxName());
 		
-		m_c_invoice_sus_id = LEC_FE_Utils.getInvAllDocSustento(getC_Invoice_ID());
-		
-		if ( m_c_invoice_sus_id < 1)
+		if ( get_Value("SriRef_Invoice_ID") == null)
 			throw new AdempiereUserError("No existe documento sustento para el comprobante");
+		
+		m_c_invoice_sus_id = (Integer) get_Value("SriRef_Invoice_ID");
 		
 		MInvoice invsus = new MInvoice(getCtx(), m_c_invoice_sus_id, get_TrxName());
 		
@@ -261,7 +260,7 @@ public class LEC_FE_MNotaCredito extends MInvoice
 			// Numerico3
 			addHeaderElement(mmDoc, "estab", oi.get_ValueAsString("SRI_OrgCode"), atts);
 			// Numerico3
-			addHeaderElement(mmDoc, "ptoEmi", oi.get_ValueAsString("SRI_StoreCode"), atts);
+			addHeaderElement(mmDoc, "ptoEmi", LEC_FE_Utils.getStoreCode(LEC_FE_Utils.formatDocNo(getDocumentNo(), m_coddoc)), atts);
 			// Numerico9
 			addHeaderElement(mmDoc, "secuencial", (LEC_FE_Utils.fillString(9 - (LEC_FE_Utils.cutString(LEC_FE_Utils.getSecuencial(getDocumentNo(), m_coddoc), 9)).length(), '0'))
 					+ LEC_FE_Utils.cutString(LEC_FE_Utils.getSecuencial(getDocumentNo(), m_coddoc), 9), atts);
