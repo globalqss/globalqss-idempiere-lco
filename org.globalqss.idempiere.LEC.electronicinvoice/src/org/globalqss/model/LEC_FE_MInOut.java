@@ -167,7 +167,7 @@ public class LEC_FE_MInOut extends MInOut
 			invsus = new MInvoice(getCtx(), m_c_invoice_sus_id, get_TrxName());
 		
 		// Access Code
-		m_accesscode = LEC_FE_Utils.getAccessCode(getMovementDate(), m_coddoc, bpe.getTaxID(), m_tipoambiente, oi.get_ValueAsString("SRI_OrgCode"), oi.get_ValueAsString("SRI_StoreCode"), getDocumentNo(), oi.get_ValueAsString("SRI_DocumentCode"), m_tipoemision);
+		m_accesscode = LEC_FE_Utils.getAccessCode(getMovementDate(), m_coddoc, bpe.getTaxID(), m_tipoambiente, oi.get_ValueAsString("SRI_OrgCode"), LEC_FE_Utils.getStoreCode(LEC_FE_Utils.formatDocNo(getDocumentNo(), m_coddoc)), getDocumentNo(), oi.get_ValueAsString("SRI_DocumentCode"), m_tipoemision);
 		
 		// TODO IsUseContingency
 		// if (IsUseContingency) m_tipoclaveacceso = "2";
