@@ -147,7 +147,7 @@ public class LEC_FE_MRetencion extends MInvoice
 		m_retencionno = DB.getSQLValueString(get_TrxName(), "SELECT DISTINCT(DocumentNo) FROM LCO_InvoiceWithholding WHERE C_Invoice_ID = ? ", getC_Invoice_ID());
 		
 		// Access Code
-		m_accesscode = LEC_FE_Utils.getAccessCode(getDateInvoiced(), m_coddoc, bpe.getTaxID(), m_tipoambiente, oi.get_ValueAsString("SRI_OrgCode"), oi.get_ValueAsString("SRI_StoreCode"), m_retencionno, oi.get_ValueAsString("SRI_DocumentCode"), m_tipoemision);
+		m_accesscode = LEC_FE_Utils.getAccessCode(getDateInvoiced(), m_coddoc, bpe.getTaxID(), m_tipoambiente, oi.get_ValueAsString("SRI_OrgCode"), LEC_FE_Utils.getStoreCode(LEC_FE_Utils.formatDocNo(getDocumentNo(), m_coddoc)), m_retencionno, oi.get_ValueAsString("SRI_DocumentCode"), m_tipoemision);
 			
 			// TODO IsUseContingency
 		// if (IsUseContingency) m_tipoclaveacceso = "2";

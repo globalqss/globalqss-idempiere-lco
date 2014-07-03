@@ -274,7 +274,7 @@ public class LEC_FE_Utils
 	 */
 	public static int getInvoiceDocSustento(int c_invoice_id) {
 	
-		int m_inout_sus_id = DB.getSQLValue(null, "SELECT io.M_InOut_ID FROM M_InOut io JOIN M_InOutLine iol ON iol.M_InOut_ID = io.M_InOut_ID JOIN C_InvoiceLine il ON il.M_InOutLine_ID = iol.M_InOutLine_ID WHERE io.DocStatus IN ('CO','CL') AND il.C_Invoice_ID = ? ", c_invoice_id);
+		int m_inout_sus_id = DB.getSQLValue(null, "SELECT COALESCE(MAX(io.M_InOut_ID), -1) FROM M_InOut io JOIN M_InOutLine iol ON iol.M_InOut_ID = io.M_InOut_ID JOIN C_InvoiceLine il ON il.M_InOutLine_ID = iol.M_InOutLine_ID WHERE io.DocStatus IN ('CO','CL') AND il.C_Invoice_ID = ? ", c_invoice_id);
 		
 		return m_inout_sus_id;
 
@@ -286,7 +286,7 @@ public class LEC_FE_Utils
 	 */
 	public static int getInOutDocSustento(int m_inout_id) {
 	
-		int c_invoice_sus_id = DB.getSQLValue(null, "SELECT i.C_Invoice_ID FROM M_InOut io JOIN M_InOutLine iol ON iol.M_InOut_ID = io.M_InOut_ID JOIN C_InvoiceLine il ON il.M_InOutLine_ID = iol.M_InOutLine_ID JOIN C_Invoice i ON i.C_Invoice_ID = il.C_Invoice_ID WHERE i.DocStatus IN ('CO','CL') AND io.M_InOut_ID = ? ", m_inout_id);
+		int c_invoice_sus_id = DB.getSQLValue(null, "SELECT COALESCE(MAX(i.C_Invoice_ID), -1) FROM M_InOut io JOIN M_InOutLine iol ON iol.M_InOut_ID = io.M_InOut_ID JOIN C_InvoiceLine il ON il.M_InOutLine_ID = iol.M_InOutLine_ID JOIN C_Invoice i ON i.C_Invoice_ID = il.C_Invoice_ID WHERE i.DocStatus IN ('CO','CL') AND io.M_InOut_ID = ? ", m_inout_id);
 		
 		return c_invoice_sus_id;
 

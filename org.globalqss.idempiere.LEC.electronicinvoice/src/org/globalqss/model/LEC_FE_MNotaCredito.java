@@ -153,10 +153,10 @@ public class LEC_FE_MNotaCredito extends MInvoice
 		
 		MInvoice invsus = new MInvoice(getCtx(), m_c_invoice_sus_id, get_TrxName());
 		
-		m_totaldescuento = DB.getSQLValueBD(get_TrxName(), "SELECT COALESCE(SUM(ilt.discount), 0) FROM c_invoice_linetax_vt ilt WHERE ilt.C_Invoice_ID = ? ", getC_Invoice_ID());
+		m_totaldescuento = Env.ZERO; // DB.getSQLValueBD(get_TrxName(), "SELECT COALESCE(SUM(ilt.discount), 0) FROM c_invoice_linetax_vt ilt WHERE ilt.C_Invoice_ID = ? ", getC_Invoice_ID());
 
 		// Access Code
-		m_accesscode = LEC_FE_Utils.getAccessCode(getDateInvoiced(), m_coddoc, bpe.getTaxID(), m_tipoambiente, oi.get_ValueAsString("SRI_OrgCode"), oi.get_ValueAsString("SRI_StoreCode"), getDocumentNo(), oi.get_ValueAsString("SRI_DocumentCode"), m_tipoemision);
+		m_accesscode = LEC_FE_Utils.getAccessCode(getDateInvoiced(), m_coddoc, bpe.getTaxID(), m_tipoambiente, oi.get_ValueAsString("SRI_OrgCode"), LEC_FE_Utils.getStoreCode(LEC_FE_Utils.formatDocNo(getDocumentNo(), m_coddoc)), getDocumentNo(), oi.get_ValueAsString("SRI_DocumentCode"), m_tipoemision);
 			
 			// TODO IsUseContingency
 		// if (IsUseContingency) m_tipoclaveacceso = "2";
@@ -371,7 +371,7 @@ public class LEC_FE_MNotaCredito extends MInvoice
 		mmDoc.startElement("","","detalles",atts);
 		
 		sql = new StringBuffer(
-	            "SELECT i.C_Invoice_ID, COALESCE(p.value, '0'), 0::text, ilt.name, ilt.qtyinvoiced, ilt.priceactual, COALESCE(ilt.discount, 0), ilt.linenetamt "
+	            "SELECT i.C_Invoice_ID, COALESCE(p.value, '0'), 0::text, ilt.name, ilt.qtyinvoiced, ilt.priceactual, COALESCE(0, ilt.discount), ilt.linenetamt "
 				+ ", t.LEC_TaxTypeSRI AS codigo "
 				+ ", CASE "
 				+ "    WHEN t.LEC_TaxTypeSRI = '2' THEN "
