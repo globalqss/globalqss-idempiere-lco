@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SRI_Factura100RideDet" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="C_Invoice_ID" class="java.lang.Integer" isForPrompting="false">
+		<defaultValueExpression><![CDATA[0]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+ COALESCE(p.value, '0') AS codigoPrincipal
+ , 0::text AS codigoAuxiliar
+ , ilt.name AS descripcion
+ , ilt.qtyinvoiced AS cantidad
+ , ilt.priceactual AS precioUnitario
+ , 0::numeric AS descuento
+ , ilt.linenetamt AS precioTotalSinImpuesto
+ , t.LEC_TaxTypeSRI AS codigo
+ , CASE
+     WHEN t.LEC_TaxTypeSRI = '2' THEN
+       CASE
+         WHEN t.rate = 0::numeric THEN '0'
+         WHEN t.rate = 12::numeric THEN '2'
+         ELSE '6'
+       END
+     WHEN t.LEC_TaxTypeSRI = '3' THEN
+       '0000'
+     ELSE '0'
+   END AS codigoPorcentaje
+  , t.rate AS tarifa
+  , ilt.linenetamt AS baseImponible
+  , round(ilt.linenetamt * t.rate / 100, 2) AS valor
+  , il.description AS descripcion1
+  , t.name AS razon
+FROM C_Invoice i
+ JOIN C_InvoiceTax it ON it.C_Invoice_ID = i.C_Invoice_ID
+ JOIN C_InvoiceLine il ON il.C_Invoice_ID = i.C_Invoice_ID
+ JOIN c_invoice_linetax_vt ilt ON ilt.C_InvoiceLine_ID = il.C_InvoiceLine_ID
+ JOIN C_Tax t ON t.C_Tax_ID = ilt.C_Tax_ID
+ LEFT JOIN M_Product p ON p.M_Product_ID = il.M_Product_ID
+ LEFT JOIN m_product_category pc ON pc.m_product_category_id = p.m_product_category_id
+ LEFT JOIN c_charge c ON il.c_charge_id = c.c_charge_id
+WHERE il.isdescription = 'N' AND i.C_Invoice_ID = $P{C_Invoice_ID}
+ORDER BY il.line]]>
+	</queryString>
+	<field name="codigoprincipal" class="java.lang.String"/>
+	<field name="codigoauxiliar" class="java.lang.String"/>
+	<field name="descripcion" class="java.lang.String"/>
+	<field name="cantidad" class="java.math.BigDecimal"/>
+	<field name="preciounitario" class="java.math.BigDecimal"/>
+	<field name="descuento" class="java.math.BigDecimal"/>
+	<field name="preciototalsinimpuesto" class="java.math.BigDecimal"/>
+	<field name="codigo" class="java.lang.String"/>
+	<field name="codigoporcentaje" class="java.lang.String"/>
+	<field name="tarifa" class="java.math.BigDecimal"/>
+	<field name="baseimponible" class="java.math.BigDecimal"/>
+	<field name="valor" class="java.math.BigDecimal"/>
+	<field name="descripcion1" class="java.lang.String"/>
+	<field name="razon" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="31">
+			<rectangle>
+				<reportElement mode="Transparent" x="4" y="1" width="545" height="29"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="79" y="0" width="22" height="30"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Cod.
+Aux.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="102" y="0" width="45" height="30"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Cant.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="0" width="79" height="30"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Descripción]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="361" y="0" width="58" height="30"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Precio
+Unitario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="421" y="0" width="40" height="30"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Descuento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="463" y="0" width="86" height="30"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Precio Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="231" y="1" width="40" height="30"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Detalle
+Adicional]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="273" y="0" width="40" height="30"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Detalle
+Adicional]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="0" width="74" height="30"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Cod.
+Principal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="316" y="1" width="40" height="30"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Detalle
+Adicional]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Transparent" x="4" y="1" width="545" height="15"/>
+			</rectangle>
+			<textField>
+				<reportElement x="79" y="1" width="22" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{codigoauxiliar}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="102" y="1" width="45" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{cantidad}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00">
+				<reportElement x="361" y="0" width="58" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{preciounitario}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00">
+				<reportElement x="421" y="1" width="40" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{descuento}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00">
+				<reportElement x="463" y="1" width="86" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{preciototalsinimpuesto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="1" width="79" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="4" y="1" width="74" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{codigoprincipal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="231" y="1" width="125" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{descripcion1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
