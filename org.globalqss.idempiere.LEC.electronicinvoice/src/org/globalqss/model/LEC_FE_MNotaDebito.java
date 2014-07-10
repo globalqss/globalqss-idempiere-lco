@@ -304,7 +304,7 @@ public class LEC_FE_MNotaDebito extends MInvoice
 		// Impuestos
 		sql = new StringBuffer(
 	            "SELECT i.C_Invoice_ID, COALESCE(p.value, '0'), 0::text, ilt.name, ilt.qtyinvoiced, ilt.priceactual, COALESCE(ilt.discount, 0), ilt.linenetamt "
-				+ ", t.LEC_TaxTypeSRI AS codigo "
+				+ ", COALESCE(t.LEC_TaxTypeSRI, '0') AS codigo "
 				+ ", CASE "
 				+ "    WHEN t.LEC_TaxTypeSRI = '2' THEN "
 				+ "      CASE "
@@ -341,6 +341,11 @@ public class LEC_FE_MNotaDebito extends MInvoice
 			while (rs.next())
 			{
 					// TODO El mismo cursor de totalConImpuestos para Producto SIN GROUP BY ?
+					if (rs.getString(9).equals("0")) {
+						msg = "Impuesto sin Tipo impuesto SRI";
+						throw new AdempiereException(msg);
+					}
+					
 					mmDoc.startElement("","","impuesto",atts);
 						// Numerico 1
 						addHeaderElement(mmDoc, "codigo", rs.getString(9), atts);
