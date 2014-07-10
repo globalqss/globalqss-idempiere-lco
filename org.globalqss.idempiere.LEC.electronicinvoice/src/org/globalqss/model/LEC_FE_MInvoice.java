@@ -359,7 +359,7 @@ public class LEC_FE_MInvoice extends MInvoice
 		// Numerico Max 14
 		addHeaderElement(mmDoc, "propina", Env.ZERO.toString(), atts);
 		// Numerico Max 14
-		addHeaderElement(mmDoc, "importeTotal", m_totalvalorimpuesto.toString(), atts);
+		addHeaderElement(mmDoc, "importeTotal", getGrandTotal().toString(), atts);
 		// Alfanumerico MAx 25
 		addHeaderElement(mmDoc, "moneda", getCurrencyISO(), atts);
 		

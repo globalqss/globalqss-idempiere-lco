@@ -288,7 +288,7 @@ public class LEC_FE_MRetencion extends MInvoice
 		// Impuestos
 		sql = new StringBuffer(
 	            "SELECT i.C_Invoice_ID, dt.SRI_ShortDocType AS codDocSustento, i.DocumentNo AS numDocSustento, i.DateInvoiced AS fechaEmisionDocSustento "
-				+ ", t.LEC_TaxTypeSRI AS codigo "
+				+ ", COALESCE(t.LEC_TaxTypeSRI, '0') AS codigo "
 				+ ", CASE "
 				+ "    WHEN t.LEC_TaxTypeSRI = '1' THEN "
 				+ "      SUBSTRING(whr.Name,1,3) "
@@ -326,6 +326,11 @@ public class LEC_FE_MRetencion extends MInvoice
 			while (rs.next())
 			{
 					// TODO El mismo cursor de totalConImpuestos para Producto SIN GROUP BY ?
+					if (rs.getString(5).equals("0")) {
+						msg = "Impuesto sin Tipo impuesto SRI";
+						throw new AdempiereException(msg);
+					}
+					
 					mmDoc.startElement("","","impuesto",atts);
 						// Numerico 1
 						addHeaderElement(mmDoc, "codigo", rs.getString(5), atts);
@@ -387,8 +392,7 @@ public class LEC_FE_MRetencion extends MInvoice
 		}
 		
 		if (m_sumabaseimponible.compareTo(m_totalbaseimponible) != 0 ) {
-			msg = "Error Diferencia Base Impuesto Total: " + m_totalbaseimponible.toString() + " Detalles: " + m_sumabaseimponible.toString();
-			throw new AdempiereException(msg);
+			log.warning("Diferencia Base Impuesto Total: " + m_totalbaseimponible.toString() + " Detalles: " + m_sumabaseimponible.toString());
 		}
 		
 		if (m_sumavalorimpuesto.compareTo(m_totalvalorimpuesto) != 0 ) {
