@@ -10,7 +10,7 @@
 System.getProperty("java.io.tmpdir") + System.getProperty("file.separator")]]></defaultValueExpression>
 	</parameter>
 	<parameter name="RECORD_ID" class="java.lang.Integer">
-		<defaultValueExpression><![CDATA[1224533]]></defaultValueExpression>
+		<defaultValueExpression><![CDATA[0]]></defaultValueExpression>
 	</parameter>
 	<queryString>
 		<![CDATA[SELECT
@@ -101,7 +101,7 @@ WHERE i.C_Invoice_ID = $P{RECORD_ID}]]>
 	<background>
 		<band height="463" splitType="Stretch">
 			<staticText>
-				<reportElement mode="Opaque" x="130" y="182" width="305" height="244"/>
+				<reportElement mode="Transparent" x="130" y="182" width="305" height="244" forecolor="#CCCCCC"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
 					<font size="36" isStrikeThrough="false"/>
 				</textElement>
@@ -111,73 +111,81 @@ WHERE i.C_Invoice_ID = $P{RECORD_ID}]]>
 	</background>
 	<pageHeader>
 		<band height="318" splitType="Stretch">
-			<rectangle radius="10">
-				<reportElement mode="Transparent" x="337" y="13" width="220" height="240"/>
+			<rectangle>
+				<reportElement mode="Transparent" x="10" y="263" width="550" height="50"/>
 			</rectangle>
 			<textField>
-				<reportElement x="337" y="53" width="180" height="20"/>
+				<reportElement x="332" y="58" width="180" height="20"/>
 				<textElement/>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{coddoc}.equals("01") ? "No. " + $F{documentno} : null]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="337" y="73" width="180" height="20"/>
+				<reportElement x="332" y="78" width="180" height="20"/>
 				<textElement/>
 				<text><![CDATA[NÚMERO DE AUTORIZACIÓN]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="337" y="93" width="220" height="20"/>
+				<reportElement x="332" y="98" width="220" height="20"/>
 				<textElement/>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{codigoautorizacion}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="337" y="113" width="144" height="20"/>
+				<reportElement x="332" y="118" width="144" height="20"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<text><![CDATA[FECHA Y HORA DE AUTORIZACIÓN]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="337" y="133" width="60" height="20"/>
+				<reportElement x="332" y="138" width="60" height="20"/>
 				<textElement/>
 				<text><![CDATA[AMBIENTE:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="337" y="173" width="100" height="20"/>
+				<reportElement x="332" y="178" width="100" height="20"/>
 				<textElement/>
 				<text><![CDATA[CLAVE DE ACCESO]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="407" y="133" width="110" height="20"/>
+				<reportElement x="402" y="138" width="110" height="20"/>
 				<textElement/>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{ambiente}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="337" y="153" width="210" height="20"/>
+				<reportElement x="332" y="158" width="210" height="20"/>
 				<textElement/>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{tipoemision}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="27" y="173" width="61" height="20"/>
-				<textElement/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
 				<text><![CDATA[Dir. Matriz:]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="27" y="193" width="61" height="20"/>
-				<textElement/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
 				<text><![CDATA[Dir. Sucursal:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="88" y="173" width="203" height="20"/>
-				<textElement/>
+				<reportElement x="88" y="173" width="217" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{dirmatriz}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="88" y="193" width="203" height="20"/>
-				<textElement/>
+				<reportElement x="88" y="193" width="217" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{direstablecimiento}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="27" y="149" width="264" height="24"/>
+				<reportElement x="27" y="149" width="278" height="24"/>
 				<textElement>
 					<font size="12"/>
 				</textElement>
@@ -204,20 +212,20 @@ WHERE i.C_Invoice_ID = $P{RECORD_ID}]]>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{obligadocontabilidad}]]></textFieldExpression>
 			</textField>
 			<componentElement>
-				<reportElement x="341" y="193" width="210" height="50"/>
+				<reportElement x="332" y="198" width="210" height="50"/>
 				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="EAN128" drawText="true" checksumRequired="false" barHeight="50">
 					<jr:codeExpression><![CDATA[$F{claveacceso}]]></jr:codeExpression>
 				</jr:barbecue>
 			</componentElement>
 			<staticText>
-				<reportElement x="15" y="263" width="133" height="20"/>
+				<reportElement x="12" y="263" width="133" height="20"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<text><![CDATA[Razon Social / Nombres y Apellidos]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="148" y="263" width="239" height="50"/>
+				<reportElement x="147" y="263" width="239" height="50"/>
 				<textElement/>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{razonsocialcomprador}]]></textFieldExpression>
 			</textField>
@@ -227,53 +235,55 @@ WHERE i.C_Invoice_ID = $P{RECORD_ID}]]>
 				<textFieldExpression class="java.lang.String"><![CDATA["RUC/CI: " + $F{identificacioncomprador}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="15" y="293" width="133" height="20"/>
+				<reportElement x="12" y="293" width="133" height="20"/>
 				<textElement/>
 				<textFieldExpression class="java.lang.String"><![CDATA["Fecha Emisión: " + $F{fechaemision}]]></textFieldExpression>
 			</textField>
-			<textField>
+			<textField isBlankWhenNull="true">
 				<reportElement x="387" y="293" width="170" height="20"/>
-				<textElement/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA["Guia Remisión: " + $F{guiaremision}]]></textFieldExpression>
 			</textField>
+			<rectangle radius="10">
+				<reportElement mode="Transparent" x="315" y="13" width="245" height="240"/>
+			</rectangle>
 			<textField>
-				<reportElement x="477" y="113" width="80" height="20"/>
+				<reportElement x="472" y="118" width="80" height="20"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{fechaemision}]]></textFieldExpression>
 			</textField>
-			<image>
-				<reportElement x="15" y="16" width="249" height="97"/>
-				<imageExpression class="java.awt.Image"><![CDATA[org.compiere.model.MImage.get(org.compiere.util.Env.getCtx(), $F{logo_id}.intValue()).getImage()]]></imageExpression>
-			</image>
 			<staticText>
-				<reportElement x="337" y="13" width="34" height="20"/>
+				<reportElement x="332" y="18" width="34" height="20"/>
 				<textElement/>
 				<text><![CDATA[R.U.C:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="407" y="13" width="110" height="20"/>
+				<reportElement x="402" y="18" width="110" height="20"/>
 				<textElement/>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{ruc}]]></textFieldExpression>
 			</textField>
+			<rectangle radius="10">
+				<reportElement mode="Transparent" x="10" y="149" width="296" height="104"/>
+			</rectangle>
 			<textField>
-				<reportElement x="337" y="33" width="180" height="20"/>
+				<reportElement x="332" y="38" width="180" height="20"/>
 				<textElement/>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{coddoc}.equals("01") ? "FACTURA" : "TIPO NO VALIDO " + $F{coddoc}]]></textFieldExpression>
 			</textField>
-			<rectangle radius="10">
-				<reportElement mode="Transparent" x="19" y="149" width="272" height="104"/>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="15" y="263" width="542" height="50"/>
-			</rectangle>
+			<image scaleImage="FillFrame" hAlign="Left">
+				<reportElement mode="Transparent" x="10" y="13" width="296" height="120" forecolor="#FFFFFF" backcolor="#000000"/>
+				<imageExpression class="java.awt.Image"><![CDATA[org.compiere.model.MImage.get(org.compiere.util.Env.getCtx(), $F{logo_id}.intValue()).getImage()]]></imageExpression>
+			</image>
 		</band>
 	</pageHeader>
 	<detail>
 		<band height="8" splitType="Stretch">
 			<subreport>
-				<reportElement x="0" y="3" width="572" height="5"/>
+				<reportElement x="10" y="3" width="542" height="5"/>
 				<subreportParameter name="C_Invoice_ID">
 					<subreportParameterExpression><![CDATA[$P{RECORD_ID}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -303,10 +313,10 @@ WHERE i.C_Invoice_ID = $P{RECORD_ID}]]>
 	<summary>
 		<band height="72" splitType="Prevent">
 			<rectangle>
-				<reportElement mode="Transparent" x="19" y="5" width="249" height="65"/>
+				<reportElement mode="Transparent" x="10" y="5" width="295" height="65"/>
 			</rectangle>
 			<subreport>
-				<reportElement x="291" y="0" width="266" height="5"/>
+				<reportElement x="315" y="0" width="266" height="5"/>
 				<subreportParameter name="importetotal">
 					<subreportParameterExpression><![CDATA[$F{importetotal}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -320,14 +330,14 @@ WHERE i.C_Invoice_ID = $P{RECORD_ID}]]>
 				<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "SRI_Factura100RidePie.jasper"]]></subreportExpression>
 			</subreport>
 			<staticText>
-				<reportElement x="19" y="5" width="151" height="15"/>
+				<reportElement x="12" y="5" width="148" height="15"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<text><![CDATA[Información Adicional]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="19" y="20" width="249" height="50"/>
+				<reportElement x="12" y="20" width="293" height="50"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
