@@ -15,7 +15,7 @@
  , ilt.priceactual AS precioUnitario
  , 0::numeric AS descuento
  , ilt.linenetamt AS precioTotalSinImpuesto
- , t.LEC_TaxTypeSRI AS codigo
+ , COALESCE(t.LEC_TaxTypeSRI, '0') AS codigo
  , CASE
      WHEN t.LEC_TaxTypeSRI = '2' THEN
        CASE
@@ -61,9 +61,9 @@ ORDER BY il.line]]>
 		<band splitType="Stretch"/>
 	</background>
 	<columnHeader>
-		<band height="31">
+		<band height="32">
 			<rectangle>
-				<reportElement mode="Transparent" x="4" y="1" width="545" height="29"/>
+				<reportElement mode="Transparent" x="0" y="0" width="550" height="32"/>
 			</rectangle>
 			<staticText>
 				<reportElement x="79" y="0" width="22" height="30"/>
@@ -144,61 +144,61 @@ Adicional]]></text>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="16" splitType="Stretch">
+		<band height="32" splitType="Stretch">
 			<rectangle>
-				<reportElement mode="Transparent" x="4" y="1" width="545" height="15"/>
+				<reportElement mode="Transparent" x="0" y="0" width="550" height="32"/>
 			</rectangle>
 			<textField>
-				<reportElement x="79" y="1" width="22" height="15"/>
+				<reportElement x="79" y="1" width="22" height="30"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{codigoauxiliar}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.00;-###0.00">
-				<reportElement x="102" y="1" width="45" height="15"/>
+				<reportElement x="102" y="1" width="45" height="30"/>
 				<textElement textAlignment="Right">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{cantidad}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00;-#,##0.00">
-				<reportElement x="361" y="0" width="58" height="15"/>
+				<reportElement x="361" y="0" width="58" height="30"/>
 				<textElement textAlignment="Right">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{preciounitario}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00;-#,##0.00">
-				<reportElement x="421" y="1" width="40" height="15"/>
+				<reportElement x="421" y="1" width="40" height="30"/>
 				<textElement textAlignment="Right">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{descuento}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00;-#,##0.00">
-				<reportElement x="463" y="1" width="86" height="15"/>
+				<reportElement x="463" y="1" width="86" height="30"/>
 				<textElement textAlignment="Right">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{preciototalsinimpuesto}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="150" y="1" width="79" height="15"/>
+				<reportElement x="150" y="1" width="79" height="30"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{descripcion}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="4" y="1" width="74" height="15"/>
+				<reportElement x="4" y="1" width="74" height="30"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{codigoprincipal}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement x="231" y="1" width="125" height="15"/>
+			<textField isBlankWhenNull="true">
+				<reportElement x="231" y="1" width="125" height="30"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
