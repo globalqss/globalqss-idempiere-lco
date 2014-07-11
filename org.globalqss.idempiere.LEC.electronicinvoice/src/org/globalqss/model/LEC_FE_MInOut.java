@@ -323,7 +323,7 @@ public class LEC_FE_MInOut extends MInOut
 			// Alfanumerico Max 300
 			addHeaderElement(mmDoc, "dirDestinatario", bpl.getAddress1(), atts);
 			// Alfanumerico Max 300
-			addHeaderElement(mmDoc, "motivoTraslado", "TODO", atts);
+			addHeaderElement(mmDoc, "motivoTraslado", "Venta", atts);
 			// Alfanumerico Max 20
 			addHeaderElement(mmDoc, "docAduaneroUnico", "TODO", atts);
 			// Numerico3
@@ -381,7 +381,7 @@ public class LEC_FE_MInOut extends MInOut
 					
 					atts.clear();
 					atts.addAttribute("", "", "nombre", "CDATA", "descripcion1");
-					atts.addAttribute("", "", "valor", "CDATA", LEC_FE_Utils.cutString(rs.getString(14),300));
+					atts.addAttribute("", "", "valor", "CDATA", LEC_FE_Utils.cutString(rs.getString(6),300));
 					mmDoc.startElement("", "", "detAdicional", atts);
 					mmDoc.endElement("","","detAdicional");
 						
@@ -417,6 +417,7 @@ public class LEC_FE_MInOut extends MInOut
 				mmDoc.startElement("", "", "campoAdicional", atts);
 				String valor = LEC_FE_Utils.cutString(getDescription(),300);
 				mmDoc.characters(valor.toCharArray(), 0, valor.length());
+				mmDoc.endElement("","","campoAdicional");
 			
 			mmDoc.endElement("","","infoAdicional");
 		}
