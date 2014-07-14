@@ -166,6 +166,9 @@ public class LEC_FE_MInOut extends MInOut
 		if ( m_c_invoice_sus_id > 0)
 			invsus = new MInvoice(getCtx(), m_c_invoice_sus_id, get_TrxName());
 		
+		if (getShipDate() == null || get_Value("ShipDateE") == null)
+			throw new AdempiereUserError("Debe indicar fechas de transporte");
+		
 		// Access Code
 		m_accesscode = LEC_FE_Utils.getAccessCode(getMovementDate(), m_coddoc, bpe.getTaxID(), m_tipoambiente, oi.get_ValueAsString("SRI_OrgCode"), LEC_FE_Utils.getStoreCode(LEC_FE_Utils.formatDocNo(getDocumentNo(), m_coddoc)), getDocumentNo(), oi.get_ValueAsString("SRI_DocumentCode"), m_tipoemision);
 		
@@ -358,7 +361,7 @@ public class LEC_FE_MInOut extends MInOut
 		
 		try
 		{
-			PreparedStatement pstmt = DB.prepareStatement(sql.toString(), null);
+			PreparedStatement pstmt = DB.prepareStatement(sql.toString(), get_TrxName());
 			pstmt.setInt(1, getM_InOut_ID());
 			ResultSet rs = pstmt.executeQuery();
 			//

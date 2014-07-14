@@ -331,7 +331,7 @@ public class LEC_FE_MNotaDebito extends MInvoice
 		
 		try
 		{
-			PreparedStatement pstmt = DB.prepareStatement(sql.toString(), ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY, null);
+			PreparedStatement pstmt = DB.prepareStatement(sql.toString(), ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY, get_TrxName());
 			pstmt.setInt(1, getC_Invoice_ID());
 			ResultSet rs = pstmt.executeQuery();
 			//
