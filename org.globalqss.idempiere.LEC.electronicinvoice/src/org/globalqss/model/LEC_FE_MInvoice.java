@@ -320,7 +320,7 @@ public class LEC_FE_MInvoice extends MInvoice
 		
 		try
 		{
-			PreparedStatement pstmt = DB.prepareStatement(sql.toString(), null);
+			PreparedStatement pstmt = DB.prepareStatement(sql.toString(), get_TrxName());
 			pstmt.setInt(1, getC_Invoice_ID());
 			ResultSet rs = pstmt.executeQuery();
 			//
@@ -401,7 +401,7 @@ public class LEC_FE_MInvoice extends MInvoice
 		
 		try
 		{
-			PreparedStatement pstmt = DB.prepareStatement(sql.toString(), null);
+			PreparedStatement pstmt = DB.prepareStatement(sql.toString(), get_TrxName());
 			pstmt.setInt(1, getC_Invoice_ID());
 			ResultSet rs = pstmt.executeQuery();
 			//
