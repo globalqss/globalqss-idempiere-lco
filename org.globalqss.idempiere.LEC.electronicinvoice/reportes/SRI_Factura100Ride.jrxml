@@ -14,7 +14,7 @@ System.getProperty("java.io.tmpdir") + System.getProperty("file.separator")]]></
 	</parameter>
 	<queryString>
 		<![CDATA[SELECT
- COALESCE(oi.Logo_ID, 0) AS Logo_ID
+ COALESCE(oi.Logo_ID, ci.Logo_ID) AS Logo_ID
  , (select upper(rl.name) from ad_ref_list rl join ad_reference r on r.ad_reference_id = rl.ad_reference_id and r.name = 'SRI_EnvType' and rl.value = ac.envtype) AS ambiente
  , (select upper(rl.name) from ad_ref_list rl join ad_reference r on r.ad_reference_id = rl.ad_reference_id and r.name = 'SRI_DeliveredType' and rl.value = ac.codeaccesstype) AS tipoEmision
  , bpo.name AS razonSocial
@@ -52,6 +52,7 @@ System.getProperty("java.io.tmpdir") + System.getProperty("file.separator")]]></
  , c.description AS moneda
  , i.description AS description2
 FROM C_Invoice i
+ JOIN AD_ClientInfo ci ON ci.AD_Client_ID = i.AD_Client_ID
  JOIN AD_OrgInfo oi ON oi.AD_Org_ID = i.AD_Org_ID
  JOIN C_DocType dt ON dt.C_DocType_ID = i.C_DocTypeTarget_ID
  JOIN C_BPartner bpo ON bpo.AD_Client_ID = oi.AD_Client_ID AND bpo.TaxId = oi.TaxId
@@ -274,7 +275,7 @@ WHERE i.C_Invoice_ID = $P{RECORD_ID}]]>
 				<textElement/>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{coddoc}.equals("01") ? "FACTURA" : "TIPO NO VALIDO " + $F{coddoc}]]></textFieldExpression>
 			</textField>
-			<image scaleImage="FillFrame" hAlign="Left">
+			<image scaleImage="FillFrame" hAlign="Left" isUsingCache="false">
 				<reportElement mode="Transparent" x="10" y="13" width="296" height="120" forecolor="#FFFFFF" backcolor="#000000"/>
 				<imageExpression class="java.awt.Image"><![CDATA[org.compiere.model.MImage.get(org.compiere.util.Env.getCtx(), $F{logo_id}.intValue()).getImage()]]></imageExpression>
 			</image>
