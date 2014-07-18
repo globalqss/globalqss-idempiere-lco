@@ -313,6 +313,11 @@ public class LEC_FE_Validator implements ModelValidator
 		
 		String msg = null;
 		
+		int c_location_matriz_id = MSysConfig.getIntValue("QSSLEC_FE_LocalizacionDireccionMatriz", -1, orginfo.getAD_Client_ID());
+		
+		if ( c_location_matriz_id < 1)
+			msg = "No existe parametro para LocalizacionDireccionMatriz";
+		
 		String rutacert = MSysConfig.getValue("QSSLEC_FE_RutaCertificadoDigital", null, orginfo.getAD_Client_ID(), orginfo.getAD_Org_ID());
 		
 		if (rutacert == null)
