@@ -25,6 +25,7 @@ import org.compiere.model.MInOut;
 import org.compiere.model.MInvoice;
 import org.compiere.model.MLocation;
 import org.compiere.model.MOrgInfo;
+import org.compiere.model.MShipper;
 import org.compiere.model.MSysConfig;
 import org.compiere.util.AdempiereUserError;
 import org.compiere.util.DB;
@@ -149,10 +150,26 @@ public class LEC_FE_MInOut extends MInOut
 			m_identificacioncomprador = m_identificacionconsumidor;
 		
 		// Transportista
-		if (getM_Shipper_ID() == 0)
-			throw new AdempiereUserError("No existe definicion Transportista");
-			
-		MBPartner bpt = new MBPartner(getCtx(), getM_Shipper().getC_BPartner_ID(), get_TrxName());
+		// Hardcoded
+		// C_DocType_ID=1000293-ENTREGA SIS UIO MOST
+		// C_DocType_ID=1000324-ENTREGA MAT UIO MOST
+		Boolean isventamostrador = false;
+		Timestamp datets = getShipDate();
+		Timestamp datete = (Timestamp) get_Value("ShipDateE");
+		int m_shipper_id = getM_Shipper_ID();
+		
+		if (m_shipper_id == 0) {
+			if (dt.getC_DocType_ID() == 1000293 || dt.getC_DocType_ID() == 1000324) {
+				isventamostrador = true;
+				datets = getMovementDate();
+				datete = getMovementDate();
+				m_shipper_id = MSysConfig.getIntValue("QSSLEC_FE_TransportadorVentaMostrador", 0, getAD_Client_ID());
+				}
+				else throw new AdempiereUserError("No existe definicion Transportista");
+		}
+		
+		MShipper st = new MShipper(getCtx(), m_shipper_id, get_TrxName());
+		MBPartner bpt = new MBPartner(getCtx(), st.getC_BPartner_ID(), get_TrxName());
 		
 		X_LCO_TaxIdType ttt = new X_LCO_TaxIdType(getCtx(), (Integer) bpt.get_Value("LCO_TaxIdType_ID"), get_TrxName());
 		
@@ -170,7 +187,7 @@ public class LEC_FE_MInOut extends MInOut
 		if ( m_c_invoice_sus_id > 0)
 			invsus = new MInvoice(getCtx(), m_c_invoice_sus_id, get_TrxName());
 		
-		if (getShipDate() == null || get_Value("ShipDateE") == null)
+		if (!isventamostrador && (getShipDate() == null || get_Value("ShipDateE") == null))
 			throw new AdempiereUserError("Debe indicar fechas de transporte");
 		
 		// Access Code
@@ -307,13 +324,11 @@ public class LEC_FE_MInOut extends MInOut
 			// Numerico3-5
 			addHeaderElement(mmDoc, "contribuyenteEspecial", oi.get_ValueAsString("SRI_TaxPayerCode"), atts);
 			// Fecha8 ddmmaaaa
-			addHeaderElement(mmDoc, "fechaIniTransporte", LEC_FE_Utils.getDate(getShipDate(),10), atts);
-			Timestamp datets = (Timestamp) get_Value("ShipDateE");
-			Date dates = new Date(datets.getTime()); 
+			addHeaderElement(mmDoc, "fechaIniTransporte", LEC_FE_Utils.getDate(new Date ((datets).getTime()),10), atts);
 			// Fecha8 ddmmaaaa
-			addHeaderElement(mmDoc, "fechaFinTransporte", LEC_FE_Utils.getDate(dates,10), atts);
+			addHeaderElement(mmDoc, "fechaFinTransporte", LEC_FE_Utils.getDate(new Date ((datete).getTime()),10), atts);
 			// Alfanumerico Max 20
-			addHeaderElement(mmDoc, "placa", LEC_FE_Utils.cutString(getM_Shipper().getName(), 40), atts);
+			addHeaderElement(mmDoc, "placa", LEC_FE_Utils.cutString(st.getName(), 40), atts);
 			
 		mmDoc.endElement("","","infoGuiaRemision");	
 		
