@@ -27,7 +27,7 @@ System.getProperty("java.io.tmpdir") + System.getProperty("file.separator")]]></
  , oi.SRI_OrgCode AS estab
  , substring(i.documentno,5,3) AS ptoEmi
  , substring(i.documentno from position('-' in i.documentno)+5)::numeric AS secuencial
- , lo.address1 AS dirMatriz
+ , lm.address1 AS dirMatriz
  , oi.SRI_OrgCode || substring(i.documentno,5,3) AS serie
  , substring(i.documentno from position('-' in i.documentno)+5)::numeric AS numero
  , oi.SRI_DocumentCode AS codigo
@@ -57,7 +57,8 @@ FROM C_Invoice i
  JOIN C_DocType dt ON dt.C_DocType_ID = i.C_DocTypeTarget_ID
  JOIN C_BPartner bpo ON bpo.AD_Client_ID = oi.AD_Client_ID AND bpo.TaxId = oi.TaxId
  JOIN C_BPartner_Location bplo ON bplo.C_BPartner_ID = bpo.C_BPartner_ID AND bplo.IsPayFrom='Y' AND bplo.IsBillTo='Y'
- JOIN C_Location lo ON lo.C_Location_ID = bplo.C_Location_ID
+ JOIN C_Location lo ON lo.C_Location_ID = oi.C_Location_ID
+ LEFT JOIN C_Location lm ON lm.C_Location_ID = (SELECT Value::numeric FROM AD_SysConfig sc WHERE sc.AD_Client_ID=i.AD_Client_ID AND sc.Name='QSSLEC_FE_LocalizacionDireccionMatriz')
  JOIN C_BPartner bp ON bp.C_BPartner_ID = i.C_BPartner_ID
  JOIN C_BPartner_Location bpl ON bpl.C_BPartner_Location_ID = i.C_BPartner_Location_ID
  JOIN C_Location l ON l.C_Location_ID = bpl.C_Location_ID

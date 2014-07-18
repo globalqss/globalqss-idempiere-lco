@@ -130,6 +130,10 @@ public class LEC_FE_MNotaDebito extends MInvoice
 		
 		MLocation lo = new MLocation(getCtx(), oi.getC_Location_ID(), get_TrxName());
 		
+		int c_location_matriz_id = MSysConfig.getIntValue("QSSLEC_FE_LocalizacionDireccionMatriz", -1, oi.getAD_Client_ID());
+		
+		MLocation lm = new MLocation(getCtx(), c_location_matriz_id, get_TrxName());
+		
 		// Comprador
 		MBPartner bp = new MBPartner(getCtx(), getC_BPartner_ID(), get_TrxName());
 		if (!signature.isOnTesting()) m_razonsocial = bp.getName();
@@ -265,7 +269,7 @@ public class LEC_FE_MNotaDebito extends MInvoice
 			addHeaderElement(mmDoc, "secuencial", (LEC_FE_Utils.fillString(9 - (LEC_FE_Utils.cutString(LEC_FE_Utils.getSecuencial(getDocumentNo(), m_coddoc), 9)).length(), '0'))
 					+ LEC_FE_Utils.cutString(LEC_FE_Utils.getSecuencial(getDocumentNo(), m_coddoc), 9), atts);
 			// dirMatriz ,Alfanumerico Max 300
-			addHeaderElement(mmDoc, "dirMatriz", lo.getAddress1(), atts);
+			addHeaderElement(mmDoc, "dirMatriz", lm.getAddress1(), atts);
 		mmDoc.endElement("","","infoTributaria");
 		
 		mmDoc.startElement("","","infoNotaDebito",atts);
