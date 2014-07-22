@@ -125,6 +125,24 @@ public class LEC_FE_Validator implements ModelValidator
 		log.info(po.get_TableName() + " Timing: "+timing);
 		String msg;
 
+		// before completing SO invoice set SO DocumentNo -- Previene custom e-evolution Morder.completeIt
+		if (po.get_TableName().equals(MInvoice.Table_Name) && timing == TIMING_BEFORE_COMPLETE) {
+			MInvoice invoice = (MInvoice)po;
+			if (MDocType.DOCSUBTYPESO_OnCreditOrder.equals(invoice.getC_Order().getC_DocType().getDocSubTypeSO())) {	// (W)illCall(I)nvoice
+				invoice.setDocumentNo(invoice.getC_Order().getDocumentNo());
+				invoice.saveEx();
+			}
+		}
+		
+		// before completing SO inout set SO DocumentNo -- Previene custom e-evolution Morder.completeIt
+		if (po.get_TableName().equals(MInOut.Table_Name) && timing == TIMING_BEFORE_COMPLETE) {
+			MInOut inout = (MInOut)po;
+			if (MDocType.DOCSUBTYPESO_OnCreditOrder.equals(inout.getC_Order().getC_DocType().getDocSubTypeSO())) {	// (W)illCall(I)nvoice
+				inout.setDocumentNo(inout.getC_Order().getDocumentNo());
+				inout.saveEx();
+			}
+		}
+		
 		// after completing SO invoice process electronic invoice
 		if (po.get_TableName().equals(MInvoice.Table_Name) && timing == TIMING_AFTER_COMPLETE) {
 			MInvoice invoice = (MInvoice)po;
