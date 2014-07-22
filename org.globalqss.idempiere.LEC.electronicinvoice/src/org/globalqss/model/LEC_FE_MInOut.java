@@ -150,16 +150,13 @@ public class LEC_FE_MInOut extends MInOut
 			m_identificacioncomprador = m_identificacionconsumidor;
 		
 		// Transportista
-		// Hardcoded
-		// C_DocType_ID=1000293-ENTREGA SIS UIO MOST
-		// C_DocType_ID=1000324-ENTREGA MAT UIO MOST
 		Boolean isventamostrador = false;
 		Timestamp datets = getShipDate();
 		Timestamp datete = (Timestamp) get_Value("ShipDateE");
 		int m_shipper_id = getM_Shipper_ID();
 		
 		if (m_shipper_id == 0) {
-			if (dt.getC_DocType_ID() == 1000293 || dt.getC_DocType_ID() == 1000324) {
+			if (MDocType.DOCSUBTYPESO_OnCreditOrder.equals(getC_Order().getC_DocType().getDocSubTypeSO())) {
 				isventamostrador = true;
 				datets = getMovementDate();
 				datete = getMovementDate();
