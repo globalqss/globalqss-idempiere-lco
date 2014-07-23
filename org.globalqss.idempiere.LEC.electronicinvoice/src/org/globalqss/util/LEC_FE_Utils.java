@@ -162,7 +162,7 @@ public class LEC_FE_Utils
 		else if (shortdoctype.equals("05"))	// NOTA DE DÉBITO
 			return new String(docno.substring(docno.lastIndexOf('-') + 1));
 		else if (shortdoctype.equals("06"))	// GUÍA DE REMISIÓN
-			return new String(docno.substring(docno.lastIndexOf('-') + 5));
+			return new String(docno.substring(docno.lastIndexOf('-') + 1));
 		else if (shortdoctype.equals("07"))	// COMPROBANTE DE RETENCIÓN
 			return new String(docno.substring(docno.lastIndexOf('-') + 1));
 
