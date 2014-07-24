@@ -3,8 +3,13 @@ package org.globalqss.util;
 import org.adempiere.exceptions.AdempiereException;
 import org.compiere.model.MAttachment;
 import org.compiere.model.MAttachmentEntry;
+import org.compiere.model.MClient;
+import org.compiere.model.MMailText;
 import org.compiere.model.MTable;
+import org.compiere.model.MUser;
+import org.compiere.model.MUserMail;
 import org.compiere.util.DB;
+import org.compiere.util.EMail;
 import org.compiere.util.Env;
 import org.compiere.util.Msg;
 import org.globalqss.model.X_SRI_Authorisation;
@@ -338,7 +343,7 @@ public class LEC_FE_Utils
 	}
 		
 	/**
-	 * 	String atachXmlFile
+	 * 	void atachXmlFile
 	 * 	@return void
 	 */
 	public static void attachXmlFile(Properties ctx, String trxName, int sri_authorisation_id, String file_name) {
@@ -383,6 +388,46 @@ public class LEC_FE_Utils
 		} catch (Exception e) {
 			throw new AdempiereException(Msg.getMsg(Env.getCtx(), "AttachmentNull"));
 		}
+	}
+	
+	/**
+	* EMail user
+	* int notifyUsers
+	* @return how many email were sent
+	*/
+
+	public static int notifyUsers(Properties ctx, MMailText mText, int ad_user_id, String subject, String message, File attachment,  String trxName)
+	{
+	
+		MClient client = new MClient (ctx, Env.getAD_Client_ID(ctx), trxName);
+	
+		int countMail = 0;
+
+		MUser notifyTo = new MUser (ctx, ad_user_id, trxName);
+		
+		if (notifyTo.isNotificationEMail()) {
+			
+			String msg = null;
+			
+			EMail email = client.createEMail(notifyTo.getEMail(), subject, message);
+			
+			if (email.isValid()) {
+				email.addAttachment(attachment);
+				msg = email.send();
+			}
+			
+			MUserMail um = new MUserMail(mText, ad_user_id, email);
+			um.setSubject(subject);
+			um.setMailText(message);
+			um.saveEx();
+			
+			if (msg.equals(EMail.SENT_OK))
+			{
+				countMail++;
+			}
+		}
+
+		return countMail;
 	}
 	
 	
