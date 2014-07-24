@@ -23,6 +23,7 @@ import org.compiere.model.MDocType;
 import org.compiere.model.MInOut;
 import org.compiere.model.MInvoice;
 import org.compiere.model.MLocation;
+import org.compiere.model.MMailText;
 import org.compiere.model.MOrgInfo;
 import org.compiere.model.MSysConfig;
 import org.compiere.util.AdempiereUserError;
@@ -538,6 +539,27 @@ public class LEC_FE_MInvoice extends MInvoice
 		if (signature.isAttachXml())
 			LEC_FE_Utils.attachXmlFile(getCtx(), get_TrxName(), a.getSRI_Authorisation_ID(), file_name);
 
+		log.warning("@EMailing Xml@ -> " + file_name);
+		// TODO Enviar Email BPartner XML Autorizado
+		// TODO Replicar en cada clase el definitivo
+		MMailText mText = new MMailText(getCtx(), 0, get_TrxName());	// Solo en memoria
+		mText.setPO(this);
+		String subject = "SRI " + (signature.isOnTesting ? "PRUEBAS " : "") + bpe.getValue() + " : " + f.get_ValueAsString("XmlPrintLabel") + " " + getDocumentNo();
+		String text =
+				" Emisor       : " + bpe.getName() +
+				"\nFecha        : " + LEC_FE_Utils.getDate(getDateInvoiced(),10) +
+				"\nCliente      : " + bp.getName() +
+				"\nComprobante  : " + f.get_ValueAsString("XmlPrintLabel") +
+				"\nNumero       : " + getDocumentNo() +
+				"\nAdjunto      : " + file_name.substring(file_name.lastIndexOf(File.separator) + 1);
+		File attachment = (new File (file_name));
+
+		// TODO Llamado Comentado temporalmente, para prevenir envio de email involuntario
+		int countMail = 0; //LEC_FE_Utils.notifyUsers(getCtx(), mText, getAD_User_ID(), subject, text, attachment, get_TrxName());
+		if (countMail == 0)
+			log.warning("@RequestActionEMailError@ -> " + file_name);
+		
+		//
 		}
 		catch (Exception e)
 		{

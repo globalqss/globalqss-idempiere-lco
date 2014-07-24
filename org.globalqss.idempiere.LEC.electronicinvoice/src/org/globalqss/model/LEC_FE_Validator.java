@@ -23,28 +23,24 @@ import org.compiere.apps.ADialog;
 import org.compiere.model.MClient;
 import org.compiere.model.MInvoice;
 import org.globalqss.model.LEC_FE_MInvoice;
-import org.globalqss.util.LCO_Utils;
 import org.globalqss.util.LEC_FE_Utils;
-import org.globalqss.util.LEC_FE_UtilsXml;
 import org.compiere.model.MBPartner;
 import org.compiere.model.MDocType;
 import org.compiere.model.MInOut;
 import org.compiere.model.MOrgInfo;
 import org.compiere.model.MSysConfig;
+import org.compiere.model.MUser;
 import org.compiere.model.ModelValidationEngine;
 import org.compiere.model.ModelValidator;
 import org.compiere.model.PO;
-import org.compiere.util.AdempiereUserError;
 import org.compiere.util.CLogger;
-import org.compiere.util.Env;
-import org.compiere.util.Msg;
 
 
 /**
- *	Validator or Localization Colombia (Withholdings)
+ *	Validator or Localization Ecuador (Facturacion Electronica)
  *	
  *  @author Carlos Ruiz - globalqss - Quality Systems & Solutions - http://globalqss.com 
- *	@version $Id: LCO_Validator.java,v 1.4 2007/05/13 06:53:26 cruiz Exp $
+ *	@version $Id: LEC_FE_Validator.java,v 1.4 2007/05/13 06:53:26 cruiz Exp $
  */
 public class LEC_FE_Validator implements ModelValidator
 {
@@ -229,6 +225,13 @@ public class LEC_FE_Validator implements ModelValidator
 			}
 		}
 		
+		MUser u = new MUser(inv.getCtx(), inv.getAD_User_ID(), inv.get_TrxName());
+			
+		if ((u.get_ID() == 0 || u.isNotificationEMail() && (u.getEMail() == null || u.getEMail().length() == 0))) {
+			msg = "@RequestActionEMailNoTo@";
+			return msg;
+		}
+		
 		LEC_FE_MInvoice lecfeinv = new LEC_FE_MInvoice(inv.getCtx(), inv.getC_Invoice_ID(), inv.get_TrxName());
 		LEC_FE_MNotaCredito lecfeinvnc = new LEC_FE_MNotaCredito(inv.getCtx(), inv.getC_Invoice_ID(), inv.get_TrxName());
 		LEC_FE_MNotaDebito lecfeinvnd = new LEC_FE_MNotaDebito(inv.getCtx(), inv.getC_Invoice_ID(), inv.get_TrxName());
@@ -270,6 +273,13 @@ public class LEC_FE_Validator implements ModelValidator
 			if (!ADialog.ask(0, null, msg)) {
 				return "Canceled...";	// TODO Reviewme
 			}
+		}
+		
+		MUser u = new MUser(inout.getCtx(), inout.getAD_User_ID(), inout.get_TrxName());
+		
+		if ((u.get_ID() == 0 || u.isNotificationEMail() && (u.getEMail() == null || u.getEMail().length() == 0))) {
+			msg = "@RequestActionEMailNoTo@";
+			return msg;
 		}
 		
 		LEC_FE_MInOut lecfeinout = new LEC_FE_MInOut(inout.getCtx(), inout.getM_InOut_ID(), inout.get_TrxName());
