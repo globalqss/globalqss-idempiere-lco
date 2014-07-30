@@ -436,6 +436,8 @@ public class LEC_FE_MNotaDebito extends MInvoice
 			throw new AdempiereException(msg);
 		}
 	
+		if (LEC_FE_Utils.breakDialog("Firmando Xml")) return "Cancelado...";	// Temp
+		
 		log.warning("@Signing Xml@ -> " + file_name);
 		signature.setResource_To_Sign(file_name);
 		// TODO signature.setPKCS12_Password("changeit");

@@ -1,6 +1,7 @@
 package org.globalqss.util;
 
 import org.adempiere.exceptions.AdempiereException;
+import org.compiere.apps.ADialog;
 import org.compiere.model.MAttachment;
 import org.compiere.model.MAttachmentEntry;
 import org.compiere.model.MClient;
@@ -430,5 +431,17 @@ public class LEC_FE_Utils
 		return countMail;
 	}
 	
+	public static boolean breakDialog(String msg)	// Trace temporal
+	{
+		int ad_user_id = Env.getAD_User_ID(Env.getCtx());
+		
+		// if (ad_user_id != 100) return false;
+		
+		if (!ADialog.ask(0, null, msg)) {
+			return true;
+		}
+	
+		return false;
+	}
 	
 }	// LEC_FE_Utils

@@ -137,11 +137,6 @@ public class LEC_FE_Validator implements ModelValidator
 			msg = invoiceGenerateXml(invoice);
 			if (msg != null)
 				return msg;
-			//
-			msg = invoiceAuthoriseXml(invoice);
-			if (msg != null)
-				return msg;
-
 		}
 		
 		// after completing SO inout process electronic inout
@@ -151,11 +146,6 @@ public class LEC_FE_Validator implements ModelValidator
 			msg = inoutGenerateXml(inout);
 			if (msg != null)
 				return msg;
-			//
-			msg = inoutAuthoriseXml(inout);
-			if (msg != null)
-				return msg;
-		
 		}
 
 
@@ -207,11 +197,7 @@ public class LEC_FE_Validator implements ModelValidator
 	
 	private String invoiceGenerateXml (MInvoice inv) {
 		
-		String msg = "Generando XML";
-		log.info("Invoice: " + inv);
-		if (!ADialog.ask(0, null, msg)) {
-			return "Canceled...";
-		}
+		String msg = null;
 		
 		MDocType dt = new MDocType(inv.getCtx(), inv.getC_DocTypeTarget_ID(), inv.get_TrxName());
 		
@@ -219,10 +205,10 @@ public class LEC_FE_Validator implements ModelValidator
 		
 		if ( shortdoctype.equals("")) {
 			msg = "No existe definicion SRI_ShortDocType: " + dt.toString();
-			log.info("Invoice: " + inv);
-			if (!ADialog.ask(0, null, msg)) {
-				return "Canceled...";	// TODO Reviewme
-			}
+			log.info("Invoice: " + inv.toString() + msg);
+			
+			// if (LEC_FE_Utils.breakDialog(msg)) return "Cancelado...";	// Temp
+		
 		}
 		
 		MUser u = new MUser(inv.getCtx(), inv.getAD_User_ID(), inv.get_TrxName());
@@ -232,6 +218,7 @@ public class LEC_FE_Validator implements ModelValidator
 			return msg;
 		}
 		
+		msg = null;
 		LEC_FE_MInvoice lecfeinv = new LEC_FE_MInvoice(inv.getCtx(), inv.getC_Invoice_ID(), inv.get_TrxName());
 		LEC_FE_MNotaCredito lecfeinvnc = new LEC_FE_MNotaCredito(inv.getCtx(), inv.getC_Invoice_ID(), inv.get_TrxName());
 		LEC_FE_MNotaDebito lecfeinvnd = new LEC_FE_MNotaDebito(inv.getCtx(), inv.getC_Invoice_ID(), inv.get_TrxName());
@@ -247,21 +234,14 @@ public class LEC_FE_Validator implements ModelValidator
 		else if (shortdoctype.equals("07"))	// COMPROBANTE DE RETENCIÓN
 			msg = lecfeinvret.lecfeinvret_SriExportRetencionXML100();
 		else
-			return null;	// "Formato no soportado: " + shortdoctype;
+			log.warning("Formato no habilitado SRI: " + dt.toString() + shortdoctype);
 			
-		if (msg != null)
-			return msg;
-
-		return null;
+		return msg;
 	}
 	
 	private String inoutGenerateXml (MInOut inout) {
 		
-		String msg = "Generando XML";
-		log.info("InOut: " + inout);
-		if (!ADialog.ask(0, null, msg)) {
-			return "Canceled...";
-		}
+		String msg = null;
 		
 		MDocType dt = new MDocType(inout.getCtx(), inout.getC_DocType_ID(), inout.get_TrxName());
 		
@@ -269,10 +249,9 @@ public class LEC_FE_Validator implements ModelValidator
 		
 		if ( shortdoctype.equals("")) {
 			msg = "No existe definicion SRI_ShortDocType: " + dt.toString();
-			log.info("InOut: " + inout);
-			if (!ADialog.ask(0, null, msg)) {
-				return "Canceled...";	// TODO Reviewme
-			}
+			log.info("Invoice: " + inout.toString() + msg);
+			
+			// if (LEC_FE_Utils.breakDialog(msg)) return "Cancelado...";	// Temp
 		}
 		
 		MUser u = new MUser(inout.getCtx(), inout.getAD_User_ID(), inout.get_TrxName());
@@ -282,45 +261,17 @@ public class LEC_FE_Validator implements ModelValidator
 			return msg;
 		}
 		
+		msg = null;
 		LEC_FE_MInOut lecfeinout = new LEC_FE_MInOut(inout.getCtx(), inout.getM_InOut_ID(), inout.get_TrxName());
 		// isSOTrx()
 		if (shortdoctype.equals("06"))	// GUÍA DE REMISIÓN 
 			msg = lecfeinout.lecfeinout_SriExportInOutXML100();
 		else
-			return null;	// "Formato no soportado: " + shortdoctype;
+			log.warning("Formato no habilitado SRI: " + dt.toString() + shortdoctype);
 			
-		if (msg != null)
-			return msg;
-
-		return null;
+		return msg;
 	}
 
-	
-	private String invoiceAuthoriseXml (MInvoice inv) {
-		
-		String msg = "Autorizando XML";
-		log.info("Invoice: " + inv);
-		if (!ADialog.ask(0, null, msg)) {
-			return "Canceled...";
-		}
-		
-
-		//return "Simulando...";	// Rollback
-		return null; //	Ok
-	}
-	
-	private String inoutAuthoriseXml (MInOut inout) {
-		
-		String msg = "Autorizando XML";
-		log.info("InOut: " + inout);
-		if (!ADialog.ask(0, null, msg)) {
-			return "Canceled...";
-		}
-		
-
-		//return "Simulando...";	// Rollback
-		return null; //	Ok
-	}
 	
 	/**
 	 * 	valideOrgInfoSri
