@@ -31,6 +31,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 
+import org.compiere.model.MSysConfig;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.compiere.util.DB;
@@ -64,8 +65,8 @@ public class ImportSriAccessCode extends SvrProcess
 			String name = para[i].getParameterName();
 			if (name.equals("AD_Org_ID"))
 				m_AD_Org_ID = para[i].getParameterAsInt();
-			else if (name.equals("SRI_ShortDocType"))
-				m_SRI_ShortDocType = para[i].getParameter().toString();
+			// else if (name.equals("SRI_ShortDocType"))
+			//	m_SRI_ShortDocType = para[i].getParameter().toString();
 			else if (name.equals("DeleteOldImported"))
 				m_deleteOldImported = "Y".equals(para[i].getParameter());
 			else
@@ -100,7 +101,7 @@ public class ImportSriAccessCode extends SvrProcess
 		//	Set Client, Org, IsActive, Created/Updated
 		sql = new StringBuffer ("UPDATE I_SRI_AccessCode "
 			+ "SET AD_Client_ID = COALESCE (AD_Client_ID, ").append(m_AD_Client_ID).append("),"
-			+ " AD_Org_ID = COALESCE (AD_Org_ID, ").append(m_AD_Org_ID).append("),"
+			+ " AD_Org_ID = COALESCE (").append(m_AD_Org_ID).append(", 0)," 
 			+ " IsActive = COALESCE (IsActive, 'Y'),"
 			+ " Created = COALESCE (Created, SysDate),"
 			+ " CreatedBy = COALESCE (CreatedBy, 0),"
@@ -131,6 +132,26 @@ public class ImportSriAccessCode extends SvrProcess
 		if (no != 0)
 			log.warning("Source File Environment differs=" + no);
 		
+		//	RUC
+		sql = new StringBuffer ("UPDATE I_SRI_AccessCode "
+			+ "SET I_IsImported='E', I_ErrorMsg=I_ErrorMsg||'ERR=Source File RUC differs' "
+			+ "WHERE Value IS NOT NULL AND SUBSTR(Value,1,13) NOT IN "
+			+ " (SELECT TaxID FROM AD_OrgInfo WHERE TaxID = SUBSTR(Value,1,13))"
+			+ " AND I_IsImported<>'Y'").append(clientCheck);
+		no = DB.executeUpdate(sql.toString(), get_TrxName());
+		if (no != 0)
+			log.warning("Source File RUC differs=" + no);
+		
+		//	Org + RUC
+		sql = new StringBuffer ("UPDATE I_SRI_AccessCode "
+			+ "SET I_IsImported='E', I_ErrorMsg=I_ErrorMsg||'ERR=Source File Org differs' "
+			+ "WHERE AD_Org_ID NOT IN "
+			+ " (SELECT AD_Org_ID FROM AD_OrgInfo WHERE AD_Org_ID = ").append(m_AD_Org_ID).append(" AND TaxID = SUBSTR(Value,1,13))"
+			+ " AND I_IsImported<>'Y'").append(clientCheck);
+		no = DB.executeUpdate(sql.toString(), get_TrxName());
+		if (no != 0)
+			log.warning("Source File Org differs=" + no);
+		
 		commitEx();
 		
 		//Import Access Code
@@ -156,8 +177,10 @@ public class ImportSriAccessCode extends SvrProcess
 				sri_accesscode.setAD_Org_ID(imp.getAD_Org_ID());
 				sri_accesscode.setValue(imp.getValue());
 				sri_accesscode.setOldValue(imp.getValue());
-				sri_accesscode.setEnvType("1");	// Pruebas // Before Save ?
-				sri_accesscode.setCodeAccessType("2"); // Contingencia Before Save ?
+				sri_accesscode.setEnvType("2");	// Produccion
+				if (MSysConfig.getBooleanValue("QSSLEC_FE_EnPruebas", false, getAD_Client_ID()))
+					sri_accesscode.setEnvType("1");	// Pruebas
+				sri_accesscode.setCodeAccessType("2"); // Contingencia
 				sri_accesscode.setSRI_ShortDocType(m_SRI_ShortDocType);
 				sri_accesscode.setIsUsed(false);
 				
