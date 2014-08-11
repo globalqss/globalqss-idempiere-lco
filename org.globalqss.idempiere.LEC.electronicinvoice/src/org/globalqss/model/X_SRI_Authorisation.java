@@ -30,7 +30,7 @@ public class X_SRI_Authorisation extends PO implements I_SRI_Authorisation, I_Pe
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20140519L;
+	private static final long serialVersionUID = 20140811L;
 
     /** Standard Constructor */
     public X_SRI_Authorisation (Properties ctx, int SRI_Authorisation_ID, String trxName)
@@ -39,6 +39,7 @@ public class X_SRI_Authorisation extends PO implements I_SRI_Authorisation, I_Pe
       /** if (SRI_Authorisation_ID == 0)
         {
 			setProcessed (false);
+// N
 			setSRI_Authorisation_ID (0);
 			setSRI_ShortDocType (null);
 			setValue (null);
@@ -129,23 +130,6 @@ public class X_SRI_Authorisation extends PO implements I_SRI_Authorisation, I_Pe
 		return (String)get_Value(COLUMNNAME_Mailing);
 	}
 
-	/** Set New Value.
-		@param NewValue 
-		New field value
-	  */
-	public void setNewValue (String NewValue)
-	{
-		set_Value (COLUMNNAME_NewValue, NewValue);
-	}
-
-	/** Get New Value.
-		@return New field value
-	  */
-	public String getNewValue () 
-	{
-		return (String)get_Value(COLUMNNAME_NewValue);
-	}
-
 	/** Set Processed.
 		@param Processed 
 		The document has been processed
@@ -189,8 +173,8 @@ public class X_SRI_Authorisation extends PO implements I_SRI_Authorisation, I_Pe
 		return (org.globalqss.model.I_SRI_AccessCode)MTable.get(getCtx(), org.globalqss.model.I_SRI_AccessCode.Table_Name)
 			.getPO(getSRI_AccessCode_ID(), get_TrxName());	}
 
-	/** Set SRI_AccessCode.
-		@param SRI_AccessCode_ID SRI_AccessCode	  */
+	/** Set SRI Access Code.
+		@param SRI_AccessCode_ID SRI Access Code	  */
 	public void setSRI_AccessCode_ID (int SRI_AccessCode_ID)
 	{
 		if (SRI_AccessCode_ID < 1) 
@@ -199,8 +183,8 @@ public class X_SRI_Authorisation extends PO implements I_SRI_Authorisation, I_Pe
 			set_ValueNoCheck (COLUMNNAME_SRI_AccessCode_ID, Integer.valueOf(SRI_AccessCode_ID));
 	}
 
-	/** Get SRI_AccessCode.
-		@return SRI_AccessCode	  */
+	/** Get SRI Access Code.
+		@return SRI Access Code	  */
 	public int getSRI_AccessCode_ID () 
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_SRI_AccessCode_ID);
@@ -209,8 +193,8 @@ public class X_SRI_Authorisation extends PO implements I_SRI_Authorisation, I_Pe
 		return ii.intValue();
 	}
 
-	/** Set SRI_Authorisation.
-		@param SRI_Authorisation_ID SRI_Authorisation	  */
+	/** Set SRI Authorisation.
+		@param SRI_Authorisation_ID SRI Authorisation	  */
 	public void setSRI_Authorisation_ID (int SRI_Authorisation_ID)
 	{
 		if (SRI_Authorisation_ID < 1) 
@@ -219,8 +203,8 @@ public class X_SRI_Authorisation extends PO implements I_SRI_Authorisation, I_Pe
 			set_ValueNoCheck (COLUMNNAME_SRI_Authorisation_ID, Integer.valueOf(SRI_Authorisation_ID));
 	}
 
-	/** Get SRI_Authorisation.
-		@return SRI_Authorisation	  */
+	/** Get SRI Authorisation.
+		@return SRI Authorisation	  */
 	public int getSRI_Authorisation_ID () 
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_SRI_Authorisation_ID);
@@ -229,13 +213,41 @@ public class X_SRI_Authorisation extends PO implements I_SRI_Authorisation, I_Pe
 		return ii.intValue();
 	}
 
+	/** Set SRI Authorisation Code.
+		@param SRI_AuthorisationCode SRI Authorisation Code	  */
+	public void setSRI_AuthorisationCode (String SRI_AuthorisationCode)
+	{
+		set_Value (COLUMNNAME_SRI_AuthorisationCode, SRI_AuthorisationCode);
+	}
+
+	/** Get SRI Authorisation Code.
+		@return SRI Authorisation Code	  */
+	public String getSRI_AuthorisationCode () 
+	{
+		return (String)get_Value(COLUMNNAME_SRI_AuthorisationCode);
+	}
+
+	/** Set SRI Date Authorisation.
+		@param SRI_DateAuthorisation SRI Date Authorisation	  */
+	public void setSRI_DateAuthorisation (String SRI_DateAuthorisation)
+	{
+		set_Value (COLUMNNAME_SRI_DateAuthorisation, SRI_DateAuthorisation);
+	}
+
+	/** Get SRI Date Authorisation.
+		@return SRI Date Authorisation	  */
+	public String getSRI_DateAuthorisation () 
+	{
+		return (String)get_Value(COLUMNNAME_SRI_DateAuthorisation);
+	}
+
 	public org.globalqss.model.I_SRI_ErrorCode getSRI_ErrorCode() throws RuntimeException
     {
 		return (org.globalqss.model.I_SRI_ErrorCode)MTable.get(getCtx(), org.globalqss.model.I_SRI_ErrorCode.Table_Name)
 			.getPO(getSRI_ErrorCode_ID(), get_TrxName());	}
 
-	/** Set SRI_ErrorCode_ID.
-		@param SRI_ErrorCode_ID SRI_ErrorCode_ID	  */
+	/** Set SRI Error Code.
+		@param SRI_ErrorCode_ID SRI Error Code	  */
 	public void setSRI_ErrorCode_ID (int SRI_ErrorCode_ID)
 	{
 		if (SRI_ErrorCode_ID < 1) 
@@ -244,8 +256,8 @@ public class X_SRI_Authorisation extends PO implements I_SRI_Authorisation, I_Pe
 			set_Value (COLUMNNAME_SRI_ErrorCode_ID, Integer.valueOf(SRI_ErrorCode_ID));
 	}
 
-	/** Get SRI_ErrorCode_ID.
-		@return SRI_ErrorCode_ID	  */
+	/** Get SRI Error Code.
+		@return SRI Error Code	  */
 	public int getSRI_ErrorCode_ID () 
 	{
 		Integer ii = (Integer)get_Value(COLUMNNAME_SRI_ErrorCode_ID);
@@ -254,8 +266,8 @@ public class X_SRI_Authorisation extends PO implements I_SRI_Authorisation, I_Pe
 		return ii.intValue();
 	}
 
-	/** SRI_ShortDocType AD_Reference_ID=1000066 */
-	public static final int SRI_SHORTDOCTYPE_AD_Reference_ID=1000066;
+	/** SRI_ShortDocType AD_Reference_ID=1000058 */
+	public static final int SRI_SHORTDOCTYPE_AD_Reference_ID=1000058;
 	/** FACTURA = 01 */
 	public static final String SRI_SHORTDOCTYPE_FACTURA = "01";
 	/** NOTA DE CRÉDITO = 04 */
@@ -266,16 +278,16 @@ public class X_SRI_Authorisation extends PO implements I_SRI_Authorisation, I_Pe
 	public static final String SRI_SHORTDOCTYPE_GUÍADEREMISIÓN = "06";
 	/** COMPROBANTE DE RETENCIÓN = 07 */
 	public static final String SRI_SHORTDOCTYPE_COMPROBANTEDERETENCIÓN = "07";
-	/** Set SRI_ShortDocType.
-		@param SRI_ShortDocType SRI_ShortDocType	  */
+	/** Set SRI Short Doc Type.
+		@param SRI_ShortDocType SRI Short Doc Type	  */
 	public void setSRI_ShortDocType (String SRI_ShortDocType)
 	{
 
 		set_Value (COLUMNNAME_SRI_ShortDocType, SRI_ShortDocType);
 	}
 
-	/** Get SRI_ShortDocType.
-		@return SRI_ShortDocType	  */
+	/** Get SRI Short Doc Type.
+		@return SRI Short Doc Type	  */
 	public String getSRI_ShortDocType () 
 	{
 		return (String)get_Value(COLUMNNAME_SRI_ShortDocType);
