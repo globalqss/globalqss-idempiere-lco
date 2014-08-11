@@ -31,7 +31,7 @@ public interface I_SRI_Authorisation
     /** TableName=SRI_Authorisation */
     public static final String Table_Name = "SRI_Authorisation";
 
-    /** AD_Table_ID=1000136 */
+    /** AD_Table_ID=1000114 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -125,19 +125,6 @@ public interface I_SRI_Authorisation
 	/** Get Mailing	  */
 	public String getMailing();
 
-    /** Column name NewValue */
-    public static final String COLUMNNAME_NewValue = "NewValue";
-
-	/** Set New Value.
-	  * New field value
-	  */
-	public void setNewValue (String NewValue);
-
-	/** Get New Value.
-	  * New field value
-	  */
-	public String getNewValue();
-
     /** Column name Processed */
     public static final String COLUMNNAME_Processed = "Processed";
 
@@ -163,10 +150,10 @@ public interface I_SRI_Authorisation
     /** Column name SRI_AccessCode_ID */
     public static final String COLUMNNAME_SRI_AccessCode_ID = "SRI_AccessCode_ID";
 
-	/** Set SRI_AccessCode	  */
+	/** Set SRI Access Code	  */
 	public void setSRI_AccessCode_ID (int SRI_AccessCode_ID);
 
-	/** Get SRI_AccessCode	  */
+	/** Get SRI Access Code	  */
 	public int getSRI_AccessCode_ID();
 
 	public org.globalqss.model.I_SRI_AccessCode getSRI_AccessCode() throws RuntimeException;
@@ -174,19 +161,37 @@ public interface I_SRI_Authorisation
     /** Column name SRI_Authorisation_ID */
     public static final String COLUMNNAME_SRI_Authorisation_ID = "SRI_Authorisation_ID";
 
-	/** Set SRI_Authorisation	  */
+	/** Set SRI Authorisation	  */
 	public void setSRI_Authorisation_ID (int SRI_Authorisation_ID);
 
-	/** Get SRI_Authorisation	  */
+	/** Get SRI Authorisation	  */
 	public int getSRI_Authorisation_ID();
+
+    /** Column name SRI_AuthorisationCode */
+    public static final String COLUMNNAME_SRI_AuthorisationCode = "SRI_AuthorisationCode";
+
+	/** Set SRI Authorisation Code	  */
+	public void setSRI_AuthorisationCode (String SRI_AuthorisationCode);
+
+	/** Get SRI Authorisation Code	  */
+	public String getSRI_AuthorisationCode();
+
+    /** Column name SRI_DateAuthorisation */
+    public static final String COLUMNNAME_SRI_DateAuthorisation = "SRI_DateAuthorisation";
+
+	/** Set SRI Date Authorisation	  */
+	public void setSRI_DateAuthorisation (String SRI_DateAuthorisation);
+
+	/** Get SRI Date Authorisation	  */
+	public String getSRI_DateAuthorisation();
 
     /** Column name SRI_ErrorCode_ID */
     public static final String COLUMNNAME_SRI_ErrorCode_ID = "SRI_ErrorCode_ID";
 
-	/** Set SRI_ErrorCode_ID	  */
+	/** Set SRI Error Code	  */
 	public void setSRI_ErrorCode_ID (int SRI_ErrorCode_ID);
 
-	/** Get SRI_ErrorCode_ID	  */
+	/** Get SRI Error Code	  */
 	public int getSRI_ErrorCode_ID();
 
 	public org.globalqss.model.I_SRI_ErrorCode getSRI_ErrorCode() throws RuntimeException;
@@ -194,10 +199,10 @@ public interface I_SRI_Authorisation
     /** Column name SRI_ShortDocType */
     public static final String COLUMNNAME_SRI_ShortDocType = "SRI_ShortDocType";
 
-	/** Set SRI_ShortDocType	  */
+	/** Set SRI Short Doc Type	  */
 	public void setSRI_ShortDocType (String SRI_ShortDocType);
 
-	/** Get SRI_ShortDocType	  */
+	/** Get SRI Short Doc Type	  */
 	public String getSRI_ShortDocType();
 
     /** Column name Updated */
