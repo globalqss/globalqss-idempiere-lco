@@ -16,11 +16,15 @@ import org.compiere.util.Msg;
 import org.globalqss.model.X_SRI_Authorisation;
 
 import java.io.File;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Properties;
+import java.util.logging.Level;
 
 
 /**
@@ -311,6 +315,39 @@ public class LEC_FE_Utils
 	}
 	
 	/**
+	 * 	String getInOutDocSustento
+	 * 	@return int
+	 */
+	public static int getNextAccessCode(int ad_client_id, String envtype, String taxid, String trxName) {	
+		
+		int sri_accesscode_id = -1;
+		
+		StringBuffer sql = new StringBuffer("SELECT SRI_AccessCode_ID FROM SRI_AccessCode WHERE AD_Client_ID = ? AND EnvType = ? AND IsUsed = 'N' AND SUBSTR(OldValue,1,13) = ?  ORDER BY OldValue");
+		try
+		{
+			PreparedStatement pstmt = DB.prepareStatement(sql.toString(), trxName);
+			pstmt.setInt(1, ad_client_id);
+			pstmt.setString(2, envtype);
+			pstmt.setString(3, taxid);
+			ResultSet rs = pstmt.executeQuery();
+			
+			while (rs.next())
+			{
+				sri_accesscode_id = rs.getInt(1);
+				break;	// El primero
+			}
+			rs.close();
+			pstmt.close();
+		}
+		catch (SQLException e)
+		{
+			throw new AdempiereException(Msg.getMsg(Env.getCtx(), "NoAccessCode"));
+		}
+		
+		return sri_accesscode_id;
+	}
+	
+	/**
 	 * 	String getAccessCode
 	 * 	@return String
 	 */
@@ -429,6 +466,15 @@ public class LEC_FE_Utils
 		}
 
 		return countMail;
+	}
+	
+	public static String getFilename(LEC_FE_UtilsXml signature, String folderComprobantesDestino)	// Trace temporal
+	{
+		
+		String file_name = signature.getFolderRaiz() + File.separator + folderComprobantesDestino + File.separator
+        		+ signature.getSignatureFileName().substring(signature.getSignatureFileName().lastIndexOf(File.separator) + 1);
+	
+		return file_name;
 	}
 	
 	public static boolean breakDialog(String msg)	// Trace temporal

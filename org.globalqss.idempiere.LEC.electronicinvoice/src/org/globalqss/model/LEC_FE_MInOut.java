@@ -213,7 +213,7 @@ public class LEC_FE_MInOut extends MInOut
 		a.setAD_Org_ID(getAD_Org_ID());
 		a.setSRI_ShortDocType(m_coddoc);
 		a.setValue(m_accesscode);
-		a.setNewValue(null);
+		a.setSRI_AuthorisationCode(null);
 		a.setSRI_AccessCode_ID(ac.get_ID());
 		a.setSRI_ErrorCode_ID(0);
 		a.setAD_UserMail_ID(0);

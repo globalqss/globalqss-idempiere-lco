@@ -24,6 +24,8 @@ import org.compiere.model.MClient;
 import org.compiere.model.MInvoice;
 import org.globalqss.model.LEC_FE_MInvoice;
 import org.globalqss.util.LEC_FE_Utils;
+import org.compiere.model.MAttachment;
+import org.compiere.model.MAttachmentEntry;
 import org.compiere.model.MBPartner;
 import org.compiere.model.MDocType;
 import org.compiere.model.MInOut;
@@ -54,7 +56,7 @@ public class LEC_FE_Validator implements ModelValidator
 	}	//	MyValidator
 	
 	/**	Logger			*/
-	private static CLogger log = CLogger.getCLogger(LCO_Validator.class);
+	private static CLogger log = CLogger.getCLogger(LEC_FE_Validator.class);
 	/** Client			*/
 	private int		m_AD_Client_ID = -1;
 	
@@ -288,15 +290,34 @@ public class LEC_FE_Validator implements ModelValidator
 		if ( c_location_matriz_id < 1)
 			msg = "No existe parametro para LocalizacionDireccionMatriz";
 		
+		String clavecert = MSysConfig.getValue("QSSLEC_FE_ClaveCertificadoDigital", null, orginfo.getAD_Client_ID(), orginfo.getAD_Org_ID());
+		
+		if (clavecert == null)
+			msg = "No existe parametro para ClaveCertificadoDigital";
+		
 		String rutacert = MSysConfig.getValue("QSSLEC_FE_RutaCertificadoDigital", null, orginfo.getAD_Client_ID(), orginfo.getAD_Org_ID());
+			// msg = "No existe parametro para RutaCertificadoDigital";
 		
-		if (rutacert == null)
-			msg = "No existe parametro para RutaCertificadoDigital";
-		
-		File folder = new File(rutacert);
-		
-		if (!folder.exists() || !folder.isFile() || !folder.canRead())
-			msg = "No existe o no se puede leer el archivo de Certificado Digital";
+		if (rutacert != null) {
+			File folder = new File(rutacert);
+			
+			if (!folder.exists() || !folder.isFile() || !folder.canRead())
+				msg = "No existe o no se puede leer el archivo de Certificado Digital";
+			
+		}
+		else {
+			// Obtencion del certificado para firmar. Utilizando un attachment - 155-AD_Org
+			boolean isattachcert = false;
+			MAttachment attach =  MAttachment.get(orginfo.getCtx(), 155, orginfo.getAD_Org_ID());
+			if (attach != null) {
+	    		for (MAttachmentEntry entry : attach.getEntries()) {
+	            	if (entry.getName().endsWith("p12") || entry.getName().endsWith("pfx"))
+	            		isattachcert = true;
+	            }
+			}
+			if (! isattachcert)
+				msg = "No existe parametro o adjunto de Certificado Digital";
+		}
 
 		int c_bpartner_id = LEC_FE_Utils.getOrgBPartner(orginfo.getAD_Client_ID(), orginfo.get_ValueAsString("TaxID"));
 		
