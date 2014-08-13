@@ -41,6 +41,9 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
 import org.adempiere.exceptions.AdempiereException;
+import org.compiere.model.MAttachment;
+import org.compiere.model.MAttachmentEntry;
+import org.compiere.util.Env;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
@@ -62,6 +65,16 @@ import es.mityc.javasign.pkstore.keystore.KSStore;
 public abstract class GenericXMLSignature {
 
 	
+	public int AD_OrgDoc_ID;
+	
+	public int getAD_OrgDoc_ID() {
+		return AD_OrgDoc_ID;
+	}
+
+	public void setAD_OrgDoc_ID(int aD_OrgDoc_ID) {
+		AD_OrgDoc_ID = aD_OrgDoc_ID;
+	}
+
 	public boolean isOnTesting;
 
 	public boolean isOnTesting() {
@@ -80,6 +93,28 @@ public abstract class GenericXMLSignature {
 
 	public void setAttachXml(boolean isAttachXml) {
 		this.isAttachXml = isAttachXml;
+	}
+
+	/** WS URLs			*/
+	public String urlWSRecepcionComprobantes = "";
+	
+	public String getUrlWSRecepcionComprobantes() {
+		return urlWSRecepcionComprobantes;
+	}
+
+	public void setUrlWSRecepcionComprobantes(String urlWSRecepcionComprobantes) {
+		this.urlWSRecepcionComprobantes = urlWSRecepcionComprobantes;
+	}
+
+	public String urlWSAutorizacionComprobantes = "";
+	
+	public String getUrlWSAutorizacionComprobantes() {
+		return urlWSAutorizacionComprobantes;
+	}
+
+	public void setUrlWSAutorizacionComprobantes(
+			String urlWSAutorizacionComprobantes) {
+		this.urlWSAutorizacionComprobantes = urlWSAutorizacionComprobantes;
 	}
 
 	/** Dir				*/
@@ -117,9 +152,31 @@ public abstract class GenericXMLSignature {
 	}
 
 	public static String folderComprobantesTransmitidos = "ComprobantesTransmitidos";
+	
+	
+	public static String getFolderComprobantesTransmitidos() {
+		return folderComprobantesTransmitidos;
+	}
+
+	public static void setFolderComprobantesTransmitidos(
+			String folderComprobantesTransmitidos) {
+		GenericXMLSignature.folderComprobantesTransmitidos = folderComprobantesTransmitidos;
+	}
+
 	public static String folderComprobantesRechazados = "ComprobantesRechazados";
 	public static String folderComprobantesAutorizados = "ComprobantesAutorizados";
 	public static String folderComprobantesNoAutorizados = "ComprobantesNoAutorizados";
+	
+	public static String recepcionComprobantesQname = "http://ec.gob.sri.ws.recepcion";
+	public static String recepcionComprobantesService = "RecepcionComprobantesService";
+	public static String recepcionRecibida = "RECIBIDA";
+	public static String recepcionDevuelta = "DEVUELTA";
+	
+	public static String autorizacionComprobantesQname = "http://ec.gob.sri.ws.autorizacion";
+	public static String autorizacionComprobantesService = "AutorizacionComprobantesService";
+	public static String comprobanteAutorizado = "AUTORIZADO";
+	public static String comprobanteNoAutorizado = "NO AUTORIZADO";
+	public static String comprobanteRechazado = "RECHAZADO";
 	
 	public static String XmlEncoding = "UTF-8";
 
@@ -161,8 +218,8 @@ public abstract class GenericXMLSignature {
      * Constraseña de acceso a la clave privada del usuario
      * </p>
      */
-    public String PKCS12_Password = "tlmqvtlcdme";
-
+    public String PKCS12_Password = "changeit";
+    
 	public String getPKCS12_Password() {
 		return PKCS12_Password;
 	}
@@ -203,7 +260,7 @@ public abstract class GenericXMLSignature {
         IPKStoreManager storeManager = getPKStoreManager();
         if (storeManager == null) {
             System.err.println("El gestor de claves no se ha obtenido correctamente.");
-            return;
+            throw new AdempiereException("El gestor de claves no se ha obtenido correctamente.");
         }
 
         // Obtencion del certificado para firmar. Utilizaremos el primer
@@ -211,7 +268,7 @@ public abstract class GenericXMLSignature {
         X509Certificate certificate = getFirstCertificate(storeManager);
         if (certificate == null) {
             System.err.println("No existe ningún certificado para firmar.");
-            return;
+            throw new AdempiereException("No existe ningún certificado para firmar.");
         }
 
         // Obtención de la clave privada asociada al certificado
@@ -220,7 +277,7 @@ public abstract class GenericXMLSignature {
             privateKey = storeManager.getPrivateKey(certificate);
         } catch (CertStoreException e) {
             System.err.println("Error al acceder al almacén.");
-            return;
+            throw new AdempiereException("Error al acceder al almacén.");
         }
 
         // Obtención del provider encargado de las labores criptográficas
@@ -247,7 +304,7 @@ public abstract class GenericXMLSignature {
         } catch (Exception ex) {
             System.err.println("Error realizando la firma");
             ex.printStackTrace();
-            return;
+            throw new AdempiereException(ex);
         }
 
         // Guardamos la firma a un fichero en el path indicado
@@ -408,6 +465,16 @@ public abstract class GenericXMLSignature {
         	KeyStore ks = KeyStore.getInstance("PKCS12");
         	// Obtencion del certificado para firmar. Utilizando un archivo
         	inStream = new FileInputStream(PKCS12_Resource);
+            // Obtencion del certificado para firmar. Utilizando un attachment - 155-AD_Org
+        	if (inStream == null) {
+        		MAttachment attach =  MAttachment.get(Env.getCtx(), 155, getAD_OrgDoc_ID());
+        		if (attach != null) {
+	        		for (MAttachmentEntry entry : attach.getEntries()) {
+		            	if (entry.getName().endsWith("p12") || entry.getName().endsWith("pfx"))
+		            		inStream = new FileInputStream(entry.getFile());
+	        		}
+        		}
+            }
             ks.load(inStream, PKCS12_Password.toCharArray());
             storeManager = new KSStore(ks, new PassStoreKS(PKCS12_Password));
         } catch (KeyStoreException ex) {
@@ -461,6 +528,7 @@ public abstract class GenericXMLSignature {
         }
 
         X509Certificate certificate = certs.get(0);
+        System.out.println("Usando certificado: " + certs.get(0).getIssuerDN().getName());
         return certificate;
     }
 
