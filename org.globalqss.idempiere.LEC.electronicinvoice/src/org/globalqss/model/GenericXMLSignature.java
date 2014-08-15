@@ -43,6 +43,7 @@ import javax.xml.transform.stream.StreamResult;
 import org.adempiere.exceptions.AdempiereException;
 import org.compiere.model.MAttachment;
 import org.compiere.model.MAttachmentEntry;
+import org.compiere.model.MTable;
 import org.compiere.util.Env;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
@@ -464,10 +465,11 @@ public abstract class GenericXMLSignature {
         try {
         	KeyStore ks = KeyStore.getInstance("PKCS12");
         	// Obtencion del certificado para firmar. Utilizando un archivo
-        	inStream = new FileInputStream(PKCS12_Resource);
-            // Obtencion del certificado para firmar. Utilizando un attachment - 155-AD_Org
+        	if (PKCS12_Resource != null)
+        		inStream = new FileInputStream(PKCS12_Resource);
+            // Obtencion del certificado para firmar. Utilizando un attachment - AD_Org
         	if (inStream == null) {
-        		MAttachment attach =  MAttachment.get(Env.getCtx(), 155, getAD_OrgDoc_ID());
+        		MAttachment attach =  MAttachment.get(Env.getCtx(), MTable.getTable_ID("AD_Org"), getAD_OrgDoc_ID());
         		if (attach != null) {
 	        		for (MAttachmentEntry entry : attach.getEntries()) {
 		            	if (entry.getName().endsWith("p12") || entry.getName().endsWith("pfx"))

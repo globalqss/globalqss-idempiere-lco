@@ -560,7 +560,7 @@ public class LEC_FE_MInvoice extends MInvoice
 	    	throw new AdempiereException(msg);
         
         // Procesar Autorizacion SRI
-        msg = signature.respuestaAutorizacionComprobante(signature, a, m_accesscode);
+        msg = signature.respuestaAutorizacionComprobante(signature, ac, a, m_accesscode);
 
 	    if (msg != null)
 	    	throw new AdempiereException(msg);

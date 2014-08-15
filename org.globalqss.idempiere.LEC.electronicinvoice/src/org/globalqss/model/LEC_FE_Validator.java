@@ -31,6 +31,7 @@ import org.compiere.model.MDocType;
 import org.compiere.model.MInOut;
 import org.compiere.model.MOrgInfo;
 import org.compiere.model.MSysConfig;
+import org.compiere.model.MTable;
 import org.compiere.model.MUser;
 import org.compiere.model.ModelValidationEngine;
 import org.compiere.model.ModelValidator;
@@ -306,9 +307,9 @@ public class LEC_FE_Validator implements ModelValidator
 			
 		}
 		else {
-			// Obtencion del certificado para firmar. Utilizando un attachment - 155-AD_Org
+			// Obtencion del certificado para firmar. Utilizando un attachment - AD_Org
 			boolean isattachcert = false;
-			MAttachment attach =  MAttachment.get(orginfo.getCtx(), 155, orginfo.getAD_Org_ID());
+			MAttachment attach =  MAttachment.get(orginfo.getCtx(), MTable.getTable_ID("AD_Org"), orginfo.getAD_Org_ID());
 			if (attach != null) {
 	    		for (MAttachmentEntry entry : attach.getEntries()) {
 	            	if (entry.getName().endsWith("p12") || entry.getName().endsWith("pfx"))
