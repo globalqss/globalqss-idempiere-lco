@@ -13,6 +13,7 @@ import javax.xml.ws.WebServiceException;
 
 import org.apache.commons.io.FileUtils;
 import org.globalqss.model.GenericXMLSignature;
+import org.globalqss.model.X_SRI_AccessCode;
 import org.globalqss.model.X_SRI_Authorisation;
 
 import ec.gob.sri.comprobantes.ws.Comprobante;
@@ -125,7 +126,7 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
     	return null;
 	}
     
-    public static String respuestaAutorizacionComprobante(LEC_FE_UtilsXml signature, X_SRI_Authorisation a, String accesscode) {
+    public static String respuestaAutorizacionComprobante(LEC_FE_UtilsXml signature, X_SRI_AccessCode ac, X_SRI_Authorisation a, String accesscode) {
     	
     	String msg = null;
     	String file_name = null;
@@ -162,6 +163,12 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
 	    	if (autorizacion.getEstado().equals(signature.comprobanteAutorizado)) {
 	    		
 	    		msg = null;
+	    		// TODO Log.warn(message, ex)
+	    		// Update AccessCode
+	    		if (ac.getCodeAccessType().equals("1")) {	// 1-Automatica
+	    			ac.setValue(autorizacion.getNumeroAutorizacion());
+	    			ac.saveEx();
+	    		}	
 	    		// Update Authorisation
 	    		a.setSRI_AuthorisationCode(autorizacion.getNumeroAutorizacion());
 	    		a.setSRI_DateAuthorisation(autorizacion.getFechaAutorizacion().toString());
@@ -174,7 +181,8 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
 	    	else
 	    		file_name = LEC_FE_Utils.getFilename(signature, signature.folderComprobantesRechazados);
 	    	
-	    	// TODO Extraer y guardar autorizacion xml en file_name
+	    	// TODO Extraer y guardar autorizacion xml signed and authorised en file_name
+	    	// FileUtils.writeStringToFile(new File(file_name), autorizacion.toString());
 	    	FileUtils.writeStringToFile(new File(file_name), autorizacion.getComprobante());
 	    	
 	  		// Atach XML Autorizado
@@ -291,7 +299,6 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
     }
     
     public byte[] getBytesFromFile(String xmlFilePath) throws Exception {
-    	
     	
     	byte[] bytes = null;
         File file = new File(xmlFilePath);
