@@ -13,6 +13,7 @@ import org.compiere.util.DB;
 import org.compiere.util.EMail;
 import org.compiere.util.Env;
 import org.compiere.util.Msg;
+import org.globalqss.model.X_SRI_AccessCode;
 import org.globalqss.model.X_SRI_Authorisation;
 
 import java.io.File;
@@ -351,23 +352,32 @@ public class LEC_FE_Utils
 	 * 	String getAccessCode
 	 * 	@return String
 	 */
-	public static String getAccessCode(Date docdate, String coddoc, String taxid, String tipoambiente, String orgcode, String storecode, String documentno, String documentcode, String tipoemision) {
+	public static String getAccessCode(Date docdate, String coddoc, String taxid, String tipoambiente, String orgcode, String storecode, String documentno, String documentcode, String tipoemision, X_SRI_AccessCode ac) {
 	
 		String accesscode;
 				
 		try {
-		accesscode = ""
-			+ String.format("%8s", getDate(docdate,8))		// fechaEmision
-			+ String.format("%2s", coddoc)								// codDoc
-			+ String.format("%13s", (fillString(13 - (cutString(taxid, 13)).length(), '0'))
-				+ cutString(taxid,13))						// ruc
-			+ String.format("%1s", tipoambiente)						// ambiente
-			+ String.format("%3s", orgcode)								// serie / estab
-			+ String.format("%3s", storecode)							// serie / ptoEmi
-			+ String.format("%9s", (fillString(9 - (cutString(getSecuencial(documentno, coddoc), 9)).length(), '0'))
-				+ cutString(getSecuencial(documentno, coddoc), 9))	// numero / secuencial
-			+ String.format("%8s", documentcode)						// codigo
-			+ String.format("%1s", tipoemision);						// tipoEmision
+			
+			accesscode = ""
+				+ String.format("%8s", getDate(docdate,8))				// fechaEmision
+				+ String.format("%2s", coddoc)							// codDoc
+				+ String.format("%13s", (fillString(13 - (cutString(taxid, 13)).length(), '0'))
+					+ cutString(taxid,13))								// ruc
+				+ String.format("%1s", tipoambiente);					// ambiente
+			
+			if (ac.getCodeAccessType().equals("1")) {
+				accesscode = accesscode
+				+ String.format("%3s", orgcode)							// serie / estab
+				+ String.format("%3s", storecode)						// serie / ptoEmi
+				+ String.format("%9s", (fillString(9 - (cutString(getSecuencial(documentno, coddoc), 9)).length(), '0'))
+					+ cutString(getSecuencial(documentno, coddoc), 9))	// numero / secuencial
+				+ String.format("%8s", documentcode);					// codigo
+			} else {
+				accesscode = accesscode
+				+ String.format("%23s", ac.getValue().substring(14));	// codigo numerico contingencia
+			}	
+			
+			accesscode = accesscode + String.format("%1s", tipoemision);// tipoEmision
 
 			accesscode = accesscode
 				+ String.format("%1s", calculateDigitSri(accesscode));	// digito

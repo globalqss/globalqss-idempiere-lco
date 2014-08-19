@@ -86,6 +86,8 @@ public class LEC_FE_MInOut extends MInOut
 			
 		if (signature.isOnTesting()) m_tipoambiente = "1";
 		
+		// if ( (Boolean) get_Value("SRI_IsUseContingency")) m_tipoclaveacceso = "2";	// TODO
+		
 		if (! signature.isOnTesting()) {
 			signature.setUrlWSRecepcionComprobantes(MSysConfig.getValue("QSSLEC_FE_SRIURLWSProdRecepcionComprobante", null, getAD_Client_ID()));
 			signature.setUrlWSAutorizacionComprobantes(MSysConfig.getValue("QSSLEC_FE_SRIURLWSProdAutorizacionComprobante", null, getAD_Client_ID()));
@@ -197,21 +199,28 @@ public class LEC_FE_MInOut extends MInOut
 		if (!isventamostrador && (getShipDate() == null || get_Value("ShipDateE") == null))
 			throw new AdempiereUserError("Debe indicar fechas de transporte");
 		
-		// Access Code
-		m_accesscode = LEC_FE_Utils.getAccessCode(getMovementDate(), m_coddoc, bpe.getTaxID(), m_tipoambiente, oi.get_ValueAsString("SRI_OrgCode"), LEC_FE_Utils.getStoreCode(LEC_FE_Utils.formatDocNo(getDocumentNo(), m_coddoc)), getDocumentNo(), oi.get_ValueAsString("SRI_DocumentCode"), m_tipoemision);
+		// IsUseContingency
+		int sri_accesscode_id = 0;
+		if (m_tipoclaveacceso.equals("2")) {
+			sri_accesscode_id = LEC_FE_Utils.getNextAccessCode(getAD_Client_ID(), m_tipoambiente, oi.getTaxID(), get_TrxName());
+			if ( sri_accesscode_id < 1)
+				throw new AdempiereUserError("No hay clave de contingencia para el comprobante");
+		}
 		
-		// TODO IsUseContingency
-		// if (IsUseContingency) m_tipoclaveacceso = "2";
-		
-		// New Auto Access Code
-		X_SRI_AccessCode ac = new X_SRI_AccessCode (getCtx(), 0, get_TrxName());
+		// New/Upd Access Code
+		X_SRI_AccessCode ac = new X_SRI_AccessCode (getCtx(), sri_accesscode_id, get_TrxName());
 		ac.setAD_Org_ID(getAD_Org_ID());
-		ac.setValue(m_accesscode);
-		ac.setOldValue(null);
+		ac.setOldValue(null);	// TODO Deprecated
 		ac.setEnvType(m_tipoambiente);	// Before Save ?
 		ac.setCodeAccessType(m_tipoclaveacceso); // Auto Before Save ?
 		ac.setSRI_ShortDocType(m_coddoc);
 		ac.setIsUsed(true);
+		
+		// Access Code
+		m_accesscode = LEC_FE_Utils.getAccessCode(getMovementDate(), m_coddoc, bpe.getTaxID(), m_tipoambiente, oi.get_ValueAsString("SRI_OrgCode"), LEC_FE_Utils.getStoreCode(LEC_FE_Utils.formatDocNo(getDocumentNo(), m_coddoc)), getDocumentNo(), oi.get_ValueAsString("SRI_DocumentCode"), m_tipoemision, ac);
+		
+		if (m_tipoclaveacceso.equals("1"))
+			ac.setValue(m_accesscode);
 		
 		if (!ac.save()) {
 			msg = "@SaveError@ No se pudo grabar SRI Access Code";
