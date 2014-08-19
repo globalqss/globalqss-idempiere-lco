@@ -23,6 +23,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
+import java.math.BigDecimal;
 import java.security.KeyStore;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
@@ -65,6 +66,9 @@ import es.mityc.javasign.pkstore.keystore.KSStore;
  */
 public abstract class GenericXMLSignature {
 
+	
+	/**	Big Decimal 0.5	 */
+	static final public BigDecimal HALF = new BigDecimal(0.5);
 	
 	public int AD_OrgDoc_ID;
 	
