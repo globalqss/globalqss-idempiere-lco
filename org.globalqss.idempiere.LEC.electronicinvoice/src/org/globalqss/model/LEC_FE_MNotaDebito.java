@@ -85,6 +85,8 @@ public class LEC_FE_MNotaDebito extends MInvoice
 		signature.setOnTesting(MSysConfig.getBooleanValue("QSSLEC_FE_EnPruebas", false, getAD_Client_ID()));
 		
 		if (signature.isOnTesting()) m_tipoambiente = "1";
+		
+		if ( (Boolean) get_Value("SRI_IsUseContingency")) m_tipoclaveacceso = "2";
 				
 		signature.setAttachXml(MSysConfig.getBooleanValue("QSSLEC_FE_DebugEnvioRecepcion", false, getAD_Client_ID()));
 		
@@ -159,21 +161,28 @@ public class LEC_FE_MNotaDebito extends MInvoice
 	
 		m_totaldescuento = Env.ZERO; // DB.getSQLValueBD(get_TrxName(), "SELECT COALESCE(SUM(ilt.discount), 0) FROM c_invoice_linetax_vt ilt WHERE ilt.C_Invoice_ID = ? ", getC_Invoice_ID());
 
-		// Access Code
-		m_accesscode = LEC_FE_Utils.getAccessCode(getDateInvoiced(), m_coddoc, bpe.getTaxID(), m_tipoambiente, oi.get_ValueAsString("SRI_OrgCode"), LEC_FE_Utils.getStoreCode(LEC_FE_Utils.formatDocNo(getDocumentNo(), m_coddoc)), getDocumentNo(), oi.get_ValueAsString("SRI_DocumentCode"), m_tipoemision);
-			
-			// TODO IsUseContingency
-		// if (IsUseContingency) m_tipoclaveacceso = "2";
+		// IsUseContingency
+		int sri_accesscode_id = 0;
+		if (m_tipoclaveacceso.equals("2")) {
+			sri_accesscode_id = LEC_FE_Utils.getNextAccessCode(getAD_Client_ID(), m_tipoambiente, oi.getTaxID(), get_TrxName());
+			if ( sri_accesscode_id < 1)
+				throw new AdempiereUserError("No hay clave de contingencia para el comprobante");
+		}
 		
-		// New Auto Access Code
-		X_SRI_AccessCode ac = new X_SRI_AccessCode (getCtx(), 0, get_TrxName());
+		// New/Upd Access Code
+		X_SRI_AccessCode ac = new X_SRI_AccessCode (getCtx(), sri_accesscode_id, get_TrxName());
 		ac.setAD_Org_ID(getAD_Org_ID());
-		ac.setValue(m_accesscode);
-		ac.setOldValue(null);
+		ac.setOldValue(null);	// TODO Deprecated
 		ac.setEnvType(m_tipoambiente);	// Before Save ?
 		ac.setCodeAccessType(m_tipoclaveacceso); // Auto Before Save ?
 		ac.setSRI_ShortDocType(m_coddoc);
 		ac.setIsUsed(true);
+		
+		// Access Code
+		m_accesscode = LEC_FE_Utils.getAccessCode(getDateInvoiced(), m_coddoc, bpe.getTaxID(), m_tipoambiente, oi.get_ValueAsString("SRI_OrgCode"), LEC_FE_Utils.getStoreCode(LEC_FE_Utils.formatDocNo(getDocumentNo(), m_coddoc)), getDocumentNo(), oi.get_ValueAsString("SRI_DocumentCode"), m_tipoemision, ac);
+
+		if (m_tipoclaveacceso.equals("1"))
+			ac.setValue(m_accesscode);
 		
 		if (!ac.save()) {
 			msg = "@SaveError@ No se pudo grabar SRI Access Code";
