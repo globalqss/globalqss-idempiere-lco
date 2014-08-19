@@ -445,7 +445,7 @@ public class LEC_FE_MInvoice extends MInvoice
 				addHeaderElement(mmDoc, "descuento", rs.getBigDecimal(7).toString(), atts);
 				// Numerico Max 14
 				addHeaderElement(mmDoc, "precioTotalSinImpuesto", rs.getBigDecimal(8).toString(), atts);
-				
+				/*
 				if (rs.getString(14) != null)  {
 					mmDoc.startElement("","","detallesAdicionales",atts);
 					
@@ -457,7 +457,7 @@ public class LEC_FE_MInvoice extends MInvoice
 						
 					mmDoc.endElement("","","detallesAdicionales");
 				}
-				
+				*/
 				atts.clear();
 				//
 				mmDoc.startElement("","","impuestos",atts);
@@ -499,7 +499,7 @@ public class LEC_FE_MInvoice extends MInvoice
 		}
 		
 		mmDoc.endElement("","","detalles");
-		
+		/*
 		if (getDescription() != null)  {
 			mmDoc.startElement("","","infoAdicional",atts);
 			
@@ -512,7 +512,7 @@ public class LEC_FE_MInvoice extends MInvoice
 			
 			mmDoc.endElement("","","infoAdicional");
 		}
-	
+		*/
 		mmDoc.endElement("","",f.get_ValueAsString("XmlPrintLabel"));
 		
 		mmDoc.endDocument();

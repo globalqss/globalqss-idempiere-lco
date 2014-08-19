@@ -112,7 +112,7 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
         	FileUtils.writeStringToFile(new File(file_name), comprobante.toString());
 	    }
         if (! respuestasolicitud.getEstado().equals(signature.recepcionRecibida)) {
-        	msg = respuestasolicitud.getEstado() + ConstantesXADES.GUION + comprobantes.getComprobante().toString();
+        	msg = respuestasolicitud.getEstado() + ConstantesXADES.GUION + comprobantes.getComprobante().toString() + ConstantesXADES.GUION + msg;
         	return msg;	// throw new AdempiereException(msg);
 		}
 	    //*/
