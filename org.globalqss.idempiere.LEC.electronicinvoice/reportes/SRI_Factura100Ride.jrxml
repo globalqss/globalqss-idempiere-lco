@@ -21,7 +21,8 @@ System.getProperty("java.io.tmpdir") + System.getProperty("file.separator")]]></
  , bpo.name2 AS nombreComercial
  , oi.taxid AS ruc
  , a.value AS claveAcceso
- , a.newvalue AS codigoAutorizacion
+ , a.SRI_AuthorisationCode AS codigoAutorizacion
+ , a.SRI_DateAuthorisation AS fechaAutorizacion
  , i.documentno
  , dt.SRI_ShortDocType AS codDoc
  , oi.SRI_OrgCode AS estab
@@ -76,6 +77,7 @@ WHERE i.C_Invoice_ID = $P{RECORD_ID}]]>
 	<field name="ruc" class="java.lang.String"/>
 	<field name="claveacceso" class="java.lang.String"/>
 	<field name="codigoautorizacion" class="java.lang.String"/>
+	<field name="fechaautorizacion" class="java.lang.String"/>
 	<field name="documentno" class="java.lang.String"/>
 	<field name="coddoc" class="java.lang.String"/>
 	<field name="estab" class="java.lang.String"/>
@@ -132,9 +134,9 @@ WHERE i.C_Invoice_ID = $P{RECORD_ID}]]>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{codigoautorizacion}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="332" y="118" width="144" height="20"/>
+				<reportElement x="332" y="118" width="103" height="20"/>
 				<textElement>
-					<font size="8"/>
+					<font size="6"/>
 				</textElement>
 				<text><![CDATA[FECHA Y HORA DE AUTORIZACIÓN]]></text>
 			</staticText>
@@ -252,11 +254,11 @@ WHERE i.C_Invoice_ID = $P{RECORD_ID}]]>
 				<reportElement mode="Transparent" x="315" y="13" width="245" height="240"/>
 			</rectangle>
 			<textField>
-				<reportElement x="472" y="118" width="80" height="20"/>
+				<reportElement x="435" y="118" width="117" height="20"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{fechaemision}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{fechaautorizacion}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="332" y="18" width="34" height="20"/>
