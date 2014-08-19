@@ -128,6 +128,7 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
     
     public static String respuestaAutorizacionComprobante(LEC_FE_UtilsXml signature, X_SRI_AccessCode ac, X_SRI_Authorisation a, String accesscode) {
     	
+    	Boolean isAutorizacion = false;
     	String msg = null;
     	String file_name = null;
     	
@@ -140,10 +141,11 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
 			return msg;	// throw new AdempiereException(msg);
 		}
     	
-	    RespuestaComprobante respuestacomprobante = signature.autorizacionComprobante(accesscode);
+        RespuestaComprobante respuestacomprobante = signature.autorizacionComprobante(accesscode);
 	    Autorizaciones autorizaciones = respuestacomprobante.getAutorizaciones();
 	    // Procesar Respuesta Autorizacion SRI
 	    for (Autorizacion autorizacion : autorizaciones.getAutorizacion()) {
+	    	isAutorizacion = true;
 	        // msg = autorizaciones.getAutorizacion().get(0).getEstado();
 	    	msg = autorizacion.getEstado() + ConstantesXADES.GUION + autorizacion.getNumeroAutorizacion() + ConstantesXADES.GUION + autorizacion.getFechaAutorizacion().toString();
 	    	// log.warning("@Autorizacion Xml@ -> " + msg);
@@ -199,7 +201,10 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
 			return e.getMessage();
 		}
 		
-		return msg;
+    	if (! isAutorizacion)
+    		msg = "@Autorizacion Xml@ -> No hay Respuesta Autorizacion SRI";
+    	 
+    	return msg;
 	}
     
     public RespuestaSolicitud validarComprobante(byte[] xml) {
@@ -248,7 +253,7 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
     	// Controlar el tiempo de espera al consumir un webservice
     	// ((BindingProvider) port).getRequestContext().put("com.sun.xml.internal.ws.connect.timeout", 5000);
     	// ((BindingProvider) port).getRequestContext().put("com.sun.xml.internal.ws.request.timeout", 5000);
-        return port.autorizacionComprobante(claveAccesoComprobante);
+    	return port.autorizacionComprobante(claveAccesoComprobante);
     
     }
     

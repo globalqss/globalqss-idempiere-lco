@@ -446,7 +446,6 @@ public class LEC_FE_MInvoice extends MInvoice
 				// Numerico Max 14
 				addHeaderElement(mmDoc, "precioTotalSinImpuesto", rs.getBigDecimal(8).toString(), atts);
 				
-				/*
 				if (rs.getString(14) != null)  {
 					mmDoc.startElement("","","detallesAdicionales",atts);
 					
@@ -458,7 +457,6 @@ public class LEC_FE_MInvoice extends MInvoice
 						
 					mmDoc.endElement("","","detallesAdicionales");
 				}
-				*/
 				
 				atts.clear();
 				//
@@ -502,7 +500,6 @@ public class LEC_FE_MInvoice extends MInvoice
 		
 		mmDoc.endElement("","","detalles");
 		
-		/*
 		if (getDescription() != null)  {
 			mmDoc.startElement("","","infoAdicional",atts);
 			
@@ -515,7 +512,6 @@ public class LEC_FE_MInvoice extends MInvoice
 			
 			mmDoc.endElement("","","infoAdicional");
 		}
-		*/
 	
 		mmDoc.endElement("","",f.get_ValueAsString("XmlPrintLabel"));
 		
@@ -531,12 +527,14 @@ public class LEC_FE_MInvoice extends MInvoice
 			msg = "Error Diferencia Descuento Total: " + m_totaldescuento.toString() + " Detalles: " + m_sumadescuento.toString();
 			throw new AdempiereException(msg);
 		}
-		if (m_sumabaseimponible.compareTo(m_totalbaseimponible) != 0 ) {
+		if (m_sumabaseimponible.compareTo(m_totalbaseimponible) != 0
+			&& m_totalbaseimponible.subtract(m_sumabaseimponible).abs().compareTo(signature.HALF) > 1) {
 			msg = "Error Diferencia Base Impuesto Total: " + m_totalbaseimponible.toString() + " Detalles: " + m_sumabaseimponible.toString();
 			throw new AdempiereException(msg);
 		}
 		
-		if (m_sumavalorimpuesto.compareTo(m_totalvalorimpuesto) != 0 ) {
+		if (m_sumavalorimpuesto.compareTo(m_totalvalorimpuesto) != 0
+			&& m_totalvalorimpuesto.subtract(m_sumavalorimpuesto).abs().compareTo(signature.HALF) > 1) {
 			msg = "Error Diferencia Impuesto Total: " + m_totalvalorimpuesto.toString() + " Detalles: " + m_sumavalorimpuesto.toString();
 			throw new AdempiereException(msg);
 		}
@@ -545,7 +543,6 @@ public class LEC_FE_MInvoice extends MInvoice
 		
 		log.warning("@Signing Xml@ -> " + file_name);
 		signature.setResource_To_Sign(file_name);
-		// TODO signature.setPKCS12_Password("changeit");
 		signature.setOutput_Directory(signature.getFolderRaiz() + File.separator + signature.folderComprobantesFirmados);
         signature.execute();
         
@@ -580,12 +577,14 @@ public class LEC_FE_MInvoice extends MInvoice
 				mText.setPO(this);
 				String subject = "SRI " + (signature.isOnTesting ? "PRUEBAS " : "") + bpe.getValue() + " : " + f.get_ValueAsString("XmlPrintLabel") + " " + getDocumentNo();
 				String text =
-						" Emisor       : " + bpe.getName() +
-						"\nFecha        : " + LEC_FE_Utils.getDate(getDateInvoiced(),10) +
-						"\nCliente      : " + bp.getName() +
-						"\nComprobante  : " + f.get_ValueAsString("XmlPrintLabel") +
-						"\nNumero       : " + getDocumentNo() +
-						"\nAdjunto      : " + file_name.substring(file_name.lastIndexOf(File.separator) + 1);
+						" Emisor               : " + bpe.getName() +
+						"\nFecha                : " + LEC_FE_Utils.getDate(getDateInvoiced(),10) +
+						"\nCliente              : " + bp.getName() +
+						"\nComprobante          : " + f.get_ValueAsString("XmlPrintLabel") +
+						"\nNumero               : " + getDocumentNo() +
+						"\nAutorizacion No.     : " + a.getSRI_AuthorisationCode() +
+						"\nFecha Autorizacion   : " + a.getSRI_DateAuthorisation() +
+						"\nAdjunto              : " + file_name.substring(file_name.lastIndexOf(File.separator) + 1);
 					
 				int countMail = LEC_FE_Utils.notifyUsers(getCtx(), mText, getAD_User_ID(), subject, text, attachment, get_TrxName());
 				if (countMail == 0)
