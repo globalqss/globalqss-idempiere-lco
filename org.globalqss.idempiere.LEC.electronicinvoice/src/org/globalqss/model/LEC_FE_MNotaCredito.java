@@ -330,13 +330,14 @@ public class LEC_FE_MNotaCredito extends MInvoice
 				 + "      END "
 				 + "    WHEN t.LEC_TaxTypeSRI = '3' THEN '0000' "
 				 + "    ELSE '0' END AS codigoPorcentaje "
-				 + ", it.TaxBaseAmt AS baseImponible "
-				 + ", it.TaxAmt AS valor "
+				 + ", SUM(it.TaxBaseAmt) AS baseImponible "
+				 + ", SUM(it.TaxBaseAmt) AS valor "
 				 + "FROM C_Invoice i "
 				 + "JOIN C_InvoiceTax it ON it.C_Invoice_ID = i.C_Invoice_ID "
 				 + "JOIN C_Tax t ON t.C_Tax_ID = it.C_Tax_ID "
 				 + "WHERE i.C_Invoice_ID = ? "
-				 + "ORDER BY codigo, codigoPorcentaje");	// TODO GROUP BY ?
+				 + "GROUP BY codigo, codigoPorcentaje "
+				 + "ORDER BY codigo, codigoPorcentaje");
 		
 		try
 		{
@@ -390,7 +391,7 @@ public class LEC_FE_MNotaCredito extends MInvoice
 		mmDoc.startElement("","","detalles",atts);
 		
 		sql = new StringBuffer(
-	            "SELECT i.C_Invoice_ID, COALESCE(p.value, '0'), 0::text, ilt.name, ilt.qtyinvoiced, ilt.priceactual, COALESCE(0, ilt.discount), ilt.linenetamt "
+	            "SELECT i.C_Invoice_ID, COALESCE(p.value, '0'), 0::text, ilt.name, ilt.qtyinvoiced, ROUND(ilt.priceactual, 2), COALESCE(0, ilt.discount), ilt.linenetamt "
 				+ ", COALESCE(t.LEC_TaxTypeSRI, '0') AS codigo "
 				+ ", CASE "
 				+ "    WHEN t.LEC_TaxTypeSRI = '2' THEN "
@@ -522,12 +523,14 @@ public class LEC_FE_MNotaCredito extends MInvoice
 			msg = "Error Diferencia Descuento Total: " + m_totaldescuento.toString() + " Detalles: " + m_sumadescuento.toString();
 			throw new AdempiereException(msg);
 		}
-		if (m_sumabaseimponible.compareTo(m_totalbaseimponible) != 0 ) {
+		if (m_sumabaseimponible.compareTo(m_totalbaseimponible) != 0
+			&& m_totalbaseimponible.subtract(m_sumabaseimponible).abs().compareTo(signature.HALF) > 1) {
 			msg = "Error Diferencia Base Impuesto Total: " + m_totalbaseimponible.toString() + " Detalles: " + m_sumabaseimponible.toString();
 			throw new AdempiereException(msg);
 		}
 		
-		if (m_sumavalorimpuesto.compareTo(m_totalvalorimpuesto) != 0 ) {
+		if (m_sumavalorimpuesto.compareTo(m_totalvalorimpuesto) != 0
+			&& m_totalvalorimpuesto.subtract(m_sumavalorimpuesto).abs().compareTo(signature.HALF) > 1) {
 			msg = "Error Diferencia Impuesto Total: " + m_totalvalorimpuesto.toString() + " Detalles: " + m_sumavalorimpuesto.toString();
 			throw new AdempiereException(msg);
 		}
