@@ -333,9 +333,8 @@ public class LEC_FE_MInOut extends MInOut
 			addHeaderElement(mmDoc, "razonSocialTransportista", bpt.getName(), atts);
 			// Numerico2
 			addHeaderElement(mmDoc, "tipoIdentificacionTransportista", m_tipoidentificaciontransportista, atts);
-			// Numerico13
-			addHeaderElement(mmDoc, "rucTransportista", (LEC_FE_Utils.fillString(13 - (LEC_FE_Utils.cutString(bpt.getTaxID(), 13)).length(), '0'))
-					+ LEC_FE_Utils.cutString(bpt.getTaxID(),13), atts);			
+			// Numerico Max 13
+			addHeaderElement(mmDoc, "rucTransportista", bpt.getTaxID(), atts);			
 			// Alfanumerico Max 40
 			addHeaderElement(mmDoc, "rise", LEC_FE_Utils.cutString(tpt.getName(), 40), atts);
 			// Texto2
@@ -356,9 +355,8 @@ public class LEC_FE_MInOut extends MInOut
 		
 			mmDoc.startElement("","","destinatario",atts);
 			
-			// Numerico13
-			addHeaderElement(mmDoc, "identificacionDestinatario", (LEC_FE_Utils.fillString(13 - (LEC_FE_Utils.cutString(bp.getTaxID(), 13)).length(), '0'))
-					+ LEC_FE_Utils.cutString(bp.getTaxID(),13), atts);
+			// Numerico Max 13
+			addHeaderElement(mmDoc, "identificacionDestinatario", m_identificacioncomprador, atts);
 			// Alfanumerico Max 300
 			addHeaderElement(mmDoc, "razonSocialDestinatario", bp.getName(), atts);
 			// Alfanumerico Max 300
