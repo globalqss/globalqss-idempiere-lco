@@ -315,9 +315,8 @@ public class LEC_FE_MInvoice extends MInvoice
 				addHeaderElement(mmDoc, "guiaRemision", LEC_FE_Utils.formatDocNo(inoutsus.getDocumentNo(), "06"), atts);
 			// Alfanumerico Max 300
 			addHeaderElement(mmDoc, "razonSocialComprador", m_razonsocial, atts);
-			// Numerico13
-			addHeaderElement(mmDoc, "identificacionComprador", (LEC_FE_Utils.fillString(13 - (LEC_FE_Utils.cutString(m_identificacioncomprador, 13)).length(), '0'))
-					+ LEC_FE_Utils.cutString(m_identificacioncomprador,13), atts);
+			// Numerico Max 13
+			addHeaderElement(mmDoc, "identificacionComprador", m_identificacioncomprador, atts);
 			// Numerico Max 14
 			addHeaderElement(mmDoc, "totalSinImpuestos", getTotalLines().toString(), atts);
 			// Numerico MAx 14

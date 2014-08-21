@@ -302,9 +302,8 @@ public class LEC_FE_MRetencion extends MInvoice
 			addHeaderElement(mmDoc, "tipoIdentificacionSujetoRetenido", m_tipoidentificacioncomprador, atts);
 			// Alfanumerico Max 300
 			addHeaderElement(mmDoc, "razonSocialSujetoRetenido", m_razonsocial, atts);
-			// Numerico13
-			addHeaderElement(mmDoc, "identificacionSujetoRetenido", (LEC_FE_Utils.fillString(13 - (LEC_FE_Utils.cutString(m_identificacioncomprador, 13)).length(), '0'))
-					+ LEC_FE_Utils.cutString(m_identificacioncomprador,13), atts);
+			// Numerico Max 13
+			addHeaderElement(mmDoc, "identificacionSujetoRetenido", m_identificacioncomprador, atts);
 			// Fecha6 mm/aaaa
 			addHeaderElement(mmDoc, "periodoFiscal", LEC_FE_Utils.getDate(getDateInvoiced(),7), atts);
 		

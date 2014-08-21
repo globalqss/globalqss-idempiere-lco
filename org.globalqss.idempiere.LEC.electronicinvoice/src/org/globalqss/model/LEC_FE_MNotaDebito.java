@@ -306,9 +306,8 @@ public class LEC_FE_MNotaDebito extends MInvoice
 			addHeaderElement(mmDoc, "tipoIdentificacionComprador", m_tipoidentificacioncomprador, atts);
 			// Alfanumerico Max 300
 			addHeaderElement(mmDoc, "razonSocialComprador", m_razonsocial, atts);
-			// Numerico13
-			addHeaderElement(mmDoc, "identificacionComprador", (LEC_FE_Utils.fillString(13 - (LEC_FE_Utils.cutString(m_identificacioncomprador, 13)).length(), '0'))
-					+ LEC_FE_Utils.cutString(m_identificacioncomprador,13), atts);
+			// Numerico Max 13
+			addHeaderElement(mmDoc, "identificacionComprador", m_identificacioncomprador, atts);
 			// Numerico3-5
 			addHeaderElement(mmDoc, "contribuyenteEspecial", oi.get_ValueAsString("SRI_TaxPayerCode"), atts);
 			// Texto2
