@@ -86,7 +86,7 @@ public class LEC_FE_MInOut extends MInOut
 			
 		if (signature.isOnTesting()) m_tipoambiente = "1";
 		
-		// if ( (Boolean) get_Value("SRI_IsUseContingency")) m_tipoclaveacceso = "2";	// TODO
+		if ( (Boolean) get_Value("SRI_IsUseContingency")) m_tipoclaveacceso = "2";
 		
 		if (! signature.isOnTesting()) {
 			signature.setUrlWSRecepcionComprobantes(MSysConfig.getValue("QSSLEC_FE_SRIURLWSProdRecepcionComprobante", null, getAD_Client_ID()));
@@ -368,7 +368,7 @@ public class LEC_FE_MInOut extends MInOut
 			// Alfanumerico Max 20
 			addHeaderElement(mmDoc, "docAduaneroUnico", "TODO", atts);
 			// Numerico3
-			addHeaderElement(mmDoc, "codEstabDestino", "TODO", atts);
+			// addHeaderElement(mmDoc, "codEstabDestino", "TODO", atts);	// No Aplica Sismode
 			// Alfanumerico Max 300
 			addHeaderElement(mmDoc, "ruta", lw.getCityRegionPostal() + " - " + bpl.getCityRegionPostal(), atts);
 			if  ( m_c_invoice_sus_id > 0) {
