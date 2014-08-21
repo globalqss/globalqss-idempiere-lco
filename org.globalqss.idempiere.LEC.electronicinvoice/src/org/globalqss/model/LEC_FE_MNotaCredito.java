@@ -346,7 +346,7 @@ public class LEC_FE_MNotaCredito extends MInvoice
 				 + "    WHEN t.LEC_TaxTypeSRI = '3' THEN '0000' "
 				 + "    ELSE '0' END AS codigoPorcentaje "
 				 + ", SUM(it.TaxBaseAmt) AS baseImponible "
-				 + ", SUM(it.TaxBaseAmt) AS valor "
+				 + ", SUM(it.TaxAmt) AS valor "
 				 + "FROM C_Invoice i "
 				 + "JOIN C_InvoiceTax it ON it.C_Invoice_ID = i.C_Invoice_ID "
 				 + "JOIN C_Tax t ON t.C_Tax_ID = it.C_Tax_ID "
