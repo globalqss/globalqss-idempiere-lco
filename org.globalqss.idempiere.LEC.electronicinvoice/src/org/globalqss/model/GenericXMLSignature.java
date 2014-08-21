@@ -134,40 +134,8 @@ public abstract class GenericXMLSignature {
 	}
 
 	public static String folderComprobantesGenerados = "ComprobantesGenerados";
-	
-	public static String getFolderComprobantesGenerados() {
-		return folderComprobantesGenerados;
-	}
-
-	public static void setFolderComprobantesGenerados(
-			String folderComprobantesGenerados) {
-		GenericXMLSignature.folderComprobantesGenerados = folderComprobantesGenerados;
-	}
-
 	public static String folderComprobantesFirmados = "ComprobantesFirmados";
-	
-	
-	public static String getFolderComprobantesFirmados() {
-		return folderComprobantesFirmados;
-	}
-
-	public static void setFolderComprobantesFirmados(
-			String folderComprobantesFirmados) {
-		GenericXMLSignature.folderComprobantesFirmados = folderComprobantesFirmados;
-	}
-
 	public static String folderComprobantesTransmitidos = "ComprobantesTransmitidos";
-	
-	
-	public static String getFolderComprobantesTransmitidos() {
-		return folderComprobantesTransmitidos;
-	}
-
-	public static void setFolderComprobantesTransmitidos(
-			String folderComprobantesTransmitidos) {
-		GenericXMLSignature.folderComprobantesTransmitidos = folderComprobantesTransmitidos;
-	}
-
 	public static String folderComprobantesRechazados = "ComprobantesRechazados";
 	public static String folderComprobantesAutorizados = "ComprobantesAutorizados";
 	public static String folderComprobantesNoAutorizados = "ComprobantesNoAutorizados";
