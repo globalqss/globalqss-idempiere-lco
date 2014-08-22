@@ -156,7 +156,7 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
 	    		if (mensaje.getIdentificador().equals("60"))	// Ambiente ejecución
 	    			// Ignore Advertencia Certificacion 
 	    			continue;
-	    		msg = mensaje.getIdentificador() + ConstantesXADES.GUION + mensaje.getMensaje() + ConstantesXADES.GUION + mensaje.getInformacionAdicional();
+	    		msg = autorizacion.getEstado() + ConstantesXADES.GUION + mensaje.getIdentificador() + ConstantesXADES.GUION + mensaje.getMensaje() + ConstantesXADES.GUION + mensaje.getInformacionAdicional();
 	    		// log.warning("@Mensaje Xml@ -> " + msg);
 	    		System.out.println("@Mensaje Xml@ -> " + msg);
 	    		a.setSRI_ErrorCode_ID(Integer.parseInt(mensaje.getIdentificador()));
