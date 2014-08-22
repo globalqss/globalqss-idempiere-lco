@@ -193,8 +193,14 @@ public class LEC_FE_MInOut extends MInOut
 			//throw new AdempiereUserError("No existe documento sustento para el comprobante");
 		
 		MInvoice invsus = null;
-		if ( m_c_invoice_sus_id > 0)
+		X_SRI_Authorisation asus = null;
+		if ( m_c_invoice_sus_id > 0) {
 			invsus = new MInvoice(getCtx(), m_c_invoice_sus_id, get_TrxName());
+			if ( invsus.get_Value("SRI_Authorisation_ID") == null)
+				//log.warning("No existe documento sustento autorizado para el comprobante");	// TODO Reviewme
+				throw new AdempiereUserError("No existe documento sustento autorizado para el comprobante");
+			asus = new X_SRI_Authorisation (getCtx(), (Integer) invsus.get_Value("SRI_Authorisation_ID"), get_TrxName());
+		}
 		
 		if (!isventamostrador && (getShipDate() == null || get_Value("ShipDateE") == null))
 			throw new AdempiereUserError("Debe indicar fechas de transporte");
@@ -364,7 +370,8 @@ public class LEC_FE_MInOut extends MInOut
 			// Alfanumerico Max 300
 			addHeaderElement(mmDoc, "motivoTraslado", "Venta", atts);
 			// Alfanumerico Max 20
-			addHeaderElement(mmDoc, "docAduaneroUnico", "TODO", atts);
+			if (get_Value("SRI_SingleCustomsDocument") != null)
+				addHeaderElement(mmDoc, "docAduaneroUnico", get_Value("SRI_SingleCustomsDocument").toString(), atts);
 			// Numerico3
 			// addHeaderElement(mmDoc, "codEstabDestino", "TODO", atts);	// No Aplica Sismode
 			// Alfanumerico Max 300
@@ -376,7 +383,8 @@ public class LEC_FE_MInOut extends MInOut
 				// Numerico15 -- Incluye guiones
 				addHeaderElement(mmDoc, "numDocSustento", LEC_FE_Utils.formatDocNo(invsus.getDocumentNo(), "01"), atts);
 				// Numerico10-37
-				addHeaderElement(mmDoc, "numAutDocSustento", "TODO", atts);
+				if (asus.getSRI_AuthorisationCode() != null)
+					addHeaderElement(mmDoc, "numAutDocSustento", asus.getSRI_AuthorisationCode(), atts);
 				// Fecha8 ddmmaaaa
 				addHeaderElement(mmDoc, "fechaEmisionDocSustento", LEC_FE_Utils.getDate(invsus.getDateInvoiced(),10), atts);
 			}
