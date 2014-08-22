@@ -329,31 +329,26 @@ public class LEC_FE_MNotaDebito extends MInvoice
 				
 		// Impuestos
 		sql = new StringBuffer(
-	            "SELECT i.C_Invoice_ID, COALESCE(p.value, '0'), 0::text, ilt.name, ilt.qtyinvoiced, ROUND(ilt.priceactual, 2), COALESCE(ilt.discount, 0), ilt.linenetamt "
-				+ ", COALESCE(t.LEC_TaxTypeSRI, '0') AS codigo "
-				+ ", CASE "
-				+ "    WHEN t.LEC_TaxTypeSRI = '2' THEN "
-				+ "      CASE "
-				+ "        WHEN t.rate = 0::numeric THEN '0' "
-				+ "        WHEN t.rate = 12::numeric THEN '2' "
-				+ "        ELSE '6' "
-				+ "      END "
-				+ "    WHEN t.LEC_TaxTypeSRI = '3' THEN '0000' "
-				+ "    ELSE '0' END AS codigoPorcentaje "
-				+ ", t.rate AS tarifa "
-				+ ", ilt.linenetamt AS baseImponible "
-				+ ", ROUND(ilt.linenetamt * t.rate / 100, 2) AS valor "
-				+ ", il.description AS description1 "
-				+ ", t.name AS razon "
-	            + "FROM C_Invoice i "
-	            + "JOIN C_InvoiceLine il ON il.C_Invoice_ID = i.C_Invoice_ID "
-	            + "JOIN C_Invoice_LineTax_VT ilt ON ilt.C_InvoiceLine_ID = il.C_InvoiceLine_ID "
-	            + "JOIN C_Tax t ON t.C_Tax_ID = ilt.C_Tax_ID "
-	            + "LEFT JOIN M_Product p ON p.M_Product_ID = il.M_Product_ID "
-	            + "LEFT JOIN M_Product_Category pc ON pc.M_Product_Category_ID = p.M_Product_Category_ID "
-	            + "LEFT JOIN C_Charge c ON il.C_Charge_ID = c.C_Charge_ID "
-	            + "WHERE il.IsDescription = 'N' AND i.C_Invoice_ID=? "
-	            + "ORDER BY il.line");
+				"SELECT COALESCE(t.LEC_TaxTypeSRI, '0') AS codigo "
+						 + ", CASE "
+						 + "    WHEN t.LEC_TaxTypeSRI = '2' THEN "
+						 + "      CASE "
+						 + "        WHEN t.rate = 0::numeric THEN '0' "
+						 + "        WHEN t.rate = 12::numeric THEN '2' "
+						 + "        ELSE '6' "
+						 + "      END "
+						 + "    WHEN t.LEC_TaxTypeSRI = '3' THEN '0000' "
+						 + "    ELSE '0' END AS codigoPorcentaje "
+						 + ", MIN(t.rate) AS tarifa "
+						 + ", SUM(it.TaxBaseAmt) AS baseImponible "
+						 + ", SUM(it.TaxAmt) AS valor "
+						 + ", MIN(t.name) AS razon "
+						 + "FROM C_Invoice i "
+						 + "JOIN C_InvoiceTax it ON it.C_Invoice_ID = i.C_Invoice_ID "
+						 + "JOIN C_Tax t ON t.C_Tax_ID = it.C_Tax_ID "
+						 + "WHERE i.C_Invoice_ID = ? "
+						 + "GROUP BY codigo, codigoPorcentaje "
+						 + "ORDER BY codigo, codigoPorcentaje");
 		
 		try
 		{
@@ -366,27 +361,26 @@ public class LEC_FE_MNotaDebito extends MInvoice
 			
 			while (rs.next())
 			{
-					// TODO El mismo cursor de totalConImpuestos para Producto SIN GROUP BY ?
-					if (rs.getString(9).equals("0")) {
+					if (rs.getString(1).equals("0")) {
 						msg = "Impuesto sin Tipo impuesto SRI";
 						throw new AdempiereException(msg);
 					}
 					
 					mmDoc.startElement("","","impuesto",atts);
 						// Numerico 1
-						addHeaderElement(mmDoc, "codigo", rs.getString(9), atts);
+						addHeaderElement(mmDoc, "codigo", rs.getString(1), atts);
 						// Numerico 1 to 4
-						addHeaderElement(mmDoc, "codigoPorcentaje", rs.getString(10), atts);
+						addHeaderElement(mmDoc, "codigoPorcentaje", rs.getString(2), atts);
 						// Numerico 1 to 4
-						addHeaderElement(mmDoc, "tarifa", rs.getBigDecimal(11).toString(), atts);
+						addHeaderElement(mmDoc, "tarifa", rs.getBigDecimal(3).toString(), atts);
 						// Numerico Max 14
-						addHeaderElement(mmDoc, "baseImponible", rs.getBigDecimal(12).toString(), atts);
+						addHeaderElement(mmDoc, "baseImponible", rs.getBigDecimal(4).toString(), atts);
 						// Numerico Max 14
-						addHeaderElement(mmDoc, "valor", rs.getBigDecimal(13).toString(), atts);
+						addHeaderElement(mmDoc, "valor", rs.getBigDecimal(5).toString(), atts);
 					mmDoc.endElement("","","impuesto");
 				
-				m_sumabaseimponible = m_sumabaseimponible.add(rs.getBigDecimal(12));
-				m_sumavalorimpuesto = m_sumavalorimpuesto.add(rs.getBigDecimal(13));
+				m_sumabaseimponible = m_sumabaseimponible.add(rs.getBigDecimal(4));
+				m_sumavalorimpuesto = m_sumavalorimpuesto.add(rs.getBigDecimal(5));
 				
 			}
 			
@@ -406,9 +400,9 @@ public class LEC_FE_MNotaDebito extends MInvoice
 				
 				mmDoc.startElement("","","motivo",atts);
 					// Alfanumerico MAx 300
-					addHeaderElement(mmDoc, "razon", rs.getString(15), atts);
+					addHeaderElement(mmDoc, "razon", rs.getString(6), atts);
 					// Numerico Max 14
-					addHeaderElement(mmDoc, "valor", rs.getBigDecimal(12).toString(), atts);
+					addHeaderElement(mmDoc, "valor", rs.getBigDecimal(5).toString(), atts);
 				mmDoc.endElement("","","motivo");
 			
 			}

@@ -90,6 +90,7 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
         //log.warning("@Sending Xml@ -> " + file_name);
         System.out.println("@Sending Xml@ -> " + file_name);
         // Enviar a Recepcion Comprobante SRI
+        // TODO 43 Clave acceso registrada
         byte[] bytes = signature.getBytesFromFile(file_name);
         ///*
         RespuestaSolicitud respuestasolicitud = signature.validarComprobante(bytes);
