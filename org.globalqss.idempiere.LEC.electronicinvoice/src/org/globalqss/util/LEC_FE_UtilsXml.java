@@ -168,7 +168,7 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
 	    		msg = null;
 	    		// TODO Log.warn(message, ex)
 	    		// Update AccessCode
-	    		if (ac.getCodeAccessType().equals("1")) {	// 1-Automatica
+	    		if (ac.getCodeAccessType().equals(signature.claveAccesoAutomatica)) {
 	    			ac.setValue(autorizacion.getNumeroAutorizacion());
 	    			ac.saveEx();
 	    		}	

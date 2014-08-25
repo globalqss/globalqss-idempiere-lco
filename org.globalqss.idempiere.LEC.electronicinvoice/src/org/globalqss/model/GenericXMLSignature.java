@@ -66,6 +66,35 @@ import es.mityc.javasign.pkstore.keystore.KSStore;
  */
 public abstract class GenericXMLSignature {
 
+	public static String ambienteCertificacion = "1";
+	public static String ambienteProduccion = "2";
+	
+	public static String nombreCertificacion = "PRUEBAS";
+	public static String nombreProduccion = "PRODUCCIÓN";
+	
+	public static String emisionNormal = "1";
+	public static String emisionContingencia = "2";
+	
+	public static String claveAccesoAutomatica = "1";
+	public static String claveAccesoContingencia = "2";
+	
+	public static String folderComprobantesGenerados = "ComprobantesGenerados";
+	public static String folderComprobantesFirmados = "ComprobantesFirmados";
+	public static String folderComprobantesTransmitidos = "ComprobantesTransmitidos";
+	public static String folderComprobantesRechazados = "ComprobantesRechazados";
+	public static String folderComprobantesAutorizados = "ComprobantesAutorizados";
+	public static String folderComprobantesNoAutorizados = "ComprobantesNoAutorizados";
+	
+	public static String recepcionComprobantesQname = "http://ec.gob.sri.ws.recepcion";
+	public static String recepcionComprobantesService = "RecepcionComprobantesService";
+	public static String recepcionRecibida = "RECIBIDA";
+	public static String recepcionDevuelta = "DEVUELTA";
+	
+	public static String autorizacionComprobantesQname = "http://ec.gob.sri.ws.autorizacion";
+	public static String autorizacionComprobantesService = "AutorizacionComprobantesService";
+	public static String comprobanteAutorizado = "AUTORIZADO";
+	public static String comprobanteNoAutorizado = "NO AUTORIZADO";
+	public static String comprobanteRechazado = "RECHAZADO";
 	
 	/**	Big Decimal 0.5	 */
 	static final public BigDecimal HALF = new BigDecimal(0.5);
@@ -98,6 +127,37 @@ public abstract class GenericXMLSignature {
 
 	public void setAttachXml(boolean isAttachXml) {
 		this.isAttachXml = isAttachXml;
+	}
+
+	public String EnvType = "";
+	
+	
+	public String getEnvType() {
+		return EnvType;
+	}
+
+	public void setEnvType(String envType) {
+		EnvType = envType;
+	}
+	
+	public String DeliveredType = "";
+
+	public String getDeliveredType() {
+		return DeliveredType;
+	}
+
+	public void setDeliveredType(String deliveredType) {
+		DeliveredType = deliveredType;
+	}
+
+	public String CodeAccessType = "";
+
+	public String getCodeAccessType() {
+		return CodeAccessType;
+	}
+
+	public void setCodeAccessType(String codeAccessType) {
+		CodeAccessType = codeAccessType;
 	}
 
 	/** WS URLs			*/
@@ -133,26 +193,8 @@ public abstract class GenericXMLSignature {
 		this.folderRaiz = folderRaiz;
 	}
 
-	public static String folderComprobantesGenerados = "ComprobantesGenerados";
-	public static String folderComprobantesFirmados = "ComprobantesFirmados";
-	public static String folderComprobantesTransmitidos = "ComprobantesTransmitidos";
-	public static String folderComprobantesRechazados = "ComprobantesRechazados";
-	public static String folderComprobantesAutorizados = "ComprobantesAutorizados";
-	public static String folderComprobantesNoAutorizados = "ComprobantesNoAutorizados";
-	
-	public static String recepcionComprobantesQname = "http://ec.gob.sri.ws.recepcion";
-	public static String recepcionComprobantesService = "RecepcionComprobantesService";
-	public static String recepcionRecibida = "RECIBIDA";
-	public static String recepcionDevuelta = "DEVUELTA";
-	
-	public static String autorizacionComprobantesQname = "http://ec.gob.sri.ws.autorizacion";
-	public static String autorizacionComprobantesService = "AutorizacionComprobantesService";
-	public static String comprobanteAutorizado = "AUTORIZADO";
-	public static String comprobanteNoAutorizado = "NO AUTORIZADO";
-	public static String comprobanteRechazado = "RECHAZADO";
-	
 	public static String XmlEncoding = "UTF-8";
-
+	
 	public static String getXmlEncoding() {
 		return XmlEncoding;
 	}
