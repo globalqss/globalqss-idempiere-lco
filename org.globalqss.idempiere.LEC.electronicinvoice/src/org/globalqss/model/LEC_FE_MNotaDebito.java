@@ -402,7 +402,7 @@ public class LEC_FE_MNotaDebito extends MInvoice
 					// Alfanumerico MAx 300
 					addHeaderElement(mmDoc, "razon", rs.getString(6), atts);
 					// Numerico Max 14
-					addHeaderElement(mmDoc, "valor", rs.getBigDecimal(5).toString(), atts);
+					addHeaderElement(mmDoc, "valor", rs.getBigDecimal(4).toString(), atts);
 				mmDoc.endElement("","","motivo");
 			
 			}

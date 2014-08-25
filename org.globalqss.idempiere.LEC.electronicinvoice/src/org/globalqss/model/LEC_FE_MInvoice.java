@@ -559,7 +559,7 @@ public class LEC_FE_MInvoice extends MInvoice
         
         file_name = LEC_FE_Utils.getFilename(signature, signature.folderComprobantesFirmados);
         
-        if (signature.getEnvType().equals(signature.emisionNormal)) {
+        if (signature.getDeliveredType().equals(signature.emisionNormal)) {
         
 	        if (LEC_FE_Utils.breakDialog("Enviando Comprobante al SRI")) return "Cancelado...";	// Temp
 	        
