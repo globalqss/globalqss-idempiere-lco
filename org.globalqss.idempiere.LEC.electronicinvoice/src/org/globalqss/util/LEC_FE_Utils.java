@@ -363,9 +363,9 @@ public class LEC_FE_Utils
 				+ String.format("%2s", coddoc)							// codDoc
 				+ String.format("%13s", (fillString(13 - (cutString(taxid, 13)).length(), '0'))
 					+ cutString(taxid,13))								// ruc
-				+ String.format("%1s", tipoambiente);					// ambiente
+				+ String.format("%1s", ac.getEnvType());				// ambiente
 			
-			if (ac.getCodeAccessType().equals("1")) {
+			if (ac.getCodeAccessType().equals("1")) {	// claveAccesoAutomatica
 				accesscode = accesscode
 				+ String.format("%3s", orgcode)							// serie / estab
 				+ String.format("%3s", storecode)						// serie / ptoEmi
