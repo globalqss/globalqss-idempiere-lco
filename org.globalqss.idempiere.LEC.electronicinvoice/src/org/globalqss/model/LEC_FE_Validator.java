@@ -214,9 +214,9 @@ public class LEC_FE_Validator implements ModelValidator
 		
 		}
 		
-		MUser u = new MUser(inv.getCtx(), inv.getAD_User_ID(), inv.get_TrxName());
+		MUser user = new MUser(inv.getCtx(), inv.getAD_User_ID(), inv.get_TrxName());
 			
-		if ((u.get_ID() == 0 || u.isNotificationEMail() && (u.getEMail() == null || u.getEMail().length() == 0))) {
+		if (! valideUserMail (user)) {
 			msg = "@RequestActionEMailNoTo@";
 			return msg;
 		}
@@ -257,9 +257,9 @@ public class LEC_FE_Validator implements ModelValidator
 			// if (LEC_FE_Utils.breakDialog(msg)) return "Cancelado...";	// Temp
 		}
 		
-		MUser u = new MUser(inout.getCtx(), inout.getAD_User_ID(), inout.get_TrxName());
+		MUser user = new MUser(inout.getCtx(), inout.getAD_User_ID(), inout.get_TrxName());
 		
-		if ((u.get_ID() == 0 || u.isNotificationEMail() && (u.getEMail() == null || u.getEMail().length() == 0))) {
+		if (! valideUserMail (user)) {
 			msg = "@RequestActionEMailNoTo@";
 			return msg;
 		}
@@ -349,6 +349,19 @@ public class LEC_FE_Validator implements ModelValidator
 		return msg;
 		
 	}	//	valideOrgInfoSri
+	
+	public static boolean valideUserMail (MUser user)
+	{
+		if (MSysConfig.getBooleanValue("QSSLEC_FE_EnvioXmlAutorizadoBPEmail", false, user.getAD_Client_ID())) {
+			
+			if ((user.get_ID() == 0 || user.isNotificationEMail() && (user.getEMail() == null || user.getEMail().length() == 0))) {
+				return false;
+			}
+		}
+		
+		return true;
+	
+	}	//	valideUserMail
 	
 	
 }	//	LEC_FE_Validator

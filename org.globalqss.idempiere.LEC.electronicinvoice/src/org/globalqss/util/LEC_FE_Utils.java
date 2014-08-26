@@ -323,7 +323,7 @@ public class LEC_FE_Utils
 		
 		int sri_accesscode_id = -1;
 		
-		StringBuffer sql = new StringBuffer("SELECT SRI_AccessCode_ID FROM SRI_AccessCode WHERE AD_Client_ID = ? AND EnvType = ? AND IsUsed = 'N' AND SUBSTR(OldValue,1,13) = ?  ORDER BY OldValue");
+		StringBuffer sql = new StringBuffer("SELECT SRI_AccessCode_ID FROM SRI_AccessCode WHERE AD_Client_ID = ? AND EnvType = ? AND IsUsed = 'N' AND SUBSTR(Value,1,13) = ? ORDER BY Value");
 		try
 		{
 			PreparedStatement pstmt = DB.prepareStatement(sql.toString(), trxName);
