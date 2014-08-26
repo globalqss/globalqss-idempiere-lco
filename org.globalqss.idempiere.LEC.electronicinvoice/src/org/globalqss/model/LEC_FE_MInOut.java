@@ -53,9 +53,6 @@ public class LEC_FE_MInOut extends MInOut
 	private int		m_c_invoice_sus_id = 0;
 
 	private String file_name = "";
-	private String m_tipoclaveacceso = "1";	// 1-Automatica, 2-Contingencia
-	private String m_tipoambiente = "2";	// 1-Pruebas, 2-Produccion
-	private String m_tipoemision = "1";		// 1-Normal, 2-Contingencia
 	private String m_obligadocontabilidad = "NO";
 	private String m_coddoc = "";
 	private String m_accesscode;
@@ -84,9 +81,16 @@ public class LEC_FE_MInOut extends MInOut
 			
 		signature.setOnTesting(MSysConfig.getBooleanValue("QSSLEC_FE_EnPruebas", false, getAD_Client_ID()));
 			
-		if (signature.isOnTesting()) m_tipoambiente = "1";
+		signature.setEnvType(signature.ambienteProduccion);
+		if (signature.isOnTesting())
+			signature.setEnvType(signature.ambienteCertificacion);
 		
-		if ( (Boolean) get_Value("SRI_IsUseContingency")) m_tipoclaveacceso = "2";
+		signature.setDeliveredType(signature.emisionNormal);
+		signature.setCodeAccessType(signature.claveAccesoAutomatica);
+		if ( (Boolean) get_Value("SRI_IsUseContingency")) {
+			signature.setDeliveredType(signature.emisionContingencia);
+			signature.setCodeAccessType(signature.claveAccesoContingencia);
+		}
 		
 		if (! signature.isOnTesting()) {
 			signature.setUrlWSRecepcionComprobantes(MSysConfig.getValue("QSSLEC_FE_SRIURLWSProdRecepcionComprobante", null, getAD_Client_ID()));
@@ -116,7 +120,7 @@ public class LEC_FE_MInOut extends MInOut
 			throw new AdempiereUserError("No existe definicion SRI_ShortDocType: " + dt.toString());
 		
 		// Formato
-		m_lec_sri_format_id = LEC_FE_Utils.getLecSriFormat(getAD_Client_ID(), m_tipoemision, m_coddoc, getMovementDate(), getMovementDate());
+		m_lec_sri_format_id = LEC_FE_Utils.getLecSriFormat(getAD_Client_ID(), signature.getDeliveredType(), m_coddoc, getMovementDate(), getMovementDate());
 		
 		if ( m_lec_sri_format_id < 1)
 			throw new AdempiereUserError("No existe formato para el comprobante");
@@ -207,8 +211,8 @@ public class LEC_FE_MInOut extends MInOut
 		
 		// IsUseContingency
 		int sri_accesscode_id = 0;
-		if (m_tipoclaveacceso.equals("2")) {
-			sri_accesscode_id = LEC_FE_Utils.getNextAccessCode(getAD_Client_ID(), m_tipoambiente, oi.getTaxID(), get_TrxName());
+		if (signature.getCodeAccessType().equals(signature.claveAccesoContingencia)) {
+			sri_accesscode_id = LEC_FE_Utils.getNextAccessCode(getAD_Client_ID(), signature.getEnvType(), oi.getTaxID(), get_TrxName());
 			if ( sri_accesscode_id < 1)
 				throw new AdempiereUserError("No hay clave de contingencia para el comprobante");
 		}
@@ -217,15 +221,15 @@ public class LEC_FE_MInOut extends MInOut
 		X_SRI_AccessCode ac = new X_SRI_AccessCode (getCtx(), sri_accesscode_id, get_TrxName());
 		ac.setAD_Org_ID(getAD_Org_ID());
 		ac.setOldValue(null);	// TODO Deprecated
-		ac.setEnvType(m_tipoambiente);	// Before Save ?
-		ac.setCodeAccessType(m_tipoclaveacceso); // Auto Before Save ?
+		ac.setEnvType(signature.getEnvType());	// Before Save ?
+		ac.setCodeAccessType(signature.getCodeAccessType()); // Auto Before Save ?
 		ac.setSRI_ShortDocType(m_coddoc);
 		ac.setIsUsed(true);
 		
 		// Access Code
-		m_accesscode = LEC_FE_Utils.getAccessCode(getMovementDate(), m_coddoc, bpe.getTaxID(), m_tipoambiente, oi.get_ValueAsString("SRI_OrgCode"), LEC_FE_Utils.getStoreCode(LEC_FE_Utils.formatDocNo(getDocumentNo(), m_coddoc)), getDocumentNo(), oi.get_ValueAsString("SRI_DocumentCode"), m_tipoemision, ac);
+		m_accesscode = LEC_FE_Utils.getAccessCode(getMovementDate(), m_coddoc, bpe.getTaxID(), oi.get_ValueAsString("SRI_OrgCode"), LEC_FE_Utils.getStoreCode(LEC_FE_Utils.formatDocNo(getDocumentNo(), m_coddoc)), getDocumentNo(), oi.get_ValueAsString("SRI_DocumentCode"), signature.getDeliveredType(), ac);
 		
-		if (m_tipoclaveacceso.equals("1"))
+		if (signature.getCodeAccessType().equals(signature.claveAccesoAutomatica))
 			ac.setValue(m_accesscode);
 		
 		if (!ac.save()) {
@@ -303,9 +307,9 @@ public class LEC_FE_MInOut extends MInOut
 		// Emisor
 		mmDoc.startElement("","","infoTributaria", atts);
 			// Numerico1
-			addHeaderElement(mmDoc, "ambiente", m_tipoambiente, atts);
+			addHeaderElement(mmDoc, "ambiente", signature.getEnvType(), atts);
 			// Numerico1
-			addHeaderElement(mmDoc, "tipoEmision", m_tipoemision, atts);
+			addHeaderElement(mmDoc, "tipoEmision", signature.getDeliveredType(), atts);
 			// Alfanumerico Max 300
 			addHeaderElement(mmDoc, "razonSocial", bpe.getName(), atts);
 			// Alfanumerico Max 300
@@ -488,21 +492,29 @@ public class LEC_FE_MInOut extends MInOut
         
         file_name = LEC_FE_Utils.getFilename(signature, signature.folderComprobantesFirmados);
         
-        if (LEC_FE_Utils.breakDialog("Enviando Comprobante al SRI")) return "Cancelado...";	// Temp
-        
-        // Procesar Recepcion SRI
-        msg = signature.respuestaRecepcionComprobante(signature, file_name);
-        
-        if (msg != null)
-	    	throw new AdempiereException(msg);
-        
-        // Procesar Autorizacion SRI
-        msg = signature.respuestaAutorizacionComprobante(signature, ac, a, m_accesscode);
-
-	    if (msg != null)
-	    	throw new AdempiereException(msg);
-	    
-	    file_name = LEC_FE_Utils.getFilename(signature, signature.folderComprobantesAutorizados);
+        if (signature.getDeliveredType().equals(signature.emisionNormal)) {
+        	
+	        if (LEC_FE_Utils.breakDialog("Enviando Comprobante al SRI")) return "Cancelado...";	// Temp
+	        
+	        // Procesar Recepcion SRI
+	        log.warning("@Sending Xml@ -> " + file_name);
+	        msg = signature.respuestaRecepcionComprobante(signature, file_name);
+	        
+	        if (msg != null)
+		    	throw new AdempiereException(msg);
+	        
+	        // Procesar Autorizacion SRI
+	        log.warning("@Sending Xml@ -> " + file_name);
+	        msg = signature.respuestaAutorizacionComprobante(signature, ac, a, m_accesscode);
+	
+		    if (msg != null)
+		    	throw new AdempiereException(msg);
+		    
+		    file_name = LEC_FE_Utils.getFilename(signature, signature.folderComprobantesAutorizados);
+		} else {	// emisionContingencia
+        	if (signature.isAttachXml())
+        		LEC_FE_Utils.attachXmlFile(a.getCtx(), a.get_TrxName(), a.getSRI_Authorisation_ID(), file_name);
+		}
 		
 	    if (MSysConfig.getBooleanValue("QSSLEC_FE_EnvioXmlAutorizadoBPEmail", false, getAD_Client_ID()))
 		{
@@ -515,7 +527,7 @@ public class LEC_FE_MInOut extends MInOut
 				// TODO Replicar en cada clase el definitivo
 				MMailText mText = new MMailText(getCtx(), 0, get_TrxName());	// Solo en memoria
 				mText.setPO(this);
-				String subject = "SRI " + (signature.isOnTesting ? "PRUEBAS " : "") + bpe.getValue() + " : " + f.get_ValueAsString("XmlPrintLabel") + " " + getDocumentNo();
+				String subject = "SRI " + (signature.isOnTesting ? signature.nombreCertificacion : signature.nombreProduccion) + " " + bpe.getValue() + " : " + f.get_ValueAsString("XmlPrintLabel") + " " + getDocumentNo();
 				String text =
 						" Emisor               : " + bpe.getName() +
 						"\nFecha                : " + LEC_FE_Utils.getDate(getMovementDate(),10) +

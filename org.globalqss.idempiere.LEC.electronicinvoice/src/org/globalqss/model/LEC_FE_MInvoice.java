@@ -197,7 +197,7 @@ public class LEC_FE_MInvoice extends MInvoice
 		ac.setIsUsed(true);
 		
 		// Access Code
-		m_accesscode = LEC_FE_Utils.getAccessCode(getDateInvoiced(), m_coddoc, bpe.getTaxID(), signature.getEnvType(), oi.get_ValueAsString("SRI_OrgCode"), LEC_FE_Utils.getStoreCode(LEC_FE_Utils.formatDocNo(getDocumentNo(), m_coddoc)), getDocumentNo(), oi.get_ValueAsString("SRI_DocumentCode"), signature.getDeliveredType(), ac);
+		m_accesscode = LEC_FE_Utils.getAccessCode(getDateInvoiced(), m_coddoc, bpe.getTaxID(), oi.get_ValueAsString("SRI_OrgCode"), LEC_FE_Utils.getStoreCode(LEC_FE_Utils.formatDocNo(getDocumentNo(), m_coddoc)), getDocumentNo(), oi.get_ValueAsString("SRI_DocumentCode"), signature.getDeliveredType(), ac);
 
 		if (signature.getCodeAccessType().equals(signature.claveAccesoAutomatica))
 			ac.setValue(m_accesscode);
@@ -564,12 +564,14 @@ public class LEC_FE_MInvoice extends MInvoice
 	        if (LEC_FE_Utils.breakDialog("Enviando Comprobante al SRI")) return "Cancelado...";	// Temp
 	        
 	        // Procesar Recepcion SRI
+	        log.warning("@Sending Xml@ -> " + file_name);
 	        msg = signature.respuestaRecepcionComprobante(signature, file_name);
         
 	        if (msg != null)
 		    	throw new AdempiereException(msg);
                
 	        // Procesar Autorizacion SRI
+	        log.warning("@Authorizing Xml@ -> " + file_name);
 	        msg = signature.respuestaAutorizacionComprobante(signature, ac, a, m_accesscode);
 	
 		    if (msg != null)
