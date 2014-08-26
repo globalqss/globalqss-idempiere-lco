@@ -352,7 +352,7 @@ public class LEC_FE_Utils
 	 * 	String getAccessCode
 	 * 	@return String
 	 */
-	public static String getAccessCode(Date docdate, String coddoc, String taxid, String tipoambiente, String orgcode, String storecode, String documentno, String documentcode, String tipoemision, X_SRI_AccessCode ac) {
+	public static String getAccessCode(Date docdate, String coddoc, String taxid, String orgcode, String storecode, String documentno, String documentcode, String tipoemision, X_SRI_AccessCode ac) {
 	
 		String accesscode;
 				
