@@ -3,7 +3,9 @@ package org.globalqss.util;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -12,6 +14,10 @@ import javax.xml.ws.BindingProvider;
 import javax.xml.ws.WebServiceException;
 
 import org.apache.commons.io.FileUtils;
+import org.compiere.model.MAttachment;
+import org.compiere.model.MAttachmentEntry;
+import org.compiere.model.MTable;
+import org.compiere.util.Env;
 import org.globalqss.model.GenericXMLSignature;
 import org.globalqss.model.X_SRI_AccessCode;
 import org.globalqss.model.X_SRI_Authorisation;
@@ -82,7 +88,7 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
     		
     	//log.warning("@Verificando Conexion servicio recepcion SRI@" + (signature.isOnTesting ? "PRUEBAS " : "PRODUCCION"));
     	System.out.println("@Verificando Conexion servicio recepcion SRI@" + (signature.isOnTesting ? "PRUEBAS " : "PRODUCCION"));
-    	if (! signature.existeConexion(signature.recepcionComprobantesService)) {
+    	if (! signature.existeConexion(LEC_FE_UtilsXml.recepcionComprobantesService)) {
         	msg = "Error no hay conexion al servicio recepcion SRI: " + (signature.isOnTesting ? "PRUEBAS " : "PRODUCCION");
         	return msg;	// throw new AdempiereException(msg);
 		}
@@ -109,10 +115,10 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
 	    		System.out.println("@Mensaje Xml@ -> " + msg);
         	}
         	// TODO Extraer y guardar comprobante xml en file_name
-        	file_name = LEC_FE_Utils.getFilename(signature, signature.folderComprobantesTransmitidos);
+        	file_name = LEC_FE_Utils.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesTransmitidos);
         	FileUtils.writeStringToFile(new File(file_name), comprobante.toString());
 	    }
-        if (! respuestasolicitud.getEstado().equals(signature.recepcionRecibida)) {
+        if (! respuestasolicitud.getEstado().equals(LEC_FE_UtilsXml.recepcionRecibida)) {
         	msg = respuestasolicitud.getEstado() + ConstantesXADES.GUION + comprobantes.getComprobante().toString() + ConstantesXADES.GUION + msg;
         	return msg;	// throw new AdempiereException(msg);
 		}
@@ -137,7 +143,7 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
     		
     	//log.warning("@Verificando Conexion servicio autorizacion SRI@" + (signature.isOnTesting ? "PRUEBAS " : "PRODUCCION"));
         System.out.println("@Verificando Conexion servicio autorizacion SRI@" + (signature.isOnTesting ? "PRUEBAS " : "PRODUCCION"));
-        if (! signature.existeConexion(signature.autorizacionComprobantesService)) {
+        if (! signature.existeConexion(LEC_FE_UtilsXml.autorizacionComprobantesService)) {
         	msg = "Error no hay conexion al servicio autorizacion SRI: " + (signature.isOnTesting ? "PRUEBAS " : "PRODUCCION");
 			return msg;	// throw new AdempiereException(msg);
 		}
@@ -163,12 +169,11 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
 	    		a.setSRI_ErrorCode_ID(Integer.parseInt(mensaje.getIdentificador()));
 	    	}
 	    	//
-	    	if (autorizacion.getEstado().equals(signature.comprobanteAutorizado)) {
+	    	if (autorizacion.getEstado().equals(LEC_FE_UtilsXml.comprobanteAutorizado)) {
 	    		
 	    		msg = null;
-	    		// TODO Log.warn(message, ex)
 	    		// Update AccessCode
-	    		if (ac.getCodeAccessType().equals(signature.claveAccesoAutomatica)) {
+	    		if (ac.getCodeAccessType().equals(LEC_FE_UtilsXml.claveAccesoAutomatica)) {
 	    			ac.setValue(autorizacion.getNumeroAutorizacion());
 	    			ac.saveEx();
 	    		}	
@@ -178,18 +183,18 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
 	    		a.setProcessed(true);
 	    		a.saveEx();
 	    		
-	    		file_name = LEC_FE_Utils.getFilename(signature, signature.folderComprobantesAutorizados);
-	    	} else if (autorizacion.getEstado().equals(signature.comprobanteNoAutorizado))
-	    		file_name = LEC_FE_Utils.getFilename(signature, signature.folderComprobantesNoAutorizados);
+	    		file_name = LEC_FE_Utils.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesAutorizados);
+	    	} else if (autorizacion.getEstado().equals(LEC_FE_UtilsXml.comprobanteNoAutorizado))
+	    		file_name = LEC_FE_Utils.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesNoAutorizados);
 	    	else
-	    		file_name = LEC_FE_Utils.getFilename(signature, signature.folderComprobantesRechazados);
+	    		file_name = LEC_FE_Utils.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesRechazados);
 	    	
 	    	// TODO Extraer y guardar autorizacion xml signed and authorised en file_name
 	    	// FileUtils.writeStringToFile(new File(file_name), autorizacion.toString());
 	    	FileUtils.writeStringToFile(new File(file_name), autorizacion.getComprobante());
 	    	
 	  		// Atach XML Autorizado
-    		if (autorizacion.getEstado().equals(signature.comprobanteAutorizado) && signature.isAttachXml())
+    		if (autorizacion.getEstado().equals(LEC_FE_UtilsXml.comprobanteAutorizado) && signature.isAttachXml())
     			LEC_FE_Utils.attachXmlFile(a.getCtx(), a.get_TrxName(), a.getSRI_Authorisation_ID(), file_name);
   	    	
 	    	break;	// Solo Respuesta autorizacion mas reciente segun accesscode
@@ -252,8 +257,8 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
         
     	AutorizacionComprobantes port = service.getAutorizacionComprobantesPort();
     	// Controlar el tiempo de espera al consumir un webservice
-    	// ((BindingProvider) port).getRequestContext().put("com.sun.xml.internal.ws.connect.timeout", 5000);
-    	// ((BindingProvider) port).getRequestContext().put("com.sun.xml.internal.ws.request.timeout", 5000);
+    	((BindingProvider) port).getRequestContext().put("com.sun.xml.internal.ws.connect.timeout", getSriWSTimeout());
+    	((BindingProvider) port).getRequestContext().put("com.sun.xml.internal.ws.request.timeout", getSriWSTimeout());
     	return port.autorizacionComprobante(claveAccesoComprobante);
     
     }
@@ -321,6 +326,36 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
         is.close();
 	        
         return bytes;
+    }
+    
+    public File getFileFromStream(String xmlFilePath, int sri_authorisation_id) throws Exception {
+    	
+    	InputStream inputStream = null;
+		OutputStream outputStream = null;
+		File file = null;
+		MAttachment attach =  MAttachment.get(Env.getCtx(), MTable.getTable_ID("SRI_Authorisation"), sri_authorisation_id);
+		if (attach != null) {
+    		for (MAttachmentEntry entry : attach.getEntries()) {
+            	if (entry.getName().endsWith("xml")) {
+            		inputStream = new FileInputStream(entry.getFile());
+            		outputStream = new FileOutputStream(xmlFilePath);
+            		
+            		int numRead = 0;
+            		byte[] bytes = new byte[1024];
+            		 
+            		while ((numRead = inputStream.read(bytes)) != -1) {
+            			outputStream.write(bytes, 0, numRead);
+            		}
+            		inputStream.close();
+            		outputStream.flush();
+            		outputStream.close();
+            		file = (new File (xmlFilePath));
+            		break;	// First
+            	}
+            }
+		}
+		
+		return file;
     }
     
 	
