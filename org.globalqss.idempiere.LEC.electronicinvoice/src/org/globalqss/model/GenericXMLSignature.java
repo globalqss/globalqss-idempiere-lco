@@ -181,6 +181,16 @@ public abstract class GenericXMLSignature {
 			String urlWSAutorizacionComprobantes) {
 		this.urlWSAutorizacionComprobantes = urlWSAutorizacionComprobantes;
 	}
+	
+	public int SriWSTimeout = 0;
+
+	public int getSriWSTimeout() {
+		return SriWSTimeout;
+	}
+
+	public void setSriWSTimeout(int sriWSTimeout) {
+		SriWSTimeout = sriWSTimeout;
+	}
 
 	/** Dir				*/
 	public String folderRaiz = "";
@@ -193,13 +203,13 @@ public abstract class GenericXMLSignature {
 		this.folderRaiz = folderRaiz;
 	}
 
-	public static String XmlEncoding = "UTF-8";
+	public String XmlEncoding = "UTF-8";
 	
-	public static String getXmlEncoding() {
+	public String getXmlEncoding() {
 		return XmlEncoding;
 	}
 
-	public static void setXmlEncoding(String xmlEncoding) {
+	public void setXmlEncoding(String xmlEncoding) {
 		XmlEncoding = xmlEncoding;
 	}
 

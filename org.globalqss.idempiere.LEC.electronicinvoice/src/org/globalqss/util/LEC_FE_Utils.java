@@ -304,6 +304,18 @@ public class LEC_FE_Utils
 	}
 	
 	/**
+	 * 	String getInvoiceDocSustento
+	 * 	@return int
+	 */
+	public static int getAuthorisedInvoice(int sri_authosisation_id) {
+	
+		int c_invoice_authorised_id = DB.getSQLValue(null, "SELECT COALESCE(MAX(i.C_Invoice_ID), -1) FROM C_Invoice i WHERE i.SRI_Authorisation_ID = ? ", sri_authosisation_id);
+		
+		return c_invoice_authorised_id;
+
+	}
+	
+	/**
 	 * 	String getInvAllDocSustento
 	 * 	@return int
 	 */
@@ -491,7 +503,7 @@ public class LEC_FE_Utils
 	{
 		int ad_user_id = Env.getAD_User_ID(Env.getCtx());
 		
-		// if (ad_user_id != 100) return false;
+		if (ad_user_id != 100) return false;
 		
 		if (!ADialog.ask(0, null, msg)) {
 			return true;
