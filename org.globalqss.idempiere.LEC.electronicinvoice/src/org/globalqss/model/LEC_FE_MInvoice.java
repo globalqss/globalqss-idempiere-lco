@@ -566,7 +566,7 @@ public class LEC_FE_MInvoice extends MInvoice
 	        
 	        // Procesar Recepcion SRI
 	        log.warning("@Sending Xml@ -> " + file_name);
-	        msg = LEC_FE_UtilsXml.respuestaRecepcionComprobante(signature, file_name);
+	        msg = signature.respuestaRecepcionComprobante(signature, file_name);
         
 	        if (msg != null)
 		    	throw new AdempiereException(msg);
@@ -574,7 +574,7 @@ public class LEC_FE_MInvoice extends MInvoice
 	        // Procesar Autorizacion SRI
 	        log.warning("@Authorizing Xml@ -> " + file_name);
 	        try {
-	        	msg = LEC_FE_UtilsXml.respuestaAutorizacionComprobante(signature, ac, a, m_accesscode);
+	        	msg = signature.respuestaAutorizacionComprobante(signature, ac, a, m_accesscode);
 	        	
 	        	if (msg != null)
 	        		throw new AdempiereException(msg);

@@ -88,7 +88,7 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
     		
     	//log.warning("@Verificando Conexion servicio recepcion SRI@" + (signature.isOnTesting ? "PRUEBAS " : "PRODUCCION"));
     	System.out.println("@Verificando Conexion servicio recepcion SRI@" + (signature.isOnTesting ? "PRUEBAS " : "PRODUCCION"));
-    	if (! signature.existeConexion(LEC_FE_UtilsXml.recepcionComprobantesService)) {
+    	if (! signature.existeConexion(signature.recepcionComprobantesService)) {
         	msg = "Error no hay conexion al servicio recepcion SRI: " + (signature.isOnTesting ? "PRUEBAS " : "PRODUCCION");
         	return msg;	// throw new AdempiereException(msg);
 		}
@@ -96,7 +96,6 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
         //log.warning("@Sending Xml@ -> " + file_name);
         System.out.println("@Sending Xml@ -> " + file_name);
         // Enviar a Recepcion Comprobante SRI
-        // TODO 43 Clave acceso registrada
         byte[] bytes = signature.getBytesFromFile(file_name);
         ///*
         RespuestaSolicitud respuestasolicitud = signature.validarComprobante(bytes);
@@ -143,7 +142,7 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
     		
     	//log.warning("@Verificando Conexion servicio autorizacion SRI@" + (signature.isOnTesting ? "PRUEBAS " : "PRODUCCION"));
         System.out.println("@Verificando Conexion servicio autorizacion SRI@" + (signature.isOnTesting ? "PRUEBAS " : "PRODUCCION"));
-        if (! signature.existeConexion(LEC_FE_UtilsXml.autorizacionComprobantesService)) {
+        if (! signature.existeConexion(signature.autorizacionComprobantesService)) {
         	msg = "Error no hay conexion al servicio autorizacion SRI: " + (signature.isOnTesting ? "PRUEBAS " : "PRODUCCION");
 			return msg;	// throw new AdempiereException(msg);
 		}
