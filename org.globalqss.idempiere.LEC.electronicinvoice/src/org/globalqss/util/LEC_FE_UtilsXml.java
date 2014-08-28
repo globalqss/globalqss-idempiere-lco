@@ -336,6 +336,8 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
 		if (attach != null) {
     		for (MAttachmentEntry entry : attach.getEntries()) {
             	if (entry.getName().endsWith("xml")) {
+            		setResource_To_Sign(entry.getName());
+            		xmlFilePath = getOutput_Directory() + File.separator + folderComprobantesFirmados + File.separator + getSignatureFileName().substring(getSignatureFileName().lastIndexOf(File.separator) + 1);
             		inputStream = new FileInputStream(entry.getFile());
             		outputStream = new FileOutputStream(xmlFilePath);
             		
