@@ -239,8 +239,7 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
 	    			// Completar en estos casos, luego usar Boton Reprocesar
 	    			// 43 Clave acceso registrada
 		        	// 70-Clave de acceso en procesamiento
-	    			&& (a.getSRI_ErrorCode().getValue().equals("43")
-	    			|| a.getSRI_ErrorCode().getValue().equals("70")) ) {
+	    			&& (a.getSRI_ErrorCode().getValue().equals("43") || a.getSRI_ErrorCode().getValue().equals("70")) ) {
 	    	    		isAutorizacion = true;
 	    	    		file_name = getFilename(this, folderComprobantesAutorizados);
 	    			}
@@ -260,11 +259,12 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
     	}
     	catch (Exception e)
 		{
-			return e.getMessage();
+			msg = msg + e.getMessage();
+    		return msg;
 		}
 		
     	if (! isAutorizacion)
-    		msg = "@Autorizacion Xml@ -> No hay Respuesta Autorizacion SRI";
+    		msg = "@Autorizacion Xml@ -> No hay Respuesta Autorizacion SRI o Comprobante No Autorizado";
     	 
     	return msg;
 	}

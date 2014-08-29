@@ -545,14 +545,16 @@ public class LEC_FE_MInvoice extends MInvoice
 	        	msg = signature.respuestaAutorizacionComprobante(signature, ac, a, m_accesscode);
 	        	
 	        	if (msg != null)
-		        	// 43 Clave acceso registrada
-		        	// 70-Clave de acceso en procesamiento
-		        	if (! (a.getSRI_ErrorCode().getValue().equals("43")	|| a.getSRI_ErrorCode().getValue().equals("70")))
-		        		throw new AdempiereException(msg);
+	        		throw new AdempiereException(msg);
 	        	
 	        } catch (Exception ex) {
-	        	// ignore exceptions
-	        	log.warning(msg + ex.getMessage());
+	        	// 43 Clave acceso registrada
+	        	// 70-Clave de acceso en procesamiento
+	        	if (a.getSRI_ErrorCode().getValue().equals("43") || a.getSRI_ErrorCode().getValue().equals("70"))
+		        	// ignore exceptions
+		        	log.warning(msg + ex.getMessage());
+	        	else
+	        		return msg;
 	        }
 		    
 		    file_name = signature.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesAutorizados);
