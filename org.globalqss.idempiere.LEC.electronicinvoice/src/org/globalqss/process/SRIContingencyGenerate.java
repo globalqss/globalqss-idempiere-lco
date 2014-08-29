@@ -26,30 +26,21 @@
 package org.globalqss.process;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.logging.Level;
 
 import org.adempiere.exceptions.AdempiereException;
-import org.compiere.model.MAttachment;
-import org.compiere.model.MAttachmentEntry;
 import org.compiere.model.MBPartner;
 import org.compiere.model.MInOut;
 import org.compiere.model.MInvoice;
 import org.compiere.model.MMailText;
 import org.compiere.model.MOrgInfo;
 import org.compiere.model.MSysConfig;
-import org.compiere.model.MTable;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.compiere.util.AdempiereUserError;
 import org.compiere.util.DB;
-import org.compiere.util.Env;
 
 import org.globalqss.model.X_LEC_SRI_Format;
 import org.globalqss.model.X_SRI_AccessCode;
@@ -157,26 +148,6 @@ public class SRIContingencyGenerate extends SvrProcess
 		try
 		{
 			
-			LEC_FE_UtilsXml signature = new LEC_FE_UtilsXml();
-			
-			signature.setOnTesting(MSysConfig.getBooleanValue("QSSLEC_FE_EnPruebas", false, getAD_Client_ID()));
-			
-			if (! signature.isOnTesting()) {
-				signature.setUrlWSRecepcionComprobantes(MSysConfig.getValue("QSSLEC_FE_SRIURLWSProdRecepcionComprobante", null, getAD_Client_ID()));
-				signature.setUrlWSAutorizacionComprobantes(MSysConfig.getValue("QSSLEC_FE_SRIURLWSProdAutorizacionComprobante", null, getAD_Client_ID()));
-			} else {
-				signature.setUrlWSRecepcionComprobantes(MSysConfig.getValue("QSSLEC_FE_SRIURLWSCertRecepcionComprobante", null, getAD_Client_ID()));
-				signature.setUrlWSAutorizacionComprobantes(MSysConfig.getValue("QSSLEC_FE_SRIURLWSCertAutorizacionComprobante", null, getAD_Client_ID()));
-			}
-			
-			signature.setFolderRaiz(MSysConfig.getValue("QSSLEC_FE_RutaGeneracionXml", null, getAD_Client_ID()));	// Segun SysConfig + Formato
-			
-			if (signature.getFolderRaiz() == null)
-				throw new AdempiereUserError("No existe parametro para Ruta Generacion Xml");
-			
-			(new File(signature.getFolderRaiz() + File.separator + LEC_FE_UtilsXml.folderComprobantesFirmados + File.separator)).mkdirs();
-			(new File(signature.getFolderRaiz() + File.separator + LEC_FE_UtilsXml.folderComprobantesAutorizados + File.separator)).mkdirs();
-
 			ResultSet rs = pstmt.executeQuery ();
 			while (rs.next ())
 			{
@@ -184,20 +155,19 @@ public class SRIContingencyGenerate extends SvrProcess
 				String msg = null;
 				
 				X_SRI_Authorisation authorisation = new X_SRI_Authorisation (getCtx(), rs, get_TrxName());
-				//X_SRI_AccessCode accesscode = new X_SRI_AccessCode (getCtx(), authorisation.getSRI_AccessCode_ID(), get_TrxName());
 				
 				// isSOTrx()
 				if (authorisation.getSRI_ShortDocType().equals("01"))	// FACTURA
-					msg = lecfeinvoice_SriExportInvoiceXML100(signature, authorisation);
+					msg = lecfeinvoice_SriExportInvoiceXML100(authorisation);
 				else if (authorisation.getSRI_ShortDocType().equals("04"))	// NOTA DE CRÉDITO
-					msg = lecfeinvoice_SriExportInvoiceXML100(signature, authorisation);
+					msg = lecfeinvoice_SriExportInvoiceXML100(authorisation);
 				else if (authorisation.getSRI_ShortDocType().equals("05"))	// NOTA DE DÉBITO
-					msg = lecfeinvoice_SriExportInvoiceXML100(signature, authorisation);
+					msg = lecfeinvoice_SriExportInvoiceXML100(authorisation);
 				else if (authorisation.getSRI_ShortDocType().equals("06"))	// GUÍA DE REMISIÓN 
-					msg = lecfeinout_SriExportInOutXML100(signature, authorisation);
+					msg = lecfeinout_SriExportInOutXML100(authorisation);
 				// !isSOTrx()
 				else if (authorisation.getSRI_ShortDocType().equals("07"))	// COMPROBANTE DE RETENCIÓN
-					msg = lecfeinvoice_SriExportInvoiceXML100(signature, authorisation);
+					msg = lecfeinvoice_SriExportInvoiceXML100(authorisation);
 				else
 					log.warning("Formato no habilitado SRI: " + authorisation.getSRI_ShortDocType());
 				
@@ -227,20 +197,22 @@ public class SRIContingencyGenerate extends SvrProcess
 	}	//	generate
 
 	
-	public String lecfeinvoice_SriExportInvoiceXML100 (LEC_FE_UtilsXml signature, X_SRI_Authorisation authorisation)
+	public String lecfeinvoice_SriExportInvoiceXML100 (X_SRI_Authorisation authorisation)
 	{
-		String msg;
+		
+		String msg = null;
+		
+		LEC_FE_UtilsXml signature = new LEC_FE_UtilsXml();
 		
 		try {
-			msg = null;
-			
-			X_SRI_AccessCode accesscode = new X_SRI_AccessCode (getCtx(), authorisation.getSRI_AccessCode_ID(), get_TrxName());
 			
 			int c_invoice_id = 0;
 			
+			X_SRI_AccessCode accesscode = new X_SRI_AccessCode (getCtx(), authorisation.getSRI_AccessCode_ID(), get_TrxName());
+			
 			File file = signature.getFileFromStream(file_name, authorisation.getSRI_Authorisation_ID());
 			
-			file_name = LEC_FE_Utils.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesFirmados);
+			file_name = signature.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesFirmados);
 			
 			if (file.exists() || file.isFile() || file.canRead()) {
 			 
@@ -260,7 +232,7 @@ public class SRIContingencyGenerate extends SvrProcess
 			    if (msg != null)
 			    	throw new AdempiereException(msg);
 			    
-			    file_name = LEC_FE_Utils.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesAutorizados);
+			    file_name = signature.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesAutorizados);
 			
 			 }
 			
@@ -322,18 +294,20 @@ public class SRIContingencyGenerate extends SvrProcess
 		
 	} // lecfeinvoice_SriExportInvoiceXML100
 	
-	public String lecfeinout_SriExportInOutXML100 (LEC_FE_UtilsXml signature, X_SRI_Authorisation authorisation)
+	public String lecfeinout_SriExportInOutXML100 (X_SRI_Authorisation authorisation)
 	{
-		String msg;
+		
+		String msg = null;
+		
+		LEC_FE_UtilsXml signature = new LEC_FE_UtilsXml();
 		
 		try {
-			msg = null;
-			
-			X_SRI_AccessCode accesscode = new X_SRI_AccessCode (getCtx(), authorisation.getSRI_AccessCode_ID(), get_TrxName());
 			
 			int m_inout_id = 0;
 			
-			file_name = LEC_FE_Utils.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesFirmados);
+			X_SRI_AccessCode accesscode = new X_SRI_AccessCode (getCtx(), authorisation.getSRI_AccessCode_ID(), get_TrxName());
+			
+			file_name = signature.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesFirmados);
 			
 			File file = signature.getFileFromStream(file_name, authorisation.getSRI_Authorisation_ID());
 			
@@ -355,7 +329,7 @@ public class SRIContingencyGenerate extends SvrProcess
 			    if (msg != null)
 			    	throw new AdempiereException(msg);
 			    
-			    file_name = LEC_FE_Utils.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesAutorizados);
+			    file_name = signature.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesAutorizados);
 			
 			 }
 			
@@ -416,7 +390,6 @@ public class SRIContingencyGenerate extends SvrProcess
 		return msg;
 		
 	} // lecfeinout_SriExportInOutXML100
-
 
 	
 }	//	SRIContingencyGenerate

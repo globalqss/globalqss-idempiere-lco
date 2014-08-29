@@ -328,6 +328,18 @@ public class LEC_FE_Utils
 	}
 	
 	/**
+	 * 	String getErrorCode
+	 * 	@return int
+	 */
+	public static int getErrorCode(String value) {
+	
+		int sri_errorcode_id = DB.getSQLValue(null, "SELECT SRI_ErrorCode_ID FROM SRI_ErrorCode WHERE AD_Client_ID = ? AND Value = ? ", Env.getAD_Client_ID(Env.getCtx()), value);
+		
+		return sri_errorcode_id;
+
+	}
+	
+	/**
 	 * 	String getInOutDocSustento
 	 * 	@return int
 	 */
@@ -488,15 +500,6 @@ public class LEC_FE_Utils
 		}
 
 		return countMail;
-	}
-	
-	public static String getFilename(LEC_FE_UtilsXml signature, String folderComprobantesDestino)	// Trace temporal
-	{
-		
-		String file_name = signature.getFolderRaiz() + File.separator + folderComprobantesDestino + File.separator
-        		+ signature.getSignatureFileName().substring(signature.getSignatureFileName().lastIndexOf(File.separator) + 1);
-	
-		return file_name;
 	}
 	
 	public static boolean breakDialog(String msg)	// Trace temporal

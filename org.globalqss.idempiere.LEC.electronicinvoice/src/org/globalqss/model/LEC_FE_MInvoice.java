@@ -79,33 +79,10 @@ public class LEC_FE_MInvoice extends MInvoice
 		
 		try
 		{
+		
+		signature.setAD_Org_ID(getAD_Org_ID());	// TODO Reviewme
 			
-		signature.setAD_OrgDoc_ID(getAD_Org_ID());
-			
-		signature.setOnTesting(MSysConfig.getBooleanValue("QSSLEC_FE_EnPruebas", false, getAD_Client_ID()));
-		
-		signature.setEnvType(LEC_FE_UtilsXml.ambienteProduccion);
-		if (signature.isOnTesting())
-			signature.setEnvType(LEC_FE_UtilsXml.ambienteCertificacion);
-		
-		signature.setDeliveredType(LEC_FE_UtilsXml.emisionNormal);
-		signature.setCodeAccessType(LEC_FE_UtilsXml.claveAccesoAutomatica);
-		if ( (Boolean) get_Value("SRI_IsUseContingency")) {
-			signature.setDeliveredType(LEC_FE_UtilsXml.emisionContingencia);
-			signature.setCodeAccessType(LEC_FE_UtilsXml.claveAccesoContingencia);
-		}
-		
-		if (! signature.isOnTesting()) {
-			signature.setUrlWSRecepcionComprobantes(MSysConfig.getValue("QSSLEC_FE_SRIURLWSProdRecepcionComprobante", null, getAD_Client_ID()));
-			signature.setUrlWSAutorizacionComprobantes(MSysConfig.getValue("QSSLEC_FE_SRIURLWSProdAutorizacionComprobante", null, getAD_Client_ID()));
-		} else {
-			signature.setUrlWSRecepcionComprobantes(MSysConfig.getValue("QSSLEC_FE_SRIURLWSCertRecepcionComprobante", null, getAD_Client_ID()));
-			signature.setUrlWSAutorizacionComprobantes(MSysConfig.getValue("QSSLEC_FE_SRIURLWSCertAutorizacionComprobante", null, getAD_Client_ID()));
-		}
-		
-		signature.setSriWSTimeout(MSysConfig.getIntValue("QSSLEC_FE_SRIWebServiceTimeout", 0, getAD_Client_ID()));
-		
-		signature.setAttachXml(MSysConfig.getBooleanValue("QSSLEC_FE_DebugEnvioRecepcion", false, getAD_Client_ID()));
+		signature.setIsUseContingency((Boolean) get_Value("SRI_IsUseContingency"));
 		
 		m_identificacionconsumidor=MSysConfig.getValue("QSSLEC_FE_IdentificacionConsumidorFinal", null, getAD_Client_ID());
 		
@@ -113,8 +90,6 @@ public class LEC_FE_MInvoice extends MInvoice
 		
 		signature.setPKCS12_Resource(MSysConfig.getValue("QSSLEC_FE_RutaCertificadoDigital", null, getAD_Client_ID(), getAD_Org_ID()));
 		signature.setPKCS12_Password(MSysConfig.getValue("QSSLEC_FE_ClaveCertificadoDigital", null, getAD_Client_ID(), getAD_Org_ID()));
-		
-		signature.setFolderRaiz(MSysConfig.getValue("QSSLEC_FE_RutaGeneracionXml", null, getAD_Client_ID()));	// Segun SysConfig + Formato
 		
 		if (signature.getFolderRaiz() == null)
 			throw new AdempiereUserError("No existe parametro para Ruta Generacion Xml");
@@ -180,9 +155,9 @@ public class LEC_FE_MInvoice extends MInvoice
 		
 		m_totaldescuento = Env.ZERO; // DB.getSQLValueBD(get_TrxName(), "SELECT COALESCE(SUM(ilt.discount), 0) FROM c_invoice_linetax_vt ilt WHERE ilt.C_Invoice_ID = ? ", getC_Invoice_ID());
 
-		// IsUseContingency
+		//
 		int sri_accesscode_id = 0;
-		if (signature.getCodeAccessType().equals(LEC_FE_UtilsXml.claveAccesoContingencia)) {
+		if (signature.IsUseContingency) {
 			sri_accesscode_id = LEC_FE_Utils.getNextAccessCode(getAD_Client_ID(), signature.getEnvType(), oi.getTaxID(), get_TrxName());
 			if ( sri_accesscode_id < 1)
 				throw new AdempiereUserError("No hay clave de contingencia para el comprobante");
@@ -223,19 +198,12 @@ public class LEC_FE_MInvoice extends MInvoice
 		}
 		
 		set_Value("SRI_Authorisation_ID", a.get_ID());
-		this.saveEx();	// TODO Revieme
+		this.saveEx();
 					
 		OutputStream  mmDocStream = null;
 		
 		String xmlFileName = "SRI_" + m_coddoc + "-" + LEC_FE_Utils.getDate(getDateInvoiced(),9) + "-" + m_accesscode + ".xml";
 	
-		//crea los directorios para los archivos xml
-		(new File(signature.getFolderRaiz() + File.separator + LEC_FE_UtilsXml.folderComprobantesGenerados + File.separator)).mkdirs();
-		(new File(signature.getFolderRaiz() + File.separator + LEC_FE_UtilsXml.folderComprobantesFirmados + File.separator)).mkdirs();
-		(new File(signature.getFolderRaiz() + File.separator + LEC_FE_UtilsXml.folderComprobantesTransmitidos + File.separator)).mkdirs();
-		(new File(signature.getFolderRaiz() + File.separator + LEC_FE_UtilsXml.folderComprobantesRechazados + File.separator)).mkdirs();
-		(new File(signature.getFolderRaiz() + File.separator + LEC_FE_UtilsXml.folderComprobantesAutorizados + File.separator)).mkdirs();
-		(new File(signature.getFolderRaiz() + File.separator + LEC_FE_UtilsXml.folderComprobantesNoAutorizados + File.separator)).mkdirs();
 		//ruta completa del archivo xml
 		file_name = signature.getFolderRaiz() + File.separator + LEC_FE_UtilsXml.folderComprobantesGenerados + File.separator + xmlFileName;	
 		//Stream para el documento xml
@@ -558,9 +526,9 @@ public class LEC_FE_MInvoice extends MInvoice
 		signature.setOutput_Directory(signature.getFolderRaiz() + File.separator + LEC_FE_UtilsXml.folderComprobantesFirmados);
         signature.execute();
         
-        file_name = LEC_FE_Utils.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesFirmados);
+        file_name = signature.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesFirmados);
         
-        if (signature.getDeliveredType().equals(LEC_FE_UtilsXml.emisionNormal)) {
+        if (! signature.IsUseContingency) {
         
 	        if (LEC_FE_Utils.breakDialog("Enviando Comprobante al SRI")) return "Cancelado...";	// Temp
 	        
@@ -569,7 +537,7 @@ public class LEC_FE_MInvoice extends MInvoice
 	        msg = signature.respuestaRecepcionComprobante(signature, file_name);
         
 	        if (msg != null)
-		    	throw new AdempiereException(msg);
+	        	throw new AdempiereException(msg);
 
 	        // Procesar Autorizacion SRI
 	        log.warning("@Authorizing Xml@ -> " + file_name);
@@ -577,16 +545,21 @@ public class LEC_FE_MInvoice extends MInvoice
 	        	msg = signature.respuestaAutorizacionComprobante(signature, ac, a, m_accesscode);
 	        	
 	        	if (msg != null)
-	        		throw new AdempiereException(msg);
+		        	// 43 Clave acceso registrada
+		        	// 70-Clave de acceso en procesamiento
+		        	if (! (a.getSRI_ErrorCode().getValue().equals("43")	|| a.getSRI_ErrorCode().getValue().equals("70")))
+		        		throw new AdempiereException(msg);
 	        	
 	        } catch (Exception ex) {
 	        	// ignore exceptions
 	        	log.warning(msg + ex.getMessage());
 	        }
 		    
-		    file_name = LEC_FE_Utils.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesAutorizados);
+		    file_name = signature.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesAutorizados);
 		} else {	// emisionContingencia
-			a.setSRI_ErrorCode_ID(1000000);	// TODO Hardcoded 70-Clave de acceso en procesamiento
+			// Completar en estos casos, luego usar Boton Procesar Contingencia
+			// 70-Clave de acceso en procesamiento
+			a.setSRI_ErrorCode_ID(LEC_FE_Utils.getErrorCode("70"));
     		a.saveEx();
 			
     		if (signature.isAttachXml())
