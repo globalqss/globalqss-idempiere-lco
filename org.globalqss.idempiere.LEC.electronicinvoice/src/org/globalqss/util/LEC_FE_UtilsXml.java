@@ -71,10 +71,10 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
 		setDeliveredType(LEC_FE_UtilsXml.emisionNormal);
 		setCodeAccessType(LEC_FE_UtilsXml.claveAccesoAutomatica);
 		
-		if (IsUseContingency) {
-			setDeliveredType(LEC_FE_UtilsXml.emisionContingencia);
-			setCodeAccessType(LEC_FE_UtilsXml.claveAccesoContingencia);
-		}
+		// if (IsUseContingency) {
+		// 	setDeliveredType(LEC_FE_UtilsXml.emisionContingencia);
+		// 	setCodeAccessType(LEC_FE_UtilsXml.claveAccesoContingencia);
+		// }
 		
 		if (! isOnTesting()) {
 			setUrlWSRecepcionComprobantes(MSysConfig.getValue("QSSLEC_FE_SRIURLWSProdRecepcionComprobante", null, Env.getAD_Client_ID(Env.getCtx())));
@@ -88,8 +88,8 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
 		
 		setAttachXml(MSysConfig.getBooleanValue("QSSLEC_FE_DebugEnvioRecepcion", false, Env.getAD_Client_ID(Env.getCtx())));
 
-		setPKCS12_Resource(MSysConfig.getValue("QSSLEC_FE_RutaCertificadoDigital", null, Env.getAD_Client_ID(Env.getCtx()), getAD_Org_ID()));
-		setPKCS12_Password(MSysConfig.getValue("QSSLEC_FE_ClaveCertificadoDigital", null, Env.getAD_Client_ID(Env.getCtx()), getAD_Org_ID()));
+		// setPKCS12_Resource(MSysConfig.getValue("QSSLEC_FE_RutaCertificadoDigital", null, Env.getAD_Client_ID(Env.getCtx()), getAD_Org_ID()));
+		// setPKCS12_Password(MSysConfig.getValue("QSSLEC_FE_ClaveCertificadoDigital", null, Env.getAD_Client_ID(Env.getCtx()), getAD_Org_ID()));
 
 		setFolderRaiz(MSysConfig.getValue("QSSLEC_FE_RutaGeneracionXml", null, Env.getAD_Client_ID(Env.getCtx())));	// Segun SysConfig + Formato
 		
@@ -236,13 +236,13 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
 	    		file_name = getFilename(this, folderComprobantesRechazados);
 	    	
 	    	if (autorizacion.getEstado().equals(LEC_FE_UtilsXml.comprobanteNoAutorizado)
-	    			// Completar en estos casos, luego usar Boton Reprocesar
-	    			// 43 Clave acceso registrada
-		        	// 70-Clave de acceso en procesamiento
-	    			&& (a.getSRI_ErrorCode().getValue().equals("43") || a.getSRI_ErrorCode().getValue().equals("70")) ) {
-	    	    		isAutorizacion = true;
-	    	    		file_name = getFilename(this, folderComprobantesAutorizados);
-	    			}
+    			// Completar en estos casos, luego usar Boton Reprocesar
+    			// 43 Clave acceso registrada
+	        	// 70-Clave de acceso en procesamiento
+    			&& (a.getSRI_ErrorCode().getValue().equals("43") || a.getSRI_ErrorCode().getValue().equals("70")) ) {
+    	    		isAutorizacion = true;
+    	    		file_name = getFilename(this, folderComprobantesAutorizados);
+    			}
 	    	
 	    	// TODO Extraer y guardar autorizacion xml signed and authorised en file_name
 	    	// FileUtils.writeStringToFile(new File(file_name), autorizacion.toString());
@@ -255,7 +255,7 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
 	    	break;	// Solo Respuesta autorizacion mas reciente segun accesscode
 	    	
 	    	}
-		
+	    
     	}
     	catch (Exception e)
 		{
@@ -263,10 +263,18 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
     		return msg;
 		}
 		
-    	if (! isAutorizacion)
-    		msg = "@Autorizacion Xml@ -> No hay Respuesta Autorizacion SRI o Comprobante No Autorizado";
-    	 
-    	return msg;
+    	if (msg == null)
+    		if (! isAutorizacion) {
+    			a.setSRI_ErrorCode_ID(LEC_FE_Utils.getErrorCode("70"));
+	    		a.saveEx();
+	    		file_name = getFilename(this, folderComprobantesAutorizados);
+		  		// Atach XML Autorizado
+	    		if (isAttachXml())
+	    			LEC_FE_Utils.attachXmlFile(a.getCtx(), a.get_TrxName(), a.getSRI_Authorisation_ID(), file_name);
+     			msg = "@Autorizacion Xml@ -> No hay Respuesta Autorizacion SRI";
+    		}
+    	
+     	return msg;
 	}
     
     public RespuestaSolicitud validarComprobante(byte[] xml) {
@@ -287,9 +295,9 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
         }
         
        	RecepcionComprobantes port = service.getRecepcionComprobantesPort();
-       	// Controlar el tiempo de espera al consumir un webservice
-    	// ((BindingProvider) port).getRequestContext().put("com.sun.xml.internal.ws.connect.timeout", 5000);
-    	// ((BindingProvider) port).getRequestContext().put("com.sun.xml.internal.ws.request.timeout", 5000);
+    	// Controlar el tiempo de espera al consumir un webservice
+    	((BindingProvider) port).getRequestContext().put("com.sun.xml.internal.ws.connect.timeout", getSriWSTimeout());
+    	((BindingProvider) port).getRequestContext().put("com.sun.xml.internal.ws.request.timeout", getSriWSTimeout());
         return port.validarComprobante(xml);
     
     }
