@@ -99,14 +99,14 @@ public abstract class GenericXMLSignature {
 	/**	Big Decimal 0.5	 */
 	static final public BigDecimal HALF = new BigDecimal(0.5);
 	
-	public int AD_OrgDoc_ID;
+	public int AD_Org_ID;
 	
-	public int getAD_OrgDoc_ID() {
-		return AD_OrgDoc_ID;
+	public int getAD_Org_ID() {
+		return AD_Org_ID;
 	}
 
-	public void setAD_OrgDoc_ID(int aD_OrgDoc_ID) {
-		AD_OrgDoc_ID = aD_OrgDoc_ID;
+	public void setAD_Org_ID(int aD_Org_ID) {
+		AD_Org_ID = aD_Org_ID;
 	}
 
 	public boolean isOnTesting;
@@ -127,6 +127,16 @@ public abstract class GenericXMLSignature {
 
 	public void setAttachXml(boolean isAttachXml) {
 		this.isAttachXml = isAttachXml;
+	}
+	
+	public boolean IsUseContingency;
+
+	public boolean isIsUseContingency() {
+		return IsUseContingency;
+	}
+
+	public void setIsUseContingency(boolean isUseContingency) {
+		IsUseContingency = isUseContingency;
 	}
 
 	public String EnvType = "";
@@ -493,7 +503,7 @@ public abstract class GenericXMLSignature {
         		inStream = new FileInputStream(PKCS12_Resource);
             // Obtencion del certificado para firmar. Utilizando un attachment - AD_Org
         	if (inStream == null) {
-        		MAttachment attach =  MAttachment.get(Env.getCtx(), MTable.getTable_ID("AD_Org"), getAD_OrgDoc_ID());
+        		MAttachment attach =  MAttachment.get(Env.getCtx(), MTable.getTable_ID("AD_Org"), getAD_Org_ID());
         		if (attach != null) {
 	        		for (MAttachmentEntry entry : attach.getEntries()) {
 		            	if (entry.getName().endsWith("p12") || entry.getName().endsWith("pfx"))

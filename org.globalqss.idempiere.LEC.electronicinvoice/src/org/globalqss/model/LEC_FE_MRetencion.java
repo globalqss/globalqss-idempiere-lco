@@ -78,7 +78,7 @@ public class LEC_FE_MRetencion extends MInvoice
 		try
 		{
 			
-		signature.setAD_OrgDoc_ID(getAD_Org_ID());
+		signature.setAD_Org_ID(getAD_Org_ID());
 			
 		signature.setOnTesting(MSysConfig.getBooleanValue("QSSLEC_FE_EnPruebas", false, getAD_Client_ID()));
 		
@@ -441,7 +441,7 @@ public class LEC_FE_MRetencion extends MInvoice
 		signature.setOutput_Directory(signature.getFolderRaiz() + File.separator + signature.folderComprobantesFirmados);
         signature.execute();
         
-        file_name = LEC_FE_Utils.getFilename(signature, signature.folderComprobantesFirmados);
+        file_name = signature.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesFirmados);
         
         if (signature.getDeliveredType().equals(signature.emisionNormal)) {
 	        
@@ -461,7 +461,7 @@ public class LEC_FE_MRetencion extends MInvoice
 		    if (msg != null)
 		    	throw new AdempiereException(msg);
 		    
-		    file_name = LEC_FE_Utils.getFilename(signature, signature.folderComprobantesAutorizados);
+		    file_name = signature.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesAutorizados);
         } else {	// emisionContingencia
         	if (signature.isAttachXml())
         		LEC_FE_Utils.attachXmlFile(a.getCtx(), a.get_TrxName(), a.getSRI_Authorisation_ID(), file_name);

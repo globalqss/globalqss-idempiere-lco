@@ -16,7 +16,9 @@ import javax.xml.ws.WebServiceException;
 import org.apache.commons.io.FileUtils;
 import org.compiere.model.MAttachment;
 import org.compiere.model.MAttachmentEntry;
+import org.compiere.model.MSysConfig;
 import org.compiere.model.MTable;
+import org.compiere.util.AdempiereUserError;
 import org.compiere.util.Env;
 import org.globalqss.model.GenericXMLSignature;
 import org.globalqss.model.X_SRI_AccessCode;
@@ -58,6 +60,49 @@ import es.mityc.javasign.xml.refs.ObjectToSign;
 public class LEC_FE_UtilsXml extends GenericXMLSignature
 {
 	
+	public LEC_FE_UtilsXml() {
+		
+		setOnTesting(MSysConfig.getBooleanValue("QSSLEC_FE_EnPruebas", false, Env.getAD_Client_ID(Env.getCtx())));
+		
+		setEnvType(ambienteProduccion);
+		if (isOnTesting())
+			setEnvType(ambienteCertificacion);
+		
+		setDeliveredType(LEC_FE_UtilsXml.emisionNormal);
+		setCodeAccessType(LEC_FE_UtilsXml.claveAccesoAutomatica);
+		
+		if (IsUseContingency) {
+			setDeliveredType(LEC_FE_UtilsXml.emisionContingencia);
+			setCodeAccessType(LEC_FE_UtilsXml.claveAccesoContingencia);
+		}
+		
+		if (! isOnTesting()) {
+			setUrlWSRecepcionComprobantes(MSysConfig.getValue("QSSLEC_FE_SRIURLWSProdRecepcionComprobante", null, Env.getAD_Client_ID(Env.getCtx())));
+			setUrlWSAutorizacionComprobantes(MSysConfig.getValue("QSSLEC_FE_SRIURLWSProdAutorizacionComprobante", null, Env.getAD_Client_ID(Env.getCtx())));
+		} else {
+			setUrlWSRecepcionComprobantes(MSysConfig.getValue("QSSLEC_FE_SRIURLWSCertRecepcionComprobante", null, Env.getAD_Client_ID(Env.getCtx())));
+			setUrlWSAutorizacionComprobantes(MSysConfig.getValue("QSSLEC_FE_SRIURLWSCertAutorizacionComprobante", null, Env.getAD_Client_ID(Env.getCtx())));
+		}
+		
+		setSriWSTimeout(MSysConfig.getIntValue("QSSLEC_FE_SRIWebServiceTimeout", 0, Env.getAD_Client_ID(Env.getCtx())));
+		
+		setAttachXml(MSysConfig.getBooleanValue("QSSLEC_FE_DebugEnvioRecepcion", false, Env.getAD_Client_ID(Env.getCtx())));
+
+		setPKCS12_Resource(MSysConfig.getValue("QSSLEC_FE_RutaCertificadoDigital", null, Env.getAD_Client_ID(Env.getCtx()), getAD_Org_ID()));
+		setPKCS12_Password(MSysConfig.getValue("QSSLEC_FE_ClaveCertificadoDigital", null, Env.getAD_Client_ID(Env.getCtx()), getAD_Org_ID()));
+
+		setFolderRaiz(MSysConfig.getValue("QSSLEC_FE_RutaGeneracionXml", null, Env.getAD_Client_ID(Env.getCtx())));	// Segun SysConfig + Formato
+		
+		//crea los directorios para los archivos xml
+		(new File(getFolderRaiz() + File.separator + LEC_FE_UtilsXml.folderComprobantesGenerados + File.separator)).mkdirs();
+		(new File(getFolderRaiz() + File.separator + LEC_FE_UtilsXml.folderComprobantesFirmados + File.separator)).mkdirs();
+		(new File(getFolderRaiz() + File.separator + LEC_FE_UtilsXml.folderComprobantesTransmitidos + File.separator)).mkdirs();
+		(new File(getFolderRaiz() + File.separator + LEC_FE_UtilsXml.folderComprobantesRechazados + File.separator)).mkdirs();
+		(new File(getFolderRaiz() + File.separator + LEC_FE_UtilsXml.folderComprobantesAutorizados + File.separator)).mkdirs();
+		(new File(getFolderRaiz() + File.separator + LEC_FE_UtilsXml.folderComprobantesNoAutorizados + File.separator)).mkdirs();
+
+	}
+	
 	public void main(String[] args) {
     
 		LEC_FE_UtilsXml signature = new LEC_FE_UtilsXml();
@@ -80,25 +125,25 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
         return dataToSign;
     }
     
-    public static String respuestaRecepcionComprobante(LEC_FE_UtilsXml signature, String file_name) {
+    public  String respuestaRecepcionComprobante(LEC_FE_UtilsXml signaturedummy, String file_name) {
         
     	String msg = null;
     	
     	try	{
     		
-    	//log.warning("@Verificando Conexion servicio recepcion SRI@" + (signature.isOnTesting ? "PRUEBAS " : "PRODUCCION"));
-    	System.out.println("@Verificando Conexion servicio recepcion SRI@" + (signature.isOnTesting ? "PRUEBAS " : "PRODUCCION"));
-    	if (! signature.existeConexion(signature.recepcionComprobantesService)) {
-        	msg = "Error no hay conexion al servicio recepcion SRI: " + (signature.isOnTesting ? "PRUEBAS " : "PRODUCCION");
+    	//log.warning("@Verificando Conexion servicio recepcion SRI@" + (isOnTesting ? "PRUEBAS " : "PRODUCCION"));
+    	System.out.println("@Verificando Conexion servicio recepcion SRI@" + (isOnTesting ? "PRUEBAS " : "PRODUCCION"));
+    	if (! existeConexion(recepcionComprobantesService)) {
+        	msg = "Error no hay conexion al servicio recepcion SRI: " + (isOnTesting ? "PRUEBAS " : "PRODUCCION");
         	return msg;	// throw new AdempiereException(msg);
 		}
         	
         //log.warning("@Sending Xml@ -> " + file_name);
         System.out.println("@Sending Xml@ -> " + file_name);
         // Enviar a Recepcion Comprobante SRI
-        byte[] bytes = signature.getBytesFromFile(file_name);
+        byte[] bytes = getBytesFromFile(file_name);
         ///*
-        RespuestaSolicitud respuestasolicitud = signature.validarComprobante(bytes);
+        RespuestaSolicitud respuestasolicitud = validarComprobante(bytes);
         msg = respuestasolicitud.getEstado();
         //log.warning("@Recepcion SRI@ -> " + msg);
         System.out.println("@Recepcion SRI@ -> " + msg);
@@ -114,10 +159,10 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
 	    		System.out.println("@Mensaje Xml@ -> " + msg);
         	}
         	// TODO Extraer y guardar comprobante xml en file_name
-        	file_name = LEC_FE_Utils.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesTransmitidos);
+        	file_name = getFilename(this, folderComprobantesTransmitidos);
         	FileUtils.writeStringToFile(new File(file_name), comprobante.toString());
 	    }
-        if (! respuestasolicitud.getEstado().equals(LEC_FE_UtilsXml.recepcionRecibida)) {
+        if (! respuestasolicitud.getEstado().equals(recepcionRecibida)) {
         	msg = respuestasolicitud.getEstado() + ConstantesXADES.GUION + comprobantes.getComprobante().toString() + ConstantesXADES.GUION + msg;
         	return msg;	// throw new AdempiereException(msg);
 		}
@@ -132,7 +177,7 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
     	return null;
 	}
     
-    public static String respuestaAutorizacionComprobante(LEC_FE_UtilsXml signature, X_SRI_AccessCode ac, X_SRI_Authorisation a, String accesscode) {
+    public String respuestaAutorizacionComprobante(LEC_FE_UtilsXml signaturedummy, X_SRI_AccessCode ac, X_SRI_Authorisation a, String accesscode) {
     	
     	Boolean isAutorizacion = false;
     	String msg = null;
@@ -140,19 +185,18 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
     	
     	try	{
     		
-    	//log.warning("@Verificando Conexion servicio autorizacion SRI@" + (signature.isOnTesting ? "PRUEBAS " : "PRODUCCION"));
-        System.out.println("@Verificando Conexion servicio autorizacion SRI@" + (signature.isOnTesting ? "PRUEBAS " : "PRODUCCION"));
-        if (! signature.existeConexion(signature.autorizacionComprobantesService)) {
-        	msg = "Error no hay conexion al servicio autorizacion SRI: " + (signature.isOnTesting ? "PRUEBAS " : "PRODUCCION");
+    	//log.warning("@Verificando Conexion servicio autorizacion SRI@" + (isOnTesting ? "PRUEBAS " : "PRODUCCION"));
+        System.out.println("@Verificando Conexion servicio autorizacion SRI@" + (isOnTesting ? "PRUEBAS " : "PRODUCCION"));
+        if (! existeConexion(autorizacionComprobantesService)) {
+        	msg = "Error no hay conexion al servicio autorizacion SRI: " + (isOnTesting ? "PRUEBAS " : "PRODUCCION");
 			return msg;	// throw new AdempiereException(msg);
 		}
     	
-        RespuestaComprobante respuestacomprobante = signature.autorizacionComprobante(accesscode);
+        RespuestaComprobante respuestacomprobante = autorizacionComprobante(accesscode);
 	    Autorizaciones autorizaciones = respuestacomprobante.getAutorizaciones();
 	    // Procesar Respuesta Autorizacion SRI
 	    for (Autorizacion autorizacion : autorizaciones.getAutorizacion()) {
-	    	isAutorizacion = true;
-	        // msg = autorizaciones.getAutorizacion().get(0).getEstado();
+	    	// msg = autorizaciones.getAutorizacion().get(0).getEstado();
 	    	msg = autorizacion.getEstado() + ConstantesXADES.GUION + autorizacion.getNumeroAutorizacion() + ConstantesXADES.GUION + autorizacion.getFechaAutorizacion().toString();
 	    	// log.warning("@Autorizacion Xml@ -> " + msg);
 	    	System.out.println("@Autorizacion Xml@ -> " + msg);
@@ -165,12 +209,15 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
 	    		msg = autorizacion.getEstado() + ConstantesXADES.GUION + mensaje.getIdentificador() + ConstantesXADES.GUION + mensaje.getMensaje() + ConstantesXADES.GUION + mensaje.getInformacionAdicional();
 	    		// log.warning("@Mensaje Xml@ -> " + msg);
 	    		System.out.println("@Mensaje Xml@ -> " + msg);
-	    		a.setSRI_ErrorCode_ID(Integer.parseInt(mensaje.getIdentificador()));
+	    		a.setSRI_ErrorCode_ID(LEC_FE_Utils.getErrorCode(mensaje.getIdentificador()));
+	    		a.saveEx();
 	    	}
 	    	//
 	    	if (autorizacion.getEstado().equals(LEC_FE_UtilsXml.comprobanteAutorizado)) {
 	    		
 	    		msg = null;
+	    		isAutorizacion = true;
+
 	    		// Update AccessCode
 	    		if (ac.getCodeAccessType().equals(LEC_FE_UtilsXml.claveAccesoAutomatica)) {
 	    			ac.setValue(autorizacion.getNumeroAutorizacion());
@@ -182,18 +229,28 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
 	    		a.setProcessed(true);
 	    		a.saveEx();
 	    		
-	    		file_name = LEC_FE_Utils.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesAutorizados);
-	    	} else if (autorizacion.getEstado().equals(LEC_FE_UtilsXml.comprobanteNoAutorizado))
-	    		file_name = LEC_FE_Utils.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesNoAutorizados);
+	    		file_name = getFilename(this, folderComprobantesAutorizados);
+	    	} else if (autorizacion.getEstado().equals(comprobanteNoAutorizado))
+	    		file_name = getFilename(this, folderComprobantesNoAutorizados);
 	    	else
-	    		file_name = LEC_FE_Utils.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesRechazados);
+	    		file_name = getFilename(this, folderComprobantesRechazados);
+	    	
+	    	if (autorizacion.getEstado().equals(LEC_FE_UtilsXml.comprobanteNoAutorizado)
+	    			// Completar en estos casos, luego usar Boton Reprocesar
+	    			// 43 Clave acceso registrada
+		        	// 70-Clave de acceso en procesamiento
+	    			&& (a.getSRI_ErrorCode().getValue().equals("43")
+	    			|| a.getSRI_ErrorCode().getValue().equals("70")) ) {
+	    	    		isAutorizacion = true;
+	    	    		file_name = getFilename(this, folderComprobantesAutorizados);
+	    			}
 	    	
 	    	// TODO Extraer y guardar autorizacion xml signed and authorised en file_name
 	    	// FileUtils.writeStringToFile(new File(file_name), autorizacion.toString());
 	    	FileUtils.writeStringToFile(new File(file_name), autorizacion.getComprobante());
 	    	
 	  		// Atach XML Autorizado
-    		if (autorizacion.getEstado().equals(LEC_FE_UtilsXml.comprobanteAutorizado) && signature.isAttachXml())
+    		if (isAutorizacion && isAttachXml())
     			LEC_FE_Utils.attachXmlFile(a.getCtx(), a.get_TrxName(), a.getSRI_Authorisation_ID(), file_name);
   	    	
 	    	break;	// Solo Respuesta autorizacion mas reciente segun accesscode
@@ -292,7 +349,7 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
     	try {
             
             URL url = new URL(wsdlLocation);
-            if (accionComprobantesService.equals(this.recepcionComprobantesService)) {
+            if (accionComprobantesService.equals(recepcionComprobantesService)) {
             	QName qname = new QName(recepcionComprobantesQname, accionComprobantesService);
             	RecepcionComprobantesService service = new RecepcionComprobantesService(url, qname);
             } else {
@@ -358,6 +415,15 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
 		
 		return file;
     }
+    
+	public String getFilename(LEC_FE_UtilsXml signature, String folderComprobantesDestino)	// Trace temporal
+	{
+		
+		String file_name = signature.getFolderRaiz() + File.separator + folderComprobantesDestino + File.separator
+        		+ signature.getSignatureFileName().substring(signature.getSignatureFileName().lastIndexOf(File.separator) + 1);
+	
+		return file_name;
+	}
     
 	
 }	// LEC_FE_UtilsXml
