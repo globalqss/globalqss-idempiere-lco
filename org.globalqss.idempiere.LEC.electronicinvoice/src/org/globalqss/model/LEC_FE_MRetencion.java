@@ -80,6 +80,11 @@ public class LEC_FE_MRetencion extends MInvoice
 		signature.setAD_Org_ID(getAD_Org_ID());
 		
 		signature.setIsUseContingency((Boolean) get_Value("SRI_IsUseContingency"));
+		
+		if (signature.IsUseContingency) {
+			signature.setDeliveredType(LEC_FE_UtilsXml.emisionContingencia);
+			signature.setCodeAccessType(LEC_FE_UtilsXml.claveAccesoContingencia);
+		}
 			
 		m_identificacionconsumidor=MSysConfig.getValue("QSSLEC_FE_IdentificacionConsumidorFinal", null, getAD_Client_ID());
 		

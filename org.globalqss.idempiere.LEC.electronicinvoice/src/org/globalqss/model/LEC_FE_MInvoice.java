@@ -84,6 +84,11 @@ public class LEC_FE_MInvoice extends MInvoice
 			
 		signature.setIsUseContingency((Boolean) get_Value("SRI_IsUseContingency"));
 		
+		if (signature.IsUseContingency) {
+			signature.setDeliveredType(LEC_FE_UtilsXml.emisionContingencia);
+			signature.setCodeAccessType(LEC_FE_UtilsXml.claveAccesoContingencia);
+		}
+		
 		m_identificacionconsumidor=MSysConfig.getValue("QSSLEC_FE_IdentificacionConsumidorFinal", null, getAD_Client_ID());
 		
 		m_razonsocial=MSysConfig.getValue("QSSLEC_FE_RazonSocialPruebas", null, getAD_Client_ID());
