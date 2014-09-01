@@ -267,7 +267,7 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
     		if (! isAutorizacion) {
     			a.setSRI_ErrorCode_ID(LEC_FE_Utils.getErrorCode("70"));
 	    		a.saveEx();
-	    		file_name = getFilename(this, folderComprobantesAutorizados);
+	    		file_name = getFilename(this, folderComprobantesFirmados);
 		  		// Atach XML Autorizado
 	    		if (isAttachXml())
 	    			LEC_FE_Utils.attachXmlFile(a.getCtx(), a.get_TrxName(), a.getSRI_Authorisation_ID(), file_name);
