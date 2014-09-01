@@ -123,8 +123,8 @@ public class LEC_FE_Utils
 			dateFormat = new SimpleDateFormat("yyyyMMdd");
 		else if (format == 10)
 			dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-		else if (format == 19)
-			dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		else if (format == 15)
+			dateFormat = new SimpleDateFormat("yyyyMMdd_HHmmss");
 		
 		return dateFormat.format(docDate);
 	}
@@ -443,7 +443,7 @@ public class LEC_FE_Utils
 			//REVIEWME
 			int index = (attach.getEntryCount()-1);
 			MAttachmentEntry entry = attach.getEntry(index) ;
-			String renamed = signature.getFolderRaiz()+File.separator+entry.getName().substring(0,entry.getName().length()-4 )+"_old_"+ LEC_FE_Utils.getDate(null, 19) + ".xml";
+			String renamed = signature.getFolderRaiz()+File.separator+entry.getName().substring(0,entry.getName().length()-4 )+"_old_"+ LEC_FE_Utils.getDate(null, 15) + ".xml";
 			entry.setName(renamed);
 			attach.saveEx();
 			//agrega el nuevo archivo ya q el anterior ha sido renombrado
