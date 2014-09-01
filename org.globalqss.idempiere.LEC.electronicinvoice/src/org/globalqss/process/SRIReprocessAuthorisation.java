@@ -68,6 +68,7 @@ public class SRIReprocessAuthorisation extends SvrProcess
 	private int			m_lec_sri_format_id = 0;
 	
 	private String file_name = "";
+	private String m_retencionno = "";
 
 	
 	/**
@@ -108,8 +109,8 @@ public class SRIReprocessAuthorisation extends SvrProcess
 		sql = "SELECT * FROM SRI_Authorisation a "
 			+ " WHERE AD_Client_ID=?"
 			+ "  AND SRI_AuthorisationCode IS NULL"
-			+ "  AND IsActive = 'Y' AND Processed = 'N'"
-			+ "  AND SUBSTR(Value,48,1)=? ";
+			+ "  AND IsActive = 'Y' AND Processed = 'N'";
+		//	+ "  AND SUBSTR(Value,48,1)=? ";
 		if (p_SRI_Authorisation_ID != 0)
 			sql += " AND SRI_Authorisation_ID=?";
 
@@ -121,7 +122,7 @@ public class SRIReprocessAuthorisation extends SvrProcess
 			pstmt = DB.prepareStatement (sql, get_TrxName());
 			int index = 1;
 			pstmt.setInt(index++, m_AD_Client_ID);
-			pstmt.setString(index++, LEC_FE_UtilsXml.emisionNormal);
+			// pstmt.setString(index++, LEC_FE_UtilsXml.emisionNormal);
 			// pstmt.setString(index++, LEC_FE_UtilsXml.emisionContingencia);
 			if (p_SRI_Authorisation_ID != 0)
 				pstmt.setInt(index++, p_SRI_Authorisation_ID);
@@ -213,6 +214,7 @@ public class SRIReprocessAuthorisation extends SvrProcess
 			File file = signature.getFileFromStream(file_name, authorisation.getSRI_Authorisation_ID());
 			
 			file_name = signature.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesFirmados);
+			log.warning("@Signed Xml@ -> " + file_name);
 			
 			if (file.exists() || file.isFile() || file.canRead()) {
 			 
@@ -245,6 +247,10 @@ public class SRIReprocessAuthorisation extends SvrProcess
 			int c_bpartner_id = LEC_FE_Utils.getOrgBPartner(getAD_Client_ID(), oi.get_ValueAsString("TaxID"));
 			MBPartner bpe = new MBPartner(getCtx(), c_bpartner_id, get_TrxName());
 			
+			m_retencionno = invoice.getDocumentNo();
+			if (authorisation.getSRI_ShortDocType().equals("07"))	// COMPROBANTE DE RETENCIÓN
+				m_retencionno = DB.getSQLValueString(get_TrxName(), "SELECT DISTINCT(DocumentNo) FROM LCO_InvoiceWithholding WHERE C_Invoice_ID = ? ", invoice.getC_Invoice_ID());
+
 			//
 			if (MSysConfig.getBooleanValue("QSSLEC_FE_EnvioXmlAutorizadoBPEmail", false, getAD_Client_ID()))
 			{
@@ -257,13 +263,13 @@ public class SRIReprocessAuthorisation extends SvrProcess
 					// TODO Replicar en cada clase el definitivo
 					MMailText mText = new MMailText(getCtx(), 0, get_TrxName());	// Solo en memoria
 					mText.setPO(invoice);
-					String subject = "SRI " + (signature.isOnTesting ? LEC_FE_UtilsXml.nombreCertificacion : LEC_FE_UtilsXml.nombreProduccion) + " " + bpe.getValue() + " : " + f.get_ValueAsString("XmlPrintLabel") + " " + invoice.getDocumentNo();
+					String subject = "SRI " + (signature.isOnTesting ? LEC_FE_UtilsXml.nombreCertificacion : LEC_FE_UtilsXml.nombreProduccion) + " " + bpe.getValue() + " : " + f.get_ValueAsString("XmlPrintLabel") + " " + m_retencionno;
 					String text =
 							" Emisor               : " + bpe.getName() +
 							"\nFecha                : " + LEC_FE_Utils.getDate(invoice.getDateInvoiced(),10) +
 							"\nCliente              : " + invoice.getC_BPartner().getName() +
 							"\nComprobante          : " + f.get_ValueAsString("XmlPrintLabel") +
-							"\nNumero               : " + invoice.getDocumentNo() +
+							"\nNumero               : " + m_retencionno +
 							"\nAutorizacion No.     : " + authorisation.getSRI_AuthorisationCode() +
 							"\nFecha Autorizacion   : " + authorisation.getSRI_DateAuthorisation() +
 							"\nAdjunto              : " + file_name.substring(file_name.lastIndexOf(File.separator) + 1);
