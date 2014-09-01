@@ -226,6 +226,7 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
 	    		// Update Authorisation
 	    		a.setSRI_AuthorisationCode(autorizacion.getNumeroAutorizacion());
 	    		a.setSRI_DateAuthorisation(autorizacion.getFechaAutorizacion().toString());
+	    		a.setSRI_ErrorCode_ID(0);
 	    		a.setProcessed(true);
 	    		a.saveEx();
 	    		
@@ -400,7 +401,7 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
 		MAttachment attach =  MAttachment.get(Env.getCtx(), MTable.getTable_ID("SRI_Authorisation"), sri_authorisation_id);
 		if (attach != null) {
     		for (MAttachmentEntry entry : attach.getEntries()) {
-            	if (entry.getName().endsWith("xml")) {
+            	if (entry.getName().endsWith("xml") && !entry.getName().contains("old")) {
             		setResource_To_Sign(entry.getName());
             		xmlFilePath = getOutput_Directory() + File.separator + folderComprobantesFirmados + File.separator + getSignatureFileName().substring(getSignatureFileName().lastIndexOf(File.separator) + 1);
             		inputStream = new FileInputStream(entry.getFile());

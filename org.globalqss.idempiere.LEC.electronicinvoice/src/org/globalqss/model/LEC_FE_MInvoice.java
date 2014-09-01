@@ -553,6 +553,7 @@ public class LEC_FE_MInvoice extends MInvoice
 	        		throw new AdempiereException(msg);
 	        	
 	        } catch (Exception ex) {
+	        	// Completar en estos casos, luego usar Boton Reprocesar Autorizacion
 	        	// 43 Clave acceso registrada
 	        	// 70-Clave de acceso en procesamiento
 	        	if (a.getSRI_ErrorCode().getValue().equals("43") || a.getSRI_ErrorCode().getValue().equals("70"))

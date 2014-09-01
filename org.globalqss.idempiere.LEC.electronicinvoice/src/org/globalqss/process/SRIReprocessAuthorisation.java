@@ -172,8 +172,6 @@ public class SRIReprocessAuthorisation extends SvrProcess
 				else
 					log.warning("Formato no habilitado SRI: " + authorisation.getSRI_ShortDocType());
 				
-				m_created++;
-			
 			}	//	for all authorisations
 			rs.close ();
 			pstmt.close ();
@@ -226,6 +224,7 @@ public class SRIReprocessAuthorisation extends SvrProcess
 			    	throw new AdempiereException(msg);
 			    
 			    file_name = signature.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesAutorizados);
+				m_created++;
 			
 			 }
 			
