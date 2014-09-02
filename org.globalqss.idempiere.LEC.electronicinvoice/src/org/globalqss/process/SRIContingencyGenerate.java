@@ -335,6 +335,7 @@ public class SRIContingencyGenerate extends SvrProcess
 			    	throw new AdempiereException(msg);
 			    
 			    file_name = signature.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesAutorizados);
+			    m_created++;
 			
 			 }
 			

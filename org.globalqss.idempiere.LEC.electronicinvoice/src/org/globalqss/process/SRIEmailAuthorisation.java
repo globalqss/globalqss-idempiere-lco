@@ -49,7 +49,7 @@ import org.globalqss.util.LEC_FE_Utils;
 import org.globalqss.util.LEC_FE_UtilsXml;
 
 /**
- *	Generate Contingency Authorisations
+ *	Generate EMail Authorisations
  *	
  *  @author GlobalQSS/jjgq
  */
