@@ -302,10 +302,11 @@ public class SRIReprocessAuthorisation extends SvrProcess
 			int m_inout_id = 0;
 			
 			X_SRI_AccessCode accesscode = new X_SRI_AccessCode (getCtx(), authorisation.getSRI_AccessCode_ID(), get_TrxName());
+
+			File file = signature.getFileFromStream(file_name, authorisation.getSRI_Authorisation_ID());
 			
 			file_name = signature.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesFirmados);
-			
-			File file = signature.getFileFromStream(file_name, authorisation.getSRI_Authorisation_ID());
+			log.warning("@Signed Xml@ -> " + file_name);
 			
 			if (file.exists() || file.isFile() || file.canRead()) {
 			 
