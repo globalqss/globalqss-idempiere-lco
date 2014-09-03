@@ -307,7 +307,7 @@ public class SRIEmailAuthorisation extends SvrProcess
 			
 			}
 			
-			m_inout_id = LEC_FE_Utils.getAuthorisedInvoice(authorisation.getSRI_Authorisation_ID());
+			m_inout_id = LEC_FE_Utils.getAuthorisedInOut(authorisation.getSRI_Authorisation_ID());
 			
 			MInOut inout = new MInOut (getCtx(), m_inout_id, get_TrxName());
 			

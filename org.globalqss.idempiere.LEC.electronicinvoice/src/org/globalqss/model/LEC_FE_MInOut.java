@@ -472,7 +472,7 @@ public class LEC_FE_MInOut extends MInOut
 	        
 	        // Procesar Recepcion SRI
 	        log.warning("@Sending Xml@ -> " + file_name);
-	        msg = signature.respuestaRecepcionComprobante(signature, file_name);
+	        msg = signature.respuestaRecepcionComprobante(file_name);
 	        
 	        if (msg != null)
 		    	throw new AdempiereException(msg);
@@ -480,7 +480,7 @@ public class LEC_FE_MInOut extends MInOut
 	        // Procesar Autorizacion SRI
 	        log.warning("@Authorizing Xml@ -> " + file_name);
 	        try {
-	        	msg = signature.respuestaAutorizacionComprobante(signature, ac, a, m_accesscode);
+	        	msg = signature.respuestaAutorizacionComprobante(ac, a, m_accesscode);
 	        	
 	        	if (msg != null)
 	        		throw new AdempiereException(msg);

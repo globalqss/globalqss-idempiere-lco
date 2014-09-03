@@ -125,7 +125,7 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
         return dataToSign;
     }
     
-    public  String respuestaRecepcionComprobante(LEC_FE_UtilsXml signaturedummy, String file_name) {
+    public  String respuestaRecepcionComprobante(String file_name) {
         
     	String msg = null;
     	
@@ -177,7 +177,7 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
     	return null;
 	}
     
-    public String respuestaAutorizacionComprobante(LEC_FE_UtilsXml signaturedummy, X_SRI_AccessCode ac, X_SRI_Authorisation a, String accesscode) {
+    public String respuestaAutorizacionComprobante(X_SRI_AccessCode ac, X_SRI_Authorisation a, String accesscode) {
     	
     	Boolean isAutorizacion = false;
     	String msg = null;
