@@ -19,7 +19,6 @@ package org.globalqss.model;
 
 import java.io.File;
 
-import org.compiere.apps.ADialog;
 import org.compiere.model.MClient;
 import org.compiere.model.MInvoice;
 import org.globalqss.model.LEC_FE_MInvoice;
@@ -78,7 +77,8 @@ public class LEC_FE_Validator implements ModelValidator
 		}
 
 		//	Tables to be monitored
-		//engine.addModelChange(MInvoice.Table_Name, this);
+		engine.addModelChange(MInvoice.Table_Name, this);
+		engine.addModelChange(MInOut.Table_Name, this);
 
 		//	Documents to be monitored
 		engine.addDocValidate(MInvoice.Table_Name, this);
@@ -100,10 +100,24 @@ public class LEC_FE_Validator implements ModelValidator
 		log.info(po.get_TableName() + " Type: "+type);
 		String msg;
 
-		if (po.get_TableName().equals(MInvoice.Table_Name) && type == ModelValidator.TYPE_BEFORE_CHANGE) {
-			msg = dummy((MInvoice) po);
-			if (msg != null)
-				return msg;
+		if (po.get_TableName().equals(MInOut.Table_Name) && type == ModelValidator.TYPE_BEFORE_NEW) {
+			MInOut inout = ((MInOut) po);
+			MDocType dt = new MDocType(inout.getCtx(), inout.getC_DocType_ID(), inout.get_TrxName());
+			if ( MSysConfig.getBooleanValue("QSSLEC_FE_UseClaveContingenciaVentaMostradoryFolio", false, inout.getAD_Client_ID())
+				&& MDocType.DOCSUBTYPESO_OnCreditOrder.equals(inout.getC_Order().getC_DocType().getDocSubTypeSO())	// (W)illCall(I)nvoice
+				&& inout.isSOTrx() && dt.get_Value("SRI_ShortDocType") != null ) {
+					inout.set_ValueOfColumn("SRI_IsUseContingency", "Y");
+			}
+		}
+		
+		if (po.get_TableName().equals(MInvoice.Table_Name) && type == ModelValidator.TYPE_BEFORE_NEW) {
+			MInvoice invoice = ((MInvoice) po);
+			MDocType dt = new MDocType(invoice.getCtx(), invoice.getC_DocType_ID(), invoice.get_TrxName());
+			if ( MSysConfig.getBooleanValue("QSSLEC_FE_UseClaveContingenciaVentaMostradoryFolio", false, invoice.getAD_Client_ID())
+				&& MDocType.DOCSUBTYPESO_OnCreditOrder.equals(invoice.getC_Order().getC_DocType().getDocSubTypeSO())	// (W)illCall(I)nvoice
+				&& invoice.isSOTrx() && dt.get_Value("SRI_ShortDocType") != null ) {
+					invoice.set_ValueOfColumn("SRI_IsUseContingency", "Y");
+			}
 		}
 
 		return null;
@@ -193,11 +207,6 @@ public class LEC_FE_Validator implements ModelValidator
 	
 	
 
-	private String dummy (MInvoice inv) {
-		
-		return null;
-	}
-	
 	private String invoiceGenerateXml (MInvoice inv) {
 		
 		String msg = null;
