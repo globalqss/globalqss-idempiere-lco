@@ -304,7 +304,7 @@ public class LEC_FE_Utils
 	}
 	
 	/**
-	 * 	String getInvoiceDocSustento
+	 * 	String getAuthorisedInvoice
 	 * 	@return int
 	 */
 	public static int getAuthorisedInvoice(int sri_authosisation_id) {
@@ -312,6 +312,18 @@ public class LEC_FE_Utils
 		int c_invoice_authorised_id = DB.getSQLValue(null, "SELECT COALESCE(MAX(i.C_Invoice_ID), -1) FROM C_Invoice i WHERE i.SRI_Authorisation_ID = ? ", sri_authosisation_id);
 		
 		return c_invoice_authorised_id;
+
+	}
+	
+	/**
+	 * 	String getAuthorisedInOut
+	 * 	@return int
+	 */
+	public static int getAuthorisedInOut(int sri_authosisation_id) {
+	
+		int m_inout_authorised_id = DB.getSQLValue(null, "SELECT COALESCE(MAX(io.M_InOut_ID), -1) FROM M_InOut io WHERE io.SRI_Authorisation_ID = ? ", sri_authosisation_id);
+		
+		return m_inout_authorised_id;
 
 	}
 	
@@ -437,7 +449,7 @@ public class LEC_FE_Utils
 			attach.addEntry(new File (file_name));
 			attach.saveEx();
 
-		} else {
+		} /* else {
 			// se encontro un archivo adjunto previamente
 			//toma el index  del penultimo archivo y lo renombra
 			//REVIEWME
@@ -449,7 +461,7 @@ public class LEC_FE_Utils
 			//agrega el nuevo archivo ya q el anterior ha sido renombrado
 			attach.addEntry(new File (file_name));
 			attach.saveEx();
-		}
+		} */
 		//DB.getSQLValue(get_TrxName(),"SELECT AD_Attachment_ID FROM AD_Attachment WHERE AD_Table_ID=? AND Record_ID=?",AD_Table_ID)
 	
 		// MAttachment

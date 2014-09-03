@@ -218,7 +218,7 @@ public class SRIContingencyGenerate extends SvrProcess
 			 
 				// Procesar Recepcion SRI
 			    log.warning("@Sending Xml@ -> " + file_name);
-			    msg = signature.respuestaRecepcionComprobante(signature, file_name);
+			    msg = signature.respuestaRecepcionComprobante(file_name);
 			
 			    commitEx();
 			    
@@ -227,7 +227,7 @@ public class SRIContingencyGenerate extends SvrProcess
 			    
 			    // Procesar Autorizacion SRI
 			    log.warning("@Authorizing Xml@ -> " + file_name);
-			    msg = signature.respuestaAutorizacionComprobante(signature, accesscode, authorisation, authorisation.getValue());
+			    msg = signature.respuestaAutorizacionComprobante(accesscode, authorisation, authorisation.getValue());
 
 			    if (msg != null)
 			    	throw new AdempiereException(msg);
@@ -321,7 +321,7 @@ public class SRIContingencyGenerate extends SvrProcess
 			 
 				// Procesar Recepcion SRI
 			    log.warning("@Sending Xml@ -> " + file_name);
-			    msg = signature.respuestaRecepcionComprobante(signature, file_name);
+			    msg = signature.respuestaRecepcionComprobante(file_name);
 			
 			    commitEx();
 			    
@@ -330,7 +330,7 @@ public class SRIContingencyGenerate extends SvrProcess
 			    
 			    // Procesar Autorizacion SRI
 			    log.warning("@Authorizing Xml@ -> " + file_name);
-			    msg = signature.respuestaAutorizacionComprobante(signature, accesscode, authorisation, authorisation.getValue());
+			    msg = signature.respuestaAutorizacionComprobante(accesscode, authorisation, authorisation.getValue());
 
 			    if (msg != null)
 			    	throw new AdempiereException(msg);
@@ -340,7 +340,7 @@ public class SRIContingencyGenerate extends SvrProcess
 			
 			 }
 			
-			m_inout_id = LEC_FE_Utils.getAuthorisedInvoice(authorisation.getSRI_Authorisation_ID());
+			m_inout_id = LEC_FE_Utils.getAuthorisedInOut(authorisation.getSRI_Authorisation_ID());
 			
 			MInOut inout = new MInOut (getCtx(), m_inout_id, get_TrxName());
 			
