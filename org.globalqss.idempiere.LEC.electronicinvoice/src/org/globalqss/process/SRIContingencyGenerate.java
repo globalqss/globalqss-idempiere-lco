@@ -110,8 +110,8 @@ public class SRIContingencyGenerate extends SvrProcess
 			+ " WHERE AD_Client_ID=?"
 			+ "  AND SRI_AuthorisationCode IS NULL"
 			+ "  AND IsActive = 'Y' AND Processed = 'N'"
-			// 70-Clave de acceso en procesamiento
-			+ "  AND SRI_ErrorCode_ID IN (SELECT SRI_ErrorCode_ID FROM SRI_ErrorCode WHERE Value = '70')"
+			// 170-Clave de contingencia pendiente
+			+ "  AND SRI_ErrorCode_ID IN (SELECT SRI_ErrorCode_ID FROM SRI_ErrorCode WHERE Value = '170')"
 			+ "  AND SUBSTR(Value,48,1)=? ";
 		if (p_SRI_Authorisation_ID != 0)
 			sql += " AND SRI_Authorisation_ID=?";

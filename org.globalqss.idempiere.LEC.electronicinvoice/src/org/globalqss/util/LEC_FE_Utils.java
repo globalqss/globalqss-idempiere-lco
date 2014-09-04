@@ -348,7 +348,7 @@ public class LEC_FE_Utils
 		int sri_errorcode_id = DB.getSQLValue(null, "SELECT SRI_ErrorCode_ID FROM SRI_ErrorCode WHERE AD_Client_ID = ? AND Value = ? ", Env.getAD_Client_ID(Env.getCtx()), value);
 		
 		if ( sri_errorcode_id < 1) {
-			value = "50";	// Default 50-Error interno general
+			value = "150";	// Default 150-Error sin codificar
 			sri_errorcode_id = DB.getSQLValue(null, "SELECT SRI_ErrorCode_ID FROM SRI_ErrorCode WHERE AD_Client_ID = ? AND Value = ? ", Env.getAD_Client_ID(Env.getCtx()), value);
 		}
 		
