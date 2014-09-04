@@ -499,8 +499,8 @@ public class LEC_FE_MInOut extends MInOut
 		    file_name = signature.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesAutorizados);
 		} else {	// emisionContingencia
 			// Completar en estos casos, luego usar Boton Procesar Contingencia
-			// 70-Clave de acceso en procesamiento
-			a.setSRI_ErrorCode_ID(LEC_FE_Utils.getErrorCode("70"));
+			// 170-Clave de contingencia pendiente
+			a.setSRI_ErrorCode_ID(LEC_FE_Utils.getErrorCode("170"));
     		a.saveEx();
 			
     		if (signature.isAttachXml())
