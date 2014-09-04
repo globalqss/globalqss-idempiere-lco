@@ -112,7 +112,7 @@ public class LEC_FE_Validator implements ModelValidator
 		
 		if (po.get_TableName().equals(MInvoice.Table_Name) && type == ModelValidator.TYPE_BEFORE_NEW) {
 			MInvoice invoice = ((MInvoice) po);
-			MDocType dt = new MDocType(invoice.getCtx(), invoice.getC_DocType_ID(), invoice.get_TrxName());
+			MDocType dt = new MDocType(invoice.getCtx(), invoice.getC_DocTypeTarget_ID(), invoice.get_TrxName());
 			if ( MSysConfig.getBooleanValue("QSSLEC_FE_UseClaveContingenciaVentaMostradoryFolio", false, invoice.getAD_Client_ID())
 				&& MDocType.DOCSUBTYPESO_OnCreditOrder.equals(invoice.getC_Order().getC_DocType().getDocSubTypeSO())	// (W)illCall(I)nvoice
 				&& invoice.isSOTrx() && dt.get_Value("SRI_ShortDocType") != null ) {
