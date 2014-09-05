@@ -372,7 +372,10 @@ public abstract class GenericXMLSignature {
      * @return El nombre donde se desea guardar la firma generada
      */
     public String getSignatureFileName() {
-    	return getResource_To_Sign() + "_sig.xml";
+    	if (! getResource_To_Sign().contains("_sig"))
+    		return getResource_To_Sign() + "_sig.xml";
+    	
+    	return getResource_To_Sign();
     }
 
     /**

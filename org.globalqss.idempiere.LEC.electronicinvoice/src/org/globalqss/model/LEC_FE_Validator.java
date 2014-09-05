@@ -104,8 +104,9 @@ public class LEC_FE_Validator implements ModelValidator
 			MInOut inout = ((MInOut) po);
 			MDocType dt = new MDocType(inout.getCtx(), inout.getC_DocType_ID(), inout.get_TrxName());
 			if ( MSysConfig.getBooleanValue("QSSLEC_FE_UseClaveContingenciaVentaMostradoryFolio", false, inout.getAD_Client_ID())
-				&& MDocType.DOCSUBTYPESO_OnCreditOrder.equals(inout.getC_Order().getC_DocType().getDocSubTypeSO())	// (W)illCall(I)nvoice
-				&& inout.isSOTrx() && dt.get_Value("SRI_ShortDocType") != null ) {
+				&& inout.isSOTrx() && inout.getC_Order_ID() > 0
+				// && MDocType.DOCSUBTYPESO_OnCreditOrder.equals(inout.getC_Order().getC_DocType().getDocSubTypeSO())	// (W)illCall(I)nvoice
+				&& dt.get_Value("SRI_ShortDocType") != null ) {
 					inout.set_ValueOfColumn("SRI_IsUseContingency", "Y");
 			}
 		}
@@ -114,8 +115,9 @@ public class LEC_FE_Validator implements ModelValidator
 			MInvoice invoice = ((MInvoice) po);
 			MDocType dt = new MDocType(invoice.getCtx(), invoice.getC_DocTypeTarget_ID(), invoice.get_TrxName());
 			if ( MSysConfig.getBooleanValue("QSSLEC_FE_UseClaveContingenciaVentaMostradoryFolio", false, invoice.getAD_Client_ID())
-				&& MDocType.DOCSUBTYPESO_OnCreditOrder.equals(invoice.getC_Order().getC_DocType().getDocSubTypeSO())	// (W)illCall(I)nvoice
-				&& invoice.isSOTrx() && dt.get_Value("SRI_ShortDocType") != null ) {
+				&& invoice.isSOTrx() && invoice.getC_Order_ID() > 0
+				// && MDocType.DOCSUBTYPESO_OnCreditOrder.equals(invoice.getC_Order().getC_DocType().getDocSubTypeSO())	// (W)illCall(I)nvoice
+				&& dt.get_Value("SRI_ShortDocType") != null ) {
 					invoice.set_ValueOfColumn("SRI_IsUseContingency", "Y");
 			}
 		}
