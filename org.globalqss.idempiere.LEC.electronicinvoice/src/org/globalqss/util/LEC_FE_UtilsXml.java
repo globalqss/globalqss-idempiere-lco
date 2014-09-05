@@ -131,31 +131,28 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
     	
     	try	{
     		
-    	//log.warning("@Verificando Conexion servicio recepcion SRI@" + (isOnTesting ? "PRUEBAS " : "PRODUCCION"));
     	System.out.println("@Verificando Conexion servicio recepcion SRI@" + (isOnTesting ? "PRUEBAS " : "PRODUCCION"));
     	if (! existeConexion(recepcionComprobantesService)) {
         	msg = "Error no hay conexion al servicio recepcion SRI: " + (isOnTesting ? "PRUEBAS " : "PRODUCCION");
-        	return msg;	// throw new AdempiereException(msg);
+        	return msg;
 		}
         	
-        //log.warning("@Sending Xml@ -> " + file_name);
         System.out.println("@Sending Xml@ -> " + file_name);
         // Enviar a Recepcion Comprobante SRI
         byte[] bytes = getBytesFromFile(file_name);
-        ///*
+
         RespuestaSolicitud respuestasolicitud = validarComprobante(bytes);
         msg = respuestasolicitud.getEstado();
-        //log.warning("@Recepcion SRI@ -> " + msg);
         System.out.println("@Recepcion SRI@ -> " + msg);
         Comprobantes comprobantes = respuestasolicitud.getComprobantes();
         for (Comprobante comprobante : comprobantes.getComprobante()) {
+        	//
         	Comprobante.Mensajes mensajes = comprobante.getMensajes();
         	for (ec.gob.sri.comprobantes.ws.Mensaje mensaje : mensajes.getMensaje()) {
         		if (mensaje.getIdentificador().equals("60"))	// Ambiente ejecución
 	    			// Ignore Advertencia Certificacion 
 	    			continue;
         		msg = mensaje.getIdentificador() + ConstantesXADES.GUION + mensaje.getMensaje() + ConstantesXADES.GUION + mensaje.getInformacionAdicional();
-	    		// log.warning("@Mensaje Xml@ -> " + msg);
 	    		System.out.println("@Mensaje Xml@ -> " + msg);
         	}
         	// TODO Extraer y guardar comprobante xml en file_name
@@ -164,9 +161,8 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
 	    }
         if (! respuestasolicitud.getEstado().equals(recepcionRecibida)) {
         	msg = respuestasolicitud.getEstado() + ConstantesXADES.GUION + comprobantes.getComprobante().toString() + ConstantesXADES.GUION + msg;
-        	return msg;	// throw new AdempiereException(msg);
+        	return msg;
 		}
-	    //*/
         
     	}
     	catch (Exception e)
@@ -185,11 +181,10 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
     	
     	try	{
     		
-    	//log.warning("@Verificando Conexion servicio autorizacion SRI@" + (isOnTesting ? "PRUEBAS " : "PRODUCCION"));
         System.out.println("@Verificando Conexion servicio autorizacion SRI@" + (isOnTesting ? "PRUEBAS " : "PRODUCCION"));
         if (! existeConexion(autorizacionComprobantesService)) {
         	msg = "Error no hay conexion al servicio autorizacion SRI: " + (isOnTesting ? "PRUEBAS " : "PRODUCCION");
-			return msg;	// throw new AdempiereException(msg);
+			return msg;
 		}
     	
         RespuestaComprobante respuestacomprobante = autorizacionComprobante(accesscode);
@@ -198,7 +193,6 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
 	    for (Autorizacion autorizacion : autorizaciones.getAutorizacion()) {
 	    	// msg = autorizaciones.getAutorizacion().get(0).getEstado();
 	    	msg = autorizacion.getEstado() + ConstantesXADES.GUION + autorizacion.getNumeroAutorizacion() + ConstantesXADES.GUION + autorizacion.getFechaAutorizacion().toString();
-	    	// log.warning("@Autorizacion Xml@ -> " + msg);
 	    	System.out.println("@Autorizacion Xml@ -> " + msg);
 	        //
 	    	Mensajes mensajes = autorizacion.getMensajes();
@@ -207,7 +201,6 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
 	    			// Ignore Advertencia Certificacion 
 	    			continue;
 	    		msg = autorizacion.getEstado() + ConstantesXADES.GUION + mensaje.getIdentificador() + ConstantesXADES.GUION + mensaje.getMensaje() + ConstantesXADES.GUION + mensaje.getInformacionAdicional();
-	    		// log.warning("@Mensaje Xml@ -> " + msg);
 	    		System.out.println("@Mensaje Xml@ -> " + msg);
 	    		a.setSRI_ErrorCode_ID(LEC_FE_Utils.getErrorCode(mensaje.getIdentificador()));
 	    		a.saveEx();
@@ -238,9 +231,8 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
 	    	
 	    	if (autorizacion.getEstado().equals(LEC_FE_UtilsXml.comprobanteNoAutorizado)
     			// Completar en estos casos, luego usar Boton Reprocesar
-    			// 43 Clave acceso registrada
 	        	// 70-Clave de acceso en procesamiento
-    			&& (a.getSRI_ErrorCode().getValue().equals("43") || a.getSRI_ErrorCode().getValue().equals("70")) ) {
+    			&& (a.getSRI_ErrorCode().getValue().equals("70")) ) {
     	    		isAutorizacion = true;
     	    		file_name = getFilename(this, folderComprobantesAutorizados);
     			}
@@ -280,7 +272,6 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
     
     public RespuestaSolicitud validarComprobante(byte[] xml) {
         
-    	// RecepcionComprobantesService service = new RecepcionComprobantesService();
     	RecepcionComprobantesService service = null;
     	
     	String wsdlLocation = getUrlWSRecepcionComprobantes();
@@ -305,7 +296,6 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
     
     public RespuestaComprobante autorizacionComprobante(String claveAccesoComprobante) {
         
-    	// AutorizacionComprobantesService service = new AutorizacionComprobantesService();
     	AutorizacionComprobantesService service = null;
     	
     	String wsdlLocation = getUrlWSAutorizacionComprobantes();
