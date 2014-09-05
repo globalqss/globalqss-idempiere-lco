@@ -169,9 +169,9 @@ public class LEC_FE_MNotaDebito extends MInvoice
 		// New/Upd Access Code
 		X_SRI_AccessCode ac = new X_SRI_AccessCode (getCtx(), sri_accesscode_id, get_TrxName());
 		ac.setAD_Org_ID(getAD_Org_ID());
-		ac.setOldValue(null);	// TODO Deprecated
-		ac.setEnvType(signature.getEnvType());	// Before Save ?
-		ac.setCodeAccessType(signature.getCodeAccessType()); // Auto Before Save ?
+		ac.setOldValue(null);	// Deprecated
+		ac.setEnvType(signature.getEnvType());
+		ac.setCodeAccessType(signature.getCodeAccessType());
 		ac.setSRI_ShortDocType(m_coddoc);
 		ac.setIsUsed(true);
 		
@@ -432,7 +432,7 @@ public class LEC_FE_MNotaDebito extends MInvoice
 			throw new AdempiereException(msg);
 		}
 	
-		if (LEC_FE_Utils.breakDialog("Firmando Xml")) return "Cancelado...";	// Temp
+		if (LEC_FE_Utils.breakDialog("Firmando Xml")) return "Cancelado...";	// TODO Temp
 		
 		log.warning("@Signing Xml@ -> " + file_name);
 		signature.setResource_To_Sign(file_name);
@@ -443,7 +443,7 @@ public class LEC_FE_MNotaDebito extends MInvoice
         
         if (! signature.IsUseContingency) {
         	
-	        if (LEC_FE_Utils.breakDialog("Enviando Comprobante al SRI")) return "Cancelado...";	// Temp
+	        if (LEC_FE_Utils.breakDialog("Enviando Comprobante al SRI")) return "Cancelado...";	// TODO Temp
 	        
 	        // Procesar Recepcion SRI
 	        log.warning("@Sending Xml@ -> " + file_name);
@@ -462,9 +462,8 @@ public class LEC_FE_MNotaDebito extends MInvoice
 	        	
 	        } catch (Exception ex) {
 	        	// Completar en estos casos, luego usar Boton Reprocesar Autorizacion
-	        	// 43 Clave acceso registrada
 	        	// 70-Clave de acceso en procesamiento
-	        	if (a.getSRI_ErrorCode().getValue().equals("43") || a.getSRI_ErrorCode().getValue().equals("70"))
+	        	if (a.getSRI_ErrorCode().getValue().equals("70"))
 		        	// ignore exceptions
 		        	log.warning(msg + ex.getMessage());
 	        	else
@@ -491,7 +490,6 @@ public class LEC_FE_MNotaDebito extends MInvoice
 		    		
 			    	log.warning("@EMailing Xml@ -> " + file_name);
 					// Enviar Email BPartner XML Autorizado
-					// TODO Replicar en cada clase el definitivo
 					MMailText mText = new MMailText(getCtx(), 0, get_TrxName());	// Solo en memoria
 					mText.setPO(this);
 					String subject = "SRI " + (signature.isOnTesting ? LEC_FE_UtilsXml.nombreCertificacion : LEC_FE_UtilsXml.nombreProduccion) + " " + bpe.getValue() + " : " + f.get_ValueAsString("XmlPrintLabel") + " " + getDocumentNo();
@@ -515,7 +513,7 @@ public class LEC_FE_MNotaDebito extends MInvoice
 			}
 		}
 		
-		if (LEC_FE_Utils.breakDialog("Completando Nota Debito")) return "Cancelado...";	// Temp
+		if (LEC_FE_Utils.breakDialog("Completando Nota Debito")) return "Cancelado...";	// TODO Temp
 
 		//
 		}
@@ -528,7 +526,6 @@ public class LEC_FE_MNotaDebito extends MInvoice
 		
 		log.warning("@SRI_FileGenerated@ -> " + file_name);
 		
-		//return null;
 		return msg;
 	
 	} // lecfeinvnc_SriExportNotaCreditoXML100
