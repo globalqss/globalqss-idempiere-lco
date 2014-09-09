@@ -324,21 +324,28 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
         boolean respuesta = false;
         
         String url = null;
-        if (accionComprobantesService.equals(recepcionComprobantesService))
-        	url = getUrlWSRecepcionComprobantes();
-        else
-	        url = getUrlWSAutorizacionComprobantes();
-    
-        while (i < 3) {
-            Object obj = getWebService(url, accionComprobantesService);
-            if (obj  == null) {
-                return true;
-            }
-            if ((obj  instanceof WebServiceException)) {
-                respuesta = false;
-            }
-            i++;
-        }
+        
+        try {
+        	
+	        if (accionComprobantesService.equals(recepcionComprobantesService))
+	        	url = getUrlWSRecepcionComprobantes();
+	        else
+		        url = getUrlWSAutorizacionComprobantes();
+	    
+	        while (i < 3) {
+	            Object obj = getWebService(url, accionComprobantesService);
+	            if (obj  == null) {
+	                return true;
+	            }
+	            if ((obj  instanceof WebServiceException)) {
+	                respuesta = false;
+	            }
+	            i++;
+	        }
+	        
+        } catch (Exception ex) {
+        	return false;
+		}
         
         return respuesta;
     }
