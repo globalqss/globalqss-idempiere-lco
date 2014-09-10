@@ -167,7 +167,11 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
     	}
     	catch (Exception e)
 		{
-			return e.getMessage();
+    		msg = e.getLocalizedMessage();
+    		if (msg == null)
+    			msg = e.toString();
+    		
+    		return msg;
 		}
     	
     	return null;
@@ -254,10 +258,14 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
     	}
     	catch (Exception e)
 		{
-			msg = msg + e.getMessage();
-    		// return msg;
+    		msg = e.getLocalizedMessage();
+    		if (msg == null)
+    			msg = e.toString();
+    		
+    		System.out.println("@Bypass Exception@ -> " + msg);
+    		msg = null;
 		}
-		
+    	
     	if (msg == null)
     		if (! isAutorizacion) {
     			a.setSRI_ErrorCode_ID(LEC_FE_Utils.getErrorCode("70"));
@@ -283,12 +291,14 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
             URL url = new URL(wsdlLocation);
             service = new RecepcionComprobantesService(url, qname);
         } catch (MalformedURLException ex) {
-            //return ex;
+        	System.out.println(ex.getLocalizedMessage());
+        	return null;
         } catch (WebServiceException ws) {
-            //return ws;
+        	System.out.println(ws.getLocalizedMessage());
+        	return null;
         }
         
-       	RecepcionComprobantes port = service.getRecepcionComprobantesPort();
+        RecepcionComprobantes port = service.getRecepcionComprobantesPort();
     	// Controlar el tiempo de espera al consumir un webservice
     	((BindingProvider) port).getRequestContext().put("com.sun.xml.internal.ws.connect.timeout", getSriWSTimeout());
     	((BindingProvider) port).getRequestContext().put("com.sun.xml.internal.ws.request.timeout", getSriWSTimeout());
@@ -307,12 +317,14 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
             URL url = new URL(wsdlLocation);
             service = new AutorizacionComprobantesService(url, qname);
         } catch (MalformedURLException ex) {
-            //return ex;
+        	System.out.println(ex.getLocalizedMessage());
+            return null;
         } catch (WebServiceException ws) {
-            //return ws;
+        	System.out.println(ws.getLocalizedMessage());
+        	return null;
         }
         
-    	AutorizacionComprobantes port = service.getAutorizacionComprobantesPort();
+        AutorizacionComprobantes port = service.getAutorizacionComprobantesPort();
     	// Controlar el tiempo de espera al consumir un webservice
     	((BindingProvider) port).getRequestContext().put("com.sun.xml.internal.ws.connect.timeout", getSriWSTimeout());
     	((BindingProvider) port).getRequestContext().put("com.sun.xml.internal.ws.request.timeout", getSriWSTimeout());
