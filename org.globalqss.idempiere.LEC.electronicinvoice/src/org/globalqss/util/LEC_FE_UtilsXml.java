@@ -183,10 +183,12 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
     		
         System.out.println("@Verificando Conexion servicio autorizacion SRI@" + (isOnTesting ? "PRUEBAS " : "PRODUCCION"));
         if (! existeConexion(autorizacionComprobantesService)) {
-        	msg = "Error no hay conexion al servicio autorizacion SRI: " + (isOnTesting ? "PRUEBAS " : "PRODUCCION");
-			return msg;
+        	msg = "Advertencia no hay conexion al servicio autorizacion SRI: " + (isOnTesting ? "PRUEBAS " : "PRODUCCION");
+        	System.out.println(msg);
 		}
     	
+        msg = null;
+        System.out.println("@Authorizing Xml@ -> " + accesscode);
         RespuestaComprobante respuestacomprobante = autorizacionComprobante(accesscode);
 	    Autorizaciones autorizaciones = respuestacomprobante.getAutorizaciones();
 	    // Procesar Respuesta Autorizacion SRI
@@ -253,7 +255,7 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
     	catch (Exception e)
 		{
 			msg = msg + e.getMessage();
-    		return msg;
+    		// return msg;
 		}
 		
     	if (msg == null)
