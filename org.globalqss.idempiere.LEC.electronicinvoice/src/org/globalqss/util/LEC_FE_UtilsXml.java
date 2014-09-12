@@ -150,10 +150,10 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
         	//
         	Comprobante.Mensajes mensajes = comprobante.getMensajes();
         	for (ec.gob.sri.comprobantes.ws.Mensaje mensaje : mensajes.getMensaje()) {
-        		if (mensaje.getIdentificador().equals("60"))	// Ambiente ejecución
-	    			// Ignore Advertencia Certificacion 
+	    		if (mensaje.getTipo().equals(mensajeInformativo))
+	    			// Ignore Informativo
 	    			continue;
-        		msg = mensaje.getIdentificador() + ConstantesXADES.GUION + mensaje.getMensaje() + ConstantesXADES.GUION + mensaje.getInformacionAdicional();
+        		msg = respuestasolicitud.getEstado() + ConstantesXADES.GUION + mensaje.getTipo() + ConstantesXADES.GUION + mensaje.getIdentificador() + ConstantesXADES.GUION + mensaje.getMensaje() + ConstantesXADES.GUION + mensaje.getInformacionAdicional();
 	    		System.out.println("@Mensaje Xml@ -> " + msg);
         	}
         	// TODO Extraer y guardar comprobante xml en file_name
@@ -217,22 +217,22 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
 	        //
 	    	Mensajes mensajes = autorizacion.getMensajes();
 	    	for (Mensaje mensaje : mensajes.getMensaje()) {
-	    		if (mensaje.getIdentificador().equals("60"))	// Ambiente ejecución
-	    			// Ignore Advertencia Certificacion 
+	    		if (mensaje.getTipo().equals(mensajeInformativo))
+	    			// Ignore Informativo
 	    			continue;
-	    		msg = autorizacion.getEstado() + ConstantesXADES.GUION + mensaje.getIdentificador() + ConstantesXADES.GUION + mensaje.getMensaje() + ConstantesXADES.GUION + mensaje.getInformacionAdicional();
+	    		msg = autorizacion.getEstado() + ConstantesXADES.GUION + mensaje.getTipo() + ConstantesXADES.GUION + mensaje.getIdentificador() + ConstantesXADES.GUION + mensaje.getMensaje() + ConstantesXADES.GUION + mensaje.getInformacionAdicional();
 	    		System.out.println("@Mensaje Xml@ -> " + msg);
 	    		a.setSRI_ErrorCode_ID(LEC_FE_Utils.getErrorCode(mensaje.getIdentificador()));
 	    		a.saveEx();
 	    	}
 	    	//
-	    	if (autorizacion.getEstado().equals(LEC_FE_UtilsXml.comprobanteAutorizado)) {
+	    	if (autorizacion.getEstado().equals(comprobanteAutorizado)) {
 	    		
 	    		msg = null;
 	    		isAutorizacion = true;
 
 	    		// Update AccessCode
-	    		if (ac.getCodeAccessType().equals(LEC_FE_UtilsXml.claveAccesoAutomatica)) {
+	    		if (ac.getCodeAccessType().equals(claveAccesoAutomatica)) {
 	    			ac.setValue(autorizacion.getNumeroAutorizacion());
 	    			ac.saveEx();
 	    		}	
@@ -249,7 +249,7 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
 	    	else
 	    		file_name = getFilename(this, folderComprobantesRechazados);
 	    	
-	    	if (autorizacion.getEstado().equals(LEC_FE_UtilsXml.comprobanteNoAutorizado)
+	    	if (autorizacion.getEstado().equals(comprobanteNoAutorizado)
     			// Completar en estos casos, luego usar Boton Reprocesar
 	        	// 70-Clave de acceso en procesamiento
     			&& (a.getSRI_ErrorCode().getValue().equals("70")) ) {

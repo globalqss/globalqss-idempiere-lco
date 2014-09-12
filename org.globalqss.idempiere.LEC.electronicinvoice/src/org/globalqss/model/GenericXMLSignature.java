@@ -95,6 +95,8 @@ public abstract class GenericXMLSignature {
 	public static String comprobanteAutorizado = "AUTORIZADO";
 	public static String comprobanteNoAutorizado = "NO AUTORIZADO";
 	public static String comprobanteRechazado = "RECHAZADO";
+	public static String mensajeError = "ERROR";
+	public static String mensajeInformativo = "INFORMATIVO";
 	
 	/**	Big Decimal 0.5	 */
 	static final public BigDecimal HALF = new BigDecimal(0.5);
