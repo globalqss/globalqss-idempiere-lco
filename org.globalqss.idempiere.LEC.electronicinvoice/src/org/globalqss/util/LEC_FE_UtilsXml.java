@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.lang.reflect.InvocationTargetException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -164,9 +165,22 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
         	return msg;
 		}
         
-    	}
-    	catch (Exception e)
-		{
+    	//
+    	} catch (InvocationTargetException ite) {
+    		msg = ite.getLocalizedMessage();
+    		if (msg == null)
+    			msg = ite.toString();
+    		
+    		System.out.println("@Bypass Exception@ -> " + msg);
+    		return null;
+    	} catch (SecurityException se) {
+    		msg = se.getLocalizedMessage();
+    		if (msg == null)
+    			msg = se.toString();
+    		
+    		System.out.println("@Bypass Exception@ -> " + msg);
+    		return null;
+    	} catch (Exception e) {
     		msg = e.getLocalizedMessage();
     		if (msg == null)
     			msg = e.toString();
@@ -255,9 +269,15 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
 	    	
 	    	}
 	    
-    	}
-    	catch (Exception e)
-		{
+    	//
+    	} catch (SecurityException se) {
+    		msg = se.getLocalizedMessage();
+    		if (msg == null)
+    			msg = se.toString();
+    		
+    		System.out.println("@Bypass Exception@ -> " + msg);
+    		msg = null;
+    	} catch (Exception e) {
     		msg = e.getLocalizedMessage();
     		if (msg == null)
     			msg = e.toString();
@@ -299,10 +319,14 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
         }
         
         RecepcionComprobantes port = service.getRecepcionComprobantesPort();
-    	// Controlar el tiempo de espera al consumir un webservice
-    	((BindingProvider) port).getRequestContext().put("com.sun.xml.internal.ws.connect.timeout", getSriWSTimeout());
-    	((BindingProvider) port).getRequestContext().put("com.sun.xml.internal.ws.request.timeout", getSriWSTimeout());
-        return port.validarComprobante(xml);
+    	
+        // Controlar el tiempo de espera al consumir un webservice
+        if (getSriWSTimeout() > 0) {
+        	((BindingProvider) port).getRequestContext().put("com.sun.xml.internal.ws.connect.timeout", getSriWSTimeout());
+        	((BindingProvider) port).getRequestContext().put("com.sun.xml.internal.ws.request.timeout", getSriWSTimeout());
+        }
+    	
+    	return port.validarComprobante(xml);
     
     }
     
@@ -325,9 +349,13 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
         }
         
         AutorizacionComprobantes port = service.getAutorizacionComprobantesPort();
+        
     	// Controlar el tiempo de espera al consumir un webservice
-    	((BindingProvider) port).getRequestContext().put("com.sun.xml.internal.ws.connect.timeout", getSriWSTimeout());
-    	((BindingProvider) port).getRequestContext().put("com.sun.xml.internal.ws.request.timeout", getSriWSTimeout());
+        if (getSriWSTimeout() > 0) {
+        	((BindingProvider) port).getRequestContext().put("com.sun.xml.internal.ws.connect.timeout", getSriWSTimeout());
+        	((BindingProvider) port).getRequestContext().put("com.sun.xml.internal.ws.request.timeout", getSriWSTimeout());
+        }
+        
     	return port.autorizacionComprobante(claveAccesoComprobante);
     
     }
