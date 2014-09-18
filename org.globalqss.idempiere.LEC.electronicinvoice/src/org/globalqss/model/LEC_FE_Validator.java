@@ -246,7 +246,7 @@ public class LEC_FE_Validator implements ModelValidator
 			msg = lecfeinvnd.lecfeinvnd_SriExportNotaDebitoXML100();
 		// !isSOTrx()
 		else if (shortdoctype.equals("07"))	// COMPROBANTE DE RETENCIÓN
-			msg = lecfeinvret.lecfeinvret_SriExportRetencionXML100();
+			;	// msg = lecfeinvret.lecfeinvret_SriExportRetencionXML100();	// Replaced with SRIGenerateRetencion process
 		else
 			log.warning("Formato no habilitado SRI: " + dt.toString() + shortdoctype);
 			
