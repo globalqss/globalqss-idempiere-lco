@@ -308,14 +308,17 @@ public class LEC_FE_MInvoice extends MInvoice
 				 + ", CASE "
 				 + "    WHEN t.LEC_TaxTypeSRI = '2' THEN "
 				 + "      CASE "
+				 + "        WHEN t.istaxexempt = 'Y' THEN '7' "
 				 + "        WHEN t.rate = 0::numeric THEN '0' "
 				 + "        WHEN t.rate = 12::numeric THEN '2' "
 				 + "        ELSE '6' "
 				 + "      END "
 				 + "    WHEN t.LEC_TaxTypeSRI = '3' THEN '0000' "
+				 + "    WHEN t.LEC_TaxTypeSRI = '5' THEN '0000' "
 				 + "    ELSE '0' END AS codigoPorcentaje "
 				 + ", SUM(it.TaxBaseAmt) AS baseImponible "
 				 + ", SUM(it.TaxAmt) AS valor "
+				 + ", 0::numeric AS descuentoAdicional "
 				 + "FROM C_Invoice i "
 				 + "JOIN C_InvoiceTax it ON it.C_Invoice_ID = i.C_Invoice_ID "
 				 + "JOIN C_Tax t ON t.C_Tax_ID = it.C_Tax_ID "
@@ -343,6 +346,10 @@ public class LEC_FE_MInvoice extends MInvoice
 				addHeaderElement(mmDoc, "codigo", rs.getString(1), atts);
 				// Numerico 1 to 4
 				addHeaderElement(mmDoc, "codigoPorcentaje", rs.getString(2), atts);
+				if (rs.getString(1).equals("2")) {
+					// Numerico Max 14
+					addHeaderElement(mmDoc, "descuentoAdicional", rs.getBigDecimal(5).toString(), atts);
+				}
 				// Numerico Max 14
 				addHeaderElement(mmDoc, "baseImponible", rs.getBigDecimal(3).toString(), atts);
 				// Numerico Max 14
@@ -384,16 +391,19 @@ public class LEC_FE_MInvoice extends MInvoice
 				+ ", CASE "
 				+ "    WHEN t.LEC_TaxTypeSRI = '2' THEN "
 				+ "      CASE "
+				+ "        WHEN t.istaxexempt = 'Y' THEN '7' "
 				+ "        WHEN t.rate = 0::numeric THEN '0' "
 				+ "        WHEN t.rate = 12::numeric THEN '2' "
 				+ "        ELSE '6' "
 				+ "      END "
 				+ "    WHEN t.LEC_TaxTypeSRI = '3' THEN '0000' "
+				+ "    WHEN t.LEC_TaxTypeSRI = '5' THEN '0000' "
 				+ "    ELSE '0' END AS codigoPorcentaje "
 				+ ", t.rate AS tarifa "
 				+ ", ilt.linenetamt AS baseImponible "
 				+ ", ROUND(ilt.linenetamt * t.rate / 100, 2) AS valor "
 				+ ", il.description AS description1 "
+				+ ", 0::numeric AS descuentoAdicional "
 	            + "FROM C_Invoice i "
 	            + "JOIN C_InvoiceLine il ON il.C_Invoice_ID = i.C_Invoice_ID "
 	            + "JOIN C_Invoice_LineTax_VT ilt ON ilt.C_InvoiceLine_ID = il.C_InvoiceLine_ID "
