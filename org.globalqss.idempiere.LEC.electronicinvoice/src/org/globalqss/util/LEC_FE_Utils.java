@@ -249,6 +249,8 @@ public class LEC_FE_Utils
 			tipoidentificacionsri = "05"; 	// VENTA CON CEDULA
 		else if (taxcodesri.equals("3"))
 			tipoidentificacionsri = "06";	// VENTA CON PASAPORTE
+		else if (taxcodesri.equals("4"))
+			tipoidentificacionsri = "08";	// VENTA IDENTIFICACION DEL EXTERIOR
 		else tipoidentificacionsri = "07"; 	// VENTA A CONSUMIDOR FINAL	// TODO Deprecated
 		
 		return tipoidentificacionsri;
