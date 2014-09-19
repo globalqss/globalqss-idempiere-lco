@@ -240,7 +240,9 @@ WHERE i.C_Invoice_ID = $P{RECORD_ID}]]>
 			</textField>
 			<textField>
 				<reportElement x="12" y="293" width="133" height="20"/>
-				<textElement/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA["Fecha Emisión: " + $F{fechaemision}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
