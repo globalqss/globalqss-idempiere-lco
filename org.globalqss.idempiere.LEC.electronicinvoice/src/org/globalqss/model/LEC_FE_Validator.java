@@ -28,6 +28,7 @@ import org.compiere.model.MAttachmentEntry;
 import org.compiere.model.MBPartner;
 import org.compiere.model.MDocType;
 import org.compiere.model.MInOut;
+import org.compiere.model.MMovement;
 import org.compiere.model.MOrgInfo;
 import org.compiere.model.MSysConfig;
 import org.compiere.model.MTable;
@@ -83,6 +84,7 @@ public class LEC_FE_Validator implements ModelValidator
 		//	Documents to be monitored
 		engine.addDocValidate(MInvoice.Table_Name, this);
 		engine.addDocValidate(MInOut.Table_Name, this);
+		engine.addDocValidate(MMovement.Table_Name, this);
 
 	}	//	initialize
 
@@ -163,6 +165,15 @@ public class LEC_FE_Validator implements ModelValidator
 			MInOut inout = (MInOut)po;
 			//
 			msg = inoutGenerateXml(inout);
+			if (msg != null)
+				return msg;
+		}
+		
+		// after completing inventory move process electronic movement
+		if (po.get_TableName().equals(MMovement.Table_Name) && timing == TIMING_AFTER_COMPLETE) {
+			MMovement movement = (MMovement)po;
+			//
+			msg = movementGenerateXml(movement);
 			if (msg != null)
 				return msg;
 		}
@@ -285,7 +296,39 @@ public class LEC_FE_Validator implements ModelValidator
 			
 		return msg;
 	}
-
+	
+	private String movementGenerateXml (MMovement movement) {
+		
+		String msg = null;
+		
+		MDocType dt = new MDocType(movement.getCtx(), movement.getC_DocType_ID(), movement.get_TrxName());
+		
+		String shortdoctype = dt.get_ValueAsString("SRI_ShortDocType");
+		
+		if ( shortdoctype.equals("")) {
+			msg = "No existe definicion SRI_ShortDocType: " + dt.toString();
+			log.info("Invoice: " + movement.toString() + msg);
+			
+			// if (LEC_FE_Utils.breakDialog(msg)) return "Cancelado...";	// Temp
+		}
+		
+		MUser user = new MUser(movement.getCtx(), movement.getAD_User_ID(), movement.get_TrxName());
+		
+		if (! valideUserMail (user)) {
+			msg = "@RequestActionEMailNoTo@";
+			return msg;
+		}
+		
+		msg = null;
+		LEC_FE_Movement lecfemovement = new LEC_FE_Movement(movement.getCtx(), movement.getM_Movement_ID(), movement.get_TrxName());
+		// Hardcoded 1000418-SIS UIO COMPANIA RELACIONADA
+		if (shortdoctype.equals("06") && dt.getC_DocType_ID() == 1000418)	// GUÍA DE REMISIÓN 
+			msg = lecfemovement.lecfeMovement_SriExportMovementXML100();
+		else
+			log.warning("Formato no habilitado SRI: " + dt.toString() + shortdoctype);
+			
+		return msg;
+	}
 	
 	/**
 	 * 	valideOrgInfoSri

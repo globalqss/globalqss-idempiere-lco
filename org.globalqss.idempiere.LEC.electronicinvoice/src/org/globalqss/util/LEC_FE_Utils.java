@@ -330,6 +330,18 @@ public class LEC_FE_Utils
 	}
 	
 	/**
+	 * 	String getMovLocation
+	 * 	@return int
+	 */
+	public static int getMovLocator(int m_movement_id) {
+	
+		int c_location_id = DB.getSQLValue(null, "SELECT MIN(C_Location_ID) FROM M_MovementLine ml JOIN M_Locator l ON l.M_Locator_ID = ml.M_Locator_ID JOIN M_Warehouse w ON w.M_Warehouse_ID = l.M_Warehouse_ID WHERE M_Movement_ID = ? GROUP BY M_Movement_ID ", m_movement_id);
+		
+		return c_location_id;
+
+	}
+	
+	/**
 	 * 	String getInvAllDocSustento
 	 * 	@return int
 	 */
