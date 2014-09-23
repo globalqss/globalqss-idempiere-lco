@@ -330,6 +330,18 @@ public class LEC_FE_Utils
 	}
 	
 	/**
+	 * 	String getAuthorisedMovement
+	 * 	@return int
+	 */
+	public static int getAuthorisedMovement(int sri_authosisation_id) {
+	
+		int m_movement_authorised_id = DB.getSQLValue(null, "SELECT COALESCE(MAX(m.M_Movement_ID), -1) FROM M_Movement m WHERE m.SRI_Authorisation_ID = ? ", sri_authosisation_id);
+		
+		return m_movement_authorised_id;
+
+	}
+	
+	/**
 	 * 	String getMovLocation
 	 * 	@return int
 	 */

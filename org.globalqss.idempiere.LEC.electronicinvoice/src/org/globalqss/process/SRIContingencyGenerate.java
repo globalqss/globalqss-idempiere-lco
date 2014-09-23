@@ -35,6 +35,7 @@ import org.compiere.model.MBPartner;
 import org.compiere.model.MInOut;
 import org.compiere.model.MInvoice;
 import org.compiere.model.MMailText;
+import org.compiere.model.MMovement;
 import org.compiere.model.MOrgInfo;
 import org.compiere.model.MSysConfig;
 import org.compiere.process.ProcessInfoParameter;
@@ -166,8 +167,10 @@ public class SRIContingencyGenerate extends SvrProcess
 					msg = lecfeinvoice_SriExportInvoiceXML100(authorisation);
 				else if (authorisation.getSRI_ShortDocType().equals("05"))	// NOTA DE DÉBITO
 					msg = lecfeinvoice_SriExportInvoiceXML100(authorisation);
-				else if (authorisation.getSRI_ShortDocType().equals("06"))	// GUÍA DE REMISIÓN 
+				else if (authorisation.getSRI_ShortDocType().equals("06") && LEC_FE_Utils.getAuthorisedInOut(authorisation.getSRI_Authorisation_ID()) > 0 )	// GUÍA DE REMISIÓN - Entrega
 					msg = lecfeinout_SriExportInOutXML100(authorisation);
+				else if (authorisation.getSRI_ShortDocType().equals("06") && LEC_FE_Utils.getAuthorisedMovement(authorisation.getSRI_Authorisation_ID()) > 0 )	// GUÍA DE REMISIÓN - Movimiento 
+					msg = lecfemovement_SriExportMovementXML100(authorisation);
 				// !isSOTrx()
 				else if (authorisation.getSRI_ShortDocType().equals("07"))	// COMPROBANTE DE RETENCIÓN
 					msg = lecfeinvoice_SriExportInvoiceXML100(authorisation);
@@ -198,6 +201,9 @@ public class SRIContingencyGenerate extends SvrProcess
 	}	//	generate
 
 	
+	/**
+	 * 	lecfeinvoice_SriExportInvoiceXML100
+	 */
 	public String lecfeinvoice_SriExportInvoiceXML100 (X_SRI_Authorisation authorisation)
 	{
 		
@@ -270,7 +276,6 @@ public class SRIContingencyGenerate extends SvrProcess
 					
 			    	log.warning("@EMailing Xml@ -> " + file_name);
 					// Enviar Email BPartner XML Autorizado
-					// TODO Replicar en cada clase el definitivo
 					MMailText mText = new MMailText(getCtx(), 0, get_TrxName());	// Solo en memoria
 					mText.setPO(invoice);
 					String subject = "SRI " + (signature.isOnTesting ? LEC_FE_UtilsXml.nombreCertificacion : LEC_FE_UtilsXml.nombreProduccion) + " " + bpe.getValue() + " : " + f.get_ValueAsString("XmlPrintLabel") + " " + m_retencionno;
@@ -301,6 +306,9 @@ public class SRIContingencyGenerate extends SvrProcess
 		
 	} // lecfeinvoice_SriExportInvoiceXML100
 	
+	/**
+	 * 	lecfeinout_SriExportInOutXML100
+	 */
 	public String lecfeinout_SriExportInOutXML100 (X_SRI_Authorisation authorisation)
 	{
 		
@@ -369,7 +377,6 @@ public class SRIContingencyGenerate extends SvrProcess
 					
 			    	log.warning("@EMailing Xml@ -> " + file_name);
 					// Enviar Email BPartner XML Autorizado
-					// TODO Replicar en cada clase el definitivo
 					MMailText mText = new MMailText(getCtx(), 0, get_TrxName());	// Solo en memoria
 					mText.setPO(inout);
 					String subject = "SRI " + (signature.isOnTesting ? LEC_FE_UtilsXml.nombreCertificacion : LEC_FE_UtilsXml.nombreProduccion) + " " + bpe.getValue() + " : " + f.get_ValueAsString("XmlPrintLabel") + " " + inout.getDocumentNo();
@@ -399,6 +406,107 @@ public class SRIContingencyGenerate extends SvrProcess
 		return msg;
 		
 	} // lecfeinout_SriExportInOutXML100
+	
+	/**
+	 * 	lecfemovement_SriExportMovementXML100
+	 */
+	public String lecfemovement_SriExportMovementXML100 (X_SRI_Authorisation authorisation)
+	{
+		
+		String msg = null;
+		
+		LEC_FE_UtilsXml signature = new LEC_FE_UtilsXml();
+		
+		try {
+			
+			int m_movement_id = 0;
+			
+			X_SRI_AccessCode accesscode = new X_SRI_AccessCode (getCtx(), authorisation.getSRI_AccessCode_ID(), get_TrxName());
+			
+			File file = signature.getFileFromStream(file_name, authorisation.getSRI_Authorisation_ID());
+			
+			file_name = signature.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesFirmados);
+			log.warning("@Signed Xml@ -> " + file_name);
+			
+			if (file.exists() || file.isFile() || file.canRead()) {
+			 
+				// Procesar Recepcion SRI
+			    log.warning("@Sending Xml@ -> " + file_name);
+			    msg = signature.respuestaRecepcionComprobante(file_name);
+			
+			    commitEx();
+			    
+			    if (msg != null)
+			    	throw new AdempiereException(msg);
+			    
+			    // Procesar Autorizacion SRI
+			    log.warning("@Authorizing Xml@ -> " + file_name);
+			    msg = signature.respuestaAutorizacionComprobante(accesscode, authorisation, authorisation.getValue());
+
+			    if (msg != null)
+			    	throw new AdempiereException(msg);
+			    
+			    file_name = signature.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesAutorizados);
+			    m_created++;
+			
+			 }
+			
+			m_movement_id = LEC_FE_Utils.getAuthorisedMovement(authorisation.getSRI_Authorisation_ID());
+			
+			MMovement movement = new MMovement (getCtx(), m_movement_id, get_TrxName());
+			
+			// Formato
+			m_lec_sri_format_id = LEC_FE_Utils.getLecSriFormat(getAD_Client_ID(), signature.getDeliveredType(), authorisation.getSRI_ShortDocType(), movement.getMovementDate(), movement.getMovementDate());
+					
+			if ( m_lec_sri_format_id < 1)
+				throw new AdempiereUserError("No existe formato para el comprobante");
+			
+			X_LEC_SRI_Format f = new X_LEC_SRI_Format (getCtx(), m_lec_sri_format_id, get_TrxName());
+			
+			// Emisor
+			MOrgInfo oi = MOrgInfo.get(getCtx(), movement.getAD_Org_ID(), get_TrxName());
+			
+			int c_bpartner_id = LEC_FE_Utils.getOrgBPartner(getAD_Client_ID(), oi.get_ValueAsString("TaxID"));
+			MBPartner bpe = new MBPartner(getCtx(), c_bpartner_id, get_TrxName());
+			
+			//
+			if (MSysConfig.getBooleanValue("QSSLEC_FE_EnvioXmlAutorizadoBPEmail", false, getAD_Client_ID()))
+			{
+				File attachment = (new File (file_name));
+				
+				if (attachment.exists() || attachment.isFile() || attachment.canRead()) {
+					
+			    	log.warning("@EMailing Xml@ -> " + file_name);
+					// Enviar Email BPartner XML Autorizado
+					MMailText mText = new MMailText(getCtx(), 0, get_TrxName());	// Solo en memoria
+					mText.setPO(movement);
+					String subject = "SRI " + (signature.isOnTesting ? LEC_FE_UtilsXml.nombreCertificacion : LEC_FE_UtilsXml.nombreProduccion) + " " + bpe.getValue() + " : " + f.get_ValueAsString("XmlPrintLabel") + " " + movement.getDocumentNo();
+					String text =
+							" Emisor               : " + bpe.getName() +
+							"\nFecha                : " + LEC_FE_Utils.getDate(movement.getMovementDate(),10) +
+							"\nCliente              : " + movement.getC_BPartner().getName() +
+							"\nComprobante          : " + f.get_ValueAsString("XmlPrintLabel") +
+							"\nNumero               : " + movement.getDocumentNo() +
+							"\nAutorizacion No.     : " + authorisation.getSRI_AuthorisationCode() +
+							"\nFecha Autorizacion   : " + authorisation.getSRI_DateAuthorisation() +
+							"\nAdjunto              : " + file_name.substring(file_name.lastIndexOf(File.separator) + 1);
+						
+					int countMail = LEC_FE_Utils.notifyUsers(getCtx(), mText, getAD_User_ID(), subject, text, attachment, get_TrxName());
+					if (countMail == 0)
+						log.warning("@RequestActionEMailError@ -> " + file_name);
+				}
+			}
+		
+		//
+		} catch (Exception e) {
+			msg = "No se pudo obtener autorizacion - " + e.getMessage();
+			log.severe(msg);
+			throw new AdempiereException(msg);
+		}
+
+		return msg;
+		
+	} // lecfemovement_SriExportMovementXML100
 
 	
 }	//	SRIContingencyGenerate
