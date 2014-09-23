@@ -123,7 +123,16 @@ public class LEC_FE_Validator implements ModelValidator
 					invoice.set_ValueOfColumn("SRI_IsUseContingency", "Y");
 			}
 		}
-
+		
+		if (po.get_TableName().equals(MMovement.Table_Name) && ( type == TYPE_BEFORE_NEW || type == TYPE_BEFORE_CHANGE)) {
+			MMovement movement = ((MMovement) po);
+			// Hardcoded 1000418-SIS UIO COMPANIA RELACIONADA
+			if (movement.getC_DocType_ID() == 1000418 && (movement.getDescription() == null || movement.getDescription().trim().length() == 0) ) {	// GUÍA DE REMISIÓN
+				msg = "Descripcion obligatoria para el comprobante electronico";
+				return msg;
+			}
+		}
+	
 		return null;
 	}	//	modelChange
 	

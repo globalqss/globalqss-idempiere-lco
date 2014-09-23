@@ -334,7 +334,7 @@ public class LEC_FE_Movement extends MMovement
 			// Alfanumerico Max 300
 			addHeaderElement(mmDoc, "dirDestinatario", bpl.getAddress1(), atts);
 			// Alfanumerico Max 300
-			addHeaderElement(mmDoc, "motivoTraslado", "Venta", atts);
+			addHeaderElement(mmDoc, "motivoTraslado", LEC_FE_Utils.cutString(getDescription(),300), atts);
 			// Alfanumerico Max 20
 			if (get_Value("SRI_SingleCustomsDocument") != null)
 				addHeaderElement(mmDoc, "docAduaneroUnico", get_Value("SRI_SingleCustomsDocument").toString(), atts);
