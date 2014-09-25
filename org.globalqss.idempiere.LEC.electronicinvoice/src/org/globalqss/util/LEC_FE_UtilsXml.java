@@ -14,6 +14,7 @@ import javax.xml.namespace.QName;
 import javax.xml.ws.BindingProvider;
 import javax.xml.ws.WebServiceException;
 
+import org.adempiere.exceptions.AdempiereException;
 import org.apache.commons.io.FileUtils;
 import org.compiere.model.MAttachment;
 import org.compiere.model.MAttachmentEntry;
@@ -143,6 +144,11 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
         byte[] bytes = getBytesFromFile(file_name);
 
         RespuestaSolicitud respuestasolicitud = validarComprobante(bytes);
+        if (respuestasolicitud == null) {
+        	msg = "Error falla consumiendo el servicio recepcion SRI: " + (isOnTesting ? "PRUEBAS " : "PRODUCCION");
+        	return msg;
+		}
+        		
         msg = respuestasolicitud.getEstado();
         System.out.println("@Recepcion SRI@ -> " + msg);
         Comprobantes comprobantes = respuestasolicitud.getComprobantes();
@@ -208,6 +214,13 @@ public class LEC_FE_UtilsXml extends GenericXMLSignature
         msg = null;
         System.out.println("@Authorizing Xml@ -> " + accesscode);
         RespuestaComprobante respuestacomprobante = autorizacionComprobante(accesscode);
+        
+        if (respuestacomprobante == null) {
+        	msg = "Advertencia falla consumiendo el servicio recepcion SRI: " + (isOnTesting ? "PRUEBAS " : "PRODUCCION");
+        	System.out.println(msg);
+        	throw new AdempiereException(msg);
+		}
+        
 	    Autorizaciones autorizaciones = respuestacomprobante.getAutorizaciones();
 	    // Procesar Respuesta Autorizacion SRI
 	    for (Autorizacion autorizacion : autorizaciones.getAutorizacion()) {
