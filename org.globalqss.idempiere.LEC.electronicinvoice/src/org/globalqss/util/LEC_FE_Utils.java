@@ -243,15 +243,8 @@ public class LEC_FE_Utils
 	
 		String tipoidentificacionsri = "";
 		
-		if (taxcodesri.equals("1"))
-			tipoidentificacionsri = "04"; 	// VENTA CON RUC
-		else if (taxcodesri.equals("2"))
-			tipoidentificacionsri = "05"; 	// VENTA CON CEDULA
-		else if (taxcodesri.equals("3"))
-			tipoidentificacionsri = "06";	// VENTA CON PASAPORTE
-		else if (taxcodesri.equals("4"))
-			tipoidentificacionsri = "08";	// VENTA IDENTIFICACION DEL EXTERIOR
-		else tipoidentificacionsri = "07"; 	// VENTA A CONSUMIDOR FINAL	// TODO Deprecated
+		tipoidentificacionsri = LEC_FE_Utils.fillString(2 - (LEC_FE_Utils.cutString(taxcodesri, 2)).length(), '0')
+			+ LEC_FE_Utils.cutString(taxcodesri, 2);
 		
 		return tipoidentificacionsri;
 	
