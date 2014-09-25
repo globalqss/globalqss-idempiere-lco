@@ -37,12 +37,7 @@ System.getProperty("java.io.tmpdir") + System.getProperty("file.separator")]]></
  , lo.address1 AS dirEstablecimiento
  , oi.SRI_TaxPayerCode AS contribuyenteEspecial
  , CASE WHEN oi.SRI_IsKeepAccounting = 'Y' THEN 'SI' ELSE 'NO' END AS obligadoContabilidad
- , CASE
-     WHEN tt.LEC_TaxCodeSRI = '1' THEN '04'
-     WHEN tt.LEC_TaxCodeSRI = '2' THEN '05'
-     WHEN tt.LEC_TaxCodeSRI = '3' THEN '06'
-     ELSE '07'
-   END AS tipoIdentificacionComprador
+ , tt.LEC_TaxCodeSRI AS tipoIdentificacionComprador
  , (SELECT MAX(COALESCE(io.documentno, null)) FROM M_InOut io JOIN M_InOutLine iol ON iol.M_InOut_ID = io.M_InOut_ID JOIN C_InvoiceLine il ON il.M_InOutLine_ID = iol.M_InOutLine_ID WHERE io.DocStatus IN ('CO','CL') AND il.C_Invoice_ID = i.C_Invoice_ID) AS guiaRemision
  , bp.name AS razonSocialComprador
  , bp.taxid AS identificacionComprador
