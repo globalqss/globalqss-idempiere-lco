@@ -307,15 +307,10 @@ public class LEC_FE_MInvoice extends MInvoice
 	             "SELECT COALESCE(t.LEC_TaxTypeSRI, '0') AS codigo "
 				 + ", CASE "
 				 + "    WHEN t.LEC_TaxTypeSRI = '2' THEN "
-				 + "      CASE "
-				 + "        WHEN t.istaxexempt = 'Y' THEN '7' "
-				 + "        WHEN t.rate = 0::numeric THEN '0' "
-				 + "        WHEN t.rate = 12::numeric THEN '2' "
-				 + "        ELSE '6' "
-				 + "      END "
+				 + "      COALESCE(t.LEC_TaxIvaRateSRI, 'X') "
 				 + "    WHEN t.LEC_TaxTypeSRI = '3' THEN '0000' "
 				 + "    WHEN t.LEC_TaxTypeSRI = '5' THEN '0000' "
-				 + "    ELSE '0' END AS codigoPorcentaje "
+				 + "    ELSE 'X' END AS codigoPorcentaje "
 				 + ", SUM(it.TaxBaseAmt) AS baseImponible "
 				 + ", SUM(it.TaxAmt) AS valor "
 				 + ", 0::numeric AS descuentoAdicional "
@@ -335,8 +330,8 @@ public class LEC_FE_MInvoice extends MInvoice
 			
 			while (rs.next())
 			{
-				if (rs.getString(1).equals("0")) {
-					msg = "Impuesto sin Tipo impuesto SRI";
+				if (rs.getString(1).equals("0") || rs.getString(2).equals("X") ) {
+					msg = "Impuesto sin Tipo ó Porcentaje impuesto SRI";
 					throw new AdempiereException(msg);
 				}
 				
@@ -390,15 +385,10 @@ public class LEC_FE_MInvoice extends MInvoice
 				+ ", COALESCE(t.LEC_TaxTypeSRI, '0') AS codigo "
 				+ ", CASE "
 				+ "    WHEN t.LEC_TaxTypeSRI = '2' THEN "
-				+ "      CASE "
-				+ "        WHEN t.istaxexempt = 'Y' THEN '7' "
-				+ "        WHEN t.rate = 0::numeric THEN '0' "
-				+ "        WHEN t.rate = 12::numeric THEN '2' "
-				+ "        ELSE '6' "
-				+ "      END "
+				+ "      COALESCE(t.LEC_TaxIvaRateSRI, 'X') "
 				+ "    WHEN t.LEC_TaxTypeSRI = '3' THEN '0000' "
 				+ "    WHEN t.LEC_TaxTypeSRI = '5' THEN '0000' "
-				+ "    ELSE '0' END AS codigoPorcentaje "
+				+ "    ELSE 'X' END AS codigoPorcentaje "
 				+ ", t.rate AS tarifa "
 				+ ", ilt.linenetamt AS baseImponible "
 				+ ", ROUND(ilt.linenetamt * t.rate / 100, 2) AS valor "
@@ -455,8 +445,8 @@ public class LEC_FE_MInvoice extends MInvoice
 				atts.clear();
 				//
 				mmDoc.startElement("","","impuestos",atts);
-					if (rs.getString(9).equals("0")) {
-						msg = "Impuesto sin Tipo impuesto SRI";
+				if (rs.getString(9).equals("0") || rs.getString(10).equals("X") ) {
+					msg = "Impuesto sin Tipo ó Porcentaje impuesto SRI";
 						throw new AdempiereException(msg);
 					}
 					
