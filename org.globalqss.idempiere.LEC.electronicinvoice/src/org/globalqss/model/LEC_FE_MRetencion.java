@@ -298,16 +298,12 @@ public class LEC_FE_MRetencion extends MInvoice
 				+ "    WHEN t.LEC_TaxTypeSRI = '1' THEN "
 				+ "      SUBSTRING(whr.Name,1,3) "
 				+ "    WHEN t.LEC_TaxTypeSRI = '2' THEN "
-				+ "      CASE "
-				+ "        WHEN t.Rate = 30::numeric THEN '1' "
-				+ "        WHEN t.Rate = 70::numeric THEN '2' "
-				+ "        WHEN t.Rate = 100::numeric THEN '3' "
-				+ "      END "
+				+ "      COALESCE(t.LEC_TaxIvaRetRateSRI, 'X') "
 				+ "    WHEN t.LEC_TaxTypeSRI = '6' THEN "
 				+ "      CASE "
 				+ "        WHEN t.Rate = 5::numeric THEN '4580' "
 				+ "      END "
-				+ "    ELSE '0' END AS codigoPorcentaje "
+				+ "    ELSE 'X' END AS codigoPorcentaje "
 				+ ", iwh.TaxBaseAmt AS baseImponible "
 				+ ", t.Rate AS porcentajeRetener "
 				+ ", iwh.TaxAmt AS valorRetenido "
@@ -330,8 +326,8 @@ public class LEC_FE_MRetencion extends MInvoice
 			
 			while (rs.next())
 			{
-					if (rs.getString(5).equals("0")) {
-						msg = "Impuesto sin Tipo impuesto SRI";
+				if (rs.getString(5).equals("0") || rs.getString(6).equals("X") ) {
+					msg = "Impuesto sin Tipo ó Porcentaje impuesto SRI";
 						throw new AdempiereException(msg);
 					}
 					

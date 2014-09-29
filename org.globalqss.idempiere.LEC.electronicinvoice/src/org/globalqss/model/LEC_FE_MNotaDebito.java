@@ -310,15 +310,10 @@ public class LEC_FE_MNotaDebito extends MInvoice
 				"SELECT COALESCE(t.LEC_TaxTypeSRI, '0') AS codigo "
 						 + ", CASE "
 						 + "    WHEN t.LEC_TaxTypeSRI = '2' THEN "
-						 + "      CASE "
-						 + "        WHEN t.istaxexempt = 'Y' THEN '7' "
-						 + "        WHEN t.rate = 0::numeric THEN '0' "
-						 + "        WHEN t.rate = 12::numeric THEN '2' "
-						 + "        ELSE '6' "
-						 + "      END "
+						 + "      COALESCE(t.LEC_TaxIvaRateSRI, 'X') "
 						 + "    WHEN t.LEC_TaxTypeSRI = '3' THEN '0000' "
 						 + "    WHEN t.LEC_TaxTypeSRI = '5' THEN '0000' "
-						 + "    ELSE '0' END AS codigoPorcentaje "
+						 + "    ELSE 'X' END AS codigoPorcentaje "
 						 + ", MIN(t.rate) AS tarifa "
 						 + ", SUM(it.TaxBaseAmt) AS baseImponible "
 						 + ", SUM(it.TaxAmt) AS valor "
@@ -342,8 +337,8 @@ public class LEC_FE_MNotaDebito extends MInvoice
 			
 			while (rs.next())
 			{
-					if (rs.getString(1).equals("0")) {
-						msg = "Impuesto sin Tipo impuesto SRI";
+				if (rs.getString(1).equals("0") || rs.getString(2).equals("X") ) {
+					msg = "Impuesto sin Tipo ó Porcentaje impuesto SRI";
 						throw new AdempiereException(msg);
 					}
 					
