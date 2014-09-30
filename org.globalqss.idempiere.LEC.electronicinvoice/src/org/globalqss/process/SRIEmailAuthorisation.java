@@ -220,7 +220,7 @@ public class SRIEmailAuthorisation extends SvrProcess
 			if (file.exists() || file.isFile() || file.canRead()) {
 			    
 			    // file_name = signature.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesAutorizados);
-				m_created++;
+				file_name = file.getAbsolutePath();
 			
 			}
 			
@@ -269,6 +269,7 @@ public class SRIEmailAuthorisation extends SvrProcess
 							"\nAdjunto              : " + file_name.substring(file_name.lastIndexOf(File.separator) + 1);
 						
 					int countMail = LEC_FE_Utils.notifyUsers(getCtx(), mText, authorisation.getAD_UserMail_ID(), subject, text, attachment, get_TrxName());
+					m_created++;
 					if (countMail == 0)
 						log.warning("@RequestActionEMailError@ -> " + file_name);
 				}
@@ -276,7 +277,7 @@ public class SRIEmailAuthorisation extends SvrProcess
 		
 		//
 		} catch (Exception e) {
-			msg = "No se pudo obtener autorizacion - " + e.getMessage();
+			msg = "No se pudo enviar comprobante - " + e.getMessage();
 			log.severe(msg);
 			throw new AdempiereException(msg);
 		}
@@ -305,7 +306,7 @@ public class SRIEmailAuthorisation extends SvrProcess
 			if (file.exists() || file.isFile() || file.canRead()) {
 			 
 			    // file_name = signature.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesAutorizados);
-			    m_created++;
+				file_name = file.getAbsolutePath();
 			
 			}
 			
@@ -350,6 +351,7 @@ public class SRIEmailAuthorisation extends SvrProcess
 							"\nAdjunto              : " + file_name.substring(file_name.lastIndexOf(File.separator) + 1);
 						
 					int countMail = LEC_FE_Utils.notifyUsers(getCtx(), mText, authorisation.getAD_UserMail_ID(), subject, text, attachment, get_TrxName());
+					m_created++;
 					if (countMail == 0)
 						log.warning("@RequestActionEMailError@ -> " + file_name);
 				}
@@ -357,7 +359,7 @@ public class SRIEmailAuthorisation extends SvrProcess
 		
 		//
 		} catch (Exception e) {
-			msg = "No se pudo obtener autorizacion - " + e.getMessage();
+			msg = "No se pudo enviar comprobante - " + e.getMessage();
 			log.severe(msg);
 			throw new AdempiereException(msg);
 		}
@@ -386,8 +388,8 @@ public class SRIEmailAuthorisation extends SvrProcess
 			if (file.exists() || file.isFile() || file.canRead()) {
 			 
 			    // file_name = signature.getFilename(signature, LEC_FE_UtilsXml.folderComprobantesAutorizados);
-			    m_created++;
-			
+				file_name = file.getAbsolutePath();
+							
 			}
 			
 			m_movement_id = LEC_FE_Utils.getAuthorisedMovement(authorisation.getSRI_Authorisation_ID());
@@ -431,6 +433,7 @@ public class SRIEmailAuthorisation extends SvrProcess
 							"\nAdjunto              : " + file_name.substring(file_name.lastIndexOf(File.separator) + 1);
 						
 					int countMail = LEC_FE_Utils.notifyUsers(getCtx(), mText, authorisation.getAD_UserMail_ID(), subject, text, attachment, get_TrxName());
+					m_created++;
 					if (countMail == 0)
 						log.warning("@RequestActionEMailError@ -> " + file_name);
 				}
@@ -438,7 +441,7 @@ public class SRIEmailAuthorisation extends SvrProcess
 		
 		//
 		} catch (Exception e) {
-			msg = "No se pudo obtener autorizacion - " + e.getMessage();
+			msg = "No se pudo enviar comprobante - " + e.getMessage();
 			log.severe(msg);
 			throw new AdempiereException(msg);
 		}

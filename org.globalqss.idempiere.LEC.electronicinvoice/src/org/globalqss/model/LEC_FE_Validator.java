@@ -80,6 +80,7 @@ public class LEC_FE_Validator implements ModelValidator
 		//	Tables to be monitored
 		engine.addModelChange(MInvoice.Table_Name, this);
 		engine.addModelChange(MInOut.Table_Name, this);
+		engine.addModelChange(MMovement.Table_Name, this);
 
 		//	Documents to be monitored
 		engine.addDocValidate(MInvoice.Table_Name, this);
