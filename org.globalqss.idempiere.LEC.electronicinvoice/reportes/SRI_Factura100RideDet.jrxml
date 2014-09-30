@@ -18,14 +18,12 @@
  , COALESCE(t.LEC_TaxTypeSRI, '0') AS codigo
  , CASE
      WHEN t.LEC_TaxTypeSRI = '2' THEN
-       CASE
-         WHEN t.rate = 0::numeric THEN '0'
-         WHEN t.rate = 12::numeric THEN '2'
-         ELSE '6'
-       END
+       t.LEC_TaxIvaRateSRI
      WHEN t.LEC_TaxTypeSRI = '3' THEN
        '0000'
-     ELSE '0'
+     WHEN t.LEC_TaxTypeSRI = '5' THEN
+       '0000'
+     ELSE ''
    END AS codigoPorcentaje
   , t.rate AS tarifa
   , ilt.linenetamt AS baseImponible
