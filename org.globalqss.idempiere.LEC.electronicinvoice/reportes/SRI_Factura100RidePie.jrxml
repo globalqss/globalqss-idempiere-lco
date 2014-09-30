@@ -13,14 +13,12 @@
  COALESCE(t.LEC_TaxTypeSRI, '0') AS codigo
  , CASE
      WHEN t.LEC_TaxTypeSRI = '2' THEN
-       CASE
-         WHEN t.rate = 0::numeric THEN '0'
-         WHEN t.rate = 12::numeric THEN '2'
-         ELSE '6'
-       END
+       t.LEC_TaxIvaRateSRI
      WHEN t.LEC_TaxTypeSRI = '3' THEN
        '0000'
-     ELSE '0'
+     WHEN t.LEC_TaxTypeSRI = '5' THEN
+       '0000'
+     ELSE ''
    END AS codigoPorcentaje
  , t.rate AS tarifa
  , SUM(it.TaxBaseAmt) AS Imponible
@@ -48,30 +46,30 @@ ORDER BY codigo, codigoPorcentaje]]>
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="135" splitType="Stretch">
-			<rectangle>
-				<reportElement mode="Transparent" x="0" y="0" width="242" height="134"/>
-			</rectangle>
+		<band height="167" splitType="Stretch">
 			<staticText>
-				<reportElement x="2" y="90" width="154" height="15"/>
+				<reportElement x="2" y="105" width="154" height="15"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<text><![CDATA[IVA 12%]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="2" y="60" width="154" height="15"/>
+				<reportElement x="2" y="75" width="154" height="15"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<text><![CDATA[DESCUENTO]]></text>
 			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="2" y="1" width="240" height="164"/>
+			</rectangle>
 			<staticText>
 				<reportElement x="2" y="30" width="154" height="15"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
-				<text><![CDATA[SUBTOTAL NO SUJETO DE IVA]]></text>
+				<text><![CDATA[SUBTOTAL No Objeto de IVA]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="2" y="15" width="154" height="15"/>
@@ -81,21 +79,21 @@ ORDER BY codigo, codigoPorcentaje]]>
 				<text><![CDATA[SUBTOTAL 0%]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="2" y="120" width="154" height="15"/>
+				<reportElement x="2" y="150" width="154" height="15"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<text><![CDATA[VALOR TOTAL]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="2" y="105" width="154" height="15"/>
+				<reportElement x="2" y="135" width="154" height="15"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
 				<text><![CDATA[PROPINA]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="2" y="75" width="154" height="15"/>
+				<reportElement x="2" y="90" width="154" height="15"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
@@ -136,21 +134,21 @@ ORDER BY codigo, codigoPorcentaje]]>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{imponible}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.00;-###0.00">
-				<reportElement x="155" y="60" width="86" height="15"/>
+				<reportElement x="155" y="75" width="86" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{descuento}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.00;-###0.00">
-				<reportElement x="155" y="105" width="86" height="15"/>
+				<reportElement x="155" y="135" width="86" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{propina}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.00;-###0.00">
-				<reportElement x="155" y="75" width="86" height="15">
+				<reportElement x="155" y="90" width="86" height="15">
 					<printWhenExpression><![CDATA[$F{codigo} == "3"]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
@@ -159,7 +157,7 @@ ORDER BY codigo, codigoPorcentaje]]>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{codigo}.equals("3") ? $F{valor} : new BigDecimal(0)]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.00;-###0.00">
-				<reportElement x="155" y="90" width="86" height="15">
+				<reportElement x="155" y="105" width="86" height="15">
 					<printWhenExpression><![CDATA[$F{codigo} == "2" && $F{codigoporcentaje} == "2"]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
@@ -168,7 +166,7 @@ ORDER BY codigo, codigoPorcentaje]]>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{valor}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.00;-###0.00">
-				<reportElement x="155" y="120" width="86" height="15"/>
+				<reportElement x="155" y="150" width="86" height="15"/>
 				<textElement textAlignment="Right">
 					<font size="8"/>
 				</textElement>
@@ -187,6 +185,38 @@ ORDER BY codigo, codigoPorcentaje]]>
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$P{totalsinimpuestos}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="60" width="154" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[SUBTOTAL Exento de IVA]]></text>
+			</staticText>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="156" y="60" width="86" height="15">
+					<printWhenExpression><![CDATA[$F{codigo} == "2" && $F{codigoporcentaje} == "7"]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{imponible}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="120" width="154" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[IRBPRN]]></text>
+			</staticText>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement x="156" y="120" width="86" height="15">
+					<printWhenExpression><![CDATA[$F{codigo} == "5"]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{codigo}.equals("5") ? $F{valor} : new BigDecimal(0)]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
