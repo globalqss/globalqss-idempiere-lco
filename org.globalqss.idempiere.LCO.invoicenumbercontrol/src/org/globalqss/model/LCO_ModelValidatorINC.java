@@ -87,10 +87,10 @@ public class LCO_ModelValidatorINC extends AbstractEventHandler
 			log.info("Type: " + type);
 			// on login set context variable ##LCO_CPF_USE_ON_WITHHOLDING
 			LoginEventData loginData = (LoginEventData) event.getProperty(IEventManager.EVENT_DATA);
-		    boolean isPrintedFormControlActive = MSysConfig.getBooleanValue("QSSLCO_IsPrintedFormControlActiveInvoice", true, loginData.getAD_Client_ID());
+		    boolean isPrintedFormControlActive = MSysConfig.getBooleanValue("QSSLCO_IsPrintedFormControlActiveInvoice", false, loginData.getAD_Client_ID());
 			Env.setContext(Env.getCtx(), "#LCO_CPF_USE_ON_INVOICE", isPrintedFormControlActive);
 
-			isPrintedFormControlActive = MSysConfig.getBooleanValue("QSSLEC_IsPrintedFormControlActiveWithholding", true, loginData.getAD_Client_ID());
+			isPrintedFormControlActive = MSysConfig.getBooleanValue("QSSLEC_IsPrintedFormControlActiveWithholding", false, loginData.getAD_Client_ID());
 			Env.setContext(Env.getCtx(), "#LEC_CPF_USE_ON_WITHHOLDINGS", isPrintedFormControlActive);
 			return;
 		}
@@ -136,7 +136,7 @@ public class LCO_ModelValidatorINC extends AbstractEventHandler
 
 		String msg = null;
 
-		final boolean isPrintedFormControlActive = MSysConfig.getBooleanValue("QSSLEC_IsPrintedFormControlActiveWithholding", true, Env.getAD_Client_ID(Env.getCtx()));
+		final boolean isPrintedFormControlActive = MSysConfig.getBooleanValue("QSSLEC_IsPrintedFormControlActiveWithholding", false, Env.getAD_Client_ID(Env.getCtx()));
 		boolean isActive = invoiceWithholding.isActive();
 		if(!isPrintedFormControlActive || !isActive)
 			return msg;
@@ -211,7 +211,7 @@ public class LCO_ModelValidatorINC extends AbstractEventHandler
 	private String validatePrintedFormOnInvoice(MInvoice invoice) {
 
 		String msg = null;
-		final boolean isPrintedFormControlActive = MSysConfig.getBooleanValue("QSSLCO_IsPrintedFormControlActiveInvoice", true, Env.getAD_Client_ID(Env.getCtx()));
+		final boolean isPrintedFormControlActive = MSysConfig.getBooleanValue("QSSLCO_IsPrintedFormControlActiveInvoice", false, Env.getAD_Client_ID(Env.getCtx()));
 		if (!isPrintedFormControlActive)
 			return msg;
 
