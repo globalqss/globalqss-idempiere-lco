@@ -40,11 +40,22 @@
         <AD_Client_ID>0</AD_Client_ID>
         <AD_Org_ID>0</AD_Org_ID>
         <ConfigurationLevel>C</ConfigurationLevel>
-        <Value>Y</Value>
+        <Value>N</Value>
         <Description>On Invoice window - defines if Printed Form Control is active or not</Description>
         <AD_SysConfig_UU>d64baf98-5dc6-478d-897a-661972dc3b9f</AD_SysConfig_UU>
         <IsActive>true</IsActive>
         <Name>QSSLCO_IsPrintedFormControlActiveInvoice</Name>
+        <EntityType>QSS_LCO</EntityType>
+    </AD_SysConfig>
+    <AD_SysConfig type="table">
+        <AD_Client_ID>0</AD_Client_ID>
+        <AD_Org_ID>0</AD_Org_ID>
+        <ConfigurationLevel>C</ConfigurationLevel>
+        <Value>N</Value>
+        <Description>On Withholding Invoice tab - defines if Printed Form Control is active or not</Description>
+        <AD_SysConfig_UU>70b1be94-321c-4dfd-aa0f-9ee07d6281fa</AD_SysConfig_UU>
+        <IsActive>true</IsActive>
+        <Name>QSSLEC_IsPrintedFormControlActiveWithholding</Name>
         <EntityType>QSS_LCO</EntityType>
     </AD_SysConfig>
     <AD_SysConfig type="table">
@@ -131,7 +142,7 @@
         <AD_Client_ID>0</AD_Client_ID>
         <AD_Org_ID>0</AD_Org_ID>
         <MsgType>I</MsgType>
-        <MsgText>Final sequence hast to be greater than Initial Sequence</MsgText>
+        <MsgText>Final sequence must be greater than Initial Sequence</MsgText>
         <MsgTip/>
         <EntityType>QSS_LCO</EntityType>
         <AD_Message_UU>e4ddaed8-1c22-4c28-930f-43c57c89d032</AD_Message_UU>
