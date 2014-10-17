@@ -51,17 +51,6 @@
         <AD_Client_ID>0</AD_Client_ID>
         <AD_Org_ID>0</AD_Org_ID>
         <ConfigurationLevel>C</ConfigurationLevel>
-        <Value>N</Value>
-        <Description>On Withholding Invoice tab - defines if Printed Form Control is active or not</Description>
-        <AD_SysConfig_UU>70b1be94-321c-4dfd-aa0f-9ee07d6281fa</AD_SysConfig_UU>
-        <IsActive>true</IsActive>
-        <Name>QSSLEC_IsPrintedFormControlActiveWithholding</Name>
-        <EntityType>QSS_LCO</EntityType>
-    </AD_SysConfig>
-    <AD_SysConfig type="table">
-        <AD_Client_ID>0</AD_Client_ID>
-        <AD_Org_ID>0</AD_Org_ID>
-        <ConfigurationLevel>C</ConfigurationLevel>
         <Value>15</Value>
         <Description>On Invoice window - defines the length for document number field</Description>
         <AD_SysConfig_UU>c92d9af2-e420-4fc5-bd78-15bf99a1c341</AD_SysConfig_UU>
@@ -95,7 +84,7 @@
         <AD_Client_ID>0</AD_Client_ID>
         <AD_Org_ID>0</AD_Org_ID>
         <ConfigurationLevel>C</ConfigurationLevel>
-        <Value>Y</Value>
+        <Value>N</Value>
         <Description>On withholding tab- defines if Printed Form Control is active or not</Description>
         <AD_SysConfig_UU>2d2d4e9d-c38a-4bd2-9cd5-b09aeaa45b63</AD_SysConfig_UU>
         <IsActive>true</IsActive>
