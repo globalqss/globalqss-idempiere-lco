@@ -359,6 +359,10 @@ public class LCO_MInvoice extends MInvoice
 					}
 					iwh.setTaxAmt(taxamt);
 					iwh.setTaxBaseAmt(base);
+					if (    (  isSOTrx() && MSysConfig.getBooleanValue("QSSLCO_GenerateWithholdingInactiveSO", false, getAD_Client_ID(), getAD_Org_ID()) )
+						 || ( !isSOTrx() && MSysConfig.getBooleanValue("QSSLCO_GenerateWithholdingInactivePO", false, getAD_Client_ID(), getAD_Org_ID()) )) {
+						iwh.setIsActive(false);
+					}
 					iwh.saveEx();
 					totwith = totwith.add(taxamt);
 					noins++;
