@@ -126,6 +126,14 @@ public class LCO_ValidatorDN extends AbstractEventHandler
 			return null;
 		}
 
+		// ignore the validation if the related columns have not changed
+		if ( ! ( bpartner.is_ValueChanged(MBPartner.COLUMNNAME_TaxID)
+			  || bpartner.is_ValueChanged("LCO_TaxIdType_ID")
+			  || bpartner.is_ValueChanged("TaxIdDigit")
+			   )) {
+			return null;
+		}
+
 		X_LCO_TaxIdType taxidtype = new X_LCO_TaxIdType(bpartner.getCtx(), taxidtype_I.intValue(), bpartner.get_TrxName());
 
 		bpartner.set_ValueOfColumn("IsDetailedNames", taxidtype.isDetailedNames());
