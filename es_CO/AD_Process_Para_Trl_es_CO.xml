@@ -302,4 +302,29 @@
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="200077" trl="Y">
+  <value column="Name" original="Created Since">Creado Desde</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200084" trl="Y">
+  <value column="Name" original="Use Default CoA">Usar Plan de Cuentas por Defecto</value>
+  <value column="Description" original="Use Default Chart of Accounts">Usar el Plan de Cuentas por Defecto</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200085" trl="Y">
+  <value column="Name" original="Activity Accounting">Contabilidad Actividad</value>
+  <value column="Description" original="Use Activity accounting dimension">Usar dimensión contable Actividad</value>
+  <value column="Help" original="Define if this client will use activity accounting dimension.  This can be changed later in Accounting Schema window of the client.">Define si el grupo empresarial usará la dimensión contable Actividad.  Esto se puede modificar posteriormente en la ventana Esquema Contable.</value>
+ </row>
+ <row id="200086" trl="Y">
+  <value column="Name" original="Inactivate Defaults">Inactivar Cuentas por Defecto</value>
+  <value column="Description" original="Inactivate Defaults after Created">Inactivar Cuentas por Defecto una vez se crean</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200102" trl="Y">
+  <value column="Name" original="Cost Adjustment Document Type">Tipo Document Ajuste de Costo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
 </idempiereTrl>

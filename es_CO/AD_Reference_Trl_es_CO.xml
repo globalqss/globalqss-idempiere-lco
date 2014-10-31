@@ -2522,6 +2522,26 @@
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="200080" trl="Y">
+  <value column="Name" original="M_Production">M_Production</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200083" trl="Y">
+  <value column="Name" original="AD_InfoProcess LayoutType">AD_InfoProcess LayoutType</value>
+  <value column="Description" original="Define layout type of info process button">Define layout type of info process button</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200084" trl="Y">
+  <value column="Name" original="ParentPreferenceType">ParentPreferenceType</value>
+  <value column="Description" original="Type of preference WEditor lie on (process, info window, window)">Type of preference WEditor lie on (process, info window, window)</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200092" trl="Y">
+  <value column="Name" original="Country Group">Country Group</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row trl="Y" uuid="9b146c1c-bf20-4f00-b0f0-ca7df61d037c">
   <value column="Name" original="LCO_TaxIdType.IsDigitChecked">LCO_TaxIdType.IsDigitChecked</value>
   <value column="Description" original=""/>

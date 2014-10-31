@@ -6228,6 +6228,156 @@ Imprimiendo:
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="200116" trl="Y">
+  <value column="Name" original="Available Columns">Columnas Disponibles</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="You can define on this tab which columns will be available as the print format items">Puede definir en esta pestaña cuáles columnas estarán disponibles en el formato de impresión</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200121" trl="Y">
+  <value column="Name" original="Translation">Traducción</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200122" trl="Y">
+  <value column="Name" original="Translation">Traducción</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200123" trl="Y">
+  <value column="Name" original="Translation">Traducción</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200124" trl="Y">
+  <value column="Name" original="Translation">Traducción</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200125" trl="Y">
+  <value column="Name" original="Translation">Traducción</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200126" trl="Y">
+  <value column="Name" original="Translation">Traducción</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200127" trl="Y">
+  <value column="Name" original="Translation">Traducción</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200128" trl="Y">
+  <value column="Name" original="Translation">Traducción</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200129" trl="Y">
+  <value column="Name" original="Translation">Traducción</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200130" trl="Y">
+  <value column="Name" original="Translation">Traducción</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200131" trl="Y">
+  <value column="Name" original="Translation">Traducción</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200132" trl="Y">
+  <value column="Name" original="Translation">Traducción</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200133" trl="Y">
+  <value column="Name" original="Translation">Traducción</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200134" trl="Y">
+  <value column="Name" original="Translation">Traducción</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200137" trl="Y">
+  <value column="Name" original="Attributes">Atributos</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Product Instance Attribute Material Allocation">Atributos de Instancia de Productos Asignación de Material</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200138" trl="Y">
+  <value column="Name" original="Attributes">Atributos</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Product Instance Attribute Material Allocation">Atributos de Instancia de Productos Asignación de Material</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200142" trl="Y">
+  <value column="Name" original="Process">Proceso</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200143" trl="Y">
+  <value column="Name" original="Translate">Traducción</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200144" trl="Y">
+  <value column="Name" original="Role Access">Acceso Rol</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200154" trl="Y">
+  <value column="Name" original="Recurring Group">Grupo Recurrente</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200156" trl="Y">
+  <value column="Name" original="Country Group">Grupo de Países</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200157" trl="Y">
+  <value column="Name" original="Country">País</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200158" trl="Y">
+  <value column="Name" original="Country Group">Grupo de Países</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200159" trl="Y">
+  <value column="Name" original="Translation">Traducción</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row trl="Y" uuid="0545cbb1-ef68-4e60-b6f6-a9ca4d726b28">
   <value column="Name" original="TaxId Type">Tipo Identificación</value>
   <value column="CommitWarning" original=""/>

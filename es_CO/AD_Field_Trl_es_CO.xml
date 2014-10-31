@@ -736,4 +736,19 @@ Las fechas Válido desde y Válido hasta indican el período de tiempo a utiliza
   <value column="Description" original="Purchase Order Line">Línea Orden Compra</value>
   <value column="Help" original="The Purchase Order Line is a unique identifier for a line in an order.">La línea de orden de compra es un identificador único para una línea en una orden</value>
  </row>
+ <row id="203108" trl="Y">
+  <value column="Name" original="ViewID Column">Columna ID de Vista</value>
+  <value column="Description" original="Name of unique column in a view. value of this column will save to t_selection table">Nombre de la columna única en una vista.  El valor de esta columna se guardará en la tabla T_Selection</value>
+  <value column="Help" original="Column to resolve issue in https://idempiere.atlassian.net/browse/IDEMPIERE-1970"></value>
+ </row>
+ <row id="203325" trl="Y">
+  <value column="Name" original="Country Group">Grupo de Países</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="203326" trl="Y">
+  <value column="Name" original="To">Hacia</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
 </idempiereTrl>

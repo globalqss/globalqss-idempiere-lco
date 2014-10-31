@@ -1111,7 +1111,7 @@ Problema: </value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="377" trl="Y">
-  <value column="MsgText" original="{0} Line(s) - {1,number,#,##0.00} -  Total: {2,number,#,##0.00}  {3}  =  {4,number,#,##0.00}">{0} Línea(s) - {1,number,#,##0.00} -  Total: {2,number,#,##0.00}  {3} =  {4,number,#,##0.00}</value>
+  <value column="MsgText" original="{0,choice,0#No Lines|1#1 Line|1&lt;{0} Lines} - {1,number,#,##0.00} - Total: {2,number,#,##0.00} {3} = {4,number,#,##0.00}">{0,choice,0#No hay líneas|1#1 Línea|1&lt;{0} Líneas} - {1,number,#,##0.00} - Total: {2,number,#,##0.00} {3} = {4,number,#,##0.00}</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="378" trl="Y">
@@ -1954,7 +1954,7 @@ Detalles: </value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="585" trl="Y">
-  <value column="MsgText" original="Is the payment print correct ?">¿Esta la impresión del pago correcta?</value>
+  <value column="MsgText" original="Is the payment print correct ?   If answered yes, then it will create and complete payments.">¿Esta la impresión del pago correcta?  Si la respuesta es positiva, entonces se crearán y completarán los pagos.</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="586" trl="Y">
@@ -6422,6 +6422,18 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgText" original="more">más</value>
   <value column="MsgTip" original=""/>
  </row>
+ <row id="200240" trl="Y">
+  <value column="MsgText" original="Last Run">Ultimas Ejecuciones</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200241" trl="Y">
+  <value column="MsgText" original="Saved Parameters">Parámetros Guardados</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200242" trl="Y">
+  <value column="MsgText" original="Could not save parameters.">No pude guardar los parámetros</value>
+  <value column="MsgTip" original=""/>
+ </row>
  <row id="200243" trl="Y">
   <value column="MsgText" original="Price list cannot be changed because the order contains product lines">La lista de precios no puede modificarse porque la orden contiene líneas de producto</value>
   <value column="MsgTip" original=""/>
@@ -6482,6 +6494,26 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgText" original="DR/CR">DB/CR</value>
   <value column="MsgTip" original=""/>
  </row>
+ <row id="200263" trl="Y">
+  <value column="MsgText" original="Exceed maximum number of running jobs allowed per user">Se excedió el máximo número de tareas en segundo plano permitidas por usuario</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200264" trl="Y">
+  <value column="MsgText" original="Exceed maximum number of running jobs allowed per client">Se excedió el máximo número de tareas en segundo plano permitidas por grupo empresarial</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200265" trl="Y">
+  <value column="MsgText" original="Exceed maximum number of running jobs allowed in the system">Se excedió el máximo número de tareas en segundo plano permitidas en el sistema</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200266" trl="Y">
+  <value column="MsgText" original="The process has been scheduled as job. The status of the process will be sent as notification to owner of the process.">El proceso se ha agendado como una tarea de segundo plano.  El resultado del proceso será enviado como notificación al usuario que lo ejecutó</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200267" trl="Y">
+  <value column="MsgText" original="Background Job">Tarea en segundo plano</value>
+  <value column="MsgTip" original=""/>
+ </row>
  <row id="200268" trl="Y">
   <value column="MsgText" original="System is in maintenance mode, please wait until the access is restored.">El sistema se encuentra en mantenimiento, por favor esperar hasta que se restablezca el acceso.</value>
   <value column="MsgTip" original=""/>
@@ -6490,12 +6522,36 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgText" original="You cannot access process {0} with your role : {1}">No puede ejecutar el proceso {0} con su rol: {1}</value>
   <value column="MsgTip" original=""/>
  </row>
+ <row id="200270" trl="Y">
+  <value column="MsgText" original="More than line qty on attribute tab for line ">Más que la cantidad de la línea en la pestaña atributo para línea </value>
+  <value column="MsgTip" original=""/>
+ </row>
  <row id="200271" trl="Y">
   <value column="MsgText" original="Tabs">Pestañas</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="200272" trl="Y">
   <value column="MsgText" original="Fields">Campos</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200273" trl="Y">
+  <value column="MsgText" original="Add default mail text content">Añadir contenido del correo por defecto</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200274" trl="Y">
+  <value column="MsgText" original="Your search returned more than the maximum number of results allowed.&lt;br&gt;Please narrow down your search criteria and try your search again."><![CDATA[Su búsqueda resultó en más registros que el máximo permitido.<br>Por favor delimite su criterio de búsqueda e intente nuevamente.]]></value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200275" trl="Y">
+  <value column="MsgText" original="Process Menu">Menú de Proceso</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200303" trl="Y">
+  <value column="MsgText" original="Select tab to export">Seleccione las pestañas a exportar</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200306" trl="Y">
+  <value column="MsgText" original="This process creates and complete payments automatically, do you want to print and at the same time create/complete payments?">Este proceso crea y completa pagos automáticamente.  ¿Desea imprimir y al mismo tiempo crear/completar los pagos?</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="520010" trl="Y">
