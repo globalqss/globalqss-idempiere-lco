@@ -37,4 +37,9 @@
   <value column="Description" original="Menu">Menú</value>
   <value column="HTML" original=""/>
  </row>
+ <row id="200002" trl="Y">
+  <value column="Name" original="Running Jobs">Tareas en Segundo Plano</value>
+  <value column="Description" original="Running Jobs">Tareas en Segundo Plano</value>
+  <value column="HTML" original=""/>
+ </row>
 </idempiereTrl>

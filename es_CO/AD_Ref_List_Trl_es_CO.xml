@@ -5378,6 +5378,34 @@
   <value column="Name" original="Set Null">Fijar Nulo</value>
   <value column="Description" original=""/>
  </row>
+ <row id="200176" trl="Y">
+  <value column="Name" original="UPC-A">UPC-A</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200185" trl="Y">
+  <value column="Name" original="Button">Botón</value>
+  <value column="Description" original="Display as button">Desplegar como botón</value>
+ </row>
+ <row id="200186" trl="Y">
+  <value column="Name" original="Menu">Menú</value>
+  <value column="Description" original="Display as menu on a gear button">Desplegar como un menú en un botón de proceso</value>
+ </row>
+ <row id="200187" trl="Y">
+  <value column="Name" original="List">Lista</value>
+  <value column="Description" original="Display as list">Desplegar como lista</value>
+ </row>
+ <row id="200188" trl="Y">
+  <value column="Name" original="Window">Ventana</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200189" trl="Y">
+  <value column="Name" original="Process">Proceso</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200278" trl="Y">
+  <value column="Name" original="Model Cascade">Cascada en el Modelo</value>
+  <value column="Description" original=""/>
+ </row>
  <row trl="Y" uuid="dbc98c55-3b9e-4f9b-9d50-f29596ba706d">
   <value column="Name" original="Check">Validar</value>
   <value column="Description" original="Check against typed digit">Validar contra el dígito ingresado</value>

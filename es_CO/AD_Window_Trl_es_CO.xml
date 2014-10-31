@@ -2059,6 +2059,21 @@ y otros</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="200054" trl="Y">
+  <value column="Name" original="Dummy">Dummy</value>
+  <value column="Description" original="This window if for save preference for process parameter panel and info window in case open from menu (stand alone window)">Esta ventana es para guardar las preferencias en el panel de parámetro de proceso y ventanas info en caso que se abran desde el menú</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200059" trl="Y">
+  <value column="Name" original="Recurring Group">Grupo Recurrente</value>
+  <value column="Description" original="Recurring Group">Grupo Recurrente</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200061" trl="Y">
+  <value column="Name" original="Country Group">Grupo de Países</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row trl="Y" uuid="ecd46492-ebb1-410a-8627-44df151cdfbb">
   <value column="Name" original="TaxId Type">Tipo Identificación</value>
   <value column="Description" original=""/>
