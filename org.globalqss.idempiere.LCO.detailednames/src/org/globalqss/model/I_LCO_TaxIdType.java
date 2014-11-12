@@ -23,7 +23,7 @@ import org.compiere.util.KeyNamePair;
 
 /** Generated Interface for LCO_TaxIdType
  *  @author iDempiere (generated) 
- *  @version Release 2.0
+ *  @version Release 2.1
  */
 @SuppressWarnings("all")
 public interface I_LCO_TaxIdType 
@@ -187,6 +187,28 @@ public interface I_LCO_TaxIdType
 
 	/** Get LCO_TaxIdType_UU	  */
 	public String getLCO_TaxIdType_UU();
+
+    /** Column name MaxLength */
+    public static final String COLUMNNAME_MaxLength = "MaxLength";
+
+	/** Set Maximum Length.
+	  * Maximum Length of Data
+	  */
+	public void setMaxLength (int MaxLength);
+
+	/** Get Maximum Length.
+	  * Maximum Length of Data
+	  */
+	public int getMaxLength();
+
+    /** Column name MinLength */
+    public static final String COLUMNNAME_MinLength = "MinLength";
+
+	/** Set Minimum Length	  */
+	public void setMinLength (int MinLength);
+
+	/** Get Minimum Length	  */
+	public int getMinLength();
 
     /** Column name Name */
     public static final String COLUMNNAME_Name = "Name";

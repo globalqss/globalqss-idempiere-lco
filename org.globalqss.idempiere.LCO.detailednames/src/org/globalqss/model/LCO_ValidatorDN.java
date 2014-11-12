@@ -139,13 +139,22 @@ public class LCO_ValidatorDN extends AbstractEventHandler
 		bpartner.set_ValueOfColumn("IsDetailedNames", taxidtype.isDetailedNames());
 		bpartner.set_ValueOfColumn("IsUseTaxIdDigit", taxidtype.isUseTaxIdDigit());
 
+		String taxid = bpartner.getTaxID();
+
+		// Validate length
+		int lentaxid = 0;
+		if (taxid != null)
+			lentaxid = taxid.length();
+		if (   (taxidtype.getMinLength() > 0 && lentaxid < taxidtype.getMinLength())
+			|| (taxidtype.getMaxLength() > 0 && lentaxid > taxidtype.getMaxLength()))
+			return Msg.getMsg(bpartner.getCtx(), "LEC_TaxIDWrongLength");
+
+		// Validate check digit
 		if (!taxidtype.isUseTaxIdDigit()) {
 			bpartner.set_ValueOfColumn("TaxIdDigit", null);
 			return null;
 		}
 
-		// Is Juridical
-		String taxid = bpartner.getTaxID();
 		if (taxid == null || taxid.trim().length() == 0)
 			return Msg.getMsg(bpartner.getCtx(), "LCO_NoTaxID");
 

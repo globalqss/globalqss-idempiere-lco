@@ -24,14 +24,14 @@ import org.compiere.util.KeyNamePair;
 
 /** Generated Model for LCO_TaxIdType
  *  @author iDempiere (generated) 
- *  @version Release 2.0 - $Id$ */
+ *  @version Release 2.1 - $Id$ */
 public class X_LCO_TaxIdType extends PO implements I_LCO_TaxIdType, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20140225L;
+	private static final long serialVersionUID = 20141111L;
 
     /** Standard Constructor */
     public X_LCO_TaxIdType (Properties ctx, int LCO_TaxIdType_ID, String trxName)
@@ -90,9 +90,9 @@ public class X_LCO_TaxIdType extends PO implements I_LCO_TaxIdType, I_Persistent
 	public void setC_Country_ID (int C_Country_ID)
 	{
 		if (C_Country_ID < 1) 
-			set_ValueNoCheck (COLUMNNAME_C_Country_ID, null);
+			set_Value (COLUMNNAME_C_Country_ID, null);
 		else 
-			set_ValueNoCheck (COLUMNNAME_C_Country_ID, Integer.valueOf(C_Country_ID));
+			set_Value (COLUMNNAME_C_Country_ID, Integer.valueOf(C_Country_ID));
 	}
 
 	/** Get Country.
@@ -256,6 +256,43 @@ public class X_LCO_TaxIdType extends PO implements I_LCO_TaxIdType, I_Persistent
 	public String getLCO_TaxIdType_UU () 
 	{
 		return (String)get_Value(COLUMNNAME_LCO_TaxIdType_UU);
+	}
+
+	/** Set Maximum Length.
+		@param MaxLength 
+		Maximum Length of Data
+	  */
+	public void setMaxLength (int MaxLength)
+	{
+		set_Value (COLUMNNAME_MaxLength, Integer.valueOf(MaxLength));
+	}
+
+	/** Get Maximum Length.
+		@return Maximum Length of Data
+	  */
+	public int getMaxLength () 
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_MaxLength);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
+	}
+
+	/** Set Minimum Length.
+		@param MinLength Minimum Length	  */
+	public void setMinLength (int MinLength)
+	{
+		set_Value (COLUMNNAME_MinLength, Integer.valueOf(MinLength));
+	}
+
+	/** Get Minimum Length.
+		@return Minimum Length	  */
+	public int getMinLength () 
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_MinLength);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 
 	/** Set Name.
