@@ -81,8 +81,12 @@ public class LCO_Callouts implements IColumnCalloutFactory
 			GridTab mTab, GridField mField, Object value, Object oldValue)
 	{
 		log.info("");
-		String isDigitChecked = Env.getContext(ctx, WindowNo, "IsDigitChecked", true) ;
-
+		String isUseTaxIdDigit = Env.getContext(ctx, WindowNo, "IsUseTaxIdDigit", true);
+		if (!"Y".equals(isUseTaxIdDigit))
+			return "";
+		
+		String isDigitChecked = Env.getContext(ctx, WindowNo, "IsDigitChecked", true);
+		
 		// if IsDigitChecked validate it and return error if different
 		if (!X_LCO_TaxIdType.ISDIGITCHECKED_Check.equals(isDigitChecked))
 			return "";
@@ -172,15 +176,17 @@ public class LCO_Callouts implements IColumnCalloutFactory
 		
 		if (value != null && value.toString().trim().length() > 0) {
 			
-			// Generate and fill digit if IsDigitChecked = C
-			String isDigitChecked = Env.getContext(ctx, WindowNo, "IsDigitChecked", true) ;
-			if (isDigitChecked.equals(X_LCO_TaxIdType.ISDIGITCHECKED_Callout)) {
-				int correctDigit = LCO_Utils.calculateDigit(value.toString(), Env.getContextAsInt(ctx, WindowNo, "LCO_TaxIdType_ID"));
-				if (correctDigit == -1) // Error on the Tax ID - possibly invalid characters
-					mTab.setValue("TaxIdDigit", "");
-				else
-					mTab.setValue("TaxIdDigit", String.valueOf(correctDigit));
-
+			String isUseTaxIdDigit = Env.getContext(ctx, WindowNo, "IsUseTaxIdDigit", true);
+			if ("Y".equals(isUseTaxIdDigit)) {
+				// Generate and fill digit if IsDigitChecked = C
+				String isDigitChecked = Env.getContext(ctx, WindowNo, "IsDigitChecked", true) ;
+				if (isDigitChecked.equals(X_LCO_TaxIdType.ISDIGITCHECKED_Callout)) {
+					int correctDigit = LCO_Utils.calculateDigit(value.toString(), Env.getContextAsInt(ctx, WindowNo, "LCO_TaxIdType_ID"));
+					if (correctDigit == -1) // Error on the Tax ID - possibly invalid characters
+						mTab.setValue("TaxIdDigit", "");
+					else
+						mTab.setValue("TaxIdDigit", String.valueOf(correctDigit));
+				}
 			}
 			
 		}

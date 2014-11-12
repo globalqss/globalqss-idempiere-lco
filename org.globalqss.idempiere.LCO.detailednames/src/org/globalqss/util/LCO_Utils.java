@@ -25,13 +25,13 @@
 
 package org.globalqss.util;
 
+import org.adempiere.base.Service;
+import org.adempiere.base.ServiceQuery;
 import org.adempiere.exceptions.AdempiereException;
 import org.compiere.model.MCountry;
 import org.compiere.model.MSysConfig;
-import org.compiere.util.AdempiereUserError;
 import org.compiere.util.Env;
 import org.compiere.util.Msg;
-import org.compiere.util.Util;
 import org.globalqss.model.X_LCO_TaxIdType;
 
 /**
@@ -56,21 +56,13 @@ public class LCO_Utils
 		if (taxidtype.getC_Country_ID() <= 0)
 			throw new AdempiereException(Msg.getMsg(Env.getCtx(), "LCO_CountryRequired"));
 		MCountry country = MCountry.get(Env.getCtx(), taxidtype.getC_Country_ID());
-		String className = country.get_ValueAsString("LCO_TaxIDDigitClass");
-		if (Util.isEmpty(className))
-			throw new AdempiereException(Msg.getMsg(Env.getCtx(), "LCO_ValidationClassRequired"));
-
 		//	Get TaxIDDigit Class
-		ILCO_TaxIDDigit custom = null;
-		try
-		{
-			Class<?> clazz = Class.forName(className);
-			custom = (ILCO_TaxIDDigit)clazz.newInstance();
-		} catch (Exception e) {
-			throw new AdempiereUserError("No custom TaxID Digit class "
-					+ className + " - " + e.toString());
-		}
-
+		ServiceQuery query = new ServiceQuery();
+		String countryCode = country.getCountryCode();
+		query.put("country", countryCode);
+		ILCO_TaxIDDigit custom = Service.locator().locate(ILCO_TaxIDDigit.class, query).getService();			
+		if (custom == null)
+			throw new AdempiereException("No ILCO_TaxIDDigit provider found for country " + countryCode);
 		return custom.calculateDigit(taxID, taxidtype_id);
 	}	// calculateDigit
 

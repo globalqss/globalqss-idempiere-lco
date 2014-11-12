@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Localization Colombia - Detailed Names
 Bundle-SymbolicName: org.globalqss.idempiere.LCO.detailednames;singleton:=true
-Bundle-Version: 2.1.0.qualifier
+Bundle-Version: 2.1.1.qualifier
 Bundle-Activator: org.adempiere.plugin.utils.AdempiereActivator
 Bundle-Vendor: GlobalQSS
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
@@ -12,5 +12,7 @@ Export-Package: org.globalqss.model,
  org.globalqss.util
 Service-Component: OSGI-INF/lco_modelfactorydn.xml,
  OSGI-INF/lco_calloutfactorydn.xml,
- OSGI-INF/lco_validatordn.xml
+ OSGI-INF/lco_validatordn.xml,
+ OSGI-INF/taxidtype_CO.xml,
+ OSGI-INF/taxidtype_EC.xml
 Import-Package: org.osgi.service.event

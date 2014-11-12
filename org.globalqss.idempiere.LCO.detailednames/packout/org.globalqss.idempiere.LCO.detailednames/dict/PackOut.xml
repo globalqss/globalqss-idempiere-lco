@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<idempiere Name="org.globalqss.idempiere.LCO.detailednames" Version="2.1.0" idempiereVersion="" DataBaseVersion="" Description="Localization Colombia - detailed names on business partner" Author="" AuthorEmail="info@globalqss.com" CreatedDate="2013-11-19 00:33:58.093" UpdatedDate="2014-02-25 17:55:49.237" PackOutVersion="100" UpdateDictionary="false" Client="0-SYSTEM-System" AD_Client_UU="11237b53-9592-4af1-b3c5-afd216514b5d">
+<idempiere Name="org.globalqss.idempiere.LCO.detailednames" Version="2.1.1" idempiereVersion="" DataBaseVersion="" Description="Localization Colombia - detailed names on business partner" Author="" AuthorEmail="info@globalqss.com" CreatedDate="2013-11-19 00:33:58.093" UpdatedDate="2014-02-25 17:55:49.237" PackOutVersion="100" UpdateDictionary="false" Client="0-SYSTEM-System" AD_Client_UU="11237b53-9592-4af1-b3c5-afd216514b5d">
     <AD_EntityType type="table">
         <AD_Client_ID>0</AD_Client_ID>
         <AD_Org_ID>0</AD_Org_ID>
@@ -2873,10 +2873,10 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Tab_ID reference="uuid" reference-key="AD_Tab">0545cbb1-ef68-4e60-b6f6-a9ca4d726b28</AD_Tab_ID>
                             <AD_Val_Rule_ID reference="id"/>
                             <ColumnSpan>1</ColumnSpan>
-                            <DefaultValue/>
+                            <DefaultValue>-1</DefaultValue>
                             <Description>Country </Description>
                             <DisplayLength>10</DisplayLength>
-                            <DisplayLogic>@#LCO_USE_DETAILED_NAMES@=Y</DisplayLogic>
+                            <DisplayLogic>@IsUseTaxIdDigit@=Y &amp; @#LCO_USE_DETAILED_NAMES@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
                             <Help>The Country defines a Country.  Each Country must be defined before it can be used in any document.</Help>
                             <Included_Tab_ID reference="id"/>
@@ -3296,164 +3296,4 @@ There are two reasons for de-activating and not deleting records:
         <Name>QSSLEC_Allow10DigitDoc</Name>
         <Value>Y</Value>
     </AD_SysConfig>
-    <AD_Element type="table">
-        <AD_Client_ID>0</AD_Client_ID>
-        <AD_Org_ID>0</AD_Org_ID>
-        <AD_Element_UU>994546dd-dd1e-47ec-9a47-26eb5b04d290</AD_Element_UU>
-        <ColumnName>LCO_TaxIDDigitClass</ColumnName>
-        <Description>Tax ID Digit Generation Class must implement interface ILCO_TaxIDDigit</Description>
-        <EntityType>QSS_LCO</EntityType>
-        <Help/>
-        <IsActive>true</IsActive>
-        <Name>Tax ID Digit Generation Class</Name>
-        <PO_Description/>
-        <PO_Help/>
-        <PO_Name/>
-        <PO_PrintName/>
-        <PrintName trim="false">Tax ID Digit Generation Class</PrintName>
-        <AD_Element_Trl type="translation">
-            <Description>Clase Generación Dígito Verificación - debe implementar la interface ILCO_TaxIDDigit</Description>
-            <Help/>
-            <Name>Clase Generación Dígito Verificación</Name>
-            <PO_Description/>
-            <PO_Help/>
-            <PO_Name/>
-            <PO_PrintName/>
-            <PrintName trim="false">Clase Generación Dígito Verificación</PrintName>
-            <AD_Language>es_CO</AD_Language>
-            <IsActive>true</IsActive>
-            <IsTranslated>true</IsTranslated>
-        </AD_Element_Trl>
-    </AD_Element>
-    <AD_Column type="table">
-        <IsSyncDatabase>Y</IsSyncDatabase>
-        <AD_Table_ID reference="id">170</AD_Table_ID>
-        <AD_Reference_Value_ID reference="id"/>
-        <AD_Client_ID>0</AD_Client_ID>
-        <AD_Org_ID>0</AD_Org_ID>
-        <AD_Chart_ID reference="id"/>
-        <AD_Column_UU>f1112696-eebf-4c80-ad84-8e4d61a779cd</AD_Column_UU>
-        <AD_Element_ID reference="uuid" reference-key="AD_Element">994546dd-dd1e-47ec-9a47-26eb5b04d290</AD_Element_ID>
-        <AD_Process_ID reference="id"/>
-        <AD_Reference_ID reference="id">10</AD_Reference_ID>
-        <AD_Val_Rule_ID reference="id"/>
-        <Callout/>
-        <ColumnName>LCO_TaxIDDigitClass</ColumnName>
-        <ColumnSQL/>
-        <DefaultValue/>
-        <Description>Tax ID Digit Generation Class must implement interface ILCO_TaxIDDigit</Description>
-        <EntityType>QSS_LCO</EntityType>
-        <FieldLength>255</FieldLength>
-        <FKConstraintName/>
-        <FKConstraintType>N</FKConstraintType>
-        <FormatPattern/>
-        <Help/>
-        <IsActive>true</IsActive>
-        <IsAllowCopy>true</IsAllowCopy>
-        <IsAllowLogging>true</IsAllowLogging>
-        <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
-        <IsAutocomplete>false</IsAutocomplete>
-        <IsEncrypted>N</IsEncrypted>
-        <IsIdentifier>false</IsIdentifier>
-        <IsKey>false</IsKey>
-        <IsMandatory>false</IsMandatory>
-        <IsParent>false</IsParent>
-        <IsSecure>true</IsSecure>
-        <IsSelectionColumn>false</IsSelectionColumn>
-        <IsToolbarButton>false</IsToolbarButton>
-        <IsTranslated>false</IsTranslated>
-        <IsUpdateable>true</IsUpdateable>
-        <MandatoryLogic/>
-        <Name>Tax ID Digit Generation Class</Name>
-        <ReadOnlyLogic/>
-        <SeqNo>0</SeqNo>
-        <SeqNoSelection>0</SeqNoSelection>
-        <ValueMax/>
-        <ValueMin/>
-        <Version>0</Version>
-        <VFormat/>
-    </AD_Column>
-    <AD_Field type="table">
-        <AD_Client_ID>0</AD_Client_ID>
-        <AD_Org_ID>0</AD_Org_ID>
-        <AD_Column_ID reference="uuid" reference-key="AD_Column">f1112696-eebf-4c80-ad84-8e4d61a779cd</AD_Column_ID>
-        <AD_FieldGroup_ID reference="id"/>
-        <AD_Field_UU>9d9c465a-f0ee-4436-9101-60e2147d3d84</AD_Field_UU>
-        <AD_Reference_ID reference="id"/>
-        <AD_Reference_Value_ID reference="id"/>
-        <AD_Tab_ID reference="id">135</AD_Tab_ID>
-        <AD_Val_Rule_ID reference="id"/>
-        <ColumnSpan>5</ColumnSpan>
-        <DefaultValue/>
-        <Description>Tax ID Digit Generation Class must implement interface ILCO_TaxIDDigit</Description>
-        <DisplayLength>0</DisplayLength>
-        <DisplayLogic>@#LCO_USE_DETAILED_NAMES@=Y</DisplayLogic>
-        <EntityType>QSS_LCO</EntityType>
-        <Help/>
-        <Included_Tab_ID reference="id"/>
-        <IsActive>true</IsActive>
-        <IsAdvancedField>false</IsAdvancedField>
-        <IsAllowCopy/>
-        <IsAlwaysUpdateable/>
-        <IsCentrallyMaintained>true</IsCentrallyMaintained>
-        <IsDefaultFocus>false</IsDefaultFocus>
-        <IsDisplayed>true</IsDisplayed>
-        <IsDisplayedGrid>true</IsDisplayedGrid>
-        <IsEncrypted>false</IsEncrypted>
-        <IsFieldOnly>false</IsFieldOnly>
-        <IsHeading>false</IsHeading>
-        <IsMandatory/>
-        <IsQuickEntry>false</IsQuickEntry>
-        <IsReadOnly>false</IsReadOnly>
-        <IsSameLine>false</IsSameLine>
-        <IsToolbarButton/>
-        <IsUpdateable/>
-        <MandatoryLogic/>
-        <Name>Tax ID Digit Generation Class</Name>
-        <NumLines>1</NumLines>
-        <ObscureType/>
-        <ReadOnlyLogic/>
-        <SeqNo>285</SeqNo>
-        <SeqNoGrid>285</SeqNoGrid>
-        <SortNo>0</SortNo>
-        <XPosition>1</XPosition>
-        <AD_Field_Trl type="translation">
-            <Description>Clase Generación Dígito Verificación - debe implementar la interface ILCO_TaxIDDigit</Description>
-            <Help/>
-            <Name>Clase Generación Dígito Verificación</Name>
-            <AD_Language>es_CO</AD_Language>
-            <IsActive>true</IsActive>
-            <IsTranslated>true</IsTranslated>
-        </AD_Field_Trl>
-    </AD_Field>
-    <C_Country type="table">
-        <AD_Client_ID>0</AD_Client_ID>
-        <AD_Org_ID>0</AD_Org_ID>
-        <C_Country_ID>171</C_Country_ID>
-        <C_Country_UU>919c7b9e-3648-4530-bd58-b6c3f4be8c8f</C_Country_UU>
-        <LCO_TaxIDDigitClass>org.globalqss.util.LEC_TaxIDDigit</LCO_TaxIDDigitClass>
-        <C_Country_Trl type="translation">
-            <Description>Ecuador</Description>
-            <Name>Ecuador</Name>
-            <RegionName/>
-            <AD_Language>es_CO</AD_Language>
-            <IsActive>true</IsActive>
-            <IsTranslated>true</IsTranslated>
-        </C_Country_Trl>
-    </C_Country>
-    <C_Country type="table">
-        <AD_Client_ID>0</AD_Client_ID>
-        <AD_Org_ID>0</AD_Org_ID>
-        <C_Country_ID>156</C_Country_ID>
-        <C_Country_UU>b4a8a931-4a9f-4074-b217-9c7c9c23d7e7</C_Country_UU>
-        <LCO_TaxIDDigitClass>org.globalqss.util.LCO_TaxIDDigit</LCO_TaxIDDigitClass>
-        <C_Country_Trl type="translation">
-            <Description>Colombia</Description>
-            <Name>Colombia</Name>
-            <RegionName>Departamento</RegionName>
-            <AD_Language>es_CO</AD_Language>
-            <IsActive>true</IsActive>
-            <IsTranslated>true</IsTranslated>
-        </C_Country_Trl>
-    </C_Country>
 </idempiere>
