@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<idempiere Name="org.globalqss.idempiere.LCO.detailednames" Version="2.1.1" idempiereVersion="" DataBaseVersion="" Description="Localization Colombia - detailed names on business partner" Author="" AuthorEmail="info@globalqss.com" CreatedDate="2013-11-19 00:33:58.093" UpdatedDate="2014-02-25 17:55:49.237" PackOutVersion="100" UpdateDictionary="false" Client="0-SYSTEM-System" AD_Client_UU="11237b53-9592-4af1-b3c5-afd216514b5d">
+<idempiere Name="org.globalqss.idempiere.LCO.detailednames" Version="2.1.1" idempiereVersion="" DataBaseVersion="" Description="Localization Colombia - detailed names on business partner" Author="" AuthorEmail="info@globalqss.com" CreatedDate="2013-11-19 00:33:58.093" UpdatedDate="2014-11-11 19:34:27.367" PackOutVersion="100" UpdateDictionary="false" Client="0-SYSTEM-System" AD_Client_UU="11237b53-9592-4af1-b3c5-afd216514b5d">
     <AD_EntityType type="table">
         <AD_Client_ID>0</AD_Client_ID>
         <AD_Org_ID>0</AD_Org_ID>
@@ -302,12 +302,6 @@
             <IsTranslated>true</IsTranslated>
         </AD_Message_Trl>
     </AD_Message>
-    <AD_Column type="table">
-        <AD_Column_ID>2902</AD_Column_ID>
-        <ColumnName>Name</ColumnName>
-        <EntityType>QSS_LCO</EntityType>
-        <ReadOnlyLogic>@IsDetailedNames@=Y &amp; @#LCO_USE_DETAILED_NAMES@=Y</ReadOnlyLogic>
-    </AD_Column>
     <AD_Element type="table">
         <AD_Client_ID>0</AD_Client_ID>
         <AD_Org_ID>0</AD_Org_ID>
@@ -322,7 +316,7 @@
         <PO_Help/>
         <PO_Name/>
         <PO_PrintName/>
-        <PrintName trim="false">Tax ID Type</PrintName>
+        <PrintName>Tax ID Type</PrintName>
         <AD_Element_Trl type="translation">
             <Description/>
             <Help/>
@@ -331,7 +325,7 @@
             <PO_Help/>
             <PO_Name/>
             <PO_PrintName/>
-            <PrintName trim="false">Tipo Documento</PrintName>
+            <PrintName>Tipo Documento</PrintName>
             <AD_Language>es_CO</AD_Language>
             <IsActive>true</IsActive>
             <IsTranslated>true</IsTranslated>
@@ -399,7 +393,7 @@
         <PO_Help/>
         <PO_Name/>
         <PO_PrintName/>
-        <PrintName trim="false">Tax ID Digit</PrintName>
+        <PrintName>Tax ID Digit</PrintName>
         <AD_Element_Trl type="translation">
             <Description/>
             <Help/>
@@ -408,7 +402,7 @@
             <PO_Help/>
             <PO_Name/>
             <PO_PrintName/>
-            <PrintName trim="false">Dígito Verificación</PrintName>
+            <PrintName>Dígito Verificación</PrintName>
             <AD_Language>es_CO</AD_Language>
             <IsActive>true</IsActive>
             <IsTranslated>true</IsTranslated>
@@ -476,7 +470,7 @@
         <PO_Help/>
         <PO_Name/>
         <PO_PrintName/>
-        <PrintName trim="false">Use Tax Id Digit</PrintName>
+        <PrintName>Use Tax Id Digit</PrintName>
         <AD_Element_Trl type="translation">
             <Description/>
             <Help/>
@@ -485,7 +479,7 @@
             <PO_Help/>
             <PO_Name/>
             <PO_PrintName/>
-            <PrintName trim="false">Usa Dígito Verificación</PrintName>
+            <PrintName>Usa Dígito Verificación</PrintName>
             <AD_Language>es_CO</AD_Language>
             <IsActive>true</IsActive>
             <IsTranslated>true</IsTranslated>
@@ -553,7 +547,7 @@
         <PO_Help/>
         <PO_Name/>
         <PO_PrintName/>
-        <PrintName trim="false">Detailed Names</PrintName>
+        <PrintName>Detailed Names</PrintName>
         <AD_Element_Trl type="translation">
             <Description/>
             <Help/>
@@ -562,7 +556,7 @@
             <PO_Help/>
             <PO_Name/>
             <PO_PrintName/>
-            <PrintName trim="false">Nombres detallados</PrintName>
+            <PrintName>Nombres detallados</PrintName>
             <AD_Language>es_CO</AD_Language>
             <IsActive>true</IsActive>
             <IsTranslated>true</IsTranslated>
@@ -625,12 +619,12 @@
         <EntityType>QSS_LCO</EntityType>
         <Help/>
         <IsActive>true</IsActive>
-        <Name>First Name 1</Name>
+        <Name>First Name</Name>
         <PO_Description/>
         <PO_Help/>
         <PO_Name/>
         <PO_PrintName/>
-        <PrintName trim="false">First Name 1</PrintName>
+        <PrintName>First Name</PrintName>
         <AD_Element_Trl type="translation">
             <Description/>
             <Help/>
@@ -639,7 +633,7 @@
             <PO_Help/>
             <PO_Name/>
             <PO_PrintName/>
-            <PrintName trim="false">Primer Nombre</PrintName>
+            <PrintName>Primer Nombre</PrintName>
             <AD_Language>es_CO</AD_Language>
             <IsActive>true</IsActive>
             <IsTranslated>true</IsTranslated>
@@ -684,7 +678,7 @@
         <IsTranslated>false</IsTranslated>
         <IsUpdateable>true</IsUpdateable>
         <MandatoryLogic/>
-        <Name>First Name 1</Name>
+        <Name>First Name</Name>
         <ReadOnlyLogic/>
         <SeqNo/>
         <SeqNoSelection/>
@@ -702,12 +696,12 @@
         <EntityType>QSS_LCO</EntityType>
         <Help/>
         <IsActive>true</IsActive>
-        <Name>First Name 2</Name>
+        <Name>Middle Name</Name>
         <PO_Description/>
         <PO_Help/>
         <PO_Name/>
         <PO_PrintName/>
-        <PrintName trim="false">First Name 2</PrintName>
+        <PrintName>Middle Name</PrintName>
         <AD_Element_Trl type="translation">
             <Description/>
             <Help/>
@@ -716,7 +710,7 @@
             <PO_Help/>
             <PO_Name/>
             <PO_PrintName/>
-            <PrintName trim="false">Segundo Nombre</PrintName>
+            <PrintName>Segundo Nombre</PrintName>
             <AD_Language>es_CO</AD_Language>
             <IsActive>true</IsActive>
             <IsTranslated>true</IsTranslated>
@@ -761,7 +755,7 @@
         <IsTranslated>false</IsTranslated>
         <IsUpdateable>true</IsUpdateable>
         <MandatoryLogic/>
-        <Name>First Name 2</Name>
+        <Name>Middle Name</Name>
         <ReadOnlyLogic/>
         <SeqNo/>
         <SeqNoSelection/>
@@ -779,12 +773,12 @@
         <EntityType>QSS_LCO</EntityType>
         <Help/>
         <IsActive>true</IsActive>
-        <Name>Last Name 1</Name>
+        <Name>Last Name</Name>
         <PO_Description/>
         <PO_Help/>
         <PO_Name/>
         <PO_PrintName/>
-        <PrintName trim="false">Last Name 1</PrintName>
+        <PrintName>Last Name</PrintName>
         <AD_Element_Trl type="translation">
             <Description/>
             <Help/>
@@ -793,7 +787,7 @@
             <PO_Help/>
             <PO_Name/>
             <PO_PrintName/>
-            <PrintName trim="false">Primer Apellido</PrintName>
+            <PrintName>Primer Apellido</PrintName>
             <AD_Language>es_CO</AD_Language>
             <IsActive>true</IsActive>
             <IsTranslated>true</IsTranslated>
@@ -838,7 +832,7 @@
         <IsTranslated>false</IsTranslated>
         <IsUpdateable>true</IsUpdateable>
         <MandatoryLogic/>
-        <Name>Last Name 1</Name>
+        <Name>Last Name</Name>
         <ReadOnlyLogic/>
         <SeqNo/>
         <SeqNoSelection/>
@@ -856,12 +850,12 @@
         <EntityType>QSS_LCO</EntityType>
         <Help/>
         <IsActive>true</IsActive>
-        <Name>Last Name 2</Name>
+        <Name>Suffix Name</Name>
         <PO_Description/>
         <PO_Help/>
         <PO_Name/>
         <PO_PrintName/>
-        <PrintName trim="false">Last Name 2</PrintName>
+        <PrintName>Suffix Name</PrintName>
         <AD_Element_Trl type="translation">
             <Description/>
             <Help/>
@@ -870,7 +864,7 @@
             <PO_Help/>
             <PO_Name/>
             <PO_PrintName/>
-            <PrintName trim="false">Segundo Apellido</PrintName>
+            <PrintName>Segundo Apellido</PrintName>
             <AD_Language>es_CO</AD_Language>
             <IsActive>true</IsActive>
             <IsTranslated>true</IsTranslated>
@@ -915,7 +909,7 @@
         <IsTranslated>false</IsTranslated>
         <IsUpdateable>true</IsUpdateable>
         <MandatoryLogic/>
-        <Name>Last Name 2</Name>
+        <Name>Suffix Name</Name>
         <ReadOnlyLogic/>
         <SeqNo/>
         <SeqNoSelection/>
@@ -972,20 +966,6 @@
             <Description/>
             <Help/>
             <Name>Tipo Identificación</Name>
-            <AD_Language>es_CO</AD_Language>
-            <IsActive>true</IsActive>
-            <IsTranslated>true</IsTranslated>
-        </AD_Field_Trl>
-    </AD_Field>
-    <AD_Field type="table">
-        <AD_Field_ID>2155</AD_Field_ID>
-        <EntityType>QSS_LCO</EntityType>
-        <SeqNo>36</SeqNo>
-        <XPosition>4</XPosition>
-        <AD_Field_Trl type="translation">
-            <Description>Número de Identificación Tributaria</Description>
-            <Help>Número de Identificación Tributaria es el número de identificación gubernamental de esta entidad</Help>
-            <Name>Número Identificación</Name>
             <AD_Language>es_CO</AD_Language>
             <IsActive>true</IsActive>
             <IsTranslated>true</IsTranslated>
@@ -1080,7 +1060,7 @@
         <IsToolbarButton/>
         <IsUpdateable/>
         <MandatoryLogic/>
-        <Name>First Name 1</Name>
+        <Name>First Name</Name>
         <NumLines>1</NumLines>
         <ObscureType/>
         <ReadOnlyLogic/>
@@ -1133,7 +1113,7 @@
         <IsToolbarButton/>
         <IsUpdateable/>
         <MandatoryLogic/>
-        <Name>First Name 2</Name>
+        <Name>Middle Name</Name>
         <NumLines>1</NumLines>
         <ObscureType/>
         <ReadOnlyLogic/>
@@ -1186,7 +1166,7 @@
         <IsToolbarButton/>
         <IsUpdateable/>
         <MandatoryLogic/>
-        <Name>Last Name 1</Name>
+        <Name>Last Name</Name>
         <NumLines>1</NumLines>
         <ObscureType/>
         <ReadOnlyLogic/>
@@ -1239,7 +1219,7 @@
         <IsToolbarButton/>
         <IsUpdateable/>
         <MandatoryLogic/>
-        <Name>Last Name 2</Name>
+        <Name>Suffix Name</Name>
         <NumLines>1</NumLines>
         <ObscureType/>
         <ReadOnlyLogic/>
@@ -2029,7 +2009,7 @@ There are two reasons for de-activating and not deleting records:
                             <PO_Help/>
                             <PO_Name/>
                             <PO_PrintName/>
-                            <PrintName trim="false">Is Digit Checked</PrintName>
+                            <PrintName>Is Digit Checked</PrintName>
                             <AD_Element_Trl type="translation">
                                 <Description/>
                                 <Help/>
@@ -2038,7 +2018,7 @@ There are two reasons for de-activating and not deleting records:
                                 <PO_Help/>
                                 <PO_Name/>
                                 <PO_PrintName/>
-                                <PrintName trim="false">Chequea Dígito</PrintName>
+                                <PrintName>Chequea Dígito</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>true</IsTranslated>
@@ -2187,7 +2167,7 @@ There are two reasons for de-activating and not deleting records:
                             <PO_Help/>
                             <PO_Name/>
                             <PO_PrintName/>
-                            <PrintName trim="false">Tax Code</PrintName>
+                            <PrintName>Tax Code</PrintName>
                             <AD_Element_Trl type="translation">
                                 <Description/>
                                 <Help/>
@@ -2196,7 +2176,7 @@ There are two reasons for de-activating and not deleting records:
                                 <PO_Help/>
                                 <PO_Name/>
                                 <PO_PrintName/>
-                                <PrintName trim="false">Código Documento DIAN</PrintName>
+                                <PrintName>Código Documento DIAN</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>true</IsTranslated>
@@ -2360,7 +2340,7 @@ There are two reasons for de-activating and not deleting records:
                             <PO_Help/>
                             <PO_Name/>
                             <PO_PrintName/>
-                            <PrintName trim="false">LCO_TaxIdType_UU</PrintName>
+                            <PrintName>LCO_TaxIdType_UU</PrintName>
                             <AD_Element_Trl type="translation">
                                 <Description/>
                                 <Help/>
@@ -2369,7 +2349,7 @@ There are two reasons for de-activating and not deleting records:
                                 <PO_Help/>
                                 <PO_Name/>
                                 <PO_PrintName/>
-                                <PrintName trim="false">LCO_TaxIdType_UU</PrintName>
+                                <PrintName>LCO_TaxIdType_UU</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -2471,6 +2451,102 @@ There are two reasons for de-activating and not deleting records:
                             <Version>0</Version>
                             <VFormat/>
                         </AD_Column>
+                        <AD_Column type="table">
+                            <IsSyncDatabase>Y</IsSyncDatabase>
+                            <AD_Table_ID reference="uuid" reference-key="AD_Table">9c3aa2f8-08aa-4882-aeb6-1741086292c7</AD_Table_ID>
+                            <AD_Reference_Value_ID reference="id"/>
+                            <AD_Client_ID>0</AD_Client_ID>
+                            <AD_Org_ID>0</AD_Org_ID>
+                            <AD_Chart_ID reference="id"/>
+                            <AD_Column_UU>d30ff1ea-163f-408a-9a67-fffb578d458b</AD_Column_UU>
+                            <AD_Element_ID reference="id">200065</AD_Element_ID>
+                            <AD_Process_ID reference="id"/>
+                            <AD_Reference_ID reference="id">11</AD_Reference_ID>
+                            <AD_Val_Rule_ID reference="id"/>
+                            <Callout/>
+                            <ColumnName>MinLength</ColumnName>
+                            <ColumnSQL/>
+                            <DefaultValue/>
+                            <Description/>
+                            <EntityType>QSS_LCO</EntityType>
+                            <FieldLength>10</FieldLength>
+                            <FKConstraintName/>
+                            <FKConstraintType>N</FKConstraintType>
+                            <FormatPattern/>
+                            <Help/>
+                            <IsActive>true</IsActive>
+                            <IsAllowCopy>true</IsAllowCopy>
+                            <IsAllowLogging>true</IsAllowLogging>
+                            <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
+                            <IsAutocomplete>false</IsAutocomplete>
+                            <IsEncrypted>N</IsEncrypted>
+                            <IsIdentifier>false</IsIdentifier>
+                            <IsKey>false</IsKey>
+                            <IsMandatory>false</IsMandatory>
+                            <IsParent>false</IsParent>
+                            <IsSecure>false</IsSecure>
+                            <IsSelectionColumn>false</IsSelectionColumn>
+                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsTranslated>false</IsTranslated>
+                            <IsUpdateable>true</IsUpdateable>
+                            <MandatoryLogic/>
+                            <Name>Minimum Length</Name>
+                            <ReadOnlyLogic/>
+                            <SeqNo>0</SeqNo>
+                            <SeqNoSelection>0</SeqNoSelection>
+                            <ValueMax/>
+                            <ValueMin/>
+                            <Version>0</Version>
+                            <VFormat/>
+                        </AD_Column>
+                        <AD_Column type="table">
+                            <IsSyncDatabase>Y</IsSyncDatabase>
+                            <AD_Table_ID reference="uuid" reference-key="AD_Table">9c3aa2f8-08aa-4882-aeb6-1741086292c7</AD_Table_ID>
+                            <AD_Reference_Value_ID reference="id"/>
+                            <AD_Client_ID>0</AD_Client_ID>
+                            <AD_Org_ID>0</AD_Org_ID>
+                            <AD_Chart_ID reference="id"/>
+                            <AD_Column_UU>25ce3d8f-2913-43f4-bd94-c9472a0ec9ab</AD_Column_UU>
+                            <AD_Element_ID reference="id">2812</AD_Element_ID>
+                            <AD_Process_ID reference="id"/>
+                            <AD_Reference_ID reference="id">11</AD_Reference_ID>
+                            <AD_Val_Rule_ID reference="id"/>
+                            <Callout/>
+                            <ColumnName>MaxLength</ColumnName>
+                            <ColumnSQL/>
+                            <DefaultValue/>
+                            <Description>Maximum Length of Data</Description>
+                            <EntityType>QSS_LCO</EntityType>
+                            <FieldLength>10</FieldLength>
+                            <FKConstraintName/>
+                            <FKConstraintType>N</FKConstraintType>
+                            <FormatPattern/>
+                            <Help/>
+                            <IsActive>true</IsActive>
+                            <IsAllowCopy>true</IsAllowCopy>
+                            <IsAllowLogging>true</IsAllowLogging>
+                            <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
+                            <IsAutocomplete>false</IsAutocomplete>
+                            <IsEncrypted>N</IsEncrypted>
+                            <IsIdentifier>false</IsIdentifier>
+                            <IsKey>false</IsKey>
+                            <IsMandatory>false</IsMandatory>
+                            <IsParent>false</IsParent>
+                            <IsSecure>false</IsSecure>
+                            <IsSelectionColumn>false</IsSelectionColumn>
+                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsTranslated>false</IsTranslated>
+                            <IsUpdateable>true</IsUpdateable>
+                            <MandatoryLogic/>
+                            <Name>Maximum Length</Name>
+                            <ReadOnlyLogic/>
+                            <SeqNo>0</SeqNo>
+                            <SeqNoSelection>0</SeqNoSelection>
+                            <ValueMax/>
+                            <ValueMin/>
+                            <Version>0</Version>
+                            <VFormat/>
+                        </AD_Column>
                         <AD_TableIndex type="table">
                             <AD_Client_ID>0</AD_Client_ID>
                             <AD_Org_ID>0</AD_Org_ID>
@@ -2482,6 +2558,7 @@ There are two reasons for de-activating and not deleting records:
                             <Help/>
                             <IsActive>true</IsActive>
                             <IsCreateConstraint>false</IsCreateConstraint>
+                            <IsKey>false</IsKey>
                             <IsUnique>true</IsUnique>
                             <Name>lco_taxidtype_uu_idx</Name>
                             <Processing>false</Processing>
@@ -2534,6 +2611,7 @@ There are two reasons for de-activating and not deleting records:
                         <ReadOnlyLogic/>
                         <SeqNo>10</SeqNo>
                         <TabLevel>0</TabLevel>
+                        <TreeDisplayedOn>B</TreeDisplayedOn>
                         <WhereClause/>
                         <AD_Tab_Trl type="translation">
                             <CommitWarning/>
@@ -2925,7 +3003,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Reference_Value_ID reference="id"/>
                             <AD_Tab_ID reference="uuid" reference-key="AD_Tab">0545cbb1-ef68-4e60-b6f6-a9ca4d726b28</AD_Tab_ID>
                             <AD_Val_Rule_ID reference="id"/>
-                            <ColumnSpan>2</ColumnSpan>
+                            <ColumnSpan>1</ColumnSpan>
                             <DefaultValue/>
                             <Description/>
                             <DisplayLength>1</DisplayLength>
@@ -2971,6 +3049,112 @@ There are two reasons for de-activating and not deleting records:
                         <AD_Field type="table">
                             <AD_Client_ID>0</AD_Client_ID>
                             <AD_Org_ID>0</AD_Org_ID>
+                            <AD_Column_ID reference="uuid" reference-key="AD_Column">d30ff1ea-163f-408a-9a67-fffb578d458b</AD_Column_ID>
+                            <AD_FieldGroup_ID reference="id"/>
+                            <AD_Field_UU>719d9ca0-0364-4345-a8a6-c9e6637169c9</AD_Field_UU>
+                            <AD_Reference_ID reference="id"/>
+                            <AD_Reference_Value_ID reference="id"/>
+                            <AD_Tab_ID reference="uuid" reference-key="AD_Tab">0545cbb1-ef68-4e60-b6f6-a9ca4d726b28</AD_Tab_ID>
+                            <AD_Val_Rule_ID reference="id"/>
+                            <ColumnSpan>1</ColumnSpan>
+                            <DefaultValue/>
+                            <Description/>
+                            <DisplayLength>10</DisplayLength>
+                            <DisplayLogic/>
+                            <EntityType>QSS_LCO</EntityType>
+                            <Help/>
+                            <Included_Tab_ID reference="id"/>
+                            <IsActive>true</IsActive>
+                            <IsAdvancedField>false</IsAdvancedField>
+                            <IsAllowCopy/>
+                            <IsAlwaysUpdateable/>
+                            <IsCentrallyMaintained>true</IsCentrallyMaintained>
+                            <IsDefaultFocus>false</IsDefaultFocus>
+                            <IsDisplayed>true</IsDisplayed>
+                            <IsDisplayedGrid>true</IsDisplayedGrid>
+                            <IsEncrypted>false</IsEncrypted>
+                            <IsFieldOnly>false</IsFieldOnly>
+                            <IsHeading>false</IsHeading>
+                            <IsMandatory/>
+                            <IsQuickEntry>false</IsQuickEntry>
+                            <IsReadOnly>false</IsReadOnly>
+                            <IsSameLine>false</IsSameLine>
+                            <IsToolbarButton/>
+                            <IsUpdateable/>
+                            <MandatoryLogic/>
+                            <Name>Minimum Length</Name>
+                            <NumLines>1</NumLines>
+                            <ObscureType/>
+                            <ReadOnlyLogic/>
+                            <SeqNo>90</SeqNo>
+                            <SeqNoGrid>90</SeqNoGrid>
+                            <SortNo/>
+                            <XPosition>1</XPosition>
+                            <AD_Field_Trl type="translation">
+                                <Description/>
+                                <Help/>
+                                <Name>Minimum Length</Name>
+                                <AD_Language>es_CO</AD_Language>
+                                <IsActive>true</IsActive>
+                                <IsTranslated>false</IsTranslated>
+                            </AD_Field_Trl>
+                        </AD_Field>
+                        <AD_Field type="table">
+                            <AD_Client_ID>0</AD_Client_ID>
+                            <AD_Org_ID>0</AD_Org_ID>
+                            <AD_Column_ID reference="uuid" reference-key="AD_Column">25ce3d8f-2913-43f4-bd94-c9472a0ec9ab</AD_Column_ID>
+                            <AD_FieldGroup_ID reference="id"/>
+                            <AD_Field_UU>cdd9f098-e1ec-4f09-a624-d300b2936694</AD_Field_UU>
+                            <AD_Reference_ID reference="id"/>
+                            <AD_Reference_Value_ID reference="id"/>
+                            <AD_Tab_ID reference="uuid" reference-key="AD_Tab">0545cbb1-ef68-4e60-b6f6-a9ca4d726b28</AD_Tab_ID>
+                            <AD_Val_Rule_ID reference="id"/>
+                            <ColumnSpan>1</ColumnSpan>
+                            <DefaultValue/>
+                            <Description>Maximum Length of Data</Description>
+                            <DisplayLength>10</DisplayLength>
+                            <DisplayLogic/>
+                            <EntityType>QSS_LCO</EntityType>
+                            <Help/>
+                            <Included_Tab_ID reference="id"/>
+                            <IsActive>true</IsActive>
+                            <IsAdvancedField>false</IsAdvancedField>
+                            <IsAllowCopy/>
+                            <IsAlwaysUpdateable/>
+                            <IsCentrallyMaintained>true</IsCentrallyMaintained>
+                            <IsDefaultFocus>false</IsDefaultFocus>
+                            <IsDisplayed>true</IsDisplayed>
+                            <IsDisplayedGrid>true</IsDisplayedGrid>
+                            <IsEncrypted>false</IsEncrypted>
+                            <IsFieldOnly>false</IsFieldOnly>
+                            <IsHeading>false</IsHeading>
+                            <IsMandatory/>
+                            <IsQuickEntry>false</IsQuickEntry>
+                            <IsReadOnly>false</IsReadOnly>
+                            <IsSameLine>false</IsSameLine>
+                            <IsToolbarButton/>
+                            <IsUpdateable/>
+                            <MandatoryLogic/>
+                            <Name>Maximum Length</Name>
+                            <NumLines>1</NumLines>
+                            <ObscureType/>
+                            <ReadOnlyLogic/>
+                            <SeqNo>100</SeqNo>
+                            <SeqNoGrid>100</SeqNoGrid>
+                            <SortNo/>
+                            <XPosition>3</XPosition>
+                            <AD_Field_Trl type="translation">
+                                <Description>Maximum Length of Data</Description>
+                                <Help/>
+                                <Name>Maximum Length</Name>
+                                <AD_Language>es_CO</AD_Language>
+                                <IsActive>true</IsActive>
+                                <IsTranslated>false</IsTranslated>
+                            </AD_Field_Trl>
+                        </AD_Field>
+                        <AD_Field type="table">
+                            <AD_Client_ID>0</AD_Client_ID>
+                            <AD_Org_ID>0</AD_Org_ID>
                             <AD_Column_ID reference="uuid" reference-key="AD_Column">7f0e9a8d-fa8f-4316-a133-d5dd1ef4496d</AD_Column_ID>
                             <AD_FieldGroup_ID reference="id"/>
                             <AD_Field_UU>b5d004c9-502b-4550-8596-405f8382fa11</AD_Field_UU>
@@ -2978,7 +3162,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Reference_Value_ID reference="id"/>
                             <AD_Tab_ID reference="uuid" reference-key="AD_Tab">0545cbb1-ef68-4e60-b6f6-a9ca4d726b28</AD_Tab_ID>
                             <AD_Val_Rule_ID reference="id"/>
-                            <ColumnSpan>2</ColumnSpan>
+                            <ColumnSpan>1</ColumnSpan>
                             <DefaultValue/>
                             <Description/>
                             <DisplayLength>20</DisplayLength>
@@ -3008,10 +3192,10 @@ There are two reasons for de-activating and not deleting records:
                             <NumLines>1</NumLines>
                             <ObscureType/>
                             <ReadOnlyLogic/>
-                            <SeqNo>90</SeqNo>
+                            <SeqNo>110</SeqNo>
                             <SeqNoGrid>60</SeqNoGrid>
                             <SortNo>0</SortNo>
-                            <XPosition>4</XPosition>
+                            <XPosition>5</XPosition>
                             <AD_Field_Trl type="translation">
                                 <Description/>
                                 <Help/>
@@ -3061,7 +3245,7 @@ There are two reasons for de-activating and not deleting records:
                             <NumLines>1</NumLines>
                             <ObscureType/>
                             <ReadOnlyLogic/>
-                            <SeqNo>100</SeqNo>
+                            <SeqNo>120</SeqNo>
                             <SeqNoGrid>70</SeqNoGrid>
                             <SortNo>0</SortNo>
                             <XPosition>2</XPosition>
@@ -3117,10 +3301,10 @@ There are two reasons for de-activating and not deleting records:
                             <NumLines>1</NumLines>
                             <ObscureType/>
                             <ReadOnlyLogic/>
-                            <SeqNo>110</SeqNo>
+                            <SeqNo>130</SeqNo>
                             <SeqNoGrid>80</SeqNoGrid>
                             <SortNo>0</SortNo>
-                            <XPosition>5</XPosition>
+                            <XPosition>2</XPosition>
                             <AD_Field_Trl type="translation">
                                 <Description>El registro está activo en el sistema</Description>
                                 <Help>Hay dos métodos para que los registros no estén disponibles en el sistema: Uno es eliminar el registro; el otro es desactivarlo. Un registro desactivado no está disponible para selección; pero está disponible para Informes</Help>
@@ -3296,4 +3480,12 @@ There are two reasons for de-activating and not deleting records:
         <Name>QSSLEC_Allow10DigitDoc</Name>
         <Value>Y</Value>
     </AD_SysConfig>
+    <SQLStatement type="custom">
+        <DBType>ALL</DBType>
+        <statement><![CDATA[UPDATE AD_Column SET ReadOnlyLogic=chr(64)||'IsDetailedNames'||chr(64)||'=Y & '||chr(64)||'#LCO_USE_DETAILED_NAMES'||chr(64)||'=Y', Updated=SYSDATE WHERE AD_Column_ID=2902]]></statement>
+    </SQLStatement>
+    <SQLStatement type="custom">
+        <DBType>ALL</DBType>
+        <statement><![CDATA[UPDATE AD_Field SET SeqNo=36, XPosition=4, Updated=SYSDATE WHERE AD_Field_ID=2155]]></statement>
+    </SQLStatement>
 </idempiere>
