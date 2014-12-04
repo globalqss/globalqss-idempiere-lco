@@ -1157,7 +1157,7 @@ y Recibi/Línea o directamente para el producto.</value>
   <value column="Help" original="The report list details of Business Partner, Addresses and Contacts for any active Business Partner with an Address and Contact">El reporte lista los detalles de Tercero, Direcciones y Contactos para cualquier Tercero Activo con una dirección y Contacto.</value>
  </row>
  <row id="335" trl="Y">
-  <value column="Name" original="Create Costing Records"> Crear Registro de Costeo</value>
+  <value column="Name" original="Create Costing Records">Crear Registro de Costeo</value>
   <value column="Description" original="Create Costing Records">Crear Registro de Costeo</value>
   <value column="Help" original="The costing records are created when needed or by batch processes. You can force the creation of the costing information here.">Los registro de costeo se cran cuando los necesita mediante proceso por lotes. Usted puede forzar la creación de la información de costeo aqui.</value>
  </row>
