@@ -771,7 +771,7 @@ If you leave the search key empty, the system automatically creates a numeric nu
                                 <PrintName>LCO_DIAN_Concept_UU</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -2090,7 +2090,7 @@ There are two reasons for de-activating and not deleting records:
                                 <PrintName>LCO_DIAN_ConceptSource_UU</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -4050,7 +4050,7 @@ Accounting Segments like Organization, Account, Product may have several hierarc
                                 <PrintName>LCO_DIAN_Format_UU</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -5721,7 +5721,7 @@ There are two reasons for de-activating and not deleting records:
                                 <PrintName>LCO_DIAN_ConceptFormat_UU</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -7000,7 +7000,7 @@ There are two reasons for de-activating and not deleting records:
                                 <PrintName>LCO_DIAN_FieldFormat_UU</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -8475,7 +8475,7 @@ If you leave the search key empty, the system automatically creates a numeric nu
                                 <PrintName>LCO_Conversion_UU</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -9698,7 +9698,7 @@ There are two reasons for de-activating and not deleting records:
                                 <PrintName>LCO_ConversionCode_UU</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -11182,7 +11182,7 @@ There are two reasons for de-activating and not deleting records:
                                 <PrintName>LCO_DIAN_XML_Header_UU</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -13303,9 +13303,9 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Org_ID>0</AD_Org_ID>
                             <AD_Element_UU>c1757f11-e6c3-44d2-b60b-e30be2a79cb4</AD_Element_UU>
                             <ColumnName>AttributeNm1</ColumnName>
-                            <Description>Name of the Attribute</Description>
+                            <Description>Name of the Attribute 1</Description>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 1</Help>
                             <IsActive>true</IsActive>
                             <Name>Attribute Name 1</Name>
                             <PO_Description/>
@@ -13314,8 +13314,8 @@ There are two reasons for de-activating and not deleting records:
                             <PO_PrintName/>
                             <PrintName>Attribute Name 1</PrintName>
                             <AD_Element_Trl type="translation">
-                                <Description>Name of the Attribute</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 1</Description>
+                                <Help>Identificador del Atributo 1</Help>
                                 <Name>Nomb 1</Name>
                                 <PO_Description/>
                                 <PO_Help/>
@@ -13343,13 +13343,13 @@ There are two reasons for de-activating and not deleting records:
                             <ColumnName>AttributeNm1</ColumnName>
                             <ColumnSQL>(SELECT pl.value||'.'||pl.name from LCO_DIAN_SendSchedule ss INNER JOIN LCO_DIAN_FieldFormat ff ON ss.LCO_DIAN_Format_ID = ff.LCO_DIAN_Format_ID INNER JOIN LCO_DIAN_XMLPrintLabel pl ON ff.LCO_DIAN_XMLPrintLabel_ID = pl.LCO_DIAN_XMLPrintLabel_ID WHERE ss.LCO_DIAN_SendSchedule_ID = LCO_DIAN_SendScheduleLine.LCO_DIAN_SendSchedule_ID AND ff.CalcColumnPosition = 1)</ColumnSQL>
                             <DefaultValue/>
-                            <Description>Name of the Attribute</Description>
+                            <Description>Name of the Attribute 1</Description>
                             <EntityType>QSS_LCO</EntityType>
                             <FieldLength>255</FieldLength>
                             <FKConstraintName/>
                             <FKConstraintType>N</FKConstraintType>
                             <FormatPattern/>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 1</Help>
                             <IsActive>true</IsActive>
                             <IsAllowCopy>false</IsAllowCopy>
                             <IsAllowLogging>true</IsAllowLogging>
@@ -13382,7 +13382,7 @@ There are two reasons for de-activating and not deleting records:
                             <ColumnName>AttributeNm2</ColumnName>
                             <Description>Name of the Attribute 2</Description>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 2</Help>
                             <IsActive>true</IsActive>
                             <Name>Attribute Name 2</Name>
                             <PO_Description/>
@@ -13391,8 +13391,8 @@ There are two reasons for de-activating and not deleting records:
                             <PO_PrintName/>
                             <PrintName>Attribute Name 2</PrintName>
                             <AD_Element_Trl type="translation">
-                                <Description>Name of the Attribute 2</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 2</Description>
+                                <Help>Identificador del Atributo 2</Help>
                                 <Name>Nomb 2</Name>
                                 <PO_Description/>
                                 <PO_Help/>
@@ -13426,7 +13426,7 @@ There are two reasons for de-activating and not deleting records:
                             <FKConstraintName/>
                             <FKConstraintType>N</FKConstraintType>
                             <FormatPattern/>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 2</Help>
                             <IsActive>true</IsActive>
                             <IsAllowCopy>false</IsAllowCopy>
                             <IsAllowLogging>true</IsAllowLogging>
@@ -13459,7 +13459,7 @@ There are two reasons for de-activating and not deleting records:
                             <ColumnName>AttributeNm3</ColumnName>
                             <Description>Name of the Attribute 3</Description>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 3</Help>
                             <IsActive>true</IsActive>
                             <Name>Attribute Name 3</Name>
                             <PO_Description/>
@@ -13468,8 +13468,8 @@ There are two reasons for de-activating and not deleting records:
                             <PO_PrintName/>
                             <PrintName>Attribute Name 3</PrintName>
                             <AD_Element_Trl type="translation">
-                                <Description>Name of the Attribute 3</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 3</Description>
+                                <Help>Identificador del Atributo 3</Help>
                                 <Name>Nomb 3</Name>
                                 <PO_Description/>
                                 <PO_Help/>
@@ -13503,7 +13503,7 @@ There are two reasons for de-activating and not deleting records:
                             <FKConstraintName/>
                             <FKConstraintType>N</FKConstraintType>
                             <FormatPattern/>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 3</Help>
                             <IsActive>true</IsActive>
                             <IsAllowCopy>false</IsAllowCopy>
                             <IsAllowLogging>true</IsAllowLogging>
@@ -13536,7 +13536,7 @@ There are two reasons for de-activating and not deleting records:
                             <ColumnName>AttributeNm4</ColumnName>
                             <Description>Name of the Attribute 4</Description>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 4</Help>
                             <IsActive>true</IsActive>
                             <Name>Attribute Name 4</Name>
                             <PO_Description/>
@@ -13545,8 +13545,8 @@ There are two reasons for de-activating and not deleting records:
                             <PO_PrintName/>
                             <PrintName>Attribute Name 4</PrintName>
                             <AD_Element_Trl type="translation">
-                                <Description>Name of the Attribute 4</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 4</Description>
+                                <Help>Identificador del Atributo 4</Help>
                                 <Name>Nomb 4</Name>
                                 <PO_Description/>
                                 <PO_Help/>
@@ -13580,7 +13580,7 @@ There are two reasons for de-activating and not deleting records:
                             <FKConstraintName/>
                             <FKConstraintType>N</FKConstraintType>
                             <FormatPattern/>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 4</Help>
                             <IsActive>true</IsActive>
                             <IsAllowCopy>false</IsAllowCopy>
                             <IsAllowLogging>true</IsAllowLogging>
@@ -13613,7 +13613,7 @@ There are two reasons for de-activating and not deleting records:
                             <ColumnName>AttributeNm5</ColumnName>
                             <Description>Name of the Attribute 5</Description>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 5</Help>
                             <IsActive>true</IsActive>
                             <Name>Attribute Name 5</Name>
                             <PO_Description/>
@@ -13622,8 +13622,8 @@ There are two reasons for de-activating and not deleting records:
                             <PO_PrintName/>
                             <PrintName>Attribute Name 5</PrintName>
                             <AD_Element_Trl type="translation">
-                                <Description>Name of the Attribute 5</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 5</Description>
+                                <Help>Identificador del Atributo 5</Help>
                                 <Name>Nomb 5</Name>
                                 <PO_Description/>
                                 <PO_Help/>
@@ -13657,7 +13657,7 @@ There are two reasons for de-activating and not deleting records:
                             <FKConstraintName/>
                             <FKConstraintType>N</FKConstraintType>
                             <FormatPattern/>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 5</Help>
                             <IsActive>true</IsActive>
                             <IsAllowCopy>false</IsAllowCopy>
                             <IsAllowLogging>true</IsAllowLogging>
@@ -13690,7 +13690,7 @@ There are two reasons for de-activating and not deleting records:
                             <ColumnName>AttributeNm6</ColumnName>
                             <Description>Name of the Attribute 6</Description>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 6</Help>
                             <IsActive>true</IsActive>
                             <Name>Attribute Name 6</Name>
                             <PO_Description/>
@@ -13699,8 +13699,8 @@ There are two reasons for de-activating and not deleting records:
                             <PO_PrintName/>
                             <PrintName>Attribute Name 6</PrintName>
                             <AD_Element_Trl type="translation">
-                                <Description>Name of the Attribute 6</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 6</Description>
+                                <Help>Identificador del Atributo 6</Help>
                                 <Name>Nomb 6</Name>
                                 <PO_Description/>
                                 <PO_Help/>
@@ -13734,7 +13734,7 @@ There are two reasons for de-activating and not deleting records:
                             <FKConstraintName/>
                             <FKConstraintType>N</FKConstraintType>
                             <FormatPattern/>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 6</Help>
                             <IsActive>true</IsActive>
                             <IsAllowCopy>false</IsAllowCopy>
                             <IsAllowLogging>true</IsAllowLogging>
@@ -13767,7 +13767,7 @@ There are two reasons for de-activating and not deleting records:
                             <ColumnName>AttributeNm7</ColumnName>
                             <Description>Name of the Attribute 7</Description>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 7</Help>
                             <IsActive>true</IsActive>
                             <Name>Attribute Name 7</Name>
                             <PO_Description/>
@@ -13776,8 +13776,8 @@ There are two reasons for de-activating and not deleting records:
                             <PO_PrintName/>
                             <PrintName>Attribute Name 7</PrintName>
                             <AD_Element_Trl type="translation">
-                                <Description>Name of the Attribute 7</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 7</Description>
+                                <Help>Identificador del Atributo 7</Help>
                                 <Name>Nomb 7</Name>
                                 <PO_Description/>
                                 <PO_Help/>
@@ -13811,7 +13811,7 @@ There are two reasons for de-activating and not deleting records:
                             <FKConstraintName/>
                             <FKConstraintType>N</FKConstraintType>
                             <FormatPattern/>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 7</Help>
                             <IsActive>true</IsActive>
                             <IsAllowCopy>false</IsAllowCopy>
                             <IsAllowLogging>true</IsAllowLogging>
@@ -13844,7 +13844,7 @@ There are two reasons for de-activating and not deleting records:
                             <ColumnName>AttributeNm8</ColumnName>
                             <Description>Name of the Attribute 8</Description>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 8</Help>
                             <IsActive>true</IsActive>
                             <Name>Attribute Name 8</Name>
                             <PO_Description/>
@@ -13853,8 +13853,8 @@ There are two reasons for de-activating and not deleting records:
                             <PO_PrintName/>
                             <PrintName>Attribute Name 8</PrintName>
                             <AD_Element_Trl type="translation">
-                                <Description>Name of the Attribute 8</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 8</Description>
+                                <Help>Identificador del Atributo 8</Help>
                                 <Name>Nomb 8</Name>
                                 <PO_Description/>
                                 <PO_Help/>
@@ -13888,7 +13888,7 @@ There are two reasons for de-activating and not deleting records:
                             <FKConstraintName/>
                             <FKConstraintType>N</FKConstraintType>
                             <FormatPattern/>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 8</Help>
                             <IsActive>true</IsActive>
                             <IsAllowCopy>false</IsAllowCopy>
                             <IsAllowLogging>true</IsAllowLogging>
@@ -13921,7 +13921,7 @@ There are two reasons for de-activating and not deleting records:
                             <ColumnName>AttributeNm9</ColumnName>
                             <Description>Name of the Attribute 9</Description>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 9</Help>
                             <IsActive>true</IsActive>
                             <Name>Attribute Name 9</Name>
                             <PO_Description/>
@@ -13930,8 +13930,8 @@ There are two reasons for de-activating and not deleting records:
                             <PO_PrintName/>
                             <PrintName>Attribute Name 9</PrintName>
                             <AD_Element_Trl type="translation">
-                                <Description>Name of the Attribute 9</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 9</Description>
+                                <Help>Identificador del Atributo 9</Help>
                                 <Name>Nomb 9</Name>
                                 <PO_Description/>
                                 <PO_Help/>
@@ -13965,7 +13965,7 @@ There are two reasons for de-activating and not deleting records:
                             <FKConstraintName/>
                             <FKConstraintType>N</FKConstraintType>
                             <FormatPattern/>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 9</Help>
                             <IsActive>true</IsActive>
                             <IsAllowCopy>false</IsAllowCopy>
                             <IsAllowLogging>true</IsAllowLogging>
@@ -13998,7 +13998,7 @@ There are two reasons for de-activating and not deleting records:
                             <ColumnName>AttributeNm10</ColumnName>
                             <Description>Name of the Attribute 10</Description>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 10</Help>
                             <IsActive>true</IsActive>
                             <Name>Attribute Name 10</Name>
                             <PO_Description/>
@@ -14007,8 +14007,8 @@ There are two reasons for de-activating and not deleting records:
                             <PO_PrintName/>
                             <PrintName>Attribute Name 10</PrintName>
                             <AD_Element_Trl type="translation">
-                                <Description>Name of the Attribute 10</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 10</Description>
+                                <Help>Identificador del Atributo 10</Help>
                                 <Name>Nomb 10</Name>
                                 <PO_Description/>
                                 <PO_Help/>
@@ -14042,7 +14042,7 @@ There are two reasons for de-activating and not deleting records:
                             <FKConstraintName/>
                             <FKConstraintType>N</FKConstraintType>
                             <FormatPattern/>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 10</Help>
                             <IsActive>true</IsActive>
                             <IsAllowCopy>false</IsAllowCopy>
                             <IsAllowLogging>true</IsAllowLogging>
@@ -14094,7 +14094,7 @@ There are two reasons for de-activating and not deleting records:
                                 <PrintName>LCO_DIAN_SendScheduleLine_UU</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -14152,7 +14152,7 @@ There are two reasons for de-activating and not deleting records:
                             <ColumnName>AttributeNm11</ColumnName>
                             <Description>Name of the Attribute 11</Description>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 11</Help>
                             <IsActive>true</IsActive>
                             <Name>Attribute Name 11</Name>
                             <PO_Description/>
@@ -14161,17 +14161,17 @@ There are two reasons for de-activating and not deleting records:
                             <PO_PrintName/>
                             <PrintName>Attribute Name 11</PrintName>
                             <AD_Element_Trl type="translation">
-                                <Description>Name of the Attribute 11</Description>
-                                <Help>Identifier of the attribute</Help>
-                                <Name>Attribute Name 11</Name>
+                                <Description>Nombre del Atributo 11</Description>
+                                <Help>Identificador del Atributo 11</Help>
+                                <Name>Nomb 11</Name>
                                 <PO_Description/>
                                 <PO_Help/>
                                 <PO_Name/>
                                 <PO_PrintName/>
-                                <PrintName>Attribute Name 11</PrintName>
+                                <PrintName>Nomb 11</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -14196,7 +14196,7 @@ There are two reasons for de-activating and not deleting records:
                             <FKConstraintName/>
                             <FKConstraintType>N</FKConstraintType>
                             <FormatPattern/>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 11</Help>
                             <IsActive>true</IsActive>
                             <IsAllowCopy>false</IsAllowCopy>
                             <IsAllowLogging>true</IsAllowLogging>
@@ -14229,7 +14229,7 @@ There are two reasons for de-activating and not deleting records:
                             <ColumnName>AttributeNm12</ColumnName>
                             <Description>Name of the Attribute 12</Description>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 12</Help>
                             <IsActive>true</IsActive>
                             <Name>Attribute Name 12</Name>
                             <PO_Description/>
@@ -14238,17 +14238,17 @@ There are two reasons for de-activating and not deleting records:
                             <PO_PrintName/>
                             <PrintName>Attribute Name 12</PrintName>
                             <AD_Element_Trl type="translation">
-                                <Description>Name of the Attribute 12</Description>
-                                <Help>Identifier of the attribute</Help>
-                                <Name>Attribute Name 12</Name>
+                                <Description>Nombre del Atributo 12</Description>
+                                <Help>Identificador del Atributo 12</Help>
+                                <Name>Nomb 12</Name>
                                 <PO_Description/>
                                 <PO_Help/>
                                 <PO_Name/>
                                 <PO_PrintName/>
-                                <PrintName>Attribute Name 12</PrintName>
+                                <PrintName>Nomb 12</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -14273,7 +14273,7 @@ There are two reasons for de-activating and not deleting records:
                             <FKConstraintName/>
                             <FKConstraintType>N</FKConstraintType>
                             <FormatPattern/>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 12</Help>
                             <IsActive>true</IsActive>
                             <IsAllowCopy>false</IsAllowCopy>
                             <IsAllowLogging>true</IsAllowLogging>
@@ -14306,7 +14306,7 @@ There are two reasons for de-activating and not deleting records:
                             <ColumnName>AttributeNm13</ColumnName>
                             <Description>Name of the Attribute 13</Description>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 13</Help>
                             <IsActive>true</IsActive>
                             <Name>Attribute Name 13</Name>
                             <PO_Description/>
@@ -14315,17 +14315,17 @@ There are two reasons for de-activating and not deleting records:
                             <PO_PrintName/>
                             <PrintName>Attribute Name 13</PrintName>
                             <AD_Element_Trl type="translation">
-                                <Description>Name of the Attribute 13</Description>
-                                <Help>Identifier of the attribute</Help>
-                                <Name>Attribute Name 13</Name>
+                                <Description>Nombre del Atributo 13</Description>
+                                <Help>Identificador del Atributo 13</Help>
+                                <Name>Nomb 13</Name>
                                 <PO_Description/>
                                 <PO_Help/>
                                 <PO_Name/>
                                 <PO_PrintName/>
-                                <PrintName>Attribute Name 13</PrintName>
+                                <PrintName>Nomb 13</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -14350,7 +14350,7 @@ There are two reasons for de-activating and not deleting records:
                             <FKConstraintName/>
                             <FKConstraintType>N</FKConstraintType>
                             <FormatPattern/>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 13</Help>
                             <IsActive>true</IsActive>
                             <IsAllowCopy>false</IsAllowCopy>
                             <IsAllowLogging>true</IsAllowLogging>
@@ -14383,7 +14383,7 @@ There are two reasons for de-activating and not deleting records:
                             <ColumnName>AttributeNm14</ColumnName>
                             <Description>Name of the Attribute 14</Description>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 14</Help>
                             <IsActive>true</IsActive>
                             <Name>Attribute Name 14</Name>
                             <PO_Description/>
@@ -14392,17 +14392,17 @@ There are two reasons for de-activating and not deleting records:
                             <PO_PrintName/>
                             <PrintName>Attribute Name 14</PrintName>
                             <AD_Element_Trl type="translation">
-                                <Description>Name of the Attribute 14</Description>
-                                <Help>Identifier of the attribute</Help>
-                                <Name>Attribute Name 14</Name>
+                                <Description>Nombre del Atributo 14</Description>
+                                <Help>Identificador del Atributo 14</Help>
+                                <Name>Nomb 14</Name>
                                 <PO_Description/>
                                 <PO_Help/>
                                 <PO_Name/>
                                 <PO_PrintName/>
-                                <PrintName>Attribute Name 14</PrintName>
+                                <PrintName>Nomb 14</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -14427,7 +14427,7 @@ There are two reasons for de-activating and not deleting records:
                             <FKConstraintName/>
                             <FKConstraintType>N</FKConstraintType>
                             <FormatPattern/>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 14</Help>
                             <IsActive>true</IsActive>
                             <IsAllowCopy>false</IsAllowCopy>
                             <IsAllowLogging>true</IsAllowLogging>
@@ -14460,7 +14460,7 @@ There are two reasons for de-activating and not deleting records:
                             <ColumnName>AttributeNm15</ColumnName>
                             <Description>Name of the Attribute 15</Description>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 15</Help>
                             <IsActive>true</IsActive>
                             <Name>Attribute Name 15</Name>
                             <PO_Description/>
@@ -14469,17 +14469,17 @@ There are two reasons for de-activating and not deleting records:
                             <PO_PrintName/>
                             <PrintName>Attribute Name 15</PrintName>
                             <AD_Element_Trl type="translation">
-                                <Description>Name of the Attribute 15</Description>
-                                <Help>Identifier of the attribute</Help>
-                                <Name>Attribute Name 15</Name>
+                                <Description>Nombre del Atributo 15</Description>
+                                <Help>Identificador del Atributo 15</Help>
+                                <Name>Nomb 15</Name>
                                 <PO_Description/>
                                 <PO_Help/>
                                 <PO_Name/>
                                 <PO_PrintName/>
-                                <PrintName>Attribute Name 15</PrintName>
+                                <PrintName>Nomb 15</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -14504,7 +14504,7 @@ There are two reasons for de-activating and not deleting records:
                             <FKConstraintName/>
                             <FKConstraintType>N</FKConstraintType>
                             <FormatPattern/>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 15</Help>
                             <IsActive>true</IsActive>
                             <IsAllowCopy>false</IsAllowCopy>
                             <IsAllowLogging>true</IsAllowLogging>
@@ -14537,7 +14537,7 @@ There are two reasons for de-activating and not deleting records:
                             <ColumnName>AttributeNm16</ColumnName>
                             <Description>Name of the Attribute 16</Description>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 16</Help>
                             <IsActive>true</IsActive>
                             <Name>Attribute Name 16</Name>
                             <PO_Description/>
@@ -14546,17 +14546,17 @@ There are two reasons for de-activating and not deleting records:
                             <PO_PrintName/>
                             <PrintName>Attribute Name 16</PrintName>
                             <AD_Element_Trl type="translation">
-                                <Description>Name of the Attribute 16</Description>
-                                <Help>Identifier of the attribute</Help>
-                                <Name>Attribute Name 16</Name>
+                                <Description>Nombre del Atributo 16</Description>
+                                <Help>Identificador del Atributo 16</Help>
+                                <Name>Nomb 16</Name>
                                 <PO_Description/>
                                 <PO_Help/>
                                 <PO_Name/>
                                 <PO_PrintName/>
-                                <PrintName>Attribute Name 16</PrintName>
+                                <PrintName>Nomb 16</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -14581,7 +14581,7 @@ There are two reasons for de-activating and not deleting records:
                             <FKConstraintName/>
                             <FKConstraintType>N</FKConstraintType>
                             <FormatPattern/>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 16</Help>
                             <IsActive>true</IsActive>
                             <IsAllowCopy>false</IsAllowCopy>
                             <IsAllowLogging>true</IsAllowLogging>
@@ -14614,7 +14614,7 @@ There are two reasons for de-activating and not deleting records:
                             <ColumnName>AttributeNm17</ColumnName>
                             <Description>Name of the Attribute 17</Description>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 17</Help>
                             <IsActive>true</IsActive>
                             <Name>Attribute Name 17</Name>
                             <PO_Description/>
@@ -14623,17 +14623,17 @@ There are two reasons for de-activating and not deleting records:
                             <PO_PrintName/>
                             <PrintName>Attribute Name 17</PrintName>
                             <AD_Element_Trl type="translation">
-                                <Description>Name of the Attribute 17</Description>
-                                <Help>Identifier of the attribute</Help>
-                                <Name>Attribute Name 17</Name>
+                                <Description>Nombre del Atributo 17</Description>
+                                <Help>Identificador del Atributo 17</Help>
+                                <Name>Nomb 17</Name>
                                 <PO_Description/>
                                 <PO_Help/>
                                 <PO_Name/>
                                 <PO_PrintName/>
-                                <PrintName>Attribute Name 17</PrintName>
+                                <PrintName>Nomb 17</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -14658,7 +14658,7 @@ There are two reasons for de-activating and not deleting records:
                             <FKConstraintName/>
                             <FKConstraintType>N</FKConstraintType>
                             <FormatPattern/>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 17</Help>
                             <IsActive>true</IsActive>
                             <IsAllowCopy>false</IsAllowCopy>
                             <IsAllowLogging>true</IsAllowLogging>
@@ -14691,7 +14691,7 @@ There are two reasons for de-activating and not deleting records:
                             <ColumnName>AttributeNm18</ColumnName>
                             <Description>Name of the Attribute 18</Description>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 18</Help>
                             <IsActive>true</IsActive>
                             <Name>Attribute Name 18</Name>
                             <PO_Description/>
@@ -14700,17 +14700,17 @@ There are two reasons for de-activating and not deleting records:
                             <PO_PrintName/>
                             <PrintName>Attribute Name 18</PrintName>
                             <AD_Element_Trl type="translation">
-                                <Description>Name of the Attribute 18</Description>
-                                <Help>Identifier of the attribute</Help>
-                                <Name>Attribute Name 18</Name>
+                                <Description>Nombre del Atributo 18</Description>
+                                <Help>Identificador del Atributo 18</Help>
+                                <Name>Nomb 18</Name>
                                 <PO_Description/>
                                 <PO_Help/>
                                 <PO_Name/>
                                 <PO_PrintName/>
-                                <PrintName>Attribute Name 18</PrintName>
+                                <PrintName>Nomb 18</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -14735,7 +14735,7 @@ There are two reasons for de-activating and not deleting records:
                             <FKConstraintName/>
                             <FKConstraintType>N</FKConstraintType>
                             <FormatPattern/>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 18</Help>
                             <IsActive>true</IsActive>
                             <IsAllowCopy>false</IsAllowCopy>
                             <IsAllowLogging>true</IsAllowLogging>
@@ -14768,7 +14768,7 @@ There are two reasons for de-activating and not deleting records:
                             <ColumnName>AttributeNm19</ColumnName>
                             <Description>Name of the Attribute 19</Description>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 19</Help>
                             <IsActive>true</IsActive>
                             <Name>Attribute Name 19</Name>
                             <PO_Description/>
@@ -14777,17 +14777,17 @@ There are two reasons for de-activating and not deleting records:
                             <PO_PrintName/>
                             <PrintName>Attribute Name 19</PrintName>
                             <AD_Element_Trl type="translation">
-                                <Description>Name of the Attribute 19</Description>
-                                <Help>Identifier of the attribute</Help>
-                                <Name>Attribute Name 19</Name>
+                                <Description>Nombre del Atributo 19</Description>
+                                <Help>Identificador del Atributo 19</Help>
+                                <Name>Nomb 19</Name>
                                 <PO_Description/>
                                 <PO_Help/>
                                 <PO_Name/>
                                 <PO_PrintName/>
-                                <PrintName>Attribute Name 19</PrintName>
+                                <PrintName>Nomb 19</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -14812,7 +14812,7 @@ There are two reasons for de-activating and not deleting records:
                             <FKConstraintName/>
                             <FKConstraintType>N</FKConstraintType>
                             <FormatPattern/>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 19</Help>
                             <IsActive>true</IsActive>
                             <IsAllowCopy>false</IsAllowCopy>
                             <IsAllowLogging>true</IsAllowLogging>
@@ -14845,7 +14845,7 @@ There are two reasons for de-activating and not deleting records:
                             <ColumnName>AttributeNm20</ColumnName>
                             <Description>Name of the Attribute 20</Description>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 20</Help>
                             <IsActive>true</IsActive>
                             <Name>Attribute Name 20</Name>
                             <PO_Description/>
@@ -14854,17 +14854,17 @@ There are two reasons for de-activating and not deleting records:
                             <PO_PrintName/>
                             <PrintName>Attribute Name 20</PrintName>
                             <AD_Element_Trl type="translation">
-                                <Description>Name of the Attribute 20</Description>
-                                <Help>Identifier of the attribute</Help>
-                                <Name>Attribute Name 20</Name>
+                                <Description>Nombre del Atributo 20</Description>
+                                <Help>Identificador del Atributo 20</Help>
+                                <Name>Nomb 20</Name>
                                 <PO_Description/>
                                 <PO_Help/>
                                 <PO_Name/>
                                 <PO_PrintName/>
-                                <PrintName>Attribute Name 20</PrintName>
+                                <PrintName>Nomb 20</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -14889,7 +14889,7 @@ There are two reasons for de-activating and not deleting records:
                             <FKConstraintName/>
                             <FKConstraintType>N</FKConstraintType>
                             <FormatPattern/>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 20</Help>
                             <IsActive>true</IsActive>
                             <IsAllowCopy>false</IsAllowCopy>
                             <IsAllowLogging>true</IsAllowLogging>
@@ -14933,15 +14933,15 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Element_Trl type="translation">
                                 <Description/>
                                 <Help/>
-                                <Name>Field Amt 11</Name>
+                                <Name>Valor 11</Name>
                                 <PO_Description/>
                                 <PO_Help/>
                                 <PO_Name/>
                                 <PO_PrintName/>
-                                <PrintName>Field Amt 11</PrintName>
+                                <PrintName>Valor 11</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -15010,15 +15010,15 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Element_Trl type="translation">
                                 <Description/>
                                 <Help/>
-                                <Name>Field Amt 12</Name>
+                                <Name>Valor 12</Name>
                                 <PO_Description/>
                                 <PO_Help/>
                                 <PO_Name/>
                                 <PO_PrintName/>
-                                <PrintName>Field Amt 12</PrintName>
+                                <PrintName>Valor 12</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -15087,15 +15087,15 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Element_Trl type="translation">
                                 <Description/>
                                 <Help/>
-                                <Name>Field Amt 13</Name>
+                                <Name>Valor 13</Name>
                                 <PO_Description/>
                                 <PO_Help/>
                                 <PO_Name/>
                                 <PO_PrintName/>
-                                <PrintName>Field Amt 13</PrintName>
+                                <PrintName>Valor 13</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -15164,15 +15164,15 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Element_Trl type="translation">
                                 <Description/>
                                 <Help/>
-                                <Name>Field Amt 14</Name>
+                                <Name>Valor 14</Name>
                                 <PO_Description/>
                                 <PO_Help/>
                                 <PO_Name/>
                                 <PO_PrintName/>
-                                <PrintName>Field Amt 14</PrintName>
+                                <PrintName>Valor 14</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -15241,15 +15241,15 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Element_Trl type="translation">
                                 <Description/>
                                 <Help/>
-                                <Name>Field Amt 15</Name>
+                                <Name>Valor 15</Name>
                                 <PO_Description/>
                                 <PO_Help/>
                                 <PO_Name/>
                                 <PO_PrintName/>
-                                <PrintName>Field Amt 15</PrintName>
+                                <PrintName>Valor 15</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -15318,15 +15318,15 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Element_Trl type="translation">
                                 <Description/>
                                 <Help/>
-                                <Name>Field Amt 16</Name>
+                                <Name>Valor 16</Name>
                                 <PO_Description/>
                                 <PO_Help/>
                                 <PO_Name/>
                                 <PO_PrintName/>
-                                <PrintName>Field Amt 16</PrintName>
+                                <PrintName>Valor 16</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -15395,15 +15395,15 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Element_Trl type="translation">
                                 <Description/>
                                 <Help/>
-                                <Name>Field Amt 17</Name>
+                                <Name>Valor 17</Name>
                                 <PO_Description/>
                                 <PO_Help/>
                                 <PO_Name/>
                                 <PO_PrintName/>
-                                <PrintName>Field Amt 17</PrintName>
+                                <PrintName>Valor 17</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -15472,15 +15472,15 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Element_Trl type="translation">
                                 <Description/>
                                 <Help/>
-                                <Name>Field Amt 18</Name>
+                                <Name>Valor 18</Name>
                                 <PO_Description/>
                                 <PO_Help/>
                                 <PO_Name/>
                                 <PO_PrintName/>
-                                <PrintName>Field Amt 18</PrintName>
+                                <PrintName>Valor 18</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -15549,15 +15549,15 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Element_Trl type="translation">
                                 <Description/>
                                 <Help/>
-                                <Name>Field Amt 19</Name>
+                                <Name>Valor 19</Name>
                                 <PO_Description/>
                                 <PO_Help/>
                                 <PO_Name/>
                                 <PO_PrintName/>
-                                <PrintName>Field Amt 19</PrintName>
+                                <PrintName>Valor 19</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -15626,15 +15626,15 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Element_Trl type="translation">
                                 <Description/>
                                 <Help/>
-                                <Name>Field Amt 20</Name>
+                                <Name>Valor 20</Name>
                                 <PO_Description/>
                                 <PO_Help/>
                                 <PO_Name/>
                                 <PO_PrintName/>
-                                <PrintName>Field Amt 20</PrintName>
+                                <PrintName>Valor 20</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -16250,11 +16250,11 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Val_Rule_ID reference="id"/>
                             <ColumnSpan>1</ColumnSpan>
                             <DefaultValue/>
-                            <Description>Name of the Attribute</Description>
+                            <Description>Name of the Attribute 1</Description>
                             <DisplayLength>20</DisplayLength>
                             <DisplayLogic>@AttributeNm1@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 1</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -16283,8 +16283,8 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo>0</SortNo>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 1</Description>
+                                <Help>Identificador del Atributo 1</Help>
                                 <Name>Nomb 1</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
@@ -16360,7 +16360,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>20</DisplayLength>
                             <DisplayLogic>@AttributeNm2@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 2</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -16389,8 +16389,8 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo>0</SortNo>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 2</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 2</Description>
+                                <Help>Identificador del Atributo 2</Help>
                                 <Name>Nomb 2</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
@@ -16466,7 +16466,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>20</DisplayLength>
                             <DisplayLogic>@AttributeNm3@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 3</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -16495,8 +16495,8 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo>0</SortNo>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 3</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 3</Description>
+                                <Help>Identificador del Atributo 3</Help>
                                 <Name>Nomb 3</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
@@ -16572,7 +16572,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>20</DisplayLength>
                             <DisplayLogic>@AttributeNm4@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 4</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -16601,8 +16601,8 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo>0</SortNo>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 4</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 4</Description>
+                                <Help>Identificador del Atributo 4</Help>
                                 <Name>Nomb 4</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
@@ -16678,7 +16678,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>20</DisplayLength>
                             <DisplayLogic>@AttributeNm5@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 5</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -16707,8 +16707,8 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo>0</SortNo>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 5</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 5</Description>
+                                <Help>Identificador del Atributo 5</Help>
                                 <Name>Nomb 5</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
@@ -16784,7 +16784,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>20</DisplayLength>
                             <DisplayLogic>@AttributeNm6@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 6</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -16813,8 +16813,8 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo>0</SortNo>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 6</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 6</Description>
+                                <Help>Identificador del Atributo 6</Help>
                                 <Name>Nomb 6</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
@@ -16890,7 +16890,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>20</DisplayLength>
                             <DisplayLogic>@AttributeNm7@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 7</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -16919,8 +16919,8 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo>0</SortNo>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 7</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 7</Description>
+                                <Help>Identificador del Atributo 7</Help>
                                 <Name>Nomb 7</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
@@ -16996,7 +16996,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>20</DisplayLength>
                             <DisplayLogic>@AttributeNm8@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 8</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -17025,8 +17025,8 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo>0</SortNo>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 8</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 8</Description>
+                                <Help>Identificador del Atributo 8</Help>
                                 <Name>Nomb 8</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
@@ -17102,7 +17102,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>20</DisplayLength>
                             <DisplayLogic>@AttributeNm9@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 9</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -17131,8 +17131,8 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo>0</SortNo>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 9</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 9</Description>
+                                <Help>Identificador del Atributo 9</Help>
                                 <Name>Nomb 9</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
@@ -17208,7 +17208,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>20</DisplayLength>
                             <DisplayLogic>@AttributeNm10@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 10</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -17237,8 +17237,8 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo>0</SortNo>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 10</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 10</Description>
+                                <Help>Identificador del Atributo 10</Help>
                                 <Name>Nomb 10</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
@@ -17314,7 +17314,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>255</DisplayLength>
                             <DisplayLogic>@AttributeNm11@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 11</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -17343,9 +17343,9 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo/>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 11</Description>
-                                <Help>Identifier of the attribute</Help>
-                                <Name>Attribute Name 11</Name>
+                                <Description>Nombre del Atributo 11</Description>
+                                <Help>Identificador del Atributo 11</Help>
+                                <Name>Nomb 11</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -17398,7 +17398,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Field_Trl type="translation">
                                 <Description/>
                                 <Help/>
-                                <Name>Field Amt 11</Name>
+                                <Name>Valor 11</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -17420,7 +17420,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>255</DisplayLength>
                             <DisplayLogic>@AttributeNm12@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 12</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -17449,9 +17449,9 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo/>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 12</Description>
-                                <Help>Identifier of the attribute</Help>
-                                <Name>Attribute Name 12</Name>
+                                <Description>Nombre del Atributo 12</Description>
+                                <Help>Identificador del Atributo 12</Help>
+                                <Name>Nomb 12</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -17504,7 +17504,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Field_Trl type="translation">
                                 <Description/>
                                 <Help/>
-                                <Name>Field Amt 12</Name>
+                                <Name>Valor 12</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -17526,7 +17526,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>255</DisplayLength>
                             <DisplayLogic>@AttributeNm13@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 13</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -17555,9 +17555,9 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo/>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 13</Description>
-                                <Help>Identifier of the attribute</Help>
-                                <Name>Attribute Name 13</Name>
+                                <Description>Nombre del Atributo 13</Description>
+                                <Help>Identificador del Atributo 13</Help>
+                                <Name>Nomb 13</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -17610,7 +17610,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Field_Trl type="translation">
                                 <Description/>
                                 <Help/>
-                                <Name>Field Amt 13</Name>
+                                <Name>Valor 13</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -17632,7 +17632,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>255</DisplayLength>
                             <DisplayLogic>@AttributeNm14@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 14</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -17661,9 +17661,9 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo/>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 14</Description>
-                                <Help>Identifier of the attribute</Help>
-                                <Name>Attribute Name 14</Name>
+                                <Description>Nombre del Atributo 14</Description>
+                                <Help>Identificador del Atributo 14</Help>
+                                <Name>Nomb 14</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -17716,7 +17716,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Field_Trl type="translation">
                                 <Description/>
                                 <Help/>
-                                <Name>Field Amt 14</Name>
+                                <Name>Valor 14</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -17738,7 +17738,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>255</DisplayLength>
                             <DisplayLogic>@AttributeNm15@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 15</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -17767,9 +17767,9 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo/>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 15</Description>
-                                <Help>Identifier of the attribute</Help>
-                                <Name>Attribute Name 15</Name>
+                                <Description>Nombre del Atributo 15</Description>
+                                <Help>Identificador del Atributo 15</Help>
+                                <Name>Nomb 15</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -17822,7 +17822,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Field_Trl type="translation">
                                 <Description/>
                                 <Help/>
-                                <Name>Field Amt 15</Name>
+                                <Name>Valor 15</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -17844,7 +17844,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>255</DisplayLength>
                             <DisplayLogic>@AttributeNm16@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 16</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -17873,9 +17873,9 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo/>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 16</Description>
-                                <Help>Identifier of the attribute</Help>
-                                <Name>Attribute Name 16</Name>
+                                <Description>Nombre del Atributo 16</Description>
+                                <Help>Identificador del Atributo 16</Help>
+                                <Name>Nomb 16</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -17928,7 +17928,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Field_Trl type="translation">
                                 <Description/>
                                 <Help/>
-                                <Name>Field Amt 16</Name>
+                                <Name>Valor 16</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -17950,7 +17950,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>255</DisplayLength>
                             <DisplayLogic>@AttributeNm17@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 17</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -17979,9 +17979,9 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo/>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 17</Description>
-                                <Help>Identifier of the attribute</Help>
-                                <Name>Attribute Name 17</Name>
+                                <Description>Nombre del Atributo 17</Description>
+                                <Help>Identificador del Atributo 17</Help>
+                                <Name>Nomb 17</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -18034,7 +18034,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Field_Trl type="translation">
                                 <Description/>
                                 <Help/>
-                                <Name>Field Amt 17</Name>
+                                <Name>Valor 17</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -18056,7 +18056,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>255</DisplayLength>
                             <DisplayLogic>@AttributeNm18@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 18</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -18085,9 +18085,9 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo/>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 18</Description>
-                                <Help>Identifier of the attribute</Help>
-                                <Name>Attribute Name 18</Name>
+                                <Description>Nombre del Atributo 18</Description>
+                                <Help>Identificador del Atributo 18</Help>
+                                <Name>Nomb 18</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -18140,7 +18140,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Field_Trl type="translation">
                                 <Description/>
                                 <Help/>
-                                <Name>Field Amt 18</Name>
+                                <Name>Valor 18</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -18162,7 +18162,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>255</DisplayLength>
                             <DisplayLogic>@AttributeNm19@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 19</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -18191,9 +18191,9 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo/>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 19</Description>
-                                <Help>Identifier of the attribute</Help>
-                                <Name>Attribute Name 19</Name>
+                                <Description>Nombre del Atributo 19</Description>
+                                <Help>Identificador del Atributo 19</Help>
+                                <Name>Nomb 19</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -18246,7 +18246,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Field_Trl type="translation">
                                 <Description/>
                                 <Help/>
-                                <Name>Field Amt 19</Name>
+                                <Name>Valor 19</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -18268,7 +18268,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>255</DisplayLength>
                             <DisplayLogic>@AttributeNm20@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 20</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -18297,8 +18297,8 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo/>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 20</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 20</Description>
+                                <Help>Identificador del Atributo 20</Help>
                                 <Name>Attribute Name 20</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
@@ -18352,7 +18352,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Field_Trl type="translation">
                                 <Description/>
                                 <Help/>
-                                <Name>Field Amt 20</Name>
+                                <Name>Valor 20</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -19051,7 +19051,7 @@ If you leave the search key empty, the system automatically creates a numeric nu
                                 <PrintName>LCO_DIAN_XMLPrintLabel_UU</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -20729,7 +20729,7 @@ There are two reasons for de-activating and not deleting records:
                                 <PrintName>LCO_DIAN_SendSchedule_UU</PrintName>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
-                                <IsTranslated>false</IsTranslated>
+                                <IsTranslated>true</IsTranslated>
                             </AD_Element_Trl>
                         </AD_Element>
                         <AD_Column type="table">
@@ -22356,11 +22356,11 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Val_Rule_ID reference="id"/>
                             <ColumnSpan>1</ColumnSpan>
                             <DefaultValue/>
-                            <Description>Name of the Attribute</Description>
+                            <Description>Name of the Attribute 1</Description>
                             <DisplayLength>20</DisplayLength>
                             <DisplayLogic>@AttributeNm1@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 1</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -22389,8 +22389,8 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo>0</SortNo>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 1</Description>
+                                <Help>Identificador del Atributo 1</Help>
                                 <Name>Nomb 1</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
@@ -22466,7 +22466,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>20</DisplayLength>
                             <DisplayLogic>@AttributeNm2@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 2</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -22495,8 +22495,8 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo>0</SortNo>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 2</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 2</Description>
+                                <Help>Identificador del Atributo 2</Help>
                                 <Name>Nomb 2</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
@@ -22572,7 +22572,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>20</DisplayLength>
                             <DisplayLogic>@AttributeNm3@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 3</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -22601,8 +22601,8 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo>0</SortNo>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 3</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 3</Description>
+                                <Help>Identificador del Atributo 3</Help>
                                 <Name>Nomb 3</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
@@ -22678,7 +22678,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>20</DisplayLength>
                             <DisplayLogic>@AttributeNm4@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 4</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -22707,8 +22707,8 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo>0</SortNo>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 4</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 4</Description>
+                                <Help>Identificador del Atributo 4</Help>
                                 <Name>Nomb 4</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
@@ -22784,7 +22784,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>20</DisplayLength>
                             <DisplayLogic>@AttributeNm5@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 5</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -22813,8 +22813,8 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo>0</SortNo>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 5</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 5</Description>
+                                <Help>Identificador del Atributo 5</Help>
                                 <Name>Nomb 5</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
@@ -22890,7 +22890,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>20</DisplayLength>
                             <DisplayLogic>@AttributeNm6@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 6</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -22919,8 +22919,8 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo>0</SortNo>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 6</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 6</Description>
+                                <Help>Identificador del Atributo 6</Help>
                                 <Name>Nomb 6</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
@@ -22996,7 +22996,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>20</DisplayLength>
                             <DisplayLogic>@AttributeNm7@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 7</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -23025,8 +23025,8 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo>0</SortNo>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 7</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 7</Description>
+                                <Help>Identificador del Atributo 7</Help>
                                 <Name>Nomb 7</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
@@ -23102,7 +23102,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>20</DisplayLength>
                             <DisplayLogic>@AttributeNm8@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 8</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -23131,8 +23131,8 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo>0</SortNo>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 8</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 8</Description>
+                                <Help>Identificador del Atributo 8</Help>
                                 <Name>Nomb 8</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
@@ -23208,7 +23208,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>20</DisplayLength>
                             <DisplayLogic>@AttributeNm9@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 9</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -23237,8 +23237,8 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo>0</SortNo>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 9</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 9</Description>
+                                <Help>Identificador del Atributo 9</Help>
                                 <Name>Nomb 9</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
@@ -23314,7 +23314,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>20</DisplayLength>
                             <DisplayLogic>@AttributeNm10@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 10</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -23343,8 +23343,8 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo>0</SortNo>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 10</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 10</Description>
+                                <Help>Identificador del Atributo 10</Help>
                                 <Name>Nomb 10</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
@@ -23420,7 +23420,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>255</DisplayLength>
                             <DisplayLogic>@AttributeNm11@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 11</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -23449,9 +23449,9 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo/>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 11</Description>
-                                <Help>Identifier of the attribute</Help>
-                                <Name>Attribute Name 11</Name>
+                                <Description>Nombre del Atributo 11</Description>
+                                <Help>Identificador del Atributo 11</Help>
+                                <Name>Nomb 11</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -23504,7 +23504,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Field_Trl type="translation">
                                 <Description/>
                                 <Help/>
-                                <Name>Field Amt 11</Name>
+                                <Name>Valor 11</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -23526,7 +23526,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>255</DisplayLength>
                             <DisplayLogic>@AttributeNm12@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 12</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -23555,9 +23555,9 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo/>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 12</Description>
-                                <Help>Identifier of the attribute</Help>
-                                <Name>Attribute Name 12</Name>
+                                <Description>Nombre del Atributo 12</Description>
+                                <Help>Identificador del Atributo 12</Help>
+                                <Name>Nomb 12</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -23610,7 +23610,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Field_Trl type="translation">
                                 <Description/>
                                 <Help/>
-                                <Name>Field Amt 12</Name>
+                                <Name>Valor 12</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -23632,7 +23632,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>255</DisplayLength>
                             <DisplayLogic>@AttributeNm13@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 13</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -23661,9 +23661,9 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo/>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 13</Description>
-                                <Help>Identifier of the attribute</Help>
-                                <Name>Attribute Name 13</Name>
+                                <Description>Nombre del Atributo 13</Description>
+                                <Help>Identificador del Atributo 13</Help>
+                                <Name>Nomb 13</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -23716,7 +23716,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Field_Trl type="translation">
                                 <Description/>
                                 <Help/>
-                                <Name>Field Amt 13</Name>
+                                <Name>Valor 13</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -23738,7 +23738,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>255</DisplayLength>
                             <DisplayLogic>@AttributeNm14@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 14</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -23767,9 +23767,9 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo/>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 14</Description>
-                                <Help>Identifier of the attribute</Help>
-                                <Name>Attribute Name 14</Name>
+                                <Description>Nombre del Atributo 14</Description>
+                                <Help>Identificador del Atributo 14</Help>
+                                <Name>Nomb 14</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -23822,7 +23822,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Field_Trl type="translation">
                                 <Description/>
                                 <Help/>
-                                <Name>Field Amt 14</Name>
+                                <Name>Valor 14</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -23844,7 +23844,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>255</DisplayLength>
                             <DisplayLogic>@AttributeNm15@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 15</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -23873,9 +23873,9 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo/>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 15</Description>
-                                <Help>Identifier of the attribute</Help>
-                                <Name>Attribute Name 15</Name>
+                                <Description>Nombre del Atributo 15</Description>
+                                <Help>Identificador del Atributo 15</Help>
+                                <Name>Nomb 15</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -23928,7 +23928,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Field_Trl type="translation">
                                 <Description/>
                                 <Help/>
-                                <Name>Field Amt 15</Name>
+                                <Name>Valor 15</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -23950,7 +23950,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>255</DisplayLength>
                             <DisplayLogic>@AttributeNm16@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 16</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -23979,9 +23979,9 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo/>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 16</Description>
-                                <Help>Identifier of the attribute</Help>
-                                <Name>Attribute Name 16</Name>
+                                <Description>Nombre del Atributo 16</Description>
+                                <Help>Identificador del Atributo 16</Help>
+                                <Name>Nomb 16</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -24034,7 +24034,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Field_Trl type="translation">
                                 <Description/>
                                 <Help/>
-                                <Name>Field Amt 16</Name>
+                                <Name>Valor 16</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -24056,7 +24056,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>255</DisplayLength>
                             <DisplayLogic>@AttributeNm17@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 17</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -24085,9 +24085,9 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo/>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 17</Description>
-                                <Help>Identifier of the attribute</Help>
-                                <Name>Attribute Name 17</Name>
+                                <Description>Nombre del Atributo 17</Description>
+                                <Help>Identificador del Atributo 17</Help>
+                                <Name>Nomb 17</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -24140,7 +24140,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Field_Trl type="translation">
                                 <Description/>
                                 <Help/>
-                                <Name>Field Amt 17</Name>
+                                <Name>Valor 17</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -24162,7 +24162,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>255</DisplayLength>
                             <DisplayLogic>@AttributeNm18@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 18</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -24191,9 +24191,9 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo/>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 18</Description>
-                                <Help>Identifier of the attribute</Help>
-                                <Name>Attribute Name 18</Name>
+                                <Description>Nombre del Atributo 18</Description>
+                                <Help>Identificador del Atributo 18</Help>
+                                <Name>Nomb 18</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -24246,7 +24246,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Field_Trl type="translation">
                                 <Description/>
                                 <Help/>
-                                <Name>Field Amt 18</Name>
+                                <Name>Valor 18</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -24268,7 +24268,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>255</DisplayLength>
                             <DisplayLogic>@AttributeNm19@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 19</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -24297,9 +24297,9 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo/>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 19</Description>
-                                <Help>Identifier of the attribute</Help>
-                                <Name>Attribute Name 19</Name>
+                                <Description>Nombre del Atributo 19</Description>
+                                <Help>Identificador del Atributo 19</Help>
+                                <Name>Nomb 19</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -24352,7 +24352,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Field_Trl type="translation">
                                 <Description/>
                                 <Help/>
-                                <Name>Field Amt 19</Name>
+                                <Name>Valor 19</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
@@ -24374,7 +24374,7 @@ There are two reasons for de-activating and not deleting records:
                             <DisplayLength>255</DisplayLength>
                             <DisplayLogic>@AttributeNm20@!'' &amp; @#LCO_USE_MAGNETIC_MEDIA@=Y</DisplayLogic>
                             <EntityType>QSS_LCO</EntityType>
-                            <Help>Identifier of the attribute</Help>
+                            <Help>Identifier of the attribute 20</Help>
                             <Included_Tab_ID reference="id"/>
                             <IsActive>true</IsActive>
                             <IsAdvancedField>false</IsAdvancedField>
@@ -24403,8 +24403,8 @@ There are two reasons for de-activating and not deleting records:
                             <SortNo/>
                             <XPosition>1</XPosition>
                             <AD_Field_Trl type="translation">
-                                <Description>Name of the Attribute 20</Description>
-                                <Help>Identifier of the attribute</Help>
+                                <Description>Nombre del Atributo 20</Description>
+                                <Help>Identificador del Atributo 20</Help>
                                 <Name>Attribute Name 20</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
@@ -24458,7 +24458,7 @@ There are two reasons for de-activating and not deleting records:
                             <AD_Field_Trl type="translation">
                                 <Description/>
                                 <Help/>
-                                <Name>Field Amt 20</Name>
+                                <Name>Valor 20</Name>
                                 <AD_Language>es_CO</AD_Language>
                                 <IsActive>true</IsActive>
                                 <IsTranslated>false</IsTranslated>
