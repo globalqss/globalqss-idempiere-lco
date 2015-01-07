@@ -10130,7 +10130,7 @@ There are two reasons for de-activating and not deleting records:
                         <ImportFields/>
                         <Included_Tab_ID reference="id"/>
                         <IsActive>true</IsActive>
-                        <IsAdvancedTab>true</IsAdvancedTab>
+                        <IsAdvancedTab>false</IsAdvancedTab>
                         <IsInfoTab>false</IsInfoTab>
                         <IsInsertRecord>true</IsInsertRecord>
                         <IsReadOnly>false</IsReadOnly>
