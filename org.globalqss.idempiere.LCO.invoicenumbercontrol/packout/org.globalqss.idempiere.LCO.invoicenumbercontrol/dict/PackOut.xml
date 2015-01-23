@@ -329,7 +329,7 @@
             <Name>Printed Form Control</Name>
             <IsAllowCopy>true</IsAllowCopy>
             <IsActive>true</IsActive>
-            <IsToolbarButton>true</IsToolbarButton>
+            <IsToolbarButton>Y</IsToolbarButton>
             <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
             <EntityType>QSS_LCO</EntityType>
             <VFormat/>
@@ -377,7 +377,7 @@
             <Name>Client</Name>
             <IsAllowCopy>true</IsAllowCopy>
             <IsActive>true</IsActive>
-            <IsToolbarButton>true</IsToolbarButton>
+            <IsToolbarButton>Y</IsToolbarButton>
             <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
             <EntityType>QSS_LCO</EntityType>
             <VFormat/>
@@ -425,7 +425,7 @@
             <Name>Organization</Name>
             <IsAllowCopy>false</IsAllowCopy>
             <IsActive>true</IsActive>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
             <EntityType>QSS_LCO</EntityType>
             <VFormat/>
@@ -473,7 +473,7 @@
             <Name>Updated</Name>
             <IsAllowCopy>true</IsAllowCopy>
             <IsActive>true</IsActive>
-            <IsToolbarButton>true</IsToolbarButton>
+            <IsToolbarButton>Y</IsToolbarButton>
             <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
             <EntityType>QSS_LCO</EntityType>
             <VFormat/>
@@ -521,7 +521,7 @@
             <Name>Updated By</Name>
             <IsAllowCopy>true</IsAllowCopy>
             <IsActive>true</IsActive>
-            <IsToolbarButton>true</IsToolbarButton>
+            <IsToolbarButton>Y</IsToolbarButton>
             <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
             <EntityType>QSS_LCO</EntityType>
             <VFormat/>
@@ -569,7 +569,7 @@
             <Name>Created</Name>
             <IsAllowCopy>true</IsAllowCopy>
             <IsActive>true</IsActive>
-            <IsToolbarButton>true</IsToolbarButton>
+            <IsToolbarButton>Y</IsToolbarButton>
             <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
             <EntityType>QSS_LCO</EntityType>
             <VFormat/>
@@ -617,7 +617,7 @@
             <Name>Created By</Name>
             <IsAllowCopy>true</IsAllowCopy>
             <IsActive>true</IsActive>
-            <IsToolbarButton>true</IsToolbarButton>
+            <IsToolbarButton>Y</IsToolbarButton>
             <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
             <EntityType>QSS_LCO</EntityType>
             <VFormat/>
@@ -668,7 +668,7 @@ There are two reasons for de-activating and not deleting records:
             <Name>Active</Name>
             <IsAllowCopy>true</IsAllowCopy>
             <IsActive>true</IsActive>
-            <IsToolbarButton>true</IsToolbarButton>
+            <IsToolbarButton>Y</IsToolbarButton>
             <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
             <EntityType>QSS_LCO</EntityType>
             <VFormat/>
@@ -716,7 +716,7 @@ There are two reasons for de-activating and not deleting records:
             <Name>Business Partner </Name>
             <IsAllowCopy>true</IsAllowCopy>
             <IsActive>true</IsActive>
-            <IsToolbarButton>true</IsToolbarButton>
+            <IsToolbarButton>Y</IsToolbarButton>
             <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
             <EntityType>QSS_LCO</EntityType>
             <VFormat/>
@@ -764,7 +764,7 @@ There are two reasons for de-activating and not deleting records:
             <Name>Prefix</Name>
             <IsAllowCopy>true</IsAllowCopy>
             <IsActive>true</IsActive>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
             <EntityType>QSS_LCO</EntityType>
             <VFormat/>
@@ -841,7 +841,7 @@ There are two reasons for de-activating and not deleting records:
             <Name>Initial Sequence</Name>
             <IsAllowCopy>true</IsAllowCopy>
             <IsActive>true</IsActive>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
             <EntityType>QSS_LCO</EntityType>
             <VFormat/>
@@ -918,7 +918,7 @@ There are two reasons for de-activating and not deleting records:
             <Name>Final Sequence</Name>
             <IsAllowCopy>true</IsAllowCopy>
             <IsActive>true</IsActive>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
             <EntityType>QSS_LCO</EntityType>
             <VFormat/>
@@ -995,7 +995,7 @@ There are two reasons for de-activating and not deleting records:
             <Name>Authorization No</Name>
             <IsAllowCopy>true</IsAllowCopy>
             <IsActive>true</IsActive>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
             <EntityType>QSS_LCO</EntityType>
             <VFormat/>
@@ -1043,7 +1043,7 @@ There are two reasons for de-activating and not deleting records:
             <Name>Valid from</Name>
             <IsAllowCopy>true</IsAllowCopy>
             <IsActive>true</IsActive>
-            <IsToolbarButton>true</IsToolbarButton>
+            <IsToolbarButton>Y</IsToolbarButton>
             <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
             <EntityType>QSS_LCO</EntityType>
             <VFormat/>
@@ -1120,7 +1120,7 @@ There are two reasons for de-activating and not deleting records:
             <Name>Valid until</Name>
             <IsAllowCopy>true</IsAllowCopy>
             <IsActive>true</IsActive>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
             <EntityType>QSS_LCO</EntityType>
             <VFormat/>
@@ -1197,7 +1197,7 @@ There are two reasons for de-activating and not deleting records:
             <Name>Is Withholding</Name>
             <IsAllowCopy>true</IsAllowCopy>
             <IsActive>true</IsActive>
-            <IsToolbarButton>true</IsToolbarButton>
+            <IsToolbarButton>Y</IsToolbarButton>
             <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
             <EntityType>QSS_LCO</EntityType>
             <VFormat/>
@@ -1245,7 +1245,7 @@ There are two reasons for de-activating and not deleting records:
             <Name>Target Document Type</Name>
             <IsAllowCopy>true</IsAllowCopy>
             <IsActive>true</IsActive>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
             <EntityType>QSS_LCO</EntityType>
             <VFormat/>
@@ -1322,7 +1322,7 @@ There are two reasons for de-activating and not deleting records:
             <Name>LCO_PrintedFormControl_UU</Name>
             <IsAllowCopy>false</IsAllowCopy>
             <IsActive>true</IsActive>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
             <EntityType>QSS_LCO</EntityType>
             <VFormat/>
@@ -2837,7 +2837,7 @@ Hay dos razones para desactivar y no borrar los registros:
         <Name>Printed Form Control</Name>
         <IsAllowCopy>true</IsAllowCopy>
         <IsActive>true</IsActive>
-        <IsToolbarButton>false</IsToolbarButton>
+        <IsToolbarButton>N</IsToolbarButton>
         <IsAlwaysUpdateable>false</IsAlwaysUpdateable>
         <EntityType>QSS_LCO</EntityType>
         <VFormat/>
@@ -2957,7 +2957,7 @@ Hay dos razones para desactivar y no borrar los registros:
 		<Name>Printed Form Control</Name>
 		<IsAllowCopy>false</IsAllowCopy>
 		<IsActive>true</IsActive>
-		<IsToolbarButton>false</IsToolbarButton>
+		<IsToolbarButton>N</IsToolbarButton>
 		<IsAlwaysUpdateable>false</IsAlwaysUpdateable>
 		<EntityType>QSS_LCO</EntityType>
 		<VFormat />

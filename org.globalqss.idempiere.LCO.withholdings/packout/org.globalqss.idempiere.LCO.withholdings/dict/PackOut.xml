@@ -143,7 +143,7 @@
         <IsParent>false</IsParent>
         <IsSecure>false</IsSecure>
         <IsSelectionColumn>false</IsSelectionColumn>
-        <IsToolbarButton>false</IsToolbarButton>
+        <IsToolbarButton>N</IsToolbarButton>
         <IsTranslated>false</IsTranslated>
         <IsUpdateable>true</IsUpdateable>
         <MandatoryLogic/>
@@ -257,7 +257,7 @@
         <IsParent>false</IsParent>
         <IsSecure>false</IsSecure>
         <IsSelectionColumn>false</IsSelectionColumn>
-        <IsToolbarButton>false</IsToolbarButton>
+        <IsToolbarButton>N</IsToolbarButton>
         <IsTranslated>false</IsTranslated>
         <IsUpdateable>true</IsUpdateable>
         <MandatoryLogic/>
@@ -456,7 +456,7 @@
         <IsParent>false</IsParent>
         <IsSecure>false</IsSecure>
         <IsSelectionColumn>false</IsSelectionColumn>
-        <IsToolbarButton>false</IsToolbarButton>
+        <IsToolbarButton>N</IsToolbarButton>
         <IsTranslated>false</IsTranslated>
         <IsUpdateable>true</IsUpdateable>
         <MandatoryLogic/>
@@ -557,7 +557,7 @@
         <IsParent>false</IsParent>
         <IsSecure>false</IsSecure>
         <IsSelectionColumn>false</IsSelectionColumn>
-        <IsToolbarButton>false</IsToolbarButton>
+        <IsToolbarButton>N</IsToolbarButton>
         <IsTranslated>false</IsTranslated>
         <IsUpdateable>true</IsUpdateable>
         <MandatoryLogic/>
@@ -768,7 +768,7 @@
         <IsParent>false</IsParent>
         <IsSecure>false</IsSecure>
         <IsSelectionColumn>false</IsSelectionColumn>
-        <IsToolbarButton>false</IsToolbarButton>
+        <IsToolbarButton>N</IsToolbarButton>
         <IsTranslated>false</IsTranslated>
         <IsUpdateable>true</IsUpdateable>
         <MandatoryLogic/>
@@ -869,7 +869,7 @@
         <IsParent>false</IsParent>
         <IsSecure>false</IsSecure>
         <IsSelectionColumn>false</IsSelectionColumn>
-        <IsToolbarButton>false</IsToolbarButton>
+        <IsToolbarButton>N</IsToolbarButton>
         <IsTranslated>false</IsTranslated>
         <IsUpdateable>true</IsUpdateable>
         <MandatoryLogic/>
@@ -917,7 +917,7 @@
         <IsParent>false</IsParent>
         <IsSecure>false</IsSecure>
         <IsSelectionColumn>false</IsSelectionColumn>
-        <IsToolbarButton>false</IsToolbarButton>
+        <IsToolbarButton>N</IsToolbarButton>
         <IsTranslated>false</IsTranslated>
         <IsUpdateable>true</IsUpdateable>
         <MandatoryLogic/>
@@ -1100,7 +1100,7 @@
         <IsParent>false</IsParent>
         <IsSecure>false</IsSecure>
         <IsSelectionColumn>false</IsSelectionColumn>
-        <IsToolbarButton>false</IsToolbarButton>
+        <IsToolbarButton>N</IsToolbarButton>
         <IsTranslated>false</IsTranslated>
         <IsUpdateable>true</IsUpdateable>
         <MandatoryLogic/>
@@ -1185,7 +1185,7 @@
         <IsParent>false</IsParent>
         <IsSecure>false</IsSecure>
         <IsSelectionColumn>false</IsSelectionColumn>
-        <IsToolbarButton>false</IsToolbarButton>
+        <IsToolbarButton>N</IsToolbarButton>
         <IsTranslated>false</IsTranslated>
         <IsUpdateable>true</IsUpdateable>
         <MandatoryLogic/>
@@ -1394,7 +1394,7 @@
             <IsParent>false</IsParent>
             <IsSecure>false</IsSecure>
             <IsSelectionColumn>false</IsSelectionColumn>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsTranslated>false</IsTranslated>
             <IsUpdateable>false</IsUpdateable>
             <MandatoryLogic/>
@@ -1442,7 +1442,7 @@
             <IsParent>false</IsParent>
             <IsSecure>false</IsSecure>
             <IsSelectionColumn>false</IsSelectionColumn>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsTranslated>false</IsTranslated>
             <IsUpdateable>false</IsUpdateable>
             <MandatoryLogic/>
@@ -1490,7 +1490,7 @@
             <IsParent>false</IsParent>
             <IsSecure>false</IsSecure>
             <IsSelectionColumn>false</IsSelectionColumn>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsTranslated>false</IsTranslated>
             <IsUpdateable>false</IsUpdateable>
             <MandatoryLogic/>
@@ -1538,7 +1538,7 @@
             <IsParent>false</IsParent>
             <IsSecure>false</IsSecure>
             <IsSelectionColumn>false</IsSelectionColumn>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsTranslated>false</IsTranslated>
             <IsUpdateable>false</IsUpdateable>
             <MandatoryLogic/>
@@ -1597,7 +1597,7 @@
             <IsParent>false</IsParent>
             <IsSecure>false</IsSecure>
             <IsSelectionColumn>false</IsSelectionColumn>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsTranslated>false</IsTranslated>
             <IsUpdateable>false</IsUpdateable>
             <MandatoryLogic/>
@@ -1645,7 +1645,7 @@
             <IsParent>false</IsParent>
             <IsSecure>false</IsSecure>
             <IsSelectionColumn>false</IsSelectionColumn>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsTranslated>false</IsTranslated>
             <IsUpdateable>false</IsUpdateable>
             <MandatoryLogic/>
@@ -1693,7 +1693,7 @@
             <IsParent>false</IsParent>
             <IsSecure>false</IsSecure>
             <IsSelectionColumn>false</IsSelectionColumn>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsTranslated>false</IsTranslated>
             <IsUpdateable>false</IsUpdateable>
             <MandatoryLogic/>
@@ -1741,7 +1741,7 @@
             <IsParent>false</IsParent>
             <IsSecure>false</IsSecure>
             <IsSelectionColumn>false</IsSelectionColumn>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsTranslated>false</IsTranslated>
             <IsUpdateable>true</IsUpdateable>
             <MandatoryLogic/>
@@ -1789,7 +1789,7 @@
             <IsParent>false</IsParent>
             <IsSecure>false</IsSecure>
             <IsSelectionColumn>false</IsSelectionColumn>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsTranslated>false</IsTranslated>
             <IsUpdateable>true</IsUpdateable>
             <MandatoryLogic/>
@@ -1840,7 +1840,7 @@ There are two reasons for de-activating and not deleting records:
             <IsParent>false</IsParent>
             <IsSecure>false</IsSecure>
             <IsSelectionColumn>false</IsSelectionColumn>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsTranslated>false</IsTranslated>
             <IsUpdateable>true</IsUpdateable>
             <MandatoryLogic/>
@@ -1917,7 +1917,7 @@ There are two reasons for de-activating and not deleting records:
             <IsParent>false</IsParent>
             <IsSecure>false</IsSecure>
             <IsSelectionColumn>false</IsSelectionColumn>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsTranslated>false</IsTranslated>
             <IsUpdateable>false</IsUpdateable>
             <MandatoryLogic/>
@@ -1965,7 +1965,7 @@ There are two reasons for de-activating and not deleting records:
             <IsParent>false</IsParent>
             <IsSecure>false</IsSecure>
             <IsSelectionColumn>false</IsSelectionColumn>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsTranslated>false</IsTranslated>
             <IsUpdateable>true</IsUpdateable>
             <MandatoryLogic/>
@@ -2042,7 +2042,7 @@ There are two reasons for de-activating and not deleting records:
             <IsParent>false</IsParent>
             <IsSecure>false</IsSecure>
             <IsSelectionColumn>false</IsSelectionColumn>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsTranslated>false</IsTranslated>
             <IsUpdateable>false</IsUpdateable>
             <MandatoryLogic/>
@@ -2130,7 +2130,7 @@ There are two reasons for de-activating and not deleting records:
             <IsParent>false</IsParent>
             <IsSecure>false</IsSecure>
             <IsSelectionColumn>false</IsSelectionColumn>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsTranslated>false</IsTranslated>
             <IsUpdateable>false</IsUpdateable>
             <MandatoryLogic/>
@@ -2178,7 +2178,7 @@ There are two reasons for de-activating and not deleting records:
             <IsParent>false</IsParent>
             <IsSecure>false</IsSecure>
             <IsSelectionColumn>false</IsSelectionColumn>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsTranslated>false</IsTranslated>
             <IsUpdateable>true</IsUpdateable>
             <MandatoryLogic/>
@@ -2226,7 +2226,7 @@ There are two reasons for de-activating and not deleting records:
             <IsParent>false</IsParent>
             <IsSecure>false</IsSecure>
             <IsSelectionColumn>false</IsSelectionColumn>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsTranslated>false</IsTranslated>
             <IsUpdateable>true</IsUpdateable>
             <MandatoryLogic/>
@@ -2274,7 +2274,7 @@ There are two reasons for de-activating and not deleting records:
             <IsParent>false</IsParent>
             <IsSecure>false</IsSecure>
             <IsSelectionColumn>false</IsSelectionColumn>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsTranslated>false</IsTranslated>
             <IsUpdateable>true</IsUpdateable>
             <MandatoryLogic/>
@@ -2322,7 +2322,7 @@ There are two reasons for de-activating and not deleting records:
             <IsParent>false</IsParent>
             <IsSecure>false</IsSecure>
             <IsSelectionColumn>false</IsSelectionColumn>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsTranslated>false</IsTranslated>
             <IsUpdateable>true</IsUpdateable>
             <MandatoryLogic/>
@@ -2370,7 +2370,7 @@ There are two reasons for de-activating and not deleting records:
             <IsParent>false</IsParent>
             <IsSecure>false</IsSecure>
             <IsSelectionColumn>false</IsSelectionColumn>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsTranslated>false</IsTranslated>
             <IsUpdateable>false</IsUpdateable>
             <MandatoryLogic/>
@@ -2418,7 +2418,7 @@ There are two reasons for de-activating and not deleting records:
             <IsParent>false</IsParent>
             <IsSecure>false</IsSecure>
             <IsSelectionColumn>false</IsSelectionColumn>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsTranslated>false</IsTranslated>
             <IsUpdateable>false</IsUpdateable>
             <MandatoryLogic/>
@@ -2466,7 +2466,7 @@ There are two reasons for de-activating and not deleting records:
             <IsParent>false</IsParent>
             <IsSecure>false</IsSecure>
             <IsSelectionColumn>false</IsSelectionColumn>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsTranslated>false</IsTranslated>
             <IsUpdateable>true</IsUpdateable>
             <MandatoryLogic/>
@@ -2543,7 +2543,7 @@ There are two reasons for de-activating and not deleting records:
             <IsParent>false</IsParent>
             <IsSecure>false</IsSecure>
             <IsSelectionColumn>false</IsSelectionColumn>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsTranslated>false</IsTranslated>
             <IsUpdateable>true</IsUpdateable>
             <MandatoryLogic/>
@@ -2591,7 +2591,7 @@ There are two reasons for de-activating and not deleting records:
             <IsParent>false</IsParent>
             <IsSecure>false</IsSecure>
             <IsSelectionColumn>true</IsSelectionColumn>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsTranslated>false</IsTranslated>
             <IsUpdateable>true</IsUpdateable>
             <MandatoryLogic/>
@@ -2641,7 +2641,7 @@ If the document type of your document has no automatic document sequence defined
             <IsParent>false</IsParent>
             <IsSecure>false</IsSecure>
             <IsSelectionColumn>true</IsSelectionColumn>
-            <IsToolbarButton>false</IsToolbarButton>
+            <IsToolbarButton>N</IsToolbarButton>
             <IsTranslated>false</IsTranslated>
             <IsUpdateable>true</IsUpdateable>
             <MandatoryLogic/>
@@ -2755,7 +2755,7 @@ If the document type of your document has no automatic document sequence defined
             <IsParent>false</IsParent>
             <IsSecure>false</IsSecure>
             <IsSelectionColumn>false</IsSelectionColumn>
-            <IsToolbarButton>true</IsToolbarButton>
+            <IsToolbarButton>Y</IsToolbarButton>
             <IsTranslated>false</IsTranslated>
             <IsUpdateable>true</IsUpdateable>
             <MandatoryLogic/>
@@ -5298,7 +5298,7 @@ If the document type of your document has no automatic document sequence defined
         <IsParent>false</IsParent>
         <IsSecure>false</IsSecure>
         <IsSelectionColumn>false</IsSelectionColumn>
-        <IsToolbarButton>false</IsToolbarButton>
+        <IsToolbarButton>N</IsToolbarButton>
         <IsTranslated>false</IsTranslated>
         <IsUpdateable>true</IsUpdateable>
         <MandatoryLogic/>
@@ -7853,7 +7853,7 @@ If the document type of your document has no automatic document sequence defined
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -7901,7 +7901,7 @@ If the document type of your document has no automatic document sequence defined
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -7949,7 +7949,7 @@ If the document type of your document has no automatic document sequence defined
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -7997,7 +7997,7 @@ If the document type of your document has no automatic document sequence defined
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -8045,7 +8045,7 @@ If the document type of your document has no automatic document sequence defined
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -8093,7 +8093,7 @@ If the document type of your document has no automatic document sequence defined
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -8141,7 +8141,7 @@ If the document type of your document has no automatic document sequence defined
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -8192,7 +8192,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -8240,7 +8240,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>true</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -8288,7 +8288,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -8336,7 +8336,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -8384,7 +8384,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -8461,7 +8461,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -9036,7 +9036,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -9084,7 +9084,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -9132,7 +9132,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -9180,7 +9180,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -9231,7 +9231,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -9308,7 +9308,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -9356,7 +9356,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -9433,7 +9433,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -9510,7 +9510,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -9587,7 +9587,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -9664,7 +9664,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -9712,7 +9712,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>true</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -9760,7 +9760,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -9837,7 +9837,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -9914,7 +9914,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -9991,7 +9991,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -10068,7 +10068,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -10908,7 +10908,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -10956,7 +10956,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -11004,7 +11004,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -11052,7 +11052,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -11100,7 +11100,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -11148,7 +11148,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -11199,7 +11199,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -11247,7 +11247,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -11295,7 +11295,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -11343,7 +11343,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -11391,7 +11391,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -11439,7 +11439,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -11487,7 +11487,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -11535,7 +11535,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -11583,7 +11583,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -11631,7 +11631,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -11708,7 +11708,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -11822,7 +11822,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -11899,7 +11899,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -11976,7 +11976,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -12064,7 +12064,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -12112,7 +12112,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -12160,7 +12160,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -12208,7 +12208,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -12256,7 +12256,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -12304,7 +12304,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -12352,7 +12352,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -12400,7 +12400,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -12514,7 +12514,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -12591,7 +12591,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -12668,7 +12668,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -14197,7 +14197,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -14245,7 +14245,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -14293,7 +14293,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -14451,7 +14451,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -14528,7 +14528,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -14587,7 +14587,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -14635,7 +14635,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -14683,7 +14683,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -14731,7 +14731,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -14782,7 +14782,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -14859,7 +14859,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -14907,7 +14907,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -14984,7 +14984,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -15032,7 +15032,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -15080,7 +15080,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -15128,7 +15128,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -15176,7 +15176,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -15224,7 +15224,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -15272,7 +15272,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -15320,7 +15320,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -15397,7 +15397,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -17609,7 +17609,7 @@ If the document type of your document has no automatic document sequence defined
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -17657,7 +17657,7 @@ If the document type of your document has no automatic document sequence defined
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -17705,7 +17705,7 @@ If the document type of your document has no automatic document sequence defined
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -17753,7 +17753,7 @@ If the document type of your document has no automatic document sequence defined
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -17801,7 +17801,7 @@ If the document type of your document has no automatic document sequence defined
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -17849,7 +17849,7 @@ If the document type of your document has no automatic document sequence defined
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -17897,7 +17897,7 @@ If the document type of your document has no automatic document sequence defined
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -17945,7 +17945,7 @@ If the document type of your document has no automatic document sequence defined
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -17996,7 +17996,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -18044,7 +18044,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -18092,7 +18092,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -18169,7 +18169,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -18741,7 +18741,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -18789,7 +18789,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -18837,7 +18837,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -18885,7 +18885,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -18933,7 +18933,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -18981,7 +18981,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -19032,7 +19032,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -19081,7 +19081,7 @@ If you leave the search key empty, the system automatically creates a numeric nu
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -19129,7 +19129,7 @@ If you leave the search key empty, the system automatically creates a numeric nu
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -19177,7 +19177,7 @@ If you leave the search key empty, the system automatically creates a numeric nu
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -19225,7 +19225,7 @@ If you leave the search key empty, the system automatically creates a numeric nu
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -19273,7 +19273,7 @@ If you leave the search key empty, the system automatically creates a numeric nu
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -19321,7 +19321,7 @@ If you leave the search key empty, the system automatically creates a numeric nu
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -19398,7 +19398,7 @@ If you leave the search key empty, the system automatically creates a numeric nu
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -20077,7 +20077,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -20125,7 +20125,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -20173,7 +20173,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -20221,7 +20221,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -20269,7 +20269,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -20317,7 +20317,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -20365,7 +20365,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -20413,7 +20413,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -20464,7 +20464,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -20512,7 +20512,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>false</IsUpdateable>
                             <MandatoryLogic/>
@@ -20560,7 +20560,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
@@ -20637,7 +20637,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsParent>false</IsParent>
                             <IsSecure>false</IsSecure>
                             <IsSelectionColumn>false</IsSelectionColumn>
-                            <IsToolbarButton>false</IsToolbarButton>
+                            <IsToolbarButton>N</IsToolbarButton>
                             <IsTranslated>false</IsTranslated>
                             <IsUpdateable>true</IsUpdateable>
                             <MandatoryLogic/>
