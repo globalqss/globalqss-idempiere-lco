@@ -6554,6 +6554,22 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgText" original="This process creates and complete payments automatically, do you want to print and at the same time create/complete payments?">Este proceso crea y completa pagos automáticamente.  ¿Desea imprimir y al mismo tiempo crear/completar los pagos?</value>
   <value column="MsgTip" original=""/>
  </row>
+ <row id="200326" trl="Y">
+  <value column="MsgText" original="CSV Import File Loader">Importador Archivos CSV</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200327" trl="Y">
+  <value column="MsgText" original="CSV Header doesn't match template">Encabezado CSV no coincide con la plantilla</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200328" trl="Y">
+  <value column="MsgText" original="No attribute set configured on product ">No se ha configurado conjunto de atributos para el producto</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200329" trl="Y">
+  <value column="MsgText" original="Banks From and To must be different">Cuentas desde/hacia deben ser diferentes</value>
+  <value column="MsgTip" original=""/>
+ </row>
  <row id="520010" trl="Y">
   <value column="MsgText" original="1 Rupee">1 Rupia</value>
   <value column="MsgTip" original=" "/>

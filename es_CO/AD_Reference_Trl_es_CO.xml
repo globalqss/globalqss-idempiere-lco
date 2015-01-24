@@ -2522,6 +2522,11 @@
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="200076" trl="N">
+  <value column="Name" original="C_ElementValue Account BPartner Type">C_ElementValue Account BPartner Type</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row id="200080" trl="Y">
   <value column="Name" original="M_Production">M_Production</value>
   <value column="Description" original=""/>
@@ -2539,6 +2544,16 @@
  </row>
  <row id="200092" trl="Y">
   <value column="Name" original="Country Group">Country Group</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200098" trl="Y">
+  <value column="Name" original="Import Mode">Import Mode</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200099" trl="N">
+  <value column="Name" original="IsToolbarButton">IsToolbarButton</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>

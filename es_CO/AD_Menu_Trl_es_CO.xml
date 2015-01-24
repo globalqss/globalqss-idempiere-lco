@@ -298,6 +298,10 @@
   <value column="Name" original="Sales Management">Administración de Ventas</value>
   <value column="Description" original=""/>
  </row>
+ <row id="200095" trl="Y">
+  <value column="Name" original="Import Template">Plantilla Importación</value>
+  <value column="Description" original=""/>
+ </row>
  <row trl="Y" uuid="a18acb98-2108-4004-b6ae-b5d794e14e96">
   <value column="Name" original="Colombia Localization">Localización Colombia</value>
   <value column="Description" original=""/>

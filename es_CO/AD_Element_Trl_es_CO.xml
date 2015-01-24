@@ -54869,6 +54869,36 @@ si se deja en blanco el campo un título/rótulo por defecto se creará usando l
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
+ <row id="202614" trl="Y">
+  <value column="Name" original="Manage Business Partners">Maneja Terceros</value>
+  <value column="PrintName" original="Manage Business Partners">Maneja Terceros</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202615" trl="Y">
+  <value column="Name" original="Manage Products">Maneja Productos</value>
+  <value column="PrintName" original="Manage Products">Maneja Productos</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202616" trl="Y">
+  <value column="Name" original="Business Partner Type">Tipo Tercero</value>
+  <value column="PrintName" original="Business Partner Type">Tipo Tercero</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
  <row id="202618" trl="Y">
   <value column="Name" original="Export Dictionary Entity">Exportar Diccionario Oficial</value>
   <value column="PrintName" original="Export Dictionary Entity">Exportar Diccionario Oficial</value>
@@ -55423,6 +55453,126 @@ Las cadenas pueden estar (opcionalmente) entre comillas simples]]></value>
  <row id="202767" trl="Y">
   <value column="Name" original="Country Group From">Grupo de Países Desde</value>
   <value column="PrintName" original="Country Group From">Grupo de Países Desde</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202793" trl="Y">
+  <value column="Name" original="Import Template">Plantilla Importación</value>
+  <value column="PrintName" original="Import Template">Plantilla Importación</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202794" trl="Y">
+  <value column="Name" original="AD_ImportTemplate_UU">AD_ImportTemplate_UU</value>
+  <value column="PrintName" original="AD_ImportTemplate_UU">AD_ImportTemplate_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202795" trl="Y">
+  <value column="Name" original="Character Set">Juego de Caracteres</value>
+  <value column="PrintName" original="Character Set">Juego de Caracteres</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202796" trl="Y">
+  <value column="Name" original="CSV Header">Encabezado CSV</value>
+  <value column="PrintName" original="CSV Header">Encabezado CSV</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202797" trl="Y">
+  <value column="Name" original="CSV Alias Header">Alias Encabezado CSV</value>
+  <value column="PrintName" original="CSV Alias Header">Alias Encabezado CSV</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202798" trl="Y">
+  <value column="Name" original="Import Template Access">Acceso Plantilla Importación</value>
+  <value column="PrintName" original="Import Template Access">Acceso Plantilla Importación</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202799" trl="Y">
+  <value column="Name" original="AD_ImportTemplateAccess_UU">AD_ImportTemplateAccess_UU</value>
+  <value column="PrintName" original="AD_ImportTemplateAccess_UU">AD_ImportTemplateAccess_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202800" trl="Y">
+  <value column="Name" original="Allow Insert">Permite Inserción</value>
+  <value column="PrintName" original="Allow Insert">Permite Inserción</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202801" trl="Y">
+  <value column="Name" original="Allow Merge">Permite Mezcla</value>
+  <value column="PrintName" original="Allow Merge">Permite Mezcla</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202802" trl="Y">
+  <value column="Name" original="Allow Update">Permite Modificación</value>
+  <value column="PrintName" original="Allow Update">Permite Modificación</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202807" trl="Y">
+  <value column="Name" original="Import Mode">Modo Importación</value>
+  <value column="PrintName" original="Import Mode">Modo Importación</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202809" trl="Y">
+  <value column="Name" original="Driven by Search Key">Manejado por el Código</value>
+  <value column="PrintName" original="Defines if the tree is driven by the Search Key column">Define si el árbol es manejado por la columna Código</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
