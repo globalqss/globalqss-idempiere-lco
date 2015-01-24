@@ -5378,6 +5378,18 @@
   <value column="Name" original="Set Null">Fijar Nulo</value>
   <value column="Description" original=""/>
  </row>
+ <row id="200165" trl="Y">
+  <value column="Name" original="Customer">Cliente</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200166" trl="Y">
+  <value column="Name" original="Vendor">Proveedor</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200167" trl="Y">
+  <value column="Name" original="Employee">Empleado</value>
+  <value column="Description" original=""/>
+ </row>
  <row id="200176" trl="Y">
   <value column="Name" original="UPC-A">UPC-A</value>
   <value column="Description" original=""/>
@@ -5404,6 +5416,30 @@
  </row>
  <row id="200278" trl="Y">
   <value column="Name" original="Model Cascade">Cascada en el Modelo</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200281" trl="Y">
+  <value column="Name" original="Insert">Inserción</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200282" trl="Y">
+  <value column="Name" original="Update">Modificación</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200283" trl="Y">
+  <value column="Name" original="Merge">Mezcla</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200285" trl="Y">
+  <value column="Name" original="Toolbar">Barra Herramientas</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200286" trl="Y">
+  <value column="Name" original="Window">Ventana</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200287" trl="Y">
+  <value column="Name" original="Both">Ambos</value>
   <value column="Description" original=""/>
  </row>
  <row trl="Y" uuid="dbc98c55-3b9e-4f9b-9d50-f29596ba706d">
