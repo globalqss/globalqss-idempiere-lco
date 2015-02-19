@@ -12742,7 +12742,7 @@ There are two reasons for de-activating and not deleting records:
                         <Parent_Column_ID reference="id"/>
                         <Processing>false</Processing>
                         <ReadOnlyLogic/>
-                        <SeqNo>30</SeqNo>
+                        <SeqNo>40</SeqNo>
                         <TabLevel>1</TabLevel>
                         <WhereClause/>
                         <AD_Tab_Trl type="translation">
@@ -15471,7 +15471,7 @@ There are two reasons for de-activating and not deleting records:
                         <Parent_Column_ID reference="id"/>
                         <Processing>false</Processing>
                         <ReadOnlyLogic/>
-                        <SeqNo>40</SeqNo>
+                        <SeqNo>30</SeqNo>
                         <TabLevel>1</TabLevel>
                         <WhereClause/>
                         <AD_Tab_Trl type="translation">
