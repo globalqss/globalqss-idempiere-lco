@@ -99,7 +99,7 @@ public class LCO_ModelValidatorINC extends AbstractEventHandler
 		log.info(po.get_TableName() + " Type: "+type);
 		String msg;
 
-		if (   po.get_TableName().equals(X_LCO_PrintedFormControl.Table_Name)
+		if (   po instanceof X_LCO_PrintedFormControl
 			&& (   type.equals(IEventTopics.PO_BEFORE_CHANGE)
 				|| type.equals(IEventTopics.PO_BEFORE_NEW))) {
 			X_LCO_PrintedFormControl cpf = (X_LCO_PrintedFormControl) po;
@@ -108,7 +108,7 @@ public class LCO_ModelValidatorINC extends AbstractEventHandler
 				throw new RuntimeException(msg);
 		}
 
-		if (po.get_TableName().equals(MInvoice.Table_Name) && type.equals(IEventTopics.DOC_BEFORE_COMPLETE)) {
+		if (po instanceof MInvoice && type.equals(IEventTopics.DOC_BEFORE_COMPLETE)) {
 			msg = validatePrintedFormOnInvoice((MInvoice) po);
 			if (msg != null)
 				throw new RuntimeException(msg);
@@ -117,7 +117,7 @@ public class LCO_ModelValidatorINC extends AbstractEventHandler
 		if (! MSysConfig.getBooleanValue("LCO_USE_WITHHOLDINGS", true, Env.getAD_Client_ID(Env.getCtx())))
 			return;
 
-		if (   po.get_TableName().equals(MLCOInvoiceWithholding.Table_Name)
+		if (   po instanceof MLCOInvoiceWithholding
 			&& (   type.equals(IEventTopics.PO_BEFORE_CHANGE)
 				|| type.equals(IEventTopics.PO_BEFORE_NEW))) {
 			MLCOInvoiceWithholding invwhi = (MLCOInvoiceWithholding) po;

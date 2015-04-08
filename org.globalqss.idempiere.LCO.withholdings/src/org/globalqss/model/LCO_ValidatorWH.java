@@ -124,7 +124,7 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 		String msg;
 
 		// Model Events
-		if (po.get_TableName().equals(MInvoice.Table_Name) && type.equals(IEventTopics.PO_BEFORE_CHANGE)) {
+		if (po instanceof MInvoice && type.equals(IEventTopics.PO_BEFORE_CHANGE)) {
 			msg = clearInvoiceWithholdingAmtFromInvoice((MInvoice) po);
 			if (msg != null)
 				throw new RuntimeException(msg);
@@ -132,7 +132,7 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 
 		// when invoiceline is changed clear the withholding amount on invoice
 		// in order to force a regeneration
-		if (po.get_TableName().equals(MInvoiceLine.Table_Name) &&
+		if (po instanceof MInvoiceLine &&
 				(type.equals(IEventTopics.PO_BEFORE_NEW) ||
 				 type.equals(IEventTopics.PO_BEFORE_CHANGE) ||
 				 type.equals(IEventTopics.PO_BEFORE_DELETE)
@@ -144,7 +144,7 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 				throw new RuntimeException(msg);
 		}
 
-		if (po.get_TableName().equals(X_LCO_WithholdingCalc.Table_Name)
+		if (po instanceof X_LCO_WithholdingCalc
 				&& (type.equals(IEventTopics.PO_BEFORE_CHANGE) || type.equals(IEventTopics.PO_BEFORE_NEW))) {
 			X_LCO_WithholdingCalc lwc = (X_LCO_WithholdingCalc) po;
 			if (lwc.isCalcOnInvoice() && lwc.isCalcOnPayment())
@@ -153,7 +153,7 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 
 		// Document Events
 		// before preparing a reversal invoice add the invoice withholding taxes
-		if (po.get_TableName().equals(MInvoice.Table_Name)
+		if (po instanceof MInvoice
 				&& type.equals(IEventTopics.DOC_BEFORE_PREPARE)) {
 			MInvoice inv = (MInvoice) po;
 			if (inv.isReversal()) {
@@ -202,7 +202,7 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 		}
 
 		// before preparing invoice validate if withholdings has been generated
-		if (po.get_TableName().equals(MInvoice.Table_Name)
+		if (po instanceof MInvoice
 				&& type.equals(IEventTopics.DOC_BEFORE_PREPARE)) {
 			MInvoice inv = (MInvoice) po;
 			/* @TODO: Change this to IsReversal & Reversal_ID on 3.5 */
@@ -232,42 +232,42 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 		}
 
 		// after preparing invoice move invoice withholdings to taxes and recalc grandtotal of invoice
-		if (po.get_TableName().equals(MInvoice.Table_Name) && type.equals(IEventTopics.DOC_BEFORE_COMPLETE)) {
+		if (po instanceof MInvoice && type.equals(IEventTopics.DOC_BEFORE_COMPLETE)) {
 			msg = translateWithholdingToTaxes((MInvoice) po);
 			if (msg != null)
 				throw new RuntimeException(msg);
 		}
 
 		// after completing the invoice fix the dates on withholdings and mark the invoice withholdings as processed
-		if (po.get_TableName().equals(MInvoice.Table_Name) && type.equals(IEventTopics.DOC_AFTER_COMPLETE)) {
+		if (po instanceof MInvoice && type.equals(IEventTopics.DOC_AFTER_COMPLETE)) {
 			msg = completeInvoiceWithholding((MInvoice) po);
 			if (msg != null)
 				throw new RuntimeException(msg);
 		}
 
 		// before completing the payment - validate that writeoff amount must be greater than sum of payment withholdings
-		if (po.get_TableName().equals(MPayment.Table_Name) && type.equals(IEventTopics.DOC_BEFORE_COMPLETE)) {
+		if (po instanceof MPayment && type.equals(IEventTopics.DOC_BEFORE_COMPLETE)) {
 			msg = validateWriteOffVsPaymentWithholdings((MPayment) po);
 			if (msg != null)
 				throw new RuntimeException(msg);
 		}
 
 		// after completing the allocation - complete the payment withholdings
-		if (po.get_TableName().equals(MAllocationHdr.Table_Name) && type.equals(IEventTopics.DOC_AFTER_COMPLETE)) {
+		if (po instanceof MAllocationHdr && type.equals(IEventTopics.DOC_AFTER_COMPLETE)) {
 			msg = completePaymentWithholdings((MAllocationHdr) po);
 			if (msg != null)
 				throw new RuntimeException(msg);
 		}
 
 		// before posting the allocation - post the payment withholdings vs writeoff amount
-		if (po.get_TableName().equals(MAllocationHdr.Table_Name) && type.equals(IEventTopics.DOC_BEFORE_POST)) {
+		if (po instanceof MAllocationHdr && type.equals(IEventTopics.DOC_BEFORE_POST)) {
 			msg = accountingForInvoiceWithholdingOnPayment((MAllocationHdr) po);
 			if (msg != null)
 				throw new RuntimeException(msg);
 		}
 
 		// after completing the allocation - complete the payment withholdings
-		if (po.get_TableName().equals(MAllocationHdr.Table_Name)
+		if (po instanceof MAllocationHdr
 				&& (type.equals(IEventTopics.DOC_AFTER_VOID) ||
 					type.equals(IEventTopics.DOC_AFTER_REVERSECORRECT) ||
 					type.equals(IEventTopics.DOC_AFTER_REVERSEACCRUAL))) {
