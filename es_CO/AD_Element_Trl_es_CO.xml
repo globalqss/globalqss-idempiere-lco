@@ -1354,8 +1354,8 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="287" trl="Y">
-  <value column="Name" original="Document Action">Acción en el Documento</value>
-  <value column="PrintName" original="Doc Action">Acción en el Documento</value>
+  <value column="Name" original="Document Action">Acción</value>
+  <value column="PrintName" original="Doc Action">Acción</value>
   <value column="Description" original="The targeted status of the document">El estado destino del documento</value>
   <value column="Help" original="You find the current status in the Document Status field. The options are listed in a popup">Usted encuentra el estado actual en el campo Estado del Documento. Las opciones son listadas en una ventana emergente</value>
   <value column="PO_Description" original=""/>
@@ -1676,20 +1676,20 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="337" trl="Y">
-  <value column="Name" original="Intercompany Due From Acct">Cuenta Inter-Grupo Emp Debido Desde</value>
-  <value column="PrintName" original="Intercompany Due From Acct">Desde la Cuenta Inter-Grupo Emp</value>
-  <value column="Description" original="Intercompany Due From / Receivables Account">Cta. InterGrupo Emp que debe a este grupo emp / Cuenta por Cobrar</value>
-  <value column="Help" original="The Intercompany Due From account indicates the account that represents money owed to this organization from other organizations.">La cuenta Inter-Grupo Emp debido desde indica la cuenta que representa dinero que se debe a esta organización desde otras organizaciones</value>
+  <value column="Name" original="Intercompany Due From Acct">Cuenta Inter-Compañía Debido Desde</value>
+  <value column="PrintName" original="Intercompany Due From Acct">Desde la Cuenta Inter-Compañía</value>
+  <value column="Description" original="Intercompany Due From / Receivables Account">Cta. Inter Compañía que debe a esta compañía / Cuenta por Cobrar</value>
+  <value column="Help" original="The Intercompany Due From account indicates the account that represents money owed to this organization from other organizations.">La cuenta Inter-Compañía debido desde indica la cuenta que representa dinero que se debe a esta organización desde otras organizaciones</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="338" trl="Y">
-  <value column="Name" original="Intercompany Due To Acct">Cuenta Inter-Grupo Emp Debido A</value>
-  <value column="PrintName" original="Intercompany Due To Acct">A la Cuenta Inter-Grupo Emp</value>
-  <value column="Description" original="Intercompany Due To / Payable Account">Cta. Inter-Grupo Emp que este grupo emp debe / Cuenta por Pagar</value>
-  <value column="Help" original="The Intercompany Due To Account indicates the account that represents money owed to other organizations.">La cuenta Inter-Grupo Emp debido A indica la cuenta que representa dinero que debe esta organización a otras organizaciones</value>
+  <value column="Name" original="Intercompany Due To Acct">Cuenta Inter-Compañía Debido Hacia</value>
+  <value column="PrintName" original="Intercompany Due To Acct">Hacia la Cuenta Inter-Compañía</value>
+  <value column="Description" original="Intercompany Due To / Payable Account">Cta. Inter-Compañía que esta compañía debe / Cuenta por Pagar</value>
+  <value column="Help" original="The Intercompany Due To Account indicates the account that represents money owed to other organizations.">La cuenta Inter-Compañía debido Hacia indica la cuenta que representa dinero que debe esta organización a otras organizaciones</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -2549,7 +2549,7 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="Name" original="Organization">Organización</value>
   <value column="PrintName" original="Organization">Organización</value>
   <value column="Description" original="Organizational entity within client">Entidad organizacional dentro de la empresa.</value>
-  <value column="Help" original="An organization is a unit of your client or legal entity - examples are store, department.">Una organización es una unidad de su compañía o entidad legal. Ej. tiendas; departamentos</value>
+  <value column="Help" original="An organization is a unit of your client or legal entity - examples are store, department.">Una organización es una unidad de su grupo empresarial o entidad legal. Ej. tiendas; departamentos</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -5879,7 +5879,7 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="Name" original="Mail Host">Servidor Correo Electrónico</value>
   <value column="PrintName" original="Mail Host">Nombre Servidor Correo Electrónico</value>
   <value column="Description" original="Hostname of Mail Server for SMTP and IMAP">Nombre del servidor de correos.</value>
-  <value column="Help" original="The host name of the Mail Server for this client with SMTP services to send mail, and IMAP to process incoming mail.">El servidor SMTP define el nombre del servidor de correos para este registro</value>
+  <value column="Help" original="The host name of the Mail Server for this client with SMTP services to send mail, and IMAP to process incoming mail.">El servidor SMTP define el nombre del servidor de correos para este grupo empresarial</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -12039,7 +12039,7 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="Name" original="Document Directory">Directorio del Documento</value>
   <value column="PrintName" original="Document Dir">Directorio del Documento</value>
   <value column="Description" original="Directory for documents from the application server">Directorio para los documentos del servidor de aplicación</value>
-  <value column="Help" original="Directory to store documents by the application server.  The path/directory is accessed by the application server and may not be accessible to clients.">Directorio para guardar documentos por servidor de aplicación. El path/Directorio es accedido por el servidor de aplicación y puede ser no accesible a los clientes.</value>
+  <value column="Help" original="Directory to store documents by the application server.  The path/directory is accessed by the application server and may not be accessible to clients.">Directorio para guardar documentos por servidor de aplicación. El path/Directorio es accedido por el servidor de aplicación y puede ser no accesible a los grupos empresariales.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -12749,7 +12749,7 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="Name" original="Printer Name">Nombre Impresión</value>
   <value column="PrintName" original="Printer Name">Nombre Impresión</value>
   <value column="Description" original="Name of the Printer">Nombre de la Impresión</value>
-  <value column="Help" original="Internal (Operating System) Name of the Printer; Please mote that the printer name may be different on different clients. Enter a printer name, which applies to ALL clients (e.g. printer on a server). &lt;p&gt;&#10;If none is entered, the default printer is used. You specify your default printer when you log in. You can also change the default printer in Preferences."><![CDATA[(Nombre interno del sistema operativo) de la impresora; Por favor note que el nombre de la impresora puede ser diferente en diversos clientes. Incorpore un nombre de la impresora, que se aplica a TODOS LOS clientes (ej. Impresora en un servidor) <p> 
+  <value column="Help" original="Internal (Operating System) Name of the Printer; Please mote that the printer name may be different on different clients. Enter a printer name, which applies to ALL clients (e.g. printer on a server). &lt;p&gt;&#10;If none is entered, the default printer is used. You specify your default printer when you log in. You can also change the default printer in Preferences."><![CDATA[(Nombre interno del sistema operativo) de la impresora; Por favor note que el nombre de la impresora puede ser diferente en diversos grupos empresariales. Incorpore un nombre de la impresora, que se aplica a TODOS LOS grupos empresariales (ej. Impresora en un servidor) <p> 
 
 Si no se incorpora ninguna, se utiliza la impresora por default. Usted especifica su impresora a utilizar cuando abre una sesión. Tambien puede cambiar la impresora por default en preferencias.]]></value>
   <value column="PO_Description" original=""/>
@@ -13188,9 +13188,9 @@ Si no se incorpora ninguna, se utiliza la impresora por default. Usted especific
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2099" trl="Y">
-  <value column="Name" original="Enforce Client Security">Seguridad de Cliente Forzosa</value>
-  <value column="PrintName" original="Enforce Client Security">Seguridad de Cliente Forzosa</value>
-  <value column="Description" original="Send alerts to recipient only if the client security rules of the role allows">Envie las alertas al recipiente solo si las reglas de seguridad del cliente lo permite.</value>
+  <value column="Name" original="Enforce Client Security">Seguridad de Grupo Empresarial Forzosa</value>
+  <value column="PrintName" original="Enforce Client Security">Seguridad de Grupo Empresarial Forzosa</value>
+  <value column="Description" original="Send alerts to recipient only if the client security rules of the role allows">Envie las alertas al recipiente solo si las reglas de seguridad del grupo empresarial lo permite.</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -13440,7 +13440,7 @@ Si no se incorpora ninguna, se utiliza la impresora por default. Usted especific
  <row id="2124" trl="Y">
   <value column="Name" original="Internal Users">Unidades de Ayuda</value>
   <value column="PrintName" original="Internal Users">Unidades de Ayuda</value>
-  <value column="Description" original="Number of Internal Users for iDempiere Support">Número de las unidades de ayuda para la ayuda de iDempiere</value>
+  <value column="Description" original="Number of Internal Users for iDempiere Support">Número de usuarios internos para soporte iDempiere</value>
   <value column="Help" original="You can purchase professioal support from iDempiere, Inc. or their partners.  See http://www.idempiere.org for details.&#10;">Usted puede contratar consultoría y soporte profesional con GlobalQSS http://www.globalqss.com</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -13739,16 +13739,16 @@ La fusión significa que los datos en este sistema están sincronizados con el o
   <value column="Name" original="ID Range Start">ID Inicio de rango</value>
   <value column="PrintName" original="ID Start">ID Inicio</value>
   <value column="Description" original="Start of the ID Range used">Inicio del ID de Rango</value>
-  <value column="Help" original="The ID Range allows to restrict the range of the internally used IDs. The standard rages are 0-899,999 for the Application Dictionary 900,000-999,999 for Application Dictionary customizations/extensions and &gt; 1,000,000 for client data. The standard system limit is 9,999,999,999 but can easily be extended.  The ID range is on a per table basis.&#10;Please note that the ID range is NOT enforced."><![CDATA[El rango de ID permite restringir el rango de las IDs internacionalmente usadas. Las rangos estándares son 0-899.999 para el diccionario de aplicación 900,000-999,999 por diccionario de aplicación. Arreglos de requisitos/extensiones y > 1.000.000 para los datos del cliente. El límite estándar del sistema es 9.999.999.999 pero puede fácilmente ser extendido. El rango de la ID esta por base de la tabla. Observe porfavor que el rango de la ID no se cumple.]]></value>
+  <value column="Help" original="The ID Range allows to restrict the range of the internally used IDs. The standard rages are 0-899,999 for the Application Dictionary 900,000-999,999 for Application Dictionary customizations/extensions and &gt; 1,000,000 for client data. The standard system limit is 9,999,999,999 but can easily be extended.  The ID range is on a per table basis.&#10;Please note that the ID range is NOT enforced."><![CDATA[El rango de ID permite restringir el rango de las IDs usadas internamente. Las rangos estándares son 0-899.999 para el diccionario de aplicación 900,000-999,999 por diccionario de aplicación. Arreglos de requisitos/extensiones y > 1.000.000 para los datos del cliente. El límite estándar del sistema es 9.999.999.999 pero puede fácilmente ser extendido. El rango de la ID esta por base de la tabla. Observe por favor que el rango de la ID no se cumple.]]></value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2157" trl="Y">
-  <value column="Name" original="Remote Client">Cliente Remoto</value>
-  <value column="PrintName" original="Remote Client">Cliente Remoto</value>
-  <value column="Description" original="Remote Client to be used to replicate / synchronize data with.">Cliente alejado que se utilizará replegar/ sincronize los datos con.</value>
+  <value column="Name" original="Remote Client">Grupo Empresarial Remoto</value>
+  <value column="PrintName" original="Remote Client">Grupo Empresarial Remoto</value>
+  <value column="Description" original="Remote Client to be used to replicate / synchronize data with.">Grupo Empresarial alejado que se utilizará replegar/ sincronize los datos con.</value>
   <value column="Help" original="The remote client used for data replication."/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -14073,7 +14073,7 @@ de proyecto - capacidad de publicar el material</value>
   <value column="Name" original="Encryption Class">Clave de Encripción</value>
   <value column="PrintName" original="Encryption Class">Clave de Encripción</value>
   <value column="Description" original="Encryption Class used for securing data content">Clave de encripción utilizada para el contenido seguro de datos</value>
-  <value column="Help" original="The class needs to implement the interface org.compiere.util.SecureInterface.&#10;You enable it by setting the COMPIERE_SECURE parameter of your Client and Server start scripts to the custom class.">Observe que eso que cambia la llave hará todos los datos previamente cifrados ilegibles.</value>
+  <value column="Help" original="The class needs to implement the interface org.compiere.util.SecureInterface.&#10;You enable it by setting the COMPIERE_SECURE parameter of your Client and Server start scripts to the custom class.">Observe que si se cambia la llave hará todos los datos previamente cifrados ilegibles.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -14230,7 +14230,7 @@ de proyecto - capacidad de publicar el material</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2207" trl="Y">
-  <value column="Name" original="Calculate Maximum (?)">Calcular Máximo (↑)</value>
+  <value column="Name" original="Calculate Maximum (↑)">Calcular Máximo (↑)</value>
   <value column="PrintName" original="Calc Max">Calcular Máximo</value>
   <value column="Description" original="Calculate the maximum amount">Calcular el monto máximo</value>
   <value column="Help" original="Calculate the Maximum (↑)  of the data if the field is numeric, otherwise maximum length of the field.">Calcula el máximo (↑) si los datos son numéricos, de otra forma calcula el máximo tamaño de los datos.</value>
@@ -14332,8 +14332,8 @@ de proyecto - capacidad de publicar el material</value>
  <row id="2217" trl="Y">
   <value column="Name" original="Platform Info">Información Plataforma</value>
   <value column="PrintName" original="Platform">Plataforma</value>
-  <value column="Description" original="Information about Server and Client Platform">Información sobre plataforma del servidor y del cliente.</value>
-  <value column="Help" original="Include information on Server, Network [Operating System, RAM, Disk, CPUs] and (number of) Clients.">Incluye la información sobre el servidor, la red y (número de) clientes.</value>
+  <value column="Description" original="Information about Server and Client Platform">Información sobre plataforma del servidor y del grupo empresarial.</value>
+  <value column="Help" original="Include information on Server, Network [Operating System, RAM, Disk, CPUs] and (number of) Clients.">Incluye la información sobre el servidor, la red y (número de) grupos empresariales.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -16869,7 +16869,7 @@ de proyecto - capacidad de publicar el material</value>
   <value column="Name" original="Maintain Statistics">Permite Estadística</value>
   <value column="PrintName" original="Maintain Statistics">Permite Estadística</value>
   <value column="Description" original="Maintain general statistics">Permite transferir estadisticas generales (número de clientes, org, terceros, usuarios, productos, facturas)</value>
-  <value column="Help" original="Maintain and allow to transfer general statistics (number of clients, orgs, business partners, users, products, invoices) to get a better feeling for the application use.  This information is not published.">Permite transferir estadisticas generales (número de clientes, org, terceros, usuarios, productos, facturas) para conseguir una mejor sensación para el tamaño de aplicación. Esta información no se publica.</value>
+  <value column="Help" original="Maintain and allow to transfer general statistics (number of clients, orgs, business partners, users, products, invoices) to get a better feeling for the application use.  This information is not published.">Permite transferir estadisticas generales (número de grupos empresariales, org, terceros, usuarios, productos, facturas) para conseguir una mejor sensación para el tamaño de aplicación. Esta información no se publica.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -17774,8 +17774,8 @@ Invoices and Payment Allocations determine the Open Balance (i.e. not Orders or 
  <row id="2587" trl="Y">
   <value column="Name" original="Access all Orgs">Acceso a todas las Organizaciones</value>
   <value column="PrintName" original="Access all Orgs">Acceso a todas las Organizaciones</value>
-  <value column="Description" original="Access all Organizations (no org access control) of the client">Acceso a todas las Organizaciones (no controla acceso a organización) del cliente.</value>
-  <value column="Help" original="When selected, the role has access to all organizations of the client automatically. This also increases performance where you have many organizations.">Cuando selecciona la regla, le da acceso a todas las organizaciones del cliente automaticamente. Esta tambien aumenta funcionamientos donde usted tiene muchas organizaciones.</value>
+  <value column="Description" original="Access all Organizations (no org access control) of the client">Acceso a todas las Organizaciones (no controla acceso a organización) del grupo empresarial.</value>
+  <value column="Help" original="When selected, the role has access to all organizations of the client automatically. This also increases performance where you have many organizations.">Cuando selecciona la regla, le da acceso a todas las organizaciones del grupo empresarial automaticamente. Esta tambien aumenta funcionamientos donde usted tiene muchas organizaciones.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -18465,7 +18465,7 @@ La secuencia de Ciudad/Región/Postal es determinada con la dirección de format
   <value column="Name" original="Preference Level">Nivel de preferencia</value>
   <value column="PrintName" original="Preference Level">Nivel de preferencia</value>
   <value column="Description" original="Determines what preferences the user can set">Se determina que preferencia puede fijar el usuario.</value>
-  <value column="Help" original="Preferences allow you to define default values.  If set to None, you cannot set any preference nor value preference. Only if set to Client, you can see the Record Info Change Log.">Las preferencias permiten que usted defina los valores por defaul. Sin ningun sistema, usted no puede fijar ninguna preferencia del valor. Solamente con sistema al cliente, usted puede ver la bitácora de cambios.</value>
+  <value column="Help" original="Preferences allow you to define default values.  If set to None, you cannot set any preference nor value preference. Only if set to Client, you can see the Record Info Change Log.">Las preferencias permiten que usted defina los valores por defecto. Si se fija en Ninguno no podrá fijar ninguna preferencia. Solamente con Grupo Empresarial, usted puede ver la bitácora de cambios.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -18605,7 +18605,7 @@ La secuencia de Ciudad/Región/Postal es determinada con la dirección de format
   <value column="Name" original="Model Validation Classes">Clases Validación Modelo</value>
   <value column="PrintName" original="Model Validation Classes">Clases Validación Modelo</value>
   <value column="Description" original="List of data model validation classes separated by ;">La lista de datos modela las clases de la validación por separado;</value>
-  <value column="Help" original="List of classes implementing the interface org.compiere.model.ModelValidator, separated by semicolon.&#10;The class is called for the client and allows to validate documents in the prepare stage and monitor model changes.">La lista de las clases que ponían el interfaz en ejecución org.compiere.model.ModelValidator, separados por punto y coma. La clase es llamada para el cliente para validar documentos en la preparación y el modelo del monitor cambia.</value>
+  <value column="Help" original="List of classes implementing the interface org.compiere.model.ModelValidator, separated by semicolon.&#10;The class is called for the client and allows to validate documents in the prepare stage and monitor model changes.">La lista de las clases que ponían el interfaz en ejecución org.compiere.model.ModelValidator, separados por punto y coma. La clase es llamada para el grupo empresarial para validar documentos en la preparación y monitorear cambios en el modelo.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -18615,7 +18615,7 @@ La secuencia de Ciudad/Región/Postal es determinada con la dirección de format
   <value column="Name" original="Archive">Archivo</value>
   <value column="PrintName" original="Archive">Archivo</value>
   <value column="Description" original="Document and Report Archive">Archivo del documento y del informe</value>
-  <value column="Help" original="Depending on the Client Automatic Archive Level documents and reports are saved and available for view.">Dependiendo de nivel automático del archivo del cliente los documentos y los informes están ahorrados y disponibles para la visión.</value>
+  <value column="Help" original="Depending on the Client Automatic Archive Level documents and reports are saved and available for view.">Dependiendo de nivel automático del archivo del grupo empresarial los documentos y los informes son guardados y disponibles para posterior visualización.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -19166,7 +19166,7 @@ Si usted tiene multiples líneas, un activo es creado por línea.</value>
  <row id="2730" trl="Y">
   <value column="Name" original="Web Store">Tienda Web</value>
   <value column="PrintName" original="Web Store">Tienda Web</value>
-  <value column="Description" original="A Web Store of the Client">Una tienda Web del cliente.</value>
+  <value column="Description" original="A Web Store of the Client">Una tienda Web del grupo empresarial.</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -20281,7 +20281,7 @@ Note que usted puede  Sobre o Sub Asignar el Pago.Durante el procesamiento  del 
   <value column="Name" original="Post Immediately (Deprecated)">Aplicar Inmediatamente (Descontinuado)</value>
   <value column="PrintName" original="Post Immediate">Aplicar Inmediatamente</value>
   <value column="Description" original="Post the accounting immediately for testing (Deprecated)">Aplique la Contabilidad inmediatamente (para pruebas)</value>
-  <value column="Help" original="If selected, the accounting consequences are immediately generated when completing a document.  Otherwise the document is posted by a batch process.  You should select this only if you are testing.&#10;Deprecated column - use instead the functionality Client Accounting.">Si seleccionó, las consecuencias contables son generadas inmediatamente al completar un documento. Sino el documento es aplicado mediante un proceso por lotes. Esto sólo debe ser seleccionádo si usted está comprobando.</value>
+  <value column="Help" original="If selected, the accounting consequences are immediately generated when completing a document.  Otherwise the document is posted by a batch process.  You should select this only if you are testing.&#10;Deprecated column - use instead the functionality Client Accounting.">Si seleccionó, las consecuencias contables son generadas inmediatamente al completar un documento. Sino el documento es aplicado mediante un proceso por lotes. Esto sólo debe ser seleccionado si usted está comprobando.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -22306,7 +22306,7 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="Name" original="Classpath">Ruta de clases</value>
   <value column="PrintName" original="Classpath">Ruta de clases</value>
   <value column="Description" original="Extension Classpath">Extensión de Ruta de clases</value>
-  <value column="Help" original="If your appplication requires additional jar files, enter them here. The jar files must be located in the $IDEMPIERE_HOME/lib directory.">Si su aplicación requiere un archivo .jar adicional, ingreselos aqui. Los archivos .jar deven ser ubicados en el directorio $IDEMPIERE_HOME/lib.</value>
+  <value column="Help" original="If your appplication requires additional jar files, enter them here. The jar files must be located in the $IDEMPIERE_HOME/lib directory.">Si su aplicación requiere un archivo .jar adicional, ingréselo aquí. Los archivos .jar deven ser ubicados en el directorio $IDEMPIERE_HOME/lib.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -22696,7 +22696,7 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="Name" original="Ldap Processor">Procesador LDAP</value>
   <value column="PrintName" original="Ldap Processor">Procesador LDAP</value>
   <value column="Description" original="LDAP Server to authenticate and authorize external systems based on iDempiere">Servidor LDAP para autenticar y autorizar sistemas externos basados en iDempiere.</value>
-  <value column="Help" original="The LDAP Server allows third party software (e.g. Apache) to use the users defined in the system to authentificate and authorize them.  There is only one server per iDempiere system.  The &quot;o&quot; is the Client key and the optional &quot;ou&quot; is the Interest Area key.">El servidor LDAP permite a software de terceros ( Ej, Apache) usar los clientes definidos en el sistema para autenticar y autorizar. Hay un solo servidor por sistema de iDempiere. La "o" es el código del cliente o la opción "ou" es la clave del área de interés.</value>
+  <value column="Help" original="The LDAP Server allows third party software (e.g. Apache) to use the users defined in the system to authentificate and authorize them.  There is only one server per iDempiere system.  The &quot;o&quot; is the Client key and the optional &quot;ou&quot; is the Interest Area key.">El servidor LDAP permite a software de terceros ( Ej, Apache) usar los clientes definidos en el sistema para autenticar y autorizar. Hay un solo servidor por sistema de iDempiere. La "o" es el código del grupo empresarial y la "ou" opcional es la clave del área de interés.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -24196,10 +24196,10 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="Name" original="Configuration Level">Nivel de configuración</value>
   <value column="PrintName" original="Configuration Level for this parameter">Nivel de configuración para este parametro</value>
   <value column="Description" original="Configuration Level for this parameter">Nivel de configuración para este parametro</value>
-  <value column="Help" original="Configuration Level for this parameter&#10;S - just allowed system configuration&#10;C - client configurable parameter&#10;O - org configurable parameter">Nivel de configuración para este parametro
-S - Solo permite configuración del SYSTEM 
-C - Parametro configurable del Grupo Empresarial 
-O - Parametro configurable de la organización.</value>
+  <value column="Help" original="Configuration Level for this parameter&#10;S - just allowed system configuration&#10;C - client configurable parameter&#10;O - org configurable parameter">Nivel de configuración para este parámetro
+S - Sólo permite configuración del SYSTEM 
+C - Parámetro configurable del Grupo Empresarial 
+O - Parámetro configurable de la organización.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -25999,8 +25999,8 @@ http://en.wikipedia.org/wiki/Safety_stock</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53458" trl="Y">
-  <value column="Name" original="DropShip_BPartner_ID">Tercero Entrega Directa</value>
-  <value column="PrintName" original="DropShip_BPartner_ID">Tercero Entrega Directa</value>
+  <value column="Name" original="Drop Ship Business Partner">Tercero Entrega Directa</value>
+  <value column="PrintName" original="Drop Ship Business Partner">Tercero Entrega Directa</value>
   <value column="Description" original="Business Partner to ship to">Tercero para entrega directa a</value>
   <value column="Help" original="If empty the business partner will be shipped to.">Si se deja vacío será enviado al tercero.</value>
   <value column="PO_Description" original=""/>
@@ -39407,8 +39407,8 @@ Producto: usado para adicionar rápidamente productos a la venta</value>
  <row id="200187" trl="Y">
   <value column="Name" original="Toolbar Button">Botón Barra Herramientas</value>
   <value column="PrintName" original="Toolbar Button">Botón Barra Herramientas</value>
-  <value column="Description" original="Add the column button to the toolbar"/>
-  <value column="Help" original="There IsToolbarButton check box indicates if this column button is part of the toolbar's process button popup list or render as field."/>
+  <value column="Description" original="Show the button on the toolbar, the window, or both">Muestra el botón en la barra de herramientas, la ventana, o ambos</value>
+  <value column="Help" original="The IsToolbarButton field indicates if this button is part of the toolbar's process button popup list, or render as field in window, or both.">Este campo indica si este botón es parte del botón de procesos de la barra de herramientas, o se muestra como un campo en la ventana, o ambas cosas</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -39519,6 +39519,16 @@ Producto: usado para adicionar rápidamente productos a la venta</value>
   <value column="PrintName" original="Login Role">Rol Usuario</value>
   <value column="Description" original=""/>
   <value column="Help" original="Role name of user logged in with"/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="200199" trl="Y">
+  <value column="Name" original="Quotation">Cotización</value>
+  <value column="PrintName" original="Quotation">Cotización</value>
+  <value column="Description" original="Quotation used for generating this order">Cotización usada para generar esta orden</value>
+  <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -54930,8 +54940,8 @@ si se deja en blanco el campo un título/rótulo por defecto se creará usando l
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="202625" trl="Y">
-  <value column="Name" original="Show Confirmation On Document Action Close">Show Confirmation On Document Action Close</value>
-  <value column="PrintName" original="Show Confirmation On Document Action Close">Show Confirmation On Document Action Close</value>
+  <value column="Name" original="Show Confirmation On Document Action Close">Pedir Confirmación al Cerrar Documento</value>
+  <value column="PrintName" original="Show Confirmation On Document Action Close">Pedir Confirmación al Cerrar Documento</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
@@ -55573,6 +55583,16 @@ Las cadenas pueden estar (opcionalmente) entre comillas simples]]></value>
  <row id="202809" trl="Y">
   <value column="Name" original="Driven by Search Key">Manejado por el Código</value>
   <value column="PrintName" original="Defines if the tree is driven by the Search Key column">Define si el árbol es manejado por la columna Código</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202876" trl="Y">
+  <value column="Name" original="Set Initial Password">Fijar Contraseña Inicial</value>
+  <value column="PrintName" original="Set Initial Password">Fijar Contraseña Inicial</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>

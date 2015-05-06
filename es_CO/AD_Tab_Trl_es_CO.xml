@@ -4090,7 +4090,7 @@ La medida debe soportar la información, sino es ignorada.</value>
   <value column="Name" original="LDAP Server">Servidor LDAP</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original="LDAP Server to authenticate and authorize external systems based on iDempiere">Servidor LDAP para autenticar y autorizar sistemas externos basados en iDempiere</value>
-  <value column="Help" original="The LDAP Server allows third party software (e.g. Apache) to use the users defined in the system to authentificate and authorize them.  There is only one server per iDempiere system.  The &quot;o&quot; is the Client key and the optional &quot;ou&quot; is the Interest Area key.">El Servidor LDAP permite software de terceros (Ej : Apache ) para el uso de usuarios definidos en el sistema para autenticarlos y autorizarlos . Hay un solo servidor por sistema iDempiere. La "o" es la llave del cliente y la opción "ou" es la llave de área de interés.</value>
+  <value column="Help" original="The LDAP Server allows third party software (e.g. Apache) to use the users defined in the system to authentificate and authorize them.  There is only one server per iDempiere system.  The &quot;o&quot; is the Client key and the optional &quot;ou&quot; is the Interest Area key.">El Servidor LDAP permite software de terceros (Ej : Apache ) para el uso de usuarios definidos en el sistema para autenticarlos y autorizarlos . Hay un solo servidor por sistema iDempiere. La "o" es la llave del grupo empresariarl y la "ou" opcional es la llave de área de interés.</value>
  </row>
  <row id="850" trl="Y">
   <value column="Name" original="LDAP Server Log">Log de Servidor LDAP</value>
@@ -6374,6 +6374,18 @@ Imprimiendo:
  </row>
  <row id="200159" trl="Y">
   <value column="Name" original="Translation">Traducción</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200167" trl="Y">
+  <value column="Name" original="Import Template">Plantilla Importación</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200168" trl="Y">
+  <value column="Name" original="Import Template Access">Acceso Plantilla Importación</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original=""/>
   <value column="Help" original=""/>

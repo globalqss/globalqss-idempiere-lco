@@ -2655,7 +2655,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="814" trl="Y">
-  <value column="Name" original="System generated">Sistema generado</value>
+  <value column="Name" original="System generated">Generado por el Sistema</value>
   <value column="Description" original=""/>
  </row>
  <row id="815" trl="Y">
@@ -4375,11 +4375,11 @@
   <value column="Description" original=""/>
  </row>
  <row id="53529" trl="Y">
-  <value column="Name" original="Volume Dry">Volume Seco</value>
+  <value column="Name" original="Volume Dry">Volumen Seco</value>
   <value column="Description" original=""/>
  </row>
  <row id="53530" trl="Y">
-  <value column="Name" original="Weigth">Peso</value>
+  <value column="Name" original="Weight">Peso</value>
   <value column="Description" original=""/>
  </row>
  <row id="53531" trl="Y">
