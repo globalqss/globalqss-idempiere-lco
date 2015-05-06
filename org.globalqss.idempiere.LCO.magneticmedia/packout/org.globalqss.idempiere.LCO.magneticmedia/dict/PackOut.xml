@@ -15697,7 +15697,7 @@ There are two reasons for de-activating and not deleting records:
                             <IsActive>true</IsActive>
                             <IsCreateConstraint>false</IsCreateConstraint>
                             <IsUnique>true</IsUnique>
-                            <Name>lco_dian_sendscheduleline_u_uu_idx</Name>
+                            <Name>lco_dian_sendschedulelineuuidx</Name>
                             <Processing>false</Processing>
                             <TableIndexDrop/>
                             <AD_IndexColumn type="table">
