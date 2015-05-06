@@ -1111,7 +1111,7 @@ Problema: </value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="377" trl="Y">
-  <value column="MsgText" original="{0,choice,0#No Lines|1#1 Line|1&lt;{0} Lines} - {1,number,#,##0.00} - Total: {2,number,#,##0.00} {3} = {4,number,#,##0.00}">{0,choice,0#No hay líneas|1#1 Línea|1&lt;{0} Líneas} - {1,number,#,##0.00} - Total: {2,number,#,##0.00} {3} = {4,number,#,##0.00}</value>
+  <value column="MsgText" original="{0,choice,0#No Lines|1#1 Line|1&lt;{0} Lines} - {1,number,#,##0.00} - Total: {2,number,#,##0.00} {3} = {4,number,#,##0.00}"><![CDATA[{0,choice,0#No hay líneas|1#1 Línea|1<{0} Líneas} - {1,number,#,##0.00} - Total: {2,number,#,##0.00} {3} = {4,number,#,##0.00}]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="378" trl="Y">
@@ -6568,6 +6568,26 @@ Por favor contacte al ADMINISTRADOR.</value>
  </row>
  <row id="200329" trl="Y">
   <value column="MsgText" original="Banks From and To must be different">Cuentas desde/hacia deben ser diferentes</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200331" trl="Y">
+  <value column="MsgText" original="User {0} is not locked">El usuario {0} no está bloqueado</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200332" trl="Y">
+  <value column="MsgText" original="Could not unlock user account">No se pudo desbloquear la cuenta de usuario</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200333" trl="Y">
+  <value column="MsgText" original="The user {0} has been unlocked">El usuario {0} se ha desbloqueado</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200334" trl="Y">
+  <value column="MsgText" original="locked account has been reset">Se reinició cuenta bloqueada</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200349" trl="Y">
+  <value column="MsgText" original="Force change on next login">Forzar cambio en siguiente ingreso</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="520010" trl="Y">

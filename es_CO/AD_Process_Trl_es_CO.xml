@@ -63,14 +63,14 @@
   <value column="Help" original="If you copy and overwrite the current default values, you may have to repeat previous updates (e.g. set the receivebles account, ...)"/>
  </row>
  <row id="113" trl="Y">
-  <value column="Name" original="Copy Window Tabs">Copiar Pestañas</value>
-  <value column="Description" original="Copy all Tabs and Fields from other Window"/>
-  <value column="Help" original="">Copiar todas las pestañas y campos de la ventana</value>
+  <value column="Name" original="Copy Window Tabs">Copiar Pestañas de Ventana</value>
+  <value column="Description" original="Copy all Tabs and Fields from other Window">Copiar todas las pestañas y campos desde otra ventana</value>
+  <value column="Help" original=""/>
  </row>
  <row id="114" trl="Y">
-  <value column="Name" original="Copy Tab Fields">Copiar Pestañas</value>
-  <value column="Description" original="Copy Fields from other Tab"/>
-  <value column="Help" original="">Copiar campos a la pestaña</value>
+  <value column="Name" original="Copy Tab Fields">Copiar Campos de Pestaña</value>
+  <value column="Description" original="Copy Fields from other Tab">Copiar campos desde otra pestaña</value>
+  <value column="Help" original=""/>
  </row>
  <row id="115" trl="Y">
   <value column="Name" original="Vendor Selection">Selección de Proveedor</value>
@@ -173,8 +173,8 @@
   <value column="Help" original=""/>
  </row>
  <row id="135" trl="Y">
-  <value column="Name" original="Copy Lines">Copiar De</value>
-  <value column="Description" original="Copy Lines from other Import Format"/>
+  <value column="Name" original="Copy Lines">Copiar Líneas</value>
+  <value column="Description" original="Copy Lines from other Import Format">Copiar Líneas de otro Formato de Importación</value>
   <value column="Help" original=""/>
  </row>
  <row id="136" trl="Y">
@@ -293,7 +293,7 @@
   <value column="Help" original="The Generate Order process will generate a new Order document based on the project phase. A price list and warehouse/service point must be defined on the project.">El proceso de Generar Orden generará una nueva orden basado en el proyecto. Una lista de precios debe ser seleccionada en el proyecto. Cuando el proceso arranca un almacén debe ser seleccionado</value>
  </row>
  <row id="165" trl="Y">
-  <value column="Name" original="Copy Lines">Copiar De</value>
+  <value column="Name" original="Copy Lines">Copiar Líneas</value>
   <value column="Description" original="Copy Commission Lines from other Commission">Copiar líneas desde comisión existente</value>
   <value column="Help" original=""/>
  </row>
@@ -509,16 +509,16 @@ El usuario para enviar emails de necesidades para tener valida la información d
  </row>
  <row id="210" trl="Y">
   <value column="Name" original="Copy Lines">Copiar Líneas</value>
-  <value column="Description" original="Copy Lines from other Invoice">Copiar Líneas Desde otra Factura</value>
+  <value column="Description" original="Copy Lines from other Invoice">Copiar Líneas desde otra Factura</value>
   <value column="Help" original=""/>
  </row>
  <row id="211" trl="Y">
   <value column="Name" original="Copy Lines">Copiar Líneas</value>
-  <value column="Description" original="Copy Lines from other Order">Copiar Líneas Desde otra Factura</value>
+  <value column="Description" original="Copy Lines from other Order">Copiar Líneas desde otra Orden</value>
   <value column="Help" original=""/>
  </row>
  <row id="212" trl="Y">
-  <value column="Name" original="Copy Details">Copiar Desde</value>
+  <value column="Name" original="Copy Details">Copiar Detalles</value>
   <value column="Description" original="Copy Lines/Phases/Tasks from other Project">Copia Líneas/Fases/Tareas desde otro Proyecto</value>
   <value column="Help" original=""/>
  </row>
@@ -813,8 +813,8 @@ Entonces las valuaciones de todas las respuestas de cantidad se adicionan a la v
   <value column="Help" original="A Sales Order is created for the entered Business Partner.  A sales order line is created for each RfQ line quantity, where &quot;Offer Quantity&quot; is selected.  If on the RfQ Line Quantity, an offer amount is entered (not 0), that price is used. &#10;If a magin is entered on RfQ Line Quantity, it overwrites the general margin.  The margin is the percentage added to the Best Response Amount.">Una orden de las ventas se crea para el tercero inscrito. Una línea de la orden de las ventas se crea para cada línea cantidad de SCP (RfQ), donde "Cantidad Ofrecida" se selecciona. Si en la línea cantidad de SCP (RfQ), se introduce una cantidad de la oferta (no 0), que el precio se utiliza. Si un margen se incorpora en la línea cantidad de SCP (RfQ), sobreescribe el margen general. El margen es el porcentaje agregado a la mejor cantidad de la respuesta.</value>
  </row>
  <row id="268" trl="Y">
-  <value column="Name" original="Copy Lines">Copia Líneas</value>
-  <value column="Description" original="Copy Lines from another RfQ">Copia Líneas de otra SCP (RfQ)</value>
+  <value column="Name" original="Copy Lines">Copiar Líneas</value>
+  <value column="Description" original="Copy Lines from another RfQ">Copiar Líneas de otra SCP (RfQ)</value>
   <value column="Help" original=""/>
  </row>
  <row id="269" trl="Y">
@@ -952,7 +952,7 @@ Entonces las valuaciones de todas las respuestas de cantidad se adicionan a la v
   <value column="Name" original="Role Access Update">Actualización de Rol</value>
   <value column="Description" original="Update the access rights of a role or roles of a client">Actualizar las reglas de acceso de un rol o roles de un grupo empresarial.</value>
   <value column="Help" original="Update the access rights of a role or all roles of a client to windows, forms, processes and workflows. If run for System, all roles of all clients are updated. Note that a role is only updated if it is not marked as manual.">Actualice las reglas de acceso de un rol o de todos los roles de un grupo empresarial para Ventanas, Formatos y Flujos de Trabajo.
-Si lo ejecuta para System, todos los roles de todas los grupo empresariales son actualizados. Observe que un rol es solamente actualizado si no esta marcado como manual.</value>
+Si lo ejecuta para System, todos los roles de todos los grupo empresariales son actualizados. Observe que un rol es solamente actualizado si no está marcado como manual.</value>
  </row>
  <row id="296" trl="Y">
   <value column="Name" original="Import Confirmations">Importar Confirmaciones</value>
@@ -1108,9 +1108,9 @@ Si se selecciona una cuenta, el balance es calculado en base al  tipo de cuenta 
   <value column="Help" original="Create Inventory Movements for unbalanced Inventory Location Storage (i.e. within a warehouse move inventory to locations with negative on hand quantity).">Cree los movimientos de inventario para el almacenaje desequilibrado de la localización de inventario (ej. Dentro de un almacén el movimiento de inventario y las localizaciones de cantidad a la mano son negativas)</value>
  </row>
  <row id="326" trl="Y">
-  <value column="Name" original="Invoice Not Realized Gain/Loss">Factura no realizada Perdida/Aumento</value>
-  <value column="Description" original="Invoice Not Realized Gain &amp; Loss Report"><![CDATA[Factura no realizada Aumento & Reporte de Perdida]]></value>
-  <value column="Help" original="The Report lists not fully paid invoices with open amount, the GL amounts and the revalued amounts.  If an invoice is partially paid, the percentage of the open amount is used to calculate the revaluation amount.&lt;br&gt;&#10;If you select a currency, only invoices of that currency are included; if you select Include All Currencies, all invoices are included and you can use the report to reconcile your AP/AR accounts.&lt;br&gt;&#10;If you select a GL Document Type, a GL Journal is created. &#10;Note that the report only includes posted invoices.">El reporte de listas no completamente pagadas de las líneas de informe con cantidad abierta, las cantidades de GL y las cantidades nuevas. Si usted selecciona el tipo de documento de la GL. Se crea un diario de GL.</value>
+  <value column="Name" original="Invoice Not Realized Gain/Loss">Factura no realizada Pérdida/Ganancia</value>
+  <value column="Description" original="Invoice Not Realized Gain &amp; Loss Report">Factura no realizada - Reporte de Pérdida y/o Ganancia</value>
+  <value column="Help" original="The Report lists not fully paid invoices with open amount, the GL amounts and the revalued amounts.  If an invoice is partially paid, the percentage of the open amount is used to calculate the revaluation amount.&lt;br&gt;&#10;If you select a currency, only invoices of that currency are included; if you select Include All Currencies, all invoices are included and you can use the report to reconcile your AP/AR accounts.&lt;br&gt;&#10;If you select a GL Document Type, a GL Journal is created. &#10;Note that the report only includes posted invoices.">El reporte lista las facturas en otras monedas con saldos pendientes, las cantidades de GL y las cantidades nuevas. Si usted selecciona el tipo de documento se crea una nota contable.</value>
  </row>
  <row id="327" trl="Y">
   <value column="Name" original="Test EMail">Probar EMail</value>
@@ -1725,8 +1725,8 @@ Consolidar a un documento permite la distribución en documentos actuales con ra
   <value column="Help" original=""/>
  </row>
  <row id="53153" trl="Y">
-  <value column="Name" original="Bank Transfer">Transferencia Bancaria</value>
-  <value column="Description" original="Bank Transfer let money tranfer between Banks">Transferencia bancaria permite transferir dinero entre cuentas bancarias</value>
+  <value column="Name" original="Bank/Cash Transfer">Transferencia entre Bancos/Cajas</value>
+  <value column="Description" original="Bank/Cash Transfer let money tranfer between Banks">Transferencia bancaria permite transferir dinero entre cuentas bancarias</value>
   <value column="Help" original=""/>
  </row>
  <row id="53154" trl="Y">
@@ -1777,7 +1777,7 @@ Debe ser implementado cuando no haya usuarios conectados.</value>
   <value column="Help" original=""/>
  </row>
  <row id="53179" trl="Y">
-  <value column="Name" original="Copy From Report and Process">Copiar parámetros de otro proceso o reporte</value>
+  <value column="Name" original="Copy From Report and Process">Copiar desde otro proceso o reporte</value>
   <value column="Description" original="Copy settings from one report and process to another.">Copia los parámetros de un reporte o proceso en otro.</value>
   <value column="Help" original="Copy the settings from the selected report and process to the current one.  This overwrites existing settings and translations.">Copia los parámetros de un reporte o proceso en otro.  Sobreescribe los parámetros actuales y traducciones.</value>
  </row>
@@ -1977,9 +1977,9 @@ d. Fecha transacción, se volverá la fecha de inicio en servicio del activo</va
   <value column="Help" original=""/>
  </row>
  <row id="200008" trl="Y">
-  <value column="Name" original="Reset Locked Account">Reiniciar Cuenta Bloqueada</value>
+  <value column="Name" original="Reset Locked Account">Desbloquear Usuario</value>
   <value column="Description" original="Reset Locked Account for User">Reiniciar Cuenta Bloqueada para un Usuario</value>
-  <value column="Help" original=""/>
+  <value column="Help" original="Select a locked user from the list to unlock it.  Alternatively you can run the process without selecting any user, in this case the process will unlock all locked users from the client applying accordingly the policies configured for &quot;max account lock&quot; and &quot;max inactive period&quot;.">Seleccione en la lista una cuenta de usuario bloqueada para desbloquearla.  También puede ejecutar el proceso sin seleccionar usuario, en este caso el proceso desbloqueará todos los usuarios bloqueados en el grupo empresarial, aplicando las políticas configuradas "max account lock" y "max inactive period".</value>
  </row>
  <row id="200010" trl="Y">
   <value column="Name" original="Generate GL Journal">Generar Nota Contable</value>
