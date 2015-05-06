@@ -1439,7 +1439,21 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="Name" original="Phone Format">Formato Teléfono</value>
   <value column="PrintName" original="Phone Format">Formato Teléfono</value>
   <value column="Description" original="Format of the phone; Can contain fixed format elements, Variables: &quot;_lLoOaAcCa09&quot;">Formato del teléfono; puede contener elementos de formato fijo; Variables: "_lLoOaAcCa09"</value>
-  <value column="Help" original="&lt;B&gt;Validation elements:&lt;/B&gt;&#10; &#9;(Space) any character&#10;_&#9;Space (fixed character)&#10;l&#9;any Letter a..Z NO space&#10;L&#9;any Letter a..Z NO space converted to upper case&#10;o&#9;any Letter a..Z or space&#10;O&#9;any Letter a..Z or space converted to upper case&#10;a&#9;any Letters &amp; Digits NO space&#10;A&#9;any Letters &amp; Digits NO space converted to upper case&#10;c&#9;any Letters &amp; Digits or space&#10;C&#9;any Letters &amp; Digits or space converted to upper case&#10;0&#9;Digits 0..9 NO space&#10;9&#9;Digits 0..9 or space&#10;&#10;Example of format &quot;(000)_000-0000&quot;"><![CDATA[<B>Elementos de validación</B>]]></value>
+  <value column="Help" original="&lt;B&gt;Validation elements:&lt;/B&gt;&#10; &#9;(Space) any character&#10;_&#9;Space (fixed character)&#10;l&#9;any Letter a..Z NO space&#10;L&#9;any Letter a..Z NO space converted to upper case&#10;o&#9;any Letter a..Z or space&#10;O&#9;any Letter a..Z or space converted to upper case&#10;a&#9;any Letters &amp; Digits NO space&#10;A&#9;any Letters &amp; Digits NO space converted to upper case&#10;c&#9;any Letters &amp; Digits or space&#10;C&#9;any Letters &amp; Digits or space converted to upper case&#10;0&#9;Digits 0..9 NO space&#10;9&#9;Digits 0..9 or space&#10;&#10;Example of format &quot;(000)_000-0000&quot;"><![CDATA[<B>Elementos de validación:</B> 
+ 	(Espacio) cualquier caracter
+<B>_</B> Espacio (caracter fijo)
+<B>l</B> cualquier letra a..Z NO espacio
+<B>L</B> cualquier letra a..Z NO espacio convertida a Mayúscula
+<B>o</B> cualquier letra a..Z o espacio
+<B>O</B> cualquier letra a..Z o espacio convertida a Mayúscula
+<B>a</B> cualquier letra & Dígito NO espacio
+<B>A</B> cualquier letra & Dígito NO espacio convertida a Mayúscula
+<B>c</B> cualquier letra & Dígito o espacio
+<B>C</B> cualquier letra & Dígito o espacio convertida a Mayúscula
+<B>0</B> Dígitos 0..9 NO espacio
+<B>9</B> Dígitos 0..9 o espacio
+
+Ejemplo de formato "(000)_000-0000"]]></value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -1449,7 +1463,21 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="Name" original="Postal Code Format">Formato de Código Postal</value>
   <value column="PrintName" original="Postal Code Format">Formato de Código Postal</value>
   <value column="Description" original="Format of the postal code; Can contain fixed format elements, Variables: &quot;_lLoOaAcCa09&quot;">Formato del valor; puede contener elementos de formato fijo; Variables: "_lLoOaAcCa09"</value>
-  <value column="Help" original="&lt;B&gt;Validation elements:&lt;/B&gt;&#10; &#9;(Space) any character&#10;_&#9;Space (fixed character)&#10;l&#9;any Letter a..Z NO space&#10;L&#9;any Letter a..Z NO space converted to upper case&#10;o&#9;any Letter a..Z or space&#10;O&#9;any Letter a..Z or space converted to upper case&#10;a&#9;any Letters &amp; Digits NO space&#10;A&#9;any Letters &amp; Digits NO space converted to upper case&#10;c&#9;any Letters &amp; Digits or space&#10;C&#9;any Letters &amp; Digits or space converted to upper case&#10;0&#9;Digits 0..9 NO space&#10;9&#9;Digits 0..9 or space&#10;&#10;Example of format &quot;(000)_000-0000&quot;"><![CDATA[<B>Elementos de validación</B>]]></value>
+  <value column="Help" original="&lt;B&gt;Validation elements:&lt;/B&gt;&#10; &#9;(Space) any character&#10;_&#9;Space (fixed character)&#10;l&#9;any Letter a..Z NO space&#10;L&#9;any Letter a..Z NO space converted to upper case&#10;o&#9;any Letter a..Z or space&#10;O&#9;any Letter a..Z or space converted to upper case&#10;a&#9;any Letters &amp; Digits NO space&#10;A&#9;any Letters &amp; Digits NO space converted to upper case&#10;c&#9;any Letters &amp; Digits or space&#10;C&#9;any Letters &amp; Digits or space converted to upper case&#10;0&#9;Digits 0..9 NO space&#10;9&#9;Digits 0..9 or space&#10;&#10;Example of format &quot;(000)_000-0000&quot;"><![CDATA[<B>Elementos de validación:</B> 
+ 	(Espacio) cualquier caracter
+<B>_</B> Espacio (caracter fijo)
+<B>l</B> cualquier letra a..Z NO espacio
+<B>L</B> cualquier letra a..Z NO espacio convertida a Mayúscula
+<B>o</B> cualquier letra a..Z o espacio
+<B>O</B> cualquier letra a..Z o espacio convertida a Mayúscula
+<B>a</B> cualquier letra & Dígito NO espacio
+<B>A</B> cualquier letra & Dígito NO espacio convertida a Mayúscula
+<B>c</B> cualquier letra & Dígito o espacio
+<B>C</B> cualquier letra & Dígito o espacio convertida a Mayúscula
+<B>0</B> Dígitos 0..9 NO espacio
+<B>9</B> Dígitos 0..9 o espacio
+
+Ejemplo de formato "(000)_000-0000"]]></value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -1459,7 +1487,21 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="Name" original="Additional Postal Format">Formato Postal Adicional</value>
   <value column="PrintName" original="Additional Postal Format">Formato Postal Adicional</value>
   <value column="Description" original="Format of the value; Can contain fixed format elements, Variables: &quot;_lLoOaAcCa09&quot;">Formato del código postal; puede contener elementos de formato fijo; Variables: "_lLoOaAcCa09"</value>
-  <value column="Help" original="&lt;B&gt;Validation elements:&lt;/B&gt;&#10; &#9;(Space) any character&#10;_&#9;Space (fixed character)&#10;l&#9;any Letter a..Z NO space&#10;L&#9;any Letter a..Z NO space converted to upper case&#10;o&#9;any Letter a..Z or space&#10;O&#9;any Letter a..Z or space converted to upper case&#10;a&#9;any Letters &amp; Digits NO space&#10;A&#9;any Letters &amp; Digits NO space converted to upper case&#10;c&#9;any Letters &amp; Digits or space&#10;C&#9;any Letters &amp; Digits or space converted to upper case&#10;0&#9;Digits 0..9 NO space&#10;9&#9;Digits 0..9 or space&#10;&#10;Example of format &quot;(000)_000-0000&quot;"><![CDATA[<B>Elementos de validación</B>]]></value>
+  <value column="Help" original="&lt;B&gt;Validation elements:&lt;/B&gt;&#10; &#9;(Space) any character&#10;_&#9;Space (fixed character)&#10;l&#9;any Letter a..Z NO space&#10;L&#9;any Letter a..Z NO space converted to upper case&#10;o&#9;any Letter a..Z or space&#10;O&#9;any Letter a..Z or space converted to upper case&#10;a&#9;any Letters &amp; Digits NO space&#10;A&#9;any Letters &amp; Digits NO space converted to upper case&#10;c&#9;any Letters &amp; Digits or space&#10;C&#9;any Letters &amp; Digits or space converted to upper case&#10;0&#9;Digits 0..9 NO space&#10;9&#9;Digits 0..9 or space&#10;&#10;Example of format &quot;(000)_000-0000&quot;"><![CDATA[<B>Elementos de validación:</B> 
+ 	(Espacio) cualquier caracter
+<B>_</B> Espacio (caracter fijo)
+<B>l</B> cualquier letra a..Z NO espacio
+<B>L</B> cualquier letra a..Z NO espacio convertida a Mayúscula
+<B>o</B> cualquier letra a..Z o espacio
+<B>O</B> cualquier letra a..Z o espacio convertida a Mayúscula
+<B>a</B> cualquier letra & Dígito NO espacio
+<B>A</B> cualquier letra & Dígito NO espacio convertida a Mayúscula
+<B>c</B> cualquier letra & Dígito o espacio
+<B>C</B> cualquier letra & Dígito o espacio convertida a Mayúscula
+<B>0</B> Dígitos 0..9 NO espacio
+<B>9</B> Dígitos 0..9 o espacio
+
+Ejemplo de formato "(000)_000-0000"]]></value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
