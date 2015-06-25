@@ -22685,20 +22685,20 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="3088" trl="Y">
-  <value column="Name" original="Show All Due">Mostrar todas las deudas.</value>
-  <value column="PrintName" original="Show All Due">Mostrar todas las deudas.</value>
-  <value column="Description" original="Show/print all due invoices">Muestra / Imprime todas las facturas que se deben.</value>
-  <value column="Help" original="The dunning letter with this level includes all due invoices.">La carta de cobro con este nivel incluye todas las facturas que se deben.</value>
+  <value column="Name" original="Show All Due">Mostrar todas las vencidas</value>
+  <value column="PrintName" original="Show All Due">Mostrar todas las vencidas</value>
+  <value column="Description" original="Show/print all due invoices">Muestra / Imprime todas las facturas que estén vencidas.</value>
+  <value column="Help" original="The dunning letter with this level includes all due invoices.">La carta de cobro con este nivel incluye todas las facturas que están vencidas.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="3089" trl="Y">
-  <value column="Name" original="Show Not Due">No muestra deuda</value>
-  <value column="PrintName" original="Show Not Due">No muestra deuda</value>
-  <value column="Description" original="Show/print all invoices which are not due (yet).">Muestra / Imprime todas las facturas que no se deben (aun).</value>
-  <value column="Help" original="The dunning letter with this level includes all not due invoices.">La carta de cobro con este nivel no incluye las facturas que se deben.</value>
+  <value column="Name" original="Show Not Due">Mostrar no vencidas</value>
+  <value column="PrintName" original="Show Not Due">Mostrar no vencidas</value>
+  <value column="Description" original="Show/print all invoices which are not due (yet).">Muestra / Imprime todas las facturas que aún no están vencidas.</value>
+  <value column="Help" original="The dunning letter with this level includes all not due invoices.">La carta de cobro con este nivel incluye las facturas aún no vencidas.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -38967,8 +38967,8 @@ Producto: usado para adicionar rápidamente productos a la venta</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="200112" trl="Y">
-  <value column="Name" original="Date Account Locked">Fecha Bloque Cuenta</value>
-  <value column="PrintName" original="Date Account Locked">Fecha Bloque Cuenta</value>
+  <value column="Name" original="Date Account Locked">Fecha Bloqueo Cuenta</value>
+  <value column="PrintName" original="Date Account Locked">Fecha Bloqueo Cuenta</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
