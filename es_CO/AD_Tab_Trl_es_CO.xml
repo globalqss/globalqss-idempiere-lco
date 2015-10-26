@@ -6390,6 +6390,24 @@ Imprimiendo:
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="200189" trl="Y">
+  <value column="Name" original="User Preference">Preferencia de Usuario</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200190" trl="Y">
+  <value column="Name" original="Locator Type">Tipo de Ubicación</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200191" trl="Y">
+  <value column="Name" original="Package Installation">Instalación de Paquete</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row trl="Y" uuid="0545cbb1-ef68-4e60-b6f6-a9ca4d726b28">
   <value column="Name" original="TaxId Type">Tipo Identificación</value>
   <value column="CommitWarning" original=""/>

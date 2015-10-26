@@ -2188,6 +2188,11 @@ Si planea usar todos los lenguajes entonces cree un lenguaje xx_XX y úselo como
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="200077" trl="Y">
+  <value column="Name" original="Generate Production from Project">Generar Producción desde Proyecto</value>
+  <value column="Description" original="Generate Production from Project Line(s)">Generar Producción desde las líneas de proyecto</value>
+  <value column="Help" original=""/>
+ </row>
  <row trl="Y" uuid="0450d998-4a98-45d6-9487-d74051bfc47f">
   <value column="Name" original="Generate Withholding">Genera Retenciones</value>
   <value column="Description" original=""/>

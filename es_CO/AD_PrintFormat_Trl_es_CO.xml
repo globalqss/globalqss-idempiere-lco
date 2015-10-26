@@ -8,7 +8,7 @@
  </row>
  <row id="101" trl="Y">
   <value column="Name" original="Order_LineTax  ** TEMPLATE **">Lineas Orden  ** PLANTILLA **</value>
-  <value column="Description" original="Standard Order Line&amp;Tax"><![CDATA[Lineas Orden Estándar]]></value>
+  <value column="Description" original="Standard Order Line&amp;Tax">Lineas Orden Estándar</value>
  </row>
  <row id="102" trl="Y">
   <value column="Name" original="Invoice_Header  ** TEMPLATE **">Encabezado Factura  ** PLANTILLA **</value>
@@ -16,7 +16,7 @@
  </row>
  <row id="103" trl="Y">
   <value column="Name" original="Invoice_LineTax  ** TEMPLATE **">Líneas Factura  ** PLANTILLA **</value>
-  <value column="Description" original="Standard Invoice Line&amp;Tax Lines"><![CDATA[Líneas Factura Estándar]]></value>
+  <value column="Description" original="Standard Invoice Line&amp;Tax Lines">Líneas Factura Estándar</value>
  </row>
  <row id="104" trl="Y">
   <value column="Name" original="InOut_Header ** TEMPLATE **">Encabezado Entradas/Salidas ** PLANTILLA **</value>
@@ -179,7 +179,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="50008" trl="Y">
-  <value column="Name" original="RV_PP_Operation_Activity &amp;Copy Record 4622012"><![CDATA[Actividad Operación RV PP Copiar Registro 4622012]]></value>
+  <value column="Name" original="RV_PP_Operation_Activity &amp;Copy Record 4622012">Actividad Operación RV PP Copiar Registro 4622012</value>
   <value column="Description" original=""/>
  </row>
  <row id="50009" trl="Y">
@@ -203,7 +203,7 @@
   <value column="Description" original="Multi Level BOM &amp; Formula Detail"><![CDATA[LDM Multi Nivel & Detalle Fórmula]]></value>
  </row>
  <row id="50014" trl="Y">
-  <value column="Name" original="Asset Disposal Expense Entry Rpt &amp;Copy Record 1500673861"><![CDATA[Reporte Entrada Activos Copiar Registro 1500673861]]></value>
+  <value column="Name" original="Asset Disposal Expense Entry Rpt &amp;Copy Record 1500673861">Reporte Entrada Activos Copiar Registro 1500673861</value>
   <value column="Description" original=""/>
  </row>
  <row id="50015" trl="Y">
@@ -215,11 +215,11 @@
   <value column="Description" original=""/>
  </row>
  <row id="50017" trl="Y">
-  <value column="Name" original="Asset Transfer Entry &amp;Copy Record 733003674"><![CDATA[Entrada Transferencia Activos Copiar Registro 733003674]]></value>
+  <value column="Name" original="Asset Transfer Entry &amp;Copy Record 733003674">Entrada Transferencia Activos Copiar Registro 733003674</value>
   <value column="Description" original=""/>
  </row>
  <row id="50018" trl="Y">
-  <value column="Name" original="Asset Split Entry &amp;Copy Record 895559168"><![CDATA[Entrada Dividir Activo Copiar Registro 895559168]]></value>
+  <value column="Name" original="Asset Split Entry &amp;Copy Record 895559168">Entrada Dividir Activo Copiar Registro 895559168</value>
   <value column="Description" original=""/>
  </row>
  <row id="50019" trl="Y">
@@ -227,7 +227,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="50020" trl="Y">
-  <value column="Name" original="Depreciation Expense Entry &amp;Copy Record 1166440766"><![CDATA[Entrada Gasto Depreciación Copiar Registro 1166440766]]></value>
+  <value column="Name" original="Depreciation Expense Entry &amp;Copy Record 1166440766">Entrada Gasto Depreciación Copiar Registro 1166440766</value>
   <value column="Description" original=""/>
  </row>
  <row id="50021" trl="Y">
@@ -235,7 +235,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="50022" trl="Y">
-  <value column="Name" original="Asset Depreciation Forecast &amp;Copy Record 1622765813"><![CDATA[Proyección Depreciación Activo Copiar Registro 1622765813]]></value>
+  <value column="Name" original="Asset Depreciation Forecast &amp;Copy Record 1622765813">Proyección Depreciación Activo Copiar Registro 1622765813</value>
   <value column="Description" original=""/>
  </row>
  <row id="50023" trl="Y">
@@ -287,7 +287,7 @@
   <value column="Description" original="Multi Level BOM &amp; Formula Detail"><![CDATA[LDM Multi Nivel & Detalle Fórmula]]></value>
  </row>
  <row id="50036" trl="Y">
-  <value column="Name" original="Forecast Report &amp;Copy Record 1630346308"><![CDATA[Reporte Proyección Copiar Registro 1630346308]]></value>
+  <value column="Name" original="Forecast Report &amp;Copy Record 1630346308">Reporte Proyección Copiar Registro 1630346308</value>
   <value column="Description" original=""/>
  </row>
  <row id="50037" trl="Y">
