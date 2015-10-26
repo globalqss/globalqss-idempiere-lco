@@ -2079,6 +2079,16 @@ y otros</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="200073" trl="Y">
+  <value column="Name" original="User Preference">Preferencia de Usuario</value>
+  <value column="Description" original="This window is use to set up the preferences entries for each user.">Esta ventana permite configurar las preferencias de cada usuario.</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200074" trl="Y">
+  <value column="Name" original="Locator Type">Tipo de Ubicación</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row trl="Y" uuid="ecd46492-ebb1-410a-8627-44df151cdfbb">
   <value column="Name" original="TaxId Type">Tipo Identificación</value>
   <value column="Description" original=""/>

@@ -55512,6 +55512,16 @@ Las cadenas pueden estar (opcionalmente) entre comillas simples]]></value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
+ <row id="202792" trl="Y">
+  <value column="Name" original="Parent Related Column">Columna Padre Relacionada</value>
+  <value column="PrintName" original="Parent Related Column">Columna Padre Relacionada</value>
+  <value column="Description" original="column in parent info window, link with column in this relate info">Columna en la ventana de información padre, enlace con la columna en esta ventana de información</value>
+  <value column="Help" original="default column RelatedColumn in Relate Info window will link with key column of main info window&#10;column define in ParentRelatedColumn will replace key column"></value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
  <row id="202793" trl="Y">
   <value column="Name" original="Import Template">Plantilla Importación</value>
   <value column="PrintName" original="Import Template">Plantilla Importación</value>
@@ -55632,11 +55642,183 @@ Las cadenas pueden estar (opcionalmente) entre comillas simples]]></value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
+ <row id="202814" trl="Y">
+  <value column="Name" original="Report Type">Tipo de Reporte</value>
+  <value column="PrintName" original="Report Type">Tipo de Reporte</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202868" trl="Y">
+  <value column="Name" original="Days Reuse Password">Días Reutilizar Contraseña</value>
+  <value column="PrintName" original="Days Reuse Password">Días Reutilizar Contraseña</value>
+  <value column="Description" original="Define number of day can reuser password">Define el número de días que se puede reutilizar una contraseña</value>
+  <value column="Help" original="Each time change password, old password keep in history&#10;Example this value = 60. user can't reuse password in history has age &lt; 60&#10;"><![CDATA[Cada vez que la contraseña cambia las contraseñas antiguas se mantienen en un historial
+Ejemplo de este valor = 60.  El usuario no puede reutilizar una contraseña cuya edad < 60
+]]></value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202870" trl="Y">
+  <value column="Name" original="AD_Password_History_UU">AD_Password_History_UU</value>
+  <value column="PrintName" original="AD_Password_History_UU">AD_Password_History_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202871" trl="Y">
+  <value column="Name" original="Password History ID">Historial Contraseña</value>
+  <value column="PrintName" original="PasswordHistoryID">Historial Contraseña</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
  <row id="202876" trl="Y">
   <value column="Name" original="Set Initial Password">Fijar Contraseña Inicial</value>
   <value column="PrintName" original="Set Initial Password">Fijar Contraseña Inicial</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202879" trl="Y">
+  <value column="Name" original="Automatic Commit">Guardar Automático</value>
+  <value column="PrintName" original="Automatic Commit">Guardar Automático</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202880" trl="Y">
+  <value column="Name" original="Automatic New Record">Nuevo Registro Automático</value>
+  <value column="PrintName" original="Automatic New Record">Nuevo Registro Automático</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202881" trl="Y">
+  <value column="Name" original="AD_UserPreference_ID">Preferencia Usuario</value>
+  <value column="PrintName" original="AD_UserPreference_ID">Preferencia Usuario</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202882" trl="Y">
+  <value column="Name" original="AD_UserPreference_UU">AD_UserPreference_UU</value>
+  <value column="PrintName" original="AD_UserPreference_UU">AD_UserPreference_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202883" trl="Y">
+  <value column="Name" original="Automatic Decimal Places For Amounts">Decimales Automáticos para Cantidades</value>
+  <value column="PrintName" original="Automatic Decimal Places For Amounts">Decimales Automáticos para Cantidades</value>
+  <value column="Description" original="Automatically insert a decimal point">Inserta automáticamente un punto decimal</value>
+  <value column="Help" original="i.e. &quot;Entering 2 only results in a value of 0.02 for the entry. If you use the &quot;.&quot; key during entry of a value, the decimal point is included at the place you specify. This mode has no effect on multiplication and division operations. If 0 is entered it will work as usual.&quot;">ej: Si se ingresa 2 resulta en un valor de 0.02.  Si se usa "." durante la entrada de un valor el punto decimal es incluído en el punto especificado por el usuario.  Este modo no tiene efecto en operaciones de multiplicación o división.  Si se configura 0 funciona como es usual."</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202886" trl="Y">
+  <value column="Name" original="Available for Replenishment">Disponible para Reabastecimiento</value>
+  <value column="PrintName" original="Available for Replenishment">Disponible para Reabastecimiento</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202887" trl="Y">
+  <value column="Name" original="Available for Reservation">Disponible para Reserva</value>
+  <value column="PrintName" original="Available for Reservation">Disponible para Reserva</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202888" trl="Y">
+  <value column="Name" original="Available for Shipping">Disponible para Despacho</value>
+  <value column="PrintName" original="Available for Shipping">Disponible para Despacho</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202889" trl="Y">
+  <value column="Name" original="Locator Type">Tipo Ubicación</value>
+  <value column="PrintName" original="Locator Type">Tipo Ubicación</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202890" trl="Y">
+  <value column="Name" original="M_LocatorType_UU">M_LocatorType_UU</value>
+  <value column="PrintName" original="M_LocatorType_UU">M_LocatorType_UU</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202897" trl="Y">
+  <value column="Name" original="Load Page Num">Cargar Número de Páginas</value>
+  <value column="PrintName" original="Load Page Num">Cargar Número de Páginas</value>
+  <value column="Description" original="When load data for info window, also load number of paging">Cuando se carga la ventana de información, también cargar el número de páginas</value>
+  <value column="Help" original="Load number of paging maybe affect to performance when info window is join of many table">Cargar el número de páginas puede afectar el rendimiento cuando la ventana de información enlaza muchas tablas</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202909" trl="Y">
+  <value column="Name" original="Product Price">Precio Producto</value>
+  <value column="PrintName" original="Product Price">Precio Producto</value>
+  <value column="Description" original="Intersection between a Product and a Price List Version">Intersección entre un producto y una versión de lista de precios</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202920" trl="Y">
+  <value column="Name" original="Toggle on Double Click">Cambiar modo en doble clic</value>
+  <value column="PrintName" original="Toggle on Double Click">Cambiar modo en doble clic</value>
+  <value column="Description" original="Defines if double click in a field on grid mode switch to form view">Define si doble clic sobre un campo en modo grilla cambia a la vista de forma</value>
+  <value column="Help" original="Defines if double click in a field on grid mode switch to form view">Define si doble clic sobre un campo en modo grilla cambia a la vista de forma</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -56982,7 +57164,7 @@ Las cadenas pueden estar (opcionalmente) entre comillas simples]]></value>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row trl="N" uuid="989efe10-f102-43c7-8ef8-302a76fd19f9">
+ <row trl="Y" uuid="989efe10-f102-43c7-8ef8-302a76fd19f9">
   <value column="Name" original="Valid until">Válida Hasta</value>
   <value column="PrintName" original="Valid until">Válida Hasta</value>
   <value column="Description" original=""/>

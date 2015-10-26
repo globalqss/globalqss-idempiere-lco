@@ -5442,6 +5442,14 @@
   <value column="Name" original="Both">Ambos</value>
   <value column="Description" original=""/>
  </row>
+ <row id="200310" trl="Y">
+  <value column="Name" original="Custom Table">Tabla Personalizada</value>
+  <value column="Description" original="Custom Table">Tabla Personalizada</value>
+ </row>
+ <row id="200318" trl="Y">
+  <value column="Name" original="Detail">Detalle</value>
+  <value column="Description" original=""/>
+ </row>
  <row trl="Y" uuid="dbc98c55-3b9e-4f9b-9d50-f29596ba706d">
   <value column="Name" original="Check">Validar</value>
   <value column="Description" original="Check against typed digit">Validar contra el dígito ingresado</value>

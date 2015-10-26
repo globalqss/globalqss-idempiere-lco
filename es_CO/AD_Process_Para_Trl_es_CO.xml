@@ -77,6 +77,26 @@
   <value column="Description" original="Responsibility Role">Rol de responsabilidad</value>
   <value column="Help" original="The Role determines security and access a user who has this Role will have in the System.">El Rol determina la seguridad y acceso del usuario que posee este Rol</value>
  </row>
+ <row id="50008" trl="Y">
+  <value column="Name" original="IMAP Password">Contraseña IMAP</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="50009" trl="Y">
+  <value column="Name" original="Request Folder">Carpeta Solicitudes</value>
+  <value column="Description" original="After take email form inbox folder, and process it success, email will move to this folder"/>
+  <value column="Help" original="folder can define as hierarchy, use &quot;\&quot; to separate folder. example customer\vietnam&#10;will read email from folder vietnam under folder customer&#10;after take email form inbox folder, and process it success, email will move to this folder"/>
+ </row>
+ <row id="50010" trl="Y">
+  <value column="Name" original="Inbox Folder">Carpeta de entrada</value>
+  <value column="Description" original="Mail folder, where process will take email and make request"/>
+  <value column="Help" original="folder can define as hierarchy, use &quot;\&quot; to separate folder. example customer\vietnam&#10;will read email from folder vietnam under folder customer"/>
+ </row>
+ <row id="50011" trl="Y">
+  <value column="Name" original="Error Folder">Carpeta de error</value>
+  <value column="Description" original="Mail folder to push unsuccess email  "/>
+  <value column="Help" original="folder can define as hierarchy, use &quot;\&quot; to separate folder. example customer\error\vietnam&#10;will puss email can't process to folder vietnam under folder error under folder customer"/>
+ </row>
  <row id="50019" trl="Y">
   <value column="Name" original="Shipment Date">Fecha Entrega</value>
   <value column="Description" original="Date printed on shipment">Fecha impresa en la entrega</value>
@@ -326,5 +346,11 @@
   <value column="Name" original="Cost Adjustment Document Type">Tipo Document Ajuste de Costo</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
+ </row>
+ <row id="200121" trl="Y">
+  <value column="Name" original="Inbox As Root Folder">Bandeja de entrada como carpeta raíz</value>
+  <value column="Description" original="True if other folder (request, error,..) occupy in inbox folder">Verdadero si otras carpetas (solicitudes, errores, ...) se ubican en la bandeja de entrada</value>
+  <value column="Help" original="Some email server as outlook, every folder occupy in inbox, with web mail as google, we easy create my folder outside inbox folder.&#10;this field define where request, error,.. occupy.">En algunos servidores de correos como outlook, cada carpeta se ubica en la bandeja de entrada, con correo web como google se puede crear una carpeta fuera de la bandeja de entrada.
+this field define where request, error,.. occupy.</value>
  </row>
 </idempiereTrl>

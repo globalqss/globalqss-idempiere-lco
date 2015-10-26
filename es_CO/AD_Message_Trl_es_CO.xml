@@ -6590,6 +6590,30 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgText" original="Force change on next login">Forzar cambio en siguiente ingreso</value>
   <value column="MsgTip" original=""/>
  </row>
+ <row id="200350" trl="Y">
+  <value column="MsgText" original="More Preferences">Más Preferencias</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200351" trl="Y">
+  <value column="MsgText" original="Processing... {0} of {1} ({2}%)">Procesando... {0} de {1} ({2}%)</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200352" trl="Y">
+  <value column="MsgText" original="Checking for errors... {0} preprocessed.">Chequeando errores... {0} preprocesado.</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200353" trl="Y">
+  <value column="MsgText" original="Locator not available for shipping">Ubicación no disponible para despacho</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200354" trl="Y">
+  <value column="MsgText" original="Do you want to create a new account combination ?">¿Desea crear una nueva combinación contable?</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200355" trl="Y">
+  <value column="MsgText" original="Selected {0} rows">{0} filas seleccionadas</value>
+  <value column="MsgTip" original=""/>
+ </row>
  <row id="520010" trl="Y">
   <value column="MsgText" original="1 Rupee">1 Rupia</value>
   <value column="MsgTip" original=" "/>
