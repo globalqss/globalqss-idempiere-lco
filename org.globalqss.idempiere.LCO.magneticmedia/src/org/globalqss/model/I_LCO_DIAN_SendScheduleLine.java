@@ -23,7 +23,7 @@ import org.compiere.util.KeyNamePair;
 
 /** Generated Interface for LCO_DIAN_SendScheduleLine
  *  @author iDempiere (generated) 
- *  @version Release 2.0
+ *  @version Release 3.1
  */
 @SuppressWarnings("all")
 public interface I_LCO_DIAN_SendScheduleLine 
@@ -32,7 +32,7 @@ public interface I_LCO_DIAN_SendScheduleLine
     /** TableName=LCO_DIAN_SendScheduleLine */
     public static final String Table_Name = "LCO_DIAN_SendScheduleLine";
 
-    /** AD_Table_ID=1000006 */
+    /** AD_Table_ID=1000009 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -68,12 +68,12 @@ public interface I_LCO_DIAN_SendScheduleLine
     public static final String COLUMNNAME_AttributeNm1 = "AttributeNm1";
 
 	/** Set Attribute Name 1.
-	  * Name of the Attribute
+	  * Name of the Attribute 1
 	  */
 	public void setAttributeNm1 (String AttributeNm1);
 
 	/** Get Attribute Name 1.
-	  * Name of the Attribute
+	  * Name of the Attribute 1
 	  */
 	public String getAttributeNm1();
 

@@ -24,14 +24,14 @@ import org.compiere.util.KeyNamePair;
 
 /** Generated Model for LCO_DIAN_Format
  *  @author iDempiere (generated) 
- *  @version Release 2.0 - $Id$ */
+ *  @version Release 3.1 - $Id$ */
 public class X_LCO_DIAN_Format extends PO implements I_LCO_DIAN_Format, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20131119L;
+	private static final long serialVersionUID = 20151110L;
 
     /** Standard Constructor */
     public X_LCO_DIAN_Format (Properties ctx, int LCO_DIAN_Format_ID, String trxName)
@@ -289,14 +289,6 @@ public class X_LCO_DIAN_Format extends PO implements I_LCO_DIAN_Format, I_Persis
 		return (String)get_Value(COLUMNNAME_Name);
 	}
 
-    /** Get Record ID/ColumnName
-        @return ID/ColumnName pair
-      */
-    public KeyNamePair getKeyNamePair() 
-    {
-        return new KeyNamePair(get_ID(), getName());
-    }
-
 	public org.compiere.model.I_PA_Hierarchy getPA_Hierarchy() throws RuntimeException
     {
 		return (org.compiere.model.I_PA_Hierarchy)MTable.get(getCtx(), org.compiere.model.I_PA_Hierarchy.Table_Name)
@@ -369,6 +361,14 @@ public class X_LCO_DIAN_Format extends PO implements I_LCO_DIAN_Format, I_Persis
 	{
 		return (String)get_Value(COLUMNNAME_Value);
 	}
+
+    /** Get Record ID/ColumnName
+        @return ID/ColumnName pair
+      */
+    public KeyNamePair getKeyNamePair() 
+    {
+        return new KeyNamePair(get_ID(), getValue());
+    }
 
 	/** Set Version No.
 		@param VersionNo 

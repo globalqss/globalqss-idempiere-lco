@@ -23,14 +23,14 @@ import org.compiere.model.*;
 
 /** Generated Model for LCO_DIAN_FieldFormat
  *  @author iDempiere (generated) 
- *  @version Release 2.0 - $Id$ */
+ *  @version Release 3.1 - $Id$ */
 public class X_LCO_DIAN_FieldFormat extends PO implements I_LCO_DIAN_FieldFormat, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20140510L;
+	private static final long serialVersionUID = 20151110L;
 
     /** Standard Constructor */
     public X_LCO_DIAN_FieldFormat (Properties ctx, int LCO_DIAN_FieldFormat_ID, String trxName)
@@ -113,7 +113,7 @@ public class X_LCO_DIAN_FieldFormat extends PO implements I_LCO_DIAN_FieldFormat
 	  */
 	public void setIsPrinted (boolean IsPrinted)
 	{
-		set_ValueNoCheck (COLUMNNAME_IsPrinted, Boolean.valueOf(IsPrinted));
+		set_Value (COLUMNNAME_IsPrinted, Boolean.valueOf(IsPrinted));
 	}
 
 	/** Get Printed.

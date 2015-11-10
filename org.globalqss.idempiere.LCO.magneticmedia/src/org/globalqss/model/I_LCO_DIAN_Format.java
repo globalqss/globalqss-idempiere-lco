@@ -23,7 +23,7 @@ import org.compiere.util.KeyNamePair;
 
 /** Generated Interface for LCO_DIAN_Format
  *  @author iDempiere (generated) 
- *  @version Release 2.0
+ *  @version Release 3.1
  */
 @SuppressWarnings("all")
 public interface I_LCO_DIAN_Format 
@@ -32,7 +32,7 @@ public interface I_LCO_DIAN_Format
     /** TableName=LCO_DIAN_Format */
     public static final String Table_Name = "LCO_DIAN_Format";
 
-    /** AD_Table_ID=1000001 */
+    /** AD_Table_ID=1000012 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);

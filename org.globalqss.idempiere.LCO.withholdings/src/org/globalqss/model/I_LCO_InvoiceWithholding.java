@@ -23,7 +23,7 @@ import org.compiere.util.KeyNamePair;
 
 /** Generated Interface for LCO_InvoiceWithholding
  *  @author iDempiere (generated) 
- *  @version Release 2.0
+ *  @version Release 3.1
  */
 @SuppressWarnings("all")
 public interface I_LCO_InvoiceWithholding 
@@ -32,7 +32,7 @@ public interface I_LCO_InvoiceWithholding
     /** TableName=LCO_InvoiceWithholding */
     public static final String Table_Name = "LCO_InvoiceWithholding";
 
-    /** AD_Table_ID=1000000 */
+    /** AD_Table_ID=1000007 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -238,6 +238,15 @@ public interface I_LCO_InvoiceWithholding
 
 	/** Get LCO_InvoiceWithholding_UU	  */
 	public String getLCO_InvoiceWithholding_UU();
+
+    /** Column name LCO_PrintedFormControl_ID */
+    public static final String COLUMNNAME_LCO_PrintedFormControl_ID = "LCO_PrintedFormControl_ID";
+
+	/** Set Printed Form Control	  */
+	public void setLCO_PrintedFormControl_ID (int LCO_PrintedFormControl_ID);
+
+	/** Get Printed Form Control	  */
+	public int getLCO_PrintedFormControl_ID();
 
     /** Column name LCO_WithholdingRule_ID */
     public static final String COLUMNNAME_LCO_WithholdingRule_ID = "LCO_WithholdingRule_ID";

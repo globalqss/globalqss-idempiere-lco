@@ -26,14 +26,14 @@ import org.compiere.util.Env;
 
 /** Generated Model for LCO_InvoiceWithholding
  *  @author iDempiere (generated) 
- *  @version Release 2.0 - $Id$ */
+ *  @version Release 3.1 - $Id$ */
 public class X_LCO_InvoiceWithholding extends PO implements I_LCO_InvoiceWithholding, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20140330L;
+	private static final long serialVersionUID = 20151110L;
 
     /** Standard Constructor */
     public X_LCO_InvoiceWithholding (Properties ctx, int LCO_InvoiceWithholding_ID, String trxName)
@@ -324,6 +324,26 @@ public class X_LCO_InvoiceWithholding extends PO implements I_LCO_InvoiceWithhol
 	public String getLCO_InvoiceWithholding_UU () 
 	{
 		return (String)get_Value(COLUMNNAME_LCO_InvoiceWithholding_UU);
+	}
+
+	/** Set Printed Form Control.
+		@param LCO_PrintedFormControl_ID Printed Form Control	  */
+	public void setLCO_PrintedFormControl_ID (int LCO_PrintedFormControl_ID)
+	{
+		if (LCO_PrintedFormControl_ID < 1) 
+			set_Value (COLUMNNAME_LCO_PrintedFormControl_ID, null);
+		else 
+			set_Value (COLUMNNAME_LCO_PrintedFormControl_ID, Integer.valueOf(LCO_PrintedFormControl_ID));
+	}
+
+	/** Get Printed Form Control.
+		@return Printed Form Control	  */
+	public int getLCO_PrintedFormControl_ID () 
+	{
+		Integer ii = (Integer)get_Value(COLUMNNAME_LCO_PrintedFormControl_ID);
+		if (ii == null)
+			 return 0;
+		return ii.intValue();
 	}
 
 	public org.globalqss.model.I_LCO_WithholdingRule getLCO_WithholdingRule() throws RuntimeException

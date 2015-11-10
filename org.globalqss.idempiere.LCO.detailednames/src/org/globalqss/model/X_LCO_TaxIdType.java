@@ -24,14 +24,14 @@ import org.compiere.util.KeyNamePair;
 
 /** Generated Model for LCO_TaxIdType
  *  @author iDempiere (generated) 
- *  @version Release 2.1 - $Id$ */
+ *  @version Release 3.1 - $Id$ */
 public class X_LCO_TaxIdType extends PO implements I_LCO_TaxIdType, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20141111L;
+	private static final long serialVersionUID = 20151110L;
 
     /** Standard Constructor */
     public X_LCO_TaxIdType (Properties ctx, int LCO_TaxIdType_ID, String trxName)
