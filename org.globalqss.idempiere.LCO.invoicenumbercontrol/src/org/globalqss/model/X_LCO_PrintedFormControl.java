@@ -24,14 +24,14 @@ import org.compiere.model.*;
 
 /** Generated Model for LCO_PrintedFormControl
  *  @author iDempiere (generated) 
- *  @version Release 2.0 - $Id$ */
+ *  @version Release 3.1 - $Id$ */
 public class X_LCO_PrintedFormControl extends PO implements I_LCO_PrintedFormControl, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20140505L;
+	private static final long serialVersionUID = 20151110L;
 
     /** Standard Constructor */
     public X_LCO_PrintedFormControl (Properties ctx, int LCO_PrintedFormControl_ID, String trxName)

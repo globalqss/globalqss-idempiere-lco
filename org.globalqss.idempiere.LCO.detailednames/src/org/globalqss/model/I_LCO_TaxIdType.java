@@ -23,7 +23,7 @@ import org.compiere.util.KeyNamePair;
 
 /** Generated Interface for LCO_TaxIdType
  *  @author iDempiere (generated) 
- *  @version Release 2.1
+ *  @version Release 3.1
  */
 @SuppressWarnings("all")
 public interface I_LCO_TaxIdType 
@@ -32,7 +32,7 @@ public interface I_LCO_TaxIdType
     /** TableName=LCO_TaxIdType */
     public static final String Table_Name = "LCO_TaxIdType";
 
-    /** AD_Table_ID=1000000 */
+    /** AD_Table_ID=1000008 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);

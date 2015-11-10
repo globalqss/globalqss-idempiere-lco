@@ -25,14 +25,14 @@ import org.compiere.util.KeyNamePair;
 
 /** Generated Model for LCO_DIAN_SendSchedule
  *  @author iDempiere (generated) 
- *  @version Release 2.0 - $Id$ */
+ *  @version Release 3.1 - $Id$ */
 public class X_LCO_DIAN_SendSchedule extends PO implements I_LCO_DIAN_SendSchedule, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20131119L;
+	private static final long serialVersionUID = 20151110L;
 
     /** Standard Constructor */
     public X_LCO_DIAN_SendSchedule (Properties ctx, int LCO_DIAN_SendSchedule_ID, String trxName)
@@ -106,6 +106,14 @@ public class X_LCO_DIAN_SendSchedule extends PO implements I_LCO_DIAN_SendSchedu
 		return ii.intValue();
 	}
 
+    /** Get Record ID/ColumnName
+        @return ID/ColumnName pair
+      */
+    public KeyNamePair getKeyNamePair() 
+    {
+        return new KeyNamePair(get_ID(), String.valueOf(getC_Year_ID()));
+    }
+
 	/** Set End Date.
 		@param EndDate 
 		Last effective date (inclusive)
@@ -161,6 +169,20 @@ public class X_LCO_DIAN_SendSchedule extends PO implements I_LCO_DIAN_SendSchedu
 		return false;
 	}
 
+	/** Set Delete Lines to Reprocess.
+		@param LCO_DeleteLinesToReprocess Delete Lines to Reprocess	  */
+	public void setLCO_DeleteLinesToReprocess (String LCO_DeleteLinesToReprocess)
+	{
+		set_Value (COLUMNNAME_LCO_DeleteLinesToReprocess, LCO_DeleteLinesToReprocess);
+	}
+
+	/** Get Delete Lines to Reprocess.
+		@return Delete Lines to Reprocess	  */
+	public String getLCO_DeleteLinesToReprocess () 
+	{
+		return (String)get_Value(COLUMNNAME_LCO_DeleteLinesToReprocess);
+	}
+
 	public org.globalqss.model.I_LCO_DIAN_Format getLCO_DIAN_Format() throws RuntimeException
     {
 		return (org.globalqss.model.I_LCO_DIAN_Format)MTable.get(getCtx(), org.globalqss.model.I_LCO_DIAN_Format.Table_Name)
@@ -185,14 +207,6 @@ public class X_LCO_DIAN_SendSchedule extends PO implements I_LCO_DIAN_SendSchedu
 			 return 0;
 		return ii.intValue();
 	}
-
-    /** Get Record ID/ColumnName
-        @return ID/ColumnName pair
-      */
-    public KeyNamePair getKeyNamePair() 
-    {
-        return new KeyNamePair(get_ID(), String.valueOf(getLCO_DIAN_Format_ID()));
-    }
 
 	/** Set DIAN Send Schedule.
 		@param LCO_DIAN_SendSchedule_ID DIAN Send Schedule	  */

@@ -23,7 +23,7 @@ import org.compiere.util.KeyNamePair;
 
 /** Generated Interface for LCO_WithholdingType
  *  @author iDempiere (generated) 
- *  @version Release 2.0
+ *  @version Release 3.1
  */
 @SuppressWarnings("all")
 public interface I_LCO_WithholdingType 
@@ -32,7 +32,7 @@ public interface I_LCO_WithholdingType
     /** TableName=LCO_WithholdingType */
     public static final String Table_Name = "LCO_WithholdingType";
 
-    /** AD_Table_ID=1000012 */
+    /** AD_Table_ID=1000003 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);

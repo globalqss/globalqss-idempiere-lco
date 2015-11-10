@@ -25,14 +25,14 @@ import org.compiere.util.Env;
 
 /** Generated Model for LCO_DIAN_SendScheduleLine
  *  @author iDempiere (generated) 
- *  @version Release 2.0 - $Id$ */
+ *  @version Release 3.1 - $Id$ */
 public class X_LCO_DIAN_SendScheduleLine extends PO implements I_LCO_DIAN_SendScheduleLine, I_Persistent 
 {
 
 	/**
 	 *
 	 */
-	private static final long serialVersionUID = 20140513L;
+	private static final long serialVersionUID = 20151110L;
 
     /** Standard Constructor */
     public X_LCO_DIAN_SendScheduleLine (Properties ctx, int LCO_DIAN_SendScheduleLine_ID, String trxName)
@@ -75,14 +75,14 @@ public class X_LCO_DIAN_SendScheduleLine extends PO implements I_LCO_DIAN_SendSc
 
 	/** Set Attribute Name 1.
 		@param AttributeNm1 
-		Name of the Attribute
+		Name of the Attribute 1
 	  */
 	public void setAttributeNm1 (String AttributeNm1)
 	{
 		throw new IllegalArgumentException ("AttributeNm1 is virtual column");	}
 
 	/** Get Attribute Name 1.
-		@return Name of the Attribute
+		@return Name of the Attribute 1
 	  */
 	public String getAttributeNm1 () 
 	{

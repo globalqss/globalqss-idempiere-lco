@@ -23,7 +23,7 @@ import org.compiere.util.KeyNamePair;
 
 /** Generated Interface for LCO_DIAN_SendSchedule
  *  @author iDempiere (generated) 
- *  @version Release 2.0
+ *  @version Release 3.1
  */
 @SuppressWarnings("all")
 public interface I_LCO_DIAN_SendSchedule 
@@ -32,7 +32,7 @@ public interface I_LCO_DIAN_SendSchedule
     /** TableName=LCO_DIAN_SendSchedule */
     public static final String Table_Name = "LCO_DIAN_SendSchedule";
 
-    /** AD_Table_ID=1000019 */
+    /** AD_Table_ID=1000011 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -142,6 +142,15 @@ public interface I_LCO_DIAN_SendSchedule
 	  * This Line is generated
 	  */
 	public boolean isGenerated();
+
+    /** Column name LCO_DeleteLinesToReprocess */
+    public static final String COLUMNNAME_LCO_DeleteLinesToReprocess = "LCO_DeleteLinesToReprocess";
+
+	/** Set Delete Lines to Reprocess	  */
+	public void setLCO_DeleteLinesToReprocess (String LCO_DeleteLinesToReprocess);
+
+	/** Get Delete Lines to Reprocess	  */
+	public String getLCO_DeleteLinesToReprocess();
 
     /** Column name LCO_DIAN_Format_ID */
     public static final String COLUMNNAME_LCO_DIAN_Format_ID = "LCO_DIAN_Format_ID";

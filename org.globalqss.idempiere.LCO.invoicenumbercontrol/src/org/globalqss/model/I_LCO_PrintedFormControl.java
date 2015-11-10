@@ -23,7 +23,7 @@ import org.compiere.util.KeyNamePair;
 
 /** Generated Interface for LCO_PrintedFormControl
  *  @author iDempiere (generated) 
- *  @version Release 2.0
+ *  @version Release 3.1
  */
 @SuppressWarnings("all")
 public interface I_LCO_PrintedFormControl 
@@ -32,7 +32,7 @@ public interface I_LCO_PrintedFormControl
     /** TableName=LCO_PrintedFormControl */
     public static final String Table_Name = "LCO_PrintedFormControl";
 
-    /** AD_Table_ID=1000050 */
+    /** AD_Table_ID=1000020 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
