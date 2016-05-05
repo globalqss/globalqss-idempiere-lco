@@ -19312,7 +19312,7 @@ If you leave the search key empty, the system automatically creates a numeric nu
                             <IsFieldOnly>false</IsFieldOnly>
                             <IsHeading>false</IsHeading>
                             <IsMandatory/>
-                            <IsQuickEntry>false</IsQuickEntry>
+                            <IsQuickEntry>true</IsQuickEntry>
                             <IsReadOnly>false</IsReadOnly>
                             <IsSameLine>false</IsSameLine>
                             <IsToolbarButton/>
@@ -19365,7 +19365,7 @@ If you leave the search key empty, the system automatically creates a numeric nu
                             <IsFieldOnly>false</IsFieldOnly>
                             <IsHeading>false</IsHeading>
                             <IsMandatory/>
-                            <IsQuickEntry>false</IsQuickEntry>
+                            <IsQuickEntry>true</IsQuickEntry>
                             <IsReadOnly>false</IsReadOnly>
                             <IsSameLine>false</IsSameLine>
                             <IsToolbarButton/>

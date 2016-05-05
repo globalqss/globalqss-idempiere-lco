@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <idempiere Name="GeografiaColombiaCapitales" Version="1.0" idempiereVersion="" DataBaseVersion="" Description="Geografía Capitales Colombia" Author="" AuthorEmail="info@globalqss.com" CreatedDate="2013-08-08 11:56:37.264" UpdatedDate="2013-08-08 11:59:47.859" PackOutVersion="100" Client="0-SYSTEM-System">
-    <SQLStatement type="custom">
+    <SQLMandatory type="custom">
         <DBType>ALL</DBType>
         <statement><![CDATA[UPDATE ad_column SET isupdateable = 'Y' WHERE ad_column_id IN (866, 7057)]]></statement>
-    </SQLStatement>
+    </SQLMandatory>
     <C_Region type="table">
         <AD_Client_ID>0</AD_Client_ID>
         <AD_Org_ID>0</AD_Org_ID>
@@ -750,8 +750,8 @@
         <IsActive>true</IsActive>
         <C_Country_ID reference="id">156</C_Country_ID>
     </C_City>
-    <SQLStatement type="custom">
+    <SQLMandatory type="custom">
         <DBType>ALL</DBType>
         <statement><![CDATA[UPDATE ad_column SET isupdateable = 'N' WHERE ad_column_id IN (866, 7057)]]></statement>
-    </SQLStatement>
+    </SQLMandatory>
 </idempiere>

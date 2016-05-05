@@ -3480,12 +3480,12 @@ There are two reasons for de-activating and not deleting records:
         <Name>QSSLEC_Allow10DigitDoc</Name>
         <Value>Y</Value>
     </AD_SysConfig>
-    <SQLStatement type="custom">
+    <SQLMandatory type="custom">
         <DBType>ALL</DBType>
         <statement><![CDATA[UPDATE AD_Column SET ReadOnlyLogic=chr(64)||'IsDetailedNames'||chr(64)||'=Y & '||chr(64)||'#LCO_USE_DETAILED_NAMES'||chr(64)||'=Y', Updated=SYSDATE WHERE AD_Column_ID=2902]]></statement>
-    </SQLStatement>
-    <SQLStatement type="custom">
+    </SQLMandatory>
+    <SQLMandatory type="custom">
         <DBType>ALL</DBType>
         <statement><![CDATA[UPDATE AD_Field SET SeqNo=36, XPosition=4, Updated=SYSDATE WHERE AD_Field_ID=2155]]></statement>
-    </SQLStatement>
+    </SQLMandatory>
 </idempiere>

@@ -9882,12 +9882,12 @@
         <Name>Me retienen 6.9 por mil ICA Gran Contribuyente</Name>
         <ValidFrom>2014-01-01 00:00:00.0</ValidFrom>
     </LCO_WithholdingRule>
-    <SQLStatement type="custom">
+    <SQLMandatory type="custom">
         <DBType>ALL</DBType>
         <statement><![CDATA[UPDATE C_DOCTYPE SET GenerateWithholding = 'Y' WHERE DocBaseType IN ('API','APC') AND AD_Client_ID=11 /* GardenWorld */]]></statement>
-    </SQLStatement>
-    <SQLStatement type="custom">
+    </SQLMandatory>
+    <SQLMandatory type="custom">
         <DBType>ALL</DBType>
         <statement><![CDATA[UPDATE C_DOCTYPE SET GenerateWithholding = 'A' WHERE DocBaseType IN ('ARI','ARC') AND AD_Client_ID=11 /* GardenWorld */]]></statement>
-    </SQLStatement>
+    </SQLMandatory>
 </idempiere>
