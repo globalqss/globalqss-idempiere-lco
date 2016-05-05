@@ -51,6 +51,7 @@ import org.compiere.model.MBPartnerLocation;
 import org.compiere.model.MLocation;
 import org.compiere.model.MSysConfig;
 import org.compiere.model.MTable;
+import org.compiere.model.MUser;
 import org.compiere.process.ProcessInfoParameter;
 import org.compiere.process.SvrProcess;
 import org.compiere.util.AdempiereUserError;
@@ -275,18 +276,25 @@ public class LCO_DianExportXML  extends SvrProcess {
 					// Condicion de error
 					if (bp == null
 							&& (   printLb.equals("tdoc")
+								|| printLb.equals("tdoce")
 								|| printLb.equals("nid")
+								|| printLb.equals("nite")
 								|| printLb.equals("dv")
 								|| printLb.equals("apl1")
+								|| printLb.equals("pap")
 								|| printLb.equals("apl2")
+								|| printLb.equals("sap")
 								|| printLb.equals("nom1")
+								|| printLb.equals("pno")
 								|| printLb.equals("nom2")
+								|| printLb.equals("ono")
 								|| printLb.equals("raz")
 								|| printLb.equals("dir")
 								|| printLb.equals("dpto")
 								|| printLb.equals("mun")
 								|| printLb.equals("mcpo")
-								|| printLb.equals("pais"))) {
+								|| printLb.equals("pais")
+								|| printLb.equals("email"))) {
 						throw new AdempiereUserError(printLb + " cannot be used without BP detail");
 					}
 
@@ -306,12 +314,12 @@ public class LCO_DianExportXML  extends SvrProcess {
 					if (printLb.equals("cpt") || printLb.equals("ctp") || printLb.equals("top")) {
 						// Concepto ( Siempre debe diligenciarse )
 						add_Attribute(atts, printLb, concept.getValue(), line_id, true);
-					} else if (printLb.equals("tdoc")) {
+					} else if (printLb.equals("tdoc") || printLb.equals("tdoce")) {
 						//Tipo de Documento ( Siempre debe diligenciarse )
 						add_Attribute(atts, printLb, getTdoc(dssl.getC_BPartner_ID()), line_id, true);
 					} else if (printLb.equals("tdocm")) {
 						add_Attribute(atts, printLb, getTdoc(dssl.getC_BPartnerRelation_ID()), line_id, true);
-					} else if (printLb.equals("nid")) {
+					} else if (printLb.equals("nid") || printLb.equals("nite")) {
 						//Número de Identificación ( Siempre debe diligenciarse )
 						add_Attribute(atts, printLb, bp.getTaxID(), line_id, true);
 					} else if (printLb.equals("nitm")) {
@@ -325,7 +333,7 @@ public class LCO_DianExportXML  extends SvrProcess {
 						String dvm = (String) bp2.get_Value("TaxIdDigit");
 						if (dvm != null && dvm.length() > 0)
 							add_Attribute(atts, printLb, dvm, line_id, false);
-					} else if (printLb.equals("apl1")) {
+					} else if (printLb.equals("apl1") || printLb.equals("pap")) {
 						//Primer Apellido del informado
 						//En caso de ser una Persona Natural siempre debe diligenciarse.
 						if (isDetailedNames) {
@@ -335,7 +343,7 @@ public class LCO_DianExportXML  extends SvrProcess {
 						if (isDetailedNames2) {
 							add_Attribute(atts, printLb, (String) bp2.get_Value("LastName1"), line_id, isDetailedNames2);
 						}
-					} else if (printLb.equals("apl2")) {
+					} else if (printLb.equals("apl2") || printLb.equals("sap")) {
 						//Segundo Apellido del informado
 						//En caso de ser una Persona Natural y si se conoce debe diligenciarse.
 						if (isDetailedNames) {
@@ -349,7 +357,7 @@ public class LCO_DianExportXML  extends SvrProcess {
 							if (aux != null && aux.length() > 0)
 								add_Attribute(atts, printLb, aux, line_id, false);
 						}
-					} else if (printLb.equals("nom1")) {
+					} else if (printLb.equals("nom1") || printLb.equals("pno")) {
 						//Primer Nombre del informado
 						//En caso de ser una Persona Natural siempre debe diligenciarse.
 						if (isDetailedNames) {
@@ -359,7 +367,7 @@ public class LCO_DianExportXML  extends SvrProcess {
 						if (isDetailedNames2) {
 							add_Attribute(atts, printLb, (String) bp2.get_Value("FirstName1"), line_id, isDetailedNames2);
 						}
-					} else if (printLb.equals("nom2")) {
+					} else if (printLb.equals("nom2") || printLb.equals("ono")) {
 						//Otros Nombres del informado
 						//En caso de ser una Persona Natural y si se conoce debe diligenciarse.
 						if (isDetailedNames) {
@@ -382,6 +390,14 @@ public class LCO_DianExportXML  extends SvrProcess {
 					} else if (printLb.equals("razm")) {
 						if (!isDetailedNames2) {
 							add_Attribute(atts, printLb, bp2.getName(), line_id, !isDetailedNames2);
+						}
+					} else if (printLb.equals("email")) {
+						//EMail del Informado
+						if (isDetailedNames) {
+							MUser[] user = MUser.getOfBPartner(getCtx(), bp.getC_BPartner_ID(), get_TrxName());
+							if (user.length > 0) {
+								add_Attribute(atts, printLb, user[0].getEMail(), line_id, false);
+							}
 						}
 					} else if (printLb.equals("dir")) {
 						//Dirección
