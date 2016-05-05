@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <idempiere Name="FestivosColombia" Version="1.0" idempiereVersion="" DataBaseVersion="" Description="Días Festivos en Colombia" Author="" AuthorEmail="info@globalqss.com" CreatedDate="2013-08-08 11:33:33.864" UpdatedDate="2013-08-08 11:48:52.744" PackOutVersion="100" Client="11-GardenWorld-GardenWorld">
-    <SQLStatement type="custom">
+    <SQLMandatory type="custom">
         <DBType>ALL</DBType>
         <statement><![CDATA[UPDATE ad_column SET isupdateable = 'Y' WHERE ad_column_id IN (827, 836)]]></statement>
-    </SQLStatement>
+    </SQLMandatory>
     <C_NonBusinessDay type="table">
         <AD_Org_ID>0</AD_Org_ID>
         <Date1>2006-01-01 00:00:00.0</Date1>
@@ -2220,8 +2220,8 @@
         <IsActive>true</IsActive>
         <C_Calendar_ID reference="id">102</C_Calendar_ID>
     </C_NonBusinessDay>
-    <SQLStatement type="custom">
+    <SQLMandatory type="custom">
         <DBType>ALL</DBType>
         <statement><![CDATA[UPDATE ad_column SET isupdateable = 'N' WHERE ad_column_id IN (827, 836)]]></statement>
-    </SQLStatement>
+    </SQLMandatory>
 </idempiere>
