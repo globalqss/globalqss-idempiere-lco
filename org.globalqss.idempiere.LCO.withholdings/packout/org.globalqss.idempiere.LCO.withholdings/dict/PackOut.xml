@@ -6242,7 +6242,7 @@ If the document type of your document has no automatic document sequence defined
             <IsHeading>false</IsHeading>
             <IsMandatory/>
             <IsQuickEntry>false</IsQuickEntry>
-            <IsReadOnly>false</IsReadOnly>
+            <IsReadOnly>true</IsReadOnly>
             <IsSameLine>false</IsSameLine>
             <IsToolbarButton/>
             <IsUpdateable/>
@@ -7408,7 +7408,7 @@ If the document type of your document has no automatic document sequence defined
             <IsHeading>false</IsHeading>
             <IsMandatory/>
             <IsQuickEntry>false</IsQuickEntry>
-            <IsReadOnly>false</IsReadOnly>
+            <IsReadOnly>true</IsReadOnly>
             <IsSameLine>false</IsSameLine>
             <IsToolbarButton/>
             <IsUpdateable/>
