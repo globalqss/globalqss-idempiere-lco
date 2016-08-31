@@ -36,6 +36,8 @@ import org.adempiere.base.IColumnCallout;
 import org.adempiere.base.IColumnCalloutFactory;
 import org.compiere.model.GridField;
 import org.compiere.model.GridTab;
+import org.compiere.model.I_C_Payment;
+import org.compiere.model.I_C_PaymentAllocate;
 import org.compiere.model.MPriceList;
 import org.compiere.model.MSysConfig;
 import org.compiere.model.MTax;
@@ -59,13 +61,27 @@ public class LCO_CalloutWithholding implements IColumnCalloutFactory
 			return null;
 
 		if (tableName.equalsIgnoreCase(I_LCO_WithholdingRule.Table_Name)) {
+
+			// LCO_WithholdingRule.LCO_WithholdingType_ID
 			if (columnName.equalsIgnoreCase(I_LCO_WithholdingRule.COLUMNNAME_LCO_WithholdingType_ID))
 				return new IColumnCallout[]{new FillIsUse()};
+
 		} else if (tableName.equalsIgnoreCase(I_LCO_InvoiceWithholding.Table_Name)) {
+
+			// LCO_InvoiceWithholding.C_Tax_ID
 			if (columnName.equalsIgnoreCase(I_LCO_InvoiceWithholding.COLUMNNAME_C_Tax_ID))
 				return new IColumnCallout[]{new FillPercentFromTax()};
+
+			// LCO_InvoiceWithholding.TaxBaseAmt
 			if (columnName.equalsIgnoreCase(I_LCO_InvoiceWithholding.COLUMNNAME_TaxBaseAmt))
 				return new IColumnCallout[]{new Recalc_TaxAmt()};
+
+		} else if (tableName.equalsIgnoreCase(I_C_Payment.Table_Name) || tableName.equalsIgnoreCase(I_C_PaymentAllocate.Table_Name)) {
+
+			// C_Payment.C_Invoice_ID or C_PaymentAllocate.C_Invoice_ID 
+			if (columnName.equalsIgnoreCase(I_C_Payment.COLUMNNAME_C_Invoice_ID))
+				return new IColumnCallout[]{new FillWriteOffWithAllocations()};
+
 		}
 
 		return null;
@@ -186,6 +202,53 @@ public class LCO_CalloutWithholding implements IColumnCalloutFactory
 		mTab.setValue(MLCOInvoiceWithholding.COLUMNNAME_TaxAmt, taxamt);
 
 		return "";
+	}
+
+	private static class FillWriteOffWithAllocations implements IColumnCallout {
+		// Called from C_Payment.C_Invoice_ID and C_PaymentAllocate.C_Invoice_ID
+		// Note the PayAmt was already calculated in the core callout org.compiere.model.CalloutPayment[Allocate].invoice
+		@Override
+		public String start(Properties ctx, int WindowNo, GridTab mTab, GridField mField, Object value, Object oldValue) {
+			// fill write-off with payment withholdings
+			log.info("");
+			
+			BigDecimal sumtaxamt = Env.ZERO;
+			Object oprevWriteOff = mTab.getValue("WriteOffAmt");
+			BigDecimal prevWriteOff = Env.ZERO;
+			if (oprevWriteOff != null && oprevWriteOff instanceof BigDecimal) {
+				prevWriteOff = (BigDecimal) oprevWriteOff;
+			}
+			String payAmtColumn = "PayAmt";
+			if (I_C_PaymentAllocate.Table_Name.equals(mTab.getTableName())) {
+				payAmtColumn = "Amount";
+			}
+			Object oprevPayAmt = mTab.getValue(payAmtColumn);
+			BigDecimal prevPayAmt = Env.ZERO;
+			if (oprevPayAmt != null && oprevPayAmt instanceof BigDecimal) {
+				prevPayAmt = (BigDecimal) oprevPayAmt;
+			}
+			if (value != null) {
+				Integer invInt = (Integer) value;
+				int inv_id = invInt.intValue();
+				String sql =
+						"SELECT NVL(SUM(TaxAmt),0) "
+						+ "  FROM LCO_InvoiceWithholding "
+						+ " WHERE C_Invoice_ID = ? "
+						+ "   AND IsCalcOnPayment = 'Y'"
+						+ "   AND Processed = 'N'"
+						+ "   AND C_AllocationLine_ID IS NULL"
+						+ "   AND IsActive = 'Y'";
+				sumtaxamt = DB.getSQLValueBD(null, sql, inv_id);
+			}
+
+			BigDecimal newPayAmt = prevPayAmt.add(prevWriteOff).subtract(sumtaxamt);
+			if (newPayAmt.compareTo(prevPayAmt) != 0)
+				mTab.setValue(payAmtColumn, newPayAmt);
+			if (sumtaxamt.compareTo(prevWriteOff) != 0)
+				mTab.setValue("WriteOffAmt", sumtaxamt);
+			return "";
+		}
+
 	}
 
 }	//	LCO_CalloutWithholding
