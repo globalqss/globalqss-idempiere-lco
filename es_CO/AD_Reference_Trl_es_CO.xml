@@ -2557,6 +2557,11 @@
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="200121" trl="N">
+  <value column="Name" original="AD_Style">AD_Style</value>
+  <value column="Description" original="CSS Style">CSS Style</value>
+  <value column="Help" original=""/>
+ </row>
  <row trl="Y" uuid="9b146c1c-bf20-4f00-b0f0-ca7df61d037c">
   <value column="Name" original="LCO_TaxIdType.IsDigitChecked">LCO_TaxIdType.IsDigitChecked</value>
   <value column="Description" original=""/>

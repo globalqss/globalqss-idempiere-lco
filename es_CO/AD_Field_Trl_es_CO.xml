@@ -739,7 +739,7 @@ Las fechas Válido desde y Válido hasta indican el período de tiempo a utiliza
  <row id="203108" trl="Y">
   <value column="Name" original="ViewID Column">Columna ID de Vista</value>
   <value column="Description" original="Name of unique column in a view. value of this column will save to t_selection table">Nombre de la columna única en una vista.  El valor de esta columna se guardará en la tabla T_Selection</value>
-  <value column="Help" original="Column to resolve issue in https://idempiere.atlassian.net/browse/IDEMPIERE-1970"></value>
+  <value column="Help" original=""/>
  </row>
  <row id="203325" trl="Y">
   <value column="Name" original="Country Group">Grupo de Países</value>

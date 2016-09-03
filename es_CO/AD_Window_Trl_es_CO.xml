@@ -268,7 +268,7 @@
   <value column="Help" original="Query the detail accounting transactions">Consulta a detalle de las transacciones contables.</value>
  </row>
  <row id="163" trl="Y">
-  <value column="Name" original="Tree">Arbol e Imagen de Nodo</value>
+  <value column="Name" original="Tree">Árbol</value>
   <value column="Description" original="Maintain Tree definition">Mantener Definición de Arboles</value>
   <value column="Help" original="The Tree Window defines the descriptors and images that will be used when a Tree is displayed.">La ventana define las imágenes y descripciones usados cuando se despliega un árbol.</value>
  </row>
@@ -368,7 +368,7 @@
   <value column="Help" original="The Import Loader Format Window is used for defining the file layout for product information which will be imported.">Esta ventana es usada para la definición del archivo con información de productos que se quiere importar al sistema.</value>
  </row>
  <row id="191" trl="Y">
-  <value column="Name" original="Production">Producción</value>
+  <value column="Name" original="Production (multi product)">Producción (multi producto)</value>
   <value column="Description" original="Production based on Bill of Materials">Producción basada en Lista de Partes</value>
   <value column="Help" original="The Production Window defines those plan and inventory movements that occur when a product is created from a bill of materials">La ventana define los movimientos planeados y de inventario que ocurren cuando un producto es creado desde una lista de partes (LDP o BOM en Inglés).</value>
  </row>
@@ -1080,7 +1080,7 @@ Antes(!) incorporando transacciones, comience la réplica funcionada al sistema 
   <value column="Help" original="System Registration - Only one Record - Do not add additional records.">Registro del sistema - Solamente un registro - No agregue los registros adicionales.</value>
  </row>
  <row id="341" trl="Y">
-  <value column="Name" original="Internal Use Inventory">Inventario uso Interno</value>
+  <value column="Name" original="Internal Use Inventory">Inventario Uso Interno</value>
   <value column="Description" original="Enter Internal Use of Inventory">Incorpora el uso interno del inventario.</value>
   <value column="Help" original="The Internal Use of Inventory Window allows enter the quantity of used products.">El uso de la ventana del inventario interno permite entrar en la cantidad de productos usados.</value>
  </row>
@@ -2086,6 +2086,11 @@ y otros</value>
  </row>
  <row id="200074" trl="Y">
   <value column="Name" original="Locator Type">Tipo de Ubicación</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200086" trl="Y">
+  <value column="Name" original="CSS Style">Estilo CSS</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
