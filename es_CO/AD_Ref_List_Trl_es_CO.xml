@@ -5450,6 +5450,14 @@
   <value column="Name" original="Detail">Detalle</value>
   <value column="Description" original=""/>
  </row>
+ <row id="200345" trl="N">
+  <value column="Name" original="Payment">Payment</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200356" trl="N">
+  <value column="Name" original="SQL Mandatory">SQL Mandatory</value>
+  <value column="Description" original=""/>
+ </row>
  <row trl="Y" uuid="dbc98c55-3b9e-4f9b-9d50-f29596ba706d">
   <value column="Name" original="Check">Validar</value>
   <value column="Description" original="Check against typed digit">Validar contra el dígito ingresado</value>

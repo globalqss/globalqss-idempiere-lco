@@ -2193,6 +2193,11 @@ Si planea usar todos los lenguajes entonces cree un lenguaje xx_XX y úselo como
   <value column="Description" original="Generate Production from Project Line(s)">Generar Producción desde las líneas de proyecto</value>
   <value column="Help" original=""/>
  </row>
+ <row id="200086" trl="Y">
+  <value column="Name" original="Copy Components From View">Copiar componentes de otra vista</value>
+  <value column="Description" original="Create dictionary view components for a table taking another as base">Crea los componentes de vista en el diccionario tomandolos desde otra vista como base</value>
+  <value column="Help" original=""/>
+ </row>
  <row trl="Y" uuid="0450d998-4a98-45d6-9487-d74051bfc47f">
   <value column="Name" original="Generate Withholding">Genera Retenciones</value>
   <value column="Description" original=""/>

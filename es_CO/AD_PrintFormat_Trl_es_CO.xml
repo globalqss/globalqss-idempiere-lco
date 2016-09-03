@@ -32,7 +32,7 @@
  </row>
  <row id="107" trl="Y">
   <value column="Name" original="PaySelection_Remittance_Lines  ** TEMPLATE **">Líneas Remesa Pago  ** PLANTILLA **</value>
-  <value column="Description" original="Standard Check/Remittance Lines">Líneas Cheque/Remeasa Estándar</value>
+  <value column="Description" original="Standard Check/Remittance Lines">Líneas Cheque/Remesa Estándar</value>
  </row>
  <row id="108" trl="Y">
   <value column="Name" original="PaySelection_Remittance  ** TEMPLATE **">Remesa  ** PLANTILLA **</value>

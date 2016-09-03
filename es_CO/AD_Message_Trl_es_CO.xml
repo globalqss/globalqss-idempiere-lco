@@ -6614,6 +6614,34 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgText" original="Selected {0} rows">{0} filas seleccionadas</value>
   <value column="MsgTip" original=""/>
  </row>
+ <row id="200393" trl="Y">
+  <value column="MsgText" original="Could not convert currency {0} to project currency {1} - conversion type : {2} / conversion date : {3,date,short}">No puedo convertir la moneda {0} a la moneda de proyecto {1} - tipo de conversión: {2} / fecha: {3,date,short}</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200394" trl="Y">
+  <value column="MsgText" original="Could not convert currency {0} to base currency {1} - conversion type : {2} / conversion date : {3,date,short}">No puedo convertir la moneda {0} a la moneda base {1} - tipo de conversión: {2} / fecha: {3,date,short}</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200395" trl="Y">
+  <value column="MsgText" original="Could not convert allocation currency {0} to base currency {1} - conversion type : {2} / conversion date : {3}">No puedo convertir la moneda {0} de la asignación a la moneda base {1} - tipo de conversión: {2} / fecha: {3}</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200396" trl="Y">
+  <value column="MsgText" original="Could not convert invoice currency {0} to base currency {1} - conversion type : {2} / conversion date : {3,date,short}">No puedo convertir la moneda {0} de la factura a la moneda base {1} - tipo de conversión: {2} / fecha: {3,date,short}</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200397" trl="Y">
+  <value column="MsgText" original="Target table must not have view components">La tabla destino no debe tener componentes de vista</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200398" trl="Y">
+  <value column="MsgText" original="Target table must not have columns">La tabla destino no debe tener columnas</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200405" trl="Y">
+  <value column="MsgText" original="{0} resolved multiple times = ({1})">{0} resuelto múltiples veces = ({1})</value>
+  <value column="MsgTip" original=""/>
+ </row>
  <row id="520010" trl="Y">
   <value column="MsgText" original="1 Rupee">1 Rupia</value>
   <value column="MsgTip" original=" "/>

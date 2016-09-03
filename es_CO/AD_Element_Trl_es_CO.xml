@@ -13242,7 +13242,7 @@ Si no se incorpora ninguna, se utiliza la impresora por default. Usted especific
  <row id="2100" trl="Y">
   <value column="Name" original="Enforce Role Security">Regla de Seguridad Forzosa</value>
   <value column="PrintName" original="Enforce Role Security">Regla de Seguridad Forzosa</value>
-  <value column="Description" original="Send alerts to recipient only if the data security rules of the role allows">Enviar alertas para recipiente solamente si las reglas de la seguridad de datos de rol lo permiten.</value>
+  <value column="Description" original="Send alerts to recipient only if the data security rules of the role allows">Enviar alertas para el receptor solamente si las reglas de la seguridad de datos de rol lo permiten.</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -14858,9 +14858,9 @@ de proyecto - capacidad de publicar el material</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2271" trl="Y">
-  <value column="Name" original="Out Shipment Line">Línea de Embarque Saliente</value>
-  <value column="PrintName" original="Out Shipment Line">Línea de Embarque Saliente</value>
-  <value column="Description" original="Outgoing Shipment/Receipt">Embarque/Recipiente saliente</value>
+  <value column="Name" original="Out Shipment Line">Línea de Recibo/Despacho Saliente</value>
+  <value column="PrintName" original="Out Shipment Line">Línea de Recibo/Despacho Saliente</value>
+  <value column="Description" original="Outgoing Shipment/Receipt">Línea de Recibo/Despacho Saliente</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -16508,9 +16508,9 @@ de proyecto - capacidad de publicar el material</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2448" trl="Y">
-  <value column="Name" original="Alert Recipient">Recipiente de Alertas</value>
-  <value column="PrintName" original="Alert Recipient">Recipiente de Alertas</value>
-  <value column="Description" original="Recipient of the Alert Notification">Recipiente de la notificación de alertas.</value>
+  <value column="Name" original="Alert Recipient">Receptor de Alertas</value>
+  <value column="PrintName" original="Alert Recipient">Receptor de Alertas</value>
+  <value column="Description" original="Recipient of the Alert Notification">Receptor de la notificación de alertas.</value>
   <value column="Help" original="You can send the notifications to users or roles">Usted puede enviar las notificaciones para usuarios o roles.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -16518,9 +16518,9 @@ de proyecto - capacidad de publicar el material</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2449" trl="Y">
-  <value column="Name" original="Scheduler Recipient">Recipiente del Programador</value>
-  <value column="PrintName" original="Scheduler Recipient">Recipiente del Programador</value>
-  <value column="Description" original="Recipient of the Scheduler Notification">Recipiente de la notificación del programador</value>
+  <value column="Name" original="Scheduler Recipient">Receptor de Agenda</value>
+  <value column="PrintName" original="Scheduler Recipient">Receptor de Agenda</value>
+  <value column="Description" original="Recipient of the Scheduler Notification">Receptor de la notificación de agendamiento</value>
   <value column="Help" original="You can send the notifications to users or roles">Usted puede enviar las notificaciones para usuarios o roles.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -22685,20 +22685,20 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="3088" trl="Y">
-  <value column="Name" original="Show All Due">Mostrar todas las vencidas</value>
-  <value column="PrintName" original="Show All Due">Mostrar todas las vencidas</value>
-  <value column="Description" original="Show/print all due invoices">Muestra / Imprime todas las facturas que estén vencidas.</value>
-  <value column="Help" original="The dunning letter with this level includes all due invoices.">La carta de cobro con este nivel incluye todas las facturas que están vencidas.</value>
+  <value column="Name" original="Show All Due">Mostrar todas las deudas.</value>
+  <value column="PrintName" original="Show All Due">Mostrar todas las deudas.</value>
+  <value column="Description" original="Show/print all due invoices">Muestra / Imprime todas las facturas que se deben.</value>
+  <value column="Help" original="The dunning letter with this level includes all due invoices.">La carta de cobro con este nivel incluye todas las facturas que se deben.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="3089" trl="Y">
-  <value column="Name" original="Show Not Due">Mostrar no vencidas</value>
-  <value column="PrintName" original="Show Not Due">Mostrar no vencidas</value>
-  <value column="Description" original="Show/print all invoices which are not due (yet).">Muestra / Imprime todas las facturas que aún no están vencidas.</value>
-  <value column="Help" original="The dunning letter with this level includes all not due invoices.">La carta de cobro con este nivel incluye las facturas aún no vencidas.</value>
+  <value column="Name" original="Show Not Due">No muestra deuda</value>
+  <value column="PrintName" original="Show Not Due">No muestra deuda</value>
+  <value column="Description" original="Show/print all invoices which are not due (yet).">Muestra / Imprime todas las facturas que no se deben (aún).</value>
+  <value column="Help" original="The dunning letter with this level includes all not due invoices.">La carta de cobro con este nivel no incluye las facturas que se deben.</value>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -55819,6 +55819,96 @@ Ejemplo de este valor = 60.  El usuario no puede reutilizar una contraseña cuya
   <value column="PrintName" original="Toggle on Double Click">Cambiar modo en doble clic</value>
   <value column="Description" original="Defines if double click in a field on grid mode switch to form view">Define si doble clic sobre un campo en modo grilla cambia a la vista de forma</value>
   <value column="Help" original="Defines if double click in a field on grid mode switch to form view">Define si doble clic sobre un campo en modo grilla cambia a la vista de forma</value>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202975" trl="Y">
+  <value column="Name" original="Copy Components From View">Copiar componentes de otra vista</value>
+  <value column="PrintName" original="Copy Components From View">Copiar componentes de otra vista</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="203005" trl="Y">
+  <value column="Name" original="Style">Estilo CSS</value>
+  <value column="PrintName" original="Style">Estilo CSS</value>
+  <value column="Description" original="CSS style for field and label">Estilo CSS para campos y rótulos</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="203006" trl="N">
+  <value column="Name" original="Style">Style</value>
+  <value column="PrintName" original="Style">Style</value>
+  <value column="Description" original="CSS Style for field and label">CSS Style for field and label</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="203007" trl="Y">
+  <value column="Name" original="Style Line">Línea Estilo CSS</value>
+  <value column="PrintName" original="Style Line">Línea Estilo CSS</value>
+  <value column="Description" original="CSS Style Line">Línea Estilo CSS</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="203008" trl="N">
+  <value column="Name" original="Style Line">Style Line</value>
+  <value column="PrintName" original="Style Line">Style Line</value>
+  <value column="Description" original="CSS Style Line">CSS Style Line</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="203009" trl="N">
+  <value column="Name" original="Inline Style">Inline Style</value>
+  <value column="PrintName" original="Inline Style">Inline Style</value>
+  <value column="Description" original="CSS Inline Style">CSS Inline Style</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="203010" trl="Y">
+  <value column="Name" original="Theme">Tema</value>
+  <value column="PrintName" original="Theme">Tema</value>
+  <value column="Description" original="Theme name">Nombre del Tema</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="203011" trl="Y">
+  <value column="Name" original="Label Style">Estilo CSS Rótulo</value>
+  <value column="PrintName" original="Label Style">Estilo CSS Rótulo</value>
+  <value column="Description" original="Label CSS Style">Estilo CSS Rótulo</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="203012" trl="Y">
+  <value column="Name" original="Field Style">Estilo CSS Campo</value>
+  <value column="PrintName" original="Field Style">Estilo CSS Campo</value>
+  <value column="Description" original="Field CSS Style ">Estilo CSS Campo</value>
+  <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
