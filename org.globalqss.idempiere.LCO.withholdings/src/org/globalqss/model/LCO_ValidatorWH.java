@@ -38,6 +38,7 @@ import org.adempiere.base.event.IEventTopics;
 import org.adempiere.base.event.LoginEventData;
 import org.compiere.acct.Doc;
 import org.compiere.acct.DocLine;
+import org.compiere.acct.DocLine_Allocation;
 import org.compiere.acct.DocTax;
 import org.compiere.acct.Fact;
 import org.compiere.acct.FactLine;
@@ -535,6 +536,7 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 				BigDecimal tottax = new BigDecimal(0);
 
 				MAllocationLine alloc_line = alloc_lines[j];
+				DocLine_Allocation docLine = new DocLine_Allocation(alloc_line, doc);
 				doc.setC_BPartner_ID(alloc_line.getC_BPartner_ID());
 
 				int inv_id = alloc_line.getC_Invoice_ID();
@@ -577,11 +579,11 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 						{
 							FactLine tl = null;
 							if (invoice.isSOTrx()) {
-								tl = fact.createLine(null, taxLine.getAccount(DocTax.ACCTTYPE_TaxDue, as),
-										as.getC_Currency_ID(), amount, null);
+								tl = fact.createLine(docLine, taxLine.getAccount(DocTax.ACCTTYPE_TaxDue, as),
+										ah.getC_Currency_ID(), amount, null);
 							} else {
-								tl = fact.createLine(null, taxLine.getAccount(taxLine.getAPTaxType(), as),
-										as.getC_Currency_ID(), null, amount);
+								tl = fact.createLine(docLine, taxLine.getAccount(taxLine.getAPTaxType(), as),
+										ah.getC_Currency_ID(), null, amount);
 							}
 							if (tl != null)
 								tl.setC_Tax_ID(taxLine.getC_Tax_ID());
