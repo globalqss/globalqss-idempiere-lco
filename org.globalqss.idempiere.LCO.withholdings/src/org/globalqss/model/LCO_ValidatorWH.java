@@ -29,10 +29,11 @@ import java.math.BigDecimal;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 
 import org.adempiere.base.event.AbstractEventHandler;
+import org.adempiere.base.event.FactsEventData;
 import org.adempiere.base.event.IEventManager;
 import org.adempiere.base.event.IEventTopics;
 import org.adempiere.base.event.LoginEventData;
@@ -91,7 +92,7 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 		registerTableEvent(IEventTopics.DOC_AFTER_COMPLETE, MInvoice.Table_Name);
 		registerTableEvent(IEventTopics.DOC_BEFORE_COMPLETE, MPayment.Table_Name);
 		registerTableEvent(IEventTopics.DOC_AFTER_COMPLETE, MAllocationHdr.Table_Name);
-		registerTableEvent(IEventTopics.DOC_BEFORE_POST, MAllocationHdr.Table_Name);
+		registerTableEvent(IEventTopics.ACCT_FACTS_VALIDATE, MAllocationHdr.Table_Name);
 		registerTableEvent(IEventTopics.DOC_AFTER_VOID, MAllocationHdr.Table_Name);
 		registerTableEvent(IEventTopics.DOC_AFTER_REVERSECORRECT, MAllocationHdr.Table_Name);
 		registerTableEvent(IEventTopics.DOC_AFTER_REVERSEACCRUAL, MAllocationHdr.Table_Name);
@@ -120,7 +121,13 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 		if (! MSysConfig.getBooleanValue("LCO_USE_WITHHOLDINGS", true, Env.getAD_Client_ID(Env.getCtx())))
 			return;
 
-		PO po = getPO(event);
+		PO po = null;
+		if (type.equals(IEventTopics.ACCT_FACTS_VALIDATE)) {
+			FactsEventData fed = getEventData(event);
+			po = fed.getPo();
+		} else {
+			po = getPO(event);
+		}
 		log.info(po.get_TableName() + " Type: "+type);
 		String msg;
 
@@ -261,8 +268,8 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 		}
 
 		// before posting the allocation - post the payment withholdings vs writeoff amount
-		if (po instanceof MAllocationHdr && type.equals(IEventTopics.DOC_BEFORE_POST)) {
-			msg = accountingForInvoiceWithholdingOnPayment((MAllocationHdr) po);
+		if (po instanceof MAllocationHdr && type.equals(IEventTopics.ACCT_FACTS_VALIDATE)) {
+			msg = accountingForInvoiceWithholdingOnPayment((MAllocationHdr) po, event);
 			if (msg != null)
 				throw new RuntimeException(msg);
 		}
@@ -516,15 +523,16 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 		return null;
 	}
 
-	private String accountingForInvoiceWithholdingOnPayment(MAllocationHdr ah) {
+	private String accountingForInvoiceWithholdingOnPayment(MAllocationHdr ah, Event event) {
 		// Accounting like Doc_Allocation
 		// (Write off) vs (invoice withholding where iscalconpayment=Y)
 		// 20070807 - globalqss - instead of adding a new WriteOff post, find the
 		//  current WriteOff and subtract from the posting
 
 		Doc doc = ah.getDoc();
+		FactsEventData fed = getEventData(event);
+		List<Fact> facts = fed.getFacts();
 
-		ArrayList<Fact> facts = doc.getFacts();
 		// one fact per acctschema
 		for (int i = 0; i < facts.size(); i++)
 		{
