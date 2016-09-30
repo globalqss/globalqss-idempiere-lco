@@ -628,26 +628,26 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 								// both zeros, remove the line
 								fact.remove(fl);
 							} else if (Env.ZERO.compareTo(newbalamt) > 0) {
-								fl.setAmtAcct(fl.getC_Currency_ID(), Env.ZERO, newbalamt);
 								fl.setAmtSource(fl.getC_Currency_ID(), Env.ZERO, newbalamt);
+								fl.convert();
 							} else {
-								fl.setAmtAcct(fl.getC_Currency_ID(), newbalamt, Env.ZERO);
 								fl.setAmtSource(fl.getC_Currency_ID(), newbalamt, Env.ZERO);
+								fl.convert();
 							}
 							break;
 						}
 					}
 
 					if (! foundflwriteoff) {
-						// Create a new line
-						DocLine line = new DocLine(alloc_line, doc);
+						// Create a new line - never expected to arrive here as it must always be a write-off line
+						DocLine_Allocation line = new DocLine_Allocation(alloc_line, doc);
 						FactLine fl = null;
 						if (invoice.isSOTrx()) {
 							fl = fact.createLine (line, doc.getAccount(Doc.ACCTTYPE_WriteOff, as),
-									as.getC_Currency_ID(), null, tottax);
+									ah.getC_Currency_ID(), null, tottax);
 						} else {
 							fl = fact.createLine (line, doc.getAccount(Doc.ACCTTYPE_WriteOff, as),
-									as.getC_Currency_ID(), tottax, null);
+									ah.getC_Currency_ID(), tottax, null);
 						}
 						if (fl != null)
 							fl.setAD_Org_ID(ah.getAD_Org_ID());
