@@ -397,6 +397,8 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 					pay.getC_Invoice_ID());
 			if (sumwhamt == null)
 				sumwhamt = Env.ZERO;
+			if (MInvoice.get(pay.getCtx(), pay.getC_Invoice_ID()).isCreditMemo())
+				sumwhamt = sumwhamt.negate();
 			if (wo.compareTo(sumwhamt) < 0 && sumwhamt.compareTo(Env.ZERO) != 0)
 				return Msg.getMsg(pay.getCtx(), "LCO_WriteOffLowerThanWithholdings");
 		} else {
@@ -427,6 +429,8 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 							pal.getC_Invoice_ID());
 					if (sumwhamt == null)
 						sumwhamt = Env.ZERO;
+					if (MInvoice.get(pay.getCtx(), pal.getC_Invoice_ID()).isCreditMemo())
+						sumwhamt = sumwhamt.negate();
 					if (wo.compareTo(sumwhamt) < 0 && sumwhamt.compareTo(Env.ZERO) != 0)
 						return Msg.getMsg(pay.getCtx(), "LCO_WriteOffLowerThanWithholdings");
 				}
@@ -576,6 +580,10 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 						int tax_ID = rs.getInt(1);
 						BigDecimal taxBaseAmt = rs.getBigDecimal(2);
 						BigDecimal amount = rs.getBigDecimal(3);
+						if (invoice.isCreditMemo()) {
+							taxBaseAmt = taxBaseAmt.negate();
+							amount = amount.negate();
+						}
 						String name = rs.getString(4);
 						BigDecimal rate = rs.getBigDecimal(5);
 						boolean salesTax = rs.getString(6).equals("Y") ? true : false;
