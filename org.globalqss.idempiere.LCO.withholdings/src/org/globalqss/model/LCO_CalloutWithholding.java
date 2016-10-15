@@ -38,6 +38,7 @@ import org.compiere.model.GridField;
 import org.compiere.model.GridTab;
 import org.compiere.model.I_C_Payment;
 import org.compiere.model.I_C_PaymentAllocate;
+import org.compiere.model.MInvoice;
 import org.compiere.model.MPriceList;
 import org.compiere.model.MSysConfig;
 import org.compiere.model.MTax;
@@ -239,6 +240,8 @@ public class LCO_CalloutWithholding implements IColumnCalloutFactory
 						+ "   AND C_AllocationLine_ID IS NULL"
 						+ "   AND IsActive = 'Y'";
 				sumtaxamt = DB.getSQLValueBD(null, sql, inv_id);
+				if (MInvoice.get(ctx, inv_id).isCreditMemo())
+					sumtaxamt = sumtaxamt.negate();
 			}
 
 			BigDecimal newPayAmt = prevPayAmt.add(prevWriteOff).subtract(sumtaxamt);
