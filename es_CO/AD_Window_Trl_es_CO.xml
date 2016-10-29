@@ -2089,6 +2089,11 @@ y otros</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="200083" trl="Y">
+  <value column="Name" original="Menu favourites">Favoritos Menú</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row id="200086" trl="Y">
   <value column="Name" original="CSS Style">Estilo CSS</value>
   <value column="Description" original=""/>

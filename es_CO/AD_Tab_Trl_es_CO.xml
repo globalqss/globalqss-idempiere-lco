@@ -2070,8 +2070,8 @@ Un inventario físico se crea por Almacén y Fecha de Movimiento.]]></value>
  <row id="504" trl="Y">
   <value column="Name" original="Alert">Alerta</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="DCIERP Alert">Alerta DCIERP</value>
-  <value column="Help" original="DCIERP Alerts allow you define system conditions you want to be alerted of.">Alerta DCIERP permíte definir condiciones de sistema que usted desea ser alertado</value>
+  <value column="Description" original="iDempiere Alert">Alerta DCIERP</value>
+  <value column="Help" original="iDempiere Alerts allow you define system conditions you want to be alerted of.">Alerta DCIERP permíte definir condiciones de sistema que usted desea ser alertado</value>
  </row>
  <row id="505" trl="Y">
   <value column="Name" original="Alert Rule">Regla Alerta</value>
