@@ -55516,7 +55516,7 @@ Las cadenas pueden estar (opcionalmente) entre comillas simples]]></value>
   <value column="Name" original="Parent Related Column">Columna Padre Relacionada</value>
   <value column="PrintName" original="Parent Related Column">Columna Padre Relacionada</value>
   <value column="Description" original="column in parent info window, link with column in this relate info">Columna en la ventana de información padre, enlace con la columna en esta ventana de información</value>
-  <value column="Help" original="default column RelatedColumn in Relate Info window will link with key column of main info window&#10;column define in ParentRelatedColumn will replace key column"></value>
+  <value column="Help" original="default column RelatedColumn in Relate Info window will link with key column of main info window&#10;column define in ParentRelatedColumn will replace key column"/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
@@ -55824,6 +55824,26 @@ Ejemplo de este valor = 60.  El usuario no puede reutilizar una contraseña cuya
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
+ <row id="202958" trl="Y">
+  <value column="Name" original="Favourite">Favorito</value>
+  <value column="PrintName" original="Favourite">Favorito</value>
+  <value column="Description" original="This record is a favourite">Este registro es un favorito</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
+ <row id="202959" trl="Y">
+  <value column="Name" original="Login automatic open sequence">Secuencia Apertura Automática Ingreso</value>
+  <value column="PrintName" original="Login automatic open sequence">Secuencia Apertura Automática Ingreso</value>
+  <value column="Description" original="Determine the order items will be automatically opened when user logs in">Determina el orden de las ventanas que se abrirán automáticamente cuando el usuario ingresa</value>
+  <value column="Help" original=""/>
+  <value column="PO_Description" original=""/>
+  <value column="PO_Help" original=""/>
+  <value column="PO_Name" original=""/>
+  <value column="PO_PrintName" original=""/>
+ </row>
  <row id="202975" trl="Y">
   <value column="Name" original="Copy Components From View">Copiar componentes de otra vista</value>
   <value column="PrintName" original="Copy Components From View">Copiar componentes de otra vista</value>
@@ -55844,10 +55864,10 @@ Ejemplo de este valor = 60.  El usuario no puede reutilizar una contraseña cuya
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="203006" trl="N">
-  <value column="Name" original="Style">Style</value>
-  <value column="PrintName" original="Style">Style</value>
-  <value column="Description" original="CSS Style for field and label">CSS Style for field and label</value>
+ <row id="203006" trl="Y">
+  <value column="Name" original="Style">Estilo</value>
+  <value column="PrintName" original="Style">Estilo</value>
+  <value column="Description" original="CSS Style for field and label">Estilo CSS para el campo y rótulo</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -55864,20 +55884,20 @@ Ejemplo de este valor = 60.  El usuario no puede reutilizar una contraseña cuya
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="203008" trl="N">
-  <value column="Name" original="Style Line">Style Line</value>
-  <value column="PrintName" original="Style Line">Style Line</value>
-  <value column="Description" original="CSS Style Line">CSS Style Line</value>
+ <row id="203008" trl="Y">
+  <value column="Name" original="Style Line">Línea de Estilo</value>
+  <value column="PrintName" original="Style Line">Línea de Estilo</value>
+  <value column="Description" original="CSS Style Line">Línea de Estilo CSS</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
   <value column="PO_Name" original=""/>
   <value column="PO_PrintName" original=""/>
  </row>
- <row id="203009" trl="N">
-  <value column="Name" original="Inline Style">Inline Style</value>
-  <value column="PrintName" original="Inline Style">Inline Style</value>
-  <value column="Description" original="CSS Inline Style">CSS Inline Style</value>
+ <row id="203009" trl="Y">
+  <value column="Name" original="Inline Style">Estilo Inline</value>
+  <value column="PrintName" original="Inline Style">Estilo Inline</value>
+  <value column="Description" original="CSS Inline Style">Estilo Inline CSS</value>
   <value column="Help" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
