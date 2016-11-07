@@ -8,7 +8,7 @@
     <rm:provider componentTypes="osgi.bundle,eclipse.feature" readerType="p2" source="false" mutable="false">
       <rm:property key="buckminster.source" value="false"/>
       <rm:property key="buckminster.mutable" value="false"/>
-      <rm:uri format="file:///var/lib/jenkins/workspace/iDempiere3.1/buckminster.output/org.adempiere.server_3.1.0-eclipse.feature/site.p2/"/>
+      <rm:uri format="file:///var/lib/jenkins/workspace/iDempiere4.1/buckminster.output/org.adempiere.server_4.1.0-eclipse.feature/site.p2/"/>
     </rm:provider>
   </rm:searchPath>
   <rm:searchPath name="workspace.bundle.project">
