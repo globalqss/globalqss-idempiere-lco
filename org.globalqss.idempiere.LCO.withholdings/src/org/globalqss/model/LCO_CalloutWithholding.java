@@ -36,6 +36,7 @@ import org.adempiere.base.IColumnCallout;
 import org.adempiere.base.IColumnCalloutFactory;
 import org.compiere.model.GridField;
 import org.compiere.model.GridTab;
+import org.compiere.model.I_C_PaySelectionLine;
 import org.compiere.model.I_C_Payment;
 import org.compiere.model.I_C_PaymentAllocate;
 import org.compiere.model.MInvoice;
@@ -77,9 +78,11 @@ public class LCO_CalloutWithholding implements IColumnCalloutFactory
 			if (columnName.equalsIgnoreCase(I_LCO_InvoiceWithholding.COLUMNNAME_TaxBaseAmt))
 				return new IColumnCallout[]{new Recalc_TaxAmt()};
 
-		} else if (tableName.equalsIgnoreCase(I_C_Payment.Table_Name) || tableName.equalsIgnoreCase(I_C_PaymentAllocate.Table_Name)) {
+		} else if (   tableName.equalsIgnoreCase(I_C_Payment.Table_Name)
+				   || tableName.equalsIgnoreCase(I_C_PaySelectionLine.Table_Name)
+				   || tableName.equalsIgnoreCase(I_C_PaymentAllocate.Table_Name)) {
 
-			// C_Payment.C_Invoice_ID or C_PaymentAllocate.C_Invoice_ID 
+			// C_Payment.C_Invoice_ID or C_PaymentAllocate.C_Invoice_ID or C_PaySelectionLine.C_Invoice_ID 
 			if (columnName.equalsIgnoreCase(I_C_Payment.COLUMNNAME_C_Invoice_ID))
 				return new IColumnCallout[]{new FillWriteOffWithAllocations()};
 
@@ -206,7 +209,7 @@ public class LCO_CalloutWithholding implements IColumnCalloutFactory
 	}
 
 	private static class FillWriteOffWithAllocations implements IColumnCallout {
-		// Called from C_Payment.C_Invoice_ID and C_PaymentAllocate.C_Invoice_ID
+		// Called from C_Payment.C_Invoice_ID and C_PaymentAllocate.C_Invoice_ID and C_PaySelectionLine.C_Invoice_ID
 		// Note the PayAmt was already calculated in the core callout org.compiere.model.CalloutPayment[Allocate].invoice
 		@Override
 		public String start(Properties ctx, int WindowNo, GridTab mTab, GridField mField, Object value, Object oldValue) {
@@ -231,15 +234,21 @@ public class LCO_CalloutWithholding implements IColumnCalloutFactory
 			if (value != null) {
 				Integer invInt = (Integer) value;
 				int inv_id = invInt.intValue();
+				int bank_id = Env.getContextAsInt(ctx, WindowNo, "C_BankAccount_ID");
 				String sql =
-						"SELECT NVL(SUM(TaxAmt),0) "
-						+ "  FROM LCO_InvoiceWithholding "
-						+ " WHERE C_Invoice_ID = ? "
-						+ "   AND IsCalcOnPayment = 'Y'"
-						+ "   AND Processed = 'N'"
-						+ "   AND C_AllocationLine_ID IS NULL"
-						+ "   AND IsActive = 'Y'";
-				sumtaxamt = DB.getSQLValueBD(null, sql, inv_id);
+						"SELECT currencyconvert(v.sumtaxamt, i.C_Currency_ID, ba.C_Currency_ID, i.DateInvoiced, i.C_ConversionType_ID, i.AD_Client_ID, i.AD_Org_ID) "
+						+ "FROM ( "
+						+ "SELECT COALESCE(SUM(iw.TaxAmt),0) AS sumtaxamt "
+						+ "  FROM LCO_InvoiceWithholding iw "
+						+ " WHERE iw.C_Invoice_ID = ? "
+						+ "   AND iw.IsCalcOnPayment = 'Y'"
+						+ "   AND iw.Processed = 'N'"
+						+ "   AND iw.C_AllocationLine_ID IS NULL"
+						+ "   AND iw.IsActive = 'Y'"
+						+ ") AS v, C_Invoice_v i, C_BankAccount ba "
+						+ "WHERE i.C_Invoice_ID=? AND ba.C_BankAccount_ID=?"
+						;
+				sumtaxamt = DB.getSQLValueBD(null, sql, inv_id, inv_id, bank_id);
 				if (MInvoice.get(ctx, inv_id).isCreditMemo())
 					sumtaxamt = sumtaxamt.negate();
 			}
