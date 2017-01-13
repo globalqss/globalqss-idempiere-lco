@@ -234,21 +234,23 @@ public class LCO_CalloutWithholding implements IColumnCalloutFactory
 			if (value != null) {
 				Integer invInt = (Integer) value;
 				int inv_id = invInt.intValue();
-				int bank_id = Env.getContextAsInt(ctx, WindowNo, "C_BankAccount_ID");
 				String sql =
-						"SELECT currencyconvert(v.sumtaxamt, i.C_Currency_ID, ba.C_Currency_ID, i.DateInvoiced, i.C_ConversionType_ID, i.AD_Client_ID, i.AD_Org_ID) "
-						+ "FROM ( "
-						+ "SELECT COALESCE(SUM(iw.TaxAmt),0) AS sumtaxamt "
-						+ "  FROM LCO_InvoiceWithholding iw "
-						+ " WHERE iw.C_Invoice_ID = ? "
-						+ "   AND iw.IsCalcOnPayment = 'Y'"
-						+ "   AND iw.Processed = 'N'"
-						+ "   AND iw.C_AllocationLine_ID IS NULL"
-						+ "   AND iw.IsActive = 'Y'"
-						+ ") AS v, C_Invoice_v i, C_BankAccount ba "
-						+ "WHERE i.C_Invoice_ID=? AND ba.C_BankAccount_ID=?"
-						;
-				sumtaxamt = DB.getSQLValueBD(null, sql, inv_id, inv_id, bank_id);
+						"SELECT NVL(SUM(TaxAmt),0) "
+						+ "  FROM LCO_InvoiceWithholding "
+						+ " WHERE C_Invoice_ID = ? "
+						+ "   AND IsCalcOnPayment = 'Y'"
+						+ "   AND Processed = 'N'"
+						+ "   AND C_AllocationLine_ID IS NULL"
+						+ "   AND IsActive = 'Y'";
+				sumtaxamt = DB.getSQLValueBD(null, sql, inv_id);
+				if (I_C_PaySelectionLine.Table_Name.equals(mTab.getTableName())) {
+					// for payment selection line required in the currency of the bank
+					int bank_id = Env.getContextAsInt(ctx, WindowNo, "C_BankAccount_ID");
+					sql = "SELECT currencyconvert(?, i.C_Currency_ID, ba.C_Currency_ID, i.DateInvoiced, i.C_ConversionType_ID, i.AD_Client_ID, i.AD_Org_ID) "
+							+ "FROM C_Invoice_v i, C_BankAccount ba "
+							+ "WHERE i.C_Invoice_ID=? AND ba.C_BankAccount_ID=?";
+					sumtaxamt = DB.getSQLValueBD(null, sql, sumtaxamt, inv_id, bank_id);
+				}
 				if (MInvoice.get(ctx, inv_id).isCreditMemo())
 					sumtaxamt = sumtaxamt.negate();
 			}
