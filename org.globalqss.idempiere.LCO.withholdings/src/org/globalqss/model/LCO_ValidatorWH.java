@@ -192,7 +192,9 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 							newiwh.setTaxBaseAmt(iwh.getTaxBaseAmt().negate());
 							newiwh.setC_Tax_ID(iwh.getC_Tax_ID());
 							newiwh.setIsCalcOnPayment(iwh.isCalcOnPayment());
-							newiwh.setIsActive(iwh.isActive());	// Reviewme
+							newiwh.setIsActive(iwh.isActive());
+							newiwh.setDateAcct(inv.getDateAcct());
+							newiwh.setDateTrx(inv.getDateInvoiced());
 							if (!newiwh.save())
 								throw new RuntimeException("Error saving LCO_InvoiceWithholding docValidate");
 						}
