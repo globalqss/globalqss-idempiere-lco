@@ -368,7 +368,7 @@
   <value column="Help" original="The Import Loader Format Window is used for defining the file layout for product information which will be imported.">Esta ventana es usada para la definición del archivo con información de productos que se quiere importar al sistema.</value>
  </row>
  <row id="191" trl="Y">
-  <value column="Name" original="Production (multi product)">Producción (multi producto)</value>
+  <value column="Name" original="Production">Producción (multi producto)</value>
   <value column="Description" original="Production based on Bill of Materials">Producción basada en Lista de Partes</value>
   <value column="Help" original="The Production Window defines those plan and inventory movements that occur when a product is created from a bill of materials">La ventana define los movimientos planeados y de inventario que ocurren cuando un producto es creado desde una lista de partes (LDP o BOM en Inglés).</value>
  </row>
@@ -2097,6 +2097,36 @@ y otros</value>
  <row id="200086" trl="Y">
   <value column="Name" original="CSS Style">Estilo CSS</value>
   <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200087" trl="Y">
+  <value column="Name" original="Field Suggestions">Sugerencias de Campo</value>
+  <value column="Description" original="Suggestions for field name, description and help.">Sugerencias para nombre, descripción y ayuda de campo.</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200088" trl="Y">
+  <value column="Name" original="Context Help Suggestion">Sugerencia de Ayuda Contextual</value>
+  <value column="Description" original="Review context help suggestion from tenant">Revisar sugerencias de ayuda contextual</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200089" trl="Y">
+  <value column="Name" original="Post-it">Post-it</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200090" trl="Y">
+  <value column="Name" original="Document Status">Estado Documento</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200092" trl="Y">
+  <value column="Name" original="All Clients">Todos los Clientes</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200093" trl="Y">
+  <value column="Name" original="All Users">Todos los Usuarios</value>
+  <value column="Description" original="Users from All Clients">Usuarios de todos los Grupos Empresariales</value>
   <value column="Help" original=""/>
  </row>
  <row trl="Y" uuid="ecd46492-ebb1-410a-8627-44df151cdfbb">

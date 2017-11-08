@@ -991,7 +991,7 @@ Problema: </value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="347" trl="Y">
-  <value column="MsgText" original="&amp;New Record">Registro nuevo</value>
+  <value column="MsgText" original="New">Registro nuevo</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="348" trl="Y">
@@ -6614,6 +6614,14 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgText" original="Selected {0} rows">{0} filas seleccionadas</value>
   <value column="MsgTip" original=""/>
  </row>
+ <row id="200369" trl="Y">
+  <value column="MsgText" original="Permalink">Permalink</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200370" trl="Y">
+  <value column="MsgText" original="Right click and copy link for a permanent link to this record.">Click derecho y copiar enlace para obtener un enlace permanente a este registro.</value>
+  <value column="MsgTip" original=""/>
+ </row>
  <row id="200393" trl="Y">
   <value column="MsgText" original="Could not convert currency {0} to project currency {1} - conversion type : {2} / conversion date : {3,date,short}">No puedo convertir la moneda {0} a la moneda de proyecto {1} - tipo de conversión: {2} / fecha: {3,date,short}</value>
   <value column="MsgTip" original=""/>
@@ -6638,8 +6646,52 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgText" original="Target table must not have columns">La tabla destino no debe tener columnas</value>
   <value column="MsgTip" original=""/>
  </row>
+ <row id="200404" trl="Y">
+  <value column="MsgText" original="Clear Selection">Borrar Selección</value>
+  <value column="MsgTip" original="Clear current selections">Borrar la selección actual</value>
+ </row>
  <row id="200405" trl="Y">
   <value column="MsgText" original="{0} resolved multiple times = ({1})">{0} resuelto múltiples veces = ({1})</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200411" trl="Y">
+  <value column="MsgText" original="Post-it">Post-it</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200412" trl="Y">
+  <value column="MsgText" original="Created by {0} / {1}">Creado por {0} / {1}</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200413" trl="Y">
+  <value column="MsgText" original="Updated by {0} / {1}">Actualizado por {0} / {1}</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200414" trl="Y">
+  <value column="MsgText" original="@#System_Name@ Trace Information">Información Auditoría @#System_Name@</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200431" trl="Y">
+  <value column="MsgText" original="The {0} warehouse does not allow negative inventory for Product = {1}, ASI = {2}, Locator = {3} (Shortage of {4})">El almacén {0} no permite inventario negativo para el producto = {1}, Instancia Atributo = {2}, Ubicación = {3} (Faltante = {4})</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200435" trl="Y">
+  <value column="MsgText" original="Add To Favourites">Añadir a Favoritos</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200436" trl="Y">
+  <value column="MsgText" original="Remove From Favourites">Quitar de Favoritos</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200437" trl="Y">
+  <value column="MsgText" original="Select location to move selected item to">Seleccione la ubicación para mover el ítem</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200438" trl="Y">
+  <value column="MsgText" original="From">Desde</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="200439" trl="Y">
+  <value column="MsgText" original="To">Hasta</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="520010" trl="Y">

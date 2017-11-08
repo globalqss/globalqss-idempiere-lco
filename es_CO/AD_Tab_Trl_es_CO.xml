@@ -6408,6 +6408,12 @@ Imprimiendo:
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="200209" trl="Y">
+  <value column="Name" original="Menu entries">Entradas del Menú</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="In this tab, you'll be able to manage favourites and entries which will open automatically on login">En esta pestaña puede manejar los favoritos y las entradas que se abren automáticamente en el ingreso</value>
+  <value column="Help" original=""/>
+ </row>
  <row id="200213" trl="Y">
   <value column="Name" original="CSS Style">Estilo CSS</value>
   <value column="CommitWarning" original=""/>
@@ -6418,6 +6424,72 @@ Imprimiendo:
   <value column="Name" original="Style Line">Línea Estilo CSS</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original="CSS Style Lines">Línea Estilo CSS</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200215" trl="Y">
+  <value column="Name" original="Suggestions">Sugerencias</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200216" trl="Y">
+  <value column="Name" original="Suggestion">Sugerencia</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200220" trl="Y">
+  <value column="Name" original="Post-it">Post-it</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200222" trl="Y">
+  <value column="Name" original="Document Status Indicator">Indicador Estado Documento</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200223" trl="Y">
+  <value column="Name" original="Document Status Translation">Traducción Estado Documento</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200224" trl="Y">
+  <value column="Name" original="Attributes">Atributos</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200226" trl="Y">
+  <value column="Name" original="Client">Grupo Empresarial</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200227" trl="Y">
+  <value column="Name" original="User">Usuario</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200228" trl="Y">
+  <value column="Name" original="User">Usuario</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200230" trl="Y">
+  <value column="Name" original="Approver">Aprobador</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200231" trl="Y">
+  <value column="Name" original="Approver">Aprobador</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
  <row trl="Y" uuid="0545cbb1-ef68-4e60-b6f6-a9ca4d726b28">

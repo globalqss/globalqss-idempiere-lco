@@ -42,4 +42,9 @@
   <value column="Description" original="Running Jobs">Tareas en Segundo Plano</value>
   <value column="HTML" original=""/>
  </row>
+ <row id="200003" trl="Y">
+  <value column="Name" original="Activities">Actividades</value>
+  <value column="Description" original=""/>
+  <value column="HTML" original=""/>
+ </row>
 </idempiereTrl>

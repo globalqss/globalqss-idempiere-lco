@@ -2198,6 +2198,36 @@ Si planea usar todos los lenguajes entonces cree un lenguaje xx_XX y úselo como
   <value column="Description" original="Create dictionary view components for a table taking another as base">Crea los componentes de vista en el diccionario tomandolos desde otra vista como base</value>
   <value column="Help" original=""/>
  </row>
+ <row id="200093" trl="Y">
+  <value column="Name" original="Reject Field Suggestion">Rechazar Sugerencia de Campo</value>
+  <value column="Description" original="Reject suggested name, description and help changes">Rechazar los cambios sugeridos para nombre, descripción y ayuda</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200094" trl="Y">
+  <value column="Name" original="Accept Field Suggestion">Aceptar Sugerencia de Campo</value>
+  <value column="Description" original="Accept suggested changes for field">Aceptar los cambios sugeridos para el campo</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200095" trl="Y">
+  <value column="Name" original="Compare Field Suggestion">Comparar Sugerencia de Campo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200096" trl="Y">
+  <value column="Name" original="Accept Context Help Suggestion">Aceptar Sugerencia de Ayuda Contextual</value>
+  <value column="Description" original="Accept suggested changes for context help">Aceptar cambios sugeridos para ayuda contextual</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200097" trl="Y">
+  <value column="Name" original="Reject Context Help Suggestion">Rechazar Sugerencia de Ayuda Contextual</value>
+  <value column="Description" original="Reject suggested changes for context help">Rechazar cambios sugeridos para ayuda contextual</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200098" trl="Y">
+  <value column="Name" original="Compare Context Help Suggestion">Compara Sugerencia Ayuda Contextual</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row trl="Y" uuid="0450d998-4a98-45d6-9487-d74051bfc47f">
   <value column="Name" original="Generate Withholding">Genera Retenciones</value>
   <value column="Description" original=""/>
