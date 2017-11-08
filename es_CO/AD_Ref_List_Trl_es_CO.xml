@@ -5414,6 +5414,10 @@
   <value column="Name" original="Process">Proceso</value>
   <value column="Description" original=""/>
  </row>
+ <row id="200261" trl="Y">
+  <value column="Name" original="User Info">Ventana de Información</value>
+  <value column="Description" original="Show a info window">Mostrar una ventana de información</value>
+ </row>
  <row id="200278" trl="Y">
   <value column="Name" original="Model Cascade">Cascada en el Modelo</value>
   <value column="Description" original=""/>
@@ -5450,13 +5454,25 @@
   <value column="Name" original="Detail">Detalle</value>
   <value column="Description" original=""/>
  </row>
- <row id="200345" trl="N">
-  <value column="Name" original="Payment">Payment</value>
+ <row id="200345" trl="Y">
+  <value column="Name" original="Payment">Pago</value>
   <value column="Description" original=""/>
  </row>
- <row id="200356" trl="N">
-  <value column="Name" original="SQL Mandatory">SQL Mandatory</value>
+ <row id="200356" trl="Y">
+  <value column="Name" original="SQL Mandatory">SQL Obligatorio</value>
   <value column="Description" original=""/>
+ </row>
+ <row id="200361" trl="Y">
+  <value column="Name" original="Element">Elemento</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200362" trl="Y">
+  <value column="Name" original="Field">Campo</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200376" trl="Y">
+  <value column="Name" original="Manual">Manual</value>
+  <value column="Description" original="Manual List">Lista Manual</value>
  </row>
  <row trl="Y" uuid="dbc98c55-3b9e-4f9b-9d50-f29596ba706d">
   <value column="Name" original="Check">Validar</value>

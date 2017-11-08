@@ -237,4 +237,14 @@ Seleccionando "dónde es usado" mostrará las LDM que usan este producto.</value
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="200009" trl="Y">
+  <value column="Name" original="Compare Field Suggestion">Comparar Sugerencias de Campos</value>
+  <value column="Description" original="Review field changes for label, descriptipn and help">Revisar cambios en los campos para rótulo, descripción y ayuda</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200010" trl="Y">
+  <value column="Name" original="Compare Context Help Suggestion">Compara Sugerencias de Ayuda Contextual</value>
+  <value column="Description" original="Review changes for context help">Revisar cambios para ayuda contextual</value>
+  <value column="Help" original=""/>
+ </row>
 </idempiereTrl>

@@ -2522,7 +2522,7 @@
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="200076" trl="N">
+ <row id="200076" trl="Y">
   <value column="Name" original="C_ElementValue Account BPartner Type">C_ElementValue Account BPartner Type</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
@@ -2552,14 +2552,44 @@
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="200099" trl="N">
+ <row id="200099" trl="Y">
   <value column="Name" original="IsToolbarButton">IsToolbarButton</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="200121" trl="N">
+ <row id="200121" trl="Y">
   <value column="Name" original="AD_Style">AD_Style</value>
   <value column="Description" original="CSS Style">CSS Style</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200122" trl="Y">
+  <value column="Name" original="Dashboard Content">Dashboard Content</value>
+  <value column="Description" original="Dashboard Content">Dashboard Content</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200123" trl="Y">
+  <value column="Name" original="FieldSuggestionTargetList">FieldSuggestionTargetList</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200127" trl="Y">
+  <value column="Name" original="Single Selection Grid">Single Selection Grid</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200128" trl="Y">
+  <value column="Name" original="Multiple Selection Grid">Multiple Selection Grid</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200144" trl="Y">
+  <value column="Name" original="AD_Client All Clients">AD_Client All Clients</value>
+  <value column="Description" original="Client selection">Client selection</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200145" trl="Y">
+  <value column="Name" original="AD_User Users from all Clients">AD_User Users from all Clients</value>
+  <value column="Description" original="Users from all clients">Users from all clients</value>
   <value column="Help" original=""/>
  </row>
  <row trl="Y" uuid="9b146c1c-bf20-4f00-b0f0-ca7df61d037c">
