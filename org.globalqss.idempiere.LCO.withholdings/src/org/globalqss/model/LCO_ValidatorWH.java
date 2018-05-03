@@ -38,7 +38,6 @@ import org.adempiere.base.event.IEventManager;
 import org.adempiere.base.event.IEventTopics;
 import org.adempiere.base.event.LoginEventData;
 import org.compiere.acct.Doc;
-import org.compiere.acct.DocLine;
 import org.compiere.acct.DocLine_Allocation;
 import org.compiere.acct.DocTax;
 import org.compiere.acct.Fact;
