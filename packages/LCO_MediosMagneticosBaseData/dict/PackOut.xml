@@ -371,7 +371,7 @@
         <IsAudited>false</IsAudited>
         <Prefix/>
         <IsAutoSequence>true</IsAutoSequence>
-        <DateColumn/>
+        <DateColumn>SendDate</DateColumn>
         <Suffix/>
         <DecimalPattern/>
         <Description>Archivos de información exógena</Description>
