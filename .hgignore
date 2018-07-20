@@ -1,2 +1,7 @@
 syntax: glob
 bin
+org.globalqss.idempiere.LCO-feature/target
+org.globalqss.idempiere.LCO.detailednames/target
+org.globalqss.idempiere.LCO.invoicenumbercontrol/target
+org.globalqss.idempiere.LCO.magneticmedia/target
+org.globalqss.idempiere.LCO.withholdings/target
