@@ -17,3 +17,4 @@ Service-Component: OSGI-INF/lco_modelfactorywh.xml,
  OSGI-INF/lco_validatorwh.xml
 Import-Package: org.osgi.service.event
 Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .
