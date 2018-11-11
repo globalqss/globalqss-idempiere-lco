@@ -87,7 +87,7 @@ public class LCO_DianGenerateXML extends SvrProcess {
 	    	Si Idx MOD Max_Records = 1
 	      		Asigne CumulatedAmt(Posicion=1), RecordsQty del XML Header anterior
 	      		Cree nuevo LCO_DIAN_XML_Header
-	      		Asigne CurrentNext --Secuencia env�o por a�o
+	      		Asigne CurrentNext --Secuencia env\u00edo por a\u00f1o
 	    	Fin Si
 	    	Asigne LCO_SendScheduleLine.LCO_DIAN_XML_Header_ID
 	    	Sume CumulatedAmt
