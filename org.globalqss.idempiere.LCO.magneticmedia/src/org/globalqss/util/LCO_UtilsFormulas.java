@@ -26,6 +26,7 @@
 package org.globalqss.util;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.sql.SQLException;
 import java.util.Properties;
 
@@ -109,7 +110,7 @@ public class LCO_UtilsFormulas
 		BigDecimal taxbaseamt = DB.getSQLValueBD(trxName, sql, args);
 
 		if (taxbaseamt != null)
-			taxbaseamt.setScale(0, BigDecimal.ROUND_HALF_UP);
+			taxbaseamt.setScale(0, RoundingMode.HALF_UP);
 
 		return taxbaseamt;
 	}
@@ -175,7 +176,7 @@ public class LCO_UtilsFormulas
 		BigDecimal taxbaseamt = DB.getSQLValueBD(trxName, sql, args);
 
 		if (taxbaseamt != null)
-			taxbaseamt.setScale(0, BigDecimal.ROUND_HALF_UP);
+			taxbaseamt.setScale(0, RoundingMode.HALF_UP);
 
 		return taxbaseamt;
 	}

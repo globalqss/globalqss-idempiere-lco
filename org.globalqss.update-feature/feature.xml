@@ -2,7 +2,7 @@
 <feature
       id="org.globalqss.update"
       label="GlobalQSS Update"
-      version="5.1.0.qualifier"
+      version="6.1.0.qualifier"
       provider-name="GlobalQSS">
 
    <description url="http://www.example.com/description">
@@ -19,7 +19,7 @@
 
    <includes
          id="org.globalqss.idempiere.LCO"
-         version="5.1.0.qualifier"/>
+         version="6.1.0.qualifier"/>
 
    <plugin
          id="org.eclipse.osgi.services"

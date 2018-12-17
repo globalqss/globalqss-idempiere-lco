@@ -26,6 +26,7 @@
 package org.globalqss.model;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -201,7 +202,7 @@ public class LCO_CalloutWithholding implements IColumnCalloutFactory
 					((Integer) mTab.getValue(MLCOInvoiceWithholding.COLUMNNAME_C_Invoice_ID)).intValue());
 			taxamt = percent.multiply(taxbaseamt).divide(Env.ONEHUNDRED);
 			int stdPrecision = MPriceList.getStandardPrecision(ctx, pricelist_id);
-			taxamt = taxamt.setScale(stdPrecision, BigDecimal.ROUND_HALF_UP);
+			taxamt = taxamt.setScale(stdPrecision, RoundingMode.HALF_UP);
 		}
 		mTab.setValue(MLCOInvoiceWithholding.COLUMNNAME_TaxAmt, taxamt);
 

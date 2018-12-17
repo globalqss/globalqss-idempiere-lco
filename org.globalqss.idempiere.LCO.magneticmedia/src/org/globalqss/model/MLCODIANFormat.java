@@ -198,7 +198,7 @@ public class MLCODIANFormat extends X_LCO_DIAN_Format
 				if (methodStart != -1)      //  no class
 				{
 					Class<?> cClass = Class.forName(cmd.substring(0,methodStart));
-					call = cClass.newInstance();
+					call = cClass.getConstructor().newInstance();
 					methodName = cmd.substring(methodStart+1);
 				}
 			}
