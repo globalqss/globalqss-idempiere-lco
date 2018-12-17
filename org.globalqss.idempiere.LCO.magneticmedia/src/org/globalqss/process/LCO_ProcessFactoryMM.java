@@ -35,19 +35,19 @@ public class LCO_ProcessFactoryMM implements IProcessFactory {
 		ProcessCall process = null;
 		if ("org.globalqss.process.LCO_DianExportXML".equals(className)) {
 			try {
-				process =  LCO_DianExportXML.class.newInstance();
+				process =  LCO_DianExportXML.class.getConstructor().newInstance();
 			} catch (Exception e) {}
 		} else if ("org.globalqss.process.LCO_DianGenerateXML".equals(className)) {
 			try {
-				process =  LCO_DianGenerateXML.class.newInstance();
+				process =  LCO_DianGenerateXML.class.getConstructor().newInstance();
 			} catch (Exception e) {}
 		} else if ("org.globalqss.process.LCO_DianProcessContent".equals(className)) {
 			try {
-				process =  LCO_DianProcessContent.class.newInstance();
+				process =  LCO_DianProcessContent.class.getConstructor().newInstance();
 			} catch (Exception e) {}
 		} else if ("org.globalqss.process.LCO_DeleteLinesToReprocess".equals(className)) {
 			try {
-				process =  LCO_DeleteLinesToReprocess.class.newInstance();
+				process =  LCO_DeleteLinesToReprocess.class.getConstructor().newInstance();
 			} catch (Exception e) {}
 		}
 

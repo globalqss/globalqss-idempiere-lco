@@ -178,7 +178,7 @@ public class LCO_DianExportXML  extends SvrProcess {
 		StreamResult streamResult_menu = new StreamResult(new OutputStreamWriter(mmDocStream,"ISO-8859-1"));
 		SAXTransformerFactory tf_menu = (SAXTransformerFactory) SAXTransformerFactory.newInstance();
 		try {
-			tf_menu.setAttribute("indent-number", new Integer(0));
+			tf_menu.setAttribute("indent-number", Integer.valueOf(0));
 		} catch (Exception e) {
 			// swallow
 		}

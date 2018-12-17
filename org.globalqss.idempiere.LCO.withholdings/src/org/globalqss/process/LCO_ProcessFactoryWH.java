@@ -35,11 +35,11 @@ public class LCO_ProcessFactoryWH implements IProcessFactory {
 		ProcessCall process = null;
 		if ("org.globalqss.process.LCO_GenerateWithholding".equals(className)) {
 			try {
-				process =  LCO_GenerateWithholding.class.newInstance();
+				process =  LCO_GenerateWithholding.class.getConstructor().newInstance();
 			} catch (Exception e) {}
 		} else if ("org.globalqss.process.LCO_CreateWithholdingReversal".equals(className)) {
 			try {
-				process =  LCO_CreateWithholdingReversal.class.newInstance();
+				process =  LCO_CreateWithholdingReversal.class.getConstructor().newInstance();
 			} catch (Exception e) {}
 		}
 

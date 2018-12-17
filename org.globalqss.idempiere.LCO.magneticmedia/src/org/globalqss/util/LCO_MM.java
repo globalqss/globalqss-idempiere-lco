@@ -26,6 +26,7 @@
 package org.globalqss.util;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -101,7 +102,7 @@ public class LCO_MM implements LCO_DBWrapperMM
 		}
 
 		if (retValue != null)
-			retValue.setScale(0, BigDecimal.ROUND_HALF_UP);
+			retValue.setScale(0, RoundingMode.HALF_UP);
 		return retValue;
 	}
 
@@ -135,7 +136,7 @@ public class LCO_MM implements LCO_DBWrapperMM
 		}
 
 		if (retValue != null)
-			retValue.setScale(0, BigDecimal.ROUND_HALF_UP);
+			retValue.setScale(0, RoundingMode.HALF_UP);
 		return retValue;
 	}
 

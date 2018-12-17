@@ -237,7 +237,7 @@ public class MLCODIANConcept extends X_LCO_DIAN_Concept
 				if (methodStart != -1)      //  no class
 				{
 					Class<?> cClass = Class.forName(cmd.substring(0,methodStart));
-					call = cClass.newInstance();
+					call = cClass.getConstructor().newInstance();
 					methodName = cmd.substring(methodStart+1);
 				}
 			}
@@ -259,7 +259,7 @@ public class MLCODIANConcept extends X_LCO_DIAN_Concept
 
 				if (call instanceof LCO_DBWrapperMM) {
 					if (methodName.startsWith("get"))
-						retValue = ((LCO_DBWrapperMM) call).get(methodName, getCtx(), sendScheduleProcess, new Integer(bpID), new Integer(bpID2), conceptSource, get_TrxName());
+						retValue = ((LCO_DBWrapperMM) call).get(methodName, getCtx(), sendScheduleProcess, Integer.valueOf(bpID), Integer.valueOf(bpID2), conceptSource, get_TrxName());
 					else
 						throw new AdempiereUserError("Error invoking callout " + cmd + " - just method get* is supported");
 				} else {
@@ -267,7 +267,7 @@ public class MLCODIANConcept extends X_LCO_DIAN_Concept
 					//	Call Method
 					try
 					{
-						retValue = (BigDecimal) method.invoke(call, getCtx(), sendScheduleProcess, new Integer(bpID), new Integer(bpID2), conceptSource, get_TrxName());
+						retValue = (BigDecimal) method.invoke(call, getCtx(), sendScheduleProcess, Integer.valueOf(bpID), Integer.valueOf(bpID2), conceptSource, get_TrxName());
 					}
 					catch (Exception e)
 					{
