@@ -252,11 +252,6 @@
   <value column="Description" original="Maintain Dunning Levels">Mantener niveles de morosidad</value>
   <value column="Help" original="The Dunning Window defines the parameters that will be used when generating Dunning Letters.  Each customer can be associated with a Dunning Code.  ">Define los parámetros que serán usados en las cartas de morosidad. Cada cliente puede ser asociado con un código de morosidad.</value>
  </row>
- <row id="160" trl="Y">
-  <value column="Name" original="Withholding (1099)">Retención (1099)</value>
-  <value column="Description" original="Maintain Withholding Certificates">Mantener certificados de retención</value>
-  <value column="Help" original="The Withholding Window defines the rule used for calculating withholding amounts.">La ventana permite definir la regla usada para calcular totales de retención.</value>
- </row>
  <row id="161" trl="Y">
   <value column="Name" original="Charge">Cargo</value>
   <value column="Description" original="Maintain Charges">Mantener Cargos</value>
@@ -307,11 +302,6 @@
   <value column="Description" original="Revenue Recognition Rules">Reglas de Reconocimiento de Ingresos</value>
   <value column="Help" original="The Revenue Recognition Window defines the intervals at which revenue will be recognized. Alternatively, the revenue recognition may be linked to service levels provided.">La ventana define los intervalos a los cuales los ingresos serán reconocidos. Alternativamente, el reconocimiento de ingresos puede ser relacionado a los niveles de servicio suministrados.</value>
  </row>
- <row id="175" trl="Y">
-  <value column="Name" original="Perpetual Inventory">Inventario Perpetuo</value>
-  <value column="Description" original="Maintain Perpetual Inventory Rules">Mantener reglas de inventario perpetuo</value>
-  <value column="Help" original="The Perpetual Inventory defines the rules to be applied when generating Physical Inventory counts.">El inventario perpetuo define las reglas a ser aplicadas cuando se generan los conteos de inventario físico.</value>
- </row>
  <row id="176" trl="Y">
   <value column="Name" original="Vendor Details">Detalles del Proveedor</value>
   <value column="Description" original="Maintain Vendor Details">Mantener detalles del proveedor</value>
@@ -342,16 +332,6 @@
   <value column="Description" original="Vendor Shipments (Receipts)">Recibos de Materiales de Proveedor (Recibos)</value>
   <value column="Help" original="The Vendor Shipment Window defines the receipt of product or material from a Vendor.  The Shipment may be manually entered or may be generated from a Purchase Order or Vendor Invoice.">La ventana permite definir el recibo de un producto o material desde un proveedor. El recibo puede ser entrado manualmente o puede ser generado desde una orden de compra o factura de proveedor.</value>
  </row>
- <row id="185" trl="Y">
-  <value column="Name" original="EDI Definition">Definición de EDI</value>
-  <value column="Description" original="Maintain EDI Definition">Mantener Definición de EDI</value>
-  <value column="Help" original="The EDI Definition Window defines the parameters to be used when processing EDI Transactions">Define los parámetros a ser usados cuando se procesan transacciones EDI (Intercambio Electrónico de Datos).</value>
- </row>
- <row id="186" trl="Y">
-  <value column="Name" original="EDI Transaction">Transacción de EDI</value>
-  <value column="Description" original="">Transacción de EDI</value>
-  <value column="Help" original="">Define transacciones de EDI</value>
- </row>
  <row id="187" trl="Y">
   <value column="Name" original="Form">Formas</value>
   <value column="Description" original="Special Forms">Formas especiales</value>
@@ -366,11 +346,6 @@
   <value column="Name" original="Import Loader Format">Formato Importación de Datos</value>
   <value column="Description" original="Maintain Import Loader Formats">Mantener formatos del cargador del importador de datos</value>
   <value column="Help" original="The Import Loader Format Window is used for defining the file layout for product information which will be imported.">Esta ventana es usada para la definición del archivo con información de productos que se quiere importar al sistema.</value>
- </row>
- <row id="191" trl="Y">
-  <value column="Name" original="Production">Producción (multi producto)</value>
-  <value column="Description" original="Production based on Bill of Materials">Producción basada en Lista de Partes</value>
-  <value column="Help" original="The Production Window defines those plan and inventory movements that occur when a product is created from a bill of materials">La ventana define los movimientos planeados y de inventario que ocurren cuando un producto es creado desde una lista de partes (LDP o BOM en Inglés).</value>
  </row>
  <row id="192" trl="Y">
   <value column="Name" original="Business Partner Group">Grupo de Terceros</value>
@@ -391,21 +366,6 @@
   <value column="Name" original="Payment">Pagos/Recaudos</value>
   <value column="Description" original="Process Payments and Receipts">Procesar Pagos y Recaudos</value>
   <value column="Help" original="The Process Payments Window allows you to enter payments and reaipts for invoices.  If the payment is for a single invoice then it can be processed here.  If it is for multiple invoices or is a partial payment then it should be processed in the Payment Allocation Window.">Esta ventana permite entrar pagos que han sido recibido por pago de facturas. Si el pago es por una sola factura entonces éste pago puede ser procesado en esta ventana. Si se trata de múltiples facturas o es un pago parcial, entonces el pago debe ser procesado en la ventana `Asignación de Pagos`</value>
- </row>
- <row id="196" trl="Y">
-  <value column="Name" original="Custom Attribute">Atributo Personalizado</value>
-  <value column="Description" original="Maintain custom entity attributes">Mantener atributos de entidades personalizadas</value>
-  <value column="Help" original="This is a System only Window.  Customer Attributes allow the entry of additional information to an entity.">Esta es una ventana del sistema. Atributos personalizados permite la entrada de información adicional de una entidad.</value>
- </row>
- <row id="197" trl="Y">
-  <value column="Name" original="Cashbook">Caja PDV</value>
-  <value column="Description" original="Maintain Cashbook">Mantener Caja PDV</value>
-  <value column="Help" original="The Cashbook Window defines the bank and account against which cash transactions will be processed.">Define el banco y cuenta contra la cual las transacciones de efectivo son procesadas.</value>
- </row>
- <row id="198" trl="Y">
-  <value column="Name" original="Cash Journal">Diario Caja PDV</value>
-  <value column="Description" original="Cash transactions">Transacciones de Caja PDV</value>
-  <value column="Help" original="The Cash Journal Window is used to record disbursements from and receipts to Petty Cash">Esta ventana es usada para registrar los pagos y recibos de una caja PDV.</value>
  </row>
  <row id="200" trl="Y">
   <value column="Name" original="Field Group">Grupo de Campos</value>
@@ -482,11 +442,6 @@
   <value column="Description" original="Maintain Financial Report Line Sets">Mantener líneas del informe financiero</value>
   <value column="Help" original="The Line Set determines, which lines are printed in a Financial Report">El conjunto de líneas determina, cuales líneas son impresas en un Informe financiero.</value>
  </row>
- <row id="220" trl="Y">
-  <value column="Name" original="Service Level">Nivel de Servicio</value>
-  <value column="Description" original="Maintain Service Levels">Mantener niveles de servicio</value>
-  <value column="Help" original="Service Levels are generated when an invoice with products based on revenue recognition rules are generated.  You need to update the actual service level by adding an additional line.">Los niveles de servicio son generados cuando una factura con productos basados en reglas de reconocimiento de ingresos es generada. Es necesario actualizar el nivel de servicio real agregandole una línea adicional.</value>
- </row>
  <row id="221" trl="Y">
   <value column="Name" original="Find (indirect use)">Encontrar (uso indirecto)</value>
   <value column="Description" original="Find Dialog (indirect use)">Dialogo de encontrar (uso indirecto)</value>
@@ -502,16 +457,6 @@
   <value column="Description" original="Maintain Print Forms (Invoices, Checks, ..) used">Mantener formas de Impresión (facturas, cheques,...)</value>
   <value column="Help" original="Define the documents you use for this Client/Organnization.  Note that the check format is defined in the Bank (Account) Window.&lt;p&gt;&#10;The highest priotity has the Print Format, you define on a Document Type (example specific Export Invoice format). The next level is the set of Print Formats, you defined for the organziation of the document printed. The default is the set of Print Formats defines for all organizations of the Client (Organization=*).">Define los documentos que se usan en este grupo empresarial. Note que el formato de cheques es definido en la ventana de bancos</value>
  </row>
- <row id="225" trl="Y">
-  <value column="Name" original="System Color">Color del Sistema</value>
-  <value column="Description" original="Maintain System Colors">Mantener Sistema de Colores</value>
-  <value column="Help" original="System colors are used for background and indicators">Colores del sistema son usados para fondos e indicadores.</value>
- </row>
- <row id="226" trl="Y">
-  <value column="Name" original="Desktop">Escritorio</value>
-  <value column="Description" original="Maintain Desktop">Mantener Escritorio</value>
-  <value column="Help" original="Desktop is a collection of Workbenches">Escritorio es un conjunto de mesas de trabajo.</value>
- </row>
  <row id="227" trl="Y">
   <value column="Name" original="System Image">Imagen del Sistema</value>
   <value column="Description" original="Maintain Images and Icons">Mantener Imágenes</value>
@@ -526,11 +471,6 @@
   <value column="Name" original="Window Customization">Ventana de Usuario</value>
   <value column="Description" original="Define Window Customization for Role/User">Personalizar ventana del usuario</value>
   <value column="Help" original="The customization values defined here overwrite/replace the default system definition if defined.">Personalización</value>
- </row>
- <row id="231" trl="Y">
-  <value column="Name" original="Workbench">Mesa de Trabajo</value>
-  <value column="Description" original="Maintain Workbench">Mantener Mesa de Trabajo</value>
-  <value column="Help" original="Workbenches are a collection of Windows">Mesa de trabajo es un conjunto de ventanas</value>
  </row>
  <row id="232" trl="Y">
   <value column="Name" original="Request (all)">Todas las Solicitudes</value>
@@ -637,11 +577,6 @@
   <value column="Description" original="Group of Assets">Grupo de Activos</value>
   <value column="Help" original="The group of assets determines default accounts.  If a asset group is selected in the product category, assets are created when delivering the asset.">El grupo de activos determina cuentas por default. Si un grupo del activo se selecciona en la categoría del producto, se crean los activos al entregar el activo.</value>
  </row>
- <row id="253" trl="Y">
-  <value column="Name" original="Training">Entrenamiento</value>
-  <value column="Description" original="Repeated Training">Entrenamiento repetido.</value>
-  <value column="Help" original="The training may have multiple actual classes">El entrenamiento puede tener clases reales múltiples.</value>
- </row>
  <row id="254" trl="Y">
   <value column="Name" original="Expenses (not reimbursed)">Gastos (No Reembolsables)</value>
   <value column="Description" original="View expenses and charges not reimbursed">Ver gastos y cargos no reembolsables</value>
@@ -677,16 +612,6 @@
   <value column="Description" original="Product Attribute">Atributos del Producto</value>
   <value column="Help" original="Product Attribute like Color, Size, etc.">Atributos del Producto, como Color, tamaño, etc</value>
  </row>
- <row id="261" trl="Y">
-  <value column="Name" original="Attribute Search">Búsqueda de Atributo</value>
-  <value column="Description" original="Common Search Attribute ">Búsqueda Comun de Atributos</value>
-  <value column="Help" original="Attributes are specific to a Product Attribute Set (e.g. Size for T-Shirts: S,M,L). If you have multiple attributes and want to search under a common sttribute, you define a search sttribute. Example: have one Size search attribute combining the values of all different sizes (Size for Dress Shirt  XL,L,M,S,XS). The Attribute Search allows you to have all values available for selection.  This eases the maintenance of the individual product attribute.">Los atributos son específicas cualidades del producto (ej. tamaño para las T-Camisas: S, m, l). Si usted tiene cualidades múltiples y desea buscar bajo atributo común, usted define un atributo de la búsqueda. Ejemplo: que tenga una cualidad de la búsqueda del tamaño el combinar de los valores de todos los diversos tamaños (tamaño para la camisa de vestido XL, l, m, s, xs). La búsqueda de los atributos permite que usted tenga todos los valores disponibles para la selección. Esto facilita el mantenimiento de los atributos de producto individual.</value>
- </row>
- <row id="262" trl="Y">
-  <value column="Name" original="Expense Invoice (Alpha)">Factura de Gastos (Alfa)</value>
-  <value column="Description" original="Payables expense invoices - This is Alpha Functionality">Pagos de facturas de gastos - Esta es una funcionalidad Alfa</value>
-  <value column="Help" original="Enter expense invoices from your vendors">Incorpore las facturas del costo de sus proveedores</value>
- </row>
  <row id="263" trl="Y">
   <value column="Name" original="Print Label">Imprimir Etiqueta</value>
   <value column="Description" original="Print Label Format">Imprimir formato de etiqueta.</value>
@@ -718,11 +643,6 @@
   <value column="Help" original="Maintain Data Access Roles of Roles/Responsibilties.&#10;Note that access information is cached and requires re-login or reset of cache.">Mantener las reglas de acceso a datos para roles.
 Tenga en cuenta que el acceso a la información está en caché y requiere volver a ingresar o resetear el caché.</value>
  </row>
- <row id="269" trl="Y">
-  <value column="Name" original="Advertisement">Anuncio</value>
-  <value column="Description" original="Web Advertisement">Anuncio Web</value>
-  <value column="Help" original="Maintain Advertisements on the Web">Mantenga los anuncios en el Web</value>
- </row>
  <row id="270" trl="Y">
   <value column="Name" original="Change Audit">Histórico de Cambios</value>
   <value column="Description" original="Audit of data changes">Histórico de cambios por fecha</value>
@@ -737,16 +657,6 @@ Tenga en cuenta que el acceso a la información está en caché y requiere volve
   <value column="Name" original="Time Type">Tipo de Hora</value>
   <value column="Description" original="Maintain Time Recording Type">Mantenga el tipo de grabación del tiempo</value>
   <value column="Help" original="Maintain different types of time for reporting">Mantega diversos tipos de hora para los reportes</value>
- </row>
- <row id="273" trl="Y">
-  <value column="Name" original="Click">Click</value>
-  <value column="Description" original="Maintain Web Click">Mantenga el tecleo del Web</value>
-  <value column="Help" original="Web Clicks allow you to track number of clicks.  Example:&#10;&amp;lt;a href=&quot;http://www.idempiere.org/wstore/click?http://www.idempiere.org target=&quot;_blank&quot;&amp;gt; where&#10;&quot;http://www.idempiere.org/wstore/click&quot; is your side and &quot;http://www.idempiere.de&quot; is the target page.&#10;If you created a web click for http://www.idempiere.de, you will be able to see details and total of web clicks.&#10;"/>
- </row>
- <row id="274" trl="Y">
-  <value column="Name" original="Counter">Contador</value>
-  <value column="Description" original="Web Counter">Contador Web</value>
-  <value column="Help" original="A web counter maintains how often a page or item was displayed.  Add a call to&#10;http://www.idempiere.org/wstore/counter to the page (e.g. display a 1x1 image)&#10;"/>
  </row>
  <row id="275" trl="Y">
   <value column="Name" original="Invoice Payment Schedule">Programa de Pagos de Facturas</value>
@@ -796,8 +706,10 @@ Tenga en cuenta que el acceso a la información está en caché y requiere volve
  <row id="284" trl="Y">
   <value column="Name" original="Replication">Replicación</value>
   <value column="Description" original="Maintain Data Replication Targets">Mantener los destinos de replicación de datos</value>
-  <value column="Help" original="Data Replication Target Details. Set up your system completely on the central system, before setting up the replication. Define the Replication target here and export the database and import it on the remote system.&lt;p&gt;&#10;Before(!) entering transactions, Start the Replication Run to set up the remote system."><![CDATA[Detalles de la tarjeta de la réplica de los datos. Instale su sistema totalmente en el sistema central, antes de la creación de réplica. Defina la tarjeta de la réplica aquí y exporte la base de datos e impórtela en el alejado system.<p >
-Antes(!) incorporando transacciones, comience la réplica funcionada al sistema para arriba el sistema alejado.]]></value>
+  <value column="Help" original="Data Replication Target Details. Set up your system completely on the central system, before setting up the replication. Define the Replication target here and export the database and import it on the remote system.&lt;p&gt;&#10;Before(!) entering transactions, Start the Replication Run to set up the remote system.">
+   <![CDATA[Detalles de la tarjeta de la réplica de los datos. Instale su sistema totalmente en el sistema central, antes de la creación de réplica. Defina la tarjeta de la réplica aquí y exporte la base de datos e impórtela en el alejado system.<p >
+Antes(!) incorporando transacciones, comience la réplica funcionada al sistema para arriba el sistema alejado.]]>
+  </value>
  </row>
  <row id="285" trl="Y">
   <value column="Name" original="Replication Strategy">Estrategia de Replicación</value>
@@ -808,26 +720,6 @@ Antes(!) incorporando transacciones, comience la réplica funcionada al sistema 
   <value column="Name" original="Project (Lines/Issues)">Proyecto (Orden)</value>
   <value column="Description" original="Maintain Sales Order and Work Order Details">Mantener proyecto de orden de ventas y orden de trabajo</value>
   <value column="Help" original="The Project Window is used to maintain details of Projects Lines and Issues accross Phases/Tasks">La ventana del proyecto se utiliza para definir los proyectos que serán mantenidos vía documentos.</value>
- </row>
- <row id="287" trl="Y">
-  <value column="Name" original="Knowledge Category">Categoría Conocimiento</value>
-  <value column="Description" original="Maintain Knoweledge Categories and Values">Mantenga las categorías y los valores de Conocimiento</value>
-  <value column="Help" original="Set up knowledge categories and values as a search aid. Examples are Release Version, Product Area, etc. Knowledge Category values act like keyworks.">Instale las categorías y los valores del conocimiento como una ayuda de la búsqueda. Los ejemplos son versión del lanzamiento, área del producto, etc. Los valores de la categoría del conocimiento actúan como llaves de trabajo.</value>
- </row>
- <row id="288" trl="Y">
-  <value column="Name" original="Knowledge Base">Base de Conocimiento</value>
-  <value column="Description" original="Maintain Knowledge Base">Mantenga la base de conocimiento</value>
-  <value column="Help" original="Maintain Type, Topics, Entries and theit Comments, Categories, Related Entries">Mantenga el tipo, los asuntos, las entradas y los comentarios, categorías, entradas relacionadas.</value>
- </row>
- <row id="289" trl="Y">
-  <value column="Name" original="Knowledge Source">Inicio Conocimiento</value>
-  <value column="Description" original="Source of Knowledge Entries">Fuente de las entradas de conocimiento</value>
-  <value column="Help" original="The Source of a Knowlegde Entry is a pointer to the originating system. The Knowledge Entry has an additional entry (Description URL)  for more detailed info.">La fuente de una entrada de conocimiento es un indicador al sistema que origina. La entrada del conocimiento tiene una entrada adicional (URL de la descripción) para un Info más detallado.</value>
- </row>
- <row id="290" trl="Y">
-  <value column="Name" original="Knowledge Synonym">Sinonimo Conocimiento</value>
-  <value column="Description" original="Knowlege Keyword Synonym">Conocer sinonimo de la palabra clave</value>
-  <value column="Help" original="Search Synonyms for Knowledge Keywords; Example: Product = Item"/>
  </row>
  <row id="291" trl="Y">
   <value column="Name" original="Business Partner Info">Información del Tercero</value>
@@ -909,26 +801,6 @@ Antes(!) incorporando transacciones, comience la réplica funcionada al sistema 
   <value column="Description" original="Maintain Workflow Processor and Logs">Mantener procesador de flujo de trabajo y logs.</value>
   <value column="Help" original="Workflow Processor Server Parameters">Parametros del servidor y procesador de flujos de trabajo.</value>
  </row>
- <row id="307" trl="Y">
-  <value column="Name" original="Bid Topic">Asunto Oferta</value>
-  <value column="Description" original="Topic with Bids and Offers">Asunto con respectivas ofertas</value>
-  <value column="Help" original="Manage Topics and veiw Bids and Offers">Manejo de los Asuntos de las ofertas y la visualizaciones de las ofertas</value>
- </row>
- <row id="308" trl="Y">
-  <value column="Name" original="Auction Topic Type">Tipo del Asunto de la Subasta</value>
-  <value column="Description" original="Maintain Auction Topic Type and Categories">Mantenga el tipo y las categorías del asunto de la subasta</value>
-  <value column="Help" original="The Auction Topic Type determines what kind of auction is used for a particular area">El tipo del asunto de la subasta se determina qué clase de subasta se utiliza para un área particular</value>
- </row>
- <row id="309" trl="Y">
-  <value column="Name" original="Auction Seller">Vendedor de la Subasta</value>
-  <value column="Description" original="Maintain Auction Seller Information">Mantenga la Información del Vendedor de la Subasta</value>
-  <value column="Help" original="A seller is a User in the system participating in Auctions">Un vendedor es un usuario en el sistema que participa en subastas</value>
- </row>
- <row id="310" trl="Y">
-  <value column="Name" original="Auction Buyer">Comprador De la Subasta</value>
-  <value column="Description" original="Maintain Auction Buyer Information">Mantenga la Información del comprador de la subasta</value>
-  <value column="Help" original="A buyer is a User in the system participating in Auctions">Un comprador es un usuario en el sistema que participa en subastas</value>
- </row>
  <row id="311" trl="Y">
   <value column="Name" original="Accounting Processor">Procesador de Contabilidad</value>
   <value column="Description" original="Maintain Accounting Processor and Logs">Mantenimiento al procesador de contabilidad y logs</value>
@@ -954,25 +826,10 @@ Antes(!) incorporando transacciones, comience la réplica funcionada al sistema 
   <value column="Description" original="Manage Request for Quotations">Mantenimiento a Solicitudes para Cotización</value>
   <value column="Help" original="Request for Quotation to be sent out to vendors of a RfQ Topic. After Vendor selection, optionally create Sales Order or Quote for Customer as well as Purchase Order  for Vendor(s)">la solicitud de cotización a ser enviada a los proveedores con un asunto de SCP. Después de la selección del proveedor, cree la orden de venta o cotización opcionalmente para el cliente así como la orden de compra para los proveedores.</value>
  </row>
- <row id="316" trl="Y">
-  <value column="Name" original="Subscription">Suscripción</value>
-  <value column="Description" original="Maintain Subscriptions and Deliveries">Mantenimiento a suscripciones y entregas</value>
-  <value column="Help" original="Subscription of a Business Partner of a Product to renew">Suscripción de un tercero a un producto a renovar</value>
- </row>
- <row id="317" trl="Y">
-  <value column="Name" original="Subscription Type">Tipo de Suscripción</value>
-  <value column="Description" original="Maintain Subscription Types">Mantener tipos de Suscripción</value>
-  <value column="Help" original="Subscription type and renewal frequency"/>
- </row>
  <row id="318" trl="Y">
   <value column="Name" original="Distribution List">Lista de Distribución</value>
   <value column="Description" original="Maintain Distribution Lists">Mantener lista de distribución.</value>
   <value column="Help" original="Distribution list contain business partners and a distribution quantity or ratio for creating Orders">La lista de distribución contiene terceros y una cantidad o un cociente de la distribución para crear órdenes.</value>
- </row>
- <row id="319" trl="Y">
-  <value column="Name" original="Package">Paquete</value>
-  <value column="Description" original="Manage Shipment Packages">Maneje los paquetes del envío</value>
-  <value column="Help" original="A Shipment can have one or more Packages.  A Package may be tracked.">Un envío puede tener uno o mas paquetes. Un paquete puede ser seguido</value>
  </row>
  <row id="320" trl="Y">
   <value column="Name" original="Customer RMA">Autorización Devolución Cliente</value>
@@ -1004,11 +861,6 @@ Antes(!) incorporando transacciones, comience la réplica funcionada al sistema 
   <value column="Description" original="Distribution Run create Orders to distribute products to a selected list of partners">El funcionamiento de la distribución crea órdenes para distribuir productos a una lista seleccionada de terceros.</value>
   <value column="Help" original="Distribution Run defines how Orders are created based on Distribution Lists">El funcionamiento de la distribución define cómo se crean las órdenes basadas en listas de distribución.</value>
  </row>
- <row id="326" trl="Y">
-  <value column="Name" original="Access Audit">Acceso al Log</value>
-  <value column="Description" original="Audit of Access to data or resources">Registro del acceso a los datos o a los recursos</value>
-  <value column="Help" original="Logging needs to be explicitly enabled / written.">El registro debe ser explicitamente permitido / Escritura.</value>
- </row>
  <row id="327" trl="Y">
   <value column="Name" original="Counter Document">Contra Documentos</value>
   <value column="Description" original="Maintain Counter Document Types">Mantenga los tipos contra documento</value>
@@ -1018,11 +870,6 @@ Antes(!) incorporando transacciones, comience la réplica funcionada al sistema 
   <value column="Name" original="Forecast">Pronosticar</value>
   <value column="Description" original="Maintain Material Forecast">Mantenga el pronóstico del material</value>
   <value column="Help" original="Material Forecast">Pronóstico de material</value>
- </row>
- <row id="329" trl="Y">
-  <value column="Name" original="Demand">Petición</value>
-  <value column="Description" original="Maintain Material Demand">Mantenga la demanda material</value>
-  <value column="Help" original="Material Demand can be based on Forecast, Requisitions, Open Orders">La demanda material se puede basar en el pronóstico, demandas, órdenes abiertas.</value>
  </row>
  <row id="330" trl="Y">
   <value column="Name" original="Ship/Receipt Confirm">Confirmación Entrega/Recibo</value>
@@ -1049,16 +896,6 @@ Antes(!) incorporando transacciones, comience la réplica funcionada al sistema 
   <value column="Description" original="Import Receipt/Shipment Confirmation Lines">Importa Recibo/Entrega línea de confirmación</value>
   <value column="Help" original="Import Confirmation data of existing Receipt/Shipment Confirmations">Importa fecha de confirmación para confirmaciones de Recibos/Entregas existentes.</value>
  </row>
- <row id="335" trl="Y">
-  <value column="Name" original="SLA Criteria">Criterio ANS</value>
-  <value column="Description" original="Service Level Agreement Criteria">Criterio acuerdo del porcentaje de disponibilidad</value>
-  <value column="Help" original="Define a criteria to measure service level agreements (e.g. Quality, Delivery meets Promised date, ..)">Defina los criterios para medir acuerdos del porcentaje de disponibilidad (Ej. la calidad, entrega resuelve la fecha prometida,..)</value>
- </row>
- <row id="336" trl="Y">
-  <value column="Name" original="SLA by Partner">ANS por Tercero</value>
-  <value column="Description" original="Service Level Agreement">Acuerdo del porcentaje de disponibilidad</value>
-  <value column="Help" original="Maintain Service Level Agreements for Business Partners">Mantenga los acuerdos del porcentaje de disponibilidad para los terceros</value>
- </row>
  <row id="337" trl="Y">
   <value column="Name" original="Price List Schema">Esquema De Lista De precios</value>
   <value column="Description" original="Maintain Price List Schema">Manteminiento al esquema de lista de precios</value>
@@ -1073,11 +910,6 @@ Antes(!) incorporando transacciones, comience la réplica funcionada al sistema 
   <value column="Name" original="POS Key Layout">PDV llave Disposición</value>
   <value column="Description" original="POS Function Key Layout">PDV Función de llave de disposición</value>
   <value column="Help" original=""/>
- </row>
- <row id="340" trl="Y">
-  <value column="Name" original="System Registration">Registro del Sistema</value>
-  <value column="Description" original="Register your System">Registrar su sistema</value>
-  <value column="Help" original="System Registration - Only one Record - Do not add additional records.">Registro del sistema - Solamente un registro - No agregue los registros adicionales.</value>
  </row>
  <row id="341" trl="Y">
   <value column="Name" original="Internal Use Inventory">Inventario Uso Interno</value>
@@ -1144,11 +976,6 @@ Antes(!) incorporando transacciones, comience la réplica funcionada al sistema 
   <value column="Description" original="Maintain Remuneration">Mantener Renumeración</value>
   <value column="Help" original="Wages and Salaries">Sueldos y Salarios</value>
  </row>
- <row id="354" trl="Y">
-  <value column="Name" original="Product BOM">LDM de producto</value>
-  <value column="Description" original="Maintain Product Bill of Materials">Mantener LDM del producto.</value>
-  <value column="Help" original=""/>
- </row>
  <row id="355" trl="Y">
   <value column="Name" original="BOM Change Notice">Aviso de Cambio de LDM</value>
   <value column="Description" original="Maintain Bill of Materials (Engineering) Change Notice (Version)">Mantenga la cuenta del aviso de cambio de los materiales (ingeniería) (versión)</value>
@@ -1164,28 +991,11 @@ Antes(!) incorporando transacciones, comience la réplica funcionada al sistema 
   <value column="Description" original="View Attribute Set Instance detail and use">Ver Detalle y Emplear Ajuste Instancia de Atributos</value>
   <value column="Help" original=""/>
  </row>
- <row id="359" trl="Y">
-  <value column="Name" original="Tax Declaration">Declaración de Impuestos</value>
-  <value column="Description" original="Define the declaration to the tax authorities">Define declaración de impuestos a las autoridades</value>
-  <value column="Help" original="The tax declaration allows you to create supporting information and reconcile the documents with the accounting">La declaración de impuestos lepermute crear información de soporte y conciliar documentos con la contabilidad.
-</value>
- </row>
  <row id="360" trl="Y">
   <value column="Name" original="Reporting Hierarchy">Informe por Jerarquías</value>
   <value column="Description" original="Define Reporting Hierarchy">Define Informe por Jerarquías</value>
   <value column="Help" original="Reporting Hierarchy allows you to select different Hierarchies/Trees for the report.&#10;Accounting Segments like Organization, Account, Product may have several hierarchies to accomodate different views on the business">Informe por Jerarquías le permite seleccionar diferentes Jerarquías/Arboles para el informee.
 Segmentos Contables de la organización deseada, Cuentas, Productos pueden tener alguna jerarquía al acomodar diferentes vistas sobre el negocio.</value>
- </row>
- <row id="361" trl="Y">
-  <value column="Name" original="Budget Control">Control de Presupuesto</value>
-  <value column="Description" original="Maintain Budget Controls">Mantener Control de Presupuesto</value>
-  <value column="Help" original="Budget Control allows you to restrict the use of expenditures, commitments (Purchase Orders) and reservations (Requisitions). If defined, you mey not be able to approve Requisitions, Purchse Orders, or AP Invoices.">Control de Presupuesto le permite restringir Gastos, Compromisos (Órdenes de Compra) y reservados (Requisiciónes). Si definió no podrá aprobar Requisiciones, Órdenes de Compra, o CxP Facturas.
-</value>
- </row>
- <row id="362" trl="Y">
-  <value column="Name" original="GL Fund (Alpha)">Fondos de contabilidad General(Alpha)</value>
-  <value column="Description" original="Maintain Fund Controls">Mantener controles de fondos.</value>
-  <value column="Help" original="General Ledger Funds Control allows you to restrict the use of funds.  This is independent from budget control.">Control de fondos de contabilidad general te permite restringir el uso de fondos. Esto es independiente del control de presupuesto.</value>
  </row>
  <row id="363" trl="Y">
   <value column="Name" original="System Issue Report">Reporte Problemas Sistema</value>
@@ -1208,65 +1018,10 @@ Segmentos Contables de la organización deseada, Cuentas, Productos pueden tener
   <value column="Description" original="Maintain Performance Ratios">Mantener Relación de Desempeño</value>
   <value column="Help" original="Calculation instruction for a ratio">Instrucciones de cálculo para una relación</value>
  </row>
- <row id="367" trl="Y">
-  <value column="Name" original="Issue Recommendation">Recomendación de Surtimiento</value>
-  <value column="Description" original="Maintain Issue Recommendation">Mantener Recomendación de Surtimiento</value>
-  <value column="Help" original=""/>
- </row>
- <row id="368" trl="Y">
-  <value column="Name" original="Issue Status">Estado de Surtimiento</value>
-  <value column="Description" original="Maintain Issue Status">Mantener Estado de Surtimiento</value>
-  <value column="Help" original="Status of an Issue">Estado de un Surtimiento</value>
- </row>
- <row id="369" trl="Y">
-  <value column="Name" original="Known Issue">Surtimiento Conocido</value>
-  <value column="Description" original="Maintain Known Issue">Mantener Surtimiento Conocido</value>
-  <value column="Help" original=""/>
- </row>
- <row id="370" trl="Y">
-  <value column="Name" original="Issue Project">Surtimiento al Proyecto</value>
-  <value column="Description" original="Maintain Issue Management Project Links">Mantener Surtimiento al Proyecto</value>
-  <value column="Help" original="Maintain Issue Management Project Links - automatically generated."/>
- </row>
- <row id="371" trl="Y">
-  <value column="Name" original="Issue User">Usuario del Surtimiento</value>
-  <value column="Description" original="User who reported Issues">Usuario que reportó el surtimiento</value>
-  <value column="Help" original=""/>
- </row>
- <row id="372" trl="Y">
-  <value column="Name" original="Issue System">Sistema de Surtimiento</value>
-  <value column="Description" original="Maintain Systems">Sistema de Mantenimiento</value>
-  <value column="Help" original=""/>
- </row>
- <row id="373" trl="Y">
-  <value column="Name" original="Web Project">Proyecto Web</value>
-  <value column="Description" original="Maintain Web Project (Content Management)">Mantener proyecto web (Administración de contenido)</value>
-  <value column="Help" original="At the level of the web project you define the project itself, it's domains and media servers. Each project needs to have at least one domain and one media server.">A nivel del proyecto web usted define el proyecto en si mismo, sus dominios y servidores de medios. Cada proyecto necesita tener al menos un dominio y un servidor de medios.</value>
- </row>
- <row id="374" trl="Y">
-  <value column="Name" original="Template">Plantilla</value>
-  <value column="Description" original=""/>
-  <value column="Help" original=""/>
- </row>
- <row id="375" trl="Y">
-  <value column="Name" original="Web Ad Management">Administración Web de AD</value>
-  <value column="Description" original="Content Management Ad Management defines the needed categories and items">Administrador de contenido de AD define la necesidad de categorías e items.</value>
-  <value column="Help" original="Ad Management is used to create and manage advertisements in your conten management">La administración de Ad es usada para crear y administrar publicidad en la administración de contenido.</value>
- </row>
- <row id="376" trl="Y">
-  <value column="Name" original="News Channel">Canal nuevo</value>
-  <value column="Description" original="Define News Channels, write and publish articles">Define canales nuevos, escribe y publica artículos.</value>
-  <value column="Help" original="Define News Channels, write and publish articles">Define canales nuevos, escribe y publica artículos.</value>
- </row>
  <row id="377" trl="Y">
   <value column="Name" original="View Chat">Ver charla</value>
   <value column="Description" original="View discussions / chats">Ver discusiones/ charlas.</value>
   <value column="Help" original="View chat / discussion threads">Ver hilos de discusiones/ charlas.</value>
- </row>
- <row id="379" trl="Y">
-  <value column="Name" original="Media Item">Item media</value>
-  <value column="Description" original="Maintain Web Media">Mantiene la web media</value>
-  <value column="Help" original="Maintain Content Management Media">Mantiene la admnistración de contenido media.</value>
  </row>
  <row id="380" trl="Y">
   <value column="Name" original="Chat Type">Tipo de charla</value>
@@ -1278,35 +1033,10 @@ Segmentos Contables de la organización deseada, Cuentas, Productos pueden tener
   <value column="Description" original="Maintain System Entity Type">Mantenimiento del tipo de entidad del sistema.</value>
   <value column="Help" original="The entity type determines the ownership of Application Dictionary entries.  The types &quot;Dictionary&quot; and &quot;iDempiere&quot; should not be used and are maintainted by iDempiere (i.e. all changes are reversed during migration to the current definition).">El tipo de entidad determina la posesión de las entradas del diccionario de la aplicación. El tipo "Diccionario" y "iDempiere" no deben ser usados, estos son mantenidos por iDempiere.</value>
  </row>
- <row id="383" trl="Y">
-  <value column="Name" original="Web Access">Acceso Web</value>
-  <value column="Description" original="Maintain Web Access">Mantiene el Acceso Web</value>
-  <value column="Help" original="Define access to collaboration management content.  You can assign the profile to a internal role or for external access to business partner group.">Define el acceso para la colaboración de administración de contenido. Usted puede asignar el perfil a un rol interno o para un acceso externo de un grupo de terceros.</value>
- </row>
- <row id="384" trl="Y">
-  <value column="Name" original="Web Broadcast Server">Servidor Web de Publicaciones</value>
-  <value column="Description" original="Maintain Web Broadcast Server">Mantiene Servidor Web de publicaciones</value>
-  <value column="Help" original=""/>
- </row>
  <row id="385" trl="Y">
   <value column="Name" original="Info Window">Ventana de Información</value>
   <value column="Description" original="Define Info and search/select Window">Define información y búsqueda / selección de ventana.</value>
   <value column="Help" original="The Info window is used to search and select records as well as display information relevant to the selection.">La ventana de información es usada para buscar y seleccionar registros ademas de mostar información relevante para la selección.</value>
- </row>
- <row id="386" trl="Y">
-  <value column="Name" original="Text Index">Indice de texto</value>
-  <value column="Description" original="Maintain Text Search Index">Mantener índice de texto de búsqueda.</value>
-  <value column="Help" original="Text search index keyword and excerpt across documents">Palabra clave de índice de texto de búsqueda y extractos a traves de documentos.</value>
- </row>
- <row id="387" trl="Y">
-  <value column="Name" original="Text Index Stop">Pare índice de texto</value>
-  <value column="Description" original="Maintain keywords not to be indexed">Mantener palabra clave para no ser indexada.</value>
-  <value column="Help" original=""/>
- </row>
- <row id="388" trl="Y">
-  <value column="Name" original="Text Search Log">Log de texto de búsqueda</value>
-  <value column="Description" original="View Text Search Log">Ver Log de texto de búsqueda</value>
-  <value column="Help" original=""/>
  </row>
  <row id="389" trl="Y">
   <value column="Name" original="LDAP Server">Servidor LDAP</value>
@@ -1328,11 +1058,6 @@ Segmentos Contables de la organización deseada, Cuentas, Productos pueden tener
   <value column="Description" original="Create 2pack package">El paquete construye una aplicación.</value>
   <value column="Help" original=""/>
  </row>
- <row id="50004" trl="Y">
-  <value column="Name" original="Common Package Details">Detalles Comunes de Paquetes</value>
-  <value column="Description" original="Maintain Common Package Details">Mantenimiento de Detalles Comunes de paquetes </value>
-  <value column="Help" original="Create and maintain common package element details">Crea y mantiene detalles de elementos de paquetes comunes.</value>
- </row>
  <row id="50005" trl="Y">
   <value column="Name" original="Pack In">Importar un paquete (PackIn)</value>
   <value column="Description" original="Imports a package">Importar un paquete (PackIn)</value>
@@ -1346,26 +1071,6 @@ Segmentos Contables de la organización deseada, Cuentas, Productos pueden tener
  <row id="50007" trl="Y">
   <value column="Name" original="Dashboard Content">Contenido Consola</value>
   <value column="Description" original=""/>
-  <value column="Help" original=""/>
- </row>
- <row id="52000" trl="Y">
-  <value column="Name" original="Web POS Menu">Menu Web POS</value>
-  <value column="Description" original="To dynamically generate the menu links in web POS">Para dinamicamente genera el enlace al menu en web POS</value>
-  <value column="Help" original=""/>
- </row>
- <row id="52001" trl="Y">
-  <value column="Name" original="Web POS Role Menu">Menu de Rol Web POS</value>
-  <value column="Description" original="Depending on Which Role, Different set of Menus are generated and made available.">Dependiendo del rol, diferentes conjuntos de menus son generados y mostrados.</value>
-  <value column="Help" original=""/>
- </row>
- <row id="52002" trl="Y">
-  <value column="Name" original="Web POS Properties">Propiedades Web POS</value>
-  <value column="Description" original="Stores the message tags to be picked up from AD_MESSAGE ">Almacena las mensajes etiqueta para ser tomados de AD_MESSAGE</value>
-  <value column="Help" original=""/>
- </row>
- <row id="52003" trl="Y">
-  <value column="Name" original="Web POS BlackListCheque">Cheques con Orden de No Cobro (Web POS)</value>
-  <value column="Description" original="Black Listed Cheque">Cheques con Orden de No Cobro</value>
   <value column="Help" original=""/>
  </row>
  <row id="53003" trl="Y">
@@ -1388,8 +1093,12 @@ Una instalación de producción específica consistiendo de una o más personas 
   <value column="Help" original="Manufacturing Workflows (Routing) is a set of information detailing the method of manufacture of a particular item .It includes the operations to be performed their sequence the various work centers to be involved and the standards for setup and run. In some companies routing also includes information on tooling operator skill levels inspection operationstesting requirements etc.">El flujo de trabajo de manufactura (enrutamiento) es un conjunto de información detallando el metodo de manufacturar un artículo particular. Incluye las operaciones a ser ejecutadas y su secuencia, los diferentes centros de trabajo envueltos y los estándares para configurar y ejecutar. En algunas compañías el enrutamiento incluye información de las herramientas, niveles de inspección, aptitudes, requerimientos de pruebas, etc.</value>
  </row>
  <row id="53006" trl="Y">
-  <value column="Name" original="Bill of Materials &amp; Formula "><![CDATA[Lista de Materiales & Fórmula]]></value>
-  <value column="Description" original="Maintain Product Bill of Materials &amp; Formula "><![CDATA[Mantiene listas de materiales de producdtos & fórmula]]></value>
+  <value column="Name" original="Bill of Materials &amp; Formula ">
+   <![CDATA[Lista de Materiales & Fórmula]]>
+  </value>
+  <value column="Description" original="Maintain Product Bill of Materials &amp; Formula ">
+   <![CDATA[Mantiene listas de materiales de producdtos & fórmula]]>
+  </value>
   <value column="Help" original="It is a list of all the subassemblies, intermediates, parts and raw material that go into a parent assembly showing the quantity of each required to make an assembly. There are a variety of display formats of bill of material, including single level bill of material, indented bill of material, modular (planning), costed bill of material, etc. May also be called &quot;formula&quot;, &quot;recipe&quot;, &quot;ingredients list&quot; in certain industries.&#10;It answers the question, what are the components of the product?">Es una lista de todos los subensamblajes, pasos intermedios, partes y materia prima que se usan para ensamblar un padre mostrando la cantidad requerida de cada uno. Hay una variedad de formatos de despliegue de una lista de materiales, incluyendo LDM de nivel simple, LDM indentada, modular (planeación), LDM costeada, etc. Puede ser llamada también fórmula, receta, lista de ingredientes en ciertas industrias.
 
 Responde la pregunta: ¿de qué está compuesto el producto?</value>
@@ -1448,11 +1157,6 @@ y otros</value>
   <value column="Description" original="Activity Control">Control Actividades</value>
   <value column="Help" original="This window is reported the real issue the shop floor">Esta ventana es reportada la emisión real del control de piso</value>
  </row>
- <row id="53012" trl="Y">
-  <value column="Name" original="Distribution Order">Orden de Distribución</value>
-  <value column="Description" original="Distribution Order allow create Order inter warehouse to supply a demand ">La orden de distribución permite crear órdenes entre almacenes para suplir la demanda</value>
-  <value column="Help" original="Distribution Order allow create Order inter warehouse to supply a demand ">La orden de distribución permite crear órdenes entre almacenes para suplir la demanda</value>
- </row>
  <row id="53013" trl="Y">
   <value column="Name" original="Quality Specifications">Especificaciones de Calidad</value>
   <value column="Description" original="Maintain Quality Specifications">Mantiene Especificaciones de Calidad</value>
@@ -1488,31 +1192,6 @@ y otros</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53020" trl="Y">
-  <value column="Name" original="Tax Group">Grupo de Impuestos</value>
-  <value column="Description" original="Tax Groups let you group the business partner with a reference tax.">Los grupos de impuestos permiten agrupar terceros con un impuesto de referencia.</value>
-  <value column="Help" original=""/>
- </row>
- <row id="53021" trl="Y">
-  <value column="Name" original="Tax Definition">Definición de Impuestos</value>
-  <value column="Description" original="Lets you define different tax combinations.">Permite definir las diferentes combinaciones de impuestos.</value>
-  <value column="Help" original="You can use the tax dfinition information to create the logic necessary to get the tax rate to your document">Puede usar la definición de información para crear la lógica necesaria para obtener la tasa de impuestos de su documento</value>
- </row>
- <row id="53022" trl="Y">
-  <value column="Name" original="Tax Rate Parent">Tasa Impuesto Padre</value>
-  <value column="Description" original="Maintain Taxes and their Rates">Mantiene Impuestos y sus Tasas</value>
-  <value column="Help" original="The Tax Rate Window defines the different taxes used for each tax category.  For example Sales Tax must be defined for each State in which it applies.">La ventana tasa de impuesto define los diferentes impuestos usados por cada categoría de impuesto.  Por ejemplo Impuesto de Ventas debe ser definido para cada estado en el cual aplica.</value>
- </row>
- <row id="53023" trl="Y">
-  <value column="Name" original="Tax Type">Tipo Impuesto</value>
-  <value column="Description" original="Tax Types let you group taxes together.">Los tipos de impuestos agrupan impuestos.</value>
-  <value column="Help" original=""/>
- </row>
- <row id="53024" trl="Y">
-  <value column="Name" original="Tax Base">Impuesto Base</value>
-  <value column="Description" original="Defines tax base for a tax">Define impuestos base para un impuesto</value>
-  <value column="Help" original="The Tax Base can be based on price , cost and quantity">El impuesto base puede ser basado en precio, costo y cantidad</value>
- </row>
  <row id="53025" trl="Y">
   <value column="Name" original="Export Format">Formato Exportación</value>
   <value column="Description" original=""/>
@@ -1538,61 +1217,6 @@ y otros</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53032" trl="Y">
-  <value column="Name" original="Payroll Contract">Contrato Nómina</value>
-  <value column="Description" original="Maintain Payroll Contract">Mantenimiento de contratos de nómina</value>
-  <value column="Help" original="The Payroll Contract Window is used to define the laboral condition for the employes in a payroll">La ventana de contratos de nómina es utilizada para definir las condiciones laborales de los empleados en una nómina</value>
- </row>
- <row id="53033" trl="Y">
-  <value column="Name" original="Payroll Employee">Empleado Nómina</value>
-  <value column="Description" original="Maintain Payroll Employee">Mantenimiento de empleados de nómina</value>
-  <value column="Help" original="The Payroll Employee Window is used to define the Employees into the Organizational">La ventana de empleados de nómina es utilizada para definir los empleados en la organización</value>
- </row>
- <row id="53034" trl="Y">
-  <value column="Name" original="Payroll Department">Departamento Nómina</value>
-  <value column="Description" original="Maintain Payroll Department">Mantenimiento de departamentos de nómina</value>
-  <value column="Help" original="The Payroll Departament Window is used to define the Organizational Structure for company">La ventana de departamentos de nómina es utilizada para definir la estructura organizacional por compañía</value>
- </row>
- <row id="53035" trl="Y">
-  <value column="Name" original="Payroll Job">Puesto Nómina</value>
-  <value column="Description" original="Maintain Payroll Job">Mantenimiento de puestos de nómina</value>
-  <value column="Help" original="The Payroll Employee Window is used to define the Jobs into the Organizational Structure for a Company">La ventana de nómina de empleados es utilizada para definir los puestos en la estructura organizacional de la compañía</value>
- </row>
- <row id="53036" trl="Y">
-  <value column="Name" original="Payroll Concept Catalog">Catálogo de Conceptos de Nómina</value>
-  <value column="Description" original="Maintain Payroll Concept Catalog">Mantenimiento del catálogo de conceptos de nómina</value>
-  <value column="Help" original="The Payroll  Concept Catalog Window is used to define the concepts for a payroll ie ( salaries, wages, bonuses, and deductions.)">La ventana de catálogo de conceptos de nómina es utilizada para definir los conceptos para una nómina (por ejemplo salarios, devengados, bonificaciones y deducciones)</value>
- </row>
- <row id="53037" trl="Y">
-  <value column="Name" original="Payroll Process">Proceso Nómina</value>
-  <value column="Description" original="Payroll Process">Proceso Nómina</value>
-  <value column="Help" original="The Payroll Processing Window is used to processing a Payroll, you can calculate for a Employee or All Employees">La ventana de proceso de nómina es utilizada para procesar una nómina, se puede calcular para un empleado o para todos</value>
- </row>
- <row id="53038" trl="Y">
-  <value column="Name" original="Payroll Definition">Definición Nómina</value>
-  <value column="Description" original="In a company, payroll is the sum of all financial records of salaries, wages, bonuses, and deductions.">En una compañía, nómina es la suma de todos los registros financieros de salarios, devengados, bonificaciones y deducciones.</value>
-  <value column="Help" original=""/>
- </row>
- <row id="53039" trl="Y">
-  <value column="Name" original="Payroll Concept Category">Categoría Concepto Nómina</value>
-  <value column="Description" original="Maintain Payroll Concept Category">Mantenimiento de categorías de conceptos de nómina</value>
-  <value column="Help" original="The Payroll Concept Category Window is use to grouping concepts for a type">La ventana de categorías de concepto de nómina es utilizada para agrupar los conceptos por tipo</value>
- </row>
- <row id="53040" trl="Y">
-  <value column="Name" original="Payroll Table Type">Tipo Lista Nómina</value>
-  <value column="Description" original="Maintain Payroll Table Type">Mantenimiento de tipos de lista de nómina</value>
-  <value column="Help" original="The Payroll Table Type Window is used to define the Table Type">La ventana de tipos de lista de nómina es utilizada para definir los tipos de listas</value>
- </row>
- <row id="53041" trl="Y">
-  <value column="Name" original="Payroll Table">Lista Nómina</value>
-  <value column="Description" original="Maintain Payroll Table">Mantenimiento de listas de nómina</value>
-  <value column="Help" original="The Payroll Table Window is use to create Payroll Tables with version and range data">La ventana listas de nómina es utilizada para crear listas de nómina con versión y rangos de datos</value>
- </row>
- <row id="53042" trl="Y">
-  <value column="Name" original="Payroll Movement">Movimiento de Nómina</value>
-  <value column="Description" original="History of Payroll Movement">Histórico de movimientos de nómina</value>
-  <value column="Help" original="The Payroll Movement Window is use to show the history the any calculated payroll">La ventana movimientos de nómina se utiliza para mostrar la historia de cualquier nómina calculada</value>
- </row>
  <row id="53044" trl="Y">
   <value column="Name" original="Asset Revaluation Processing">Procesamiento Revaluación Activos</value>
   <value column="Description" original="Process Revaluation of Assets">Procesamiento Revaluación de Activos</value>
@@ -1617,11 +1241,6 @@ y otros</value>
   <value column="Name" original="Asset Split">División Activo</value>
   <value column="Description" original="Split Assets Process">Proceso División Activos</value>
   <value column="Help" original="The Asset Split window allows you to process asset splits">La ventana División Activo permite procesar la división de activos</value>
- </row>
- <row id="53049" trl="Y">
-  <value column="Name" original="Asset Disposal2">Desechamiento Activo</value>
-  <value column="Description" original="Dispose of Assets">Desechamiento de activos</value>
-  <value column="Help" original="The Asset Disposal window allows you to create the necessary GL entries to dispose of an asset">La ventana Desechamiento Activo permite crear las entradas contables necesarias para desecharun activo</value>
  </row>
  <row id="53050" trl="Y">
   <value column="Name" original="Asset Transfers">Transferencias Activo</value>
@@ -1685,11 +1304,6 @@ y otros</value>
  </row>
  <row id="53064" trl="Y">
   <value column="Name" original="View MRP Records">Ver Registros MRP</value>
-  <value column="Description" original=""/>
-  <value column="Help" original=""/>
- </row>
- <row id="53065" trl="Y">
-  <value column="Name" original="Web POS Terminal">Terminal PDV Web</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
@@ -1774,21 +1388,6 @@ y otros</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53104" trl="Y">
-  <value column="Name" original="Withholding">Retención</value>
-  <value column="Description" original="Define Withholding">Define Retención</value>
-  <value column="Help" original="The Withholding Window defines withholding information for business partners.">La ventana retención define la información de retenciones de los terceros.</value>
- </row>
- <row id="53108" trl="Y">
-  <value column="Name" original="Import Payroll Movement">Importa Novedades Nómina</value>
-  <value column="Description" original="Import Payroll Movement">Importa Novedades Nómina</value>
-  <value column="Help" original=""/>
- </row>
- <row id="53109" trl="Y">
-  <value column="Name" original="Import Product Planning">Importa Planeación de Producto</value>
-  <value column="Description" original=""/>
-  <value column="Help" original=""/>
- </row>
  <row id="53113" trl="Y">
   <value column="Name" original="Asset Addition">Adición Activo</value>
   <value column="Description" original=""/>
@@ -1804,11 +1403,6 @@ y otros</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
- <row id="53116" trl="Y">
-  <value column="Name" original="Asset Class">Clase Activo</value>
-  <value column="Description" original=""/>
-  <value column="Help" original=""/>
- </row>
  <row id="53117" trl="Y">
   <value column="Name" original="Asset Funding Mode">Modo Financiamiento Activo</value>
   <value column="Description" original=""/>
@@ -1816,11 +1410,6 @@ y otros</value>
  </row>
  <row id="53118" trl="Y">
   <value column="Name" original="Revaluation Asset">Revaluación Activo</value>
-  <value column="Description" original=""/>
-  <value column="Help" original=""/>
- </row>
- <row id="53119" trl="Y">
-  <value column="Name" original="Asset Type">Tipo Activo</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>

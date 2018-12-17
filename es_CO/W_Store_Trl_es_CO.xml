@@ -7,7 +7,9 @@
   <value column="EMailHeader" original=""/>
   <value column="WebInfo" original=""/>
   <value column="WebParam1" original="iDempiere120x60.png">iDempiere120x60.png</value>
-  <value column="WebParam2" original="&lt;h1&gt;Web Store&lt;/h1&gt;"><![CDATA[<h1>Tienda Web</h1>]]></value>
+  <value column="WebParam2" original="&lt;h1&gt;Web Store&lt;/h1&gt;">
+   <![CDATA[<h1>Tienda Web</h1>]]>
+  </value>
   <value column="WebParam3" original="Parameter3">Parámetro3</value>
   <value column="WebParam4" original="Parameter4">Parámetro4</value>
   <value column="WebParam5" original="Parameter5">Parámetro5</value>

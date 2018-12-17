@@ -12,11 +12,6 @@
   <value column="Description" original="Load flat Files into import tables">Cargar archivos planos en las tablas de importación</value>
   <value column="Help" original="The Import File Loader parses the content of a flat file and loads it into import tables. Comments start with a '[' and end with a ']' and are ignored; example: [Some Heading].">El Cargador de Archivos parcela el contenido de un archivo plano y lo importa en tablas. Los comentarios comienzan con un '[' y terminan con un ']' y son ignorados; ejemplo: [Un Encabezado].</value>
  </row>
- <row id="102" trl="Y">
-  <value column="Name" original="Initial Client Setup">Configuración Inicial Grupo Empresarial</value>
-  <value column="Description" original="Initial new Client/Tenant Setup">Configuración Inicial Grupo Empresarial</value>
-  <value column="Help" original="Set up a new Client/Tenant of the system">Configurar un nuevo grupo empresarial del sistema</value>
- </row>
  <row id="103" trl="Y">
   <value column="Name" original="Material Transactions">Transacciones de Materiales</value>
   <value column="Description" original="Material Transactions">Transacciones de Materiales</value>
@@ -65,10 +60,12 @@
  <row id="112" trl="Y">
   <value column="Name" original="Merge Entities">Mezclar Entidades</value>
   <value column="Description" original="Merge From Entity to To Entity - Delete From">Mezclar de Entidad Origen a Entidad Destino - Borrar Desde</value>
-  <value column="Help" original="&lt;i&gt;Dangerous - Please are aware of what you are doing!&lt;/i&gt;&#10;All instances of the From entity (e.g. Customer A) are changed to the To entity (e.g. Customer B). &#10;The From entity (e.g. Customer A) is deleted. &#10;&lt;p&gt;&lt;b&gt;There is NO undo nor trace !  Please do a backup first&lt;/b&gt; Please be aware that you may be changing history records (e.g. invoices, etc.) ! &lt;/p&gt;&#10;&lt;p&gt;&lt;b&gt;Side effects:&lt;/b&gt; Merging Products are likely to distort product costs; Merging Business Partners may result in incorrect open item balance. Check with support on remedies.&#10;&lt;p&gt;&lt;b&gt;Restrictions:&lt;/b&gt; Accounting and Inventory conflicts are not resolved in this version."><![CDATA[<i>Peligroso - Por favor esté bien consciente de lo que está haciendo!</i>
+  <value column="Help" original="&lt;i&gt;Dangerous - Please are aware of what you are doing!&lt;/i&gt;&#10;All instances of the From entity (e.g. Customer A) are changed to the To entity (e.g. Customer B). &#10;The From entity (e.g. Customer A) is deleted. &#10;&lt;p&gt;&lt;b&gt;There is NO undo nor trace !  Please do a backup first&lt;/b&gt; Please be aware that you may be changing history records (e.g. invoices, etc.) ! &lt;/p&gt;&#10;&lt;p&gt;&lt;b&gt;Side effects:&lt;/b&gt; Merging Products are likely to distort product costs; Merging Business Partners may result in incorrect open item balance. Check with support on remedies.&lt;/p&gt;&#10;&lt;p&gt;&lt;b&gt;Restrictions:&lt;/b&gt; Accounting and Inventory conflicts are not resolved in this version.&lt;/p&gt;">
+   <![CDATA[<i>Peligroso - Por favor esté bien consciente de lo que está haciendo!</i>
 Todos los registros relacionados con la entidad origen (ej. Cliente A) son cambiados hacia la entidad destino (ej. Cliente B). 
 <p><b>No hay forma de deshacer esta operación! Por favor haga una copia de respaldo</b> Es importante anotar que puede estar cambiando datos históricos (ej. facturas, etc.)!
-<p><b>Efectos Secundarios:</b> combinándose los productos es problable dañar costos del producto: La combinación de terceros puede dar lugar a un saldo incorrecto del tercero.]]></value>
+<p><b>Efectos Secundarios:</b> combinándose los productos es problable dañar costos del producto: La combinación de terceros puede dar lugar a un saldo incorrecto del tercero.]]>
+  </value>
  </row>
  <row id="113" trl="Y">
   <value column="Name" original="POS">Punto de Venta</value>
@@ -179,12 +176,6 @@ Finalmente una caja de mensaje le preguntará si desea cerrar el documento de OM
   <value column="Description" original="Payroll Action Notice let entry the events that happend with any Employee">Novedades de nómina permite ingresar los eventos que ocurrieron con los empleados</value>
   <value column="Help" original=""/>
  </row>
- <row id="53010" trl="Y">
-  <value column="Name" original="Generate Shipments &amp; Invoices (manual)">Generar Entregas y Facturas por Selección</value>
-  <value column="Description" original="Select and generate shipments &amp; Invoices">Seleccionar y generar entregas y facturas</value>
-  <value column="Help" original="Generate Shipments &amp; Invoices from Orders.  &#10;Select the orders to generate the shipments &amp; Invoices for.">Generar Entregas y Facturas a partir de órdenes.
-Seleccione las órdenes con las cuales desea generar entregas y facturas</value>
- </row>
  <row id="53012" trl="Y">
   <value column="Name" original="Material Receipt Distribution Order">Orden Distribución Recibo Materiales</value>
   <value column="Description" original="Material Receipt Distribution Order">Orden Distribución Recibo Materiales</value>
@@ -203,7 +194,7 @@ Seleccione las órdenes con las cuales desea generar entregas y facturas</value>
  <row id="53017" trl="Y">
   <value column="Name" original="BOM Viewer">Visor LDM</value>
   <value column="Description" original="Shows the parent-component relationship for the product entered in the Product field.">Muestra la relación de componentes padre con el producto ingresado.</value>
-  <value column="Help" original="Selecting a product will display a hierarchy of components and sub-BOMs for that product.&#13;&#10;&#13;&#10;Selecting the &quot;Where Used&quot; check box will display the BOMs that this product is used in.">Al seleccionar un producto mostrará la jerarquía de componentes para ese producto.&#13;
+  <value column="Help" original="Selecting a product will display a hierarchy of components and sub-BOMs for that product.&#10;&#10;Selecting the &quot;Where Used&quot; check box will display the BOMs that this product is used in.">Al seleccionar un producto mostrará la jerarquía de componentes para ese producto.&#13;
 &#13;
 Seleccionando "dónde es usado" mostrará las LDM que usan este producto.</value>
  </row>
