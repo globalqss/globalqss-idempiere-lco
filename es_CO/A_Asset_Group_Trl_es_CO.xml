@@ -35,7 +35,9 @@
  <row id="50005" trl="N">
   <value column="Name" original="Fixtures">Fixtures</value>
   <value column="Description" original="Fixtures">Fixtures</value>
-  <value column="Help" original="Fixtures including tools &amp; dies"><![CDATA[Fixtures including tools & dies]]></value>
+  <value column="Help" original="Fixtures including tools &amp; dies">
+   <![CDATA[Fixtures including tools & dies]]>
+  </value>
  </row>
  <row id="50006" trl="N">
   <value column="Name" original="Vehicles">Vehicles</value>
