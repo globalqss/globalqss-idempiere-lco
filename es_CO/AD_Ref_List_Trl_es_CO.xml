@@ -3989,7 +3989,7 @@
   <value column="Description" original="Marketing Campaign">Campaña de Mercadeo</value>
  </row>
  <row id="53424" trl="Y">
-  <value column="Name" original="Organization">Organizacin</value>
+  <value column="Name" original="Organization">Organización</value>
   <value column="Description" original="Owning Organization">Organización Poseedora</value>
  </row>
  <row id="53425" trl="Y">

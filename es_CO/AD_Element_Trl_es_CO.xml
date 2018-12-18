@@ -424,7 +424,7 @@
   <value column="Name" original="Account Sign">Naturaleza de Cuenta</value>
   <value column="PrintName" original="Sign">Naturaleza de Cuenta</value>
   <value column="Description" original="Indicates the Natural Sign of the Account as a Debit or Credit">Indica el signo natural de la cuenta ya sea débito o crédito</value>
-  <value column="Help" original="Indicates if the expected balance for this account should be a Debit or a Credit. If set to Natural, the account sign for an asset or expense account is Debit Sign (i.e. negative if a credit balance).">Indica si el saldo esperado para esta cuenta debera ser deudor o acreedor</value>
+  <value column="Help" original="Indicates if the expected balance for this account should be a Debit or a Credit. If set to Natural, the account sign for an asset or expense account is Debit Sign (i.e. negative if a credit balance).">Indica si el saldo esperado para esta cuenta debería ser deudor o acreedor</value>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -1371,7 +1371,7 @@ El callout es una clase Java que implementa org.compiere.model.Callout y un nomb
   <value column="Name" original="Delivery Via">Vía de Entrega</value>
   <value column="PrintName" original="Delivery Via">Vía de Entrega</value>
   <value column="Description" original="How the order will be delivered">Como será entregada la orden</value>
-  <value column="Help" original="The Delivery Via indicates how the products should be delivered. For example, will the order be picked up or shipped.">La vía de entrega indica como el producto debería ser entregado. Por Ej. Si la orden ser recogida o embarcada.</value>
+  <value column="Help" original="The Delivery Via indicates how the products should be delivered. For example, will the order be picked up or shipped.">La vía de entrega indica como el producto debería ser entregado. Por Ej. Si la orden será recogida o embarcada.</value>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -2612,7 +2612,7 @@ Ejemplo de formato "(000)_000-0000"]]>
  <row id="441" trl="Y">
   <value column="Name" original="Line Amount">Neto de Línea</value>
   <value column="PrintName" original="Line Amt">Total Neto de la Línea</value>
-  <value column="Description" original="Line Extended Amount (Quantity * Actual Price) without Freight and Charges">Total neto de la lnea (Cantidad * Precio Actual) sin fletes ni cargos</value>
+  <value column="Description" original="Line Extended Amount (Quantity * Actual Price) without Freight and Charges">Total neto de la línea (Cantidad * Precio Actual) sin fletes ni cargos</value>
   <value column="Help" original="Indicates the extended line amount based on the quantity and the actual price.  Any additional charges or freight are not included.  The Amount may or may not include tax.  If the price list is inclusive tax, the line amount is the same as the line total.">Indica el total neto de la línea basado en la cantidad y el precio actual. Cualquier cargo adicional o flete no es incluido.</value>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
@@ -4276,7 +4276,7 @@ Ejemplo de formato "(000)_000-0000"]]>
   <value column="Name" original="Credit limit">Límite de Crédito</value>
   <value column="PrintName" original="Credit limit">Límite de Crédito</value>
   <value column="Description" original="Amount of Credit allowed">Total de crédito permitido</value>
-  <value column="Help" original="The Credit Limit field indicates the credit limit for this account.">Indica el lmite de crédito para esta cuenta.</value>
+  <value column="Help" original="The Credit Limit field indicates the credit limit for this account.">Indica el límite de crédito para esta cuenta.</value>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -5046,7 +5046,7 @@ Ejemplo de formato "(000)_000-0000"]]>
   <value column="Name" original="Report">Informe</value>
   <value column="PrintName" original="Report">Informe</value>
   <value column="Description" original="Indicates a Report record">Indica un registro del Informe</value>
-  <value column="Help" original="The Report checkbox indicates that this record is a report as opposed to a process">El cuadro de verificacin Informe indica que este registro es un Informe en oposición a un proceso</value>
+  <value column="Help" original="The Report checkbox indicates that this record is a report as opposed to a process">El cuadro de verificación Informe indica que este registro es un Informe en oposición a un proceso</value>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -6201,7 +6201,7 @@ Ejemplo de formato "(000)_000-0000"]]>
   <value column="Name" original="Conversion Date">Fecha Conversión</value>
   <value column="PrintName" original="Conversion Date">Fecha Conversión</value>
   <value column="Description" original="Date for selecting conversion rate">Fecha para seleccionar la tasa de conversión</value>
-  <value column="Help" original="The Conversion Date identifies the date used for currency conversion. The conversion rate chosen must include this date in it's date range">La fecha de conversión identifica la fecha usada para conversión de moneda. La tasa de conversin seleccionada debe estar incluida en ella.</value>
+  <value column="Help" original="The Conversion Date identifies the date used for currency conversion. The conversion rate chosen must include this date in it's date range">La fecha de conversión identifica la fecha usada para conversión de moneda. La tasa de conversión seleccionada debe estar incluida en ella.</value>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -7034,7 +7034,7 @@ Ejemplo de formato "(000)_000-0000"]]>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="1309" trl="Y">
-  <value column="Name" original="Category Type">Tipo de Categora</value>
+  <value column="Name" original="Category Type">Tipo de Categoría</value>
   <value column="PrintName" original="Category Type">Tipo de Categoría</value>
   <value column="Description" original="Source of the Journal with this category">Fuente de la nota contable con esta categoría</value>
   <value column="Help" original="The Category Type indicates the source of the journal for this category.  Journals can be generated from a document, entered manually or imported.">El tipo de categoría indica la fuente de la nota contable para esta categoría. Las notas contables pueden ser generadas desde un documento; introducido manualmente o importado</value>
@@ -7290,7 +7290,7 @@ Ejemplo de formato "(000)_000-0000"]]>
   <value column="Name" original="Account EMail">Cta. Correo Electrónico</value>
   <value column="PrintName" original="EMail">Correo Eléctronico</value>
   <value column="Description" original="Email Address">Dirección de correo electrónico</value>
-  <value column="Help" original="The EMail Address indicates the EMail address off the Credit Card or Account holder.">La dirección de email indica la dirección de correo electrónico de la tarjeta de crédito o poseedor de la cuenta</value>
+  <value column="Help" original="The EMail Address indicates the EMail address off the Credit Card or Account holder.">La dirección de email indica la dirección de correo electrónico de la tarjeta de crdito o poseedor de la cuenta</value>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -11744,7 +11744,7 @@ Ejemplo de formato "(000)_000-0000"]]>
  <row id="1824" trl="Y">
   <value column="Name" original="Remittance Print Format">Formato Impresión Relación</value>
   <value column="PrintName" original="Remittance Print Format">Formato de Impresión de Relaciones de Pagos</value>
-  <value column="Description" original="Print Format for separate Remittances">Formato de impresin usado para imprimir remesas separadas</value>
+  <value column="Description" original="Print Format for separate Remittances">Formato de impresión usado para imprimir remesas separadas</value>
   <value column="Help" original="You need to define a Print Format to print the document.">Es necesario definir un formato para imprimir el documento</value>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
@@ -14642,7 +14642,7 @@ Si no se incorpora ninguna, se utiliza la impresora por default. Usted especific
   <value column="Name" original="Delayed Capture">Captura Retardada</value>
   <value column="PrintName" original="Delayed Capture">Captura Retardada</value>
   <value column="Description" original="Charge after Shipment">Cargo despues del envio</value>
-  <value column="Help" original="Delayed Capture is required, if you ship products.  The first credit card transaction is the Authorization, the second is the actual transaction after the shipment of the product.">Se requiere la captura retrasada, si usted envía productos. La primera transacción de la tarjeta de crédito es la autorización, el segundo es la transacción real despus del envío del producto.</value>
+  <value column="Help" original="Delayed Capture is required, if you ship products.  The first credit card transaction is the Authorization, the second is the actual transaction after the shipment of the product.">Se requiere la captura retrasada, si usted envía productos. La primera transacción de la tarjeta de crédito es la autorización, el segundo es la transacción real después del envío del producto.</value>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -15357,7 +15357,7 @@ Impuesto de compras: el impuesto cargado al comprar - ejemplos: impuesto de uso,
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2176" trl="Y">
-  <value column="Name" original="Web Parameter 6">Parmetro Web 6</value>
+  <value column="Name" original="Web Parameter 6">Parámetro Web 6</value>
   <value column="PrintName" original="Web Parm 6">Parámetro Web 6</value>
   <value column="Description" original="Web Site Parameter 6 (default footer right)">Sitio Web parametro 6</value>
   <value column="Help" original="The parameter could be used in the JSP page for variables like logos, passwords, URLs or entire HTML blocks. The access is via ctx.webParam6 - By default, it is positioned on the right side of the footer.">El parámetro se podía utilizar en la página de JSP para las variables como insignias, contraseñas, URLs o bloques enteros de hotmail. El acceso está vía ctx.webParam6</value>
@@ -20428,7 +20428,7 @@ La secuencia de Ciudad/Región/Postal es determinada con la dirección de format
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2660" trl="Y">
-  <value column="Name" original="Organization Name">Nombre de la Organizacin</value>
+  <value column="Name" original="Organization Name">Nombre de la Organización</value>
   <value column="PrintName" original="Org Name">Nombre de la Organización</value>
   <value column="Description" original="Name of the Organization">Nombre de la Organización</value>
   <value column="Help" original=""/>
@@ -26077,7 +26077,7 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="52008" trl="Y">
-  <value column="Name" original="Web Menu">Men Web</value>
+  <value column="Name" original="Web Menu">Menú Web</value>
   <value column="PrintName" original="Web Menu">Menú Web</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
@@ -61779,9 +61779,9 @@ Ejemplo de este valor = 60.  El usuario no puede reutilizar una contraseña cuya
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="203064" trl="Y">
-  <value column="Name" original="Loads directly all nodes">Cargar directamente todos los nodos</value>
-  <value column="PrintName" original="Loads directly all nodes">Cargar directamente todos los nodos</value>
-  <value column="Description" original="If checked, all nodes are loaded before tree is displayed">Si se marca, todos los nodos serán cargados antes de que se despliegue el árbol</value>
+  <value column="Name" original="Loads directly all nodes">Cargar todos los nodos</value>
+  <value column="PrintName" original="Loads directly all nodes">Cargar todos los nodos</value>
+  <value column="Description" original="If checked, all nodes are loaded before tree is displayed">Si se activa, todos los nodos son cargados en memoria al árbol antes de desplegarlo</value>
   <value column="Help" original=""/>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
@@ -61867,8 +61867,8 @@ Ejemplo de este valor = 60.  El usuario no puede reutilizar una contraseña cuya
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="203078" trl="Y">
-  <value column="Name" original="IsAutoGenerateLot">Auto Generar Lote</value>
-  <value column="PrintName" original="Auto Generate Lot">Auto Generar Lote</value>
+  <value column="Name" original="Auto Generate Lot">Genera Lote Automático</value>
+  <value column="PrintName" original="Auto Generate Lot">Genera Lote Automático</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="Placeholder" original=""/>
@@ -61966,10 +61966,10 @@ Ejemplo de este valor = 60.  El usuario no puede reutilizar una contraseña cuya
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="203157" trl="Y">
-  <value column="Name" original="Detailed Zoom Across">Visualizar Detalle Profundo</value>
-  <value column="PrintName" original="Detailed Zoom Across">Visualizar Detalle Profundo</value>
+  <value column="Name" original="Detailed Zoom Across">Visualiza Detalle Avanzado</value>
+  <value column="PrintName" original="Detailed Zoom Across">Visualiza Detalle Avanzado</value>
   <value column="Description" original=""/>
-  <value column="Help" original="The toolbar button zoom across discover where the record on screen is used on first tabs of windows.  With detailed zoom across it goes deeper in the discovery of relationships within detailed tabs.">El botón de la barra de herramientas Visualizar Detalle descubre los registros en pantalla que son utilizados en la primera pestaña de otras ventanas.  Con Visualizar Detalle Profundo la búsqueda se adentra más allá descubriendo relaciones en pestañas de detalle.</value>
+  <value column="Help" original="The toolbar button zoom across discover where the record on screen is used on first tabs of windows.  With detailed zoom across it goes deeper in the discovery of relationships within detailed tabs.">El botón de la barra de herramientas "Visualiza Detalle" descubre en dónde es utilizado el registro en pantalla en la primera pestaña de otras ventanas.  Con esta configuración avanzada el descubrimiento de relaciones va más profundo en las pestañas de detalle.</value>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -61977,10 +61977,10 @@ Ejemplo de este valor = 60.  El usuario no puede reutilizar una contraseña cuya
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="203158" trl="Y">
-  <value column="Name" original="Use Similar To">Usar Similar To</value>
-  <value column="PrintName" original="Use Similar To">Usar Similar To</value>
+  <value column="Name" original="Use Similar To">Usar SIMILAR TO</value>
+  <value column="PrintName" original="Use Similar To">Usar SIMILAR TO</value>
   <value column="Description" original=""/>
-  <value column="Help" original="In PostgreSQL database enable using the more powerful SIMILAR TO instead of LIKE for matching queries.">En la base de datos PostgreSQL permite utilizar la función más poderosa SIMILAR TO en vez de la función LIKE para las búsquedas.</value>
+  <value column="Help" original="In PostgreSQL database enable using the more powerful SIMILAR TO instead of LIKE for matching queries.">Habilita el uso de la función SIMILAR TO en PostgreSQL - más poderosa que la función LIKE para búsquedas por patrón.</value>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -62153,12 +62153,12 @@ Ejemplo de este valor = 60.  El usuario no puede reutilizar una contraseña cuya
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="203269" trl="Y">
-  <value column="Name" original="Multiple Execution">Multiple Execution</value>
-  <value column="PrintName" original="Multiple Execution">Multiple Execution</value>
-  <value column="Description" original="Allow or disallow executing a process/report multiple times.">Allow or disallow executing a process/report multiple times.</value>
-  <value column="Help" original="1. Disallow multiple executions: Never allow to execute a process that is already running.&#10;2. Disallow multiple executions with the same parameters: Allow to execute a process multiple times with different parameters.&#10;3. When blank: Always allow to execute a process multiple times.">1. Disallow multiple executions: Never allow to execute a process that is already running.
-2. Disallow multiple executions with the same parameters: Allow to execute a process multiple times with different parameters.
-3. When blank: Always allow to execute a process multiple times.</value>
+  <value column="Name" original="Multiple Execution">Ejecución Múltiple</value>
+  <value column="PrintName" original="Multiple Execution">Ejecución Múltiple</value>
+  <value column="Description" original="Allow or disallow executing a process/report multiple times.">Permite o niega que un proceso/reporte se ejecute simultáneamente.</value>
+  <value column="Help" original="1. Disallow multiple executions: Never allow to execute a process that is already running.&#10;2. Disallow multiple executions with the same parameters: Allow to execute a process multiple times with different parameters.&#10;3. When blank: Always allow to execute a process multiple times.">1. No permitir ejecuciones múltiples: No permitir que se ejecute un proceso que ya se está ejecutando.
+2. No permitir ejecuciones múltiples con los mismos parámetros: Permite que se ejecute un proceso múltiples veces, pero con parámetros diferentes.
+3. Si se deja en blanco: Permite ejecutar el proceso simultáneamente múltiples veces.</value>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>

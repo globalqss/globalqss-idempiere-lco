@@ -154,7 +154,7 @@
   <value column="Help" original=""/>
  </row>
  <row id="50010" trl="Y">
-  <value column="Name" original="Capacity Requirement Planning Setup">Configuración Planeacin Requerimientos de Capacidad</value>
+  <value column="Name" original="Capacity Requirement Planning Setup">Configuración Planeación Requerimientos de Capacidad</value>
   <value column="Description" original="Setup Capacity Requirement Planning">Configuración Planeación Requerimientos de Capacidad</value>
   <value column="Help" original=""/>
  </row>

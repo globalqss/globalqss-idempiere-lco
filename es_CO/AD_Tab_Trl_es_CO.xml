@@ -215,13 +215,13 @@
  <row id="143" trl="Y">
   <value column="Name" original="Organization">Organización</value>
   <value column="CommitWarning" original="All not manually maintained Roles will automatically have access to the new Organization.&#10;You need execute Cache Reset and re-login for most changes made here to be effective.">Todos los roles no mantenidos en forma manual tendrán acceso automáticamente a la nueva organización.
-Debe reiniciar su servidor de aplicaciones para que la mayoría de los cambios hechos aquí surtan efecto.</value>
+Debe ejecutar Reinicia Cache y volver a ingresar para que la mayoría de los cambios hechos aquí surtan efecto.</value>
   <value column="Description" original="Define Organizations">Definir organizaciones</value>
   <value column="Help" original="The Organization Tab is used to define an Organization.  Each Organization has a Key and Name and optionally a Description.  &#10;When adding a new organization, you must re-login to be able to access the new organization.">La pestaña de organización es usada para definir una organización. Cada organización tiene una clave y un nombre y opcionalmente una descripción. Cuando se adiciona una nueva organización es necesario salir del sistema y volver a entrar para que se pueda tener acceso a la nueva organización.</value>
  </row>
  <row id="145" trl="Y">
   <value column="Name" original="Client">Grupo Empresarial</value>
-  <value column="CommitWarning" original="Create a new client via &quot;Initial Client Setup&quot;. You can only change information here!  You need execute Cache Reset and re-login for most changes made here to be effective.  The change of the Material Policy applies to future transactions.">La creación de un nuevo grupo empresarial debe hacerse por medio de la ventana "Configuración Inicial Grupo Empresarial".  Solo debe modificar información aquí!  Necesita volver a ingresar y reiniciar su servidor de aplicaciones para que la mayoría de cambios hechos aquí surtan efecto.  El cambio en la Política de Material aplicará para transacciones futuras.</value>
+  <value column="CommitWarning" original="Create a new client via &quot;Initial Client Setup&quot;. You can only change information here!  You need execute Cache Reset and re-login for most changes made here to be effective.  The change of the Material Policy applies to future transactions.">La creación de un nuevo grupo empresarial debe hacerse por medio de la ventana "Configuración Inicial Grupo Empresarial".  Solo debe modificar información aquí!  Necesita ejecutar Reinicia Cache y volver a ingresar para que la mayoría de cambios hechos aquí surtan efecto.  El cambio en la Política de Material aplicará para transacciones futuras.</value>
   <value column="Description" original="Client/Tenant Definition">Definir Grupo Empresarial</value>
   <value column="Help" original="The Client Definition Tab defines a unique client.&#10;Do not create a new client in this window, but use &quot;Initial Client Setup&quot; (System Administrator Role) to set up the required security and access rules. If you create a new client here, you will not be able to view it and also the required client infrastructure would not have been set up.">La pestaña de definición de grupo empresarial define un grupo empresarial único. No use esta ventana para crear un grupo empresarial, use el flujo de trabajo "Definir Grupo Empresarial" para establecer las reglas de seguridad y de acceso requeridas. Si se crea un grupo empresarial aquí, no podrá ser visto dentro del sistema y su definición de parámetros no será creada.</value>
  </row>
@@ -323,7 +323,7 @@ Debe reiniciar su servidor de aplicaciones para que la mayoría de los cambios h
  </row>
  <row id="170" trl="Y">
   <value column="Name" original="Organization Info">Información de la Organización</value>
-  <value column="CommitWarning" original="You need execute Cache Reset and re-login for most changes made here to be effective.&#10;">Necesita volver a ingresar y reiniciar su servidor de aplicaciones para que la mayoría de cambios hechos aquí surtan efecto.</value>
+  <value column="CommitWarning" original="You need execute Cache Reset and re-login for most changes made here to be effective.&#10;">Necesita ejecutar Reinicia Cache y volver a ingresar para que la mayoría de cambios hechos aquí surtan efecto.</value>
   <value column="Description" original="Organization Detail Information">Información de detalle de la organización</value>
   <value column="Help" original="The Organization Info Tab is used to define an Organization's address, DUNS number and Tax Identification number">La pestaña de información de la organización es usada para definir una dirección de la organización, el número DUNS y el número identificador de la compañía para efectos fiscales/gubernamentales.</value>
  </row>
@@ -349,7 +349,7 @@ Debe reiniciar su servidor de aplicaciones para que la mayoría de los cambios h
   <value column="Name" original="Tax">Impuesto</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original="Tax definition">Definir Impuestos</value>
-  <value column="Help" original="The Tax Rate Window defines the different taxes used for each tax category.  For example Sales Tax must be defined for each State in which it applies.&lt;br&gt;&#10;If you have multiple taxes create a summary level tax with the approximate total tax rate and the actual tax rates pointing to the summary level tax as their parent. When entering the order or invoice lines the tax is estimated the correct tax is calculated when the document is processed.  The tax is always calculated from the line net amount. If one tax has a the tax basis the line net amount and another tax you need to adjust the percentage to result in the correct amount.&lt;br&gt;&#10;Valid From/To is determined by the parent tax.">La ventana permite definir los diferentes impuestos usados para cada categora de impuestos. Por ejemplo, el impuesto de ventas debe estar definido para cada estado en el cual aplique. Si se tienen múltiples impuestos, se crea un impuesto sumario con la tasa de impuesto total aproximada y las tasas reales de los múltiples impuestos apuntando a la tasa sumaria como su impuesto padre. El impuesto correcto es calculado cuando se procesan los documentos de la transacción. En ese caso, si un impuesto tiene como base el Total neto de la línea y otro impuesto tiene como base otro impuesto, se necesitará ajustar el porcentaje para que el cálculo del Total correcto.</value>
+  <value column="Help" original="The Tax Rate Window defines the different taxes used for each tax category.  For example Sales Tax must be defined for each State in which it applies.&lt;br&gt;&#10;If you have multiple taxes create a summary level tax with the approximate total tax rate and the actual tax rates pointing to the summary level tax as their parent. When entering the order or invoice lines the tax is estimated the correct tax is calculated when the document is processed.  The tax is always calculated from the line net amount. If one tax has a the tax basis the line net amount and another tax you need to adjust the percentage to result in the correct amount.&lt;br&gt;&#10;Valid From/To is determined by the parent tax.">La ventana permite definir los diferentes impuestos usados para cada categoría de impuestos. Por ejemplo, el impuesto de ventas debe estar definido para cada estado en el cual aplique. Si se tienen múltiples impuestos, se crea un impuesto sumario con la tasa de impuesto total aproximada y las tasas reales de los múltiples impuestos apuntando a la tasa sumaria como su impuesto padre. El impuesto correcto es calculado cuando se procesan los documentos de la transacción. En ese caso, si un impuesto tiene como base el Total neto de la línea y otro impuesto tiene como base otro impuesto, se necesitará ajustar el porcentaje para que el cálculo del Total correcto.</value>
  </row>
  <row id="176" trl="Y">
   <value column="Name" original="Tax Category">Categoría de Impuesto</value>
@@ -456,14 +456,14 @@ Debe reiniciar su servidor de aplicaciones para que la mayoría de los cambios h
  <row id="199" trl="Y">
   <value column="Name" original="Accounting Schema">Esquema Contable</value>
   <value column="CommitWarning" original="If you change the currency or costing method, you must reset all accounting transactions.&#10;For changes to become effective, you must execute Cache Reset. ">Si cambia la moneda o el método de costeo, debe resetear todas las transacciones contables.
-Necesita volver a ingresar y reiniciar su servidor de aplicaciones para que los cambios surtan efecto.</value>
+Para que los cambios surtan efecto debe ejecutar Reinicia Cache.</value>
   <value column="Description" original="Define your Account Schema Structure">Definir estructura del esquema contable</value>
   <value column="Help" original="The Accounting Schema Tab defines the controls used for accounting.  You can define multiple accounting schema per client (for parallel accounting).  &#10;Postings are generated for an accounting schema, if the schema is valid and you have defined GL and Default accounts and after completion of the Add / Copy Accounts process.">La pestaña de Esquema Contable define los controles para la contabilidad. Puede definir múltiples esquemas contables por grupo empresarial (para contabilidades simultáneas, ej: en dólares y pesos).
 Los registros contables son generados para un esquema contable, si el esquema es válido y usted ha definido cuentas de contabilidad y por defecto, y despues de que complete el proceso de Añadir / Copiar cuentas.</value>
  </row>
  <row id="200" trl="Y">
   <value column="Name" original="General Ledger">Contabilidad General</value>
-  <value column="CommitWarning" original="For changes to become effective, you must execute Cache Reset and re-login.">Necesita volver a ingresar y reiniciar su servidor de aplicaciones para que los cambios surtan efecto.</value>
+  <value column="CommitWarning" original="For changes to become effective, you must execute Cache Reset and re-login.">Para que los cambios surtan efecto debe ejecutar "Reinicia Cache" y volver a ingresar.</value>
   <value column="Description" original="Accounts for GL">Cuentas de la Contabilidad General (CG)</value>
   <value column="Help" original="The General Ledger Tab defines error and balance handling to use as well as  the necessary accounts for posting to General Ledger.  ">La pestaña Contabilidad General define el manejo de error y de balanceo a usar así como las cuentas necesarias para registrar las transacciones en la contabilidad.</value>
  </row>
@@ -554,8 +554,9 @@ Los registros contables son generados para un esquema contable, si el esquema es
  <row id="217" trl="Y">
   <value column="Name" original="Account Schema Dimensions">Elemento del Esquema Contable</value>
   <value column="CommitWarning" original="ATTENTION: ANY CHANGES here will affect the structure of your chart of accounts!&#10;Depending what changes you did, you should reset accounting.&#10;For changes to become effective, you must and execute Cache Reset and re-login.&#10;Saving/deleting the record starts processes which may take a while.">ATENCION: CUALQUIER CAMBIO que haga aquí afectará la estructura de su plan de cuentas!
-Dependiendo de los cambios que haga, debe resetear la contabilidad.
-Necesita volver a ingresar y reiniciar su servidor de aplicaciones para que los cambios surtan efecto.</value>
+Dependiendo de los cambios que haga, debe restablecer la contabilidad.
+Para que los cambios surtan efecto debe ejecutar "Reinicia Cache" y volver a ingresar.
+Guardar/borrar este registro ejecuta procesos que pueden tardar un poco.</value>
   <value column="Description" original="Define the dimensions of your Account Key">Definir los elementos de su cuenta primaria</value>
   <value column="Help" original="The Account Schema Dimensions Tab defines the dimensions that comprise the account key. A name is defined which will display in documents.  Also the order of the dimensions and if they are balanced and mandatory are indicated.">La pestaña Elementos del Esquema Contable define los elementos que comprenden la clave contable. Un nombre es definido el cual se despliega en los documentos. También se indica el orden de los diferentes elementos y si ellos están balanceados y son obligatorios.</value>
  </row>
@@ -2814,7 +2815,7 @@ Observe por favor que hay tres campos de la organización: La organización del 
   <value column="Name" original="Distribution">Distribución</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original="General Ledger Distribution">Distribución general de contabilidad</value>
-  <value column="Help" original="If the account combination criteria of the Distribution is met, the posting to the account combination is replaced by the account combinations of the distribution lines.  &#10;The distribution is prorated based on the percentage of the lines. If the total percent is less then 100 and one line is 0 (null), it gets the remainder.  If there is no line with 0, any rounding is adjusted in the line with the biggest amount.">Si los criterios de la combinación de la cuenta de distribución se resuelven, la fijacin a la combinación de cuenta es substituida por las combinaciones de cuenta de las líneas de distribución. La distribución está prorrateada basada en el cociente de las líneas. La distribución debe ser válida para ser utilizada.</value>
+  <value column="Help" original="If the account combination criteria of the Distribution is met, the posting to the account combination is replaced by the account combinations of the distribution lines.  &#10;The distribution is prorated based on the percentage of the lines. If the total percent is less then 100 and one line is 0 (null), it gets the remainder.  If there is no line with 0, any rounding is adjusted in the line with the biggest amount.">Si los criterios de la combinación de la cuenta de distribución se resuelven, la fijación a la combinación de cuenta es substituida por las combinaciones de cuenta de las líneas de distribución. La distribución está prorrateada basada en el cociente de las líneas. La distribución debe ser válida para ser utilizada.</value>
  </row>
  <row id="647" trl="Y">
   <value column="Name" original="Line">Línea</value>
@@ -5191,7 +5192,7 @@ Válido Desde/Hasta es determinado por el impuesto padre.]]>
  <row id="53278" trl="Y">
   <value column="Name" original="Confirmations">Confirmaciones</value>
   <value column="CommitWarning" original=""/>
-  <value column="Description" original="Optional Confirmations of Return to Vendor Lines">Confirmaciones opcionales de las lneas de la Devolución a Proveedor.</value>
+  <value column="Description" original="Optional Confirmations of Return to Vendor Lines">Confirmaciones opcionales de las líneas de la Devolución a Proveedor.</value>
   <value column="Help" original="The quantities are in the storage Unit of Measure!">¡Las cantidades están en la unidad del almacenaje de la medida!</value>
  </row>
  <row id="53279" trl="Y">
