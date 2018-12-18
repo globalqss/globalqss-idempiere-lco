@@ -1866,7 +1866,7 @@
  </row>
  <row id="53273" trl="Y">
   <value column="Name" original="A_Update_Type">A_Update_Type</value>
-  <value column="Description" original="Update Type">Tipo Actualizacin</value>
+  <value column="Description" original="Update Type">Tipo Actualización</value>
   <value column="Help" original=""/>
  </row>
  <row id="53274" trl="Y">

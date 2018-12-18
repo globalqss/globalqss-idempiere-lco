@@ -6679,7 +6679,7 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="200369" trl="Y">
-  <value column="MsgText" original="Permalink">Permalink</value>
+  <value column="MsgText" original="Permalink">Enlace Permanente</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="200370" trl="Y">
@@ -6807,11 +6807,11 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="200472" trl="Y">
-  <value column="MsgText" original="Cannot create a credit memo from a credit memo">No puedo crear una nota crédito a partir de una nota crédito</value>
+  <value column="MsgText" original="Cannot create a credit memo from a credit memo">No se puede crear una nota crédito desde otra nota crédito</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="200473" trl="Y">
-  <value column="MsgText" original="Credit Memo already exists">Nota crédito ya existe</value>
+  <value column="MsgText" original="Credit Memo already exists">La nota crédito ya existe</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="200480" trl="Y">
