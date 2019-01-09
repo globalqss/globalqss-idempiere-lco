@@ -2,11 +2,11 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Localization Colombia - Medios Magneticos DIAN
 Bundle-SymbolicName: org.globalqss.idempiere.LCO.magneticmedia;singleton:=true
-Bundle-Version: 6.1.0.qualifier
+Bundle-Version: 6.2.0.qualifier
 Bundle-Activator: org.adempiere.plugin.utils.Incremental2PackActivator
 Bundle-Vendor: GlobalQSS
-Require-Bundle: org.adempiere.base;bundle-version="6.1.0",
- org.adempiere.plugin.utils;bundle-version="6.1.0"
+Require-Bundle: org.adempiere.base;bundle-version="6.2.0",
+ org.adempiere.plugin.utils;bundle-version="6.2.0"
 Export-Package: org.globalqss.model,
  org.globalqss.process,
  org.globalqss.util
@@ -17,3 +17,5 @@ Import-Package: org.osgi.service.event
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .
 Automatic-Module-Name: org.globalqss.idempiere.LCO.magneticmedia
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version>=1.11))"
