@@ -149,6 +149,13 @@
   <value column="Placeholder" original=""/>
   <value column="Placeholder2" original=""/>
  </row>
+ <row id="53025" trl="Y">
+  <value column="Name" original="Purchase Price List Version">Versión Lista Precios Compra</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
  <row id="53030" trl="Y">
   <value column="Name" original="New Product">Nuevo Producto</value>
   <value column="Description" original=""/>
@@ -179,6 +186,20 @@
  </row>
  <row id="53069" trl="Y">
   <value column="Name" original="Is Print Workflow">Imprime Flujo Trabajo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="53127" trl="Y">
+  <value column="Name" original="Generate Fields">Genera Campos</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="53131" trl="Y">
+  <value column="Name" original="Scripts Path">Ruta Scripts</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="Placeholder" original=""/>
@@ -393,6 +414,20 @@
   <value column="Help" original=""/>
   <value column="Placeholder" original=""/>
   <value column="Placeholder2" original=""/>
+ </row>
+ <row id="200060" trl="Y">
+  <value column="Name" original="Financial Year Month">Año-Mes Financiero</value>
+  <value column="Description" original="The only valid date format is: YYYY-MM">El formato de fecha válido es: AAAA-MM</value>
+  <value column="Help" original="The only valid date format is: YYYY-MM">El formato de fecha válido es: AAAA-MM</value>
+  <value column="Placeholder" original="From">Desde</value>
+  <value column="Placeholder2" original="To">Hacia</value>
+ </row>
+ <row id="200062" trl="Y">
+  <value column="Name" original="Financial Year Month">Año-Mes Financiero</value>
+  <value column="Description" original="The only valid date format is: YYYY-MM">El formato de fecha válido es: AAAA-MM</value>
+  <value column="Help" original="The only valid date format is: YYYY-MM">El formato de fecha válido es: AAAA-MM</value>
+  <value column="Placeholder" original="From">Desde</value>
+  <value column="Placeholder2" original="To">Hacia</value>
  </row>
  <row id="200071" trl="Y">
   <value column="Name" original="Document Type">Tipo Documento</value>

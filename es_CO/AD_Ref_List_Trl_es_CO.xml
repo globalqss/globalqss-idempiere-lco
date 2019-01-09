@@ -70,6 +70,10 @@
   <value column="Name" original="Menu">Menú</value>
   <value column="Description" original=""/>
  </row>
+ <row id="110" trl="Y">
+  <value column="Name" original="Single Record">Mostrar solo un Registro</value>
+  <value column="Description" original=""/>
+ </row>
  <row id="111" trl="Y">
   <value column="Name" original="Maintain">Mantenimiento</value>
   <value column="Description" original=""/>
@@ -264,9 +268,7 @@
  </row>
  <row id="160" trl="Y">
   <value column="Name" original="Reference">Referencia</value>
-  <value column="Description" original="Reference -&gt;">
-   <![CDATA[Referencia ->]]>
-  </value>
+  <value column="Description" original="Reference -&gt;" xml:space="preserve"><![CDATA[Referencia ->]]></value>
  </row>
  <row id="164" trl="Y">
   <value column="Name" original="Drafted">Borrador</value>
@@ -341,9 +343,7 @@
   <value column="Description" original="Reopen Document and Reverse automatically generated documents; You need to Complete the transaction after the change. ">Reabrir el documento y reversar automáticamente los documentos generados, debe Completar la transacción después del cambio</value>
  </row>
  <row id="189" trl="Y">
-  <value column="Name" original="&lt;None&gt;">
-   <![CDATA[<Ninguno>]]>
-  </value>
+  <value column="Name" original="&lt;None&gt;" xml:space="preserve"><![CDATA[<Ninguno>]]></value>
   <value column="Description" original="No action">Sin acción</value>
  </row>
  <row id="190" trl="Y">
@@ -414,6 +414,10 @@
   <value column="Name" original="Visa">Visa</value>
   <value column="Description" original=""/>
  </row>
+ <row id="213" trl="Y">
+  <value column="Name" original="ATM">ATM</value>
+  <value column="Description" original=""/>
+ </row>
  <row id="214" trl="Y">
   <value column="Name" original="After Order delivered">Después de Entregada la Orden</value>
   <value column="Description" original="Invoice for every order">Factura para cada orden</value>
@@ -469,6 +473,10 @@
  <row id="227" trl="Y">
   <value column="Name" original="Calculated">Calculado</value>
   <value column="Description" original="Calculated based on Product Freight Rule">Cálculo basado en la regla de flete del producto</value>
+ </row>
+ <row id="228" trl="Y">
+  <value column="Name" original="Line">Línea</value>
+  <value column="Description" original="Entered at Line level">Introducido al nivel de línea</value>
  </row>
  <row id="229" trl="Y">
   <value column="Name" original="High">Alta</value>
@@ -615,9 +623,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="271" trl="Y">
-  <value column="Name" original="&lt;No Action&gt;">
-   <![CDATA[<Sin Acción>]]>
-  </value>
+  <value column="Name" original="&lt;No Action&gt;" xml:space="preserve"><![CDATA[<Sin Acción>]]></value>
   <value column="Description" original=""/>
  </row>
  <row id="272" trl="Y">
@@ -672,12 +678,20 @@
   <value column="Name" original="Organization">Organización</value>
   <value column="Description" original=""/>
  </row>
+ <row id="285" trl="Y">
+  <value column="Name" original="BoM">LDM</value>
+  <value column="Description" original="Bill of Materials">Lista de Materiales</value>
+ </row>
  <row id="286" trl="Y">
   <value column="Name" original="Project">Proyecto</value>
   <value column="Description" original=""/>
  </row>
  <row id="287" trl="Y">
   <value column="Name" original="Sales Region">Región de Ventas</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="288" trl="Y">
+  <value column="Name" original="Product Category">Categoría del Producto</value>
   <value column="Description" original=""/>
  </row>
  <row id="289" trl="Y">
@@ -925,21 +939,15 @@
   <value column="Description" original=""/>
  </row>
  <row id="367" trl="Y">
-  <value column="Name" original="&gt;=">
-   <![CDATA[>=]]>
-  </value>
+  <value column="Name" original="&gt;=" xml:space="preserve"><![CDATA[>=]]></value>
   <value column="Description" original=""/>
  </row>
  <row id="368" trl="Y">
-  <value column="Name" original="&gt;">
-   <![CDATA[>]]>
-  </value>
+  <value column="Name" original="&gt;" xml:space="preserve"><![CDATA[>]]></value>
   <value column="Description" original=""/>
  </row>
  <row id="369" trl="Y">
-  <value column="Name" original="&lt;">
-   <![CDATA[<]]>
-  </value>
+  <value column="Name" original="&lt;" xml:space="preserve"><![CDATA[<]]></value>
   <value column="Description" original=""/>
  </row>
  <row id="370" trl="Y">
@@ -947,15 +955,11 @@
   <value column="Description" original=""/>
  </row>
  <row id="371" trl="Y">
-  <value column="Name" original="&lt;=">
-   <![CDATA[<=]]>
-  </value>
+  <value column="Name" original="&lt;=" xml:space="preserve"><![CDATA[<=]]></value>
   <value column="Description" original=""/>
  </row>
  <row id="372" trl="Y">
-  <value column="Name" original="|&lt;x&gt;|">
-   <![CDATA[|<x>|]]>
-  </value>
+  <value column="Name" original="|&lt;x&gt;|" xml:space="preserve"><![CDATA[|<x>|]]></value>
   <value column="Description" original=""/>
  </row>
  <row id="373" trl="Y">
@@ -1010,6 +1014,10 @@
   <value column="Name" original="Tab Separated">Separado por Tabuladores</value>
   <value column="Description" original=""/>
  </row>
+ <row id="386" trl="Y">
+  <value column="Name" original="XML">XML</value>
+  <value column="Description" original=""/>
+ </row>
  <row id="387" trl="Y">
   <value column="Name" original="String">Cadena</value>
   <value column="Description" original=""/>
@@ -1035,9 +1043,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="393" trl="Y">
-  <value column="Name" original="&gt; 0">
-   <![CDATA[> 0]]>
-  </value>
+  <value column="Name" original="&gt; 0" xml:space="preserve"><![CDATA[> 0]]></value>
   <value column="Description" original=""/>
  </row>
  <row id="394" trl="Y">
@@ -1045,9 +1051,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="395" trl="Y">
-  <value column="Name" original="&lt; 0">
-   <![CDATA[< 0]]>
-  </value>
+  <value column="Name" original="&lt; 0" xml:space="preserve"><![CDATA[< 0]]></value>
   <value column="Description" original=""/>
  </row>
  <row id="396" trl="Y">
@@ -1374,6 +1378,10 @@
   <value column="Name" original="Texture (Picture)">Textura (Foto)</value>
   <value column="Description" original=""/>
  </row>
+ <row id="486" trl="Y">
+  <value column="Name" original="Workbench">Mesa de Trabajo</value>
+  <value column="Description" original=""/>
+ </row>
  <row id="487" trl="Y">
   <value column="Name" original="Dictionary">Diccionario</value>
   <value column="Description" original="Application Dictionary (synchronized)">Diccionario de la aplicación (Sincronizado)</value>
@@ -1408,6 +1416,10 @@
  </row>
  <row id="497" trl="Y">
   <value column="Name" original="Flat Percent">Porcentaje Simple</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="498" trl="Y">
+  <value column="Name" original="Formula">Fórmula</value>
   <value column="Description" original=""/>
  </row>
  <row id="499" trl="Y">
@@ -1584,6 +1596,10 @@
  </row>
  <row id="542" trl="Y">
   <value column="Name" original="Expense type">Tipo de Gasto</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="543" trl="Y">
+  <value column="Name" original="Online">En Línea</value>
   <value column="Description" original=""/>
  </row>
  <row id="544" trl="Y">
@@ -1882,6 +1898,10 @@
   <value column="Name" original="Role">Rol</value>
   <value column="Description" original=""/>
  </row>
+ <row id="619" trl="Y">
+  <value column="Name" original="System Resource">Recurso del Sistema</value>
+  <value column="Description" original=""/>
+ </row>
  <row id="620" trl="Y">
   <value column="Name" original="Not Started">No iniciado</value>
   <value column="Description" original=""/>
@@ -2046,6 +2066,14 @@
   <value column="Name" original="Frequency">Frecuencia</value>
   <value column="Description" original=""/>
  </row>
+ <row id="664" trl="Y">
+  <value column="Name" original="Week Day">Día de la Semana</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="665" trl="Y">
+  <value column="Name" original="Month Day">Día del mes</value>
+  <value column="Description" original=""/>
+ </row>
  <row id="666" trl="Y">
   <value column="Name" original="Customization">Personalización</value>
   <value column="Description" original="Distributed Extensions should have 4 characters">Distributed Extensions should have 4 characters</value>
@@ -2175,9 +2203,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="699" trl="Y">
-  <value column="Name" original="Receivables &amp; Payables">
-   <![CDATA[CxC & CxP]]>
-  </value>
+  <value column="Name" original="Receivables &amp; Payables" xml:space="preserve"><![CDATA[CxC & CxP]]></value>
   <value column="Description" original=""/>
  </row>
  <row id="700" trl="Y">
@@ -2352,6 +2378,22 @@
   <value column="Name" original="Make-To-Order">Fabricar-para-Orden</value>
   <value column="Description" original=""/>
  </row>
+ <row id="744" trl="Y">
+  <value column="Name" original="Previous">Anterior</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="745" trl="Y">
+  <value column="Name" original="Previous, Spare">Previo, Refacción</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="746" trl="Y">
+  <value column="Name" original="Future">Futuro</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="747" trl="Y">
+  <value column="Name" original="Maintenance">Mantenimiento</value>
+  <value column="Description" original=""/>
+ </row>
  <row id="748" trl="Y">
   <value column="Name" original="Repair">Reparar</value>
   <value column="Description" original=""/>
@@ -2466,6 +2508,10 @@
  </row>
  <row id="777" trl="Y">
   <value column="Name" original="Last Invoice">Última Factura</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="778" trl="Y">
+  <value column="Name" original="User Defined">Definido por Usuario</value>
   <value column="Description" original=""/>
  </row>
  <row id="779" trl="Y">
@@ -2876,6 +2922,10 @@
   <value column="Name" original="Code 39 linear w/o Checksum">codigo 39 linear o Con suma de chequeo (Checksum)</value>
   <value column="Description" original=""/>
  </row>
+ <row id="883" trl="Y">
+  <value column="Name" original="Private Information">Información Privada</value>
+  <value column="Description" original=""/>
+ </row>
  <row id="884" trl="Y">
   <value column="Name" original="User 1">Usuario 1</value>
   <value column="Description" original=""/>
@@ -2890,6 +2940,22 @@
  </row>
  <row id="887" trl="Y">
   <value column="Name" original="User 4">Usuario 4</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="888" trl="Y">
+  <value column="Name" original="CM Container">Contenedor CM</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="889" trl="Y">
+  <value column="Name" original="CM Container Stage">Contenedor de Manejador de contenidos</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="890" trl="Y">
+  <value column="Name" original="CM Template">Plantilla de manejador de contenidos</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="891" trl="Y">
+  <value column="Name" original="CM Media">Medio CM</value>
   <value column="Description" original=""/>
  </row>
  <row id="892" trl="Y">
@@ -3092,6 +3158,14 @@
   <value column="Name" original="Forum (threaded)">Foro (hilo)</value>
   <value column="Description" original=""/>
  </row>
+ <row id="50001" trl="Y">
+  <value column="Name" original="Local Transfer">Transferencia local</value>
+  <value column="Description" original="This type of transfer will transfer objects to the same Adempiere instance">Este tipo de transferencia transferirá objetos a la misma instancia de iDempiere</value>
+ </row>
+ <row id="50002" trl="Y">
+  <value column="Name" original="Remote Transfer">Transferencia Remota</value>
+  <value column="Description" original="This type of transfer will transfer objects to another Adempiere installation accessible by network.">Este tipo de trasferencia, transferirá objetos a otra instalación de iDempiere accesible a través de la red</value>
+ </row>
  <row id="50003" trl="Y">
   <value column="Name" original="XML File">Archivo XML</value>
   <value column="Description" original="This type of transfer will create a XML file ">Este tipo de transferencia creara un archivo XML</value>
@@ -3160,6 +3234,10 @@
   <value column="Name" original="Sybase">Sybase</value>
   <value column="Description" original="Sybase Database">Base de datos Sybase</value>
  </row>
+ <row id="50020" trl="Y">
+  <value column="Name" original="Workbench">Conjunto de trabajos</value>
+  <value column="Description" original=""/>
+ </row>
  <row id="50021" trl="Y">
   <value column="Name" original="File - Code or other">Archivo - Codigo u otro</value>
   <value column="Description" original=""/>
@@ -3215,6 +3293,14 @@
  <row id="50034" trl="Y">
   <value column="Name" original="File">Archivo</value>
   <value column="Description" original="Package is file based">El paquete es basado en un archivo</value>
+ </row>
+ <row id="50035" trl="Y">
+  <value column="Name" original="WebService">Servicio Web</value>
+  <value column="Description" original="Package is available via WebService">El paquete es disponible via Servicio Web</value>
+ </row>
+ <row id="50037" trl="Y">
+  <value column="Name" original="Ask user (for future use)">Preguntar a usuario (Para uso futuro)</value>
+  <value column="Description" original=""/>
  </row>
  <row id="50038" trl="Y">
   <value column="Name" original="Don't show help">No muestre ayuda</value>
@@ -3338,6 +3424,10 @@
  </row>
  <row id="53247" trl="Y">
   <value column="Name" original="Work Station">Estación Trabajo</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53248" trl="Y">
+  <value column="Name" original="User Workbench">Mesa Trabajo Usuario</value>
   <value column="Description" original=""/>
  </row>
  <row id="53249" trl="Y">
@@ -3780,6 +3870,10 @@
   <value column="Name" original="Default">Por Defecto</value>
   <value column="Description" original="Default">Por Defecto</value>
  </row>
+ <row id="53367" trl="Y">
+  <value column="Name" original="Inception to date">Incepción a la fecha</value>
+  <value column="Description" original="Revaluate each year seperately">Revaluar cada año separadamente</value>
+ </row>
  <row id="53368" trl="Y">
   <value column="Name" original="Year Balances">Saldos Anuales</value>
   <value column="Description" original="Revaluate current year to date balances and then revaluates the beginning balance">Revaluar saldos actuales del año y luego revaluar el saldo inicial</value>
@@ -3852,9 +3946,21 @@
   <value column="Name" original="Theft">Robado</value>
   <value column="Description" original="Asset Stolen">Activo Robado</value>
  </row>
+ <row id="53386" trl="Y">
+  <value column="Name" original="Cash">Efectivo</value>
+  <value column="Description" original="Sold for cash">Vendido en Efectivo</value>
+ </row>
+ <row id="53387" trl="Y">
+  <value column="Name" original="Simple">Simple</value>
+  <value column="Description" original="No cash or trade">No efectivo o negocio</value>
+ </row>
  <row id="53388" trl="Y">
   <value column="Name" original="Trade">Negociado</value>
   <value column="Description" original="Traded in">Negociado</value>
+ </row>
+ <row id="53389" trl="Y">
+  <value column="Name" original="Trade w/cash">Negociado con efectivo</value>
+  <value column="Description" original="Traded In with cash">Negociado con efectivo</value>
  </row>
  <row id="53390" trl="Y">
   <value column="Name" original="Capitalized Lease">Arrendamiento Capitalizado</value>
@@ -3951,6 +4057,10 @@
  <row id="53413" trl="Y">
   <value column="Name" original="Invoice">Factura</value>
   <value column="Description" original="This entry is related to an invoice">Esta entrada está relacionada con una factura</value>
+ </row>
+ <row id="53414" trl="Y">
+  <value column="Name" original="Journal Entry">Entrada Nota Contable</value>
+  <value column="Description" original="The entry was created from a journal entry">La entrada fue creada desde una nota contable</value>
  </row>
  <row id="53415" trl="Y">
   <value column="Name" original="Manual">Manual</value>
@@ -4050,9 +4160,7 @@
  </row>
  <row id="53441" trl="Y">
   <value column="Name" original="Natural Balance">Balance Natural</value>
-  <value column="Description" original="BY for P &amp; L account, BT for Balance Sheet account">
-   <![CDATA[BY for P & L account, BT for Balance Sheet account]]>
-  </value>
+  <value column="Description" original="BY for P &amp; L account, BT for Balance Sheet account" xml:space="preserve"><![CDATA[BY for P & L account, BT for Balance Sheet account]]></value>
  </row>
  <row id="53442" trl="Y">
   <value column="Name" original="Material Receipt">Recibo de Material</value>
@@ -4119,15 +4227,11 @@
   <value column="Description" original=""/>
  </row>
  <row id="53462" trl="Y">
-  <value column="Name" original="&gt;=">
-   <![CDATA[>=]]>
-  </value>
+  <value column="Name" original="&gt;=" xml:space="preserve"><![CDATA[>=]]></value>
   <value column="Description" original=""/>
  </row>
  <row id="53463" trl="Y">
-  <value column="Name" original="&lt;=">
-   <![CDATA[<=]]>
-  </value>
+  <value column="Name" original="&lt;=" xml:space="preserve"><![CDATA[<=]]></value>
   <value column="Description" original=""/>
  </row>
  <row id="53464" trl="Y">
@@ -4200,9 +4304,7 @@
  </row>
  <row id="53503" trl="Y">
   <value column="Name" original="Broadcast">Difundir</value>
-  <value column="Description" original="Broadcast &lt;&lt;-&gt;&gt;">
-   <![CDATA[Difundir <<->>]]>
-  </value>
+  <value column="Description" original="Broadcast &lt;&lt;-&gt;&gt;" xml:space="preserve"><![CDATA[Difundir <<->>]]></value>
  </row>
  <row id="53504" trl="Y">
   <value column="Name" original="Model Validator">Validador del Modelo</value>
@@ -4310,9 +4412,7 @@
  </row>
  <row id="53540" trl="Y">
   <value column="Name" original="Natural">Natural</value>
-  <value column="Description" original="Year for P &amp; L account, Total for Balance Sheet account">
-   <![CDATA[Año para cuentas de P&G, Total para cuentas de balance]]>
-  </value>
+  <value column="Description" original="Year for P &amp; L account, Total for Balance Sheet account" xml:space="preserve"><![CDATA[Año para cuentas de P&G, Total para cuentas de balance]]></value>
  </row>
  <row id="53541" trl="Y">
   <value column="Name" original="Balance (expected sign)">Balance (signo esperado)</value>
@@ -4352,6 +4452,10 @@
  </row>
  <row id="53554" trl="Y">
   <value column="Name" original="Implicit">Implícito</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53555" trl="Y">
+  <value column="Name" original="Explicit">Explícito</value>
   <value column="Description" original=""/>
  </row>
  <row id="53556" trl="Y">
@@ -4456,6 +4560,18 @@
  </row>
  <row id="53604" trl="Y">
   <value column="Name" original="Project">Proyecto</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53605" trl="Y">
+  <value column="Name" original="Cash_">Caja_</value>
+  <value column="Description" original="Sold for cash">Vendido por caja</value>
+ </row>
+ <row id="53606" trl="Y">
+  <value column="Name" original="Partial Retirement">Retiro Parcial</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53607" trl="Y">
+  <value column="Name" original="Preservation">Preservación</value>
   <value column="Description" original=""/>
  </row>
  <row id="53608" trl="Y">
@@ -5107,27 +5223,19 @@
   <value column="Description" original=""/>
  </row>
  <row id="200114" trl="Y">
-  <value column="Name" original="&gt;">
-   <![CDATA[>]]>
-  </value>
+  <value column="Name" original="&gt;" xml:space="preserve"><![CDATA[>]]></value>
   <value column="Description" original=""/>
  </row>
  <row id="200115" trl="Y">
-  <value column="Name" original="&gt;=">
-   <![CDATA[>=]]>
-  </value>
+  <value column="Name" original="&gt;=" xml:space="preserve"><![CDATA[>=]]></value>
   <value column="Description" original=""/>
  </row>
  <row id="200116" trl="Y">
-  <value column="Name" original="&lt;">
-   <![CDATA[<]]>
-  </value>
+  <value column="Name" original="&lt;" xml:space="preserve"><![CDATA[<]]></value>
   <value column="Description" original=""/>
  </row>
  <row id="200117" trl="Y">
-  <value column="Name" original="&lt;=">
-   <![CDATA[<=]]>
-  </value>
+  <value column="Name" original="&lt;=" xml:space="preserve"><![CDATA[<=]]></value>
   <value column="Description" original=""/>
  </row>
  <row id="200118" trl="Y">
@@ -5392,6 +5500,10 @@
  </row>
  <row id="200445" trl="Y">
   <value column="Name" original="Info Window">Ventana Info</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200448" trl="Y">
+  <value column="Name" original="Deferred">Pospuesto</value>
   <value column="Description" original=""/>
  </row>
  <row trl="Y" uuid="dbc98c55-3b9e-4f9b-9d50-f29596ba706d">

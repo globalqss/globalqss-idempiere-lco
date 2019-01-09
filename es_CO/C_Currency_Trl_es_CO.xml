@@ -10,6 +10,46 @@
   <value column="Description" original="Euro">Euro</value>
   <value column="CurSymbol" original="E">€</value>
  </row>
+ <row id="103" trl="Y">
+  <value column="Description" original="Deutsche Mark">Marco Alemán</value>
+  <value column="CurSymbol" original="DM">DM</value>
+ </row>
+ <row id="104" trl="Y">
+  <value column="Description" original="Austrian Schilling">Chelín Austriaco</value>
+  <value column="CurSymbol" original="Sch">Sch</value>
+ </row>
+ <row id="105" trl="Y">
+  <value column="Description" original="Belgian Franc">Franco Belga</value>
+  <value column="CurSymbol" original="BFr">BFr</value>
+ </row>
+ <row id="106" trl="Y">
+  <value column="Description" original="Finish Mark">Marco Finlandés</value>
+  <value column="CurSymbol" original="FM">FM</value>
+ </row>
+ <row id="107" trl="Y">
+  <value column="Description" original="Irish Pound">Libra Irlandesa</value>
+  <value column="CurSymbol" original="I£">I£</value>
+ </row>
+ <row id="108" trl="Y">
+  <value column="Description" original="Italian Lira">Lira Italiana</value>
+  <value column="CurSymbol" original="L">L</value>
+ </row>
+ <row id="109" trl="Y">
+  <value column="Description" original="Dutch Gilder">Florín Neerlandés</value>
+  <value column="CurSymbol" original="Fl">Fl</value>
+ </row>
+ <row id="110" trl="Y">
+  <value column="Description" original="Portugese Escudo">Escudo Portugués</value>
+  <value column="CurSymbol" original="Es">Es</value>
+ </row>
+ <row id="111" trl="Y">
+  <value column="Description" original="Spannish Peseto">Peseta Española</value>
+  <value column="CurSymbol" original="Pts">Pts</value>
+ </row>
+ <row id="112" trl="Y">
+  <value column="Description" original="French Franc">Franco Francés</value>
+  <value column="CurSymbol" original="Fr">Fr</value>
+ </row>
  <row id="113" trl="Y">
   <value column="Description" original="Japanese Yen">Yen Japonés</value>
   <value column="CurSymbol" original="¥">¥</value>
@@ -17,6 +57,10 @@
  <row id="114" trl="Y">
   <value column="Description" original="British Pound">Libra Esterlina</value>
   <value column="CurSymbol" original="£">£</value>
+ </row>
+ <row id="115" trl="Y">
+  <value column="Description" original="Swiss Franc (invalid currency code - use CHF)">Franco Suizo (Código no válido - use CHF)</value>
+  <value column="CurSymbol" original="SFr">SFr</value>
  </row>
  <row id="116" trl="Y">
   <value column="Description" original="Canadian Dollar">Dólar Canadiense</value>
@@ -525,6 +569,10 @@
  <row id="313" trl="Y">
   <value column="Description" original="Sri Lanka Rupee">Rupia de Sri Lanka</value>
   <value column="CurSymbol" original="SLRs">SLRs</value>
+ </row>
+ <row id="314" trl="Y">
+  <value column="Description" original="Tolar">Tolar</value>
+  <value column="CurSymbol" original="SlT">SlT</value>
  </row>
  <row id="315" trl="Y">
   <value column="Description" original="Somali Shilling">Chelín Somalí</value>
