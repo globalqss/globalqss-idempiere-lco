@@ -3306,6 +3306,20 @@
   <value column="PlaceholderPostal_Add" original=""/>
   <value column="RegionName" original=""/>
  </row>
+ <row id="346" trl="Y">
+  <value column="Name" original="Yugoslavia">Yugoslavia</value>
+  <value column="Description" original="Yugoslavia">Yugoslavia</value>
+  <value column="PlaceholderAddress1" original=""/>
+  <value column="PlaceholderAddress2" original=""/>
+  <value column="PlaceholderAddress3" original=""/>
+  <value column="PlaceholderAddress4" original=""/>
+  <value column="PlaceholderAddress5" original=""/>
+  <value column="PlaceholderCity" original=""/>
+  <value column="PlaceholderComments" original=""/>
+  <value column="PlaceholderPostal" original=""/>
+  <value column="PlaceholderPostal_Add" original=""/>
+  <value column="RegionName" original=""/>
+ </row>
  <row id="347" trl="Y">
   <value column="Name" original="Zambia">Zambia</value>
   <value column="Description" original="Zambia">Zambia</value>

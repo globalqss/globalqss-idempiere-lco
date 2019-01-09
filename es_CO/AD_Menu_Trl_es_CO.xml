@@ -114,6 +114,14 @@
   <value column="Name" original="Security">Seguridad</value>
   <value column="Description" original=""/>
  </row>
+ <row id="372" trl="Y">
+  <value column="Name" original="Web">Web</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="392" trl="Y">
+  <value column="Name" original="Knowledge Base">Conocimiento</value>
+  <value column="Description" original=""/>
+ </row>
  <row id="456" trl="Y">
   <value column="Name" original="Server">Servidor</value>
   <value column="Description" original="iDempiere Server Maintenance">Mantenimiento del Servidor iDempiere</value>
@@ -128,6 +136,10 @@
  </row>
  <row id="459" trl="Y">
   <value column="Name" original="Shipments">Entregas</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="460" trl="Y">
+  <value column="Name" original="Market Place">Plaza del Mercado</value>
   <value column="Description" original=""/>
  </row>
  <row id="501" trl="Y">
@@ -150,13 +162,105 @@
   <value column="Name" original="Application Packaging">Empaquetado Aplicación</value>
   <value column="Description" original="Import and export packaging">Importa y exporta paquetes.</value>
  </row>
+ <row id="52001" trl="Y">
+  <value column="Name" original="Web POS">PDV Web</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53014" trl="Y">
+  <value column="Name" original="Manufacturing Management">Administración de Manufactura</value>
+  <value column="Description" original="Manufacturing">Administración de Manufactura</value>
+ </row>
+ <row id="53016" trl="Y">
+  <value column="Name" original="Engineering Management">Administración de Ingeniería</value>
+  <value column="Description" original="Engineering management involves the overall management of organizations with an orientation to manufacturing, engineering, technology or production.">Administración de Ingeniería involucra la administración global de las organizaciones con una orientación a la manufactura, ingeniería, tecnología o producción.</value>
+ </row>
+ <row id="53017" trl="Y">
+  <value column="Name" original="Resource Manufacturing">Recurso Manufactura</value>
+  <value column="Description" original="Resource Manufacturing">Recurso Manufactura</value>
+ </row>
+ <row id="53019" trl="Y">
+  <value column="Name" original="Manufacturing Workflow">Flujo de Trabajo Manufactura</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53022" trl="Y">
+  <value column="Name" original="Bill of Material &amp; Formulas" xml:space="preserve"><![CDATA[Lista de Materiales & Fórmulas]]></value>
+  <value column="Description" original="Bill of Material &amp; Formulas" xml:space="preserve"><![CDATA[Lista de Materiales & Fórmulas]]></value>
+ </row>
+ <row id="53029" trl="Y">
+  <value column="Name" original="Planning Management">Administración de Planeación</value>
+  <value column="Description" original="Using Planning Management you answer the question: When and How Many products we must get?">Usando la Administración de Planeación puede contestar la pregunta: ¿Cuándo y Cuántos productos debemos obtener?</value>
+ </row>
+ <row id="53031" trl="Y">
+  <value column="Name" original="Product Planning">Planeación Producto</value>
+  <value column="Description" original="Product Planning">Planeación Producto</value>
+ </row>
+ <row id="53034" trl="Y">
+  <value column="Name" original="MRP">MRP</value>
+  <value column="Description" original="Materials Requirements Planning">Planeación Requerimientos de Materiales</value>
+ </row>
+ <row id="53043" trl="Y">
+  <value column="Name" original="CRP">CRP</value>
+  <value column="Description" original="Capacity Requirements Planning">Planeación de Requerimientos de Capacidad</value>
+ </row>
+ <row id="53048" trl="Y">
+  <value column="Name" original="DRP">DRP</value>
+  <value column="Description" original="Distribution Resource Planning">Planeación de Distribución de Recursos</value>
+ </row>
+ <row id="53052" trl="Y">
+  <value column="Name" original="Production Management">Administración de Producción</value>
+  <value column="Description" original="Production Management">Administración de Producción</value>
+ </row>
+ <row id="53053" trl="Y">
+  <value column="Name" original="Discreet Manufacturing">Manufactura Discreta</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53061" trl="Y">
+  <value column="Name" original="Management Maintenance">Administración de Mantenimiento</value>
+  <value column="Description" original="Management Maintenance">Administración de Mantenimiento</value>
+ </row>
+ <row id="53063" trl="Y">
+  <value column="Name" original="Activity Control">Control de Piso</value>
+  <value column="Description" original="Activity Control">Control de Piso</value>
+ </row>
+ <row id="53066" trl="Y">
+  <value column="Name" original="Distribution Management">Administración de Distribución</value>
+  <value column="Description" original="Distribution Resource Planning (DRP) is a method used in business administration for planning orders within a supply chain. ">Planeación de Distribución de Recursos (DRP) es un método usado en administración de negocios para planeación de órdenes dentro de una cadena de suministros. </value>
+ </row>
+ <row id="53071" trl="Y">
+  <value column="Name" original="Quality Management">Administración de Calidad</value>
+  <value column="Description" original="Quality Management">Administración de Calidad</value>
+ </row>
+ <row id="53074" trl="Y">
+  <value column="Name" original="Standard Costing Management">Administración de Costeo Estándar</value>
+  <value column="Description" original="Standard Costing Management">Administración de Costeo Estándar</value>
+ </row>
+ <row id="53091" trl="Y">
+  <value column="Name" original="Global Tax Management">Administración de Impuestos Global</value>
+  <value column="Description" original=""/>
+ </row>
  <row id="53098" trl="Y">
   <value column="Name" original="Replication Data">Replicación de Datos</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53108" trl="Y">
+  <value column="Name" original="Human Resource &amp; Payroll">Nómina y Recursos Humanos</value>
+  <value column="Description" original="Human Resource &amp; Payroll">Nómina y Recursos Humanos</value>
+ </row>
+ <row id="53109" trl="Y">
+  <value column="Name" original="Human Resource">Recursos Humanos</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="53114" trl="Y">
+  <value column="Name" original="Payroll">Nómina</value>
   <value column="Description" original=""/>
  </row>
  <row id="53133" trl="Y">
   <value column="Name" original="Customer Service">Servicio al Cliente</value>
   <value column="Description" original="Customer Related Assets">Activos Relacionados con Clientes</value>
+ </row>
+ <row id="53136" trl="Y">
+  <value column="Name" original="Asset Revaluation">Revaluación Activos</value>
+  <value column="Description" original="Process Asset Revaluations">Procesar Revaluación Activos</value>
  </row>
  <row id="53139" trl="Y">
   <value column="Name" original="Asset Transactions ">Divisiones, Transferencias y Desechos</value>
@@ -173,6 +277,10 @@
  <row id="53171" trl="Y">
   <value column="Name" original="Depreciation Setup">Configuración Depreciación</value>
   <value column="Description" original="Applications to setup and maintain depreciation">Aplicación para configurar y mantener depreciaciones</value>
+ </row>
+ <row id="53180" trl="Y">
+  <value column="Name" original="Forecast Management">Administración de Pronóstico</value>
+  <value column="Description" original=""/>
  </row>
  <row id="53242" trl="Y">
   <value column="Name" original="Returns">Devoluciones</value>

@@ -107,6 +107,11 @@
   <value column="Description" original="Account Element">Elemento Contable</value>
   <value column="Help" original=""/>
  </row>
+ <row id="26" trl="Y">
+  <value column="Name" original="RowID">RowID</value>
+  <value column="Description" original="Row ID Data Type">Tipo de Datos de ID de fila</value>
+  <value column="Help" original=""/>
+ </row>
  <row id="27" trl="Y">
   <value column="Name" original="Color">Color</value>
   <value column="Description" original="Color element">Elemento de Color</value>
@@ -154,9 +159,7 @@
  </row>
  <row id="36" trl="Y">
   <value column="Name" original="Text Long">Texto Largo</value>
-  <value column="Description" original="Text (Long) - Text &gt; 2000 characters">
-   <![CDATA[Texto (Largo) - Texto > 2000 caracteres]]>
-  </value>
+  <value column="Description" original="Text (Long) - Text &gt; 2000 characters" xml:space="preserve"><![CDATA[Texto (Largo) - Texto > 2000 caracteres]]></value>
   <value column="Help" original=""/>
  </row>
  <row id="37" trl="Y">
@@ -791,6 +794,11 @@
  </row>
  <row id="234" trl="Y">
   <value column="Name" original="_Posted Status">_Posted Status</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="235" trl="Y">
+  <value column="Name" original="PA_Report AmountType (deprecated)">PA_Report AmountType (deprecated)</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
@@ -2050,16 +2058,12 @@
   <value column="Help" original="For now we only have implicit realtion types, i.e. the record pairs are defined by the rule itself. In future we would like to have explicit type also. An explizit type just defines a template, the actual pairs can be added by a user or by the system itself.">For now we only have implicit realtion types, i.e. the record pairs are defined by the rule itself. In future we would like to have explicit type also. An explizit type just defines a template, the actual pairs can be added by a user or by the system itself.</value>
  </row>
  <row id="53333" trl="Y">
-  <value column="Name" original="RelType C_Order (Sales) &lt;= C_Invoice_ID (Customer)">
-   <![CDATA[RelType C_Invoice_ID->C_Order]]>
-  </value>
+  <value column="Name" original="RelType C_Order (Sales) &lt;= C_Invoice_ID (Customer)" xml:space="preserve"><![CDATA[RelType C_Invoice_ID->C_Order]]></value>
   <value column="Description" original="Finds C_Order_IDs for a given C_Invoice_ID">Finds C_OrderIDs for a given C_Invoice_ID</value>
   <value column="Help" original=""/>
  </row>
  <row id="53334" trl="Y">
-  <value column="Name" original="RelType C_Invoice (Customer) &lt;= C_Order_ID (Sales)">
-   <![CDATA[RelType C_Order_ID->C_Invoice]]>
-  </value>
+  <value column="Name" original="RelType C_Invoice (Customer) &lt;= C_Order_ID (Sales)" xml:space="preserve"><![CDATA[RelType C_Order_ID->C_Invoice]]></value>
   <value column="Description" original="Finds C_Invoice_IDs for a given C_C_Order_ID"/>
   <value column="Help" original=""/>
  </row>
@@ -2074,30 +2078,22 @@
   <value column="Help" original=""/>
  </row>
  <row id="53345" trl="Y">
-  <value column="Name" original="RelType M_InOut (Shipment) &lt;= C_Invoice_ID (Customer)">
-   <![CDATA[RelType C_Invoice_ID->M_InOut]]>
-  </value>
+  <value column="Name" original="RelType M_InOut (Shipment) &lt;= C_Invoice_ID (Customer)" xml:space="preserve"><![CDATA[RelType C_Invoice_ID->M_InOut]]></value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
  <row id="53347" trl="Y">
-  <value column="Name" original="RelType M_InOut (Shipment) &lt;=  C_Order_ID">
-   <![CDATA[RelType C_Order->M_InOut]]>
-  </value>
+  <value column="Name" original="RelType M_InOut (Shipment) &lt;=  C_Order_ID" xml:space="preserve"><![CDATA[RelType C_Order->M_InOut]]></value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
  <row id="53348" trl="Y">
-  <value column="Name" original="RelType C_Invoice (Customer) &lt;= M_InOut_ID (Shipment)">
-   <![CDATA[RelType M_InOut_ID->C_Invoice]]>
-  </value>
+  <value column="Name" original="RelType C_Invoice (Customer) &lt;= M_InOut_ID (Shipment)" xml:space="preserve"><![CDATA[RelType M_InOut_ID->C_Invoice]]></value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
  <row id="53349" trl="Y">
-  <value column="Name" original="RelType C_Order (Sales) &lt;=  M_InOut_ID (Shipment)">
-   <![CDATA[RelType M_InOut_ID->C_Order]]>
-  </value>
+  <value column="Name" original="RelType C_Order (Sales) &lt;=  M_InOut_ID (Shipment)" xml:space="preserve"><![CDATA[RelType M_InOut_ID->C_Order]]></value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
@@ -2112,23 +2108,17 @@
   <value column="Help" original=""/>
  </row>
  <row id="53352" trl="Y">
-  <value column="Name" original="RelType C_BPartner &lt;= Vendor/Customer Return">
-   <![CDATA[RelType C_BPartner_ID->Customer_RMA]]>
-  </value>
+  <value column="Name" original="RelType C_BPartner &lt;= Vendor/Customer Return" xml:space="preserve"><![CDATA[RelType C_BPartner_ID->Customer_RMA]]></value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
  <row id="53353" trl="Y">
-  <value column="Name" original="RelType Customer Return &lt;= C_BPartner_ID">
-   <![CDATA[RelType Customer_RMA->C_BPartner_ID]]>
-  </value>
+  <value column="Name" original="RelType Customer Return &lt;= C_BPartner_ID" xml:space="preserve"><![CDATA[RelType Customer_RMA->C_BPartner_ID]]></value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
  <row id="53354" trl="Y">
-  <value column="Name" original="RelType Vendor Return &lt;= C_BPartner_ID">
-   <![CDATA[RelType Vendor_RMA <= C_BPartner_ID]]>
-  </value>
+  <value column="Name" original="RelType Vendor Return &lt;= C_BPartner_ID" xml:space="preserve"><![CDATA[RelType Vendor_RMA <= C_BPartner_ID]]></value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>

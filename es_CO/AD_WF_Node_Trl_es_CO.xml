@@ -108,19 +108,13 @@
   <value column="Help" original=""/>
  </row>
  <row id="50002" trl="Y">
-  <value column="Name" original="Bill of Material &amp; Formula Setup">
-   <![CDATA[Configuración List de Materiales & Fórmula]]>
-  </value>
+  <value column="Name" original="Bill of Material &amp; Formula Setup" xml:space="preserve"><![CDATA[Configuración List de Materiales & Fórmula]]></value>
   <value column="Description" original="Setup Manufacturing Management">Configuración Administración Manufactura</value>
   <value column="Help" original=""/>
  </row>
  <row id="50003" trl="Y">
-  <value column="Name" original="Warehouse &amp; Locators">
-   <![CDATA[Almacén & Ubicaciones]]>
-  </value>
-  <value column="Description" original="Warehouse &amp; Locators">
-   <![CDATA[Almacén & Ubicaciones]]>
-  </value>
+  <value column="Name" original="Warehouse &amp; Locators" xml:space="preserve"><![CDATA[Almacén & Ubicaciones]]></value>
+  <value column="Description" original="Warehouse &amp; Locators" xml:space="preserve"><![CDATA[Almacén & Ubicaciones]]></value>
   <value column="Help" original=""/>
  </row>
  <row id="50004" trl="Y">
@@ -264,26 +258,18 @@
   <value column="Help" original=""/>
  </row>
  <row id="50049" trl="Y">
-  <value column="Name" original="Multi Level BOM &amp; Formula Detail">
-   <![CDATA[Detalle LDM Multi Nivel & Fórmula]]>
-  </value>
+  <value column="Name" original="Multi Level BOM &amp; Formula Detail" xml:space="preserve"><![CDATA[Detalle LDM Multi Nivel & Fórmula]]></value>
   <value column="Description" original="Shows in two different panels the parent-component relationship for the product entered in the Product field.">Muestra en dos páneles diferentes la relación padre-componente para el producto ingresado en el campo Producto.</value>
   <value column="Help" original=""/>
  </row>
  <row id="50050" trl="Y">
-  <value column="Name" original="BOM &amp; Formula Info">
-   <![CDATA[Información LDM & Fórmula]]>
-  </value>
+  <value column="Name" original="BOM &amp; Formula Info" xml:space="preserve"><![CDATA[Información LDM & Fórmula]]></value>
   <value column="Description" original="Shows in two different panels the parent-component relationship for the product entered in the Product field.">Muestra en dos páneles diferentes la relación padre-componente para el producto ingresado en el campo Producto.</value>
   <value column="Help" original=""/>
  </row>
  <row id="50051" trl="Y">
-  <value column="Name" original="Bill of Materials &amp; Formula">
-   <![CDATA[Lista de Materiales & Fórmula]]>
-  </value>
-  <value column="Description" original="Maintain Product Bill of Materials &amp; Formula ">
-   <![CDATA[Mantiene Productos Lista de Materiales & Fórmula]]>
-  </value>
+  <value column="Name" original="Bill of Materials &amp; Formula" xml:space="preserve"><![CDATA[Lista de Materiales & Fórmula]]></value>
+  <value column="Description" original="Maintain Product Bill of Materials &amp; Formula " xml:space="preserve"><![CDATA[Mantiene Productos Lista de Materiales & Fórmula]]></value>
   <value column="Help" original=""/>
  </row>
  <row id="50052" trl="Y">
@@ -376,8 +362,58 @@
   <value column="Description" original="Replication Strategy">Estrategia Replicación</value>
   <value column="Help" original=""/>
  </row>
+ <row id="50074" trl="Y">
+  <value column="Name" original="Payroll">Nómina</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="50075" trl="Y">
+  <value column="Name" original="Payroll Concept Category">Categoría Concepto Nómina</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="50076" trl="Y">
+  <value column="Name" original="Payroll Contract">Contrato Nómina</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="50077" trl="Y">
+  <value column="Name" original="Payroll Process">Proceso Nómina</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="50078" trl="Y">
+  <value column="Name" original="Payroll Table">Lista Nómina</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="50079" trl="Y">
+  <value column="Name" original="Payroll Department">Departamento Nómina</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="50080" trl="Y">
+  <value column="Name" original="Payroll Employee">Empleado Nómina</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row id="50081" trl="Y">
   <value column="Name" original="Payroll Action Notice">Novedades de Nómina</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="50082" trl="Y">
+  <value column="Name" original="Payroll Table Type">Tipo Lista Nómina</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="50083" trl="Y">
+  <value column="Name" original="Payroll Job">Puesto Nómina</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="50084" trl="Y">
+  <value column="Name" original="Payroll Concept Catalog">Catálogo Conceptos Nómina</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
@@ -399,6 +435,11 @@
  <row id="50102" trl="Y">
   <value column="Name" original="(Start)">(Start)</value>
   <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="50103" trl="Y">
+  <value column="Name" original="Activation Approval">Aprobación Activo</value>
+  <value column="Description" original="Approve asset activation">Aprobación activo</value>
   <value column="Help" original=""/>
  </row>
  <row id="50104" trl="Y">

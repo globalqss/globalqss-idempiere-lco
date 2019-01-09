@@ -139,9 +139,7 @@
   <value column="MsgTip" original=""/>
  </row>
  <row id="135" trl="Y">
-  <value column="MsgText" original="&amp;Advanced">
-   <![CDATA[&Avanzado]]>
-  </value>
+  <value column="MsgText" original="&amp;Advanced" xml:space="preserve"><![CDATA[&Avanzado]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="136" trl="Y">
@@ -265,15 +263,11 @@
   <value column="MsgTip" original=""/>
  </row>
  <row id="166" trl="Y">
-  <value column="MsgText" original="&amp;Cancel">
-   <![CDATA[&Cancelar]]>
-  </value>
+  <value column="MsgText" original="&amp;Cancel" xml:space="preserve"><![CDATA[&Cancelar]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="167" trl="Y">
-  <value column="MsgText" original="&amp;Cancel Query">
-   <![CDATA[&Cancelar Consulta]]>
-  </value>
+  <value column="MsgText" original="&amp;Cancel Query" xml:space="preserve"><![CDATA[&Cancelar Consulta]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="168" trl="Y">
@@ -358,9 +352,7 @@ Por favor cambie la caja PDV solo después de completar la transacción</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="188" trl="Y">
-  <value column="MsgText" original="&amp;Copy Record">
-   <![CDATA[&Copiar registro]]>
-  </value>
+  <value column="MsgText" original="&amp;Copy Record" xml:space="preserve"><![CDATA[&Copiar registro]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="189" trl="Y">
@@ -465,9 +457,7 @@ Por favor cambie la caja PDV solo después de completar la transacción</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="214" trl="Y">
-  <value column="MsgText" original="&amp;Delete record">
-   <![CDATA[&Borrar registro]]>
-  </value>
+  <value column="MsgText" original="&amp;Delete record" xml:space="preserve"><![CDATA[&Borrar registro]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="215" trl="Y">
@@ -547,9 +537,7 @@ Por favor cambie la caja PDV solo después de completar la transacción</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="234" trl="Y">
-  <value column="MsgText" original="&amp;Edit">
-   <![CDATA[&Editar]]>
-  </value>
+  <value column="MsgText" original="&amp;Edit" xml:space="preserve"><![CDATA[&Editar]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="235" trl="Y">
@@ -593,9 +581,7 @@ Por favor cambie la caja PDV solo después de completar la transacción</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="245" trl="Y">
-  <value column="MsgText" original="&amp;Expand Tree">
-   <![CDATA[&Expandir árbol]]>
-  </value>
+  <value column="MsgText" original="&amp;Expand Tree" xml:space="preserve"><![CDATA[&Expandir árbol]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="246" trl="Y">
@@ -627,9 +613,7 @@ Por favor cambie la caja PDV solo después de completar la transacción</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="253" trl="Y">
-  <value column="MsgText" original="&amp;File">
-   <![CDATA[&Archivo]]>
-  </value>
+  <value column="MsgText" original="&amp;File" xml:space="preserve"><![CDATA[&Archivo]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="254" trl="Y">
@@ -649,9 +633,7 @@ Por favor cambie la caja PDV solo después de completar la transacción</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="258" trl="Y">
-  <value column="MsgText" original="&lt;Select File to Load&gt;">
-   <![CDATA[<Seleccionar Archivos a Cargar>]]>
-  </value>
+  <value column="MsgText" original="&lt;Select File to Load&gt;" xml:space="preserve"><![CDATA[<Seleccionar Archivos a Cargar>]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="259" trl="Y">
@@ -699,9 +681,7 @@ Por favor cambie la caja PDV solo después de completar la transacción</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="270" trl="Y">
-  <value column="MsgText" original="&amp;Lookup Record">
-   <![CDATA[&Encontrar registro]]>
-  </value>
+  <value column="MsgText" original="&amp;Lookup Record" xml:space="preserve"><![CDATA[&Encontrar registro]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="271" trl="Y">
@@ -757,9 +737,7 @@ Por favor cambie la caja PDV solo después de completar la transacción</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="284" trl="Y">
-  <value column="MsgText" original="&amp;Go">
-   <![CDATA[&Ir]]>
-  </value>
+  <value column="MsgText" original="&amp;Go" xml:space="preserve"><![CDATA[&Ir]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="285" trl="Y">
@@ -795,9 +773,7 @@ Por favor cambie la caja PDV solo después de completar la transacción</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="293" trl="Y">
-  <value column="MsgText" original="&amp;Home">
-   <![CDATA[&Inicio]]>
-  </value>
+  <value column="MsgText" original="&amp;Home" xml:space="preserve"><![CDATA[&Inicio]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="294" trl="Y">
@@ -850,6 +826,10 @@ Por favor cambie la caja PDV solo después de completar la transacción</value>
  </row>
  <row id="306" trl="Y">
   <value column="MsgText" original="Inserted">Insertado</value>
+  <value column="MsgTip" original=""/>
+ </row>
+ <row id="307" trl="Y">
+  <value column="MsgText" original="Generate Invoices (manual)">Generar Facturas (manual)</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="308" trl="Y">
@@ -957,9 +937,7 @@ Por favor cambie la caja PDV solo después de completar la transacción</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="334" trl="Y">
-  <value column="MsgText" original="&amp;Menu">
-   <![CDATA[&Menú]]>
-  </value>
+  <value column="MsgText" original="&amp;Menu" xml:space="preserve"><![CDATA[&Menú]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="335" trl="Y">
@@ -1009,9 +987,7 @@ Problema: </value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="346" trl="Y">
-  <value column="MsgText" original="&lt;Query active&gt; Navigate or Update record">
-   <![CDATA[<Consulta Activa> Navegue o actualice registro]]>
-  </value>
+  <value column="MsgText" original="&lt;Query active&gt; Navigate or Update record" xml:space="preserve"><![CDATA[<Consulta Activa> Navegue o actualice registro]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="347" trl="Y">
@@ -1091,9 +1067,7 @@ Problema: </value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="366" trl="Y">
-  <value column="MsgText" original="&amp;OK">
-   <![CDATA[&OK]]>
-  </value>
+  <value column="MsgText" original="&amp;OK" xml:space="preserve"><![CDATA[&OK]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="367" trl="Y">
@@ -1137,9 +1111,7 @@ Problema: </value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="377" trl="Y">
-  <value column="MsgText" original="{0,choice,0#No Lines|1#1 Line|1&lt;{0} Lines} - {1,number,#,##0.00} - Total: {2,number,#,##0.00} {3} = {4,number,#,##0.00}">
-   <![CDATA[{0,choice,0#No hay líneas|1#1 Línea|1<{0} Líneas} - {1,number,#,##0.00} - Total: {2,number,#,##0.00} {3} = {4,number,#,##0.00}]]>
-  </value>
+  <value column="MsgText" original="{0,choice,0#No Lines|1#1 Line|1&lt;{0} Lines} - {1,number,#,##0.00} - Total: {2,number,#,##0.00} {3} = {4,number,#,##0.00}" xml:space="preserve"><![CDATA[{0,choice,0#No hay líneas|1#1 Línea|1<{0} Líneas} - {1,number,#,##0.00} - Total: {2,number,#,##0.00} {3} = {4,number,#,##0.00}]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="378" trl="Y">
@@ -1332,9 +1304,7 @@ Entre el pago después de completar la transacción</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="425" trl="Y">
-  <value column="MsgText" original="&amp;Print">
-   <![CDATA[&Imprimir]]>
-  </value>
+  <value column="MsgText" original="&amp;Print" xml:space="preserve"><![CDATA[&Imprimir]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="426" trl="Y">
@@ -1527,9 +1497,7 @@ Entre el pago después de completar la transacción</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="473" trl="Y">
-  <value column="MsgText" original="&amp;Report">
-   <![CDATA[&Informe]]>
-  </value>
+  <value column="MsgText" original="&amp;Report" xml:space="preserve"><![CDATA[&Informe]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="474" trl="Y">
@@ -1633,9 +1601,7 @@ Detalles: </value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="497" trl="Y">
-  <value column="MsgText" original="&amp;Save changes">
-   <![CDATA[&Guardar cambios]]>
-  </value>
+  <value column="MsgText" original="&amp;Save changes" xml:space="preserve"><![CDATA[&Guardar cambios]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="498" trl="Y">
@@ -1723,9 +1689,7 @@ Detalles: </value>
   <value column="MsgTip" original="Match all search criteria"/>
  </row>
  <row id="519" trl="Y">
-  <value column="MsgText" original="Search for using All criteria (AND) - or Any criteria (OR)">
-   <![CDATA[Buscar usando Todos los criterios (habilitado -> Y) - o Cualquier criterio (deshabilitado -> O)]]>
-  </value>
+  <value column="MsgText" original="Search for using All criteria (AND) - or Any criteria (OR)" xml:space="preserve"><![CDATA[Buscar usando Todos los criterios (habilitado -> Y) - o Cualquier criterio (deshabilitado -> O)]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="520" trl="Y">
@@ -1917,9 +1881,7 @@ Detalles: </value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="567" trl="Y">
-  <value column="MsgText" original="&amp;Tools">
-   <![CDATA[&Herramientas]]>
-  </value>
+  <value column="MsgText" original="&amp;Tools" xml:space="preserve"><![CDATA[&Herramientas]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="568" trl="Y">
@@ -2020,9 +1982,7 @@ Detalles: </value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="592" trl="Y">
-  <value column="MsgText" original="&amp;Key">
-   <![CDATA[&Código]]>
-  </value>
+  <value column="MsgText" original="&amp;Key" xml:space="preserve"><![CDATA[&Código]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="593" trl="Y">
@@ -2102,9 +2062,7 @@ Detalles: </value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="612" trl="Y">
-  <value column="MsgText" original="&amp;Warehouse">
-   <![CDATA[&Almacén]]>
-  </value>
+  <value column="MsgText" original="&amp;Warehouse" xml:space="preserve"><![CDATA[&Almacén]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="613" trl="Y">
@@ -2735,15 +2693,11 @@ Gracias por utilizar el Administrador de Activos de Cliente de iDempiere
   <value column="MsgTip" original=""/>
  </row>
  <row id="777" trl="Y">
-  <value column="MsgText" original="&amp;Product">
-   <![CDATA[&Producto]]>
-  </value>
+  <value column="MsgText" original="&amp;Product" xml:space="preserve"><![CDATA[&Producto]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="778" trl="Y">
-  <value column="MsgText" original="&amp;Business Partner">
-   <![CDATA[&Tercero]]>
-  </value>
+  <value column="MsgText" original="&amp;Business Partner" xml:space="preserve"><![CDATA[&Tercero]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="779" trl="Y">
@@ -2792,10 +2746,8 @@ Gracias por utilizar el Administrador de Activos de Cliente de iDempiere
  </row>
  <row id="790" trl="Y">
   <value column="MsgText" original="The Product UoM needs to be the smallest UoM">La UM del producto debe ser la unidad menor</value>
-  <value column="MsgTip" original="Divide Rate  must be &gt;= 1 and always result in a valid UoM unit. &#10;Example: To convert Each to Pair, the Multiply Rate is 0.5">
-   <![CDATA[La tasa de división debe ser >=1 y siempre resultar en una UM válida. 
-Ejemplo: Para convertir Cada a Par, la tasa de multiplicación es 0.5M más pequeña]]>
-  </value>
+  <value column="MsgTip" original="Divide Rate  must be &gt;= 1 and always result in a valid UoM unit. &#10;Example: To convert Each to Pair, the Multiply Rate is 0.5" xml:space="preserve"><![CDATA[La tasa de división debe ser >=1 y siempre resultar en una UM válida. 
+Ejemplo: Para convertir Cada a Par, la tasa de multiplicación es 0.5M más pequeña]]></value>
  </row>
  <row id="791" trl="Y">
   <value column="MsgText" original="Select the Product UoM as the From Unit of Measure:">Selecciona UM del producto como la unidad de medida origen</value>
@@ -3072,9 +3024,7 @@ Compruebe el registro de errores y el formato del archivo Accounting*.cvs - Ning
   <value column="MsgTip" original=""/>
  </row>
  <row id="859" trl="Y">
-  <value column="MsgText" original="&amp;Workflow">
-   <![CDATA[&Flujo de Trabajo]]>
-  </value>
+  <value column="MsgText" original="&amp;Workflow" xml:space="preserve"><![CDATA[&Flujo de Trabajo]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="860" trl="Y">
@@ -3090,15 +3040,11 @@ Compruebe el registro de errores y el formato del archivo Accounting*.cvs - Ning
   <value column="MsgTip" original=""/>
  </row>
  <row id="863" trl="Y">
-  <value column="MsgText" original="&amp;OK">
-   <![CDATA[&OK]]>
-  </value>
+  <value column="MsgText" original="&amp;OK" xml:space="preserve"><![CDATA[&OK]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="864" trl="Y">
-  <value column="MsgText" original="&amp;Document No">
-   <![CDATA[&Documento No.]]>
-  </value>
+  <value column="MsgText" original="&amp;Document No" xml:space="preserve"><![CDATA[&Documento No.]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="865" trl="Y">
@@ -3106,9 +3052,7 @@ Compruebe el registro de errores y el formato del archivo Accounting*.cvs - Ning
   <value column="MsgTip" original="Cache Window Definitions on Client">Definición del Caché de Ventana en Grupo Empresarial</value>
  </row>
  <row id="866" trl="Y">
-  <value column="MsgText" original="&amp;Performance">
-   <![CDATA[&Desempeño]]>
-  </value>
+  <value column="MsgText" original="&amp;Performance" xml:space="preserve"><![CDATA[&Desempeño]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="867" trl="Y">
@@ -4017,9 +3961,7 @@ Compruebe el registro de errores y el formato del archivo Accounting*.cvs - Ning
   <value column="MsgTip" original=" "/>
  </row>
  <row id="52188" trl="Y">
-  <value column="MsgText" original="This utility is to import the products and Stock in Hand from a csv file into the system,&lt;br&gt; For importing the garment products, the CSV file name should containg the word 'Garment' &lt;br&gt;The csv file should look like the one shown below including the header">
-   <![CDATA[Esta utilidad sirve para importar productos y existencias desde un archivo CSV dentro del sistema, para importar los productos de ropa, el nombre del archivo CSV debe contener la palabra "Prenda" <br>El archivo csv debería aparecer como el mostrado a continuación, incluyendo la cabecera.]]>
-  </value>
+  <value column="MsgText" original="This utility is to import the products and Stock in Hand from a csv file into the system,&lt;br&gt; For importing the garment products, the CSV file name should containg the word 'Garment' &lt;br&gt;The csv file should look like the one shown below including the header" xml:space="preserve"><![CDATA[Esta utilidad sirve para importar productos y existencias desde un archivo CSV dentro del sistema, para importar los productos de ropa, el nombre del archivo CSV debe contener la palabra "Prenda" <br>El archivo csv debería aparecer como el mostrado a continuación, incluyendo la cabecera.]]></value>
   <value column="MsgTip" original=" "/>
  </row>
  <row id="52189" trl="Y">
@@ -6197,9 +6139,7 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="200152" trl="Y">
-  <value column="MsgText" original="Csv file must not contain '&gt;' in header record {0}. ">
-   <![CDATA[Archivo CSV no debe contener '>' en el registro encabezado {0}. ]]>
-  </value>
+  <value column="MsgText" original="Csv file must not contain '&gt;' in header record {0}. " xml:space="preserve"><![CDATA[Archivo CSV no debe contener '>' en el registro encabezado {0}. ]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="200153" trl="Y">
@@ -6207,9 +6147,7 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="200154" trl="Y">
-  <value column="MsgText" original="Wrong detail name{0}, it must contain the character '&gt;':{1} ">
-   <![CDATA[Nombre detalle incorrecto {0}, debe contener el caracter '>':{1} ]]>
-  </value>
+  <value column="MsgText" original="Wrong detail name{0}, it must contain the character '&gt;':{1} " xml:space="preserve"><![CDATA[Nombre detalle incorrecto {0}, debe contener el caracter '>':{1} ]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="200155" trl="Y">
@@ -6601,9 +6539,7 @@ Por favor contacte al ADMINISTRADOR.</value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="200274" trl="Y">
-  <value column="MsgText" original="Your search returned more than the maximum number of results allowed.&lt;br&gt;Please narrow down your search criteria and try your search again.">
-   <![CDATA[Su búsqueda resultó en más registros que el máximo permitido.<br>Por favor delimite su criterio de búsqueda e intente nuevamente.]]>
-  </value>
+  <value column="MsgText" original="Your search returned more than the maximum number of results allowed.&lt;br&gt;Please narrow down your search criteria and try your search again." xml:space="preserve"><![CDATA[Su búsqueda resultó en más registros que el máximo permitido.<br>Por favor delimite su criterio de búsqueda e intente nuevamente.]]></value>
   <value column="MsgTip" original=""/>
  </row>
  <row id="200275" trl="Y">

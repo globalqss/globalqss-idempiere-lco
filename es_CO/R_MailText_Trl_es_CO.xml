@@ -15,8 +15,7 @@ Los mejores deseos,
   <value column="MailText3" original=""/>
  </row>
  <row id="200000" trl="Y">
-  <value column="MailText" original="Dear @Name@,&#10;&#10;You are receiving this email because you (or somebody pretending to be you) said you have lost your iDempiere password.&#10;&#10;To access your iDempiere, use the temporary password from @AD_Client_ID&lt;Name&gt;@ below:&#10;@#NewPassword@&#10;&#10;Once you login, you will be directed to change password screen. Please change your password to something you can remember.&#10;&#10;Sincerely,&#10;The iDempiere Accounts Team&#10;&#10;Note: This email address cannot accept replies.">
-   <![CDATA[Estimado @Name@,
+  <value column="MailText" original="Dear @Name@,&#10;&#10;You are receiving this email because you (or somebody pretending to be you) said you have lost your iDempiere password.&#10;&#10;To access your iDempiere, use the temporary password from @AD_Client_ID&lt;Name&gt;@ below:&#10;@#NewPassword@&#10;&#10;Once you login, you will be directed to change password screen. Please change your password to something you can remember.&#10;&#10;Sincerely,&#10;The iDempiere Accounts Team&#10;&#10;Note: This email address cannot accept replies." xml:space="preserve"><![CDATA[Estimado @Name@,
 
 Le estamos enviando este correo debido a que usted (o alguien pretendiendo ser usted) manifestó haber perdido su clave para ingresar a iDempiere.
 
@@ -28,8 +27,7 @@ Una vez ingrese será redireccionado a una pantalla para cambio de clave, por fa
 Cordialmente,
 El equipo de iDempiere
 
-NOTA: Esta dirección de correo no procesa respuestas.]]>
-  </value>
+NOTA: Esta dirección de correo no procesa respuestas.]]></value>
   <value column="Name" original="Reset Password">Reinicio clave</value>
   <value column="MailHeader" original="iDempiere Reset Password ">Reinicio clave iDempiere</value>
   <value column="MailText2" original=""/>
