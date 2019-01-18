@@ -18,5 +18,5 @@ Import-Package: org.osgi.service.event
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .
 Automatic-Module-Name: org.globalqss.idempiere.LCO.detailednames
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Comment: Bundle-RequiredExecutionEnvironment: JavaSE-11
 Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version>=1.11))"
