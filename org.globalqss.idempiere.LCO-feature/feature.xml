@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="org.globalqss.idempiere.LCO"
+      id="org.globalqss.idempiere.LCO.feature"
       label="LCO-feature"
       version="6.2.0.qualifier"
       provider-name="GlobalQSS">
