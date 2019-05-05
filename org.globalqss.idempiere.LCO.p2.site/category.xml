@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-    <category-def name="all" label="Maven osgi-bundles"/>
-    <iu>
-        <category name="all"/>
-        <query>
-            <expression type="match">providedCapabilities.exists(p | p.namespace == 'osgi.bundle')</expression>
-        </query>
-    </iu>
+    <feature url="features/org.globalqss.idempiere.LCO-feature_6.2.0.qualifier.jar" id="org.globalqss.idempiere.LCO.feature" version="6.2.0.qualifier">
+	    <category name="org.globalqss.idempiere.LCO"/>
+    </feature>
 </site>
