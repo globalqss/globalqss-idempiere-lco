@@ -277,8 +277,10 @@ public class LCO_DianExportXML  extends SvrProcess {
 					if (bp == null
 							&& (   printLb.equals("tdoc")
 								|| printLb.equals("tdoce")
+								|| printLb.equals("tdocb")
 								|| printLb.equals("nid")
 								|| printLb.equals("nite")
+								|| printLb.equals("nitb")
 								|| printLb.equals("dv")
 								|| printLb.equals("apl1")
 								|| printLb.equals("pap")
@@ -314,12 +316,12 @@ public class LCO_DianExportXML  extends SvrProcess {
 					if (printLb.equals("cpt") || printLb.equals("ctp") || printLb.equals("top")) {
 						// Concepto ( Siempre debe diligenciarse )
 						add_Attribute(atts, printLb, concept.getValue(), line_id, true);
-					} else if (printLb.equals("tdoc") || printLb.equals("tdoce")) {
+					} else if (printLb.equals("tdoc") || printLb.equals("tdoce") || printLb.equals("tdocb")) {
 						//Tipo de Documento ( Siempre debe diligenciarse )
 						add_Attribute(atts, printLb, getTdoc(dssl.getC_BPartner_ID()), line_id, true);
 					} else if (printLb.equals("tdocm")) {
 						add_Attribute(atts, printLb, getTdoc(dssl.getC_BPartnerRelation_ID()), line_id, true);
-					} else if (printLb.equals("nid") || printLb.equals("nite")) {
+					} else if (printLb.equals("nid") || printLb.equals("nite") || printLb.equals("nitb")) {
 						//Número de Identificación ( Siempre debe diligenciarse )
 						add_Attribute(atts, printLb, bp.getTaxID(), line_id, true);
 					} else if (printLb.equals("nitm")) {
