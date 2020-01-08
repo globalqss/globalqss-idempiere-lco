@@ -2,7 +2,7 @@
 <feature
       id="org.globalqss.idempiere.LCO.feature"
       label="LCO-feature"
-      version="6.2.0.qualifier"
+      version="7.1.0.qualifier"
       provider-name="GlobalQSS">
 
    <description>
