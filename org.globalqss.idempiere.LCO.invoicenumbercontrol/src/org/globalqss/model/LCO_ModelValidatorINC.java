@@ -304,7 +304,7 @@ public class LCO_ModelValidatorINC extends AbstractEventHandler
 		if (cpf.getC_DocTypeTarget_ID() <= 0 && !cpf.isWithholding())
 			return Msg.getMsg(cpf.getCtx(), "LCO_TypeOfPrintedFormControlRequired");
 
-		if (prefixLengthEntered != prefixLengthExpected && isPrefixMandatory)
+		if (prefixLengthEntered > prefixLengthExpected && isPrefixMandatory)
 			return Msg.getMsg(cpf.getCtx(), "LCO_PrefixLengthInadequate");
 
 		if (cpf.is_ValueChanged("InitialSequence") || cpf.is_ValueChanged("FinalSequence") || (cpf.is_ValueChanged("IsActive") && cpf.isActive())) {
