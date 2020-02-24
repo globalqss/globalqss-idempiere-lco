@@ -395,7 +395,8 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 					pay.getC_Invoice_ID());
 			if (sumwhamt == null)
 				sumwhamt = Env.ZERO;
-			if (MInvoice.get(pay.getCtx(), pay.getC_Invoice_ID()).isCreditMemo())
+			MInvoice invoice = new MInvoice(pay.getCtx(), pay.getC_Invoice_ID(), pay.get_TrxName());
+			if (invoice.isCreditMemo())
 				sumwhamt = sumwhamt.negate();
 			if (wo.compareTo(sumwhamt) < 0 && sumwhamt.compareTo(Env.ZERO) != 0)
 				return Msg.getMsg(pay.getCtx(), "LCO_WriteOffLowerThanWithholdings");
@@ -427,7 +428,8 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 							pal.getC_Invoice_ID());
 					if (sumwhamt == null)
 						sumwhamt = Env.ZERO;
-					if (MInvoice.get(pay.getCtx(), pal.getC_Invoice_ID()).isCreditMemo())
+					MInvoice invoice = new MInvoice(pay.getCtx(), pal.getC_Invoice_ID(), pay.get_TrxName());
+					if (invoice.isCreditMemo())
 						sumwhamt = sumwhamt.negate();
 					if (wo.compareTo(sumwhamt) < 0 && sumwhamt.compareTo(Env.ZERO) != 0)
 						return Msg.getMsg(pay.getCtx(), "LCO_WriteOffLowerThanWithholdings");
