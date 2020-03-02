@@ -68,9 +68,9 @@ public class LCO_Utils
 
 	public static final String SPACE = " ";
 	public static String getFullName(String fn1, String fn2, String ln1, String ln2, int AD_Client_ID) {
-		StringBuffer fullFirstNames = new StringBuffer();
-		StringBuffer fullLastNames = new StringBuffer();
-		StringBuffer fullName = new StringBuffer();
+		StringBuilder fullFirstNames = new StringBuilder();
+		StringBuilder fullLastNames = new StringBuilder();
+		StringBuilder fullName = new StringBuilder();
 
 		if (fn1 != null && fn1.trim().length() > 0)
 			fullFirstNames.append(fn1.trim());
