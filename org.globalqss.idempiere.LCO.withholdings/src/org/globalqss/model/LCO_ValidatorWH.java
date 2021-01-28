@@ -173,13 +173,10 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 						 + " FROM LCO_InvoiceWithholding "
 						+ " WHERE C_Invoice_ID = ? "
 						+ " ORDER BY LCO_InvoiceWithholding_ID";
-					PreparedStatement pstmt = null;
-					ResultSet rs = null;
-					try
+					try (PreparedStatement pstmt = DB.prepareStatement(sql, inv.get_TrxName());)
 					{
-						pstmt = DB.prepareStatement(sql, inv.get_TrxName());
 						pstmt.setInt(1, invreverted.getC_Invoice_ID());
-						rs = pstmt.executeQuery();
+						ResultSet rs = pstmt.executeQuery();
 						while (rs.next()) {
 							MLCOInvoiceWithholding iwh = new MLCOInvoiceWithholding(inv.getCtx(), rs.getInt(1), inv.get_TrxName());
 							MLCOInvoiceWithholding newiwh = new MLCOInvoiceWithholding(inv.getCtx(), 0, inv.get_TrxName());
@@ -200,9 +197,6 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 					} catch (Exception e) {
 						log.log(Level.SEVERE, sql, e);
 						throw new RuntimeException("Error creating LCO_InvoiceWithholding for reversal invoice");
-					} finally {
-						DB.close(rs, pstmt);
-						rs = null; pstmt = null;
 					}
 				} else {
 					throw new RuntimeException("Can't get the number of the invoice reversed");
