@@ -25,11 +25,14 @@
 
 package org.globalqss.model;
 
+import java.io.IOException;
+import java.math.BigDecimal;
 import java.sql.ResultSet;
 import java.util.Properties;
 
 import org.compiere.model.MInvoice;
 import org.compiere.util.CLogger;
+import org.compiere.util.DB;
 
 /**
  *	Invoice Withholding Model
@@ -68,6 +71,18 @@ public class MLCOInvoiceWithholding extends X_LCO_InvoiceWithholding
 	{
 		super(ctx, rs, trxName);
 	}	//	MLCOInvoiceWithholding
+	
+	
+	public static BigDecimal getWithholdingAmt(MInvoice invoice) throws IOException {
+		
+		String SQL = "SELECT COALESCE(SUM(TaxAmt),0) " 
+				   + "FROM LCO_InvoiceWithholding iw " 
+				   + "WHERE AD_Client_ID = ? AND C_Invoice_ID = ? ";
+		
+		BigDecimal WithholdingAmt = DB.getSQLValueBD(invoice.get_TrxName(), SQL, new Object[] {invoice.getAD_Client_ID(), invoice.getC_Invoice_ID()});
+		return WithholdingAmt;
+	}
+	
 
 	/**************************************************************************
 	 * 	Before Save
