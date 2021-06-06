@@ -421,11 +421,20 @@ public class LCO_DianExportXML  extends SvrProcess {
 						//País de Residencia o domicilio
 						//Siempre debe diligenciarse
 						add_Attribute(atts, printLb, getPais(loc.getC_Country_ID()), line_id, true);
+					} else if (printLb.equals("identfc") || printLb.equals("nitpcc") || printLb.equals("tdocpcc")) {
+						// TODO:
+						//  identfc -> Identificación del fideicomiso o contrato
+						//    Si es una operación reportada por la sociedad fiduciaria en virtud de un fideicomiso, se debe diligenciar
+						//  tdocpcc -> Tipo documento participante en contrato de colaboración.
+						//    Si es una operación reportada por un Contrato de Colaboración se debe diligenciar
+						//  nitpcc -> Identificación participante en contrato colaboración
+						//    Si es una operación reportada por un Contrato de Colaboración se debe diligenciar.
+						add_Attribute(atts, printLb, null, line_id, false);
 					} else {
-						// Fin de las 13 columnas hardcoded
+						// Fin de las 36 columnas hardcoded
 						// Label de una columna calculada
 						int col = fieldFormat.getCalcColumnPosition();
-						if (col < 1 || col > 20)
+						if (col < 1 || col > 50)
 							throw new AdempiereUserError(label + " col not valid (" + col + ") in line " + line_id);
 						BigDecimal amt = (BigDecimal) dssl.get_Value("FieldAmt"+col);
 						if (amt == null)
