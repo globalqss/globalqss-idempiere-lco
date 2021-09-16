@@ -334,9 +334,11 @@ public class LCO_MInvoice extends MInvoice
 						base.compareTo(Env.ZERO) != 0 &&
 						base.compareTo(wc.getThresholdmin()) >= 0 &&
 						(wc.getThresholdMax() == null || wc.getThresholdMax().compareTo(Env.ZERO) == 0 || base.compareTo(wc.getThresholdMax()) <= 0) &&
-						tax.getRate() != null &&
-						tax.getRate().compareTo(Env.ZERO) != 0) {
-
+						tax.getRate() != null) {
+					
+					if (tax.getRate().signum() == 0 && !wc.isApplyOnZero())
+						continue;
+						
 					// insert new withholding record
 					// with: type, tax, base amt, percent, tax amt, trx date, acct date, rule
 					MLCOInvoiceWithholding iwh = new MLCOInvoiceWithholding(getCtx(), 0, get_TrxName());
@@ -344,7 +346,7 @@ public class LCO_MInvoice extends MInvoice
 					iwh.setC_Invoice_ID(getC_Invoice_ID());
 					iwh.setDateAcct(getDateAcct());
 					iwh.setDateTrx(getDateInvoiced());
-					iwh.setIsCalcOnPayment( ! wc.isCalcOnInvoice() );
+					iwh.setIsCalcOnPayment( ! wc.isCalcOnInvoice());
 					iwh.setIsTaxIncluded(false);
 					iwh.setLCO_WithholdingRule_ID(wr.getLCO_WithholdingRule_ID());
 					iwh.setLCO_WithholdingType_ID(wt.getLCO_WithholdingType_ID());

@@ -369,4 +369,23 @@ public class X_LCO_WithholdingCalc extends PO implements I_LCO_WithholdingCalc, 
 			 return Env.ZERO;
 		return bd;
 	}
+
+	@Override
+	public boolean isApplyOnZero() {
+		Object oo = get_Value(COLUMNNAME_IsApplyOnZero);
+		if (oo != null) 
+		{
+			 if (oo instanceof Boolean) 
+				 return ((Boolean)oo).booleanValue(); 
+			return "Y".equals(oo);
+		}
+		return false;
+	}
+
+	@Override
+	public void setIsApplyOnZero(boolean IsApplyOnZero) {
+		
+		set_Value (COLUMNNAME_IsApplyOnZero, Boolean.valueOf(IsApplyOnZero));
+	
+	}
 }

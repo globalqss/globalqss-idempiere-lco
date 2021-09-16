@@ -260,4 +260,18 @@ public interface I_LCO_WithholdingCalc
 	  * User who updated this records
 	  */
 	public int getUpdatedBy();
+	
+	/** Column name IsApplyOnZero */
+	public static final String COLUMNNAME_IsApplyOnZero = "IsApplyOnZero";
+	
+	/** IsApply On Zero.
+	  * 
+	  */
+	public boolean isApplyOnZero();	
+	
+	/** Set IsApplyOnZero.
+	  * Apply Withholding Calc on Zero
+	  */
+	public void setIsApplyOnZero (boolean IsApplyOnZero);
+	
 }
