@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Localization Colombia - Withholdings
-Bundle-SymbolicName: org.globalqss.idempiere.LCO.withholdings;singleton:=true
+Bundle-SymbolicName: org.globalqss.idempiere.LCO.withholdings
 Bundle-Version: 8.2.0.qualifier
 Bundle-Activator: org.adempiere.plugin.utils.Incremental2PackActivator
 Bundle-Vendor: GlobalQSS
