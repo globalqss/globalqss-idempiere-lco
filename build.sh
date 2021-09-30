@@ -5,6 +5,7 @@ mvn verify -Didempiere.target=org.globalqss.idempiere.LCO.p2.targetplatform
 #   org.globalqss.idempiere.LCO.p2.site/pom.xml
 #   org.globalqss.idempiere.LCO.p2.targetplatform/pom.xml
 #   org.globalqss.idempiere.LCO.detailednames/pom.xml
+#   org.globalqss.idempiere.LCO.electronicinvoice/pom.xml
 #   org.globalqss.idempiere.LCO-feature/pom.xml
 #   org.globalqss.idempiere.LCO.invoicenumbercontrol/pom.xml
 #   org.globalqss.idempiere.LCO.magneticmedia/pom.xml
