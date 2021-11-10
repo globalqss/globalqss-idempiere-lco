@@ -12,6 +12,7 @@ mvn verify -Didempiere.target=org.globalqss.idempiere.LCO.p2.targetplatform
 	<modules>
 		<module>org.globalqss.idempiere.LCO.detailednames</module>
 		<module>org.globalqss.idempiere.LCO.firstname</module>
+		<module>org.globalqss.idempiere.LCO.firstnamecontact</module>
 		<module>org.globalqss.idempiere.LCO.withholdings</module>
 		<module>org.globalqss.idempiere.LCO.magneticmedia</module>
 		<module>org.globalqss.idempiere.LCO.electronicinvoice</module>
