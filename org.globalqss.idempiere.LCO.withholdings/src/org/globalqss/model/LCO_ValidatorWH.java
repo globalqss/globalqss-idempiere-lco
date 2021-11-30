@@ -463,8 +463,8 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 						MLCOInvoiceWithholding iwh = new MLCOInvoiceWithholding(
 								ah.getCtx(), iwhid, ah.get_TrxName());
 						iwh.setC_AllocationLine_ID(al.getC_AllocationLine_ID());
-						iwh.setDateAcct(ah.getDateAcct());
-						iwh.setDateTrx(ah.getDateTrx());
+						//iwh.setDateAcct(ah.getDateAcct());
+						//iwh.setDateTrx(ah.getDateTrx());
 						iwh.setProcessed(true);
 						if (!iwh.save())
 							return "Error saving LCO_InvoiceWithholding completePaymentWithholdings";
