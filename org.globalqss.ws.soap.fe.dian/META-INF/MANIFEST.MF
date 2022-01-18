@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Client Proxy Service
+Bundle-SymbolicName: org.globalqss.ws.soap.fe.dian
+Bundle-Version: 8.2.0.qualifier
+Automatic-Module-Name: org.globalqss.ws.soap.fe.dian
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Import-Package: javax.jws,
+ javax.xml.bind,
+ javax.xml.bind.annotation,
+ javax.xml.ws
+Export-Package: colombia.dian.wcf,
+ com.microsoft.schemas._2003._10.serialization,
+ com.microsoft.schemas._2003._10.serialization.arrays,
+ org.datacontract.schemas._2004._07.dianresponse,
+ org.datacontract.schemas._2004._07.eventresponse,
+ org.datacontract.schemas._2004._07.exchangeemailresponse,
+ org.datacontract.schemas._2004._07.numberrangeresponse,
+ org.datacontract.schemas._2004._07.numberrangeresponselist,
+ org.datacontract.schemas._2004._07.uploaddocumentresponse,
+ org.datacontract.schemas._2004._07.xmlparamsresponsetrackid
+Bundle-ClassPath: .
