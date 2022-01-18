@@ -431,8 +431,8 @@
   <value column="Description" original="Invoice per Customer Invoice Schedule">Factura según el programa de Facturación del Cliente</value>
  </row>
  <row id="217" trl="Y">
-  <value column="Name" original="After Receipt">Después del cobro</value>
-  <value column="Description" original="After receipt of cash">Después del cobro</value>
+  <value column="Name" original="After Payment">Después del cobro</value>
+  <value column="Description" original="After full payment has been received for the order">Después del cobro</value>
  </row>
  <row id="218" trl="Y">
   <value column="Name" original="Availability">Disponibilidad</value>
@@ -5462,9 +5462,25 @@
   <value column="Name" original="Detail">Detalle</value>
   <value column="Description" original=""/>
  </row>
+ <row id="200344" trl="Y">
+  <value column="Name" original="Material Management System">Sistema de Administración de Materiales</value>
+  <value column="Description" original=""/>
+ </row>
  <row id="200345" trl="Y">
   <value column="Name" original="Payment">Pago</value>
   <value column="Description" original=""/>
+ </row>
+ <row id="200347" trl="Y">
+  <value column="Name" original="Form">Forma</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200348" trl="Y">
+  <value column="Name" original="Sort">Ordenar</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200352" trl="Y">
+  <value column="Name" original="Reference">Referencia</value>
+  <value column="Description" original="Reference">Referencia</value>
  </row>
  <row id="200356" trl="Y">
   <value column="Name" original="SQL Mandatory">SQL Obligatorio</value>
@@ -5478,9 +5494,21 @@
   <value column="Name" original="Field">Campo</value>
   <value column="Description" original=""/>
  </row>
+ <row id="200374" trl="Y">
+  <value column="Name" original="Code 39 with Checksum">Código 39 con Checksum</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200375" trl="Y">
+  <value column="Name" original="Code 39 w/o Checksum">Código 39 sin Checksum</value>
+  <value column="Description" original=""/>
+ </row>
  <row id="200376" trl="Y">
   <value column="Name" original="Manual">Manual</value>
   <value column="Description" original="Manual List">Lista Manual</value>
+ </row>
+ <row id="200396" trl="Y">
+  <value column="Name" original="QR Code">Código QR</value>
+  <value column="Description" original=""/>
  </row>
  <row id="200438" trl="Y">
   <value column="Name" original="Force Background">Forzar ejecución en el fondo</value>
@@ -5504,6 +5532,230 @@
  </row>
  <row id="200448" trl="Y">
   <value column="Name" original="Deferred">Pospuesto</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200457" trl="Y">
+  <value column="Name" original="WebUI">WebUI</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200458" trl="Y">
+  <value column="Name" original="WebService">WebService</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200459" trl="Y">
+  <value column="Name" original="System Support">Soporte del Sistema</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200460" trl="Y">
+  <value column="Name" original="Mobile">Móvil</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200461" trl="Y">
+  <value column="Name" original="Swing">Swing</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200462" trl="Y">
+  <value column="Name" original="External App 1">Aplicación Externa 1</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200463" trl="Y">
+  <value column="Name" original="External App 2">Aplicación Externa 2</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200464" trl="Y">
+  <value column="Name" original="External App 3">Aplicación Externa 3</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200465" trl="Y">
+  <value column="Name" original="External App 4">Aplicación Externa 4</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200466" trl="Y">
+  <value column="Name" original="External App 5">Aplicación Externa 5</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200467" trl="Y">
+  <value column="Name" original="Delete">Borrar</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200468" trl="Y">
+  <value column="Name" original="Deactivate">Inactivar</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200469" trl="Y">
+  <value column="Name" original="Activate">Activar</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200470" trl="Y">
+  <value column="Name" original="PDF">PDF</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200471" trl="Y">
+  <value column="Name" original="HTML">HTML</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200472" trl="Y">
+  <value column="Name" original="XLS">Excel</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200473" trl="Y">
+  <value column="Name" original="CSV">CSV</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200474" trl="Y">
+  <value column="Name" original="Default">Por Defecto</value>
+  <value column="Description" original="Use what is defined on the Sysconfig key">Usar lo que esté definido en el Configurador del Sistema</value>
+ </row>
+ <row id="200475" trl="Y">
+  <value column="Name" original="Always in Grid View">Siempre en modo grilla</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200476" trl="Y">
+  <value column="Name" original="According to threshold">Según umbral</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200477" trl="Y">
+  <value column="Name" original="Dotted">Punteado</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200478" trl="Y">
+  <value column="Name" original="Dashed">Rayado</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200479" trl="Y">
+  <value column="Name" original="Double Dotted">Doble Punteado</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200480" trl="Y">
+  <value column="Name" original="Double Dashed">Doble Rayado</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200481" trl="Y">
+  <value column="Name" original="Double Solid">Doble Sólido</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200482" trl="Y">
+  <value column="Name" original="Solid">Sólido</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200483" trl="Y">
+  <value column="Name" original="Blank line">Línea en Blanco</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200491" trl="Y">
+  <value column="Name" original="XLSX">XLSX</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200492" trl="Y">
+  <value column="Name" original="Data Single">Dato Simple</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200493" trl="Y">
+  <value column="Name" original="Hundred">Ciento</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200494" trl="Y">
+  <value column="Name" original="Thousand">Mil</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200495" trl="Y">
+  <value column="Name" original="Import">Importar</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200496" trl="Y">
+  <value column="Name" original="Export">Exportar</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200497" trl="Y">
+  <value column="Name" original="OAuth2">OAuth2</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200498" trl="Y">
+  <value column="Name" original="SAML (not implemented yet)">SAML (aún sin implementar)</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200499" trl="Y">
+  <value column="Name" original="Calendar">Calendario</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200500" trl="Y">
+  <value column="Name" original="EMail">Correo Electrónico</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200501" trl="Y">
+  <value column="Name" original="Document">Documentos</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200502" trl="Y">
+  <value column="Name" original="Profile">Perfil</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200503" trl="Y">
+  <value column="Name" original="Storage">Almacenamiento</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200504" trl="Y">
+  <value column="Name" original="Script">Script</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200505" trl="Y">
+  <value column="Name" original="HTML as Attachment">HTML como Anexo</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200506" trl="Y">
+  <value column="Name" original="Parse Images to Attachments">Publicar las imágenes como anexos</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200507" trl="Y">
+  <value column="Name" original="Time-Based One-Time Password">Clave de un solo uso basada en el tiempo</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200508" trl="Y">
+  <value column="Name" original="EMail">Correo Electrónico</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200510" trl="Y">
+  <value column="Name" original="Something you Know">Algo que usted sabe</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200511" trl="Y">
+  <value column="Name" original="Something you Have">Algo que usted tiene</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200512" trl="Y">
+  <value column="Name" original="Something you Are (Biometrics)">Algo que usted es (Biométricos)</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200513" trl="Y">
+  <value column="Name" original="Location">Ubicación</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200514" trl="Y">
+  <value column="Name" original="System">Sistema</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200515" trl="Y">
+  <value column="Name" original="Ntp">NTP</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200516" trl="Y">
+  <value column="Name" original="No">No</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200517" trl="Y">
+  <value column="Name" original="Only Report Period">Sólo Reportar Período</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200518" trl="Y">
+  <value column="Name" original="All Adjustment Periods">Todos los Periodos de Ajuste</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200519" trl="Y">
+  <value column="Name" original="Script JSR223">Script JSR223</value>
+  <value column="Description" original=""/>
+ </row>
+ <row id="200521" trl="Y">
+  <value column="Name" original="Shell Script">Shell Script</value>
   <value column="Description" original=""/>
  </row>
  <row trl="Y" uuid="dbc98c55-3b9e-4f9b-9d50-f29596ba706d">

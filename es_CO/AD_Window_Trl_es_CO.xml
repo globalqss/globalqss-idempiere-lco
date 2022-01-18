@@ -1877,7 +1877,7 @@ y otros</value>
  <row id="53153" trl="Y">
   <value column="Name" original="Lead">Cliente Potencial</value>
   <value column="Description" original="Maintain Leads">Mantiene Clientes Potenciales</value>
-  <value column="Help" original="The Lead Window allows you to maintain Sales Leads.  These are unqualified contacts to who you wish to market to. ">Son contactos sin calificar con los que deseamos hacer negocios.</value>
+  <value column="Help" original="The Lead Window allows you to maintain Leads (can be Sales or Purchase). These are unqualified contacts to who you wish to recruit or market to. ">Son contactos sin calificar con los que deseamos hacer negocios.</value>
  </row>
  <row id="53154" trl="Y">
   <value column="Name" original="Sales Stage">Etapa de Ventas</value>
@@ -2127,6 +2127,86 @@ y otros</value>
  <row id="200093" trl="Y">
   <value column="Name" original="All Users">Todos los Usuarios</value>
   <value column="Description" original="Users from All Clients">Usuarios de todos los Grupos Empresariales</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200095" trl="Y">
+  <value column="Name" original="Process Customization">Personalización Proceso</value>
+  <value column="Description" original="Define Process Customization for Role/User">Define la personalización del proceso por rol/usuario</value>
+  <value column="Help" original="The customization values defined here overwrite/replace the default system definition if defined.">Los valores de personalización definidos aquí sobreescriben la definición del sistema</value>
+ </row>
+ <row id="200100" trl="Y">
+  <value column="Name" original="Print Header/Footer">Impresión Encabezado/Pie de Página</value>
+  <value column="Description" original="Maintain Print Header/Footer">Mantener Encabezado/Pie de Página</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200107" trl="Y">
+  <value column="Name" original="All User Roles">Todos los Roles de Usuario</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200108" trl="Y">
+  <value column="Name" original="All Roles">Todos los Roles</value>
+  <value column="Description" original="Roles from All Clients">Roles de Todos los Grupos Empresariales</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200109" trl="Y">
+  <value column="Name" original="User Queries">Búsquedas de Usuario</value>
+  <value column="Description" original="View and maintain saved queries">Ver y mantener búsquedas guardadas</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200110" trl="Y">
+  <value column="Name" original="Info Window Customization">Personalización de Ventana de Información</value>
+  <value column="Description" original="Define Info Window Customization for Role/User">Define personalizaciones de ventanas de información por rol/usuario</value>
+  <value column="Help" original="The customization values defined here overwrite/replace the default system definition if defined.">Los valores definidos aquí sobreescriben/reemplazan los definidos en el sistema.</value>
+ </row>
+ <row id="200111" trl="Y">
+  <value column="Name" original="Menu user favourites">Favoritos de Menú por Usuario</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200112" trl="Y">
+  <value column="Name" original="Authorization Provider">Proveedor de Autorización</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200113" trl="Y">
+  <value column="Name" original="Authorization Credential">Credencial de Autorización</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200114" trl="Y">
+  <value column="Name" original="MFA Method">Método AMF</value>
+  <value column="Description" original="Multi-factor Authentication Method">Método de Autenticación de Múltiples Factores</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200115" trl="Y">
+  <value column="Name" original="MFA Registered Device">Dispositivo Registrado AMF</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200116" trl="Y">
+  <value column="Name" original="MFA Registration">Registro AMF</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200117" trl="Y">
+  <value column="Name" original="MFA Rule">Regla AMF</value>
+  <value column="Description" original="Multi-factor Authentication Rule">Regla de Autenticación de Múltiples Factores</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200118" trl="Y">
+  <value column="Name" original="SMTP Server">Servidor SMTP</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200119" trl="Y">
+  <value column="Name" original="Customization of the Wlistbox">Personalización de Wlistbox</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200120" trl="Y">
+  <value column="Name" original="Client level messages">Mensajes a nivel de Grupo Empresarial</value>
+  <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
  <row trl="Y" uuid="ecd46492-ebb1-410a-8627-44df151cdfbb">

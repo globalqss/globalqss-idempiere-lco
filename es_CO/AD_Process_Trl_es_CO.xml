@@ -245,7 +245,7 @@
  <row id="151" trl="Y">
   <value column="Name" original="Invoice Transactions (Doc)">Resumen de Facturas</value>
   <value column="Description" original="Invoice Transactions by Invoice Date"/>
-  <value column="Help" original="The report lists the invoice transactiobs by invoice date"/>
+  <value column="Help" original="The report lists the invoice transactions by invoice date"/>
  </row>
  <row id="152" trl="Y">
   <value column="Name" original="Invoice Detail &amp; Margin">Detalles Facturas y Margen</value>
@@ -659,7 +659,7 @@ Los costos estan en el actual esquema contable - Las líneas estan en la actual 
  <row id="238" trl="Y">
   <value column="Name" original="Aging">Antigüedad</value>
   <value column="Description" original="Aging Report">Reporte Antigüedad</value>
-  <value column="Help" original="The aging report allows you to report on Open Items (Invoices). Select the aging buckets, you want to have in your report. If you select a currency, you get only invoices of that currency, otherwise the amounts are converted to your primary accounting currency. If you do not select a Statement Date, the system date is used to calculate the buckets. If you do not list the individual invoices, the Due Date is the earliest due date for the business partner and the Due Days are the average due days of all invoices.&lt;br&gt;&#10;&lt;br&gt;&#10;If you select an Account Date the report will generate the Aging as of that date. The report will exclude documents after the selected date.&lt;br&gt;&#10;&lt;br&gt;&#10;For example: A customer has one invoice for $100 with the Account Date of 03/31/08 and one payment for $100 with the Account Date of 05/01/08. The report will show the following balances based on the Account Date selected: 03/15/08= 0; 04/15/08=100; 05/15/08 = 0.&#10;">El informe de la antigüedad permite que usted reporte sobre los item´s abiertos (facturas). Seleccione los cubos de la antigüedad, que usted desea tener en su informe.</value>
+  <value column="Help" original="The aging report allows you to report on Open Items (Invoices). Select the aging buckets, you want to have in your report. If you select a currency, you get only invoices of that currency.&#13;&#10;If you fill the &quot;Convert Amounts in Currency&quot;, all amounts will be converted in that currency. If you do not select a Statement Date, the system date is used to calculate the buckets. If you do not list the individual invoices, the Due Date is the earliest due date for the business partner and the Due Days are the average due days of all invoices.&lt;br&gt;&#13;&#10;&lt;br&gt;&#13;&#10;If you select an Account Date the report will generate the Aging as of that date. The report will exclude documents after the selected date.&lt;br&gt;&#13;&#10;&lt;br&gt;&#13;&#10;For example: A customer has one invoice for $100 with the Account Date of 03/31/08 and one payment for $100 with the Account Date of 05/01/08. The report will show the following balances based on the Account Date selected: 03/15/08= 0; 04/15/08=100; 05/15/08 = 0.&#13;&#10;">El informe de la antigüedad permite que usted reporte sobre los item´s abiertos (facturas). Seleccione los cubos de la antigüedad, que usted desea tener en su informe.</value>
  </row>
  <row id="239" trl="Y">
   <value column="Name" original="Clicks Monthy">Clic's Mensuales</value>
@@ -912,11 +912,6 @@ Entonces las valuaciones de todas las respuestas de cantidad se adicionan a la v
   <value column="Name" original="Print Format Detail">Imprime detalle de Formato</value>
   <value column="Description" original="Print Format Detail Report">Formato de la impresión con los detalles del artículo</value>
   <value column="Help" original="Print Format with Item details">Formato de la impresión con los detalles del artículo</value>
- </row>
- <row id="288" trl="Y">
-  <value column="Name" original="Reset Password">Reinicia Contraseña</value>
-  <value column="Description" original="Reset Passwords for User">Reinicia contraseñas para el usuario</value>
-  <value column="Help" original="You can change User Passwords and EMail settings.  You do not need to know/enter the password, if you are an Administrator.">Puede cambiar la contraseña del usuario y la configuración del correo electrónico. No necesita conocer la contraseña o introducirla si es Administrador.</value>
  </row>
  <row id="289" trl="Y">
   <value column="Name" original="Create Dunning Run">Crear Cálculo de Morosidad</value>
@@ -1305,7 +1300,7 @@ y Recibi/Línea o directamente para el producto.</value>
   <value column="Help" original=""/>
  </row>
  <row id="53004" trl="Y">
-  <value column="Name" original="PP_Product_BOM CopyFrom">Copiar Desde LDM</value>
+  <value column="Name" original="Copy BOM Lines From">Copiar Desde LDM</value>
   <value column="Description" original=""/>
   <value column="Help" original="This process copies BOM Lines from the Selected BOM to the Current BOM. The BOM being copied to must have any existing BOM Lines">Este proceso copia líneas de LDM de la LDM seleccionada a la LDM actual.  La LDM que es copiada debe tener líneas.</value>
  </row>
@@ -1757,7 +1752,7 @@ Debe ser implementado cuando no haya usuarios conectados.</value>
   <value column="Help" original="Lets freeze or unfreeze the cost, If the Cost is UnFrozen then can be changed">Permite congelar o descongelar el costo, si el costo es descongelado puede ser cambiado</value>
  </row>
  <row id="53161" trl="Y">
-  <value column="Name" original="Initial Client Setup Process">Configuración Inicial de Grupo Empresarial</value>
+  <value column="Name" original="Initial Client Setup">Configuración Inicial de Grupo Empresarial</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
@@ -2119,7 +2114,7 @@ d. Fecha transacción, se volverá la fecha de inicio en servicio del activo</va
  <row id="200040" trl="Y">
   <value column="Name" original="Change Base Language">Cambiar Lenguaje Base</value>
   <value column="Description" original="Change Base Language">Cambiar Lenguaje Base</value>
-  <value column="Help" original="In order to enable en_US as a translation you can enable any other language as base language.&#10;If you don't want to have a base language choose a language that won't be used for login.&#10;If all languages are going to be used as login, create a xx_XX language not login and use it as base.&#10;Please note that base language cannot be a system language.">Para habilitar en_US como una traducción debe habilitar otro lenguaje como base.
+  <value column="Help" original="In order to enable en_US as a translation you can enable any other language as base language.&lt;br&gt;&#10;If you don't want to have a base language choose a language that won't be used for login.&lt;br&gt;&#10;If all languages are going to be used as login, create an xx_XX language not login and use it as base.&lt;br&gt;&#10;Please note that base language cannot be a system language.&lt;br&gt;&#10;After running this process you must close all sessions and login again.&lt;br&gt;">Para habilitar en_US como una traducción debe habilitar otro lenguaje como base.
 Si no tiene un lenguaje base escoja alguno que no se utilice para ingresar al sistema.
 Si planea usar todos los lenguajes entonces cree un lenguaje xx_XX y úselo como base pero no como ingreso.</value>
  </row>
@@ -2262,6 +2257,135 @@ Por ejemplo:<br />
   <value column="Name" original="Clean Orphan Cascade Records">Borrar registros huérfanos en cascada</value>
   <value column="Description" original=""/>
   <value column="Help" original="Some processes accessing directly the database can leave orphan records, this process clean those orphan records deleting them">Algunos procesos accesan directamente la base de datos dejando registros huérfanos, este procesos limpia esos archivos huérfanos borrándolos</value>
+ </row>
+ <row id="200107" trl="Y">
+  <value column="Name" original="Recreate Storage Reservation">Recrear Reservas de Inventario</value>
+  <value column="Description" original=""/>
+  <value column="Help" original="The process checks if there are errors in storage reservartion (storageqtyReserved &lt;&gt; orderqtyreserved), if there are, it recreates all the reservation records for the offending products." xml:space="preserve"><![CDATA[El proceso verifica si hay errores en las reservas de inventario (Cantidad Reservada en Almacenamiento <> Cantidad Reservada en Órdenes), si hay diferencias recrea todos los registros de reservación de los productos con problema.]]></value>
+ </row>
+ <row id="200110" trl="Y">
+  <value column="Name" original="Copy Client">Copiar Grupo Empresarial</value>
+  <value column="Description" original="Process to copy a client">Proceso para copiar un grupo empresarial</value>
+  <value column="Help" original="This process can be used to copy a client from an external database to the current database, or to duplicate a template client within the current database.">Este proceso puede ser usado para copiar un grupo empresarial desde una base de datos externa hacia la base de datos actual, o para duplicar un grupo empresarial plantilla dentro de la base de datos actual.</value>
+ </row>
+ <row id="200111" trl="Y">
+  <value column="Name" original="Migrate ID">Migrar ID</value>
+  <value column="Description" original="Process to migrate an ID or a UUID">Proceso para migrar un ID o un UUID</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200112" trl="Y">
+  <value column="Name" original="Activate">Activar</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200113" trl="Y">
+  <value column="Name" original="Deactivate">Inactivar</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200114" trl="Y">
+  <value column="Name" original="Delete">Borrar</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200117" trl="Y">
+  <value column="Name" original="Migrate Storage Provider">Migrar Proveedor de Almacenamiento</value>
+  <value column="Description" original="Migrate the storage provider for attachments, archives and/or images">Migrar los anexos, archivos y/o imágenes desde un proveedor de almacenamiento</value>
+  <value column="Help" original="&lt;p&gt;&lt;span style=&quot;color:#ff0000&quot;&gt;&lt;b&gt;WARNING: This process can be destructive, so please be sure that you have a backup of the database, as well as a backup of your old storage provider.&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&#10;&#10;&lt;p&gt;The process migrates files between storage providers.&lt;/p&gt;&#10;&#10;&lt;ul&gt;&lt;li&gt;&lt;b&gt;Client:&lt;/b&gt; Optional, select a client to migrate, when empty it will migrate all clients with the Actual Storage Provider&lt;/li&gt;&lt;li&gt;&lt;b&gt;Actual Storage Provider:&lt;/b&gt; Alternatively, you can define here the storage provider to migrate&lt;/li&gt;&lt;li&gt;&lt;b&gt;Storage Provider:&lt;/b&gt; The new storage provider to migrate the files&lt;/li&gt;&lt;li&gt;&lt;b&gt;Migrate Attachment:&lt;/b&gt; Migrate the attachment files&lt;/li&gt;&lt;li&gt;&lt;b&gt;Migrate Archive:&lt;/b&gt; Migate the archive files&lt;/li&gt;&lt;li&gt;&lt;b&gt;Migrate Image:&lt;/b&gt; Migrate the image  files&lt;/li&gt;&lt;li&gt;&lt;b&gt;Migrate Data:&lt;/b&gt; When unchecked, just the storage provider is changed in client, but the files are not migrated (they can be migrated in a future execution of this same process)&lt;/li&gt;&lt;li&gt;&lt;b&gt;Record ID Range:&lt;/b&gt; Optionally you can define a range of IDs for the records to migrate, so you can run this process in parallel to migrate the data&lt;/li&gt;&lt;li&gt;&lt;b&gt;Delete old/existing files:&lt;/b&gt; If enabled, when a file is migrated the program tries to free space deleting the file from the previous storage provider.  &lt;span style=&quot;color:#ff0000&quot;&gt;Note that migrating from/to a DB storage provider is a destructive action that cannot be recovered, it implies deleting the old/existing files&lt;/span&gt;.&lt;/li&gt;&lt;/ul&gt;&#10;&#10;&lt;p&gt;In case of failure or timeout, the process can be launched again, it commits on every file migrated.&lt;/p&gt;" xml:space="preserve"><![CDATA[<p><span style="color:#ff0000"><b>ADVERTENCIA: Este proceso puede ser destructivo, por favor asegúrese de tener un backup de la base de datos, así como un backup de su anterior proveedor de almacenamiento.</b></span></p>
+
+<p>El proceso migra archivos entre proveedores de almacenamniento.</p>
+
+<ul><li><b>Grupo Empresarial:</b> Opcional, usted puede seleccionar un grupo empresarial para migrar, si está vacío entonces intentará migrar todos los clientes que tengan el proveedor de almacenamiento seleccionado abajo.</li><li><b>Proveedor Actual de Almacenamiento:</b> Si el grupo empresarial está vacío, se puede definir aquí el proveedor de almacenamiento a migrar, si está vacío migra grupos empresariales donde el proveedor de almacenamiento no está fijado (por defecto es la Base de Datos).</li><li><b>Proveedor de Almacenamiento:</b> El nuevo proveedor de almacenamiento donde se migrarán los archivos.</li><li><b>Migrar Anexos:</b> Si se habilita se migran los archivos de anexos al nuevo proveedor de almacenamiento.</li><li><b>Migrar Archivador:</b> Si se habilita se migran los archivos de archivador al nuevo proveedor de almacenamiento..</li><li><b>Migrar Imágenes:</b> Si se habilita se migran los archivos de imágenes al nuevo proveedor de almacenamiento..</li><li><b>Borrar archivos antiguos/existentes:</b> Si se habilita, después que los archivos se han migrado el programa intenta liberar espacio borrando los archivos del proveedor anterior.  <span style="color:#ff0000">Nótese que migrar archivos desde/hacia un proveedor de almacenamiento en la base de datos es una acción destructiva que no se puede reversar, ya que implica borrar los archivos anteriores/existentes</span>.</li></ul>
+
+<p>En caso de falla o finalización por tiempo máximo permitido, el proceso se puede lanzar nuevamente, este proceso hace commit por cada archivo migrado.</p>]]></value>
+ </row>
+ <row id="200118" trl="Y">
+  <value column="Name" original="Create Window, Tab &amp; Field from Table">Crear Ventana, Pestaña y Campos desde la Tabla</value>
+  <value column="Description" original="Create Window, Tab &amp; Field record of the Table">Crear Ventana, Pestaña y Campos desde la Tabla</value>
+  <value column="Help" original="This process will take the table definition and create the Window/Tab and field record with these options:&lt;br&gt;&#10;&#10;New Window: if selected the process will create a new Window record. Otherwise, the process will create a new tab and add it to the selected window.&lt;br&gt;&#10;Create Menu: if selected the process creates the menu record for the new window." xml:space="preserve"><![CDATA[Este proceso tomará la definición de la Tabla y creará una Ventana/Pestaña y Campos correspondiente a las siguientes opciones:<br>
+
+Nueva Ventana: si se selecciona creará un nuevo registro de Ventana.  De lo contrario creará una nueva Pestaña en la Ventana seleccionada.<br>
+Crear Menú: si se selecciona el proceso creará un menú para la nueva ventana.]]></value>
+ </row>
+ <row id="200119" trl="Y">
+  <value column="Name" original="Create Default Parameters">Crear Parámetros por Defecto</value>
+  <value column="Description" original="This process will add required parameters for current web service type">Este proceso añade los parámetros requeridos para el tipo de WebService actual</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200120" trl="Y">
+  <value column="Name" original="Drop Database Table">Borrar Tabla en la Base de Datos</value>
+  <value column="Description" original="Drop the table in the database">Borrar la tabla en la base de datos</value>
+  <value column="Help" original="WARNING!!!  This is a destructive action, please make a backup before proceeding.">¡¡ADVERTENCIA!!  Esta es una acción destructiva, por favor tome un backup antes de proceder.</value>
+ </row>
+ <row id="200121" trl="Y">
+  <value column="Name" original="Rename Database Table">Renombrar Tabla en la Base de Datos</value>
+  <value column="Description" original="Rename the table in the database and dictionary">Renombrar tabla en la base de datos y en el diccionario</value>
+  <value column="Help" original="This process renames the table in database, the dictionary and also the associated columns _ID and _UU">Este proceso renombra la tabla en la base de datos, en el diccionario y también las columnas asociadas _ID y _UU</value>
+ </row>
+ <row id="200122" trl="Y">
+  <value column="Name" original="Drop Database Column">Borrar Columna de la Base de Datos</value>
+  <value column="Description" original="Drop the column in the database">Borrar columna de la base de datos</value>
+  <value column="Help" original="WARNING!!!  This is a destructive action, please make a backup before proceeding.">¡¡ADVERTENCIA!!  Esta es una acción destructiva, por favor tome un backup antes de proceder.</value>
+ </row>
+ <row id="200123" trl="Y">
+  <value column="Name" original="Drop Database Constraint">Borrar Restricción en la Base de Datos</value>
+  <value column="Description" original="Drop the constraint in the database">Borra la restricción en la base de datos</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200124" trl="Y">
+  <value column="Name" original="Rename Column(s) in Database">Renombrar Columna(s) en la Base de Datos</value>
+  <value column="Description" original="Rename Column(s) in Database">Renombrar columna(s) en la base de datos</value>
+  <value column="Help" original="This process rename all the columns associated with the element">Este proceso renombra todas las columnas asociadas con el elemento</value>
+ </row>
+ <row id="200126" trl="Y">
+  <value column="Name" original="Translation Import/Export">Importar/Exportar Traducción</value>
+  <value column="Description" original="Import or Export Language Translation">Importar o Exportar Traducción de Lenguaje</value>
+  <value column="Help" original="Export/Import Translation info to/from xml for translation in external tool.  Please note that the Language MUST be an enabled and verified System Language.">Exportar/Importar Traducción desde/hacia XML para traducción con una herramienta externa.  Por favor note que el Lenguaje DEBE ser habilitado y verificado como Lenguaje del Sistema.</value>
+ </row>
+ <row id="200127" trl="Y">
+  <value column="Name" original="Rename Column in Database">Renombrar Columna en la Base de Datos</value>
+  <value column="Description" original="Rename Column in Database">Renombrar Columna en la Base de Datos</value>
+  <value column="Help" original="This process rename the column on the database">Este proceso renombra la columna en la base de datos</value>
+ </row>
+ <row id="200128" trl="Y">
+  <value column="Name" original="Add Authorization Account">Añadir Autorización de Cuenta</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200129" trl="Y">
+  <value column="Name" original="Unregister MFA Mechanism">Dar de baja un Mecanismo AMF</value>
+  <value column="Description" original="Unregister a multi-factor authentication registration">Dar de baja un registro de autenticación de múltiples factores</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200130" trl="Y">
+  <value column="Name" original="Complete MFA Registration">Completar Registro AMF</value>
+  <value column="Description" original="Complete a registration for a multi-factor authentication mechanism">Completar un registro de autenticación de múltiples factores</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200131" trl="Y">
+  <value column="Name" original="Revoke MFA Trusted Device">Revocar Dispositivo de Confianza AMF</value>
+  <value column="Description" original="Revoke one multi-factor authentication trusted device or all">Revocar uno o todos los dispositivos de confianza de autenticación de múltiples factores</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200132" trl="Y">
+  <value column="Name" original="Register MFA">Registrar AMF</value>
+  <value column="Description" original="Register a multi-factor authentication mechanism">Registrar un mecanismo de autenticación de múltiples factores</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200133" trl="Y">
+  <value column="Name" original="Copy from Pack Out">Copiar de Pack Out</value>
+  <value column="Description" original="Copy Package Details from another Pack Out">Copiar los registros de un paquete en otro paquete</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200134" trl="Y">
+  <value column="Name" original="Create/Complete Table">Crear/Completar Tabla</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200135" trl="Y">
+  <value column="Name" original="Process Project Issue">Procesar Surtimiento de Proyecto</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
  </row>
  <row trl="Y" uuid="0450d998-4a98-45d6-9487-d74051bfc47f">
   <value column="Name" original="Generate Withholding">Genera Retenciones</value>

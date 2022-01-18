@@ -212,6 +212,12 @@
  <row id="200022" trl="Y">
   <value column="Name" original="Placeholders">Marcadores</value>
  </row>
+ <row id="200027" trl="Y">
+  <value column="Name" original="EMail">Correo Electrónico</value>
+ </row>
+ <row id="200028" trl="Y">
+  <value column="Name" original="TOTP">TOTP</value>
+ </row>
  <row trl="Y" uuid="a5a3386b-4128-4801-8e68-79d21dea64fb">
   <value column="Name" original="Withholding Information">Información Retenciones</value>
  </row>

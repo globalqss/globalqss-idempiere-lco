@@ -42,4 +42,19 @@
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="200013" trl="Y">
+  <value column="Name" original="Role (All)">Rol (Todos)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200014" trl="Y">
+  <value column="Name" original="Support Users vs Roles">Usuarios de Soporte vs Roles</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200019" trl="Y">
+  <value column="Name" original="Period Control Management">Control Administratido de Períodos</value>
+  <value column="Description" original="Management of Calendars, Years and Periods">Administración de Calendarios, Años y Períodos</value>
+  <value column="Help" original=""/>
+ </row>
 </idempiereTrl>

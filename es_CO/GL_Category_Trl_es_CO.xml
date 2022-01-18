@@ -5,31 +5,31 @@
  <row id="0" trl="Y">
   <value column="Name" original="None">Ninguna</value>
  </row>
- <row id="108" trl="N">
+ <row id="108" trl="Y">
   <value column="Name" original="Manual">Manual</value>
  </row>
- <row id="109" trl="N">
-  <value column="Name" original="AR Invoice">AR Invoice</value>
+ <row id="109" trl="Y">
+  <value column="Name" original="AR Invoice">Factura CxC</value>
  </row>
- <row id="110" trl="N">
-  <value column="Name" original="AR Receipt">AR Receipt</value>
+ <row id="110" trl="Y">
+  <value column="Name" original="AR Receipt">Recibo CxC</value>
  </row>
- <row id="111" trl="N">
-  <value column="Name" original="Material Management">Material Management</value>
+ <row id="111" trl="Y">
+  <value column="Name" original="Material Management">Administración de Materiales</value>
  </row>
- <row id="112" trl="N">
-  <value column="Name" original="AP Invoice">AP Invoice</value>
+ <row id="112" trl="Y">
+  <value column="Name" original="AP Invoice">Factura CxP</value>
  </row>
- <row id="113" trl="N">
-  <value column="Name" original="AP Payment">AP Payment</value>
+ <row id="113" trl="Y">
+  <value column="Name" original="AP Payment">Pago CxP</value>
  </row>
- <row id="50000" trl="N">
-  <value column="Name" original="Payroll">Payroll</value>
+ <row id="50000" trl="Y">
+  <value column="Name" original="Payroll">Nómina</value>
  </row>
- <row id="50001" trl="N">
-  <value column="Name" original="Manufacturing">Manufacturing</value>
+ <row id="50001" trl="Y">
+  <value column="Name" original="Manufacturing">Manufactura</value>
  </row>
- <row id="50002" trl="N">
-  <value column="Name" original="Distribution">Distribution</value>
+ <row id="50002" trl="Y">
+  <value column="Name" original="Distribution">Distribución</value>
  </row>
 </idempiereTrl>

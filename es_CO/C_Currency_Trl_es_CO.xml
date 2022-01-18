@@ -698,4 +698,8 @@
   <value column="Description" original="Serbian Dinar">Dinar Serbio</value>
   <value column="CurSymbol" original="RSD">RSD</value>
  </row>
+ <row id="200000" trl="Y">
+  <value column="Description" original="South Sudanese pound">Libra Sursudanesa</value>
+  <value column="CurSymbol" original="SS£">SS£</value>
+ </row>
 </idempiereTrl>

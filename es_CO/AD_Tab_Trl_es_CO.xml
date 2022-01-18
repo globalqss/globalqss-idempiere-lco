@@ -132,7 +132,7 @@
   <value column="Name" original="Node">Nodo</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original="Define workflow nodes">Definir roles de flujo de trabajo</value>
-  <value column="Help" original="The Node Tab defines each Node, Activity or step in this Workflow.&lt;br&gt;&#10;The action (actibity) type determines the execution: &quot;Route&quot; may be used in routing control conditions.  &quot;None&quot; identifies manual execution.">La pestaña de nodo define cada nodo o paso en este flujo de trabajo</value>
+  <value column="Help" original="The Node Tab defines each Node, Activity or step in this Workflow.&lt;br&gt;&#10;The action (activity) type determines the execution: &quot;Route&quot; may be used in routing control conditions.  &quot;None&quot; identifies manual execution.">La pestaña de nodo define cada nodo o paso en este flujo de trabajo</value>
  </row>
  <row id="123" trl="Y">
   <value column="Name" original="Node Translation">Traducción de Nodo</value>
@@ -6495,6 +6495,204 @@ Imprimiendo:
  </row>
  <row id="200231" trl="Y">
   <value column="Name" original="Approver">Aprobador</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200234" trl="Y">
+  <value column="Name" original="Process Customization">Personalización Proceso</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="User defined Process">Personalización Proceso</value>
+  <value column="Help" original="User defined Process">Personalización Proceso</value>
+ </row>
+ <row id="200235" trl="Y">
+  <value column="Name" original="User defined Process Parameter">Personalización Parámetro Proceso</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="User defined Process Parameter">Personalización Parámetro Proceso</value>
+  <value column="Help" original="User defined Process Parameter">Personalización Parámetro Proceso</value>
+ </row>
+ <row id="200249" trl="Y">
+  <value column="Name" original="Print Header/Footer">Imprimir Encabezado/Pie de Página</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200262" trl="Y">
+  <value column="Name" original="User Roles">Roles de Usuario</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200263" trl="Y">
+  <value column="Name" original="User Roles">Roles de Usuario</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200264" trl="Y">
+  <value column="Name" original="Role">Rol</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200265" trl="Y">
+  <value column="Name" original="Role">Rol</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200266" trl="Y">
+  <value column="Name" original="User Roles">Roles de Usuario</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200269" trl="Y">
+  <value column="Name" original="Used in Column (Lookup)">Usado en Columna (Búsqueda)</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Used in Column (Lookup)">Usado en Columna (Búsqueda)</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200271" trl="Y">
+  <value column="Name" original="Translation">Traducción</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200272" trl="Y">
+  <value column="Name" original="Translation">Traducción</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200275" trl="Y">
+  <value column="Name" original="User Queries">Búsquedas de Usuario</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="View and maintain saved queries">Ver y mantener búsquedas guardadas</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200279" trl="Y">
+  <value column="Name" original="Column Customization">Personalización de Columna</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200280" trl="Y">
+  <value column="Name" original="Info Window Customization">Personalización de Ventana de Información</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200281" trl="Y">
+  <value column="Name" original="Related Customization">Personalización de Relacionado</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200282" trl="Y">
+  <value column="Name" original="User favourite tree">Árbol Favorito de Usuario</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="In this tab, you can see to manage user and role wise favourite tree references">En esta pestaña puede ver o manejar los árboles favoritos de usuarios y roles</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200283" trl="Y">
+  <value column="Name" original="Favorite tree node">Nodo favorito de usuario</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200284" trl="Y">
+  <value column="Name" original="Authorization Provider">Proveedor de Autorización</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200285" trl="Y">
+  <value column="Name" original="Authorization Scope Provider">Alcance Proveedor de Autorización</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200286" trl="Y">
+  <value column="Name" original="Authorization Credential">Credencial de Autorización</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200287" trl="Y">
+  <value column="Name" original="Authorization Account">Autorización de Cuenta</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200288" trl="Y">
+  <value column="Name" original="MFA Method">Método AMF</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Multi-factor Authentication Method">Método de Autenticación de Múltiples Factores</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200289" trl="Y">
+  <value column="Name" original="MFA Registered Device">Dispositivo Registrado AMF</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200290" trl="Y">
+  <value column="Name" original="MFA Registration">Registro AMF</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200291" trl="Y">
+  <value column="Name" original="MFA Rule">Regla AMF</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original="Multi-factor Authentication Rule">Regla de Autenticación de Múltiples Factores</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200295" trl="Y">
+  <value column="Name" original="Document Status Access">Acceso a Estados de Documento</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200296" trl="Y">
+  <value column="Name" original="Document Status Access">Acceso a Estados de Documento</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200297" trl="Y">
+  <value column="Name" original="Document Status Access">Acceso a Estados de Documento</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200298" trl="Y">
+  <value column="Name" original="SMTP Server">Servidor SMTP</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200299" trl="Y">
+  <value column="Name" original="Customization of the Wlistbox">Personalización de Wlistbox</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200300" trl="Y">
+  <value column="Name" original="Reserved Quantity Log">Auditoría de Cantidades Reservadas</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200301" trl="Y">
+  <value column="Name" original="Ordered Quantity Log">Auditoría de Cantidades Ordenadas</value>
+  <value column="CommitWarning" original=""/>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200302" trl="Y">
+  <value column="Name" original="Client level messages">Mensajes a Nivel de Grupo Empresarial</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original=""/>
   <value column="Help" original=""/>

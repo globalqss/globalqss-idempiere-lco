@@ -2,6 +2,97 @@
 <!--GlobalQSS - iDempiere -Smart Suite ERP,CRM and SCM- (c) 1999-2012 iDempiere(r); Implementation: iDempiere - Supported by GlobalQSS - Quality Systems & Solutions-->
 <!--<!DOCTYPE idempiereTrl PUBLIC "-//ComPiere, Inc.//DTD idempiere Translation 1.0//EN" "http://www.idempiere.com/dtd/idempiereTrl.dtd">-->
 <idempiereTrl language="es_CO" table="AD_Process_Para">
+ <row id="133" trl="Y">
+  <value column="Name" original="Warehouse">Almacén</value>
+  <value column="Description" original="Storage Warehouse and Service Point">Almacén y punto de servicio</value>
+  <value column="Help" original="The Warehouse identifies a unique Warehouse where products are stored or Services are provided.">El almacén identifica un punto único donde los productos son almacenados</value>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="134" trl="Y">
+  <value column="Name" original="Movement Type">Tipo de Movimiento</value>
+  <value column="Description" original="Method of moving the inventory">Método de movimiento de inventario</value>
+  <value column="Help" original="The Movement Type indicates the type of movement (in, out, to production, etc)">El Tipo de Movimiento indica el tipo de movimiento (entradas; salidas a producción etc)</value>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="139" trl="Y">
+  <value column="Name" original="Product">Producto</value>
+  <value column="Description" original="Product, Service, Item">Producto; servicio o artículo.</value>
+  <value column="Help" original="Identifies an item which is either purchased or sold in this organization.">Identifica un artículo que puede ser comprado o vendido es esta organización.</value>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="161" trl="Y">
+  <value column="Name" original="Business Partner ">Tercero</value>
+  <value column="Description" original="Identifies a Business Partner">Identifica un Tercero</value>
+  <value column="Help" original="A Business Partner is anyone with whom you transact.  This can include Vendor, Customer, Employee or Salesperson">Un tercero es cualquiera con quien usted realiza transacciones. Este puede incluir Proveedores, Clientes, Empleados o Vendedores.</value>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="163" trl="Y">
+  <value column="Name" original="Business Partner ">Tercero</value>
+  <value column="Description" original="Identifies a Business Partner">Identifica un Tercero</value>
+  <value column="Help" original="A Business Partner is anyone with whom you transact.  This can include Vendor, Customer, Employee or Salesperson">Un tercero es cualquiera con quien usted realiza transacciones. Este puede incluir Proveedores, Clientes, Empleados o Vendedores.</value>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="172" trl="Y">
+  <value column="Name" original="Business Partner ">Tercero</value>
+  <value column="Description" original="Identifies a Business Partner">Identifica un Tercero</value>
+  <value column="Help" original="A Business Partner is anyone with whom you transact.  This can include Vendor, Customer, Employee or Salesperson">Un tercero es cualquiera con quien usted realiza transacciones. Este puede incluir Proveedores, Clientes, Empleados o Vendedores.</value>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="174" trl="Y">
+  <value column="Name" original="Business Partner ">Tercero</value>
+  <value column="Description" original="Identifies a Business Partner">Identifica un Tercero</value>
+  <value column="Help" original="A Business Partner is anyone with whom you transact.  This can include Vendor, Customer, Employee or Salesperson">Un tercero es cualquiera con quien usted realiza transacciones. Este puede incluir Proveedores, Clientes, Empleados o Vendedores.</value>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="176" trl="Y">
+  <value column="Name" original="Business Partner ">Tercero</value>
+  <value column="Description" original="Identifies a Business Partner">Identifica un Tercero</value>
+  <value column="Help" original="A Business Partner is anyone with whom you transact.  This can include Vendor, Customer, Employee or Salesperson">Un tercero es cualquiera con quien usted realiza transacciones. Este puede incluir Proveedores, Clientes, Empleados o Vendedores.</value>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="178" trl="Y">
+  <value column="Name" original="Business Partner ">Tercero</value>
+  <value column="Description" original="Identifies a Business Partner">Identifica un Tercero</value>
+  <value column="Help" original="A Business Partner is anyone with whom you transact.  This can include Vendor, Customer, Employee or Salesperson">Un tercero es cualquiera con quien usted realiza transacciones. Este puede incluir Proveedores, Clientes, Empleados o Vendedores.</value>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="179" trl="Y">
+  <value column="Name" original="Product Category">Categoría del Producto</value>
+  <value column="Description" original="Category of a Product">Categoría de la que este producto es parte</value>
+  <value column="Help" original="Identifies the category which this product belongs to.  Product categories are used for pricing and selection.">Identifica la categoría a la que pertenece este producto. Las categorías del producto son usadas para el cálculo de precios</value>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="180" trl="Y">
+  <value column="Name" original="Product">Producto</value>
+  <value column="Description" original="Product, Service, Item">Producto; servicio o artículo.</value>
+  <value column="Help" original="Identifies an item which is either purchased or sold in this organization.">Identifica un artículo que puede ser comprado o vendido es esta organización.</value>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="189" trl="Y">
+  <value column="Name" original="Product Category">Categoría del Producto</value>
+  <value column="Description" original="Category of a Product">Categoría de la que este producto es parte</value>
+  <value column="Help" original="Identifies the category which this product belongs to.  Product categories are used for pricing and selection.">Identifica la categoría a la que pertenece este producto. Las categorías del producto son usadas para el cálculo de precios</value>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="190" trl="Y">
+  <value column="Name" original="Business Partner ">Tercero</value>
+  <value column="Description" original="Identifies a Business Partner">Identifica un Tercero</value>
+  <value column="Help" original="A Business Partner is anyone with whom you transact.  This can include Vendor, Customer, Employee or Salesperson">Un tercero es cualquiera con quien usted realiza transacciones. Este puede incluir Proveedores, Clientes, Empleados o Vendedores.</value>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
  <row id="227" trl="Y">
   <value column="Name" original="Delete existing Accounting Entries">Borrar entradas existentes de contabilidad</value>
   <value column="Description" original="The selected accounting entries will be deleted!  DANGEROUS !!!">Las entradas contables seleccionadas van a ser borradas! PELIGROSO !!!</value>
@@ -13,6 +104,20 @@
   <value column="Name" original="Pricelist Version">Versión de Lista de Precios</value>
   <value column="Description" original="Only used if Price List is used to set future/standard cost price">Only used if Price List is used to set future cost price</value>
   <value column="Help" original=""/>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="240" trl="Y">
+  <value column="Name" original="Business Partner ">Tercero</value>
+  <value column="Description" original="Identifies a Business Partner">Identifica un Tercero</value>
+  <value column="Help" original="A Business Partner is anyone with whom you transact.  This can include Vendor, Customer, Employee or Salesperson">Un tercero es cualquiera con quien usted realiza transacciones. Este puede incluir Proveedores, Clientes, Empleados o Vendedores.</value>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="241" trl="Y">
+  <value column="Name" original="Product">Producto</value>
+  <value column="Description" original="Product, Service, Item">Producto; servicio o artículo.</value>
+  <value column="Help" original="Identifies an item which is either purchased or sold in this organization.">Identifica un artículo que puede ser comprado o vendido es esta organización.</value>
   <value column="Placeholder" original=""/>
   <value column="Placeholder2" original=""/>
  </row>
@@ -496,6 +601,174 @@ this field define where request, error,.. occupy.</value>
  <row id="200226" trl="Y">
   <value column="Name" original="Folder">Directorio</value>
   <value column="Description" original="Path on the server where the pack in files are located">Directorio en el servidor donde se localizan los archivos para Pack In</value>
+  <value column="Help" original=""/>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="200287" trl="Y">
+  <value column="Name" original="Client">Grupo Empresarial</value>
+  <value column="Description" original="Client/Tenant for this installation.">Grupo Empresarial para esta instalación.</value>
+  <value column="Help" original="A Client is a company or a legal entity. You cannot share data between Clients. Tenant is a synonym for Client.">Un Grupo Empresarial es una compañía o entidad legal, o un grupo de ellas.  No puede compartir información entre Grupos Empresariales.</value>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="200293" trl="Y">
+  <value column="Name" original="Delete old/existing files">Borrar los archivos antiguos/existentes</value>
+  <value column="Description" original="Delete the records from the old storage provider after moved">Borrar los registros del antiguo proveedor de almacenamiento después que se muevan</value>
+  <value column="Help" original="WARNING!  This option cannot be rolled back!  Be cautious, take backups.  If not enabled, the system administrator can/must remove manually the old files from the previous storage provider later.">¡ADVERTENCIA!  ¡Esta opción no se puede reversar!  Sea precavido, tome copia de respaldo.  Si no se habilita, el administrador del sistema puede/debe después borrar manualmente los archivos en el anterior proveedor de almacenamiento.</value>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="200359" trl="Y">
+  <value column="Name" original="Create 'Value' column">Crear la columna 'Value'</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="200360" trl="Y">
+  <value column="Name" original="Create 'Name' column">Crear la columna 'Name'</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="200361" trl="Y">
+  <value column="Name" original="Create KeyColumn">Crear la columna clave</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="200362" trl="Y">
+  <value column="Name" original="Create a Workflow">Crear un Flujo de Trabajo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="200363" trl="Y">
+  <value column="Name" original="Create a Translation Table">Crear una tabla de traducción</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="200364" trl="Y">
+  <value column="Name" original="Create 'Description' column">Crear la columna 'Description'</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="200365" trl="Y">
+  <value column="Name" original="Create 'Help' column">Crear la columna 'Help'</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="200366" trl="Y">
+  <value column="Name" original="Create 'DocumentNo' column">Crear la columna 'DocumentNo'</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="200367" trl="Y">
+  <value column="Name" original="Create 'DocAction' column">Crear la columna 'DocAction'</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="200368" trl="Y">
+  <value column="Name" original="Create 'DocStatus' column">Crear la columna 'DocStatus'</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="200369" trl="Y">
+  <value column="Name" original="Create 'Processed' column">Crear la columna 'Processed'</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="200370" trl="Y">
+  <value column="Name" original="Create 'ProcessedOn' column">Crear la columna 'ProcessedOn'</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="200371" trl="Y">
+  <value column="Name" original="Create 'Processing' column">Crear la columna 'Processing'</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="200372" trl="Y">
+  <value column="Name" original="Create 'C_DocTypeTarget_ID' column">Crear la columna 'C_DocTypeTarget_ID'</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="200373" trl="Y">
+  <value column="Name" original="Create 'C_DocType_ID' column">Crear la columna 'C_DocType_ID'</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="200374" trl="Y">
+  <value column="Name" original="Create 'C_Currency_ID' column">Crear la columna 'C_Currency_ID'</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="200375" trl="Y">
+  <value column="Name" original="Create 'DateTrx' column">Crear la columna 'DateTrx'</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="200376" trl="Y">
+  <value column="Name" original="Create 'DateAcct' column">Crear la columna 'DateAcct'</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="200377" trl="Y">
+  <value column="Name" original="Create 'Posted' column">Crear la columna 'Posted'</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="200378" trl="Y">
+  <value column="Name" original="Create 'IsApproved' column">Crear la columna 'IsApproved'</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="200379" trl="Y">
+  <value column="Name" original="Create 'SalesRep_ID' column">Crear la columna 'SalesRep_ID'</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+  <value column="Placeholder" original=""/>
+  <value column="Placeholder2" original=""/>
+ </row>
+ <row id="200380" trl="Y">
+  <value column="Name" original="Create 'AD_User_ID' column">Crear la columna 'AD_User_ID'</value>
+  <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="Placeholder" original=""/>
   <value column="Placeholder2" original=""/>

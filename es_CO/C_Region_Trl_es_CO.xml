@@ -1073,4 +1073,130 @@
  <row id="50103" trl="Y">
   <value column="Name" original="Байконур город">Ciudad de Baikonur</value>
  </row>
+ <row id="200109" trl="Y">
+  <value column="Name" original="ANTIOQUIA">ANTIOQUIA</value>
+ </row>
+ <row id="200110" trl="Y">
+  <value column="Name" original="ATLÁNTICO">ATLÁNTICO</value>
+ </row>
+ <row id="200111" trl="Y">
+  <value column="Name" original="D.C.">D.C.</value>
+ </row>
+ <row id="200112" trl="Y">
+  <value column="Name" original="BOLÍVAR">BOLÍVAR</value>
+ </row>
+ <row id="200113" trl="Y">
+  <value column="Name" original="BOYACÁ">BOYACÁ</value>
+ </row>
+ <row id="200114" trl="Y">
+  <value column="Name" original="CALDAS">CALDAS</value>
+ </row>
+ <row id="200115" trl="Y">
+  <value column="Name" original="CAQUETÁ">CAQUETÁ</value>
+ </row>
+ <row id="200116" trl="Y">
+  <value column="Name" original="CAUCA">CAUCA</value>
+ </row>
+ <row id="200117" trl="Y">
+  <value column="Name" original="CESAR">CESAR</value>
+ </row>
+ <row id="200118" trl="Y">
+  <value column="Name" original="CÓRDOBA">CÓRDOBA</value>
+ </row>
+ <row id="200119" trl="Y">
+  <value column="Name" original="CUNDINAMARCA">CUNDINAMARCA</value>
+ </row>
+ <row id="200120" trl="Y">
+  <value column="Name" original="CHOCÓ">CHOCÓ</value>
+ </row>
+ <row id="200121" trl="Y">
+  <value column="Name" original="HUILA">HUILA</value>
+ </row>
+ <row id="200122" trl="Y">
+  <value column="Name" original="LA GUAJIRA">LA GUAJIRA</value>
+ </row>
+ <row id="200123" trl="Y">
+  <value column="Name" original="MAGDALENA">MAGDALENA</value>
+ </row>
+ <row id="200124" trl="Y">
+  <value column="Name" original="META">META</value>
+ </row>
+ <row id="200125" trl="Y">
+  <value column="Name" original="NARIÑO">NARIÑO</value>
+ </row>
+ <row id="200126" trl="Y">
+  <value column="Name" original="NORTE DE SANTANDER">NORTE DE SANTANDER</value>
+ </row>
+ <row id="200127" trl="Y">
+  <value column="Name" original="QUINDÍO">QUINDÍO</value>
+ </row>
+ <row id="200128" trl="Y">
+  <value column="Name" original="RISARALDA">RISARALDA</value>
+ </row>
+ <row id="200129" trl="Y">
+  <value column="Name" original="SANTANDER">SANTANDER</value>
+ </row>
+ <row id="200130" trl="Y">
+  <value column="Name" original="SUCRE">SUCRE</value>
+ </row>
+ <row id="200131" trl="Y">
+  <value column="Name" original="TOLIMA">TOLIMA</value>
+ </row>
+ <row id="200132" trl="Y">
+  <value column="Name" original="VALLE">VALLE</value>
+ </row>
+ <row id="200133" trl="Y">
+  <value column="Name" original="ARAUCA">ARAUCA</value>
+ </row>
+ <row id="200134" trl="Y">
+  <value column="Name" original="CASANARE">CASANARE</value>
+ </row>
+ <row id="200135" trl="Y">
+  <value column="Name" original="PUTUMAYO">PUTUMAYO</value>
+ </row>
+ <row id="200136" trl="Y">
+  <value column="Name" original="SAN ANDRÉS">SAN ANDRÉS</value>
+ </row>
+ <row id="200137" trl="Y">
+  <value column="Name" original="AMAZONAS">AMAZONAS</value>
+ </row>
+ <row id="200138" trl="Y">
+  <value column="Name" original="GUAINÍA">GUAINÍA</value>
+ </row>
+ <row id="200139" trl="Y">
+  <value column="Name" original="GUAVIARE">GUAVIARE</value>
+ </row>
+ <row id="200140" trl="Y">
+  <value column="Name" original="VAUPÉS">VAUPÉS</value>
+ </row>
+ <row id="200141" trl="Y">
+  <value column="Name" original="VICHADA">VICHADA</value>
+ </row>
+ <row id="200142" trl="Y">
+  <value column="Name" original="Vienna">Viena</value>
+ </row>
+ <row id="200143" trl="Y">
+  <value column="Name" original="Lower Austria">Baja Austria</value>
+ </row>
+ <row id="200144" trl="Y">
+  <value column="Name" original="Upper Austria">Alta Austria</value>
+ </row>
+ <row id="200145" trl="Y">
+  <value column="Name" original="Styria">Estiria</value>
+ </row>
+ <row id="200146" trl="Y">
+  <value column="Name" original="Tyrol">Tirol</value>
+ </row>
+ <row id="200147" trl="Y">
+  <value column="Name" original="Carinthia">Carintia</value>
+ </row>
+ <row id="200148" trl="Y">
+  <value column="Name" original="Salzburg">Salzburgo</value>
+ </row>
+ <row id="200149" trl="Y">
+  <value column="Name" original="Vorarlberg">Vorarlberg</value>
+ </row>
+ <row id="200150" trl="Y">
+  <value column="Name" original="Burgenland">Burgenland</value>
+ </row>
 </idempiereTrl>

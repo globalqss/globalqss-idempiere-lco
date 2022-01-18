@@ -47,4 +47,9 @@
   <value column="Description" original=""/>
   <value column="HTML" original=""/>
  </row>
+ <row id="200005" trl="Y">
+  <value column="Name" original="Donate">Donar</value>
+  <value column="Description" original=""/>
+  <value column="HTML" original="&lt;iframe src=&quot;https://www.idempiere.org/short-donate/&quot; style=&quot;border-top-width: 0px;border-bottom-width: 0px;border-right-width: 0px;border-left-width: 0px;width: 100%;height: 450px;&quot;&gt;&lt;/iframe&gt;" xml:space="preserve"><![CDATA[<iframe src="https://www.idempiere.org/short-donate/" style="border-top-width: 0px;border-bottom-width: 0px;border-right-width: 0px;border-left-width: 0px;width: 100%;height: 450px;"></iframe>]]></value>
+ </row>
 </idempiereTrl>

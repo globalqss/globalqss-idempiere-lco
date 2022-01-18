@@ -4,7 +4,7 @@
 <idempiereTrl language="es_CO" table="C_Country">
  <row id="100" trl="Y">
   <value column="Name" original="United States">Estados Unidos</value>
-  <value column="Description" original="United States of America">Estados Unidos de America</value>
+  <value column="Description" original="the United States of America">Estados Unidos de America</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -17,8 +17,8 @@
   <value column="RegionName" original="State">State</value>
  </row>
  <row id="101" trl="Y">
-  <value column="Name" original="Germany - Deutschland">Alemania</value>
-  <value column="Description" original=""/>
+  <value column="Name" original="Germany">Alemania</value>
+  <value column="Description" original="the Federal Republic of Germany">República Federal de Alemania</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -32,7 +32,7 @@
  </row>
  <row id="102" trl="Y">
   <value column="Name" original="France">Francia</value>
-  <value column="Description" original="France">Francia</value>
+  <value column="Description" original="the French Republic">República Francesa</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -45,8 +45,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="103" trl="Y">
-  <value column="Name" original="Belgium">Belgica</value>
-  <value column="Description" original=""/>
+  <value column="Name" original="Belgium">Bélgica</value>
+  <value column="Description" original="the Kingdom of Belgium">Reino de Bélgica</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -59,8 +59,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="105" trl="Y">
-  <value column="Name" original="Nederland">Holanda</value>
-  <value column="Description" original=""/>
+  <value column="Name" original="Netherlands">Países Bajos</value>
+  <value column="Description" original="the Kingdom of the Netherlands">Reino de los Países Bajos</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -74,7 +74,7 @@
  </row>
  <row id="106" trl="Y">
   <value column="Name" original="Spain">España</value>
-  <value column="Description" original=""/>
+  <value column="Description" original="the Kingdom of Spain">Reino de España</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -88,7 +88,7 @@
  </row>
  <row id="107" trl="Y">
   <value column="Name" original="Switzerland">Suiza</value>
-  <value column="Description" original=""/>
+  <value column="Description" original="the Swiss Confederation">Confederación Suiza</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -102,7 +102,7 @@
  </row>
  <row id="108" trl="Y">
   <value column="Name" original="Austria">Austria</value>
-  <value column="Description" original="Österreich">Austria</value>
+  <value column="Description" original="the Republic of Austria">República de Austria</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -116,7 +116,7 @@
  </row>
  <row id="109" trl="Y">
   <value column="Name" original="Canada">Canadá</value>
-  <value column="Description" original=""/>
+  <value column="Description" original="Canada">Canadá</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -130,7 +130,7 @@
  </row>
  <row id="110" trl="Y">
   <value column="Name" original="Afghanistan">Afganistán</value>
-  <value column="Description" original="Afghanistan">Afganistán</value>
+  <value column="Description" original="the Islamic Republic of Afghanistan">Emirato Islámico de Afganistán</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -144,7 +144,7 @@
  </row>
  <row id="111" trl="Y">
   <value column="Name" original="Albania">Albania</value>
-  <value column="Description" original="Albania">Albania</value>
+  <value column="Description" original="the Republic of Albania">República de Albania</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -158,7 +158,7 @@
  </row>
  <row id="112" trl="Y">
   <value column="Name" original="Algeria">Argelia</value>
-  <value column="Description" original="Algeria">Argelia</value>
+  <value column="Description" original="the People's Democratic Republic of Algeria"> República Argelina Democrática y Popular</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -186,7 +186,7 @@
  </row>
  <row id="114" trl="Y">
   <value column="Name" original="Andorra">Andorra</value>
-  <value column="Description" original="Andorra">Andorra</value>
+  <value column="Description" original="the Principality of Andorra">Principado de Andorra</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -200,7 +200,7 @@
  </row>
  <row id="115" trl="Y">
   <value column="Name" original="Angola">Angola</value>
-  <value column="Description" original="Angola">Angola</value>
+  <value column="Description" original="the Republic of Angola">República de Angola</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -241,8 +241,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="118" trl="Y">
-  <value column="Name" original="Antigua And Barbuda">Antigua y Barbuda</value>
-  <value column="Description" original="Antigua And Barbuda">Antigua y Barbuda</value>
+  <value column="Name" original="Antigua and Barbuda">Antigua y Barbuda</value>
+  <value column="Description" original="Antigua and Barbuda">Antigua y Barbuda</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -256,7 +256,7 @@
  </row>
  <row id="119" trl="Y">
   <value column="Name" original="Argentina">Argentina</value>
-  <value column="Description" original="Argentina">Argentina</value>
+  <value column="Description" original="the Argentine Republic">República Argentina</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -270,7 +270,7 @@
  </row>
  <row id="120" trl="Y">
   <value column="Name" original="Armenia">Armenia</value>
-  <value column="Description" original="Armenia">Armenia</value>
+  <value column="Description" original="the Republic of Armenia">República de Armenia</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -298,7 +298,7 @@
  </row>
  <row id="122" trl="Y">
   <value column="Name" original="Australia">Australia</value>
-  <value column="Description" original="Australia">Australia</value>
+  <value column="Description" original="Australia">Mancomunidad de Australia</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -312,7 +312,7 @@
  </row>
  <row id="124" trl="Y">
   <value column="Name" original="Azerbaijan">Azerbaiyán</value>
-  <value column="Description" original="Azerbaijan">Azerbaiyán</value>
+  <value column="Description" original="the Republic of Azerbaijan">República de Azerbaiyán</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -326,7 +326,7 @@
  </row>
  <row id="125" trl="Y">
   <value column="Name" original="Bahamas">Bahamas</value>
-  <value column="Description" original="Bahamas">Bahamas</value>
+  <value column="Description" original="the Commonwealth of the Bahamas">Mancomunidad de las Bahamas</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -339,8 +339,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="126" trl="Y">
-  <value column="Name" original="Bahrain">Bahréin</value>
-  <value column="Description" original="Bahrain">Bahréin</value>
+  <value column="Name" original="Bahrain">Baréin</value>
+  <value column="Description" original="the Kingdom of Bahrain">Reino de Bahrein</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -353,8 +353,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="127" trl="Y">
-  <value column="Name" original="Bangladesh">Bangladesh</value>
-  <value column="Description" original="Bangladesh">Bangladesh</value>
+  <value column="Name" original="Bangladesh">Bangladés</value>
+  <value column="Description" original="the People's Republic of Bangladesh">República Popular de Bangladesh</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -382,7 +382,7 @@
  </row>
  <row id="129" trl="Y">
   <value column="Name" original="Belarus">Bielorrusia</value>
-  <value column="Description" original="Belarus">Bielorrusia</value>
+  <value column="Description" original="the Republic of Belarus">República de Bielorrusia</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -410,7 +410,7 @@
  </row>
  <row id="132" trl="Y">
   <value column="Name" original="Benin">Benín</value>
-  <value column="Description" original="Benin">Benín</value>
+  <value column="Description" original="the Republic of Benin">República de Benin</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -424,7 +424,7 @@
  </row>
  <row id="133" trl="Y">
   <value column="Name" original="Bermuda">Bermudas</value>
-  <value column="Description" original="Bermuda">Bermudas</value>
+  <value column="Description" original="Bermuda">Islas Bermudas</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -438,7 +438,7 @@
  </row>
  <row id="134" trl="Y">
   <value column="Name" original="Bhutan">Bután</value>
-  <value column="Description" original="Bhutan">Bután</value>
+  <value column="Description" original="the Kingdom of Bhutan">Reino de Bután</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -452,7 +452,7 @@
  </row>
  <row id="135" trl="Y">
   <value column="Name" original="Bolivia">Bolivia</value>
-  <value column="Description" original="Bolivia">Bolivia</value>
+  <value column="Description" original="the Plurinational State of Bolivia">Estado Plurinacional de Bolivia</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -465,8 +465,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="136" trl="Y">
-  <value column="Name" original="Bosnia And Herzegovina">Bosnia y Herzegovina</value>
-  <value column="Description" original="Bosnia And Herzegovina">Bosnia y Herzegovina</value>
+  <value column="Name" original="Bosnia and Herzegovina">Bosnia y Herzegovina</value>
+  <value column="Description" original="Bosnia and Herzegovina">Bosnia y Herzegovina</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -480,7 +480,7 @@
  </row>
  <row id="137" trl="Y">
   <value column="Name" original="Botswana">Botsuana</value>
-  <value column="Description" original="Botswana">Botsuana</value>
+  <value column="Description" original="the Republic of Botswana">República de Botsuana</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -508,7 +508,7 @@
  </row>
  <row id="139" trl="Y">
   <value column="Name" original="Brazil">Brasil</value>
-  <value column="Description" original="Brazil">Brasil</value>
+  <value column="Description" original="the Federative Republic of Brazil">República Federativa de Brasil</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -522,7 +522,7 @@
  </row>
  <row id="140" trl="Y">
   <value column="Name" original="British Indian Ocean Territory">Territorio Británico del Océano Índico</value>
-  <value column="Description" original="British Indian Ocean Territory">Territorio Británico del Océano Índico</value>
+  <value column="Description" original="the British Indian Ocean Territory">Territorio Británico del Océano Índico</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -536,7 +536,7 @@
  </row>
  <row id="141" trl="Y">
   <value column="Name" original="Brunei Darussalam">Brunéi</value>
-  <value column="Description" original="Brunei Darussalam">Brunéi</value>
+  <value column="Description" original="Brunei Darussalam">Estado de Brunéi, Morada de la Paz</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -550,7 +550,7 @@
  </row>
  <row id="142" trl="Y">
   <value column="Name" original="Bulgaria">Bulgaria</value>
-  <value column="Description" original="Bulgaria">Bulgaria</value>
+  <value column="Description" original="the Republic of Bulgaria">República de Bulgaria</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -578,7 +578,7 @@
  </row>
  <row id="144" trl="Y">
   <value column="Name" original="Burundi">Burundi</value>
-  <value column="Description" original="Burundi">Burundi</value>
+  <value column="Description" original="the Republic of Burundi">República de Burundi</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -592,7 +592,7 @@
  </row>
  <row id="145" trl="Y">
   <value column="Name" original="Cambodia">Camboya</value>
-  <value column="Description" original="Cambodia">Camboya</value>
+  <value column="Description" original="the Kingdom of Cambodia">Reino de Camboya</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -606,7 +606,7 @@
  </row>
  <row id="146" trl="Y">
   <value column="Name" original="Cameroon">Camerún</value>
-  <value column="Description" original="Cameroon">Camerún</value>
+  <value column="Description" original="the Republic of Cameroon">República de Camerún</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -620,7 +620,7 @@
  </row>
  <row id="148" trl="Y">
   <value column="Name" original="Cape Verde">Cabo Verde</value>
-  <value column="Description" original="Cape Verde">Cabo Verde</value>
+  <value column="Description" original="the Republic of Cabo Verde">República de Cabo Verde</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -634,7 +634,7 @@
  </row>
  <row id="149" trl="Y">
   <value column="Name" original="Cayman Islands">Islas Caimán</value>
-  <value column="Description" original="Cayman Islands">Islas Caimán</value>
+  <value column="Description" original="the Cayman Islands">Islas Caimán</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -648,7 +648,7 @@
  </row>
  <row id="150" trl="Y">
   <value column="Name" original="Central African Republic">República Centroafricana</value>
-  <value column="Description" original="Central African Republic">República Centroafricana</value>
+  <value column="Description" original="the Central African Republic">República Centroafricana</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -662,7 +662,7 @@
  </row>
  <row id="151" trl="Y">
   <value column="Name" original="Chad">Chad</value>
-  <value column="Description" original="Chad">Chad</value>
+  <value column="Description" original="the Republic of Chad">República de Chad</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -676,7 +676,7 @@
  </row>
  <row id="152" trl="Y">
   <value column="Name" original="Chile">Chile</value>
-  <value column="Description" original="Chile">Chile</value>
+  <value column="Description" original="the Republic of Chile">República de Chile</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -690,7 +690,7 @@
  </row>
  <row id="153" trl="Y">
   <value column="Name" original="China">China</value>
-  <value column="Description" original="China">China</value>
+  <value column="Description" original="the People's Republic of China">República Popular China</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -704,7 +704,7 @@
  </row>
  <row id="154" trl="Y">
   <value column="Name" original="Christmas Island">Isla de Navidad</value>
-  <value column="Description" original="Christmas Island">Isla de Navidad</value>
+  <value column="Description" original="Christmas Island">Territorio de la Isla de Navidad</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -717,8 +717,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="155" trl="Y">
-  <value column="Name" original="Cocos (keeling) Islands">Islas Cocos (Keeling)</value>
-  <value column="Description" original="Cocos (keeling) Islands">Islas Cocos (Keeling)</value>
+  <value column="Name" original="Cocos (Keeling) Islands">Islas Cocos (Keeling)</value>
+  <value column="Description" original="the Cocos (Keeling) Islands">Territorio de las Islas Cocos (Keeling)</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -732,7 +732,7 @@
  </row>
  <row id="156" trl="Y">
   <value column="Name" original="Colombia">Colombia</value>
-  <value column="Description" original="Colombia">Colombia</value>
+  <value column="Description" original="the Republic of Colombia">República de Colombia</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -746,7 +746,7 @@
  </row>
  <row id="157" trl="Y">
   <value column="Name" original="Comoros">Comoras</value>
-  <value column="Description" original="Comoros">Comoras</value>
+  <value column="Description" original="the Union of the Comoros">Unión de las Comoras</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -760,7 +760,7 @@
  </row>
  <row id="158" trl="Y">
   <value column="Name" original="Congo">Congo</value>
-  <value column="Description" original="Congo">Congo</value>
+  <value column="Description" original="the Republic of the Congo">República del Congo</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -773,8 +773,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="159" trl="Y">
-  <value column="Name" original="Congo The Democratic Republic Of The">República Democrática del Congo</value>
-  <value column="Description" original="Congo The Democratic Republic Of The">República Democrática del Congo</value>
+  <value column="Name" original="Congo (DRC)">R. D. Congo</value>
+  <value column="Description" original="the Democratic Republic of the Congo">República Democrática del Congo</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -788,7 +788,7 @@
  </row>
  <row id="160" trl="Y">
   <value column="Name" original="Cook Islands">Islas Cook</value>
-  <value column="Description" original="Cook Islands">Islas Cook</value>
+  <value column="Description" original="the Cook Islands">Islas Cook</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -802,7 +802,7 @@
  </row>
  <row id="161" trl="Y">
   <value column="Name" original="Costa Rica">Costa Rica</value>
-  <value column="Description" original="Costa Rica">Costa Rica</value>
+  <value column="Description" original="the Republic of Costa Rica">República de Costa Rica</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -815,8 +815,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="162" trl="Y">
-  <value column="Name" original="Cote D'ivoire">Costa de Marfil</value>
-  <value column="Description" original="Cote D'ivoire">Costa de Marfil</value>
+  <value column="Name" original="Côte d'Ivoire">Costa de Marfil</value>
+  <value column="Description" original="the Republic of Côte d'Ivoire">República de Costa de Marfil</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -830,7 +830,7 @@
  </row>
  <row id="163" trl="Y">
   <value column="Name" original="Croatia">Croacia</value>
-  <value column="Description" original="Croatia">Croacia</value>
+  <value column="Description" original="the Republic of Croatia">República de Croacia</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -844,7 +844,7 @@
  </row>
  <row id="164" trl="Y">
   <value column="Name" original="Cuba">Cuba</value>
-  <value column="Description" original="Cuba">Cuba</value>
+  <value column="Description" original="the Republic of Cuba">República de Cuba</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -858,7 +858,7 @@
  </row>
  <row id="165" trl="Y">
   <value column="Name" original="Cyprus">Chipre</value>
-  <value column="Description" original="Cyprus">Chipre</value>
+  <value column="Description" original="the Republic of Cyprus">República de Chipre</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -871,8 +871,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="166" trl="Y">
-  <value column="Name" original="Czech Republic">República Checa</value>
-  <value column="Description" original="Czech Republic">República Checa</value>
+  <value column="Name" original="Czech Republic">Chequia</value>
+  <value column="Description" original="the Czech Republic">República Checa</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -886,7 +886,7 @@
  </row>
  <row id="167" trl="Y">
   <value column="Name" original="Denmark">Dinamarca</value>
-  <value column="Description" original="Denmark">Dinamarca</value>
+  <value column="Description" original="the Kingdom of Denmark">Reino de Dinamarca</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -900,7 +900,7 @@
  </row>
  <row id="168" trl="Y">
   <value column="Name" original="Djibouti">Yibuti</value>
-  <value column="Description" original="Djibouti">Yibuti</value>
+  <value column="Description" original="the Republic of Djibouti">República de Djibouti</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -914,7 +914,7 @@
  </row>
  <row id="169" trl="Y">
   <value column="Name" original="Dominica">Dominica</value>
-  <value column="Description" original="Dominica">Dominica</value>
+  <value column="Description" original="the Commonwealth of Dominica">Mancomunidad de Dominica</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -928,7 +928,7 @@
  </row>
  <row id="170" trl="Y">
   <value column="Name" original="Dominican Republic">República Dominicana</value>
-  <value column="Description" original="Dominican Republic">República Dominicana</value>
+  <value column="Description" original="the Dominican Republic">República Dominicana</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -942,7 +942,7 @@
  </row>
  <row id="171" trl="Y">
   <value column="Name" original="Ecuador">Ecuador</value>
-  <value column="Description" original="Ecuador">Ecuador</value>
+  <value column="Description" original="the Republic of Ecuador">República del Ecuador</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -956,7 +956,7 @@
  </row>
  <row id="172" trl="Y">
   <value column="Name" original="Egypt">Egipto</value>
-  <value column="Description" original="Egypt">Egipto</value>
+  <value column="Description" original="the Arab Republic of Egypt">República Árabe de Egipto</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -970,7 +970,7 @@
  </row>
  <row id="173" trl="Y">
   <value column="Name" original="El Salvador">El Salvador</value>
-  <value column="Description" original="El Salvador">El Salvador</value>
+  <value column="Description" original="the Republic of El Salvador">República de El Salvador</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -984,7 +984,7 @@
  </row>
  <row id="174" trl="Y">
   <value column="Name" original="Equatorial Guinea">Guinea Ecuatorial</value>
-  <value column="Description" original="Equatorial Guinea">Guinea Ecuatorial</value>
+  <value column="Description" original="the Republic of Equatorial Guinea">República de Guinea Ecuatorial</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -998,7 +998,7 @@
  </row>
  <row id="175" trl="Y">
   <value column="Name" original="Eritrea">Eritrea</value>
-  <value column="Description" original="Eritrea">Eritrea</value>
+  <value column="Description" original="the State of Eritrea">Estado de Eritrea</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1012,7 +1012,7 @@
  </row>
  <row id="176" trl="Y">
   <value column="Name" original="Estonia">Estonia</value>
-  <value column="Description" original="Estonia">Estonia</value>
+  <value column="Description" original="the Republic of Estonia">República de Estonia</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1026,7 +1026,7 @@
  </row>
  <row id="177" trl="Y">
   <value column="Name" original="Ethiopia">Etiopía</value>
-  <value column="Description" original="Ethiopia">Etiopía</value>
+  <value column="Description" original="the Federal Democratic Republic of Ethiopia">República Democrática Federal de Etiopía</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1039,8 +1039,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="178" trl="Y">
-  <value column="Name" original="Falkland Islands (malvinas)">Islas Malvinas</value>
-  <value column="Description" original="Falkland Islands (malvinas)">Islas Malvinas</value>
+  <value column="Name" original="Falkland Islands [Malvinas]">Islas Malvinas</value>
+  <value column="Description" original="the Falkland Islands [Malvinas]">Islas Malvinas</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1054,7 +1054,7 @@
  </row>
  <row id="179" trl="Y">
   <value column="Name" original="Faroe Islands">Islas Feroe</value>
-  <value column="Description" original="Faroe Islands">Islas Feroe</value>
+  <value column="Description" original="the Faroe Islands">Islas Feroe</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1068,7 +1068,7 @@
  </row>
  <row id="180" trl="Y">
   <value column="Name" original="Fiji">Fiyi</value>
-  <value column="Description" original="Fiji">Fiyi</value>
+  <value column="Description" original="the Republic of Fiji">República de Fiyi</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1082,7 +1082,7 @@
  </row>
  <row id="181" trl="Y">
   <value column="Name" original="Finland">Finlandia</value>
-  <value column="Description" original="Finland">Finlandia</value>
+  <value column="Description" original="the Republic of Finland">República de Finlandia</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1124,7 +1124,7 @@
  </row>
  <row id="185" trl="Y">
   <value column="Name" original="French Southern Territories">Tierras Australes y Antárticas Francesas</value>
-  <value column="Description" original="French Southern Territories">Tierras Australes y Antárticas Francesas</value>
+  <value column="Description" original="the French Southern Territories">Tierras Australes y Antárticas Francesas</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1138,7 +1138,7 @@
  </row>
  <row id="186" trl="Y">
   <value column="Name" original="Gabon">Gabón</value>
-  <value column="Description" original="Gabon">Gabón</value>
+  <value column="Description" original="the Gabonese Republic">República Gabonesa</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1152,7 +1152,7 @@
  </row>
  <row id="187" trl="Y">
   <value column="Name" original="Gambia">Gambia</value>
-  <value column="Description" original="Gambia">Gambia</value>
+  <value column="Description" original="the Republic of the Gambia">República del Gambia</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1180,7 +1180,7 @@
  </row>
  <row id="190" trl="Y">
   <value column="Name" original="Ghana">Ghana</value>
-  <value column="Description" original="Ghana">Ghana</value>
+  <value column="Description" original="the Republic of Ghana">República de Ghana</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1208,7 +1208,7 @@
  </row>
  <row id="192" trl="Y">
   <value column="Name" original="Greece">Grecia</value>
-  <value column="Description" original="Greece">Grecia</value>
+  <value column="Description" original="the Hellenic Republic">República Helénica</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1278,7 +1278,7 @@
  </row>
  <row id="197" trl="Y">
   <value column="Name" original="Guatemala">Guatemala</value>
-  <value column="Description" original="Guatemala">Guatemala</value>
+  <value column="Description" original="the Republic of Guatemala">República de Guatemala</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1292,7 +1292,7 @@
  </row>
  <row id="198" trl="Y">
   <value column="Name" original="Guinea">Guinea</value>
-  <value column="Description" original="Guinea">Guinea</value>
+  <value column="Description" original="the Republic of Guinea">República de Guinea</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1305,8 +1305,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="199" trl="Y">
-  <value column="Name" original="Guinea-bissau">Guinea-Bissau</value>
-  <value column="Description" original="Guinea-bissau">Guinea-Bissau</value>
+  <value column="Name" original="Guinea-bissau">Guinea-Bisáu</value>
+  <value column="Description" original="the Republic of Guinea-Bissau">República de Guinea-Bisáu</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1320,7 +1320,7 @@
  </row>
  <row id="200" trl="Y">
   <value column="Name" original="Guyana">Guyana</value>
-  <value column="Description" original="Guyana">Guyana</value>
+  <value column="Description" original="the Co-operative Republic of Guyana">República Cooperativa de Guyana</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1334,7 +1334,7 @@
  </row>
  <row id="201" trl="Y">
   <value column="Name" original="Haiti">Haití</value>
-  <value column="Description" original="Haiti">Haití</value>
+  <value column="Description" original="the Republic of Haiti">República de Haití</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1347,8 +1347,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="202" trl="Y">
-  <value column="Name" original="Heard Island And Mcdonald Islands">Islas Heard y McDonald</value>
-  <value column="Description" original="Heard Island And Mcdonald Islands">Islas Heard y McDonald</value>
+  <value column="Name" original="Heard Island and Mcdonald Islands">Islas Heard y McDonald</value>
+  <value column="Description" original="Heard Island and McDonald Islands">Islas Heard y McDonald</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1361,8 +1361,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="203" trl="Y">
-  <value column="Name" original="Holy See (vatican City State)">Santa Sede (Estado de la Ciudad del Vaticano)</value>
-  <value column="Description" original="Holy See (vatican City State)">Holy See (Estado de la Ciudad del Vaticano)</value>
+  <value column="Name" original="Holy See (Vatican City State)">Santa Sede (Estado de la Ciudad del Vaticano)</value>
+  <value column="Description" original="the Holy See">Santa Sede (Estado de la Ciudad del Vaticano)</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1376,7 +1376,7 @@
  </row>
  <row id="204" trl="Y">
   <value column="Name" original="Honduras">Honduras</value>
-  <value column="Description" original="Honduras">Honduras</value>
+  <value column="Description" original="the Republic of Honduras">República de Honduras</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1390,7 +1390,7 @@
  </row>
  <row id="205" trl="Y">
   <value column="Name" original="Hong Kong">Hong Kong</value>
-  <value column="Description" original="Hong Kong">Hong Kong</value>
+  <value column="Description" original="the Hong Kong Special Administrative Region of China">Región Administrativa Especial de Hong Kong de la República Popular China</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1418,7 +1418,7 @@
  </row>
  <row id="207" trl="Y">
   <value column="Name" original="Iceland">Islandia</value>
-  <value column="Description" original="Iceland">Islandia</value>
+  <value column="Description" original="the Republic of Iceland">República de Islandia</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1432,7 +1432,7 @@
  </row>
  <row id="208" trl="Y">
   <value column="Name" original="India">India</value>
-  <value column="Description" original="India">India</value>
+  <value column="Description" original="the Republic of India">República de la India</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1446,7 +1446,7 @@
  </row>
  <row id="209" trl="Y">
   <value column="Name" original="Indonesia">Indonesia</value>
-  <value column="Description" original="Indonesia">Indonesia</value>
+  <value column="Description" original="the Republic of Indonesia">República de Indonesia</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1459,8 +1459,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="210" trl="Y">
-  <value column="Name" original="Iran Islamic Republic Of">República Islámica de Irán</value>
-  <value column="Description" original="Iran Islamic Republic Of">República Islámica de Irán</value>
+  <value column="Name" original="Iran">Irán</value>
+  <value column="Description" original="the Islamic Republic of Iran">República Islámica de Irán</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1473,8 +1473,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="211" trl="Y">
-  <value column="Name" original="Iraq">Iraq</value>
-  <value column="Description" original="Iraq">Iraq</value>
+  <value column="Name" original="Iraq">Irak</value>
+  <value column="Description" original="the Republic of Iraq">República de Irak</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1488,7 +1488,7 @@
  </row>
  <row id="212" trl="Y">
   <value column="Name" original="Ireland">Irlanda</value>
-  <value column="Description" original="Ireland">Irlanda</value>
+  <value column="Description" original="Ireland">República de Irlanda</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1502,7 +1502,7 @@
  </row>
  <row id="213" trl="Y">
   <value column="Name" original="Israel">Israel</value>
-  <value column="Description" original="Israel">Israel</value>
+  <value column="Description" original="the State of Israel">Estado de Israel</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1516,7 +1516,7 @@
  </row>
  <row id="214" trl="Y">
   <value column="Name" original="Italy">Italia</value>
-  <value column="Description" original="Italy">Italia</value>
+  <value column="Description" original="the Republic of Italy">República Italiana</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1544,7 +1544,7 @@
  </row>
  <row id="216" trl="Y">
   <value column="Name" original="Japan">Japón</value>
-  <value column="Description" original="Japan">Japón</value>
+  <value column="Description" original="Japan">Estado del Japón</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1558,7 +1558,7 @@
  </row>
  <row id="217" trl="Y">
   <value column="Name" original="Jordan">Jordania</value>
-  <value column="Description" original="Jordan">Jordania</value>
+  <value column="Description" original="the Hashemite Kingdom of Jordan">Reino Hachemita de Jordania</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1572,7 +1572,7 @@
  </row>
  <row id="218" trl="Y">
   <value column="Name" original="Kazakhstan">Kazajistán</value>
-  <value column="Description" original="Kazakhstan">Kazajistán</value>
+  <value column="Description" original="the Republic of Kazakhstan">República de Kazajistán</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1586,7 +1586,7 @@
  </row>
  <row id="219" trl="Y">
   <value column="Name" original="Kenya">Kenia</value>
-  <value column="Description" original="Kenya">Kenia</value>
+  <value column="Description" original="the Republic of Kenya">República de Kenia</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1600,7 +1600,7 @@
  </row>
  <row id="220" trl="Y">
   <value column="Name" original="Kiribati">Kiribati</value>
-  <value column="Description" original="Kiribati">Kiribati</value>
+  <value column="Description" original="the Republic of Kiribati">República de Kiribati</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1613,8 +1613,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="221" trl="Y">
-  <value column="Name" original="Korea Democratic People's Republic Of">República Popular Democrática de Corea</value>
-  <value column="Description" original="Korea Democratic People's Republic Of">República Popular Democrática de Corea</value>
+  <value column="Name" original="Korea Democratic People's Republic of">Corea del Norte</value>
+  <value column="Description" original="the Democratic People's Republic of Korea">República Popular Democrática de Corea</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1627,8 +1627,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="222" trl="Y">
-  <value column="Name" original="Korea Republic Of">República de Corea</value>
-  <value column="Description" original="Korea Republic Of">República de Corea</value>
+  <value column="Name" original="Korea Republic of">Corea del Sur</value>
+  <value column="Description" original="the Republic of Korea">República de Corea</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1642,7 +1642,7 @@
  </row>
  <row id="223" trl="Y">
   <value column="Name" original="Kuwait">Kuwait</value>
-  <value column="Description" original="Kuwait">Kuwait</value>
+  <value column="Description" original="the State of Kuwait">Estado de Kuwait</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1656,7 +1656,7 @@
  </row>
  <row id="224" trl="Y">
   <value column="Name" original="Kyrgyzstan">Kirguistán</value>
-  <value column="Description" original="Kyrgyzstan">Kirguistán</value>
+  <value column="Description" original="the Kyrgyz Republic">República Kirguisa</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1669,8 +1669,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="225" trl="Y">
-  <value column="Name" original="Lao People's Democratic Republic">República Democrática Popular Lao</value>
-  <value column="Description" original="Lao People's Democratic Republic">República Democrática Popular Lao</value>
+  <value column="Name" original="Lao People's Democratic Republic">Laos</value>
+  <value column="Description" original="the Lao People's Democratic Republic">República Democrática Popular Lao</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1684,7 +1684,7 @@
  </row>
  <row id="226" trl="Y">
   <value column="Name" original="Latvia">Letonia</value>
-  <value column="Description" original="Latvia">Letonia</value>
+  <value column="Description" original="the Republic of Latvia">República de Letonia</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1698,7 +1698,7 @@
  </row>
  <row id="227" trl="Y">
   <value column="Name" original="Lebanon">Líbano</value>
-  <value column="Description" original="Lebanon">Líbano</value>
+  <value column="Description" original="the Lebanese Republic">República Libanesa</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1712,7 +1712,7 @@
  </row>
  <row id="228" trl="Y">
   <value column="Name" original="Lesotho">Lesoto</value>
-  <value column="Description" original="Lesotho">Lesoto</value>
+  <value column="Description" original="the Kingdom of Lesotho">Reino de Lesoto</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1726,7 +1726,7 @@
  </row>
  <row id="229" trl="Y">
   <value column="Name" original="Liberia">Liberia</value>
-  <value column="Description" original="Liberia">Liberia</value>
+  <value column="Description" original="the Republic of Liberia">República de Liberia</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1739,8 +1739,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="230" trl="Y">
-  <value column="Name" original="Libyan Arab Jamahiriya">Libia</value>
-  <value column="Description" original="Libyan Arab Jamahiriya">Libia</value>
+  <value column="Name" original="Libya">Libia</value>
+  <value column="Description" original="the State of Libya">Estado de Libia</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1754,7 +1754,7 @@
  </row>
  <row id="231" trl="Y">
   <value column="Name" original="Liechtenstein">Liechtenstein</value>
-  <value column="Description" original="Liechtenstein">Liechtenstein</value>
+  <value column="Description" original="the Principality of Liechtenstein">Principado de Liechtenstein</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1768,7 +1768,7 @@
  </row>
  <row id="232" trl="Y">
   <value column="Name" original="Lithuania">Lituania</value>
-  <value column="Description" original="Lithuania">Lituania</value>
+  <value column="Description" original="the Republic of Lithuania">República de Lituania</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1782,7 +1782,7 @@
  </row>
  <row id="233" trl="Y">
   <value column="Name" original="Luxembourg">Luxemburgo</value>
-  <value column="Description" original="Luxembourg">Luxemburgo</value>
+  <value column="Description" original="the Grand Duchy of Luxembourg">Gran Ducado de Luxemburgo</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1796,7 +1796,7 @@
  </row>
  <row id="234" trl="Y">
   <value column="Name" original="Macao">Macao</value>
-  <value column="Description" original="Macao">Macao</value>
+  <value column="Description" original="Macao Special Administrative Region of China">Región Administrativa Especial de Macao de la República Popular China</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1809,8 +1809,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="235" trl="Y">
-  <value column="Name" original="Macedonia Former Yugoslav Republic Of">Antigua República Yugoslava de Macedonia</value>
-  <value column="Description" original="Macedonia Former Yugoslav Republic Of">Antigua República Yugoslava de Macedonia</value>
+  <value column="Name" original="North Macedonia">Macedonia del Norte</value>
+  <value column="Description" original="the Republic of North Macedonia">República de Macedonia del Norte</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1824,7 +1824,7 @@
  </row>
  <row id="236" trl="Y">
   <value column="Name" original="Madagascar">Madagascar</value>
-  <value column="Description" original="Madagascar">Madagascar</value>
+  <value column="Description" original="the Republic of Madagascar">República de Madagascar</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1838,7 +1838,7 @@
  </row>
  <row id="237" trl="Y">
   <value column="Name" original="Malawi">Malaui</value>
-  <value column="Description" original="Malawi">Malaui</value>
+  <value column="Description" original="the Republic of Malawi">República de Malaui</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1852,7 +1852,7 @@
  </row>
  <row id="238" trl="Y">
   <value column="Name" original="Malaysia">Malasia</value>
-  <value column="Description" original="Malaysia">Malasia</value>
+  <value column="Description" original="Malaysia">Federación de Malasia</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1866,7 +1866,7 @@
  </row>
  <row id="239" trl="Y">
   <value column="Name" original="Maldives">Maldivas</value>
-  <value column="Description" original="Maldives">Maldivas</value>
+  <value column="Description" original="the Republic of Maldives">República de Maldivas</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1880,7 +1880,7 @@
  </row>
  <row id="240" trl="Y">
   <value column="Name" original="Mali">Malí</value>
-  <value column="Description" original="Mali">Malí</value>
+  <value column="Description" original="the Republic of Mali">República de Malí</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1894,7 +1894,7 @@
  </row>
  <row id="241" trl="Y">
   <value column="Name" original="Malta">Malta</value>
-  <value column="Description" original="Malta">Malta</value>
+  <value column="Description" original="the Republic of Malta">República de Malta</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1908,7 +1908,7 @@
  </row>
  <row id="242" trl="Y">
   <value column="Name" original="Marshall Islands">Islas Marshall</value>
-  <value column="Description" original="Marshall Islands">Islas Marshall</value>
+  <value column="Description" original="the Republic of the Marshall Islands">República de las Islas Marshall</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1936,7 +1936,7 @@
  </row>
  <row id="244" trl="Y">
   <value column="Name" original="Mauritania">Mauritania</value>
-  <value column="Description" original="Mauritania">Mauritania</value>
+  <value column="Description" original="the Islamic Republic of Mauritania">República Islámica de Mauritania</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1950,7 +1950,7 @@
  </row>
  <row id="245" trl="Y">
   <value column="Name" original="Mauritius">Mauricio</value>
-  <value column="Description" original="Mauritius">Mauricio</value>
+  <value column="Description" original="the Republic of Mauritius">República de Mauricio</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1978,7 +1978,7 @@
  </row>
  <row id="247" trl="Y">
   <value column="Name" original="Mexico">México</value>
-  <value column="Description" original="Mexico">México</value>
+  <value column="Description" original="the United Mexican States">Estados Unidos Mexicanos</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -1991,8 +1991,8 @@
   <value column="RegionName" original="State">Estado</value>
  </row>
  <row id="248" trl="Y">
-  <value column="Name" original="Micronesia Federated States Of">Estados Federados de Micronesia</value>
-  <value column="Description" original="Micronesia Federated States Of">Estados Federados de Micronesia</value>
+  <value column="Name" original="Micronesia">Micronesia</value>
+  <value column="Description" original="the Federated States of Micronesia">Estados Federados de Micronesia</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2005,8 +2005,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="249" trl="Y">
-  <value column="Name" original="Moldova Republic Of">República de Moldavia</value>
-  <value column="Description" original="Moldova Republic Of">República de Moldavia</value>
+  <value column="Name" original="Moldova">Moldavia</value>
+  <value column="Description" original="the Republic of Moldova">República de Moldavia</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2020,7 +2020,7 @@
  </row>
  <row id="250" trl="Y">
   <value column="Name" original="Monaco">Mónaco</value>
-  <value column="Description" original="Monaco">Mónaco</value>
+  <value column="Description" original="the Principality of Monaco">Principado de Mónaco</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2062,7 +2062,7 @@
  </row>
  <row id="253" trl="Y">
   <value column="Name" original="Morocco">Marruecos</value>
-  <value column="Description" original="Morocco">Marruecos</value>
+  <value column="Description" original="the Kingdom of Morocco">Reino de Marruecos</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2076,7 +2076,7 @@
  </row>
  <row id="254" trl="Y">
   <value column="Name" original="Mozambique">Mozambique</value>
-  <value column="Description" original="Mozambique">Mozambique</value>
+  <value column="Description" original="the Republic of Mozambique">República de Mozambique</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2090,7 +2090,7 @@
  </row>
  <row id="255" trl="Y">
   <value column="Name" original="Myanmar">Birmania</value>
-  <value column="Description" original="Myanmar">Birmania</value>
+  <value column="Description" original="the Republic of the Union of Myanmar">República de la Unión de Myanmar</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2104,7 +2104,7 @@
  </row>
  <row id="256" trl="Y">
   <value column="Name" original="Namibia">Namibia</value>
-  <value column="Description" original="Namibia">Namibia</value>
+  <value column="Description" original="the Republic of Namibia">República de Namibia</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2118,7 +2118,7 @@
  </row>
  <row id="257" trl="Y">
   <value column="Name" original="Nauru">Nauru</value>
-  <value column="Description" original="Nauru">Nauru</value>
+  <value column="Description" original="the Republic of Nauru">República de Nauru</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2132,7 +2132,7 @@
  </row>
  <row id="258" trl="Y">
   <value column="Name" original="Nepal">Nepal</value>
-  <value column="Description" original="Nepal">Nepal</value>
+  <value column="Description" original="the Federal Democratic Republic of Nepal">República Federal Democrática de Nepal</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2188,7 +2188,7 @@
  </row>
  <row id="263" trl="Y">
   <value column="Name" original="Nicaragua">Nicaragua</value>
-  <value column="Description" original="Nicaragua">Nicaragua</value>
+  <value column="Description" original="the Republic of Nicaragua">República de Nicaragua</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2202,7 +2202,7 @@
  </row>
  <row id="264" trl="Y">
   <value column="Name" original="Niger">Níger</value>
-  <value column="Description" original="Niger">Níger</value>
+  <value column="Description" original="the Republic of the Niger">República del Níger</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2216,7 +2216,7 @@
  </row>
  <row id="265" trl="Y">
   <value column="Name" original="Nigeria">Nigeria</value>
-  <value column="Description" original="Nigeria">Nigeria</value>
+  <value column="Description" original="the Federal Republic of Nigeria">República Federal de Nigeria</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2258,7 +2258,7 @@
  </row>
  <row id="268" trl="Y">
   <value column="Name" original="Northern Mariana Islands">Islas Marianas del Norte</value>
-  <value column="Description" original="Northern Mariana Islands">Islas Marianas del Norte</value>
+  <value column="Description" original="the Commonwealth of the Northern Mariana Islands">Mancomunidad de las Islas Marianas del Norte</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2272,7 +2272,7 @@
  </row>
  <row id="269" trl="Y">
   <value column="Name" original="Norway">Noruega</value>
-  <value column="Description" original="Norway">Noruega</value>
+  <value column="Description" original="the Kingdom of Norway">Reino de Noruega</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2286,7 +2286,7 @@
  </row>
  <row id="270" trl="Y">
   <value column="Name" original="Oman">Omán</value>
-  <value column="Description" original="Oman">Omán</value>
+  <value column="Description" original="the Sultanate of Oman">Sultanato de Omán</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2300,7 +2300,7 @@
  </row>
  <row id="271" trl="Y">
   <value column="Name" original="Pakistan">Pakistán</value>
-  <value column="Description" original="Pakistan">Pakistán</value>
+  <value column="Description" original="the Islamic Republic of Pakistan">República Islámica de Pakistán</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2314,7 +2314,7 @@
  </row>
  <row id="272" trl="Y">
   <value column="Name" original="Palau">Palaos</value>
-  <value column="Description" original="Palau">Palaos</value>
+  <value column="Description" original="the Republic of Palau">República de Palaos</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2327,8 +2327,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="273" trl="Y">
-  <value column="Name" original="Palestinian Territory Occupied">Territorios Ocupados Palestinos</value>
-  <value column="Description" original="Palestinian Territory Occupied">Territorios Ocupados Palestinos</value>
+  <value column="Name" original="Palestinian State of">Palestina</value>
+  <value column="Description" original="the State of Palestine">Estado de Palestina</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2342,7 +2342,7 @@
  </row>
  <row id="274" trl="Y">
   <value column="Name" original="Panama">Panamá</value>
-  <value column="Description" original="Panama">Panamá</value>
+  <value column="Description" original="the Republic of Panama">República de Panamá</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2356,7 +2356,7 @@
  </row>
  <row id="275" trl="Y">
   <value column="Name" original="Papua New Guinea">Papúa Nueva Guinea</value>
-  <value column="Description" original="Papua New Guinea">Papúa Nueva Guinea</value>
+  <value column="Description" original="the Independent State of Papua New Guinea">Estado Independiente de Papúa Nueva Guinea</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2370,7 +2370,7 @@
  </row>
  <row id="276" trl="Y">
   <value column="Name" original="Paraguay">Paraguay</value>
-  <value column="Description" original="Paraguay">Paraguay</value>
+  <value column="Description" original="the Republic of Paraguay">República del Paraguay</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2384,7 +2384,7 @@
  </row>
  <row id="277" trl="Y">
   <value column="Name" original="Peru">Perú</value>
-  <value column="Description" original="Peru">Perú</value>
+  <value column="Description" original="the Republic of Peru">República del Perú</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2398,7 +2398,7 @@
  </row>
  <row id="278" trl="Y">
   <value column="Name" original="Philippines">Filipinas</value>
-  <value column="Description" original="Philippines">Filipinas</value>
+  <value column="Description" original="the Republic of the Philippines">República de Filipinas</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2426,7 +2426,7 @@
  </row>
  <row id="280" trl="Y">
   <value column="Name" original="Poland">Polonia</value>
-  <value column="Description" original="Poland">Polonia</value>
+  <value column="Description" original="the Republic of Poland">República de Polonia</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2440,7 +2440,7 @@
  </row>
  <row id="281" trl="Y">
   <value column="Name" original="Portugal">Portugal</value>
-  <value column="Description" original="Portugal">Portugal</value>
+  <value column="Description" original="the Portuguese Republic">República Portuguesa</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2454,7 +2454,7 @@
  </row>
  <row id="282" trl="Y">
   <value column="Name" original="Puerto Rico">Puerto Rico</value>
-  <value column="Description" original="Puerto Rico">Puerto Rico</value>
+  <value column="Description" original="Puerto Rico">Estado libre asociado de Puerto Rico</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2467,8 +2467,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="283" trl="Y">
-  <value column="Name" original="Qatar">Qatar</value>
-  <value column="Description" original="Qatar">Qatar</value>
+  <value column="Name" original="Qatar">Catar</value>
+  <value column="Description" original="the State of Qatar">Estado de Catar</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2482,7 +2482,7 @@
  </row>
  <row id="284" trl="Y">
   <value column="Name" original="Reunion">Reunión</value>
-  <value column="Description" original="Reunion">Reunión</value>
+  <value column="Description" original="Réunion">Reunión</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2509,8 +2509,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="286" trl="Y">
-  <value column="Name" original="Russian Federation">Federación de Rusia</value>
-  <value column="Description" original="Russian Federation">Federación de Rusia</value>
+  <value column="Name" original="Russia">Rusia</value>
+  <value column="Description" original="the Russian Federation">Federación de Rusia</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2524,7 +2524,7 @@
  </row>
  <row id="287" trl="Y">
   <value column="Name" original="Rwanda">Ruanda</value>
-  <value column="Description" original="Rwanda">Ruanda</value>
+  <value column="Description" original="the Republic of Rwanda">República de Ruanda</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2537,8 +2537,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="288" trl="Y">
-  <value column="Name" original="Saint Helena">Santa Helena</value>
-  <value column="Description" original="Saint Helena">Santa Helena</value>
+  <value column="Name" original="Saint Helena">Santa Elena, Ascensión y Tristán de Acuña</value>
+  <value column="Description" original="Saint Helena, Ascension and Tristan da Cunha">Santa Elena, Ascensión y Tristán de Acuña</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2551,8 +2551,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="289" trl="Y">
-  <value column="Name" original="Saint Kitts And Nevis">San Cristóbal y Nieves</value>
-  <value column="Description" original="Saint Kitts And Nevis">San Cristóbal y Nieves</value>
+  <value column="Name" original="Saint Kitts and Nevis">San Cristóbal y Nieves</value>
+  <value column="Description" original="Saint Kitts and Nevis">Federación de San Cristóbal y Nieves</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2579,8 +2579,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="291" trl="Y">
-  <value column="Name" original="Saint Pierre And Miquelon">San Pedro y Miguelón</value>
-  <value column="Description" original="Saint Pierre And Miquelon">San Pedro y Miguelón</value>
+  <value column="Name" original="Saint Pierre and Miquelon">San Pedro y Miquelón</value>
+  <value column="Description" original="Saint Pierre and Miquelon">San Pedro y Miquelón</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2593,8 +2593,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="292" trl="Y">
-  <value column="Name" original="Saint Vincent And The Grenadines">San Vicente y las Granadinas</value>
-  <value column="Description" original="Saint Vincent And The Grenadines">San Vicente y las Granadinas</value>
+  <value column="Name" original="Saint Vincent and The Grenadines">San Vicente y las Granadinas</value>
+  <value column="Description" original="Saint Vincent and the Grenadines">San Vicente y las Granadinas</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2608,7 +2608,7 @@
  </row>
  <row id="293" trl="Y">
   <value column="Name" original="Samoa">Samoa</value>
-  <value column="Description" original="Samoa">Samoa</value>
+  <value column="Description" original="the Independent State of Samoa">Estado Independiente de Samoa</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2622,7 +2622,7 @@
  </row>
  <row id="294" trl="Y">
   <value column="Name" original="San Marino">San Marino</value>
-  <value column="Description" original="San Marino">San Marino</value>
+  <value column="Description" original="the Republic of San Marino">Serenísima República de San Marino</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2635,8 +2635,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="295" trl="Y">
-  <value column="Name" original="Sao Tome And Principe">Santo Tomé y Príncipe</value>
-  <value column="Description" original="Sao Tome And Principe">Santo Tomé y Príncipe</value>
+  <value column="Name" original="Sao Tome and Principe">Santo Tomé y Príncipe</value>
+  <value column="Description" original="the Democratic Republic of Sao Tome and Principe">República Democrática de Santo Tomé y Príncipe</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2650,7 +2650,7 @@
  </row>
  <row id="296" trl="Y">
   <value column="Name" original="Saudi Arabia">Arabia Saudita</value>
-  <value column="Description" original="Saudi Arabia">Arabia Saudita</value>
+  <value column="Description" original="the Kingdom of Saudi Arabia">Reino de Arabia Saudita</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2664,7 +2664,7 @@
  </row>
  <row id="297" trl="Y">
   <value column="Name" original="Senegal">Senegal</value>
-  <value column="Description" original="Senegal">Senegal</value>
+  <value column="Description" original="the Republic of Senegal">República de Senegal</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2678,7 +2678,7 @@
  </row>
  <row id="298" trl="Y">
   <value column="Name" original="Seychelles">Seychelles</value>
-  <value column="Description" original="Seychelles">Seychelles</value>
+  <value column="Description" original="the Republic of Seychelles">República de las Seychelles</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2692,7 +2692,7 @@
  </row>
  <row id="299" trl="Y">
   <value column="Name" original="Sierra Leone">Sierra Leona</value>
-  <value column="Description" original="Sierra Leone">Sierra Leona</value>
+  <value column="Description" original="the Republic of Sierra Leone">República de Sierra Leona</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2706,7 +2706,7 @@
  </row>
  <row id="300" trl="Y">
   <value column="Name" original="Singapore">Singapur</value>
-  <value column="Description" original="Singapore">Singapur</value>
+  <value column="Description" original="the Republic of Singapore">República de Singapur</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2720,7 +2720,7 @@
  </row>
  <row id="301" trl="Y">
   <value column="Name" original="Slovakia">Eslovaquia</value>
-  <value column="Description" original="Slovakia">Eslovaquia</value>
+  <value column="Description" original="the Slovak Republic">República Eslovaca</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2734,7 +2734,7 @@
  </row>
  <row id="302" trl="Y">
   <value column="Name" original="Slovenia">Eslovenia</value>
-  <value column="Description" original="Slovenia">Eslovenia</value>
+  <value column="Description" original="the Republic of Slovenia">República de Eslovenia</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2762,7 +2762,7 @@
  </row>
  <row id="304" trl="Y">
   <value column="Name" original="Somalia">Somalia</value>
-  <value column="Description" original="Somalia">Somalia</value>
+  <value column="Description" original="the Federal Republic of Somalia">República Federal de Somalia</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2776,7 +2776,7 @@
  </row>
  <row id="305" trl="Y">
   <value column="Name" original="South Africa">Sudáfrica</value>
-  <value column="Description" original="South Africa">Sudáfrica</value>
+  <value column="Description" original="the Republic of South Africa">República de Sudáfrica</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2789,8 +2789,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="306" trl="Y">
-  <value column="Name" original="South Georgia And The South Sandwich Islands">Islas Georgias del Sur y Sandwich del Sur</value>
-  <value column="Description" original="South Georgia And The South Sandwich Islands">Islas Georgias del Sur y Sandwich del Sur</value>
+  <value column="Name" original="South Georgia and The South Sandwich Islands">Islas Georgias del Sur y Sandwich del Sur</value>
+  <value column="Description" original="South Georgia and the South Sandwich Islands">Islas Georgias del Sur y Sandwich del Sur</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2804,7 +2804,7 @@
  </row>
  <row id="308" trl="Y">
   <value column="Name" original="Sri Lanka">Sri Lanka</value>
-  <value column="Description" original="Sri Lanka">Sri Lanka</value>
+  <value column="Description" original="the Democratic Socialist Republic of Sri Lanka">República Democrática Socialista de Sri Lanka</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2818,7 +2818,7 @@
  </row>
  <row id="309" trl="Y">
   <value column="Name" original="Sudan">Sudán</value>
-  <value column="Description" original="Sudan">Sudán</value>
+  <value column="Description" original="the Republic of the Sudan">República del Sudán</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2832,7 +2832,7 @@
  </row>
  <row id="310" trl="Y">
   <value column="Name" original="Suriname">Surinam</value>
-  <value column="Description" original="Suriname">Surinam</value>
+  <value column="Description" original="the Republic of Suriname">República de Surinam</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2845,8 +2845,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="311" trl="Y">
-  <value column="Name" original="Svalbard And Jan Mayen">Svalbard y Jan Mayen</value>
-  <value column="Description" original="Svalbard And Jan Mayen">Svalbard y Jan Mayen</value>
+  <value column="Name" original="Svalbard and Jan Mayen">Svalbard y Jan Mayen</value>
+  <value column="Description" original="Svalbard and Jan Mayen">Svalbard y Jan Mayen</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2859,8 +2859,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="312" trl="Y">
-  <value column="Name" original="Swaziland">Suazilandia</value>
-  <value column="Description" original="Swaziland">Suazilandia</value>
+  <value column="Name" original="Eswatini">Suazilandia</value>
+  <value column="Description" original="the Kingdom of Eswatini">Reino de Suazilandia</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2874,7 +2874,7 @@
  </row>
  <row id="313" trl="Y">
   <value column="Name" original="Sweden">Suecia</value>
-  <value column="Description" original="Sweden">Suecia</value>
+  <value column="Description" original="the Kingdom of Sweden">Reino de Suecia</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2887,8 +2887,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="315" trl="Y">
-  <value column="Name" original="Syrian Arab Republic">República Árabe Siria</value>
-  <value column="Description" original="Syrian Arab Republic">República Árabe Siria</value>
+  <value column="Name" original="Syria">Siria</value>
+  <value column="Description" original="the Syrian Arab Republic">República Árabe Siria</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2901,8 +2901,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="316" trl="Y">
-  <value column="Name" original="Taiwan">Isla de Taiwán</value>
-  <value column="Description" original="Taiwan">Isla de Taiwán</value>
+  <value column="Name" original="Taiwan">Taiwán</value>
+  <value column="Description" original="Taiwan (Province of China)">República de China</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2916,7 +2916,7 @@
  </row>
  <row id="317" trl="Y">
   <value column="Name" original="Tajikistan">Tayikistán</value>
-  <value column="Description" original="Tajikistan">Tayikistán</value>
+  <value column="Description" original="the Republic of Tajikistan">República de Tayikistán</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2929,8 +2929,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="318" trl="Y">
-  <value column="Name" original="Tanzania United Republic Of">República Unida de Tanzania</value>
-  <value column="Description" original="Tanzania United Republic Of">República Unida de Tanzania</value>
+  <value column="Name" original="Tanzania">Tanzania</value>
+  <value column="Description" original="the United Republic of Tanzania">República Unida de Tanzania</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2944,7 +2944,7 @@
  </row>
  <row id="319" trl="Y">
   <value column="Name" original="Thailand">Tailandia</value>
-  <value column="Description" original="Thailand">Tailandia</value>
+  <value column="Description" original="the Kingdom of Thailand">Reino de Tailandia</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2958,7 +2958,7 @@
  </row>
  <row id="320" trl="Y">
   <value column="Name" original="Timor-leste">Timor Oriental</value>
-  <value column="Description" original="Timor-leste">Timor Oriental</value>
+  <value column="Description" original="Timor-Leste">República Democrática de Timor Oriental</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -2972,7 +2972,7 @@
  </row>
  <row id="321" trl="Y">
   <value column="Name" original="Togo">Togo</value>
-  <value column="Description" original="Togo">Togo</value>
+  <value column="Description" original="the Togolese Republic">República Togolesa</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -3000,7 +3000,7 @@
  </row>
  <row id="323" trl="Y">
   <value column="Name" original="Tonga">Tonga</value>
-  <value column="Description" original="Tonga">Tonga</value>
+  <value column="Description" original="the Kingdom of Tonga">Reino de Tonga</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -3013,8 +3013,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="324" trl="Y">
-  <value column="Name" original="Trinidad And Tobago">Trinidad y Tobago</value>
-  <value column="Description" original="Trinidad And Tobago">Trinidad y Tobago</value>
+  <value column="Name" original="Trinidad and Tobago">Trinidad y Tobago</value>
+  <value column="Description" original="the Republic of Trinidad and Tobago">República de Trinidad y Tobago</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -3028,7 +3028,7 @@
  </row>
  <row id="325" trl="Y">
   <value column="Name" original="Tunisia">Túnez</value>
-  <value column="Description" original="Tunisia">Túnez</value>
+  <value column="Description" original="the Republic of Tunisia">República Tunecina</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -3042,7 +3042,7 @@
  </row>
  <row id="326" trl="Y">
   <value column="Name" original="Turkey">Turquía</value>
-  <value column="Description" original="Turkey">Turquía</value>
+  <value column="Description" original="the Republic of Turkey">República de Turquía</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -3069,8 +3069,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="328" trl="Y">
-  <value column="Name" original="Turks And Caicos Islands">Islas Turcas y Caicos</value>
-  <value column="Description" original="Turks And Caicos Islands">Islas Turcas y Caicos</value>
+  <value column="Name" original="Turks and Caicos Islands">Islas Turcas y Caicos</value>
+  <value column="Description" original="the Turks and Caicos Islands">Islas Turcas y Caicos</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -3098,7 +3098,7 @@
  </row>
  <row id="330" trl="Y">
   <value column="Name" original="Uganda">Uganda</value>
-  <value column="Description" original="Uganda">Uganda</value>
+  <value column="Description" original="the Republic of Uganda">República de Uganda</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -3126,7 +3126,7 @@
  </row>
  <row id="332" trl="Y">
   <value column="Name" original="United Arab Emirates">Emiratos Árabes Unidos</value>
-  <value column="Description" original="United Arab Emirates">Emiratos Árabes Unidos</value>
+  <value column="Description" original="the United Arab Emirates">Emiratos Árabes Unidos</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -3140,7 +3140,7 @@
  </row>
  <row id="333" trl="Y">
   <value column="Name" original="United Kingdom">Reino Unido</value>
-  <value column="Description" original="United Kingdom">Reino Unido</value>
+  <value column="Description" original="the United Kingdom of Great Britain and Northern Ireland">Reino Unido de Gran Bretaña e Irlanda del Norte</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -3153,8 +3153,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="335" trl="Y">
-  <value column="Name" original="United States Minor Outlying Islands">Islas Ultramarinas de Estados Unidos</value>
-  <value column="Description" original="United States Minor Outlying Islands">Islas Ultramarinas de Estados Unidos</value>
+  <value column="Name" original="United States Minor Outlying Islands">Islas Ultramarinas Menores de los Estados Unidos</value>
+  <value column="Description" original="the United States Minor Outlying Islands">Islas Ultramarinas Menores de los Estados Unidos</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -3168,7 +3168,7 @@
  </row>
  <row id="336" trl="Y">
   <value column="Name" original="Uruguay">Uruguay</value>
-  <value column="Description" original="Uruguay">Uruguay</value>
+  <value column="Description" original="the Eastern Republic of Uruguay">República Oriental del Uruguay</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -3182,7 +3182,7 @@
  </row>
  <row id="337" trl="Y">
   <value column="Name" original="Uzbekistan">Uzbekistán</value>
-  <value column="Description" original="Uzbekistan">Uzbekistán</value>
+  <value column="Description" original="the Republic of Uzbekistan">República de Uzbekistán</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -3196,7 +3196,7 @@
  </row>
  <row id="338" trl="Y">
   <value column="Name" original="Vanuatu">Vanuatu</value>
-  <value column="Description" original="Vanuatu">Vanuatu</value>
+  <value column="Description" original="the Republic of Vanuatu">República de Vanuatu</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -3210,7 +3210,7 @@
  </row>
  <row id="339" trl="Y">
   <value column="Name" original="Venezuela">Venezuela</value>
-  <value column="Description" original="Venezuela">Venezuela</value>
+  <value column="Description" original="the Bolivarian Republic of Venezuela">República Bolivariana de Venezuela</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -3224,7 +3224,7 @@
  </row>
  <row id="340" trl="Y">
   <value column="Name" original="Viet Nam">Vietnam</value>
-  <value column="Description" original="Viet Nam">Vietnam</value>
+  <value column="Description" original="the Socialist Republic of Viet Nam">República Socialista de Vietnam</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -3238,7 +3238,7 @@
  </row>
  <row id="341" trl="Y">
   <value column="Name" original="Virgin Islands British">Islas Vírgenes Británicas</value>
-  <value column="Description" original="Virgin Islands British">Islas Vírgenes Británicas</value>
+  <value column="Description" original="the British Virgin Islands">Islas Vírgenes Británicas</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -3251,8 +3251,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="342" trl="Y">
-  <value column="Name" original="Virgin Islands U.s.">Islas Vírgenes de los Estados Unidos</value>
-  <value column="Description" original="Virgin Islands U.s.">Islas Vírgenes de los Estados Unidos</value>
+  <value column="Name" original="Virgin Islands">Islas Vírgenes de los Estados Unidos</value>
+  <value column="Description" original="the Virgin Islands of the United States">Islas Vírgenes de los Estados Unidos</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -3265,8 +3265,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="343" trl="Y">
-  <value column="Name" original="Wallis And Futuna">Wallis y Futuna</value>
-  <value column="Description" original="Wallis And Futuna">Wallis y Futuna</value>
+  <value column="Name" original="Wallis and Futuna">Wallis y Futuna</value>
+  <value column="Description" original="Wallis and Futuna Islands">Wallis y Futuna</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -3280,7 +3280,7 @@
  </row>
  <row id="344" trl="Y">
   <value column="Name" original="Western Sahara">Sahara Occidental</value>
-  <value column="Description" original="Western Sahara">Sahara Occidental</value>
+  <value column="Description" original="Western Sahara* (*Provisional name)">República Árabe Saharaui Democrática</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -3294,7 +3294,7 @@
  </row>
  <row id="345" trl="Y">
   <value column="Name" original="Yemen">Yemen</value>
-  <value column="Description" original="Yemen">Yemen</value>
+  <value column="Description" original="the Republic of Yemen">República de Yemen</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -3322,7 +3322,7 @@
  </row>
  <row id="347" trl="Y">
   <value column="Name" original="Zambia">Zambia</value>
-  <value column="Description" original="Zambia">Zambia</value>
+  <value column="Description" original="the Republic of Zambia">República de Zambia</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -3336,7 +3336,7 @@
  </row>
  <row id="348" trl="Y">
   <value column="Name" original="Zimbabwe">Zimbabue</value>
-  <value column="Description" original="Zimbabwe">Zimbabue</value>
+  <value column="Description" original="the Republic of Zimbabwe">República de Zimbabue</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -3350,7 +3350,7 @@
  </row>
  <row id="349" trl="Y">
   <value column="Name" original="Serbia">Serbia</value>
-  <value column="Description" original="Serbia">Serbia</value>
+  <value column="Description" original="the Republic of Serbia">República de Serbia</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -3364,7 +3364,7 @@
  </row>
  <row id="350" trl="Y">
   <value column="Name" original="Montenegro">Montenegro</value>
-  <value column="Description" original="Montenegro">Montenegro</value>
+  <value column="Description" original="Montenegro">República de Montenegro</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -3377,8 +3377,8 @@
   <value column="RegionName" original=""/>
  </row>
  <row id="50000" trl="Y">
-  <value column="Name" original="Åland Islands">Islas de Åland</value>
-  <value column="Description" original="Åland Islands">Islas de Åland</value>
+  <value column="Name" original="Åland Islands">Islas Aland</value>
+  <value column="Description" original="Åland Islands">Islas Aland</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -3406,7 +3406,7 @@
  </row>
  <row id="50002" trl="Y">
   <value column="Name" original="Guernsey">Guernsey</value>
-  <value column="Description" original=""/>
+  <value column="Description" original="Guernsey">Guernsey</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -3433,8 +3433,8 @@
   <value column="RegionName" original="State">Estado</value>
  </row>
  <row id="50004" trl="Y">
-  <value column="Name" original="Jersey">Bailiazgo de Jersey</value>
-  <value column="Description" original="Jersey">Bailiazgo de Jersey</value>
+  <value column="Name" original="Jersey">Bailía de Guernsey</value>
+  <value column="Description" original="Jersey">Bailía de Guernsey</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -3447,8 +3447,8 @@
   <value column="RegionName" original="State">Estado</value>
  </row>
  <row id="50005" trl="Y">
-  <value column="Name" original="Saint Martin">Isla de San Martín</value>
-  <value column="Description" original="Saint Martin">Isla de San Martín</value>
+  <value column="Name" original="Saint Martin">San Martín (Francia)</value>
+  <value column="Description" original="Saint Martin (French part)">Isla de San Martín</value>
   <value column="PlaceholderAddress1" original=""/>
   <value column="PlaceholderAddress2" original=""/>
   <value column="PlaceholderAddress3" original=""/>
@@ -3459,5 +3459,61 @@
   <value column="PlaceholderPostal" original=""/>
   <value column="PlaceholderPostal_Add" original=""/>
   <value column="RegionName" original="State">Estado</value>
+ </row>
+ <row id="200000" trl="Y">
+  <value column="Name" original="Sint Maarten">San Martín (Países Bajos)</value>
+  <value column="Description" original="Sint Maarten (Dutch part)">País de San Martín</value>
+  <value column="PlaceholderAddress1" original=""/>
+  <value column="PlaceholderAddress2" original=""/>
+  <value column="PlaceholderAddress3" original=""/>
+  <value column="PlaceholderAddress4" original=""/>
+  <value column="PlaceholderAddress5" original=""/>
+  <value column="PlaceholderCity" original=""/>
+  <value column="PlaceholderComments" original=""/>
+  <value column="PlaceholderPostal" original=""/>
+  <value column="PlaceholderPostal_Add" original=""/>
+  <value column="RegionName" original="State">State</value>
+ </row>
+ <row id="200001" trl="Y">
+  <value column="Name" original="South Sudan">Sudán del Sur </value>
+  <value column="Description" original="the Republic of South Sudan">República de Sudán del Sur</value>
+  <value column="PlaceholderAddress1" original=""/>
+  <value column="PlaceholderAddress2" original=""/>
+  <value column="PlaceholderAddress3" original=""/>
+  <value column="PlaceholderAddress4" original=""/>
+  <value column="PlaceholderAddress5" original=""/>
+  <value column="PlaceholderCity" original=""/>
+  <value column="PlaceholderComments" original=""/>
+  <value column="PlaceholderPostal" original=""/>
+  <value column="PlaceholderPostal_Add" original=""/>
+  <value column="RegionName" original="State">State</value>
+ </row>
+ <row id="200002" trl="Y">
+  <value column="Name" original="Bonaire, Sint Eustatius and Saba">Bonaire, San Eustaquio y Saba</value>
+  <value column="Description" original="Bonaire, Sint Eustatius and Saba">Bonaire, San Eustaquio y Saba</value>
+  <value column="PlaceholderAddress1" original=""/>
+  <value column="PlaceholderAddress2" original=""/>
+  <value column="PlaceholderAddress3" original=""/>
+  <value column="PlaceholderAddress4" original=""/>
+  <value column="PlaceholderAddress5" original=""/>
+  <value column="PlaceholderCity" original=""/>
+  <value column="PlaceholderComments" original=""/>
+  <value column="PlaceholderPostal" original=""/>
+  <value column="PlaceholderPostal_Add" original=""/>
+  <value column="RegionName" original="State">State</value>
+ </row>
+ <row id="200003" trl="Y">
+  <value column="Name" original="Curaçao">Curazao</value>
+  <value column="Description" original="Curaçao">País de Curazao</value>
+  <value column="PlaceholderAddress1" original=""/>
+  <value column="PlaceholderAddress2" original=""/>
+  <value column="PlaceholderAddress3" original=""/>
+  <value column="PlaceholderAddress4" original=""/>
+  <value column="PlaceholderAddress5" original=""/>
+  <value column="PlaceholderCity" original=""/>
+  <value column="PlaceholderComments" original=""/>
+  <value column="PlaceholderPostal" original=""/>
+  <value column="PlaceholderPostal_Add" original=""/>
+  <value column="RegionName" original="State">State</value>
  </row>
 </idempiereTrl>

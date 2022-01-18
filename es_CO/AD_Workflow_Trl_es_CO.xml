@@ -324,4 +324,9 @@ Si no puede cubrir el MPS como fue planeado, este módulo le brinda la informaci
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="200007" trl="Y">
+  <value column="Name" original="Process_C_ProjectIssue">Proceso Surtimiento Proyecto</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
 </idempiereTrl>

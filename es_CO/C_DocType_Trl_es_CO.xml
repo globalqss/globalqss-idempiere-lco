@@ -5,7 +5,7 @@
  <row id="0" trl="Y">
   <value column="Name" original="** New **">** Nuevo **</value>
   <value column="PrintName" original="** New **">** Nuevo **</value>
-  <value column="DocumentNote" original="** NO INVOICE **">** NO HAY FACTURA AUN **</value>
+  <value column="DocumentNote" original="** NO INVOICE **">** NO FACTURA **</value>
  </row>
  <row id="115" trl="Y">
   <value column="Name" original="GL Journal">Nota de Contabilidad</value>

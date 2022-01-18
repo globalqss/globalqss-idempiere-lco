@@ -12,11 +12,6 @@
   <value column="Description" original="Load flat Files into import tables">Cargar archivos planos en las tablas de importación</value>
   <value column="Help" original="The Import File Loader parses the content of a flat file and loads it into import tables. Comments start with a '[' and end with a ']' and are ignored; example: [Some Heading].">El Cargador de Archivos parcela el contenido de un archivo plano y lo importa en tablas. Los comentarios comienzan con un '[' y terminan con un ']' y son ignorados; ejemplo: [Un Encabezado].</value>
  </row>
- <row id="102" trl="Y">
-  <value column="Name" original="Initial Client Setup">Configuración Inicial Grupo Empresarial</value>
-  <value column="Description" original="Initial new Client/Tenant Setup">Configuración Inicial Grupo Empresarial</value>
-  <value column="Help" original="Set up a new Client/Tenant of the system">Configurar un nuevo grupo empresarial del sistema</value>
- </row>
  <row id="103" trl="Y">
   <value column="Name" original="Material Transactions">Transacciones de Materiales</value>
   <value column="Description" original="Material Transactions">Transacciones de Materiales</value>
@@ -46,11 +41,6 @@
   <value column="Name" original="Matching PO-Receipt-Invoice">Asignar OC-Recibo-Factura</value>
   <value column="Description" original="Match Purchase Orders, Receipts, Vendor Invoices">Asignar Órdenes de Compra, Recibos de Producto, Facturas de Proveedores</value>
   <value column="Help" original="Make sure that the Receipts and Invoices are processed. If you want to match partial shipment, make sure that &quot;Same Quantity&quot; is not selected.">Asegúrese que los recibos y facturas estén procesados. Si quiere un asignamiento parcial, asegúrese que "Misma Cantidad" no esté seleccionado.</value>
- </row>
- <row id="109" trl="Y">
-  <value column="Name" original="Translation Import/Export">Importar/Exportar Traducción</value>
-  <value column="Description" original="Import or Export Language Translation">Importar o Exportar Traducción de Lenguaje.</value>
-  <value column="Help" original="Export/Import Translation info to/from xml for translation in external tool. Please note that the Language MUST be an enabled and verified System Langage.">Importar/Exportar Traducción desde/hacia xml para traducir con una herramienta externa. Por favor note que el lenguaje DEBE estar habilitado y verificado en Lenguaje del Sistema</value>
  </row>
  <row id="110" trl="Y">
   <value column="Name" original="Generate Shipments (manual)">Generar Entregas por Selección</value>
@@ -245,6 +235,31 @@ Seleccionando "dónde es usado" mostrará las LDM que usan este producto.</value
  <row id="200010" trl="Y">
   <value column="Name" original="Compare Context Help Suggestion">Compara Sugerencias de Ayuda Contextual</value>
   <value column="Description" original="Review changes for context help">Revisar cambios para ayuda contextual</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200011" trl="Y">
+  <value column="Name" original="idempiereMonitor">idempiereMonitor</value>
+  <value column="Description" original="Form to configure access to /idempiereMonitor - do not add to menu">Forma para configurar el acceso a /idempiereMonitor - no añadir al Menú</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200012" trl="Y">
+  <value column="Name" original="Apache Felix Web Console">Apache Felix Web Console</value>
+  <value column="Description" original="Form to configure access to /osgi/system/console - do not add to menu">Forma para configurar el acceso a /osgi/system/console - no añadir al Menú</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200015" trl="Y">
+  <value column="Name" original="Plugin Manager">Administrador de Plugins</value>
+  <value column="Description" original="Plugin Manager">Administrador de Plugins</value>
+  <value column="Help" original="Plugin Manager">Administrador de Plugins</value>
+ </row>
+ <row id="200016" trl="Y">
+  <value column="Name" original="Add Authorization Mail Account">Añadir Autorización Cuenta de Correo</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200017" trl="Y">
+  <value column="Name" original="Register MFA">Registrar AMF</value>
+  <value column="Description" original="Register a multi-factor authentication mechanism">Registrar un mecanismo de autenticación de múltiples factores</value>
   <value column="Help" original=""/>
  </row>
 </idempiereTrl>

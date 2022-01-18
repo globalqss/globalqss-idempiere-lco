@@ -2557,6 +2557,16 @@
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="200115" trl="Y">
+  <value column="Name" original="AttributeSet Type">AttributeSet Type</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200117" trl="Y">
+  <value column="Name" original="TabTypeList">TabTypeList</value>
+  <value column="Description" original="List of tab type">List of tab type</value>
+  <value column="Help" original=""/>
+ </row>
  <row id="200121" trl="Y">
   <value column="Name" original="AD_Style">AD_Style</value>
   <value column="Description" original="CSS Style">CSS Style</value>
@@ -2582,6 +2592,11 @@
   <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
+ <row id="200137" trl="Y">
+  <value column="Name" original="AD_Tree_Favorite_Node list">AD_Tree_Favorite_Node list</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row id="200144" trl="Y">
   <value column="Name" original="AD_Client All Clients">AD_Client All Clients</value>
   <value column="Description" original="Client selection">Client selection</value>
@@ -2592,6 +2607,11 @@
   <value column="Description" original="Users from all clients">Users from all clients</value>
   <value column="Help" original=""/>
  </row>
+ <row id="200152" trl="Y">
+  <value column="Name" original="Radio Group List">Radio Group List</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
  <row id="200157" trl="Y">
   <value column="Name" original="AD_Process Execution Type">AD_Process Execution Type</value>
   <value column="Description" original="Report/Process Execution Type">Report/Process Execution Type</value>
@@ -2600,6 +2620,151 @@
  <row id="200158" trl="Y">
   <value column="Name" original="AD_Process Multiple Execution">AD_Process Multiple Execution</value>
   <value column="Description" original="Multiple execution rule list">Multiple execution rule list</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200161" trl="Y">
+  <value column="Name" original="Chosen Multiple Selection List">Chosen Multiple Selection List</value>
+  <value column="Description" original="Chosen multiple selection box for reference list">Chosen multiple selection box for reference list</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200162" trl="Y">
+  <value column="Name" original="Chosen Multiple Selection Table">Chosen Multiple Selection Table</value>
+  <value column="Description" original="Chosen multiple selection box for table list">Chosen multiple selection box for table list</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200163" trl="Y">
+  <value column="Name" original="Chosen Multiple Selection Search">Chosen Multiple Selection Search</value>
+  <value column="Description" original="Chosen multiple selection box for search">Chosen multiple selection box for search</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200165" trl="Y">
+  <value column="Name" original="AD_Table with ID Column">AD_Table with ID Column</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200166" trl="Y">
+  <value column="Name" original="AD_Role RoleType">AD_Role RoleType</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200167" trl="Y">
+  <value column="Name" original="Activate/Deactivate/Delete">Activate/Deactivate/Delete</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200169" trl="Y">
+  <value column="Name" original="ReportOutputType">ReportOutputType</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200170" trl="Y">
+  <value column="Name" original="ViewFindResult">ViewFindResult</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200171" trl="Y">
+  <value column="Name" original="RelType C_Invoice -&gt; C_Invoice (CM)" xml:space="preserve"><![CDATA[RelType C_Invoice -> C_Invoice (CM)]]></value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200173" trl="Y">
+  <value column="Name" original="Scheduler State">Scheduler State</value>
+  <value column="Description" original="View and change the state of a scheduler">View and change the state of a scheduler</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200174" trl="Y">
+  <value column="Name" original="PA_ReportLine Line Stroke Type">PA_ReportLine Line Stroke Type</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200175" trl="Y">
+  <value column="Name" original="C_BPartner (all)">C_BPartner (all)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200176" trl="Y">
+  <value column="Name" original="M_Product (all)">M_Product (all)</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200178" trl="Y">
+  <value column="Name" original="ImportOrExport">ImportOrExport</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200179" trl="Y">
+  <value column="Name" original="AD_Table Trl">AD_Table Trl</value>
+  <value column="Description" original="Translated Tables">Translated Tables</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200180" trl="Y">
+  <value column="Name" original="M_AttributeSetInstance">M_AttributeSetInstance</value>
+  <value column="Description" original="Attribute Set Instance">Attribute Set Instance</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200181" trl="Y">
+  <value column="Name" original="S_ResourceAssignment">S_ResourceAssignment</value>
+  <value column="Description" original="Resource Assignment">Resource Assignment</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200182" trl="Y">
+  <value column="Name" original="AD_Image">AD_Image</value>
+  <value column="Description" original="Image">Image</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200183" trl="Y">
+  <value column="Name" original="AD_Chart">AD_Chart</value>
+  <value column="Description" original="Chart">Chart</value>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200184" trl="Y">
+  <value column="Name" original="AD_AuthorizationType">AD_AuthorizationType</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200185" trl="Y">
+  <value column="Name" original="AD_AuthorizationScope">AD_AuthorizationScope</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200186" trl="Y">
+  <value column="Name" original="HTML Attachment Type List">HTML Attachment Type List</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200187" trl="Y">
+  <value column="Name" original="MFA_Method">MFA_Method</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200188" trl="Y">
+  <value column="Name" original="MFAType">MFAType</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200189" trl="Y">
+  <value column="Name" original="MFATimeProvider">MFATimeProvider</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200190" trl="Y">
+  <value column="Name" original="AD_Element">AD_Element</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200191" trl="Y">
+  <value column="Name" original="MFA_Method - on client rule">MFA_Method - on client rule</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200194" trl="Y">
+  <value column="Name" original="M_WarehouseTo of Client">M_WarehouseTo of Client</value>
+  <value column="Description" original=""/>
+  <value column="Help" original=""/>
+ </row>
+ <row id="200198" trl="Y">
+  <value column="Name" original="FinReport ExcludeAdjustmentPeriods">FinReport ExcludeAdjustmentPeriods</value>
+  <value column="Description" original=""/>
   <value column="Help" original=""/>
  </row>
  <row trl="Y" uuid="9b146c1c-bf20-4f00-b0f0-ca7df61d037c">
