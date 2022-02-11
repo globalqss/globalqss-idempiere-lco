@@ -11799,7 +11799,7 @@ Ejemplo de formato "(000)_000-0000"]]></value>
   <value column="Name" original="Locode">Código de Localización</value>
   <value column="PrintName" original="Locode">Código de Localización</value>
   <value column="Description" original="Location code - UN/LOCODE ">Código de Localización - UN/LOCODE</value>
-  <value column="Help" original="UN/Locode is a combination of a 2-character country code and a 3-character location code, e.g. BEANR is known as the city of Antwerp (ANR) which is located in Belgium (BE).&#10;&lt;p&gt;See: http://www.unece.org/cefact/locode/service/main.htm">UN/LOCODE es una combinación de un código de país de dos caractéres y un código de localización de tres caractéres; por ejemplo; CLSCL corresponde a la ciudad de Santiago (SCL) en Chile (CL). Ver : http://www.unece.org/cefact/locode/service/main.htm</value>
+  <value column="Help" original="UN/Locode is a combination of a 2-character country code and a 3-character location code, e.g. BEANR is known as the city of Antwerp (ANR) which is located in Belgium (BE).&#10;&lt;p&gt;See: http://www.unece.org/cefact/locode/service/main.htm">UN/LOCODE es una combinación de un código de país de dos caracteres y un código de localización de tres caracteres; por ejemplo; CLSCL corresponde a la ciudad de Santiago (SCL) en Chile (CL). Ver : http://www.unece.org/cefact/locode/service/main.htm</value>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -15896,9 +15896,9 @@ de proyecto - capacidad de publicar el material</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2228" trl="Y">
-  <value column="Name" original="Character Data">Caractéres</value>
-  <value column="PrintName" original="Character Data">Caractéres</value>
-  <value column="Description" original="Long Character Field">Longitud del campo de caractéres.</value>
+  <value column="Name" original="Character Data">Caracteres</value>
+  <value column="PrintName" original="Character Data">Caracteres</value>
+  <value column="Description" original="Long Character Field">Longitud del campo de caracteres.</value>
   <value column="Help" original=""/>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
