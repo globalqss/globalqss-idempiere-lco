@@ -113,6 +113,7 @@ public class DIAN21_FE_UtilsXML {
 	private String m_QR = "";
 	//private boolean m_IsAttachXml;
 	private String m_File_Name = "";
+	private String m_DIANUrlQRCode = "";
 
 	public int m_sumanolineas = 0;
 	public BigDecimal m_sumadescuento = Env.ZERO;
@@ -141,8 +142,10 @@ public class DIAN21_FE_UtilsXML {
 		{
 			m_IsOnTesting = MSysConfig.getBooleanValue("QSSLCO_FE_EnPruebas", false, Env.getAD_Client_ID(Env.getCtx()));
 			m_EnvType = LCO_FE_Utils.AMBIENTE_PRODUCCION;
+			m_DIANUrlQRCode = "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=";
 			if (m_IsOnTesting) {
 				m_EnvType = LCO_FE_Utils.AMBIENTE_CERTIFICACION;
+				m_DIANUrlQRCode = "https://catalogo-vpfe-hab.dian.gov.co/document/searchqr?documentkey=";
 			}
 			
 			MDocType dt = new MDocType(invoice.getCtx(), invoice.getC_DocTypeTarget_ID(), invoice.get_TrxName());
@@ -277,7 +280,8 @@ public class DIAN21_FE_UtilsXML {
 					|| m_coddoc.equals(LCO_FE_Utils.TIPO_COMPROBANTE_CONTINGENCIA)
 					|| m_coddoc.equals(LCO_FE_Utils.TIPO_COMPROBANTE_NC)
 					|| m_coddoc.equals(LCO_FE_Utils.TIPO_COMPROBANTE_ND)
-					|| m_coddoc.equals(LCO_FE_Utils.TIPO_COMPROBANTE_SOPORTE)) {
+					|| m_coddoc.equals(LCO_FE_Utils.TIPO_COMPROBANTE_SOPORTE)
+					|| m_coddoc.equals(LCO_FE_Utils.TIPO_COMPROBANTE_AJUSTE_AC)) {
 				m_CUFE = 
 					generateCufe(
 						invoice.get_TrxName(),
@@ -305,11 +309,13 @@ public class DIAN21_FE_UtilsXML {
 					|| m_coddoc.equals(LCO_FE_Utils.TIPO_COMPROBANTE_CONTINGENCIA)
 					|| m_coddoc.equals(LCO_FE_Utils.TIPO_COMPROBANTE_NC)
 					|| m_coddoc.equals(LCO_FE_Utils.TIPO_COMPROBANTE_ND)
-					|| m_coddoc.equals(LCO_FE_Utils.TIPO_COMPROBANTE_SOPORTE)) {
+					|| m_coddoc.equals(LCO_FE_Utils.TIPO_COMPROBANTE_SOPORTE)
+					|| m_coddoc.equals(LCO_FE_Utils.TIPO_COMPROBANTE_AJUSTE_AC)) {
 				m_QR =
 					generateQR(
 							invoice.get_TrxName(),
 							invoice.getC_Invoice_ID(),
+							fedt.getDianShortDocType(),
 							invoice.getDocumentNo(),	// With Prefix
 							(Timestamp)invoice.get_Value("LCO_FE_DateTrx"),
 							invoice.getTotalLines(),
@@ -847,11 +853,11 @@ public class DIAN21_FE_UtilsXML {
 					} else if ( tpta.get_ValueAsString("DianTaxPayerCode").equals(LCO_FE_Utils.TIPO_PERSONA_NATURAL) ) {
 						mmDoc.startElement("","","cac:Person", atts);	// MAx 450
 							// D AN Max 150 Nombre del adquiriente
-							addHeaderElement(mmDoc, "FirstName", bp.get_ValueAsString("FirstName1"), atts);
+							addHeaderElement(mmDoc, "cbc:FirstName", bp.get_ValueAsString("FirstName1"), atts);
 							// D AN Max 150 Nombre del adquiriente
-							addHeaderElement(mmDoc, "MiddleName", bp.get_Value("FirstName2") != null ? bp.get_ValueAsString("FirstName2") : "", atts);
+							addHeaderElement(mmDoc, "cbc:MiddleName", bp.get_Value("FirstName2") != null ? bp.get_ValueAsString("FirstName2") : "", atts);
 							// D AN Max 150 Primer y segundo Apellido
-							addHeaderElement(mmDoc, "FamilyName", bp.get_ValueAsString("LastName1")
+							addHeaderElement(mmDoc, "cbc:FamilyName", bp.get_ValueAsString("LastName1")
 									+ bp.get_Value("LastName2") != null ? " " + bp.get_ValueAsString("LastName2") : "", atts);
 						mmDoc.endElement("","","cac:Person");
 					}
@@ -1265,6 +1271,27 @@ public class DIAN21_FE_UtilsXML {
 						mmDoc.endElement("","","cac:InvoiceLine");
 						
 						m_sumanolineas ++;
+						
+						/* // TODO Retenidos: Se reporta una sola vez la estructura item WithholdingTaxTotal similar a TaxTotal
+						// Regla: FAS07, Rechazo:  El valor del tributo informado no corresponde al producto del ..
+						if (m_sumanolineas == 1) {
+							List<List<Object>> rowsz = DB.getSQLArrayObjectsEx(inv.get_TrxName(), LCO_FE_Utils.SQL_TAX_GROUP, inv.getC_Invoice_ID(), inv.getC_Invoice_ID());
+							if (rowsz != null) {
+								for (List<Object> rowz : rowsz) {
+									EsRetencion = (rowz.get(0) != null && ((String)row.get(0)).equals("Y")) ? true : false;
+									String TipoImpuestoGrupo = (String) row.get(3);
+									// ..
+									if (!EsRetencion)
+										continue;
+									if (EsRetencion && !m_IsAutoRetenedor)
+										continue;
+									//if (TipoImpuestoGrupo.equals(LCO_FE_Utils.CODIGO_RETFTE_06) && !m_IsGranContribuyente)	// Revieme
+									//	continue;
+									// ..
+								}
+							}
+						} */
+						
 						if (inv.isDiscountPrinted())
 							m_sumadescuento = m_sumadescuento.add(Descuento);
 						if (EsRetencion)
@@ -1693,11 +1720,11 @@ public class DIAN21_FE_UtilsXML {
 					} else if ( tpta.get_ValueAsString("DianTaxPayerCode").equals(LCO_FE_Utils.TIPO_PERSONA_NATURAL) ) {
 						mmDoc.startElement("","","cac:Person", atts);	// MAx 450
 							// D AN Max 150 Nombre del adquiriente
-							addHeaderElement(mmDoc, "FirstName", bp.get_ValueAsString("FirstName1"), atts);
+							addHeaderElement(mmDoc, "cbc:FirstName", bp.get_ValueAsString("FirstName1"), atts);
 							// D AN Max 150 Nombre del adquiriente
-							addHeaderElement(mmDoc, "MiddleName", bp.get_Value("FirstName2") != null ? bp.get_ValueAsString("FirstName2") : "", atts);
+							addHeaderElement(mmDoc, "cbc:MiddleName", bp.get_Value("FirstName2") != null ? bp.get_ValueAsString("FirstName2") : "", atts);
 							// D AN Max 150 Primer y segundo Apellido
-							addHeaderElement(mmDoc, "FamilyName", bp.get_ValueAsString("LastName1")
+							addHeaderElement(mmDoc, "cbc:FamilyName", bp.get_ValueAsString("LastName1")
 									+ bp.get_Value("LastName2") != null ? " " + bp.get_ValueAsString("LastName2") : "", atts);
 						mmDoc.endElement("","","cac:Person");
 					}
@@ -1797,11 +1824,11 @@ public class DIAN21_FE_UtilsXML {
 					} else if ( tpte.get_ValueAsString("DianTaxPayerCode").equals(LCO_FE_Utils.TIPO_PERSONA_NATURAL) ) {
 						mmDoc.startElement("","","cac:Person", atts);	// Max 450
 							// D AN Max 150 Nombre del adquiriente
-							addHeaderElement(mmDoc, "FirstName", bp.get_ValueAsString("FirstName1"), atts);
+							addHeaderElement(mmDoc, "cbc:FirstName", bp.get_ValueAsString("FirstName1"), atts);
 							// D AN Max 150 Nombre del adquiriente
-							addHeaderElement(mmDoc, "MiddleName", bp.get_Value("FirstName2") != null ? bp.get_ValueAsString("FirstName2") : "", atts);
+							addHeaderElement(mmDoc, "cbc:MiddleName", bp.get_Value("FirstName2") != null ? bp.get_ValueAsString("FirstName2") : "", atts);
 							// D AN Max 150 Primer y segundo Apellido
-							addHeaderElement(mmDoc, "FamilyName", bp.get_ValueAsString("LastName1")
+							addHeaderElement(mmDoc, "cbc:FamilyName", bp.get_ValueAsString("LastName1")
 									+ bp.get_Value("LastName2") != null ? " " + bp.get_ValueAsString("LastName2") : "", atts);
 						mmDoc.endElement("","","cac:Person");
 					}
@@ -2557,11 +2584,11 @@ public class DIAN21_FE_UtilsXML {
 					} else if ( tpta.get_ValueAsString("DianTaxPayerCode").equals(LCO_FE_Utils.TIPO_PERSONA_NATURAL) ) {
 						mmDoc.startElement("","","cac:Person", atts);	// MAx 450
 							// D AN Max 150 Nombre del adquiriente
-							addHeaderElement(mmDoc, "FirstName", bp.get_ValueAsString("FirstName1"), atts);
+							addHeaderElement(mmDoc, "cbc:FirstName", bp.get_ValueAsString("FirstName1"), atts);
 							// D AN Max 150 Nombre del adquiriente
-							addHeaderElement(mmDoc, "MiddleName", bp.get_Value("FirstName2") != null ? bp.get_ValueAsString("FirstName2") : "", atts);
+							addHeaderElement(mmDoc, "cbc:MiddleName", bp.get_Value("FirstName2") != null ? bp.get_ValueAsString("FirstName2") : "", atts);
 							// D AN Max 150 Primer y segundo Apellido
-							addHeaderElement(mmDoc, "FamilyName", bp.get_ValueAsString("LastName1")
+							addHeaderElement(mmDoc, "cbc:FamilyName", bp.get_ValueAsString("LastName1")
 									+ bp.get_Value("LastName2") != null ? " " + bp.get_ValueAsString("LastName2") : "", atts);
 						mmDoc.endElement("","","cac:Person");
 					}
@@ -2661,11 +2688,11 @@ public class DIAN21_FE_UtilsXML {
 					} else if ( tpte.get_ValueAsString("DianTaxPayerCode").equals(LCO_FE_Utils.TIPO_PERSONA_NATURAL) ) {
 						mmDoc.startElement("","","cac:Person", atts);	// Max 450
 							// D AN Max 150 Nombre del adquiriente
-							addHeaderElement(mmDoc, "FirstName", bp.get_ValueAsString("FirstName1"), atts);
+							addHeaderElement(mmDoc, "cbc:FirstName", bp.get_ValueAsString("FirstName1"), atts);
 							// D AN Max 150 Nombre del adquiriente
-							addHeaderElement(mmDoc, "MiddleName", bp.get_Value("FirstName2") != null ? bp.get_ValueAsString("FirstName2") : "", atts);
+							addHeaderElement(mmDoc, "cbc:MiddleName", bp.get_Value("FirstName2") != null ? bp.get_ValueAsString("FirstName2") : "", atts);
 							// D AN Max 150 Primer y segundo Apellido
-							addHeaderElement(mmDoc, "FamilyName", bp.get_ValueAsString("LastName1")
+							addHeaderElement(mmDoc, "cbc:FamilyName", bp.get_ValueAsString("LastName1")
 									+ bp.get_Value("LastName2") != null ? " " + bp.get_ValueAsString("LastName2") : "", atts);
 						mmDoc.endElement("","","cac:Person");
 					}
@@ -3196,7 +3223,7 @@ public class DIAN21_FE_UtilsXML {
 			atts = addGovAttribute21(m_EnvType, f.getLCO_FE_UuidType());
 			// Error: El valor del CUFE es obligatorio cuando el tipo de documento es 1 = 'INVOICE'
 			// M AF 96, CUFE: Obligatorio si es factura nacional
-			addHeaderElement(mmDoc, "cbc:UUID", m_CUFE, atts);	// TODO reviewme FC
+			addHeaderElement(mmDoc, "cbc:UUID", m_CUFE, atts);	// TODO reviewme DS
 			atts.clear();
 			// M AN Max 10, Fecha de emisi\u00f3n de la factura Formato AAAA-MM-DD
 			addHeaderElement(mmDoc, "cbc:IssueDate", LCO_FE_Utils.getDateTime((Timestamp) inv.get_Value("LCO_FE_DateTrx"), 11), atts);
@@ -3411,11 +3438,11 @@ public class DIAN21_FE_UtilsXML {
 					} else if ( tpta.get_ValueAsString("DianTaxPayerCode").equals(LCO_FE_Utils.TIPO_PERSONA_NATURAL) ) {
 						mmDoc.startElement("","","cac:Person", atts);	// MAx 450
 							// D AN Max 150 Nombre del adquiriente
-							addHeaderElement(mmDoc, "FirstName", bp.get_ValueAsString("FirstName1"), atts);
+							addHeaderElement(mmDoc, "cbc:FirstName", bp.get_ValueAsString("FirstName1"), atts);
 							// D AN Max 150 Nombre del adquiriente
-							addHeaderElement(mmDoc, "MiddleName", bp.get_Value("FirstName2") != null ? bp.get_ValueAsString("FirstName2") : "", atts);
+							addHeaderElement(mmDoc, "cbc:MiddleName", bp.get_Value("FirstName2") != null ? bp.get_ValueAsString("FirstName2") : "", atts);
 							// D AN Max 150 Primer y segundo Apellido
-							addHeaderElement(mmDoc, "FamilyName", bp.get_ValueAsString("LastName1")
+							addHeaderElement(mmDoc, "cbc:FamilyName", bp.get_ValueAsString("LastName1")
 									+ bp.get_Value("LastName2") != null ? " " + bp.get_ValueAsString("LastName2") : "", atts);
 						mmDoc.endElement("","","cac:Person");
 					}
@@ -3520,7 +3547,7 @@ public class DIAN21_FE_UtilsXML {
 				mmDoc.endElement("","","cac:Party");
 			mmDoc.endElement("","","cac:AccountingCustomerParty");
 			
-			if (m_coddoc.equals(LCO_FE_Utils.TIPO_COMPROBANTE_FACTURA)) {
+			if (m_coddoc.equals(LCO_FE_Utils.TIPO_COMPROBANTE_SOPORTE)) {
 				// M 1..1, Método de pago
 				mmDoc.startElement("","","cac:PaymentMeans",atts);
 				// O AN Max 3 Código correspondiente al medio de pago Tabla 5
@@ -3792,16 +3819,20 @@ public class DIAN21_FE_UtilsXML {
 								// M 3 Veces max IDENTIFICACIÓN DEL ARTÍCULO O SERVICIO DE ACUERDO CON UN ESTÁNDAR
 								}
 								mmDoc.startElement("","","cac:StandardItemIdentification",atts);
-								if (!m_IsExport) {
+								if ( !(m_IsExport || !la.getCountry().getCountryCode().equals(LCO_FE_Utils.COUNTRY_CODE_CO)) ) {
 									// M AN Max 3, Código del estándar Tabla 31
 									atts.addAttribute("", "", "schemeID", "CDATA", feps.getValue());
+									// M AN Max 2, Código del estándar Tabla 31
+									atts.addAttribute("", "", "schemeAgencyID", "CDATA", feps.getIdAgency());
+									// M AN Max 35, Nombre del estándar Tabla 31
+									atts.addAttribute("", "", "schemeName", "CDATA", feps.getName());
 									// M AN Max 35, Código del producto segun IAE_2
 									addHeaderElement(mmDoc, "cbc:ID", CodigoEstandar, atts);	// Regla: ZB01 Also Charge CodigoEstandar
-									// addHeaderElement(mmDoc, "@schemeID", feps.getValue(), atts);
-								} else {	// TODO Reviewme
-									atts.addAttribute("", "", "schemeID", "CDATA", TipoProducto.equals(MProduct.PRODUCTTYPE_Item) ? fepspa.getValue() : feps.getValue());
-									addHeaderElement(mmDoc, "cbc:ID", TipoProducto.equals(MProduct.PRODUCTTYPE_Item) ? PartidaArancelaria : CodigoEstandar, atts);
-									// addHeaderElement(mmDoc, "@schemeID", TipoProducto.equals(MProduct.PRODUCTTYPE_Item) ? fepspa.getValue() : feps.getValue(), atts);
+								} else {
+									atts.addAttribute("", "", "schemeID", "CDATA", fepspa.getValue());
+									atts.addAttribute("", "", "schemeAgencyID", "CDATA", fepspa.getIdAgency());
+									atts.addAttribute("", "", "schemeName", "CDATA", fepspa.getName());
+									addHeaderElement(mmDoc, "cbc:ID", TipoProducto.equals(MProduct.PRODUCTTYPE_Item) ? PartidaArancelaria : LCO_FE_Utils.CODIGO_PA_DEFAULT, atts);
 								}
 								mmDoc.endElement("","","cac:StandardItemIdentification");
 							mmDoc.endElement("","","cac:Item");
@@ -3928,7 +3959,7 @@ public class DIAN21_FE_UtilsXML {
 	/**
 	 * Aplica
 	 * UBL 2.0: FV, FE - UUID: NC, ND, FC
-	 * UBL 2.1: FV, FE, FC, NC, ND sin UUID
+	 * UBL 2.1: FV, FE, FC, NC, ND sin UUID, DS, AC
 	 * @param
 	 * @return CUFE
 	 */
@@ -3970,6 +4001,20 @@ public class DIAN21_FE_UtilsXML {
 		ClTec = Clave técnica del rango de facturación (CUFE)
 		  OR Software-PIN = Pin del software registrado en el catalogo del participante (CUDE)
 		TipoAmbiente = Número de identificación del ambiente 2.1
+		//
+		El CUDS, permite identificar unívocamente en el territorio nacional un documento Soporte y Nota de ajuste al documento soporte
+		Composición del CUDS = SHA-384(NumFac + FecFac + HorFac + ValDS + CodImp + ValImp + ValTot + NitOFE + NumAdq + Software-PIN + TipoAmbie)
+		NumDS = Número del documento electrónico. (prefijo concatenado con el número del Documento Soporte o Nota de Ajuste)
+		FecDS = Fecha de emisión
+		HorDS = Hora del documento soporte incluyendo (UTC–05:00)
+		ValDS = Valor del documento soporte sin Impuestos, con punto decimal, con decimales a dos (2) dígitos truncados, sin separadores de miles, ni símbolo pesos.
+		CodImp = 01 Este valor es fijo.
+		ValImp = Valor impuesto 01 - IVA, con punto decimal, con decimales a dos (2) dígitos truncados, sin separadores de miles, ni símbolo pesos. Si no está referenciado el impuesto 01 – IVA este valor se representa con 0.00
+	    ValTot = Valor Total, con punto decimal, con decimales a dos (2) dígitos truncados, sin separadores de miles, ni símbolo pesos.
+	    NumSNO = Número de Identificación del SNO sin puntos ni guiones, sin digito de verificación.
+	    NITABS = Número del NIT del ABS del Documento Soporte sin puntos ni guiones, sin digito de verificación.
+	    Software-PIN = Pin del software registrado en el catálogo del participante, el cual no está expresado en el XML
+	    TipoAmbiente = Número de identificación del ambiente utilizado por el contribuyente para generar el documento soporte
 	    */
 		
 		BigDecimal importeiva = Env.ZERO;
@@ -3977,6 +4022,9 @@ public class DIAN21_FE_UtilsXML {
 		BigDecimal importeica = Env.ZERO;
 		
 		String cufe_sha = "";
+		
+		boolean isDocSoporte = (LCO_FE_Utils.TIPO_COMPROBANTE_SOPORTE.equals(dianshortdoctype)
+				|| LCO_FE_Utils.TIPO_COMPROBANTE_AJUSTE_AC.equals(dianshortdoctype));
 		
 		List<List<Object>> rows = DB.getSQLArrayObjectsEx(trx, LCO_FE_Utils.SQL_TAX_INFO, c_invoice_id, "%", c_invoice_id, "%");
 		if (rows != null) {
@@ -4012,20 +4060,24 @@ public class DIAN21_FE_UtilsXML {
 		cufedata.append(LCO_FE_Utils.decimalFormat(totallines));
 		cufedata.append(LCO_FE_Utils.CODIGO_IVA_01);
 		cufedata.append(LCO_FE_Utils.decimalFormat(importeiva));
-		if (LCO_FE_Utils.UBL_VERSION_21.equals(m_UBLVersionNo)) {
-			cufedata.append(LCO_FE_Utils.CODIGO_INC_04);
-			cufedata.append(LCO_FE_Utils.decimalFormat(importeconsumo));
-		} else {
-			cufedata.append(LCO_FE_Utils.CODIGO_CONSUMO_02);
-			cufedata.append(LCO_FE_Utils.decimalFormat(importeconsumo));
+		if (!isDocSoporte) {
+			if (LCO_FE_Utils.UBL_VERSION_21.equals(m_UBLVersionNo)) {
+				cufedata.append(LCO_FE_Utils.CODIGO_INC_04);
+				cufedata.append(LCO_FE_Utils.decimalFormat(importeconsumo));
+			} else {
+				cufedata.append(LCO_FE_Utils.CODIGO_CONSUMO_02);
+				cufedata.append(LCO_FE_Utils.decimalFormat(importeconsumo));
+			}
+			cufedata.append(LCO_FE_Utils.CODIGO_ICA_03);
+			cufedata.append(LCO_FE_Utils.decimalFormat(importeica));
 		}
-		cufedata.append(LCO_FE_Utils.CODIGO_ICA_03);
-		cufedata.append(LCO_FE_Utils.decimalFormat(importeica));
 		cufedata.append(LCO_FE_Utils.decimalFormat(grandtotal));
 		cufedata.append(taxidofe);
 		if ( LCO_FE_Utils.TIPO_COMPROBANTE_FACTURA.equals(dianshortdoctype)
 				|| LCO_FE_Utils.TIPO_COMPROBANTE_NC.equals(dianshortdoctype)
-				|| LCO_FE_Utils.TIPO_COMPROBANTE_ND.equals(dianshortdoctype) ) {
+				|| LCO_FE_Utils.TIPO_COMPROBANTE_ND.equals(dianshortdoctype)
+				|| LCO_FE_Utils.TIPO_COMPROBANTE_SOPORTE.equals(dianshortdoctype)
+				|| LCO_FE_Utils.TIPO_COMPROBANTE_AJUSTE_AC.equals(dianshortdoctype) ) {
 			if (!LCO_FE_Utils.UBL_VERSION_21.equals(m_UBLVersionNo))
 				cufedata.append(taxcodedian);
 			cufedata.append(taxidadq);
@@ -4038,7 +4090,8 @@ public class DIAN21_FE_UtilsXML {
 			if (LCO_FE_Utils.UBL_VERSION_21.equals(m_UBLVersionNo)) {
 				if (   LCO_FE_Utils.TIPO_COMPROBANTE_NC.equals(dianshortdoctype)
 					|| LCO_FE_Utils.TIPO_COMPROBANTE_ND.equals(dianshortdoctype)
-					|| LCO_FE_Utils.TIPO_COMPROBANTE_SOPORTE.equals(dianshortdoctype))
+					|| LCO_FE_Utils.TIPO_COMPROBANTE_SOPORTE.equals(dianshortdoctype)
+					|| LCO_FE_Utils.TIPO_COMPROBANTE_AJUSTE_AC.equals(dianshortdoctype))
 					cufedata.append(techkey);  // Software PIN
 			} else {
 				if (m_UseContingency || LCO_FE_Utils.TIPO_COMPROBANTE_CONTINGENCIA.equals(dianshortdoctype))
@@ -4152,13 +4205,14 @@ public class DIAN21_FE_UtilsXML {
 	/**
 	 * Aplica
 	 * UBL 2.0: FV, FE - UUID: NC, ND, FC
-	 * UBL 2.1: FV, FE, FC, NC, ND sin UUID
+	 * UBL 2.1: FV, FE, FC, NC, ND sin UUID, DS, AC
 	 * @param
 	 * @return QR
 	 */
 	public String generateQR(
 			String trx,
 			Integer c_invoice_id,
+			String dianshortdoctype,
 			String documentno,
 			Timestamp datetrx,
 			BigDecimal totallines,
@@ -4178,11 +4232,26 @@ public class DIAN21_FE_UtilsXML {
 		ValOtroIm = [VALOR_OTROS_IMPUESTOS] con punto decimal, con decimales a dos (2) dígitos, sin separadores de miles, ni símbolo pesos.
 		ValFacIm = [VALOR_OTROS_IMPUESTOS] con punto decimal, con decimales a dos (2) dígitos, sin separadores de miles, ni símbolo pesos.
 	    CUFE: [CUFE]
+	    //
+	    CÓDIGO BIDIMENSIONAL «QR» DEL CUDS, para la representación gráfica de los documentos soporte
+	    NumDS: [NUMERO_DOCUMENTO SOPORTE]
+		FecDS: [FECHA_DOCUMENTO SOPORTE]
+		HorDS: [HORA_DOCUMENTO SOPORTE (con (UTC–05:00))]
+		NumSNO: [NUMSNO] sin puntos ni guiones
+		DocAdq: [NIT_ABS] sin puntos ni guiones
+		ValDS: [VALOR_DOCUMENTO SOPORTE] con punto decimal, con decimales a dos (2) dígitos, sin separadores de miles, ni símbolo pesos.
+		ValIva: [VALOR_IVA] con punto decimal, con decimales a dos (2) dígitos, sin separadores de miles, ni símbolo pesos.
+		ValTolDS: [VALOR_TOTAL_DOCUMENTO SOPORTE] con punto decimal, con decimales a dos (2) dígitos, sin separadores de miles, ni símbolo pesos.
+		CUDS: [CUDS]
+		QRCode: URL disponible por la DIAN
 	    */
 		
 		BigDecimal importeiva = Env.ZERO;
 		BigDecimal importeotros = Env.ZERO;
 		
+		boolean isDocSoporte = (LCO_FE_Utils.TIPO_COMPROBANTE_SOPORTE.equals(dianshortdoctype)
+				|| LCO_FE_Utils.TIPO_COMPROBANTE_AJUSTE_AC.equals(dianshortdoctype));
+
 		List<List<Object>> rows = DB.getSQLArrayObjectsEx(trx, LCO_FE_Utils.SQL_TAX_INFO, c_invoice_id, "%", c_invoice_id, "%");
 		if (rows != null) {
 			for (List<Object> row : rows) {
@@ -4202,22 +4271,25 @@ public class DIAN21_FE_UtilsXML {
 			
 		StringBuilder qrdata = new StringBuilder();
 		
-		qrdata.append("NumFac: " + documentno + " ");	// Dalayed RetNewLine
+		qrdata.append((!isDocSoporte ? "NumFac: " : "NumDS: ") + documentno + " ");	// Dalayed RetNewLine
 		if (LCO_FE_Utils.UBL_VERSION_21.equals(m_UBLVersionNo))
-			qrdata.append("FecFac: " +  LCO_FE_Utils.getDateTime(datetrx, 11) + " "
-				+ "HorFac: " + LCO_FE_Utils.getDateTime(datetrx, 14) + " ");	// YYYYmmddHHMMss.TZ
+			qrdata.append((!isDocSoporte ? "FecFac: " : "FecDS: ") +  LCO_FE_Utils.getDateTime(datetrx, 11) + " "
+				+ (!isDocSoporte ? "HorFac: " : "HorDS: ") + LCO_FE_Utils.getDateTime(datetrx, 14) + " ");	// YYYYmmddHHMMss.TZ
 		else
 			qrdata.append("FecFac: " + LCO_FE_Utils.getDateTime(datetrx, 19) + " ");	// YYYYmmddHHMMss
-		qrdata.append("NitFac: " + taxidofe + " ");
+		qrdata.append((!isDocSoporte ? "NitFac: " : "NumSNO: ") + taxidofe + " ");
 		qrdata.append("DocAdq: " + taxidadq + " ");
-		qrdata.append("ValFac: " + LCO_FE_Utils.decimalFormat(totallines) + " ");
+		qrdata.append((!isDocSoporte ? "ValFac: " : "ValDS: ") + LCO_FE_Utils.decimalFormat(totallines) + " ");
 		qrdata.append("ValIva: " + LCO_FE_Utils.decimalFormat(importeiva) + " ");
-		qrdata.append("ValOtroIm: " + LCO_FE_Utils.decimalFormat(importeotros) + " ");
+		if (!isDocSoporte)
+			qrdata.append("ValOtroIm: " + LCO_FE_Utils.decimalFormat(importeotros) + " ");
 		if (LCO_FE_Utils.UBL_VERSION_21.equals(m_UBLVersionNo))
-			qrdata.append("ValFacIm: " + LCO_FE_Utils.decimalFormat(grandtotal) + " ");
+			qrdata.append((!isDocSoporte ? "ValFacIm: " : "ValTolDS: ") + LCO_FE_Utils.decimalFormat(grandtotal) + " ");
 		else
 			qrdata.append("ValTolFac: " + LCO_FE_Utils.decimalFormat(grandtotal) + " ");
-		qrdata.append("CUFE: " + cufe);
+		qrdata.append((!isDocSoporte ? "CUFE: " : "CUDS: ") + cufe);
+		if (isDocSoporte)
+			qrdata.append(" QRCode: " + m_DIANUrlQRCode + cufe);
 		
 		System.out.println("QR String: " + " " + qrdata.toString());
 		return qrdata.toString();
@@ -4322,7 +4394,8 @@ public class DIAN21_FE_UtilsXML {
 		String xmlns_sts = "http://www.dian.gov.co/contratos/facturaelectronica/v1/Structures";
 		
 		if (   LCO_FE_Utils.TIPO_COMPROBANTE_FACTURA.equals(dianshortdoctype)
-			|| LCO_FE_Utils.TIPO_COMPROBANTE_EXPORTACION.equals(dianshortdoctype)) {
+			|| LCO_FE_Utils.TIPO_COMPROBANTE_EXPORTACION.equals(dianshortdoctype)
+			|| LCO_FE_Utils.TIPO_COMPROBANTE_SOPORTE.equals(dianshortdoctype)) {
 			xmlns = "urn:oasis:names:specification:ubl:schema:xsd:Invoice-2";
 			xsi_schemalocation = "http://www.dian.gov.co/contratos/facturaelectronica/v1 ../xsd/DIAN_UBL.xsd urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2 ../../ubl2/common/UnqualifiedDataTypeSchemaModule-2.0.xsd urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2 ../../ubl2/common/UBL-QualifiedDatatypes-2.0.xsd";
 		} else if (LCO_FE_Utils.TIPO_COMPROBANTE_NC.equals(dianshortdoctype)) {
@@ -4336,7 +4409,8 @@ public class DIAN21_FE_UtilsXML {
 		if (LCO_FE_Utils.UBL_VERSION_21.equals(m_UBLVersionNo)) {
 			xmlns_sts = "dian:gov:co:facturaelectronica:Structures-2-1";
 			if (LCO_FE_Utils.TIPO_COMPROBANTE_FACTURA.equals(dianshortdoctype)
-					|| LCO_FE_Utils.TIPO_COMPROBANTE_EXPORTACION.equals(dianshortdoctype))
+					|| LCO_FE_Utils.TIPO_COMPROBANTE_EXPORTACION.equals(dianshortdoctype)
+					|| LCO_FE_Utils.TIPO_COMPROBANTE_SOPORTE.equals(dianshortdoctype))
 				xsi_schemalocation = "urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 http://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd";
 			else if (LCO_FE_Utils.TIPO_COMPROBANTE_NC.equals(dianshortdoctype))
 				// xsi_schemalocation = "urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2 http://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/maindoc/UBL-CreditNote-2.1.xsd";
