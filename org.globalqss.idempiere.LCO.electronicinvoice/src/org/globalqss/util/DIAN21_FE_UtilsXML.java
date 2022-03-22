@@ -105,6 +105,7 @@ public class DIAN21_FE_UtilsXML {
 	private BigDecimal m_totaldescuento = Env.ZERO;
 	private String m_IdAccount;
 	private String m_UBLVersionNo = "";
+	private boolean m_IsGranContribuyente;
 	private boolean m_IsAutoRetenedor;
 	private String m_UserName;
 	private String m_EnvType;
@@ -205,9 +206,11 @@ public class DIAN21_FE_UtilsXML {
 
 			X_LCO_FE_DIAN_Format f = new X_LCO_FE_DIAN_Format (invoice.getCtx(), m_lco_fe_dian_format_id, null);
 			MSequence seqxml = null;
-			if (m_coddoc.equals(LCO_FE_Utils.TIPO_COMPROBANTE_SOPORTE)) {
+			if ( m_coddoc.equals(LCO_FE_Utils.TIPO_COMPROBANTE_SOPORTE)
+				|| m_coddoc.equals(LCO_FE_Utils.TIPO_COMPROBANTE_AJUSTE_AC) ) {
 				seqxml = new MSequence(invoice.getCtx(), f.getAD_Sequence_ID(), invoice.get_TrxName());
 				m_seqEnvio = MSequence.getDocumentNoFromSeq(seqxml, invoice.get_TrxName(), invoice);
+				m_seqEnvio = m_seqEnvio.replace(m_Prefix, "");
 				m_DateInvoiced = invoice.getDateInvoiced();
 			}
 			
@@ -233,6 +236,7 @@ public class DIAN21_FE_UtilsXML {
 			byte[] bytes = digest.digest(m_IdAccount.getBytes(StandardCharsets.UTF_8));
 			m_IdAccount = Secure.convertToHexString(bytes);	//	Context
 			m_UserName = oi.get_ValueAsString("LCO_FE_UserName");
+			m_IsGranContribuyente = !oi.get_ValueAsString("LCO_FE_GranConResolucionNo").equals("");
 			m_IsAutoRetenedor = !oi.get_ValueAsString("LCO_FE_AutoretResolucionNo").equals("");
 
 			MBPartner bpe = new MBPartner(invoice.getCtx(), oi.get_ValueAsInt("C_BPartner_ID"), invoice.get_TrxName());
@@ -1512,7 +1516,7 @@ public class DIAN21_FE_UtilsXML {
 			// M AN 1..4, Indicador del tipo de operación
 			addHeaderElement(mmDoc, "cbc:CustomizationID", LCO_FE_Utils.cutString(feot.getValue(), 2), atts);
 			// M AF Max 55, Version Formato
-			addHeaderElement(mmDoc, "cbc:ProfileID", LCO_FE_Utils.cutString(f.getVersionNo() + ": " + f.getName(), 55), atts);		// DIAN 2.1
+			addHeaderElement(mmDoc, "cbc:ProfileID", LCO_FE_Utils.cutString(f.getVersionNo() + ": " + f.getName(), 55), atts);	// DIAN 2.1
 			// M N 1, Ambiente de Destino
 			addHeaderElement(mmDoc, "cbc:ProfileExecutionID", m_EnvType, atts);
 			// M AF Max 20, Prefijo + No. Documento Formato
@@ -2374,7 +2378,7 @@ public class DIAN21_FE_UtilsXML {
 			// M AN 1..4, Indicador del tipo de operación
 			addHeaderElement(mmDoc, "cbc:CustomizationID", LCO_FE_Utils.cutString(feot.getValue(), 2), atts);
 			// M AF Max 55, Version Formato
-			addHeaderElement(mmDoc, "cbc:ProfileID", LCO_FE_Utils.cutString(f.getVersionNo() + ": " + f.getName(), 55), atts);		// DIAN 2.1
+			addHeaderElement(mmDoc, "cbc:ProfileID", LCO_FE_Utils.cutString(f.getVersionNo() + ": " + f.getName(), 55), atts);	// DIAN 2.1
 			// M N 1, Ambiente de Destino
 			addHeaderElement(mmDoc, "cbc:ProfileExecutionID", m_EnvType, atts);
 			// M AF Max 20, Prefijo + No. Documento Formato
@@ -3106,7 +3110,7 @@ public class DIAN21_FE_UtilsXML {
 					mmDoc.startElement("","","ext:ExtensionContent", atts);
 						mmDoc.startElement("","","sts:DianExtensions", atts);
 							mmDoc.startElement("","","sts:InvoiceControl", atts);
-								if (m_coddoc.equals(LCO_FE_Utils.TIPO_COMPROBANTE_FACTURA)) {
+								if (m_coddoc.equals(LCO_FE_Utils.TIPO_COMPROBANTE_SOPORTE)) {
 									// M AN 14 N\u00famero autorizaci\u00f3n
 									addHeaderElement(mmDoc, "sts:InvoiceAuthorization", pfc.getAuthorizationNo(), atts);
 									mmDoc.startElement("","","sts:AuthorizationPeriod", atts);
@@ -3213,8 +3217,8 @@ public class DIAN21_FE_UtilsXML {
 			addHeaderElement(mmDoc, "cbc:UBLVersionID", LCO_FE_Utils.cutString(f.getUBLVersionNo(), 7), atts);	// UBL 2.1
 			// M AN 1..4, Indicador del tipo de operación
 			addHeaderElement(mmDoc, "cbc:CustomizationID", LCO_FE_Utils.cutString(feot.getValue(), 2), atts);
-			// M AF Max 8, Version Formato
-			addHeaderElement(mmDoc, "cbc:ProfileID", LCO_FE_Utils.cutString(f.getVersionNo(), 8), atts);		// DIAN 2.1
+			// M AF Max 82, Version Formato
+			addHeaderElement(mmDoc, "cbc:ProfileID", LCO_FE_Utils.cutString(f.getVersionNo() + ": " + f.getDescription(), 82), atts);	// DIAN 2.1 DS
 			// M N 1, Ambiente de Destino
 			addHeaderElement(mmDoc, "cbc:ProfileExecutionID", m_EnvType, atts);
 			// M AF Max 20, Prefijo + No. Documento Formato
@@ -3229,6 +3233,10 @@ public class DIAN21_FE_UtilsXML {
 			addHeaderElement(mmDoc, "cbc:IssueDate", LCO_FE_Utils.getDateTime((Timestamp) inv.get_Value("LCO_FE_DateTrx"), 11), atts);
 			// M AN Max 14, Hora de emisi\u00f3n de la factura Formato HH:MM:DD-05:00
 			addHeaderElement(mmDoc, "cbc:IssueTime", LCO_FE_Utils.getDateTime((Timestamp) inv.get_Value("LCO_FE_DateTrx"), 14), atts);
+			// O AN Max 10 Fecha de pago Formato AAAA-MM-DD
+			Object[] args = new Object[] { inv.getC_PaymentTerm_ID(), (Timestamp) inv.get_Value("LCO_FE_DateTrx")};
+			Timestamp duedate = DB.getSQLValueTSEx(null, "SELECT paymenttermduedate(?, ?)", args);
+			addHeaderElement(mmDoc, "cbc:DueDate", LCO_FE_Utils.getDateTime(duedate, 11), atts);
 			atts.clear();
 			// atts.addAttribute("", "", "listAgencyID", "CDATA", "195");
 			// atts.addAttribute("", "", "listAgencyName", "CDATA", "CO, DIAN (Direccion de Impuestos y Aduanas Nacionales)");
@@ -3559,8 +3567,8 @@ public class DIAN21_FE_UtilsXML {
 					addHeaderElement(mmDoc, "cbc:PaymentMeansCode", LCO_FE_Utils.METODO_PAGO_CONTADO, atts);
 				// D AN Max 10 Fecha de pago Formato AAAA-MM-DD
 				if (inv.getPaymentRule().equals(MInvoice.PAYMENTRULE_OnCredit)) {
-					Object[] args = new Object[] { inv.getC_PaymentTerm_ID(), (Timestamp) inv.get_Value("LCO_FE_DateTrx")};
-					Timestamp duedate = DB.getSQLValueTSEx(null, "SELECT paymenttermduedate(?, ?)", args);
+					args = new Object[] { inv.getC_PaymentTerm_ID(), (Timestamp) inv.get_Value("LCO_FE_DateTrx")};
+					duedate = DB.getSQLValueTSEx(null, "SELECT paymenttermduedate(?, ?)", args);
 					addHeaderElement(mmDoc, "cbc:PaymentDueDate", LCO_FE_Utils.getDateTime(duedate, 11), atts);
 				}
 				mmDoc.endElement("","","cac:PaymentMeans");
@@ -3593,9 +3601,9 @@ public class DIAN21_FE_UtilsXML {
 							return "@Error@ @invoice.no@ " + inv.getDocumentNo() + " " + msg;
 						}
 						// Impuestos Retenidos
-						if (EsRetencion && !m_IsAutoRetenedor)
+						if (EsRetencion && !TipoImpuestoGrupo.equals(LCO_FE_Utils.CODIGO_RETFTE_06) && !m_IsAutoRetenedor)
 							continue;
-						if (TipoImpuestoGrupo.equals(LCO_FE_Utils.CODIGO_RETFTE_06))	// No Reporta ?
+						if (TipoImpuestoGrupo.equals(LCO_FE_Utils.CODIGO_RETFTE_06) && !m_IsGranContribuyente)	// Reviewme
 							continue;
 						// O 50 Veces max Impuestos
 						if (!EsRetencion)
@@ -3706,7 +3714,7 @@ public class DIAN21_FE_UtilsXML {
 				atts.clear();
 			mmDoc.endElement("","","cac:LegalMonetaryTotal");
 			
-			Object[] args = null;
+			args = null;
 			// !m_IsExport
 			int lco_fe_productscheme_id = -1;
 			X_LCO_FE_ProductScheme feps = null;
@@ -4298,27 +4306,28 @@ public class DIAN21_FE_UtilsXML {
 
 	public String constructFileName(String taxid, String repdoctype, Boolean hex) {
 		
-		boolean isDSE = repdoctype.equals(LCO_FE_Utils.DOCUMENTO_SOPORTE_ELECTRONICO);
+		boolean isDocSoporte = (LCO_FE_Utils.TIPO_COMPROBANTE_SOPORTE.equals(m_coddoc)
+								|| LCO_FE_Utils.TIPO_COMPROBANTE_AJUSTE_AC.equals(m_coddoc));
 		
 		String docnoformat = "%010d";
 		if (hex)
-			if (isDSE)
+			if (isDocSoporte)
 				docnoformat = "%08x";
 			else
 				docnoformat = "%010x";
 				
 		StringBuilder xmlFileName = new StringBuilder("");
 		
-		if (!isDSE)
+		if (!isDocSoporte)
 			xmlFileName = new StringBuilder("face_");
 		
-		xmlFileName.append(repdoctype);	// m_coddoc | DIAN face_{|f|d|c|dse}
+		xmlFileName.append(repdoctype);	// m_coddoc | DIAN face_{|f|d|c|ds}
 		xmlFileName.append(String.format("%010d", Integer.valueOf(taxid)));
-		if (isDSE) {
+		if (isDocSoporte) {
 			xmlFileName.append(String.format("%03d", Integer.valueOf(LCO_FE_Utils.CODIGO_PROVEEDOR_TECNOLOGICO)));
 			xmlFileName.append(LCO_FE_Utils.getDate(m_DateInvoiced, 16));	// yy
 		}
-		xmlFileName.append(String.format(docnoformat, (!isDSE ? Integer.valueOf(m_DocumentNo) : Integer.valueOf(m_seqEnvio))));
+		xmlFileName.append(String.format(docnoformat, (!isDocSoporte ? Integer.valueOf(m_DocumentNo) : Integer.valueOf(m_seqEnvio))));
 		xmlFileName.append("." + m_File_Type);
 		
 		return xmlFileName.toString();
