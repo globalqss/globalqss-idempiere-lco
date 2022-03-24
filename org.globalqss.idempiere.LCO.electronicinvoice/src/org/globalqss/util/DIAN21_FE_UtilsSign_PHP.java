@@ -127,7 +127,7 @@ public class DIAN21_FE_UtilsSign_PHP {
         if (!file.getPath().contains(LCO_FE_Utils.DOCUMENTO_SOPORTE_ELECTRONICO))
         	file_zip = file.getPath().substring(0, file.getPath().lastIndexOf(File.separator)) + File.separator + "ws_" + file.getName().substring(5, 26) + "." + LCO_FE_Utils.RESOURCE_ZIP;
         else
-        	file_zip = file.getPath().substring(0, file.getPath().lastIndexOf(File.separator)) + File.separator + "zz_" + file.getName().substring(3, 26) + "." + LCO_FE_Utils.RESOURCE_ZIP;
+        	file_zip = file.getPath().substring(0, file.getPath().lastIndexOf(File.separator)) + File.separator + "zz_" + file.getName().substring(3, 25) + "." + LCO_FE_Utils.RESOURCE_ZIP;
         file_zip = file_zip.replace(backSlash, Slash);
         // locate file system by using the syntax 
         // defined in java.net.JarURLConnection

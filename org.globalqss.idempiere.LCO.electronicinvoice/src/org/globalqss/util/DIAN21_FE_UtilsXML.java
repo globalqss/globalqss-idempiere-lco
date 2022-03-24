@@ -3215,8 +3215,8 @@ public class DIAN21_FE_UtilsXML {
 			//
 			// M AF Max 7, Version UBL
 			addHeaderElement(mmDoc, "cbc:UBLVersionID", LCO_FE_Utils.cutString(f.getUBLVersionNo(), 7), atts);	// UBL 2.1
-			// M AN 1..4, Indicador del tipo de operación
-			addHeaderElement(mmDoc, "cbc:CustomizationID", LCO_FE_Utils.cutString(feot.getValue(), 2), atts);
+			// M AN 2, Procedencia de Vendedor
+			addHeaderElement(mmDoc, "cbc:CustomizationID", "10", atts);	// TODO 10-Residente Tabla 16.1.4
 			// M AF Max 82, Version Formato
 			addHeaderElement(mmDoc, "cbc:ProfileID", LCO_FE_Utils.cutString(f.getVersionNo() + ": " + f.getDescription(), 82), atts);	// DIAN 2.1 DS
 			// M N 1, Ambiente de Destino
@@ -3273,9 +3273,9 @@ public class DIAN21_FE_UtilsXML {
 				mmDoc.endElement("","","cac:BillingReference");
 			}
 			
-			// Informaci\u00f3n Emisor
+			// Informaci\u00f3n ABS Adquiriente Bienes o Servicios
 			atts.clear();
-			mmDoc.startElement("","","cac:AccountingSupplierParty", atts);
+			mmDoc.startElement("","","cac:AccountingCustomerParty", atts);
 				atts.clear();
 				atts.addAttribute("", "", "schemeAgencyID", "CDATA", "195");
 				// M N 1, Tipo de organización jurídica Tabla 9
@@ -3422,10 +3422,10 @@ public class DIAN21_FE_UtilsXML {
 						mmDoc.endElement("","","cac:Contact");
 					}
 				mmDoc.endElement("","","cac:Party");
-			mmDoc.endElement("","","cac:AccountingSupplierParty");
+			mmDoc.endElement("","","cac:AccountingCustomerParty");
 			
-			// Informacion Adquiriente
-			mmDoc.startElement("","","cac:AccountingCustomerParty", atts);
+			// Informacion Vendedor
+			mmDoc.startElement("","","cac:AccountingSupplierParty", atts);
 				// M N 1, Tipo de persona Tabla 9
 				addHeaderElement(mmDoc, "cbc:AdditionalAccountID", tpta.get_ValueAsString("DianTaxPayerCode").equals(LCO_FE_Utils.TIPO_GRAN_CONTRIBUYENTE) ? LCO_FE_Utils.TIPO_PERSONA_JURIDICA : tpta.get_ValueAsString("DianTaxPayerCode"), atts);
 				mmDoc.startElement("","","cac:Party", atts);
@@ -3553,7 +3553,7 @@ public class DIAN21_FE_UtilsXML {
 						mmDoc.endElement("","","cac:Contact");
 					}
 				mmDoc.endElement("","","cac:Party");
-			mmDoc.endElement("","","cac:AccountingCustomerParty");
+			mmDoc.endElement("","","cac:AccountingSupplierParty");
 			
 			if (m_coddoc.equals(LCO_FE_Utils.TIPO_COMPROBANTE_SOPORTE)) {
 				// M 1..1, Método de pago
@@ -3780,7 +3780,20 @@ public class DIAN21_FE_UtilsXML {
 							// D N 14.4, Costo Total
 							addHeaderElement(mmDoc, "cbc:LineExtensionAmount", LCO_FE_Utils.decimalFormat(CostoTotal), atts);
 							atts.clear();
-							addHeaderElement(mmDoc, "cbc:FreeOfChargeIndicator", (EsGratis ? "true" : "false"), atts);
+							mmDoc.startElement("","","cac:InvoicePeriod",atts);
+								// M F 10 Fecha de compra AAAA-MM-DD
+								addHeaderElement(mmDoc, "cbc:StartDate", LCO_FE_Utils.getDateTime((Timestamp) inv.get_Value("LCO_FE_DateTrx"), 11), atts);
+								// M N 1 Código para indicar la forma de generación y transmisión
+								addHeaderElement(mmDoc, "cbc:DescriptionCode", "1", atts);	// TODO Table 16.1.6
+								// M A 13-17 Descripción para indicar la forma de generación y transmisión
+								addHeaderElement(mmDoc, "cbc:Description", "Por operación", atts);
+							mmDoc.endElement("","","cac:InvoicePeriod");
+							atts.clear();
+							// O 0..N Grupo de campos para información relacionadas con un cargo o un descuento
+							// mmDoc.startElement("","","cac:AllowanceCharge",atts);
+								// M 1 4-5 Indica que el elemento es un Cargo y	no un descuento
+								// addHeaderElement(mmDoc, "cbc:ChargeIndicator", (EsGratis ? "true" : "false"), atts);
+							// mmDoc.endElement("","","cac:AllowanceCharge");
 							// O 50 Veces max Total Impuestos \u00cdtem.
 							atts.clear();
 							if (!TipoImpuesto.equals(LCO_FE_Utils.CODIGO_NO_CAUSA_ZY)) {
@@ -4407,7 +4420,8 @@ public class DIAN21_FE_UtilsXML {
 			|| LCO_FE_Utils.TIPO_COMPROBANTE_SOPORTE.equals(dianshortdoctype)) {
 			xmlns = "urn:oasis:names:specification:ubl:schema:xsd:Invoice-2";
 			xsi_schemalocation = "http://www.dian.gov.co/contratos/facturaelectronica/v1 ../xsd/DIAN_UBL.xsd urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2 ../../ubl2/common/UnqualifiedDataTypeSchemaModule-2.0.xsd urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2 ../../ubl2/common/UBL-QualifiedDatatypes-2.0.xsd";
-		} else if (LCO_FE_Utils.TIPO_COMPROBANTE_NC.equals(dianshortdoctype)) {
+		} else if (LCO_FE_Utils.TIPO_COMPROBANTE_NC.equals(dianshortdoctype)
+					|| LCO_FE_Utils.TIPO_COMPROBANTE_AJUSTE_AC.equals(dianshortdoctype)) {
 			xmlns = "urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2";
 			xsi_schemalocation = "http://www.dian.gov.co/contratos/facturaelectronica/v1 http://www.dian.gov.co/micrositios/fac_electronica/documentos/XSD/r0/DIAN_UBL.xsd urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2 http://www.dian.gov.co/micrositios/fac_electronica/documentos/common/UnqualifiedDataTypeSchemaModule-2.0.xsd urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2 http://www.dian.gov.co/micrositios/fac_electronica/documentos/common/UBL-QualifiedDatatypes-2.0.xsd";
 		} else if (LCO_FE_Utils.TIPO_COMPROBANTE_ND.equals(dianshortdoctype)) {
@@ -4421,7 +4435,8 @@ public class DIAN21_FE_UtilsXML {
 					|| LCO_FE_Utils.TIPO_COMPROBANTE_EXPORTACION.equals(dianshortdoctype)
 					|| LCO_FE_Utils.TIPO_COMPROBANTE_SOPORTE.equals(dianshortdoctype))
 				xsi_schemalocation = "urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 http://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd";
-			else if (LCO_FE_Utils.TIPO_COMPROBANTE_NC.equals(dianshortdoctype))
+			else if (LCO_FE_Utils.TIPO_COMPROBANTE_NC.equals(dianshortdoctype)
+					|| LCO_FE_Utils.TIPO_COMPROBANTE_AJUSTE_AC.equals(dianshortdoctype))
 				// xsi_schemalocation = "urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2 http://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/maindoc/UBL-CreditNote-2.1.xsd";
 				xsi_schemalocation = "urn:oasis:names:specification:ubl:schema:xsd:Invoice-2 http://docs.oasis-open.org/ubl/os-UBL-2.1/xsd/maindoc/UBL-Invoice-2.1.xsd";
 			else if (LCO_FE_Utils.TIPO_COMPROBANTE_ND.equals(dianshortdoctype))
