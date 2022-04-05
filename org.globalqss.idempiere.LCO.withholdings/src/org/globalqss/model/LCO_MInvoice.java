@@ -32,6 +32,8 @@ import java.util.Properties;
 
 import org.compiere.model.MBPartner;
 import org.compiere.model.MBPartnerLocation;
+import org.compiere.model.MClientInfo;
+import org.compiere.model.MConversionRate;
 import org.compiere.model.MDocType;
 import org.compiere.model.MInvoice;
 import org.compiere.model.MLocation;
@@ -355,7 +357,15 @@ public class LCO_MInvoice extends MInvoice
 					BigDecimal taxamt = tax.calculateTax(base, false, stdPrecision);
 					if (wc.getAmountRefunded() != null &&
 							wc.getAmountRefunded().compareTo(Env.ZERO) > 0) {
-						taxamt = taxamt.subtract(wc.getAmountRefunded());
+						//int currency_id = MInvoice.get(p_ctx, getC_Invoice_ID()).getC_Currency_ID();
+						MClientInfo cliinf= MClientInfo.get(p_ctx, getAD_Client_ID());
+						int currency_id = cliinf.getMAcctSchema1().getC_Currency_ID();
+						BigDecimal AmountRefundedConverted = MConversionRate.convert(getCtx(), wc.getAmountRefunded(), currency_id, getC_Currency_ID(), getAD_Client_ID(), getAD_Org_ID());
+						if(AmountRefundedConverted!=null)
+							taxamt = taxamt.subtract(AmountRefundedConverted);
+						else
+							taxamt = taxamt.subtract(wc.getAmountRefunded());
+						
 					}
 					iwh.setTaxAmt(taxamt);
 					iwh.setTaxBaseAmt(base);
