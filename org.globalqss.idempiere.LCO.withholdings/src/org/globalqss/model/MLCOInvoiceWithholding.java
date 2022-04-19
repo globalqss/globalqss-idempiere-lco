@@ -95,7 +95,7 @@ public class MLCOInvoiceWithholding extends X_LCO_InvoiceWithholding
 			}
 
 			// Fill DateTrx and DateAcct for isCalcOnInvoice according to the invoice
-			if (getC_AllocationLine_ID() <= 0) {
+			if (getC_AllocationLine_ID() <= 0 && !isCalcOnPayment()) {
 				setDateAcct(inv.getDateAcct());
 				setDateTrx(inv.getDateInvoiced());
 			}
