@@ -2,11 +2,11 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Localization Colombia - First Name Contact
 Bundle-SymbolicName: org.globalqss.idempiere.LCO.firstnamecontact;singleton:=true
-Bundle-Version: 8.2.0.qualifier
+Bundle-Version: 9.0.0.qualifier
 Bundle-Activator: org.adempiere.plugin.utils.Incremental2PackActivator
 Bundle-Vendor: GlobalQSS
-Require-Bundle: org.adempiere.base;bundle-version="8.2.0",
- org.adempiere.plugin.utils;bundle-version="8.2.0"
+Require-Bundle: org.adempiere.base;bundle-version="9.0.0",
+ org.adempiere.plugin.utils;bundle-version="9.0.0"
 Export-Package: org.globalqss.model,
  org.globalqss.util
 Service-Component: OSGI-INF/lco_calloutfactorydnc.xml,
