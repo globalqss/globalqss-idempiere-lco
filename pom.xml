@@ -15,11 +15,6 @@ mvn verify -Didempiere.target=org.globalqss.idempiere.LCO.p2.targetplatform
 		<module>org.globalqss.idempiere.LCO.firstnamecontact</module>
 		<module>org.globalqss.idempiere.LCO.withholdings</module>
 		<module>org.globalqss.idempiere.LCO.magneticmedia</module>
-		<module>org.globalqss.idempiere.LCO.electronicinvoice</module>
-                <module>org.globalqss.fedian.client.api</module>
-		<module>org.globalqss.fedian.idempiere.webservices</module>
-		<module>org.globalqss.ws.soap.fe.dian</module>
-		<module>org.globalqss.saml.common.fake</module>
 		<module>org.globalqss.idempiere.LCO.invoicenumbercontrol</module>
 		<module>org.globalqss.idempiere.LCO-feature</module>
 		<module>org.globalqss.idempiere.LCO.p2.targetplatform</module>
