@@ -31,78 +31,77 @@ import java.sql.ResultSet;
 import java.util.Properties;
 
 import org.compiere.model.MInvoice;
+import org.compiere.model.MSysConfig;
 import org.compiere.util.CLogger;
 import org.compiere.util.DB;
 
 /**
- *	Invoice Withholding Model
+ * Invoice Withholding Model
  *
- *  @author Carlos Ruiz - globalqss
+ * @author Carlos Ruiz - globalqss
  */
-public class MLCOInvoiceWithholding extends X_LCO_InvoiceWithholding
-{
+public class MLCOInvoiceWithholding extends X_LCO_InvoiceWithholding {
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -3086189821486687908L;
-	/**	Static Logger	*/
+	/** Static Logger */
 	@SuppressWarnings("unused")
-	private static CLogger	s_log	= CLogger.getCLogger (MLCOInvoiceWithholding.class);
-
+	private static CLogger s_log = CLogger.getCLogger(MLCOInvoiceWithholding.class);
 
 	/**************************************************************************
-	 * 	Default Constructor
-	 *	@param ctx context
-	 *	@param MLCOInvoiceWithholding_ID id
-	 *	@param trxName transaction
+	 * Default Constructor
+	 * 
+	 * @param ctx                       context
+	 * @param MLCOInvoiceWithholding_ID id
+	 * @param trxName                   transaction
 	 */
-	public MLCOInvoiceWithholding (Properties ctx, int MLCOInvoiceWithholding_ID, String trxName)
-	{
+	public MLCOInvoiceWithholding(Properties ctx, int MLCOInvoiceWithholding_ID, String trxName) {
 		super(ctx, MLCOInvoiceWithholding_ID, trxName);
-	}	//	MLCOInvoiceWithholding
+	} // MLCOInvoiceWithholding
 
 	/**
-	 * 	Load Constructor
-	 *	@param ctx context
-	 *	@param rs result set
-	 *	@param trxName transaction
+	 * Load Constructor
+	 * 
+	 * @param ctx     context
+	 * @param rs      result set
+	 * @param trxName transaction
 	 */
-	public MLCOInvoiceWithholding(Properties ctx, ResultSet rs, String trxName)
-	{
+	public MLCOInvoiceWithholding(Properties ctx, ResultSet rs, String trxName) {
 		super(ctx, rs, trxName);
-	}	//	MLCOInvoiceWithholding
-	
-	
+	} // MLCOInvoiceWithholding
+
 	public static BigDecimal getWithholdingAmt(MInvoice invoice) throws IOException {
-		
-		String SQL = "SELECT COALESCE(SUM(TaxAmt),0) " 
-				   + "FROM LCO_InvoiceWithholding iw " 
-				   + "WHERE AD_Client_ID = ? AND C_Invoice_ID = ? ";
-		
-		BigDecimal WithholdingAmt = DB.getSQLValueBD(invoice.get_TrxName(), SQL, new Object[] {invoice.getAD_Client_ID(), invoice.getC_Invoice_ID()});
+
+		String SQL = "SELECT COALESCE(SUM(TaxAmt),0) " + "FROM LCO_InvoiceWithholding iw "
+				+ "WHERE AD_Client_ID = ? AND C_Invoice_ID = ? ";
+
+		BigDecimal WithholdingAmt = DB.getSQLValueBD(invoice.get_TrxName(), SQL,
+				new Object[] { invoice.getAD_Client_ID(), invoice.getC_Invoice_ID() });
 		return WithholdingAmt;
 	}
-	
 
 	/**************************************************************************
-	 * 	Before Save
-	 *	@param newRecord
-	 *	@return true if save
+	 * Before Save
+	 * 
+	 * @param newRecord
+	 * @return true if save
 	 */
-	protected boolean beforeSave (boolean newRecord)
-	{
+	protected boolean beforeSave(boolean newRecord) {
 		log.fine("New=" + newRecord);
 		MInvoice inv = new MInvoice(getCtx(), getC_Invoice_ID(), get_TrxName());
 		if (inv.getReversal_ID() <= 0) {
 			if (getLCO_WithholdingRule_ID() > 0) {
 
 				// Fill isCalcOnPayment according to rule
-				X_LCO_WithholdingRule wr = new X_LCO_WithholdingRule(getCtx(), getLCO_WithholdingRule_ID(), get_TrxName());
-				X_LCO_WithholdingCalc wc = new X_LCO_WithholdingCalc(getCtx(), wr.getLCO_WithholdingCalc_ID(), get_TrxName());
-				setIsCalcOnPayment( ! wc.isCalcOnInvoice() );
+				X_LCO_WithholdingRule wr = new X_LCO_WithholdingRule(getCtx(), getLCO_WithholdingRule_ID(),
+						get_TrxName());
+				X_LCO_WithholdingCalc wc = new X_LCO_WithholdingCalc(getCtx(), wr.getLCO_WithholdingCalc_ID(),
+						get_TrxName());
+				setIsCalcOnPayment(!wc.isCalcOnInvoice());
 
 			} else {
-				
+
 				if (inv.isProcessed()) {
 					setIsCalcOnPayment(true);
 				}
@@ -111,38 +110,42 @@ public class MLCOInvoiceWithholding extends X_LCO_InvoiceWithholding
 
 			// Fill DateTrx and DateAcct for isCalcOnInvoice according to the invoice
 			if (getC_AllocationLine_ID() <= 0) {
-				setDateAcct(inv.getDateAcct());
-				setDateTrx(inv.getDateInvoiced());
+				boolean overrideDate = MSysConfig.getBooleanValue("overrideDateOnAllocation", false, getAD_Client_ID());
+
+				if (overrideDate) {
+					setDateAcct(inv.getDateAcct());
+					setDateTrx(inv.getDateInvoiced());
+				}
 			}
 		}
 
 		return true;
-	}	//	beforeSave
+	} // beforeSave
 
 	/**
-	 * 	After Save
-	 *	@param newRecord new
-	 *	@param success success
-	 *	@return saved
+	 * After Save
+	 * 
+	 * @param newRecord new
+	 * @param success   success
+	 * @return saved
 	 */
-	protected boolean afterSave (boolean newRecord, boolean success)
-	{
+	protected boolean afterSave(boolean newRecord, boolean success) {
 		if (!success)
 			return success;
 
 		return LCO_MInvoice.updateHeaderWithholding(getC_Invoice_ID(), get_TrxName());
-	}	//	afterSave
+	} // afterSave
 
 	/**
-	 * 	After Delete
-	 *	@param success success
-	 *	@return deleted
+	 * After Delete
+	 * 
+	 * @param success success
+	 * @return deleted
 	 */
-	protected boolean afterDelete (boolean success)
-	{
+	protected boolean afterDelete(boolean success) {
 		if (!success)
 			return success;
 		return LCO_MInvoice.updateHeaderWithholding(getC_Invoice_ID(), get_TrxName());
-	}	//	afterDelete
+	} // afterDelete
 
-}	//	MLCOInvoiceWithholding
+} // MLCOInvoiceWithholding
