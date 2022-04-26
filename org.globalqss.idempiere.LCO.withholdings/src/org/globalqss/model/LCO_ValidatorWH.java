@@ -636,14 +636,15 @@ public class LCO_ValidatorWH extends AbstractEventHandler {
 			if (noupddates == -1)
 				return "Error updating dates on invoice withholding";
 
-			// Set processed for isCalcOnInvoice records
-			String upd_proc = "UPDATE LCO_InvoiceWithholding " + "   SET Processed = 'Y' "
-					+ " WHERE C_Invoice_ID = ? AND IsCalcOnPayment = 'N'";
-			int noupdproc = DB.executeUpdate(upd_proc, inv.getC_Invoice_ID(), inv.get_TrxName());
-			if (noupdproc == -1)
-				return "Error updating processed on invoice withholding";
 		}
-		
+
+		// Set processed for isCalcOnInvoice records
+		String upd_proc = "UPDATE LCO_InvoiceWithholding " + "   SET Processed = 'Y' "
+				+ " WHERE C_Invoice_ID = ? AND IsCalcOnPayment = 'N'";
+		int noupdproc = DB.executeUpdate(upd_proc, inv.getC_Invoice_ID(), inv.get_TrxName());
+		if (noupdproc == -1)
+			return "Error updating processed on invoice withholding";
+
 		return null;
 	}
 
