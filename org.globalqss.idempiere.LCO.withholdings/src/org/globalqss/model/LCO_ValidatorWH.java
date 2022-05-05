@@ -416,6 +416,8 @@ public class LCO_ValidatorWH extends AbstractEventHandler {
 	private String completePaymentWithholdings(MAllocationHdr ah) {
 		MAllocationLine[] als = ah.getLines(true);
 		for (int i = 0; i < als.length; i++) {
+			boolean overrideDate = MSysConfig.getBooleanValue("overrideDateOnAllocation", false, ah.getAD_Client_ID());
+
 			MAllocationLine al = als[i];
 			if (al.getC_Invoice_ID() > 0) {
 				String sql = "SELECT LCO_InvoiceWithholding_ID " + "FROM LCO_InvoiceWithholding "
@@ -430,8 +432,10 @@ public class LCO_ValidatorWH extends AbstractEventHandler {
 						int iwhid = rs.getInt(1);
 						MLCOInvoiceWithholding iwh = new MLCOInvoiceWithholding(ah.getCtx(), iwhid, ah.get_TrxName());
 						iwh.setC_AllocationLine_ID(al.getC_AllocationLine_ID());
-						iwh.setDateAcct(ah.getDateAcct());
-						iwh.setDateTrx(ah.getDateTrx());
+						if (overrideDate) {
+							iwh.setDateAcct(ah.getDateAcct());
+							iwh.setDateTrx(ah.getDateTrx());
+						}
 						iwh.setProcessed(true);
 						if (!iwh.save())
 							return "Error saving LCO_InvoiceWithholding completePaymentWithholdings";
