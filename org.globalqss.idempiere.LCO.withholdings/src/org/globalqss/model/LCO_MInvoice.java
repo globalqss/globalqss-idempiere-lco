@@ -315,9 +315,12 @@ public class LCO_MInvoice extends MInvoice {
 				
 				BigDecimal SubtrahendFactor = Env.ZERO;
 				
-				if (wc.get_Value("SubtrahendFactor")!= null) {
+				if (wc.get_Value("SubtrahendFactor")!= null ) {
 					
-					SubtrahendFactor = new BigDecimal(wc.get_ValueAsString("SubtrahendFactor")).divide(currencyRate, 2, RoundingMode.HALF_UP);
+					SubtrahendFactor = new BigDecimal(wc.get_ValueAsString("SubtrahendFactor"));
+					
+					if (SubtrahendFactor.signum() > 0)			
+						SubtrahendFactor = SubtrahendFactor.divide(currencyRate, 2, RoundingMode.HALF_UP);
 				}
 				
 
