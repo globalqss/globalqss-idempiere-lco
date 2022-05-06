@@ -26,6 +26,7 @@
 package org.globalqss.model;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -304,19 +305,19 @@ public class LCO_MInvoice extends MInvoice {
 				log.info("Base: " + base + " Thresholdmin:" + wc.getThresholdmin());
 				
 				if (wc.getThresholdmin().signum() > 0)
-					wc.setThresholdmin(wc.getThresholdmin().divide(currencyRate));
+					wc.setThresholdmin(wc.getThresholdmin().divide(currencyRate, 2, RoundingMode.HALF_UP));
 				
 				if (wc.getThresholdMax().signum() > 0)
-					wc.setThresholdMax(wc.getThresholdMax().divide(currencyRate));
+					wc.setThresholdMax(wc.getThresholdMax().divide(currencyRate, 2, RoundingMode.HALF_UP));
 				
 				if (wc.getAmountRefunded().signum() > 0)
-					wc.setAmountRefunded(wc.getAmountRefunded().divide(currencyRate));
+					wc.setAmountRefunded(wc.getAmountRefunded().divide(currencyRate, 2, RoundingMode.HALF_UP));
 				
 				BigDecimal SubtrahendFactor = Env.ZERO;
 				
 				if (wc.get_Value("SubtrahendFactor")!= null) {
 					
-					SubtrahendFactor = new BigDecimal(wc.get_ValueAsString("SubtrahendFactor")).divide(currencyRate);
+					SubtrahendFactor = new BigDecimal(wc.get_ValueAsString("SubtrahendFactor")).divide(currencyRate, 2, RoundingMode.HALF_UP);
 				}
 				
 
