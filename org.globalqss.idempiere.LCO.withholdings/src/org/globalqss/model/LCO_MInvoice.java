@@ -83,7 +83,8 @@ public class LCO_MInvoice extends MInvoice {
 
 			currencyRate = MConversionRate.getRate(getC_Currency_ID(), sc.getC_Currency_ID(), getDateAcct(),
 					getC_ConversionType_ID(), getAD_Client_ID(), getAD_Org_ID());
-		}
+		} else 
+			currencyRate = invoiceRate;
 
 		int noins = 0;
 		log.info("");
