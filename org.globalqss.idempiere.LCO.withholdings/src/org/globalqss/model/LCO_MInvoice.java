@@ -332,10 +332,17 @@ public class LCO_MInvoice extends MInvoice
 
 				// if base between thresholdmin and thresholdmax inclusive
 				// if thresholdmax = 0 it is ignored
+				//int currency_id = MInvoice.get(p_ctx, getC_Invoice_ID()).getC_Currency_ID();
+				MInvoice invoice = MInvoice.get(getC_Invoice_ID());
+				MClientInfo cliinf= MClientInfo.get(p_ctx, getAD_Client_ID());
+				int currency_id = cliinf.getMAcctSchema1().getC_Currency_ID();
+				BigDecimal ThresholdMaxConverted = MConversionRate.convert(getCtx(), wc.getThresholdmin(), currency_id, getC_Currency_ID(), 
+						invoice.getDateAcct()!=null? invoice.getDateAcct():getDateAcct(),invoice.getC_ConversionType_ID(),
+						getAD_Client_ID(), getAD_Org_ID());
 				if (base != null &&
 						base.compareTo(Env.ZERO) != 0 &&
-						base.compareTo(wc.getThresholdmin()) >= 0 &&
-						(wc.getThresholdMax() == null || wc.getThresholdMax().compareTo(Env.ZERO) == 0 || base.compareTo(wc.getThresholdMax()) <= 0) &&
+						base.compareTo(ThresholdMaxConverted) >= 0 &&
+						(ThresholdMaxConverted == null || ThresholdMaxConverted.compareTo(Env.ZERO) == 0 || base.compareTo(ThresholdMaxConverted) <= 0) &&
 						tax.getRate() != null &&
 						tax.getRate().compareTo(Env.ZERO) != 0) {
 
@@ -356,11 +363,10 @@ public class LCO_MInvoice extends MInvoice
 					int stdPrecision = MPriceList.getStandardPrecision(getCtx(), getM_PriceList_ID());
 					BigDecimal taxamt = tax.calculateTax(base, false, stdPrecision);
 					if (wc.getAmountRefunded() != null &&
-							wc.getAmountRefunded().compareTo(Env.ZERO) > 0) {
-						//int currency_id = MInvoice.get(p_ctx, getC_Invoice_ID()).getC_Currency_ID();
-						MClientInfo cliinf= MClientInfo.get(p_ctx, getAD_Client_ID());
-						int currency_id = cliinf.getMAcctSchema1().getC_Currency_ID();
-						BigDecimal AmountRefundedConverted = MConversionRate.convert(getCtx(), wc.getAmountRefunded(), currency_id, getC_Currency_ID(), getAD_Client_ID(), getAD_Org_ID());
+							wc.getAmountRefunded().compareTo(Env.ZERO) > 0) {												
+						BigDecimal AmountRefundedConverted = MConversionRate.convert(getCtx(), wc.getAmountRefunded(), currency_id, getC_Currency_ID(), 
+								invoice.getDateAcct()!=null? invoice.getDateAcct():getDateAcct(),invoice.getC_ConversionType_ID(),
+								getAD_Client_ID(), getAD_Org_ID());
 						if(AmountRefundedConverted!=null)
 							taxamt = taxamt.subtract(AmountRefundedConverted);
 						else
