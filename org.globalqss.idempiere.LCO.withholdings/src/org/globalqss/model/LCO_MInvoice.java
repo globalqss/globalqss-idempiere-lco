@@ -26,6 +26,7 @@
 package org.globalqss.model;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -75,7 +76,7 @@ public class LCO_MInvoice extends MInvoice
 		BigDecimal totwith = new BigDecimal("0");
 
 		int nodel = DB.executeUpdateEx(
-				"DELETE FROM LCO_InvoiceWithholding WHERE C_Invoice_ID = ?",
+				"DELETE FROM LCO_InvoiceWithholding WHERE C_Invoice_ID = ? and LCO_WithholdingType_ID NOT IN (SELECT LCO_WithholdingType_ID from LCO_WithholdingType WHERE type='Other')",
 				new Object[] { getC_Invoice_ID() },
 				get_TrxName());
 		log.config("LCO_InvoiceWithholding deleted="+nodel);
@@ -328,7 +329,7 @@ public class LCO_MInvoice extends MInvoice
 						base = DB.getSQLValueBD(get_TrxName(), sqlbsat, new Object[] {getC_Invoice_ID()});
 					}
 				}
-				log.info("Base: "+base+ " Thresholdmin:"+wc.getThresholdmin());
+				log.warning("Base: "+base+ " Thresholdmin:"+wc.getThresholdmin());
 
 				// if base between thresholdmin and thresholdmax inclusive
 				// if thresholdmax = 0 it is ignored
@@ -336,12 +337,20 @@ public class LCO_MInvoice extends MInvoice
 				MInvoice invoice = MInvoice.get(getC_Invoice_ID());
 				MClientInfo cliinf= MClientInfo.get(p_ctx, getAD_Client_ID());
 				int currency_id = cliinf.getMAcctSchema1().getC_Currency_ID();
-				BigDecimal ThresholdMaxConverted = MConversionRate.convert(getCtx(), wc.getThresholdmin(), currency_id, getC_Currency_ID(), 
-						invoice.getDateAcct()!=null? invoice.getDateAcct():getDateAcct(),invoice.getC_ConversionType_ID(),
-						getAD_Client_ID(), getAD_Org_ID());
+				BigDecimal currencyrate=MConversionRate.getRate(getC_Currency_ID(), currency_id, getDateAcct(),getC_ConversionType_ID(),getAD_Client_ID(),getAD_Org_ID());
+				if(getCurrencyRate()!=null && getCurrencyRate().compareTo(Env.ZERO) > 0){
+					currencyrate=getCurrencyRate();
+				}
+				
+					BigDecimal ThresholdMinConverted = DB.getSQLValueBD(get_TrxName(), "SELECT currencyRound("+
+							wc.getThresholdmin().divide(currencyrate,RoundingMode.HALF_EVEN)+","+currency_id+",null)");
+					BigDecimal ThresholdMaxConverted = DB.getSQLValueBD(get_TrxName(), "SELECT currencyRound("+
+							wc.getThresholdMax().divide(currencyrate,RoundingMode.HALF_EVEN)+","+currency_id+",null)");
+					log.warning("Thresholdminconverted: "+ThresholdMinConverted+ " ThresholdMaxConverted:"+ThresholdMaxConverted);
+				
 				if (base != null &&
 						base.compareTo(Env.ZERO) != 0 &&
-						base.compareTo(ThresholdMaxConverted) >= 0 &&
+						base.compareTo(ThresholdMinConverted) >= 0 &&
 						(ThresholdMaxConverted == null || ThresholdMaxConverted.compareTo(Env.ZERO) == 0 || base.compareTo(ThresholdMaxConverted) <= 0) &&
 						tax.getRate() != null &&
 						tax.getRate().compareTo(Env.ZERO) != 0) {
@@ -364,14 +373,9 @@ public class LCO_MInvoice extends MInvoice
 					BigDecimal taxamt = tax.calculateTax(base, false, stdPrecision);
 					if (wc.getAmountRefunded() != null &&
 							wc.getAmountRefunded().compareTo(Env.ZERO) > 0) {												
-						BigDecimal AmountRefundedConverted = MConversionRate.convert(getCtx(), wc.getAmountRefunded(), currency_id, getC_Currency_ID(), 
-								invoice.getDateAcct()!=null? invoice.getDateAcct():getDateAcct(),invoice.getC_ConversionType_ID(),
-								getAD_Client_ID(), getAD_Org_ID());
-						if(AmountRefundedConverted!=null)
+						BigDecimal AmountRefundedConverted = DB.getSQLValueBD(get_TrxName(), "SELECT currencyRound("+
+								wc.getAmountRefunded().divide(currencyrate,RoundingMode.HALF_EVEN)+","+currency_id+",null)");
 							taxamt = taxamt.subtract(AmountRefundedConverted);
-						else
-							taxamt = taxamt.subtract(wc.getAmountRefunded());
-						
 					}
 					iwh.setTaxAmt(taxamt);
 					iwh.setTaxBaseAmt(base);
