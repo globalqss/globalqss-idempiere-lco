@@ -343,9 +343,9 @@ public class LCO_MInvoice extends MInvoice
 				}
 				
 					BigDecimal ThresholdMinConverted = DB.getSQLValueBD(get_TrxName(), "SELECT currencyRound("+
-							wc.getThresholdmin().divide(currencyrate,RoundingMode.HALF_EVEN)+","+currency_id+",null)");
+							wc.getThresholdmin().divide(currencyrate,2,RoundingMode.HALF_EVEN) +","+currency_id+",null)");
 					BigDecimal ThresholdMaxConverted = DB.getSQLValueBD(get_TrxName(), "SELECT currencyRound("+
-							wc.getThresholdMax().divide(currencyrate,RoundingMode.HALF_EVEN)+","+currency_id+",null)");
+							wc.getThresholdMax().divide(currencyrate,2,RoundingMode.HALF_EVEN)+","+currency_id+",null)");
 					log.warning("Thresholdminconverted: "+ThresholdMinConverted+ " ThresholdMaxConverted:"+ThresholdMaxConverted);
 				
 				if (base != null &&
@@ -372,9 +372,9 @@ public class LCO_MInvoice extends MInvoice
 					int stdPrecision = MPriceList.getStandardPrecision(getCtx(), getM_PriceList_ID());
 					BigDecimal taxamt = tax.calculateTax(base, false, stdPrecision);
 					if (wc.getAmountRefunded() != null &&
-							wc.getAmountRefunded().compareTo(Env.ZERO) > 0) {												
+							wc.getAmountRefunded().compareTo(Env.ZERO) > 0) {		
 						BigDecimal AmountRefundedConverted = DB.getSQLValueBD(get_TrxName(), "SELECT currencyRound("+
-								wc.getAmountRefunded().divide(currencyrate,RoundingMode.HALF_EVEN)+","+currency_id+",null)");
+								wc.getAmountRefunded().divide(currencyrate,2,RoundingMode.HALF_EVEN)+","+currency_id+",null)");
 							taxamt = taxamt.subtract(AmountRefundedConverted);
 					}
 					iwh.setTaxAmt(taxamt);
