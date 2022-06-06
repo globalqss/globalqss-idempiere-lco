@@ -508,7 +508,7 @@ public class LCO_ValidatorWH extends AbstractEventHandler {
 				BigDecimal tottax = new BigDecimal(0);
 
 				MAllocationLine alloc_line = alloc_lines[j];
-				DocLine_Allocation docLine = new DocLine_Allocation(alloc_line, doc);
+				DocLineAllocationWH docLine = new DocLineAllocationWH(alloc_line, doc);
 				doc.setC_BPartner_ID(alloc_line.getC_BPartner_ID());
 
 				int inv_id = alloc_line.getC_Invoice_ID();
