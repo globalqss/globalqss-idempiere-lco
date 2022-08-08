@@ -42,6 +42,7 @@ import org.compiere.acct.DocLine_Allocation;
 import org.compiere.acct.DocTax;
 import org.compiere.acct.Fact;
 import org.compiere.acct.FactLine;
+import org.compiere.model.MAccount;
 import org.compiere.model.MAcctSchema;
 import org.compiere.model.MAllocationHdr;
 import org.compiere.model.MAllocationLine;
@@ -54,6 +55,7 @@ import org.compiere.model.MPayment;
 import org.compiere.model.MPaymentAllocate;
 import org.compiere.model.MSysConfig;
 import org.compiere.model.PO;
+import org.compiere.process.DocAction;
 import org.compiere.util.CLogger;
 import org.compiere.util.DB;
 import org.compiere.util.Env;
@@ -522,6 +524,9 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 	}
 
 	private String accountingForInvoiceWithholdingOnPayment(MAllocationHdr ah, Event event) {
+		if (ah.getDocStatus().equals(DocAction.STATUS_Reversed))
+			return reversedAccountingForInvoiceWithholdingOnPayment(ah, event);
+		
 		// Accounting like Doc_Allocation
 		// (Write off) vs (invoice withholding where iscalconpayment=Y)
 		// 20070807 - globalqss - instead of adding a new WriteOff post, find the
@@ -659,6 +664,159 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 
 			}
 
+		}
+
+		return null;
+	}
+	
+	private String reversedAccountingForInvoiceWithholdingOnPayment(MAllocationHdr ah, Event event) {
+		Doc doc = ah.getDoc();
+		FactsEventData fed = getEventData(event);
+		List<Fact> facts = fed.getFacts();
+
+		// one fact per acctschema
+		for (int i = 0; i < facts.size(); i++)
+		{
+			Fact fact = facts.get(i);
+			MAcctSchema as = fact.getAcctSchema();
+
+			MAllocationLine[] alloc_lines = ah.getLines(false);
+			for (int j = 0; j < alloc_lines.length; j++) {
+				BigDecimal tottax = new BigDecimal(0);
+
+				MAllocationLine alloc_line = alloc_lines[j];
+				DocLine_Allocation docLine = new DocLine_Allocation(alloc_line, doc);
+				doc.setC_BPartner_ID(alloc_line.getC_BPartner_ID());
+
+				int inv_id = alloc_line.getC_Invoice_ID();
+				if (inv_id <= 0)
+					continue;
+				MInvoice invoice = null;
+				invoice = new MInvoice (ah.getCtx(), alloc_line.getC_Invoice_ID(), ah.get_TrxName());
+				if (invoice == null || invoice.getC_Invoice_ID() == 0)
+					continue;
+				
+				//	Get the tax amount from the original or reversal accounting fact
+				StringBuilder sql = new StringBuilder();
+				sql.append("SELECT fa.C_Tax_ID, NVL(fa.AmtSourceDr,0) AS AmtSourceDr, NVL(fa.AmtSourceCr,0) AS AmtSourceCr, t.Name, t.Rate, t.IsSalesTax, fa.Account_ID ");
+				sql.append("FROM Fact_Acct fa, C_Tax t, C_AllocationLine al, C_AllocationHdr ah ");
+				sql.append("WHERE fa.C_AcctSchema_ID = ? ");
+				sql.append("AND fa.AD_Table_ID = ? ");	// Allocation
+				sql.append("AND fa.Line_ID = al.C_AllocationLine_ID ");
+				sql.append("AND fa.C_Tax_ID = t.C_Tax_ID ");
+				sql.append("AND fa.C_Tax_ID IS NOT NULL ");
+				sql.append("AND (al.C_AllocationHdr_ID = ? OR ah.Reversal_ID = ?) ");
+				sql.append("AND al.C_Invoice_ID = ? ");
+				sql.append("AND al.C_Payment_ID = ? ");
+				sql.append("AND ah.C_AllocationHdr_ID = al.C_AllocationHdr_ID ");
+				
+				PreparedStatement pstmt = null;
+				ResultSet rs = null;
+				try
+				{
+					pstmt = DB.prepareStatement(sql.toString(), ah.get_TrxName());
+					int x = 1;
+					pstmt.setInt(x++, as.getC_AcctSchema_ID());
+					pstmt.setInt(x++, MAllocationHdr.Table_ID);
+					pstmt.setInt(x++, ah.getReversal_ID());
+					pstmt.setInt(x++, ah.getC_AllocationHdr_ID());
+					pstmt.setInt(x++, invoice.getC_Invoice_ID());
+					pstmt.setInt(x++, alloc_line.getC_Payment_ID());
+					rs = pstmt.executeQuery();
+					while (rs.next()) {
+						int tax_ID = rs.getInt("C_Tax_ID");
+						BigDecimal amtAcctDr = rs.getBigDecimal("AmtSourceDr");
+						BigDecimal amtAcctCr = rs.getBigDecimal("AmtSourceCr");
+						BigDecimal amount = amtAcctDr.negate();
+						if (amtAcctCr.signum() != 0)
+							amount = amtAcctCr.negate();
+						String name = rs.getString("Name");
+						BigDecimal rate = rs.getBigDecimal("Rate");
+						boolean salesTax = rs.getString("IsSalesTax").equals("Y") ? true : false;		
+						int account_ID = rs.getInt("Account_ID");
+						
+						DocTax taxLine = new DocTax(tax_ID, name, rate,
+								null, amount, salesTax);
+
+						MAccount taxAcct = null;
+						if (invoice.isSOTrx())
+							taxAcct = taxLine.getAccount(DocTax.ACCTTYPE_TaxDue, as);
+						else
+							taxAcct = taxLine.getAccount(taxLine.getAPTaxType(), as);
+						if (taxAcct != null && taxAcct.getAccount_ID() != account_ID)
+							continue;
+
+						if (amount != null && amount.signum() != 0)
+						{
+							FactLine tl = null;
+							if (invoice.isSOTrx()) {
+								tl = fact.createLine(docLine, taxLine.getAccount(DocTax.ACCTTYPE_TaxDue, as),
+										ah.getC_Currency_ID(), amount, null);
+							} else {
+								tl = fact.createLine(docLine, taxLine.getAccount(taxLine.getAPTaxType(), as),
+										ah.getC_Currency_ID(), null, amount);
+							}
+							if (tl != null)
+								tl.setC_Tax_ID(taxLine.getC_Tax_ID());
+							tottax = tottax.add(amount);
+						}
+					}
+				} catch (Exception e) {
+					log.log(Level.SEVERE, sql.toString(), e);
+					return "Error posting C_InvoiceTax from LCO_InvoiceWithholding";
+				} finally {
+					DB.close(rs, pstmt);
+					rs = null; pstmt = null;
+				}
+
+				//	Write off		DR
+				if (Env.ZERO.compareTo(tottax) != 0)
+				{
+					// First try to find the WriteOff posting record
+					FactLine[] factlines = fact.getLines();
+					boolean foundflwriteoff = false;
+					for (int ifl = 0; ifl < factlines.length; ifl++) {
+						FactLine fl = factlines[ifl];
+						if (fl.getAccount().equals(doc.getAccount(Doc.ACCTTYPE_WriteOff, as))) {
+							foundflwriteoff = true;
+							// old balance = DB - CR
+							BigDecimal balamt = fl.getAmtSourceDr().subtract(fl.getAmtSourceCr());
+							// new balance = old balance +/- tottax
+							BigDecimal newbalamt = Env.ZERO;
+							if (invoice.isSOTrx())
+								newbalamt = balamt.subtract(tottax);
+							else
+								newbalamt = balamt.add(tottax);
+							if (Env.ZERO.compareTo(newbalamt) == 0) {
+								// both zeros, remove the line
+								fact.remove(fl);
+							} else if (Env.ZERO.compareTo(newbalamt) > 0) {
+								fl.setAmtSource(fl.getC_Currency_ID(), Env.ZERO, newbalamt);
+								fl.convert();
+							} else {
+								fl.setAmtSource(fl.getC_Currency_ID(), newbalamt, Env.ZERO);
+								fl.convert();
+							}
+							break;
+						}
+					}
+					
+					if (! foundflwriteoff) {
+						// Create a new line - never expected to arrive here as it must always be a write-off line
+						DocLine_Allocation line = new DocLine_Allocation(alloc_line, doc);
+						FactLine fl = null;
+						if (invoice.isSOTrx()) {
+							fl = fact.createLine (line, doc.getAccount(Doc.ACCTTYPE_WriteOff, as),
+									ah.getC_Currency_ID(), null, tottax);
+						} else {
+							fl = fact.createLine (line, doc.getAccount(Doc.ACCTTYPE_WriteOff, as),
+									ah.getC_Currency_ID(), tottax, null);
+						}
+						if (fl != null)
+							fl.setAD_Org_ID(ah.getAD_Org_ID());
+					}
+				}
+			}
 		}
 
 		return null;
