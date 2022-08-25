@@ -159,5 +159,9 @@ public class DocLineAllocationWH extends org.compiere.acct.DocLine {
 		}
 		return super.getDateConv();
 	}
+	
+	public void setCurrencyrate(BigDecimal currencyrate) {
+		this.setCurrencyRate(currencyrate);
+	}
 
 }

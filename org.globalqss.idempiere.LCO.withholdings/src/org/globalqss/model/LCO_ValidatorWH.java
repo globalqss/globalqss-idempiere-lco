@@ -45,6 +45,7 @@ import org.compiere.acct.FactLine;
 import org.compiere.model.MAcctSchema;
 import org.compiere.model.MAllocationHdr;
 import org.compiere.model.MAllocationLine;
+import org.compiere.model.MConversionRate;
 import org.compiere.model.MDocType;
 import org.compiere.model.MInvoice;
 import org.compiere.model.MInvoiceLine;
@@ -518,6 +519,23 @@ public class LCO_ValidatorWH extends AbstractEventHandler {
 				invoice = new MInvoice(ah.getCtx(), alloc_line.getC_Invoice_ID(), ah.get_TrxName());
 				if (invoice == null || invoice.getC_Invoice_ID() == 0)
 					continue;
+
+				BigDecimal Currencyrate = Env.ONE;
+				if (invoice.getC_Currency_ID() != as.getC_Currency_ID()) {
+					if (invoice.isOverrideCurrencyRate())
+						Currencyrate = invoice.getCurrencyRate();
+					else {
+						BigDecimal Temp = MConversionRate.getRate(invoice.getC_Currency_ID(), as.getC_Currency_ID(),
+								invoice.getDateInvoiced(), invoice.getC_ConversionType_ID(), invoice.getAD_Client_ID(),
+								invoice.getAD_Org_ID());
+
+						if (Temp != null)
+							Currencyrate = Temp;
+					}
+				}
+				
+				docLine.setCurrencyrate(Currencyrate);
+
 				String sql = "SELECT i.C_Tax_ID, NVL(SUM(i.TaxBaseAmt),0) AS TaxBaseAmt, NVL(SUM(i.TaxAmt),0) AS TaxAmt, t.Name, t.Rate, t.IsSalesTax "
 						+ " FROM LCO_InvoiceWithholding i, C_Tax t " + " WHERE i.C_Invoice_ID = ? AND "
 						+ "i.IsCalcOnPayment = 'Y' AND " + "i.IsActive = 'Y' AND " + "i.Processed = 'Y' AND "
@@ -575,6 +593,7 @@ public class LCO_ValidatorWH extends AbstractEventHandler {
 					for (int ifl = 0; ifl < factlines.length; ifl++) {
 						FactLine fl = factlines[ifl];
 						if (fl.getAccount().equals(doc.getAccount(Doc.ACCTTYPE_WriteOff, as))) {
+							fl.setCurrencyrate(Currencyrate);
 							foundflwriteoff = true;
 							// old balance = DB - CR
 							BigDecimal balamt = fl.getAmtSourceDr().subtract(fl.getAmtSourceCr());
@@ -611,6 +630,7 @@ public class LCO_ValidatorWH extends AbstractEventHandler {
 									tottax, null);
 						}
 						if (fl != null)
+							fl.setCurrencyrate(Currencyrate);
 							fl.setAD_Org_ID(ah.getAD_Org_ID());
 					}
 
