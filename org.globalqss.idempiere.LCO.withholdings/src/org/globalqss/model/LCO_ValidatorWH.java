@@ -591,7 +591,7 @@ public class LCO_ValidatorWH extends AbstractEventHandler {
 					boolean foundflwriteoff = false;
 					for (FactLine fl : factlines){
 						if (fl.getAccount().equals(doc.getAccount(Doc.ACCTTYPE_WriteOff, as))) {
-							fl.setCurrencyrate(Currencyrate);
+							//fl.setCurrencyrate(Currencyrate);
 							foundflwriteoff = true;
 							// old balance = DB - CR
 							BigDecimal balamt = fl.getAmtSourceDr().subtract(fl.getAmtSourceCr());
