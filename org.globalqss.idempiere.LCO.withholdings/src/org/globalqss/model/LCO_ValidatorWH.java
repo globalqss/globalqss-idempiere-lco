@@ -589,8 +589,7 @@ public class LCO_ValidatorWH extends AbstractEventHandler {
 					// First try to find the WriteOff posting record
 					FactLine[] factlines = fact.getLines();
 					boolean foundflwriteoff = false;
-					for (int ifl = 0; ifl < factlines.length; ifl++) {
-						FactLine fl = (FactLine) factlines[ifl];
+					for (FactLine fl : factlines){
 						if (fl.getAccount().equals(doc.getAccount(Doc.ACCTTYPE_WriteOff, as))) {
 							fl.setCurrencyrate(Currencyrate);
 							foundflwriteoff = true;
