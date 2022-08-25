@@ -38,7 +38,6 @@ import org.adempiere.base.event.IEventManager;
 import org.adempiere.base.event.IEventTopics;
 import org.adempiere.base.event.LoginEventData;
 import org.compiere.acct.Doc;
-import org.compiere.acct.DocLine_Allocation;
 import org.compiere.acct.DocTax;
 import org.compiere.acct.Fact;
 import org.compiere.acct.FactLine;
@@ -620,8 +619,9 @@ public class LCO_ValidatorWH extends AbstractEventHandler {
 					if (!foundflwriteoff) {
 						// Create a new line - never expected to arrive here as it must always be a
 						// write-off line
-						DocLine_Allocation line = new DocLine_Allocation(alloc_line, doc);
+						DocLineAllocationWH line = new DocLineAllocationWH(alloc_line, doc);
 						FactLine fl = null;
+						line.setCurrencyrate(Currencyrate);
 						if (invoice.isSOTrx()) {
 							fl = fact.createLine(line, doc.getAccount(Doc.ACCTTYPE_WriteOff, as), ah.getC_Currency_ID(),
 									null, tottax);
@@ -630,7 +630,6 @@ public class LCO_ValidatorWH extends AbstractEventHandler {
 									tottax, null);
 						}
 						if (fl != null)
-							fl.setCurrencyrate(Currencyrate);
 							fl.setAD_Org_ID(ah.getAD_Org_ID());
 					}
 
