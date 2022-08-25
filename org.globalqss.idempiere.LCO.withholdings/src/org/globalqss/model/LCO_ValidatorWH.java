@@ -590,7 +590,7 @@ public class LCO_ValidatorWH extends AbstractEventHandler {
 					FactLine[] factlines = fact.getLines();
 					boolean foundflwriteoff = false;
 					for (int ifl = 0; ifl < factlines.length; ifl++) {
-						FactLine fl = factlines[ifl];
+						FactLine fl = (FactLine) factlines[ifl];
 						if (fl.getAccount().equals(doc.getAccount(Doc.ACCTTYPE_WriteOff, as))) {
 							fl.setCurrencyrate(Currencyrate);
 							foundflwriteoff = true;
