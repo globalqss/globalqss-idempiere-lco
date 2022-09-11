@@ -3552,7 +3552,7 @@ La asignación es creada al momento de procesar el pago.
   <value column="Name" original="BP Access">Acceso Tercero</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original="Access of the User/Contact to Business Partner information and resources">Acceso del Usuario/Contacto para información del tercero y recursos</value>
-  <value column="Help" original="If on User level, &quot;Full BP Access&quot; is NOT selected, you need to give access explicitly here. ">Si en Nivel de Usuario, "Acceso Total Tercero" No es seleccionado, aqui debe proporcionar acceso explícitamente.</value>
+  <value column="Help" original="If on User level, &quot;Full BP Access&quot; is NOT selected, you need to give access explicitly here. ">Si en Nivel de Usuario, "Acceso Total Tercero" No es seleccionado, aquí debe proporcionar acceso explícitamente.</value>
  </row>
  <row id="757" trl="Y">
   <value column="Name" original="Queries">Consultas</value>
@@ -3676,7 +3676,7 @@ Segmentos deseados de cuenta, Organización, Cuentas, Productos pueden tener alg
   <value column="Name" original="Client Share">Compartir Grupo Empresarial</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original="Force (not) sharing of client/org entities">Forzar o no el Compartir Entidades de Grupo Empresarial/Organización</value>
-  <value column="Help" original="Business Partner can be either defined on Client level (shared) or on Org level (not shared).  You can define here of Products are always shared (i.e. always created under Organization &quot;*&quot;) or if they are not shared (i.e. you cannot enter them with Organization &quot;*&quot;).&lt;br&gt;&#10;The creation of  &quot;Client and Org&quot; shared records is the default and is ignored.">El tercero también puede ser definido en Nivel de Grupo Empresarial (compartido) o en  Nivel Organización (No Compartidos).Aqui usted puede definir los productos que siemore son compartidos (ej. siempre creados bajo  Organización "*") o si no son compartidos (ej. no podrán ser ingresados con Organización "*").
+  <value column="Help" original="Business Partner can be either defined on Client level (shared) or on Org level (not shared).  You can define here of Products are always shared (i.e. always created under Organization &quot;*&quot;) or if they are not shared (i.e. you cannot enter them with Organization &quot;*&quot;).&lt;br&gt;&#10;The creation of  &quot;Client and Org&quot; shared records is the default and is ignored.">El tercero también puede ser definido en Nivel de Grupo Empresarial (compartido) o en  Nivel Organización (No Compartidos).Aquí usted puede definir los productos que siemore son compartidos (ej. siempre creados bajo  Organización "*") o si no son compartidos (ej. no podrán ser ingresados con Organización "*").
 La creación de los registros compartidos "Grupo Empresarial y Organización" es predeterminada y es ignorada.</value>
  </row>
  <row id="777" trl="Y">
@@ -5250,7 +5250,7 @@ Válido Desde/Hasta es determinado por el impuesto padre.]]></value>
   <value column="Help" original=""/>
  </row>
  <row id="53240" trl="Y">
-  <value column="Name" original="Included roles">Roles Incluídos</value>
+  <value column="Name" original="Included roles">Roles Incluidos</value>
   <value column="CommitWarning" original=""/>
   <value column="Description" original=""/>
   <value column="Help" original=""/>

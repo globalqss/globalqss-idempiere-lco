@@ -4341,7 +4341,7 @@ Compruebe el registro de errores y el formato del archivo Accounting*.cvs - Ning
   <value column="MsgTip" original=" "/>
  </row>
  <row id="52283" trl="Y">
-  <value column="MsgText" original="Print Barcode">Imprimir Codigo de Barras</value>
+  <value column="MsgText" original="Print Barcode">Imprimir Código de Barras</value>
   <value column="MsgTip" original=" "/>
  </row>
  <row id="52284" trl="Y">
@@ -4989,11 +4989,11 @@ Compruebe el registro de errores y el formato del archivo Accounting*.cvs - Ning
   <value column="MsgTip" original=" "> </value>
  </row>
  <row id="52446" trl="Y">
-  <value column="MsgText" original="Tax Incl">Impuesto Incluído</value>
+  <value column="MsgText" original="Tax Incl">Impuesto Incluido</value>
   <value column="MsgTip" original=" "> </value>
  </row>
  <row id="52447" trl="Y">
-  <value column="MsgText" original="Tax Excl">Impuesto Excluído</value>
+  <value column="MsgText" original="Tax Excl">Impuesto Excluido</value>
   <value column="MsgTip" original=" "> </value>
  </row>
  <row id="52448" trl="Y">

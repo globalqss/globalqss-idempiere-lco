@@ -2831,7 +2831,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="859" trl="Y">
-  <value column="Name" original="Codabar 2 of 7 linear">Codabar (Codigo de barras) de 2 a 7 linear</value>
+  <value column="Name" original="Codabar 2 of 7 linear">Codabar (Código de barras) de 2 a 7 linear</value>
   <value column="Description" original=""/>
  </row>
  <row id="860" trl="Y">
@@ -2844,7 +2844,7 @@
  </row>
  <row id="862" trl="Y">
   <value column="Name" original="Code 128 dynamically switching">Code 128 cambiar dinamicamente</value>
-  <value column="Description" original="Barcode that dynamically switches between character sets to give the smallest possible encoding">Codigo de barras que dinamicamente cambia entre conjunto de caracteres para dar codificación más pequeña posible</value>
+  <value column="Description" original="Barcode that dynamically switches between character sets to give the smallest possible encoding">Código de barras que dinamicamente cambia entre conjunto de caracteres para dar codificación más pequeña posible</value>
  </row>
  <row id="863" trl="Y">
   <value column="Name" original="Code 128 A character set">Code 128 A, conjunto de caracteres</value>
@@ -2871,7 +2871,7 @@
   <value column="Description" original="Global Trade Name">Nombre de comercio global</value>
  </row>
  <row id="869" trl="Y">
-  <value column="Name" original="Codabar Monarch linear">Codigo de barra monarca linear</value>
+  <value column="Name" original="Codabar Monarch linear">Código de barra monarca linear</value>
   <value column="Description" original=""/>
  </row>
  <row id="870" trl="Y">
@@ -2883,7 +2883,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="872" trl="Y">
-  <value column="Name" original="SCC-14 shipping code UCC/EAN 128">SCC-14 Codigo de envio UCC/EAN 128</value>
+  <value column="Name" original="SCC-14 shipping code UCC/EAN 128">SCC-14 Código de envio UCC/EAN 128</value>
   <value column="Description" original=""/>
  </row>
  <row id="873" trl="Y">
@@ -2895,7 +2895,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="875" trl="Y">
-  <value column="Name" original="Code 39 USD3 with Checksum">Codigo 39 USD3 con suma de chequeo</value>
+  <value column="Name" original="Code 39 USD3 with Checksum">Código 39 USD3 con suma de chequeo</value>
   <value column="Description" original=""/>
  </row>
  <row id="876" trl="Y">
@@ -2911,15 +2911,15 @@
   <value column="Description" original=""/>
  </row>
  <row id="879" trl="Y">
-  <value column="Name" original="Code 39 USD3 w/o Checksum">Codigo 39 USD3 sin Checksum</value>
+  <value column="Name" original="Code 39 USD3 w/o Checksum">Código 39 USD3 sin Checksum</value>
   <value column="Description" original=""/>
  </row>
  <row id="880" trl="Y">
-  <value column="Name" original="Code 39  3 of 9 linear with Checksum">Codigo 39 3 de 9 linear con Checksum</value>
+  <value column="Name" original="Code 39  3 of 9 linear with Checksum">Código 39 3 de 9 linear con Checksum</value>
   <value column="Description" original=""/>
  </row>
  <row id="882" trl="Y">
-  <value column="Name" original="Code 39 linear w/o Checksum">codigo 39 linear o Con suma de chequeo (Checksum)</value>
+  <value column="Name" original="Code 39 linear w/o Checksum">Código 39 linear o Con suma de chequeo (Checksum)</value>
   <value column="Description" original=""/>
  </row>
  <row id="883" trl="Y">
@@ -3239,7 +3239,7 @@
   <value column="Description" original=""/>
  </row>
  <row id="50021" trl="Y">
-  <value column="Name" original="File - Code or other">Archivo - Codigo u otro</value>
+  <value column="Name" original="File - Code or other">Archivo - Código u otro</value>
   <value column="Description" original=""/>
  </row>
  <row id="50022" trl="Y">

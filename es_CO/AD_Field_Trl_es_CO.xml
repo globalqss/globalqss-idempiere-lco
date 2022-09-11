@@ -878,13 +878,13 @@ Las fechas Válido desde y Válido hasta indican el período de tiempo a utiliza
  <row id="202234" trl="Y">
   <value column="Name" original="Sql WHERE">Sql WHERE</value>
   <value column="Description" original="Fully qualified SQL WHERE clause">Cláusula SQL WHERE completamente calificada</value>
-  <value column="Help" original="The Where Clause indicates the SQL WHERE clause to use for record selection. It must include the WHERE itself. Fully qualified means &quot;tablename.columnname&quot;.">La cláusula SQL WHERE a usar en la selección de registros.  Debe incluír la palabra clave WHERE.  Completamente calificada significa "nombreTabla.nombreColumna".</value>
+  <value column="Help" original="The Where Clause indicates the SQL WHERE clause to use for record selection. It must include the WHERE itself. Fully qualified means &quot;tablename.columnname&quot;.">La cláusula SQL WHERE a usar en la selección de registros.  Debe incluir la palabra clave WHERE.  Completamente calificada significa "nombreTabla.nombreColumna".</value>
   <value column="Placeholder" original=""/>
  </row>
  <row id="202235" trl="Y">
   <value column="Name" original="Sql FROM">Sql FROM</value>
   <value column="Description" original="SQL FROM clause">Cláusula SQL FROM</value>
-  <value column="Help" original="The Select Clause indicates the SQL FROM clause to use for selecting the record for a measure calculation. It can have JOIN clauses. It must include the FROM itself.">La cláusula SQL FROM a usar en la selección de registros. Puede tener cláusulas JOIN. Debe incluír la palabra clave FROM.</value>
+  <value column="Help" original="The Select Clause indicates the SQL FROM clause to use for selecting the record for a measure calculation. It can have JOIN clauses. It must include the FROM itself.">La cláusula SQL FROM a usar en la selección de registros. Puede tener cláusulas JOIN. Debe incluir la palabra clave FROM.</value>
   <value column="Placeholder" original=""/>
  </row>
  <row id="202252" trl="Y">

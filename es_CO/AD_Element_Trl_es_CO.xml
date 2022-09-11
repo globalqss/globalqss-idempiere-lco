@@ -2767,7 +2767,7 @@ Ejemplo de formato "(000)_000-0000"]]></value>
  <row id="468" trl="Y">
   <value column="Name" original="NAICS/SIC">NAICS/SIC</value>
   <value column="PrintName" original="NAICS/SIC">NAICS/SIC</value>
-  <value column="Description" original="Standard Industry Code or its successor NAIC - http://www.osha.gov/oshstats/sicser.html">Codigo estándard de la industria o sucesor NAIC - http://www.osha.gov/oshstats/sicser.html</value>
+  <value column="Description" original="Standard Industry Code or its successor NAIC - http://www.osha.gov/oshstats/sicser.html">Código estándard de la industria o sucesor NAIC - http://www.osha.gov/oshstats/sicser.html</value>
   <value column="Help" original="The NAICS/SIC identifies either of these codes that may be applicable to this Business Partner.">El NAICS/SIC identifica cualquiera de esos códigos que puedan ser aplicables a este tercero</value>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
@@ -3823,7 +3823,7 @@ Ejemplo de formato "(000)_000-0000"]]></value>
  <row id="603" trl="Y">
   <value column="Name" original="UPC/EAN">UPC/EAN</value>
   <value column="PrintName" original="UPC/EAN">UPC/EAN</value>
-  <value column="Description" original="Bar Code (Universal Product Code or its superset European Article Number)">Código de Barras (Codigo universal del Producto o su super conjunto, Número de Artículo europeo)</value>
+  <value column="Description" original="Bar Code (Universal Product Code or its superset European Article Number)">Código de Barras (Código universal del Producto o su superconjunto, Número de Artículo europeo)</value>
   <value column="Help" original="Use this field to enter the bar code for the product in any of the bar code symbologies (Codabar, Code 25, Code 39, Code 93, Code 128, UPC (A), UPC (E), EAN-13, EAN-8, ITF, ITF-14, ISBN, ISSN, JAN-13, JAN-8, POSTNET and FIM, MSI/Plessey, and Pharmacode) ">Use este campo para introducir el código de barras para el producto en cualquiera de las simbologías del código de barras (Codabar; Código 25; Código 39; Código 93; Código 128; UPC (A); UPC (E); EAN-13; EAN-8; ITF; ITF-14; ISBN; ISSN; JAN-13; JAN-8; POSTNET y FIM; MSI/Plessey; y Pharmacode)</value>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
@@ -14768,10 +14768,10 @@ Si no se incorpora ninguna, se utiliza la impresora por default. Usted especific
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2119" trl="Y">
-  <value column="Name" original="Authorization Code (DC)">Codigo de Autorización (DC)</value>
-  <value column="PrintName" original="Authorization Code (DC)">Codigo de Autorización (DC)</value>
-  <value column="Description" original="Authorization Code Delayed Capture returned">Codigo de autorización de retrasó captura la vuelta</value>
-  <value column="Help" original="The Authorization Code indicates the code returned from the electronic transmission.">El código de la autorización indica el código vuelto de la transmisión electrónica.</value>
+  <value column="Name" original="Authorization Code (DC)">Código de Autorización (DC)</value>
+  <value column="PrintName" original="Authorization Code (DC)">Código de Autorización (DC)</value>
+  <value column="Description" original="Authorization Code Delayed Capture returned">Código de autorización de retraso devuelto</value>
+  <value column="Help" original="The Authorization Code indicates the code returned from the electronic transmission.">El código de la autorización indica el código devuelto de la transmisión electrónica.</value>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -16655,8 +16655,8 @@ de proyecto - capacidad de publicar el material</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2304" trl="Y">
-  <value column="Name" original="ISO Currency To Code">Codigo ISO Moneda Hacia</value>
-  <value column="PrintName" original="ISO Currency To">Codigo ISO Moneda Hacia</value>
+  <value column="Name" original="ISO Currency To Code">Código ISO Moneda Hacia</value>
+  <value column="PrintName" original="ISO Currency To">Código ISO Moneda Hacia</value>
   <value column="Description" original="Three letter ISO 4217 Code of the To Currency">Tres letras ISO 4217 código actual para la moneda</value>
   <value column="Help" original="For details - http://www.unece.org/trade/rec/rec09en.htm">Para detalles ver - http://www.unece.org/trade/rec/rec09en.htm</value>
   <value column="Placeholder" original=""/>
@@ -18230,7 +18230,7 @@ de proyecto - capacidad de publicar el material</value>
  <row id="2455" trl="Y">
   <value column="Name" original="ZIP To">C.P. Hasta</value>
   <value column="PrintName" original="ZIP To">C.P. Hasta</value>
-  <value column="Description" original="Postal code to">Codigo postal hasta</value>
+  <value column="Description" original="Postal code to">Código postal hasta</value>
   <value column="Help" original="Consecutive range to">Rango final para código postal</value>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
@@ -21594,7 +21594,7 @@ Si usted tiene multiples líneas, un activo es creado por línea.</value>
   <value column="Name" original="Alternative Group">Alternativa de Grupo</value>
   <value column="PrintName" original="Alternative Group">Alternativa de Grupo</value>
   <value column="Description" original="Product BOM Alternative Group">LDM Alternativa al gupo de producto.</value>
-  <value column="Help" original="Alternative groups allow you to group Bill of Material components, which are exclusive (i.e. only one is valid). Examples different engine sizes.">Alternativa de grupo de productos cuando esta todo el grupo de componentes de la lista de materiales, el cual son exclusivas (i.e. solamente una es valida) Ejemplo: diferentes tamaños de maquina.</value>
+  <value column="Help" original="Alternative groups allow you to group Bill of Material components, which are exclusive (i.e. only one is valid). Examples different engine sizes.">Alternativa de grupo de productos cuando está todo el grupo de componentes de la lista de materiales, las cuales son exclusivas (i.e. solamente una es válida) Ejemplo: diferentes tamaños de máquina.</value>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -22565,7 +22565,7 @@ Note que usted puede  Sobre o Sub Asignar el Pago.Durante el procesamiento  del 
   <value column="Name" original="Tax Declaration Line">Línea declaración de Impuestos</value>
   <value column="PrintName" original="Tax Declaration Line">Línea declaración de Impuestos</value>
   <value column="Description" original="Tax Declaration Document Information">Documento Información Declaración de Impuestos</value>
-  <value column="Help" original="The lines are created by the create process. You can delete them if you do not want to include them in a particular declaration. ">Las líneas son creadas mediante el proceso crear. Puede borrarlas sino desea incluírlas en unadeclaración en partícular.</value>
+  <value column="Help" original="The lines are created by the create process. You can delete them if you do not want to include them in a particular declaration. ">Las líneas son creadas mediante el proceso crear. Puede borrarlas sino desea incluirlas en una declaración en particular.</value>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -22600,7 +22600,7 @@ Note que usted puede  Sobre o Sub Asignar el Pago.Durante el procesamiento  del 
   <value column="Name" original="Exclude Auto Delivery">Excluir de Auto Entrega</value>
   <value column="PrintName" original="Exclude Delivery">Excluir Entrega</value>
   <value column="Description" original="Exclude from automatic Delivery">Excluir de Entrega automática</value>
-  <value column="Help" original="The product is excluded from generating Shipments.  This allows manual creation of shipments for high demand items. If selected, you need to create the shipment manually.&#10;But, the item is always included, when the delivery rule of the Order is Force (e.g. for POS). &#10;This allows finer granularity of the Delivery Rule Manual.">El producto es excluído de la generación de entregas. Esto permite la creación manual de entregas 
+  <value column="Help" original="The product is excluded from generating Shipments.  This allows manual creation of shipments for high demand items. If selected, you need to create the shipment manually.&#10;But, the item is always included, when the delivery rule of the Order is Force (e.g. for POS). &#10;This allows finer granularity of the Delivery Rule Manual.">El producto es excluido de la generación de entregas. Esto permite la creación manual de entregas 
 
 Si seleccionó debe crear manualmente la  entrega. 
 
@@ -23711,9 +23711,9 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="2971" trl="Y">
-  <value column="Name" original="Barcode Type">Tipo de codigo de barras</value>
-  <value column="PrintName" original="Barcode">Codigo de Barras</value>
-  <value column="Description" original="Type of barcode">Tipo de codigo de barras</value>
+  <value column="Name" original="Barcode Type">Tipo de código de barras</value>
+  <value column="PrintName" original="Barcode">Código de Barras</value>
+  <value column="Description" original="Type of barcode">Tipo de código de barras</value>
   <value column="Help" original=""/>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
@@ -23845,8 +23845,8 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
  <row id="2984" trl="Y">
   <value column="Name" original="TemplateXST">Plantilla XST</value>
   <value column="PrintName" original="TemplateXST">Plantilla XST</value>
-  <value column="Description" original="Contains the template code itself">Contiene la plantilla del codigo en si mismo.</value>
-  <value column="Help" original="Here we include the template code itself">Aqui nosotros incluimos el codigo en si mismo.</value>
+  <value column="Description" original="Contains the template code itself">Contiene la plantilla del código en sí mismo.</value>
+  <value column="Help" original="Here we include the template code itself">Aquí nosotros incluimos el código en sí mismo.</value>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -24090,7 +24090,7 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="Name" original="Content HTML">Contenido HTML</value>
   <value column="PrintName" original="Content HTML">Contenido HTML</value>
   <value column="Description" original="Contains the content itself">Contiene información en si mismo.</value>
-  <value column="Help" original="Contains the content itself as HTML code. Should normally only use basic tags, no real layouting">Contiene información en si mismo como codigo HTML. Este debería usar solo los tags basicos, no un layout real.</value>
+  <value column="Help" original="Contains the content itself as HTML code. Should normally only use basic tags, no real layouting">Contiene información en si mismo como código HTML. Este debería usar solo los tags basicos, no un layout real.</value>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -24211,7 +24211,7 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="Name" original="Last Result">Ultimo resultado</value>
   <value column="PrintName" original="Last Result">Ultimo resultado</value>
   <value column="Description" original="Contains data on the last check result">Contiene datos de los resultados del ultimo cheque .</value>
-  <value column="Help" original="If we ran into errors etc. you will find the details in here">Si encontramos errores, se encontraran los detalles aqui.</value>
+  <value column="Help" original="If we ran into errors etc. you will find the details in here">Si encontramos errores, se encontrarán los detalles aquí.</value>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -24552,7 +24552,7 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="Name" original="ModelPackage">Paquete modelo</value>
   <value column="PrintName" original="ModelPackage">Paquete modelo</value>
   <value column="Description" original="Java Package of the model classes">Paquete Java del modelo de clases.</value>
-  <value column="Help" original="By default, the Java model classes for extensions are in the compiere.model package.  If you provide a jar file in the classpath, you can define here your specific model package.  The model classes are used to save/modify/delete entries and as well as in Workflow.  Refer to the Compiere naming convention to make sure that your class is used rather then the base classes.">Por defecto, el modelo de clases de java para extensiones estan en el paquete compiere.model. Si usted provee un archivo .jar en la ruta de clases (Classpath), usted puede definir aqui su paquete específico. Los modelos de clases son usados para Guardar / Modificar/ Borrar entradas asi como en un flujo de trabajo. Observe la convención de nombres de iDempiere para estar seguro que su clase es usada sobre las clases base.</value>
+  <value column="Help" original="By default, the Java model classes for extensions are in the compiere.model package.  If you provide a jar file in the classpath, you can define here your specific model package.  The model classes are used to save/modify/delete entries and as well as in Workflow.  Refer to the Compiere naming convention to make sure that your class is used rather then the base classes.">Por defecto, el modelo de clases de java para extensiones estan en el paquete compiere.model. Si usted provee un archivo .jar en la ruta de clases (Classpath), usted puede definir aquí su paquete específico. Los modelos de clases son usados para Guardar / Modificar/ Borrar entradas asi como en un flujo de trabajo. Observe la convención de nombres de iDempiere para estar seguro que su clase es usada sobre las clases base.</value>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -24692,8 +24692,8 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="3066" trl="Y">
-  <value column="Name" original="Status Code">Codigo de estado</value>
-  <value column="PrintName" original="Status Code">Codigo de estado</value>
+  <value column="Name" original="Status Code">Código de estado</value>
+  <value column="PrintName" original="Status Code">Código de estado</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="Placeholder" original=""/>
@@ -25869,10 +25869,10 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="51000" trl="Y">
-  <value column="Name" original="Use Postcode Lookup">Esta codigo postal para búsqueda</value>
-  <value column="PrintName" original="Use Postcode Lookup">Esta codigo postal para búsqueda</value>
-  <value column="Description" original="Does this country have a post code web service">Tiene este pais un servicio de codigo postal web ?</value>
-  <value column="Help" original="Enable the IsPostcodeLookup if you wish to configure a post code lookup web service">Habilita el "Es código postal para búsqueda" si usted desea configurar un servicio de búsqueda de codigo postal web</value>
+  <value column="Name" original="Use Postcode Lookup">Usa código postal para búsqueda</value>
+  <value column="PrintName" original="Use Postcode Lookup">Usa código postal para búsqueda</value>
+  <value column="Description" original="Does this country have a post code web service">¿Este país tiene un webservice de código postal web?</value>
+  <value column="Help" original="Enable the IsPostcodeLookup if you wish to configure a post code lookup web service">Habilita el "Es código postal para búsqueda" si usted desea configurar un servicio de búsqueda de código postal web</value>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -25882,8 +25882,8 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
  <row id="51001" trl="Y">
   <value column="Name" original="Lookup ClassName">LookupClassName</value>
   <value column="PrintName" original="Lookup ClassName">Nombre de clase de Búsqueda</value>
-  <value column="Description" original="The class name of the postcode lookup plugin">El nombre de clase de búsqueda de codigo postal</value>
-  <value column="Help" original="Enter the class name of the post code lookup plugin for your postcode web service provider">Entre el nombre de la clase de la búsqueda del codigo postal para su proveedor de servicio de codigo postal web.</value>
+  <value column="Description" original="The class name of the postcode lookup plugin">El nombre de clase de búsqueda de código postal</value>
+  <value column="Help" original="Enter the class name of the post code lookup plugin for your postcode web service provider">Entre el nombre de la clase de la búsqueda del código postal para su proveedor de servicio de código postal web.</value>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -25894,7 +25894,7 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="Name" original="Lookup Client ID">LookupClientID</value>
   <value column="PrintName" original="Lookup Client ID">Búsqueda de ID de cliente</value>
   <value column="Description" original="The ClientID or Login submitted to the Lookup URL">El ID del cliente or Login enviado a el buscador URL</value>
-  <value column="Help" original="Enter the ClientID or Login for your account provided by the post code web service provider">Ingrese el ID del cliente o Login para su cuenta provista por el proveedor de servicio de codigo postal web</value>
+  <value column="Help" original="Enter the ClientID or Login for your account provided by the post code web service provider">Ingrese el ID del cliente o Login para su cuenta provista por el proveedor de servicio de código postal web</value>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -25904,8 +25904,8 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
  <row id="51003" trl="Y">
   <value column="Name" original="Lookup URL">Buscar URL</value>
   <value column="PrintName" original="Lookup URL">Buscar URL</value>
-  <value column="Description" original="The URL of the web service that the plugin connects to in order to retrieve postcode data">La URL del servicio web que es conectado con el fin de recuperar los datos del codigo postal</value>
-  <value column="Help" original="Enter the URL of the web service that the plugin connects to in order to retrieve postcode data">Ingrese la URL del servicio web que es conectado con el fin de recuperar los datos del codigo postal</value>
+  <value column="Description" original="The URL of the web service that the plugin connects to in order to retrieve postcode data">La URL del servicio web que es conectado con el fin de recuperar los datos del código postal</value>
+  <value column="Help" original="Enter the URL of the web service that the plugin connects to in order to retrieve postcode data">Ingrese la URL del servicio web que es conectado con el fin de recuperar los datos del código postal</value>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -25916,7 +25916,7 @@ El tiempo representa un valor en un tiempo dado (ej Cantidad Facturada en 1/1 ) 
   <value column="Name" original="Lookup Password">Buscar Contraseña</value>
   <value column="PrintName" original="Lookup Password">Buscar Contraseña</value>
   <value column="Description" original="The password submitted to the Lookup URL">Contraseña enviada a el buscador de URL</value>
-  <value column="Help" original="Enter the password for your account provided by the post code web service provider">Ingrese la contraseña para la cuenta proveida por el porveedor del codigo postal web.</value>
+  <value column="Help" original="Enter the password for your account provided by the post code web service provider">Ingrese la contraseña para la cuenta proveida por el porveedor del código postal web.</value>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -31971,8 +31971,8 @@ Crédito Cuenta Trabajo en Proceso</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="53896" trl="Y">
-  <value column="Name" original="Included Role">Rol Incluído</value>
-  <value column="PrintName" original="Included Role">Rol Incluído</value>
+  <value column="Name" original="Included Role">Rol Incluido</value>
+  <value column="PrintName" original="Included Role">Rol Incluido</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="Placeholder" original=""/>
@@ -59572,8 +59572,8 @@ Producto: usado para adicionar rápidamente productos a la venta</value>
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="202293" trl="Y">
-  <value column="Name" original="Include source accounts with no transaction">Incluír cuentas fuente sin transacción</value>
-  <value column="PrintName" original="Include source accounts with no transaction">Incluír cuentas fuente sin transacción</value>
+  <value column="Name" original="Include source accounts with no transaction">Incluir cuentas fuente sin transacción</value>
+  <value column="PrintName" original="Include source accounts with no transaction">Incluir cuentas fuente sin transacción</value>
   <value column="Description" original="Include source accounts with no transaction for list report line sources"/>
   <value column="Help" original="List the Source Accounts with or without transactions for Summary Accounts selected"/>
   <value column="Placeholder" original=""/>
@@ -61320,7 +61320,7 @@ Ejemplo de este valor = 60.  El usuario no puede reutilizar una contraseña cuya
   <value column="Name" original="Automatic Decimal Places For Amounts">Decimales Automáticos para Cantidades</value>
   <value column="PrintName" original="Automatic Decimal Places For Amounts">Decimales Automáticos para Cantidades</value>
   <value column="Description" original="Automatically insert a decimal point">Inserta automáticamente un punto decimal</value>
-  <value column="Help" original="i.e. &quot;Entering 2 only results in a value of 0.02 for the entry. If you use the &quot;.&quot; key during entry of a value, the decimal point is included at the place you specify. This mode has no effect on multiplication and division operations. If 0 is entered it will work as usual.&quot;">ej: Si se ingresa 2 resulta en un valor de 0.02.  Si se usa "." durante la entrada de un valor el punto decimal es incluído en el punto especificado por el usuario.  Este modo no tiene efecto en operaciones de multiplicación o división.  Si se configura 0 funciona como es usual."</value>
+  <value column="Help" original="i.e. &quot;Entering 2 only results in a value of 0.02 for the entry. If you use the &quot;.&quot; key during entry of a value, the decimal point is included at the place you specify. This mode has no effect on multiplication and division operations. If 0 is entered it will work as usual.&quot;">ej: Si se ingresa 2 resulta en un valor de 0.02.  Si se usa "." durante la entrada de un valor el punto decimal es incluido en el punto especificado por el usuario.  Este modo no tiene efecto en operaciones de multiplicación o división.  Si se configura 0 funciona como es usual."</value>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
   <value column="PO_Help" original=""/>
@@ -62298,9 +62298,9 @@ Ejemplo de este valor = 60.  El usuario no puede reutilizar una contraseña cuya
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="203294" trl="Y">
-  <value column="Name" original="Clients to Exclude">Clientes a Excluír</value>
-  <value column="PrintName" original="Clients to Exclude">Clientes a Excluír</value>
-  <value column="Description" original="Comma separated list of client IDs to exclude">Lista separada por comas de los identificadores de clientes (AD_Client_ID) a excluír</value>
+  <value column="Name" original="Clients to Exclude">Clientes a Excluir</value>
+  <value column="PrintName" original="Clients to Exclude">Clientes a Excluir</value>
+  <value column="Description" original="Comma separated list of client IDs to exclude">Lista separada por comas de los identificadores de clientes (AD_Client_ID) a excluir</value>
   <value column="Help" original=""/>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
@@ -62309,9 +62309,9 @@ Ejemplo de este valor = 60.  El usuario no puede reutilizar una contraseña cuya
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="203295" trl="Y">
-  <value column="Name" original="Clients to Include">Clientes a Incluír</value>
-  <value column="PrintName" original="Clients to Include">Clientes a Incluír</value>
-  <value column="Description" original="Comma separated list of client IDs to include">Lista separada por comas de los identificadores de clientes (AD_Client_ID) a incluír</value>
+  <value column="Name" original="Clients to Include">Clientes a Incluir</value>
+  <value column="PrintName" original="Clients to Include">Clientes a Incluir</value>
+  <value column="Description" original="Comma separated list of client IDs to include">Lista separada por comas de los identificadores de clientes (AD_Client_ID) a incluir</value>
   <value column="Help" original=""/>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
@@ -62320,9 +62320,9 @@ Ejemplo de este valor = 60.  El usuario no puede reutilizar una contraseña cuya
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="203296" trl="Y">
-  <value column="Name" original="Tables to Exclude">Tablas a Excluír</value>
-  <value column="PrintName" original="Tables to Exclude">Tablas a Excluír</value>
-  <value column="Description" original="Comma separated list of tables to exclude">Lista separada por comas de las tablas a excluír</value>
+  <value column="Name" original="Tables to Exclude">Tablas a Excluir</value>
+  <value column="PrintName" original="Tables to Exclude">Tablas a Excluir</value>
+  <value column="Description" original="Comma separated list of tables to exclude">Lista separada por comas de las tablas a excluir</value>
   <value column="Help" original=""/>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
@@ -62575,7 +62575,7 @@ Ejemplo de este valor = 60.  El usuario no puede reutilizar una contraseña cuya
  <row id="203357" trl="Y">
   <value column="Name" original="Only positive balance">Sólo Saldos Positivos</value>
   <value column="PrintName" original="Only positive balance">Sólo Saldos Positivos</value>
-  <value column="Description" original="Include only positive balance">Incluír sólo saldos positivos</value>
+  <value column="Description" original="Include only positive balance">Incluir sólo saldos positivos</value>
   <value column="Help" original=""/>
   <value column="Placeholder" original=""/>
   <value column="PO_Description" original=""/>
@@ -63816,8 +63816,8 @@ Ejemplo de este valor = 60.  El usuario no puede reutilizar una contraseña cuya
   <value column="PO_PrintName" original=""/>
  </row>
  <row id="203533" trl="Y">
-  <value column="Name" original="Exclude Adjustment Periods">Excluír Períodos de Ajuste</value>
-  <value column="PrintName" original="Exclude Adjustment Periods">Excluír Períodos de Ajuste</value>
+  <value column="Name" original="Exclude Adjustment Periods">Excluir Períodos de Ajuste</value>
+  <value column="PrintName" original="Exclude Adjustment Periods">Excluir Períodos de Ajuste</value>
   <value column="Description" original=""/>
   <value column="Help" original=""/>
   <value column="Placeholder" original=""/>
