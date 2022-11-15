@@ -45,7 +45,9 @@ import org.compiere.acct.FactLine;
 import org.compiere.model.MAcctSchema;
 import org.compiere.model.MAllocationHdr;
 import org.compiere.model.MAllocationLine;
+import org.compiere.model.MClient;
 import org.compiere.model.MDocType;
+import org.compiere.model.MFactAcct;
 import org.compiere.model.MInvoice;
 import org.compiere.model.MInvoiceLine;
 import org.compiere.model.MInvoicePaySchedule;
@@ -54,6 +56,7 @@ import org.compiere.model.MPayment;
 import org.compiere.model.MPaymentAllocate;
 import org.compiere.model.MSysConfig;
 import org.compiere.model.PO;
+import org.compiere.process.DocumentEngine;
 import org.compiere.util.CLogger;
 import org.compiere.util.DB;
 import org.compiere.util.Env;
@@ -486,7 +489,20 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 		for (int i = 0; i < als.length; i++) {
 			MAllocationLine al = als[i];
 			if (al.getC_Invoice_ID() > 0) {
-				String sql =
+				final String sqlRevHdr = ""
+						+ "SELECT C_AllocationHdr_ID "
+						+ "FROM   C_AllocationHdr "
+						+ "WHERE  Reversal_ID = ?";
+				int revhdr = DB.getSQLValueEx(ah.get_TrxName(), sqlRevHdr, ah.getC_AllocationHdr_ID());
+				final String sqlRevLine = ""
+						+ "SELECT C_AllocationLine_ID "
+						+ "FROM   C_AllocationLine "
+						+ "WHERE  C_AllocationHdr_ID = ? "
+						+ "       AND C_Invoice_ID = ? "
+						+ "       AND Amount = ? "
+						+ "       AND WriteOffAmt = ?";
+				int revline = DB.getSQLValueEx(ah.get_TrxName(), sqlRevLine, revhdr, al.getC_Invoice_ID(), al.getAmount().negate(), al.getWriteOffAmt().negate());
+				final String sql =
 					"SELECT LCO_InvoiceWithholding_ID " +
 					"FROM LCO_InvoiceWithholding " +
 					"WHERE C_Invoice_ID = ? AND " +
@@ -502,12 +518,29 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 					rs = pstmt.executeQuery();
 					while (rs.next()) {
 						int iwhid = rs.getInt(1);
-						MLCOInvoiceWithholding iwh = new MLCOInvoiceWithholding(
-								ah.getCtx(), iwhid, ah.get_TrxName());
-						iwh.setC_AllocationLine_ID(0);
-						iwh.setProcessed(false);
-						if (!iwh.save())
+						// Create reversal withholding
+						MLCOInvoiceWithholding iwhold = new MLCOInvoiceWithholding(ah.getCtx(), iwhid, ah.get_TrxName());
+						MLCOInvoiceWithholding iwhrev = new MLCOInvoiceWithholding(ah.getCtx(), 0, ah.get_TrxName());
+						PO.copyValues(iwhold, iwhrev);
+						iwhrev.setTaxBaseAmt(iwhrev.getTaxBaseAmt().negate());
+						iwhrev.setTaxAmt(iwhrev.getTaxAmt().negate());
+						iwhrev.setC_AllocationLine_ID(revline); // reversal allocation line
+						if (!iwhrev.save())
 							return "Error saving LCO_InvoiceWithholding reversePaymentWithholdings";
+						MLCOInvoiceWithholding iwhnew = new MLCOInvoiceWithholding(ah.getCtx(), 0, ah.get_TrxName());
+						PO.copyValues(iwhold, iwhnew);
+						iwhnew.setC_AllocationLine_ID(0);
+						iwhnew.setProcessed(false);
+						if (!iwhnew.save())
+							return "Error saving LCO_InvoiceWithholding reversePaymentWithholdings";
+						// Repost the allocation of the reversal, because when setting the allocation line the posting changes
+						MAllocationHdr ahrev = new MAllocationHdr(ah.getCtx(), revhdr, ah.get_TrxName());
+						MFactAcct.deleteEx(ahrev.get_Table_ID(), revhdr, ahrev.get_TrxName());
+						ahrev.set_ValueOfColumn("Posted", false);
+						ahrev.saveEx();
+						if (MClient.isClientAccountingImmediate()) {
+							DocumentEngine.postImmediate(Env.getCtx(), ahrev.getAD_Client_ID(), ahrev.get_Table_ID(), revhdr, true, ahrev.get_TrxName());
+						}
 					}
 				} catch (SQLException e) {
 					e.printStackTrace();
