@@ -522,6 +522,7 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 						MLCOInvoiceWithholding iwhold = new MLCOInvoiceWithholding(ah.getCtx(), iwhid, ah.get_TrxName());
 						MLCOInvoiceWithholding iwhrev = new MLCOInvoiceWithholding(ah.getCtx(), 0, ah.get_TrxName());
 						PO.copyValues(iwhold, iwhrev);
+						iwhrev.setAD_Org_ID(iwhold.getAD_Org_ID());
 						iwhrev.setTaxBaseAmt(iwhrev.getTaxBaseAmt().negate());
 						iwhrev.setTaxAmt(iwhrev.getTaxAmt().negate());
 						iwhrev.setC_AllocationLine_ID(revline); // reversal allocation line
@@ -529,6 +530,7 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 							return "Error saving LCO_InvoiceWithholding reversePaymentWithholdings";
 						MLCOInvoiceWithholding iwhnew = new MLCOInvoiceWithholding(ah.getCtx(), 0, ah.get_TrxName());
 						PO.copyValues(iwhold, iwhnew);
+						iwhnew.setAD_Org_ID(iwhold.getAD_Org_ID());
 						iwhnew.setC_AllocationLine_ID(0);
 						iwhnew.setProcessed(false);
 						if (!iwhnew.save())
