@@ -5,7 +5,7 @@
 		<groupId>org.idempiere</groupId>
 		<artifactId>org.idempiere.parent</artifactId>
 		<version>${revision}</version>
-		<relativePath>../../../idempiere-10/org.idempiere.parent/pom.xml</relativePath>
+		<relativePath>../../iDempiere10/org.idempiere.parent/pom.xml</relativePath>
 	</parent>
 	<artifactId>org.globalqss.idempiere.LCO.detailednames</artifactId>
 	<packaging>eclipse-plugin</packaging>

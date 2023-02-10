@@ -3,24 +3,24 @@
 <target name="idempiere-10" sequenceNumber="92">
 <locations>
 	<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="slicer" includeSource="true" type="InstallableUnit">
-		<unit id="org.adempiere.base.feature.feature.group" version="10.0.0.202302081309"/>
-		<unit id="org.adempiere.payment.processor.feature.feature.group" version="10.0.0.202302081309"/>
-		<unit id="org.adempiere.pipo.feature.feature.group" version="10.0.0.202302081309"/>
-		<unit id="org.adempiere.replication.feature.feature.group" version="10.0.0.202302081309"/>
-		<unit id="org.adempiere.replication.server.feature.feature.group" version="10.0.0.202302081309"/>
-		<unit id="org.adempiere.report.jasper.feature.feature.group" version="10.0.0.202302081309"/>
-		<unit id="org.adempiere.server.feature.feature.group" version="10.0.0.202302081309"/>
-		<unit id="org.adempiere.ui.zk.feature.feature.group" version="10.0.0.202302081309"/>
-		<unit id="org.compiere.db.provider.feature.feature.group" version="10.0.0.202302081309"/>
-		<unit id="org.eclipse.equinox.executable.feature.group" version="3.8.1500.v20220210-1108"/>
-		<unit id="org.idempiere.eclipse.platform.feature.feature.group" version="10.0.0.202302081309"/>
-		<unit id="org.idempiere.equinox.p2.director.feature.feature.group" version="10.0.0.202302081309"/>
-		<unit id="org.idempiere.felix.webconsole.feature.feature.group" version="10.0.0.202302081309"/>
-		<unit id="org.idempiere.hazelcast.service.feature.feature.group" version="10.0.0.202302081309"/>
-		<unit id="org.idempiere.test.feature.feature.group" version="10.0.0.202302081309"/>
-		<unit id="org.idempiere.webservices.feature.feature.group" version="10.0.0.202302081309"/>
-		<unit id="org.idempiere.zk.feature.feature.group" version="10.0.0.202302081309"/>
-		<repository location="file:/opt/Development2/Apps/idempiere-10/org.idempiere.p2/target/repository/"/>
+		<unit id="org.adempiere.base.feature.feature.group"/>
+		<unit id="org.adempiere.payment.processor.feature.feature.group"/>
+		<unit id="org.adempiere.pipo.feature.feature.group"/>
+		<unit id="org.adempiere.replication.feature.feature.group"/>
+		<unit id="org.adempiere.replication.server.feature.feature.group"/>
+		<unit id="org.adempiere.report.jasper.feature.feature.group"/>
+		<unit id="org.adempiere.server.feature.feature.group"/>
+		<unit id="org.adempiere.ui.zk.feature.feature.group"/>
+		<unit id="org.compiere.db.provider.feature.feature.group"/>
+		<unit id="org.eclipse.equinox.executable.feature.group"/>
+		<unit id="org.idempiere.eclipse.platform.feature.feature.group"/>
+		<unit id="org.idempiere.equinox.p2.director.feature.feature.group"/>
+		<unit id="org.idempiere.felix.webconsole.feature.feature.group"/>
+		<unit id="org.idempiere.hazelcast.service.feature.feature.group"/>
+		<unit id="org.idempiere.test.feature.feature.group"/>
+		<unit id="org.idempiere.webservices.feature.feature.group"/>
+		<unit id="org.idempiere.zk.feature.feature.group"/>
+		<repository location="file:../iDempiere10/org.idempiere.p2/target/repository"/>
 	</location>
 	<location includeDependencyDepth="none" includeDependencyScopes="compile" includeSource="true" missingManifest="generate" type="Maven">
 		<dependencies>
