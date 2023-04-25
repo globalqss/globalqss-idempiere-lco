@@ -113,11 +113,12 @@ public class LCO_ValidatorDNC extends AbstractEventHandler
 
 		if (Util.isEmpty(fn1, true) && Util.isEmpty(ln1, true)) // no detailed names
 			return null;
-		
-		if (Util.isEmpty(fn1, true))
+
+		int clientId = Env.getAD_Client_ID(user.getCtx());
+		if (Util.isEmpty(fn1, true) && MSysConfig.getBooleanValue("QSSLCO_FirstNameMandatory", true, clientId))
 			 return Msg.getMsg(user.getCtx(), "LCO_FirstName1Required");
 
-		 if (Util.isEmpty(ln1, true))
+		 if (Util.isEmpty(ln1, true) && MSysConfig.getBooleanValue("QSSLCO_LastNameMandatory", true, clientId))
 			return Msg.getMsg(user.getCtx(), "LCO_LastName1Required");
 
 		String fullName = LCO_UtilsDNC.getFullName(fn1, ln1, user.getAD_Client_ID());
