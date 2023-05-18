@@ -494,6 +494,15 @@ public class LCO_ValidatorWH extends AbstractEventHandler
 						+ "FROM   C_AllocationHdr "
 						+ "WHERE  Reversal_ID = ?";
 				int revhdr = DB.getSQLValueEx(ah.get_TrxName(), sqlRevHdr, ah.getC_AllocationHdr_ID());
+				if (revhdr <= 0) {
+					// reverse accrual creates a new reversal, but reverse correct (or void) doesn't
+					final String sqlDirectHdr = ""
+							+ "SELECT C_AllocationHdr_ID "
+							+ "FROM   C_AllocationHdr "
+							+ "WHERE  C_AllocationHdr_ID = ? "
+							+ "AND DocStatus='RE'";
+					revhdr = DB.getSQLValueEx(ah.get_TrxName(), sqlDirectHdr, ah.getC_AllocationHdr_ID());
+				}
 				final String sqlRevLine = ""
 						+ "SELECT C_AllocationLine_ID "
 						+ "FROM   C_AllocationLine "
