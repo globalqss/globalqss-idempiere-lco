@@ -421,7 +421,7 @@ public class LCO_DianExportXML  extends SvrProcess {
 						//País de Residencia o domicilio
 						//Siempre debe diligenciarse
 						add_Attribute(atts, printLb, getPais(loc.getC_Country_ID()), line_id, true);
-					} else if (printLb.equals("identfc") || printLb.equals("nitpcc") || printLb.equals("tdocpcc")) {
+					} else if (printLb.equals("identfc") || printLb.equals("nitpcc") || printLb.equals("tdocpcc") || printLb.equals("tdocde") || printLb.equals("nitde")) {
 						// TODO:
 						//  identfc -> Identificación del fideicomiso o contrato
 						//    Si es una operación reportada por la sociedad fiduciaria en virtud de un fideicomiso, se debe diligenciar
@@ -429,6 +429,10 @@ public class LCO_DianExportXML  extends SvrProcess {
 						//    Si es una operación reportada por un Contrato de Colaboración se debe diligenciar
 						//  nitpcc -> Identificación participante en contrato colaboración
 						//    Si es una operación reportada por un Contrato de Colaboración se debe diligenciar.
+						//  tdocde -> 2276v4 - Tipo de documento del dependiente económico
+						//    Si se conoce se debe diligenciar
+						//  nitde -> 2276v4 - Número de Identificación del dependiente económico
+						//    Si se conoce se debe diligenciar
 						add_Attribute(atts, printLb, null, line_id, false);
 					} else {
 						// Fin de las 36 columnas hardcoded
