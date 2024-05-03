@@ -32,11 +32,12 @@ import java.util.Properties;
 
 import org.compiere.model.MBPartner;
 import org.compiere.model.MBPartnerLocation;
+import org.compiere.model.MClientInfo;
+import org.compiere.model.MCurrency;
 import org.compiere.model.MDocType;
 import org.compiere.model.MInvoice;
 import org.compiere.model.MLocation;
 import org.compiere.model.MOrgInfo;
-import org.compiere.model.MPriceList;
 import org.compiere.model.MSysConfig;
 import org.compiere.model.MTax;
 import org.compiere.model.Query;
@@ -351,8 +352,16 @@ public class LCO_MInvoice extends MInvoice
 					iwh.setC_Tax_ID(tax.getC_Tax_ID());
 					iwh.setPercent(tax.getRate());
 					iwh.setProcessed(false);
-					int stdPrecision = MPriceList.getStandardPrecision(getCtx(), getM_PriceList_ID());
-					BigDecimal taxamt = tax.calculateTax(base, false, stdPrecision);
+
+					// When the currency of the invoice is different from the currency of the accounting
+					// use costing precision to avoid problems with rounding
+					MClientInfo ci = MClientInfo.get();
+					MCurrency c = MCurrency.get(getCtx(), getC_Currency_ID());
+					int precision = Integer.valueOf(c.getStdPrecision());
+					if (c.getC_Currency_ID() != ci.getC_Currency_ID())
+						precision = Integer.valueOf(c.getCostingPrecision());
+
+					BigDecimal taxamt = tax.calculateTax(base, false, precision);
 					if (wc.getAmountRefunded() != null &&
 							wc.getAmountRefunded().compareTo(Env.ZERO) > 0) {
 						taxamt = taxamt.subtract(wc.getAmountRefunded());
