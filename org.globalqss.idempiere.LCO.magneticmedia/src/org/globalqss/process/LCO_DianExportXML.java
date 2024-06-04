@@ -479,7 +479,7 @@ public class LCO_DianExportXML  extends SvrProcess {
 			MAttachment attach =  MAttachment.get(getCtx(),AD_Table_ID,xmlheader.getLCO_DIAN_XML_Header_ID());
 			//no se encontro archivo previo
 			if (attach == null ) {
-				attach = new  MAttachment(getCtx(),AD_Table_ID ,xmlheader.getLCO_DIAN_XML_Header_ID(),get_TrxName());
+				attach = new  MAttachment(getCtx(),AD_Table_ID ,xmlheader.getLCO_DIAN_XML_Header_ID(),null,get_TrxName());
 				attach.addEntry(new File (file_name));
 				attach.saveEx();
 

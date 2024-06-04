@@ -1,14 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!-- build with
-mvn verify -Didempiere.target=org.globalqss.idempiere.LCO.p2.targetplatform
+mvn clean verify
+   optional -> -Didempiere.core.repository.url=file:///home/carlos/gitIdempiere/iDempiere11/org.idempiere.p2/target/repository
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+        xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.idempiere</groupId>
-	<version>10.0.0-SNAPSHOT</version>
-	<artifactId>globalqss-idempiere-lco</artifactId>
+	<artifactId>org.globalqss.idempiere.LCO.main</artifactId>
 	<packaging>pom</packaging>
-
+        <parent>
+                <groupId>org.globalqss.idempiere.LCO</groupId>
+                <artifactId>org.globalqss.idempiere.LCO.parent</artifactId>
+                <version>11.0.0-SNAPSHOT</version>
+                <relativePath>org.globalqss.idempiere.LCO.parent/pom.xml</relativePath>
+        </parent>
 	<modules>
 		<module>org.globalqss.idempiere.LCO.detailednames</module>
 		<module>org.globalqss.idempiere.LCO.firstname</module>
@@ -17,7 +23,6 @@ mvn verify -Didempiere.target=org.globalqss.idempiere.LCO.p2.targetplatform
 		<module>org.globalqss.idempiere.LCO.magneticmedia</module>
 		<module>org.globalqss.idempiere.LCO.invoicenumbercontrol</module>
 		<module>org.globalqss.idempiere.LCO-feature</module>
-		<module>org.globalqss.idempiere.LCO.p2.targetplatform</module>
-		<module>org.globalqss.idempiere.LCO.p2.site</module>
+		<module>org.globalqss.idempiere.LCO.p2</module>
 	</modules>
 </project>
