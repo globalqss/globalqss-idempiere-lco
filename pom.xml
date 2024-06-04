@@ -23,6 +23,6 @@ mvn clean verify
 		<module>org.globalqss.idempiere.LCO.magneticmedia</module>
 		<module>org.globalqss.idempiere.LCO.invoicenumbercontrol</module>
 		<module>org.globalqss.idempiere.LCO-feature</module>
-		<module>org.globalqss.idempiere.LCO.p2</module>
+		<module>org.globalqss.idempiere.LCO.p2.site</module>
 	</modules>
 </project>
