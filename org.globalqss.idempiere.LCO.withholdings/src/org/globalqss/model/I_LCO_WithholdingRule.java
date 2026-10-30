@@ -23,7 +23,7 @@ import org.compiere.util.KeyNamePair;
 
 /** Generated Interface for LCO_WithholdingRule
  *  @author iDempiere (generated) 
- *  @version Release 3.1
+ *  @version Release 13
  */
 @SuppressWarnings("all")
 public interface I_LCO_WithholdingRule 
@@ -32,7 +32,7 @@ public interface I_LCO_WithholdingRule
     /** TableName=LCO_WithholdingRule */
     public static final String Table_Name = "LCO_WithholdingRule";
 
-    /** AD_Table_ID=1000006 */
+    /** AD_Table_ID=1000003 */
     public static final int Table_ID = MTable.getTable_ID(Table_Name);
 
     KeyNamePair Model = new KeyNamePair(Table_ID, Table_Name);
@@ -46,8 +46,8 @@ public interface I_LCO_WithholdingRule
     /** Column name AD_Client_ID */
     public static final String COLUMNNAME_AD_Client_ID = "AD_Client_ID";
 
-	/** Get Client.
-	  * Client/Tenant for this installation.
+	/** Get DCI Tenant.
+	  * DCI Tenant for this installation.
 	  */
 	public int getAD_Client_ID();
 
@@ -55,14 +55,30 @@ public interface I_LCO_WithholdingRule
     public static final String COLUMNNAME_AD_Org_ID = "AD_Org_ID";
 
 	/** Set Organization.
-	  * Organizational entity within client
+	  * Organizational entity within tenant
 	  */
 	public void setAD_Org_ID (int AD_Org_ID);
 
 	/** Get Organization.
-	  * Organizational entity within client
+	  * Organizational entity within tenant
 	  */
 	public int getAD_Org_ID();
+
+    /** Column name C_TaxCategory_ID */
+    public static final String COLUMNNAME_C_TaxCategory_ID = "C_TaxCategory_ID";
+
+	/** Set Tax Category.
+	  * Tax Category
+	  */
+	public void setC_TaxCategory_ID (int C_TaxCategory_ID);
+
+	/** Get Tax Category.
+	  * Tax Category
+	  */
+	public int getC_TaxCategory_ID();
+
+	@Deprecated(since="13") // use better methods with cache
+	public org.compiere.model.I_C_TaxCategory getC_TaxCategory() throws RuntimeException;
 
     /** Column name Created */
     public static final String COLUMNNAME_Created = "Created";
@@ -79,21 +95,6 @@ public interface I_LCO_WithholdingRule
 	  * User who created this records
 	  */
 	public int getCreatedBy();
-
-    /** Column name C_TaxCategory_ID */
-    public static final String COLUMNNAME_C_TaxCategory_ID = "C_TaxCategory_ID";
-
-	/** Set Tax Category.
-	  * Tax Category
-	  */
-	public void setC_TaxCategory_ID (int C_TaxCategory_ID);
-
-	/** Get Tax Category.
-	  * Tax Category
-	  */
-	public int getC_TaxCategory_ID();
-
-	public org.compiere.model.I_C_TaxCategory getC_TaxCategory() throws RuntimeException;
 
     /** Column name Description */
     public static final String COLUMNNAME_Description = "Description";
@@ -215,6 +216,7 @@ public interface I_LCO_WithholdingRule
 	/** Get City Business Partner	  */
 	public int getLCO_BP_City_ID();
 
+	@Deprecated(since="13") // use better methods with cache
 	public org.compiere.model.I_C_City getLCO_BP_City() throws RuntimeException;
 
     /** Column name LCO_BP_ISIC_ID */
@@ -226,6 +228,7 @@ public interface I_LCO_WithholdingRule
 	/** Get ISIC Business Partner	  */
 	public int getLCO_BP_ISIC_ID();
 
+	@Deprecated(since="13") // use better methods with cache
 	public org.globalqss.model.I_LCO_ISIC getLCO_BP_ISIC() throws RuntimeException;
 
     /** Column name LCO_BP_TaxPayerType_ID */
@@ -237,6 +240,7 @@ public interface I_LCO_WithholdingRule
 	/** Get Tax Payer Type Business Partner	  */
 	public int getLCO_BP_TaxPayerType_ID();
 
+	@Deprecated(since="13") // use better methods with cache
 	public org.globalqss.model.I_LCO_TaxPayerType getLCO_BP_TaxPayerType() throws RuntimeException;
 
     /** Column name LCO_Org_City_ID */
@@ -248,6 +252,7 @@ public interface I_LCO_WithholdingRule
 	/** Get City Organization	  */
 	public int getLCO_Org_City_ID();
 
+	@Deprecated(since="13") // use better methods with cache
 	public org.compiere.model.I_C_City getLCO_Org_City() throws RuntimeException;
 
     /** Column name LCO_Org_ISIC_ID */
@@ -259,6 +264,7 @@ public interface I_LCO_WithholdingRule
 	/** Get ISIC Organization	  */
 	public int getLCO_Org_ISIC_ID();
 
+	@Deprecated(since="13") // use better methods with cache
 	public org.globalqss.model.I_LCO_ISIC getLCO_Org_ISIC() throws RuntimeException;
 
     /** Column name LCO_Org_TaxPayerType_ID */
@@ -270,6 +276,7 @@ public interface I_LCO_WithholdingRule
 	/** Get Tax Payer Type Organization	  */
 	public int getLCO_Org_TaxPayerType_ID();
 
+	@Deprecated(since="13") // use better methods with cache
 	public org.globalqss.model.I_LCO_TaxPayerType getLCO_Org_TaxPayerType() throws RuntimeException;
 
     /** Column name LCO_WithholdingCalc_ID */
@@ -281,6 +288,7 @@ public interface I_LCO_WithholdingRule
 	/** Get Withholding Calculation	  */
 	public int getLCO_WithholdingCalc_ID();
 
+	@Deprecated(since="13") // use better methods with cache
 	public org.globalqss.model.I_LCO_WithholdingCalc getLCO_WithholdingCalc() throws RuntimeException;
 
     /** Column name LCO_WithholdingCategory_ID */
@@ -292,6 +300,7 @@ public interface I_LCO_WithholdingRule
 	/** Get Withholding Category	  */
 	public int getLCO_WithholdingCategory_ID();
 
+	@Deprecated(since="13") // use better methods with cache
 	public org.globalqss.model.I_LCO_WithholdingCategory getLCO_WithholdingCategory() throws RuntimeException;
 
     /** Column name LCO_WithholdingRule_ID */
@@ -321,6 +330,7 @@ public interface I_LCO_WithholdingRule
 	/** Get Withholding Type	  */
 	public int getLCO_WithholdingType_ID();
 
+	@Deprecated(since="13") // use better methods with cache
 	public org.globalqss.model.I_LCO_WithholdingType getLCO_WithholdingType() throws RuntimeException;
 
     /** Column name Name */
@@ -364,4 +374,17 @@ public interface I_LCO_WithholdingRule
 	  * Valid from including this date (first day)
 	  */
 	public Timestamp getValidFrom();
+
+    /** Column name ValidTo */
+    public static final String COLUMNNAME_ValidTo = "ValidTo";
+
+	/** Set Valid to.
+	  * Valid to including this date (last day)
+	  */
+	public void setValidTo (Timestamp ValidTo);
+
+	/** Get Valid to.
+	  * Valid to including this date (last day)
+	  */
+	public Timestamp getValidTo();
 }

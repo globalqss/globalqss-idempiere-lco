@@ -118,9 +118,10 @@ public class LCO_MInvoice extends MInvoice
 			}
 
 			// look for applicable rules according to config fields (rule)
-			StringBuffer wherer = new StringBuffer(" LCO_WithholdingType_ID=? AND ValidFrom<=? ");
+			StringBuffer wherer = new StringBuffer(" LCO_WithholdingType_ID=? AND ValidFrom<=? AND (ValidTo IS NULL OR ValidTo>=?) ");
 			List<Object> paramsr = new ArrayList<Object>();
 			paramsr.add(wt.getLCO_WithholdingType_ID());
+			paramsr.add(getDateInvoiced());
 			paramsr.add(getDateInvoiced());
 			if (wrc.isUseBPISIC()) {
 				wherer.append(" AND LCO_BP_ISIC_ID=? ");
